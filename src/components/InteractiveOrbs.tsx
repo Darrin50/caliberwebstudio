@@ -32,24 +32,6 @@ export default function InteractiveOrbs() {
     const container = containerRef.current;
     if (!container) return;
 
-    // Track global mouse position for parallax
-    let mouseX = 0;
-    let mouseY = 0;
-    const onMouseMove = (e: MouseEvent) => {
-      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
-    };
-    window.addEventListener('mousemove', onMouseMove);
-
-    // Touch parallax
-    const onTouchMove = (e: TouchEvent) => {
-      if (e.touches.length > 0) {
-        mouseX = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
-        mouseY = (e.touches[0].clientY / window.innerHeight) * 2 - 1;
-      }
-    };
-    window.addEventListener('touchmove', onTouchMove, { passive: true });
-
     const loadThree = () => {
       return new Promise((resolve) => {
         if ((window as any).THREE) {
@@ -77,15 +59,17 @@ export default function InteractiveOrbs() {
         const orbsForSection = ORB_CONFIGS.filter((o) => o.sectionId === sectionId);
         if (orbsForSection.length === 0) return;
 
-        // Create canvas overlay â pointerEvents NONE so content stays clickable
+        // Create canvas overlay with pointer-events auto for drag interaction
+        // touch-action allows scrolling on mobile while still capturing taps on orbs
         const canvas = document.createElement('canvas');
         canvas.style.position = 'absolute';
         canvas.style.top = '0';
         canvas.style.left = '0';
         canvas.style.width = '100%';
         canvas.style.height = '100%';
-        canvas.style.pointerEvents = 'none';
-        canvas.style.zIndex = '1';
+        canvas.style.pointerEvents = 'auto';
+        canvas.style.touchAction = 'pan-y pinch-zoom';
+        canvas.style.zIndex = '2';
         canvas.setAttribute('data-orbs', sectionId);
 
         // Make section relative if not already
@@ -105,6 +89,9 @@ export default function InteractiveOrbs() {
         camera.position.z = 18;
 
         const scene = new THREE.Scene();
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        const interactables: any[] = [];
         const orbs: any[] = [];
 
         orbsForSection.forEach((cfg) => {
@@ -116,7 +103,9 @@ export default function InteractiveOrbs() {
             const gMat = new THREE.MeshBasicMaterial({
               color: cfg.color, wireframe: true, transparent: true, opacity: 0.25,
             });
-            group.add(new THREE.Mesh(gGeo, gMat));
+            const mainMesh = new THREE.Mesh(gGeo, gMat);
+            group.add(mainMesh);
+            interactables.push(mainMesh);
 
             // Inner fill
             const iFillGeo = new THREE.SphereGeometry(cfg.size * 0.95, 16, 12);
@@ -162,7 +151,9 @@ export default function InteractiveOrbs() {
             const sMat = new THREE.MeshBasicMaterial({
               color: cfg.color, wireframe: true, transparent: true, opacity: 0.3,
             });
-            group.add(new THREE.Mesh(sGeo, sMat));
+            const mainMesh = new THREE.Mesh(sGeo, sMat);
+            group.add(mainMesh);
+            interactables.push(mainMesh);
 
             // Inner sphere
             const isGeo = new THREE.SphereGeometry(cfg.size * 0.7, 14, 10);
@@ -185,7 +176,9 @@ export default function InteractiveOrbs() {
             const cMat = new THREE.MeshBasicMaterial({
               color: cfg.color, wireframe: true, transparent: true, opacity: 0.3,
             });
-            group.add(new THREE.Mesh(cGeo, cMat));
+            const mainMesh = new THREE.Mesh(cGeo, cMat);
+            group.add(mainMesh);
+            interactables.push(mainMesh);
 
             // Inner icosahedron
             const icGeo = new THREE.IcosahedronGeometry(cfg.size * 0.55, 0);
@@ -210,9 +203,85 @@ export default function InteractiveOrbs() {
             config: cfg,
             basePos: new THREE.Vector3(...cfg.position),
             phase: Math.random() * Math.PI * 2,
-            parallaxStrength: cfg.type === 'globe' ? 0.8 : 1.2,
+            dragging: false,
           });
         });
+
+        // ââ Drag interaction with click-through ââ
+        let isDragging = false;
+        let dragOrbIndex = -1;
+        let prevX = 0;
+        let prevY = 0;
+
+        const getMouseFromEvent = (e: PointerEvent) => {
+          const r = canvas.getBoundingClientRect();
+          mouse.x = ((e.clientX - r.left) / r.width) * 2 - 1;
+          mouse.y = -((e.clientY - r.top) / r.height) * 2 + 1;
+        };
+
+        const onPointerDown = (e: PointerEvent) => {
+          getMouseFromEvent(e);
+          raycaster.setFromCamera(mouse, camera);
+          const hits = raycaster.intersectObjects(interactables, false);
+
+          if (hits.length > 0) {
+            // Hit an orb â start dragging
+            const hitObj = hits[0].object;
+            const orbIdx = interactables.indexOf(hitObj);
+            if (orbIdx >= 0) {
+              isDragging = true;
+              dragOrbIndex = orbIdx;
+              prevX = e.clientX;
+              prevY = e.clientY;
+              canvas.style.cursor = 'grabbing';
+              e.stopPropagation();
+            }
+          } else {
+            // Missed all orbs â let click pass through to content below
+            canvas.style.pointerEvents = 'none';
+            const below = document.elementFromPoint(e.clientX, e.clientY);
+            canvas.style.pointerEvents = 'auto';
+            if (below && below !== canvas) {
+              (below as HTMLElement).click();
+            }
+          }
+        };
+
+        const onPointerMove = (e: PointerEvent) => {
+          if (isDragging && dragOrbIndex >= 0) {
+            const dx = e.clientX - prevX;
+            const dy = e.clientY - prevY;
+            const orb = orbs[dragOrbIndex];
+
+            if (orb.config.type === 'globe') {
+              // Rotate globe on drag
+              orb.group.rotation.y += dx * 0.005;
+              orb.group.rotation.x += dy * 0.005;
+            } else {
+              // Move sphere/crystal
+              orb.group.position.x += dx * 0.03;
+              orb.group.position.y -= dy * 0.03;
+            }
+            prevX = e.clientX;
+            prevY = e.clientY;
+          } else {
+            // Hover cursor
+            getMouseFromEvent(e);
+            raycaster.setFromCamera(mouse, camera);
+            const hits = raycaster.intersectObjects(interactables, false);
+            canvas.style.cursor = hits.length > 0 ? 'grab' : '';
+          }
+        };
+
+        const onPointerUp = () => {
+          isDragging = false;
+          dragOrbIndex = -1;
+          canvas.style.cursor = '';
+        };
+
+        canvas.addEventListener('pointerdown', onPointerDown);
+        window.addEventListener('pointermove', onPointerMove);
+        window.addEventListener('pointerup', onPointerUp);
 
         // Visibility observer â only render when section is in view
         let isVisible = false;
@@ -224,19 +293,13 @@ export default function InteractiveOrbs() {
         );
         observer.observe(sectionEl);
 
-        // Animation â auto-rotate, float, and mouse parallax
+        // Animation â auto-rotate, float, parallax
         let frame = 0;
-        let smoothMX = 0;
-        let smoothMY = 0;
 
         const animate = () => {
           requestAnimationFrame(animate);
           if (!isVisible) return;
           frame++;
-
-          // Smooth mouse tracking
-          smoothMX += (mouseX - smoothMX) * 0.03;
-          smoothMY += (mouseY - smoothMY) * 0.03;
 
           // Resize check
           const newRect = sectionEl.getBoundingClientRect();
@@ -246,21 +309,21 @@ export default function InteractiveOrbs() {
             camera.updateProjectionMatrix();
           }
 
-          orbs.forEach((orb) => {
+          orbs.forEach((orb, i) => {
+            if (isDragging && dragOrbIndex === i) return; // skip auto-animation while dragging
+
             // Auto-rotation
             const rotSpeed = orb.config.type === 'globe' ? 0.004 : 0.006;
             orb.group.rotation.y += rotSpeed;
             orb.group.rotation.x += rotSpeed * 0.3;
 
-            // Mouse parallax â orbs shift toward cursor
-            const px = orb.basePos.x + smoothMX * orb.parallaxStrength;
+            // Float
             const floatY = Math.sin(frame * 0.01 + orb.phase) * 0.5;
-            const py = orb.basePos.y + floatY + smoothMY * orb.parallaxStrength * -0.5;
+            const py = orb.basePos.y + floatY;
+            orb.group.position.x += (orb.basePos.x - orb.group.position.x) * 0.005;
+            orb.group.position.y += (py - orb.group.position.y) * 0.01;
 
-            orb.group.position.x += (px - orb.group.position.x) * 0.02;
-            orb.group.position.y += (py - orb.group.position.y) * 0.02;
-
-            // Pulse glow based on mouse proximity (normalized screen space)
+            // Pulse glow
             const mainChild = orb.group.children[0];
             if (mainChild && mainChild.material) {
               const baseOpacity = orb.config.type === 'globe' ? 0.25 : 0.3;
@@ -285,8 +348,6 @@ export default function InteractiveOrbs() {
     });
 
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('touchmove', onTouchMove);
       scenesRef.current.forEach((s) => {
         s.renderer.dispose();
         s.observer.disconnect();

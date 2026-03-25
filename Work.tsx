@@ -95,13 +95,14 @@ export default function Work() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="fu"
+              className="fu case-card"
               style={{
                 background: 'var(--bg2)',
                 border: '1px solid var(--border)',
                 borderRadius: '2px',
                 overflow: 'hidden',
-                transition: 'border-color 0.2s ease, transform 0.2s ease',
+                transition: 'border-color 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease',
+                position: 'relative',
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLElement;
@@ -114,8 +115,21 @@ export default function Work() {
                 el.style.transform = 'translateY(0)';
               }}
             >
+              {/* Gradient overlay at top */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: '80px',
+                  background: 'linear-gradient(180deg, rgba(30,61,143,0.08) 0%, transparent 100%)',
+                  pointerEvents: 'none',
+                  zIndex: 1,
+                }}
+              />
               {/* Category Tag */}
-              <div style={{ padding: '32px 32px 0' }}>
+              <div style={{ padding: '32px 32px 0', position: 'relative', zIndex: 2 }}>
                 <span
                   style={{
                     fontFamily: "'Space Mono', monospace",
@@ -133,7 +147,7 @@ export default function Work() {
               </div>
 
               {/* Content */}
-              <div style={{ padding: '20px 32px' }}>
+              <div style={{ padding: '20px 32px', position: 'relative', zIndex: 2 }}>
                 <h3
                   style={{
                     fontFamily: "'Syne', sans-serif",
@@ -179,6 +193,9 @@ export default function Work() {
                   display: 'grid',
                   gridTemplateColumns: `repeat(${project.metrics.length}, 1fr)`,
                   borderTop: '1px solid var(--border)',
+                  background: 'linear-gradient(180deg, rgba(30,61,143,0.04) 0%, transparent 100%)',
+                  position: 'relative',
+                  zIndex: 2,
                 }}
               >
                 {project.metrics.map((metric) => (

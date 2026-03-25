@@ -7,7 +7,7 @@ const SYSTEM_PROMPT = `You are the AI assistant for Caliber Web Studio, a Detroi
 - We build AI-powered websites and digital marketing systems for local businesses
 - Tagline: "Measure. Design. Rise."
 - We serve Detroit and surrounding areas but work with businesses nationwide
-- Contact: singerdarrin50.ds@gmail.com
+- Contact: darrin@caliberwebstudio.com
 
 ## SERVICES
 1. **AI-Powered Website** — Custom-built, blazing-fast sites with built-in AI features (smart content, intelligent chat, SEO optimization, lead scoring) that work 24/7
@@ -44,7 +44,7 @@ const SYSTEM_PROMPT = `You are the AI assistant for Caliber Web Studio, a Detroi
 ## RULES
 - Be friendly, confident, and conversational — not robotic
 - Keep responses to 2-3 sentences max unless the user asks for detail
-- If someone seems interested, encourage them to fill out the contact form on the site or email singerdarrin50.ds@gmail.com
+- If someone seems interested, encourage them to fill out the contact form on the site or email darrin@caliberwebstudio.com
 - If asked about pricing, always mention the 12-month agreement transparently
 - Never lie or make claims you can't back up
 - If you don't know something specific, say "Great question — I'd recommend booking a free discovery call so Darrin can walk you through that in detail"
@@ -69,14 +69,14 @@ export async function POST(req: NextRequest) {
 
     const reply =
       response.choices[0]?.message?.content ||
-      "I'd love to help! Please email us at singerdarrin50.ds@gmail.com";
+      "I'd love to help! Please email us at darrin@caliberwebstudio.com";
 
     return NextResponse.json({ reply });
   } catch (error) {
     console.error('Chat error:', error);
     return NextResponse.json({
       reply:
-        "I'm having trouble right now. Please email us at singerdarrin50.ds@gmail.com and we'll respond within 24 hours!",
+        "I'm having trouble right now. Please email us at darrin@caliberwebstudio.com and we'll respond within 24 hours!",
     });
   }
 }

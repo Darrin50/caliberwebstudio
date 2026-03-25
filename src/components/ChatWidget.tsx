@@ -57,7 +57,7 @@ export default function ChatWidget() {
         {
           role: 'assistant',
           content:
-            "Sorry, I'm having trouble right now. Please email us at singerdarrin50.ds@gmail.com!",
+            "Sorry, I'm having trouble right now. Please email us at darrin@caliberwebstudio.com!",
         },
       ]);
     } finally {

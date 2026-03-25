@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: 'Caliber Web Studio <onboarding@resend.dev>',
-      to: ['singerdarrin50.ds@gmail.com'],
+      to: ['darrin@caliberwebstudio.com'],
       reply_to: email,
       subject: `New Lead: ${name} — ${business || 'No business name'}`,
       html: `
@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     console.error('Contact form error:', error);
     return NextResponse.json(
       {
-        error: 'Failed to send message. Please email us directly at singerdarrin50.ds@gmail.com',
+        error: 'Failed to send message. Please email us directly at darrin@caliberwebstudio.com',
       },
       { status: 500 }
     );

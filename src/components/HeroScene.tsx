@@ -58,46 +58,46 @@ export default function HeroScene() {
       scene.add(sceneGroup);
       sceneRef.current = { scene, sceneGroup, camera, renderer };
 
-      // Hexagon wireframe
-      const hexGeometry = new THREE.CylinderGeometry(5, 5, 0.2, 6, 1, false);
+      // Hexagon wireframe — positioned far right to frame text
+      const hexGeometry = new THREE.CylinderGeometry(4, 4, 0.2, 6, 1, false);
       const hexMaterial = new THREE.MeshBasicMaterial({
         color: 0x1e3d8f,
         wireframe: true,
         transparent: true,
-        opacity: 0.22,
+        opacity: 0.35,
       });
       const hex = new THREE.Mesh(hexGeometry, hexMaterial);
       hex.rotation.x = Math.PI / 2;
-      hex.position.set(7, 0, -2);
+      hex.position.set(16, 2, -6);
       sceneGroup.add(hex);
 
-      // Hex outer
-      const hexOuterGeometry = new THREE.CylinderGeometry(7.5, 7.5, 0.1, 6, 1, false);
+      // Hex outer ring
+      const hexOuterGeometry = new THREE.CylinderGeometry(6, 6, 0.1, 6, 1, false);
       const hexOuterMaterial = new THREE.MeshBasicMaterial({
         color: 0xa8b8c8,
         wireframe: true,
         transparent: true,
-        opacity: 0.08,
+        opacity: 0.12,
       });
       const hexOuter = new THREE.Mesh(hexOuterGeometry, hexOuterMaterial);
-      hexOuter.position.set(7, 0, -3);
+      hexOuter.position.set(16, 2, -7);
       sceneGroup.add(hexOuter);
 
-      // Particles
+      // Particles — subtle starfield
       const particlesGeometry = new THREE.BufferGeometry();
-      const particleCount = 1800;
+      const particleCount = 1200;
       const positions = new Float32Array(particleCount * 3);
       for (let i = 0; i < particleCount * 3; i += 3) {
-        positions[i] = (Math.random() - 0.5) * 70;
+        positions[i] = (Math.random() - 0.5) * 80;
         positions[i + 1] = (Math.random() - 0.5) * 50;
-        positions[i + 2] = (Math.random() - 0.5) * 40;
+        positions[i + 2] = (Math.random() - 0.5) * 50;
       }
       particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
       const particlesMaterial = new THREE.PointsMaterial({
         color: 0xa8b8c8,
-        size: 0.08,
+        size: 0.06,
         transparent: true,
-        opacity: 0.55,
+        opacity: 0.4,
         sizeAttenuation: true,
       });
       particlesMaterial.blending = THREE.AdditiveBlending;
@@ -111,17 +111,29 @@ export default function HeroScene() {
       grid.position.y = -10;
       sceneGroup.add(grid);
 
-      // Sphere wireframe
-      const sphereGeometry = new THREE.SphereGeometry(3.5, 12, 8);
+      // Sphere wireframe — positioned far left to frame text
+      const sphereGeometry = new THREE.SphereGeometry(3, 14, 10);
       const sphereMaterial = new THREE.MeshBasicMaterial({
         color: 0x1e3d8f,
         wireframe: true,
         transparent: true,
-        opacity: 0.13,
+        opacity: 0.35,
       });
       const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-      sphere.position.set(-9, 2, -5);
+      sphere.position.set(-16, 3, -4);
       sceneGroup.add(sphere);
+
+      // Sphere glow ring
+      const sphereRingGeometry = new THREE.RingGeometry(3.8, 4.0, 32);
+      const sphereRingMaterial = new THREE.MeshBasicMaterial({
+        color: 0xa8b8c8,
+        transparent: true,
+        opacity: 0.08,
+        side: THREE.DoubleSide,
+      });
+      const sphereRing = new THREE.Mesh(sphereRingGeometry, sphereRingMaterial);
+      sphereRing.position.set(-16, 3, -4);
+      sceneGroup.add(sphereRing);
 
       // Drag interaction
       const dragState = {
@@ -215,11 +227,14 @@ export default function HeroScene() {
       const animate = () => {
         requestAnimationFrame(animate);
 
-        hex.rotation.z += 0.003;
-        hexOuter.rotation.z -= 0.0015;
-        sphere.rotation.y += 0.005;
-        particles.rotation.y += 0.0004;
-        grid.position.z += 0.05;
+        hex.rotation.z += 0.002;
+        hexOuter.rotation.z -= 0.001;
+        sphere.rotation.y += 0.004;
+        sphere.rotation.x += 0.001;
+        sphereRing.rotation.z += 0.003;
+        sphereRing.rotation.x = Math.sin(frameCount * 0.008) * 0.3;
+        particles.rotation.y += 0.0003;
+        grid.position.z += 0.03;
 
         // Drag interaction tick
         dragState.tick();

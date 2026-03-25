@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Nav() {
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const toggle = toggleRef.current;
@@ -109,101 +110,240 @@ export default function Nav() {
     return () => toggle.removeEventListener('click', handleToggle as any);
   }, []);
 
+  // Close menu when clicking a link
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
+  const navItems = [
+    { label: 'Services', href: '#services' },
+    { label: 'Process', href: '#process' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'Work', href: '#work' },
+    { label: 'Blog', href: '/blog' },
+  ];
+
   return (
-    <nav style={{
-      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      padding: '0 40px', height: '72px',
-      background: 'rgba(14,14,14,0.85)',
-      backdropFilter: 'blur(20px) saturate(180%)',
-      WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-      borderBottom: '1px solid var(--border)',
-    }}>
-      <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
-        <Image
-          src="/logo-mark-nav.png"
-          alt="Caliber Web Studio"
-          width={36}
-          height={36}
-          style={{ objectFit: 'contain' }}
-          priority
-        />
-        <span style={{
-          fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: '14px',
-          letterSpacing: '0.08em', textTransform: 'uppercase',
-          background: 'linear-gradient(135deg, var(--chrome), #fff, var(--chrome))',
-          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}>
-          Caliber Web Studio
-        </span>
-      </Link>
+    <>
+      <nav style={{
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '0 clamp(16px, 4vw, 40px)', height: '72px',
+        background: 'rgba(14,14,14,0.85)',
+        backdropFilter: 'blur(20px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+        borderBottom: '1px solid var(--border)',
+      }}>
+        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
+          <Image
+            src="/logo-mark-nav.png"
+            alt="Caliber Web Studio"
+            width={36}
+            height={36}
+            style={{ objectFit: 'contain' }}
+            priority
+          />
+          <span className="nav-logo-text" style={{
+            fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: '14px',
+            letterSpacing: '0.08em', textTransform: 'uppercase',
+            background: 'linear-gradient(135deg, var(--chrome), #fff, var(--chrome))',
+            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}>
+            Caliber Web Studio
+          </span>
+        </Link>
 
-      <ul style={{ display: 'flex', gap: '36px', listStyle: 'none', alignItems: 'center' }}>
-        {[
-          { label: 'Services', href: '#services' },
-          { label: 'Process', href: '#process' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Work', href: '#work' },
-          { label: 'Blog', href: '/blog' },
-        ].map((item) => (
-          <li key={item.label}>
-            <Link
-              href={item.href}
-              style={{
-                fontFamily: "'Space Mono', monospace", fontSize: '11px',
-                letterSpacing: '0.14em', textTransform: 'uppercase',
-                color: 'rgba(208,216,224,0.5)', textDecoration: 'none',
-                transition: 'color 0.2s',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(208,216,224,0.5)')}
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+        {/* Desktop nav links */}
+        <ul className="nav-desktop" style={{ display: 'flex', gap: '36px', listStyle: 'none', alignItems: 'center' }}>
+          {navItems.map((item) => (
+            <li key={item.label}>
+              <Link
+                href={item.href}
+                style={{
+                  fontFamily: "'Space Mono', monospace", fontSize: '11px',
+                  letterSpacing: '0.14em', textTransform: 'uppercase',
+                  color: 'rgba(208,216,224,0.5)', textDecoration: 'none',
+                  transition: 'color 0.2s',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(208,216,224,0.5)')}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-        {/* Theme Toggle */}
-        <button
-          ref={toggleRef}
-          id="themeToggle"
-          title="Toggle theme"
-          style={{
-            width: '52px', height: '28px', borderRadius: '14px', border: 'none',
-            background: 'rgba(168,184,200,0.15)', cursor: 'pointer',
-            display: 'flex', alignItems: 'center', padding: '3px',
-            transition: 'background 0.3s',
-          }}
-        >
-          <span
-            className="toggle-icon"
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          {/* Theme Toggle */}
+          <button
+            ref={toggleRef}
+            id="themeToggle"
+            title="Toggle theme"
             style={{
-              width: '22px', height: '22px', borderRadius: '50%',
-              background: 'linear-gradient(135deg, #ffcc40, #ff8800)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: '12px', transition: 'transform 0.3s',
-              transform: 'translateX(24px)',
+              width: '52px', height: '28px', borderRadius: '14px', border: 'none',
+              background: 'rgba(168,184,200,0.15)', cursor: 'pointer',
+              display: 'flex', alignItems: 'center', padding: '3px',
+              transition: 'background 0.3s',
             }}
           >
-            🌙
-          </span>
-        </button>
+            <span
+              className="toggle-icon"
+              style={{
+                width: '22px', height: '22px', borderRadius: '50%',
+                background: 'linear-gradient(135deg, #ffcc40, #ff8800)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '12px', transition: 'transform 0.3s',
+                transform: 'translateX(24px)',
+              }}
+            >
+              🌙
+            </span>
+          </button>
 
-        <Link href="#contact" className="nav-btn" style={{
-          fontFamily: "'Space Mono', monospace", fontSize: '11px',
-          letterSpacing: '0.1em', textTransform: 'uppercase',
-          color: 'var(--bg)', background: 'var(--chrome)',
-          padding: '11px 26px', border: 'none',
-          textDecoration: 'none', fontWeight: 700,
-          transition: 'transform 0.15s ease-out',
-          display: 'inline-block',
-        }}>
+          {/* Desktop CTA */}
+          <Link href="#contact" className="nav-btn nav-cta-desktop" style={{
+            fontFamily: "'Space Mono', monospace", fontSize: '11px',
+            letterSpacing: '0.1em', textTransform: 'uppercase',
+            color: 'var(--bg)', background: 'var(--chrome)',
+            padding: '11px 26px', border: 'none',
+            textDecoration: 'none', fontWeight: 700,
+            transition: 'transform 0.15s ease-out',
+            display: 'inline-block',
+          }}>
+            Start a Project
+          </Link>
+
+          {/* Hamburger button — mobile only */}
+          <button
+            className="nav-hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+            style={{
+              display: 'none',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '5px',
+              width: '40px',
+              height: '40px',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '8px',
+            }}
+          >
+            <span style={{
+              display: 'block', width: '22px', height: '2px',
+              background: 'var(--silver)',
+              transition: 'transform 0.3s, opacity 0.3s',
+              transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
+            }} />
+            <span style={{
+              display: 'block', width: '22px', height: '2px',
+              background: 'var(--silver)',
+              transition: 'opacity 0.3s',
+              opacity: menuOpen ? 0 : 1,
+            }} />
+            <span style={{
+              display: 'block', width: '22px', height: '2px',
+              background: 'var(--silver)',
+              transition: 'transform 0.3s, opacity 0.3s',
+              transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none',
+            }} />
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile menu overlay */}
+      {menuOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.5)',
+            zIndex: 998,
+          }}
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile slide-out menu */}
+      <div
+        className="nav-mobile-menu"
+        style={{
+          position: 'fixed',
+          top: '72px',
+          right: 0,
+          width: '280px',
+          maxWidth: '80vw',
+          height: 'calc(100vh - 72px)',
+          background: 'rgba(14,14,14,0.97)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          borderLeft: '1px solid var(--border)',
+          zIndex: 999,
+          transform: menuOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.3s ease',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '32px 24px',
+          gap: '8px',
+        }}
+      >
+        {navItems.map((item) => (
+          <Link
+            key={item.label}
+            href={item.href}
+            onClick={handleLinkClick}
+            style={{
+              fontFamily: "'Space Mono', monospace",
+              fontSize: '13px',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'rgba(208,216,224,0.7)',
+              textDecoration: 'none',
+              padding: '14px 0',
+              borderBottom: '1px solid rgba(208,216,224,0.08)',
+              transition: 'color 0.2s',
+            }}
+          >
+            {item.label}
+          </Link>
+        ))}
+        <Link
+          href="#contact"
+          onClick={handleLinkClick}
+          className="btn-chrome"
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '12px',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            textDecoration: 'none',
+            textAlign: 'center',
+            fontWeight: 700,
+            marginTop: '16px',
+            display: 'block',
+          }}
+        >
           Start a Project
         </Link>
       </div>
-    </nav>
+
+      {/* Responsive styles */}
+      <style>{`
+        @media (max-width: 768px) {
+          .nav-desktop { display: none !important; }
+          .nav-cta-desktop { display: none !important; }
+          .nav-hamburger { display: flex !important; }
+          .nav-logo-text { font-size: 12px !important; }
+        }
+      `}</style>
+    </>
   );
 }

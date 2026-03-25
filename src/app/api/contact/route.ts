@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: 'Caliber Web Studio <onboarding@resend.dev>',
+      from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
       to: ['darrin@caliberwebstudio.com'],
       reply_to: email,
       subject: `New Lead: ${name} — ${business || 'No business name'}`,
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     // Also send confirmation to the lead
     await resend.emails.send({
-      from: 'Caliber Web Studio <onboarding@resend.dev>',
+      from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
       to: [email],
       subject: `We got your message, ${name.split(' ')[0]}! 🚀`,
       html: `

@@ -194,7 +194,7 @@ export default function HeroScene() {
 
       // ââââââââââââââââââââââââââââââââââââââ
       //  PARTICLES â denser star field
-      // ââââââââââââââââââââââââââââââââââââââ
+      // ââââââââââââââââââââââââââââââââââ
       const particlesGeometry = new THREE.BufferGeometry();
       const particleCount = 1600;
       const positions = new Float32Array(particleCount * 3);
@@ -317,16 +317,8 @@ export default function HeroScene() {
       window.addEventListener('pointermove', onPointerMove);
       window.addEventListener('pointerup', onPointerUp);
 
-      // Touch support
-      canvas.addEventListener('touchstart', (e) => {
-        const t = e.touches[0];
-        onPointerDown({ clientX: t.clientX, clientY: t.clientY, preventDefault: () => e.preventDefault() } as any);
-      }, { passive: false });
-      window.addEventListener('touchmove', (e) => {
-        const t = e.touches[0];
-        onPointerMove({ clientX: t.clientX, clientY: t.clientY, preventDefault: () => e.preventDefault() } as any);
-      }, { passive: false });
-      window.addEventListener('touchend', () => onPointerUp());
+      // Touch is handled by pointer events â no separate touch listeners needed.
+      // touch-action CSS on the canvas allows vertical scrolling on mobile.
 
       // Scroll parallax
       const onScroll = () => {
@@ -436,6 +428,7 @@ export default function HeroScene() {
         inset: 0,
         zIndex: 1,
         pointerEvents: 'auto',
+        touchAction: 'pan-y pinch-zoom',
         width: '100%',
         height: '100%',
       }}

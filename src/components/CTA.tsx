@@ -189,16 +189,233 @@ export default function CTA() {
             marginBottom: '48px',
           }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>[]Û\ÜÓ[YOHH\OH^[YOH[YHXÙZÛ\H[Ý\[YH[YO^ÙÜQ]K[Y_BÛÚ[ÙO^Ú[PÚ[Ù_B\]Z\YÝ[O^ÞÂXÚÙÜÝ[	Ý[Ü\[	ËÜ\ÝÛN	Ì\ÛÛY\KXÜ\IËÜ\Y	ÌÛÛY[Ü\[	ËÛÛÜ	Ý\K\Ú[\IËÛ[Z[NÒ[\ËØ[Ë\Ù\YÛÚ^N	ÌM\	ËY[Î	ÌLLL	ËÚY	ÌL	IËÝ][N	ÛÛIË[Ú][Û	ØÜ\XÛÛÜÈX\ÙKY[Ë[YÈX\ÙIË_BÛØÝ\Ï^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KY[ÓYH	ÌL	ÎÂ_BÛ\^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\KXÜ\IÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý[Ü\[	ÎÂKÝ\[\Ù]Ý[KY[ÓYH	Ì	ÎÂ_BÏ[]Û\ÜÓ[YOHH\OH^[YOH\Ú[\ÜÓ[YHXÙZÛ\H\Ú[\ÜÈ[YH[YO^ÙÜQ]K\Ú[\ÜÓ[Y_BÛÚ[ÙO^Ú[PÚ[Ù_B\]Z\YÝ[O^ÞÂXÚÙÜÝ[	Ý[Ü\[	ËÜ\ÝÛN	Ì\ÛÛY\KXÜ\IËÜ\Y	ÌÛÛY[Ü\[	ËÛÛÜ	Ý\K\Ú[\IËÛ[Z[NÒ[\ËØ[Ë\Ù\YÛÚ^N	ÌM\	ËY[Î	ÌLLL	ËÚY	ÌL	IËÝ][N	ÛÛIË[Ú][Û	ØÜ\XÛÛÜÈX\ÙKY[Ë[YÈX\ÙIË_BÛØÝ\Ï^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KY[ÓYH	ÌL	ÎÂ_BÛ\^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\KXÜ\IÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý[Ü\[	ÎÂKÝ\[\Ù]Ý[KY[ÓYH	Ì	ÎÂ_BÏ[]Û\ÜÓ[YOHH\OH[[YOHÛHXÙZÛ\HÛH[X\[YO^ÙÜQ]KÛ_BÛÚ[ÙO^Ú[PÚ[Ù_BÝ[O^ÞÂXÚÙÜÝ[	Ý[Ü\[	ËÜ\ÝÛN	Ì\ÛÛY\KXÜ\IËÜ\Y	ÌÛÛY[Ü\[	ËÛÛÜ	Ý\K\Ú[\IËÛ[Z[NÒ[\ËØ[Ë\Ù\YÛÚ^N	ÌM\	ËY[Î	ÌLLL	ËÚY	ÌL	IËÝ][N	ÛÛIË[Ú][Û	ØÜ\XÛÛÜÈX\ÙKY[Ë[YÈX\ÙIË_BÛØÝ\Ï^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KY[ÓYH	ÌL	ÎÂ_BÛ\^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\KXÜ\IÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý[Ü\[	ÎÂKÝ\[\Ù]Ý[KY[ÓYH	Ì	ÎÂ_BÏ[]Û\ÜÓ[YOHH\OH[XZ[[YOH[XZ[XÙZÛ\H[XZ[Y\ÜÈ[YO^ÙÜQ]K[XZ[BÛÚ[ÙO^Ú[PÚ[Ù_B\]Z\YÝ[O^ÞÂXÚÙÜÝ[	Ý[Ü\[	ËÜ\ÝÛN	Ì\ÛÛY\KXÜ\IËÜ\Y	ÌÛÛY[Ü\[	ËÛÛÜ	Ý\K\Ú[\IËÛ[Z[NÒ[\ËØ[Ë\Ù\YÛÚ^N	ÌM\	ËY[Î	ÌLLL	ËÚY	ÌL	IËÝ][N	ÛÛIË[Ú][Û	ØÜ\XÛÛÜÈX\ÙKY[Ë[YÈX\ÙIË_BÛØÝ\Ï^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KY[ÓYH	ÌL	ÎÂ_BÛ\^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\KXÜ\IÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý[Ü\[	ÎÂKÝ\[\Ù]Ý[KY[ÓYH	Ì	ÎÂ_BÏÙ]^\XBÛ\ÜÓ[YOHH[YOHY\ÜØYÙHXÙZÛ\H[\ÈXÝ][Ý\ÚXÝ[YO^ÙÜQ]KY\ÜØYÙ_BÛÚ[ÙO^Ú[PÚ[Ù_BÝÜÏ^ÍBÝ[O^ÞÂXÚÙÜÝ[	Ý[Ü\[	ËÜ\ÝÛN	Ì\ÛÛY\KXÜ\IËÜ\Y	ÌÛÛY[Ü\[	ËÛÛÜ	Ý\K\Ú[\IËÛ[Z[NÒ[\ËØ[Ë\Ù\YÛÚ^N	ÌM\	ËY[Î	ÌLLL	ËÚY	ÌL	IËÝ][N	ÛÛIË[Ú][Û	ØÜ\XÛÛÜÈX\ÙKY[Ë[YÈX\ÙIË\Ú^N	Ý\XØ[	Ë_BÛØÝ\Ï^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý\K[]JIÎÂKÝ\[\Ù]Ý[KY[ÓYH	ÌL	ÎÂ_BÛ\^ÊJHOÂKÝ\[\Ù]Ý[KÜ\ÛÛÜH	Ý\KXÜ\IÎÂKÝ\[\Ù]Ý[KÜ\YÛÛÜH	Ý[Ü\[	ÎÂKÝ\[\Ù]Ý[KY[ÓYH	Ì	ÎÂ_BÏÙ\Ü	
-]Ý[O^ÞÂÛÛÜ	ÈÙËÛ[Z[NÒ[\ËØ[Ë\Ù\YÛÚ^N	ÌM	ËY[Î	ÌL	ËXÚÙÜÝ[	ÜØJMKL
-ËL
-ËJIËÜ\Y]\Î	Ì	Ë_BÙ\ÜBÙ]
-_BÜÝXZ]Y	
-]Ý[O^ÞÂÛÛÜ	Ý\KXÚÛYJIËÛ[Z[NÒ[\ËØ[Ë\Ù\YÛÚ^N	ÌM	ËY[Î	ÌL	ËXÚÙÜÝ[	ÜØJMN
-JIËÜ\Y]\Î	Ì	Ë_B[ÜÈÜXXÚ[ÈÝ]HÙIÛÙ]XÚÈÈ[ÝHÛÛÛÙ]
-_B]Û\OHÝXZ]\ØXY^ÛØY[ßBÛ\ÜÓ[YOHXÚÛYHHÝ[O^ÞÂ^XÛÜ][Û	ÛÛIË\Ü^N	Ú[[KXØÚÉËÜXÚ]NØY[ÈÈKÝ\ÛÜØY[ÈÈ	ÝØZ]	È	ÜÚ[\Ë[Ú][Û	ØÞ\ÚYÝÈÜÈX\ÙK[ÙÜHM\ÈX\ÙK[Ý]	Ë_BÛ[Ý\ÙQ[\^ÊJHOÂKÝ\[\Ù]Ý[KÞÚYÝÈH	ÌL
-ØJÌ
-KMËJIÎÂ_BÛ[Ý\ÙSX]O^ÊJHOÂKÝ\[\Ù]Ý[KÞÚYÝÈH	ÛÛIÎÂ_BÛØY[ÈÈ	ÔÙ[[ËÈ	ÔÙ[Y\ÜØYÙH8¡¤ßBØ]ÛÙÜOËÊÛÛXÝ[È
-ßB]Û\ÜÓ[YOHHÝ[O^ÞÂ^[YÛ	ØÙ[\ËÛ[Z[NÔÜXÙH[ÛÉË[ÛÜÜXÙHÛÚ^N	ÌL	ËÛÛÜ	Ý\KY[JIË]\ÜXÚ[Î	Ì
-Y[IË_B\[Ø[X\ÙXÝY[ËÛÛH0­È]Ú]RBÙ]Ù]ÜÙXÝ[Û
-NÂB
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
+            <input
+              className="fu"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              style={{
+                background: 'transparent',
+                borderBottom: '1px solid var(--border)',
+                borderLeft: '2px solid transparent',
+                color: 'var(--silver)',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '15px',
+                padding: '12px 0 12px 12px',
+                width: '100%',
+                outline: 'none',
+                transition: 'border-color 0.2s ease, padding-left 0.2s ease',
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = 'var(--navy)';
+                e.currentTarget.style.borderLeftColor = 'var(--navy)';
+                e.currentTarget.style.paddingLeft = '12px';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = 'var(--border)';
+                e.currentTarget.style.borderLeftColor = 'transparent';
+                e.currentTarget.style.paddingLeft = '0';
+              }}
+            />
+
+            <input
+              className="fu"
+              type="text"
+              name="businessName"
+              placeholder="Business Name"
+              value={formData.businessName}
+              onChange={handleChange}
+              required
+              style={{
+                background: 'transparent',
+                borderBottom: '1px solid var(--border)',
+                borderLeft: '2px solid transparent',
+                color: 'var(--silver)',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '15px',
+                padding: '12px 0 12px 12px',
+                width: '100%',
+                outline: 'none',
+                transition: 'border-color 0.2s ease, padding-left 0.2s ease',
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = 'var(--navy)';
+                e.currentTarget.style.borderLeftColor = 'var(--navy)';
+                e.currentTarget.style.paddingLeft = '12px';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = 'var(--border)';
+                e.currentTarget.style.borderLeftColor = 'transparent';
+                e.currentTarget.style.paddingLeft = '0';
+              }}
+            />
+
+            <input
+              className="fu"
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              style={{
+                background: 'transparent',
+                borderBottom: '1px solid var(--border)',
+                borderLeft: '2px solid transparent',
+                color: 'var(--silver)',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '15px',
+                padding: '12px 0 12px 12px',
+                width: '100%',
+                outline: 'none',
+                transition: 'border-color 0.2s ease, padding-left 0.2s ease',
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = 'var(--navy)';
+                e.currentTarget.style.borderLeftColor = 'var(--navy)';
+                e.currentTarget.style.paddingLeft = '12px';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = 'var(--border)';
+                e.currentTarget.style.borderLeftColor = 'transparent';
+                e.currentTarget.style.paddingLeft = '0';
+              }}
+            />
+
+            <input
+              className="fu"
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              style={{
+                background: 'transparent',
+                borderBottom: '1px solid var(--border)',
+                borderLeft: '2px solid transparent',
+                color: 'var(--silver)',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '15px',
+                padding: '12px 0 12px 12px',
+                width: '100%',
+                outline: 'none',
+                transition: 'border-color 0.2s ease, padding-left 0.2s ease',
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = 'var(--navy)';
+                e.currentTarget.style.borderLeftColor = 'var(--navy)';
+                e.currentTarget.style.paddingLeft = '12px';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = 'var(--border)';
+                e.currentTarget.style.borderLeftColor = 'transparent';
+                e.currentTarget.style.paddingLeft = '0';
+              }}
+            />
+          </div>
+
+          <textarea
+            className="fu"
+            name="message"
+            placeholder="Tell us about your project..."
+            value={formData.message}
+            onChange={handleChange}
+            rows={6}
+            style={{
+              background: 'transparent',
+              borderBottom: '1px solid var(--border)',
+              borderLeft: '2px solid transparent',
+              color: 'var(--silver)',
+              fontFamily: "'Inter', sans-serif",
+              fontSize: '15px',
+              padding: '12px 0 12px 12px',
+              width: '100%',
+              outline: 'none',
+              transition: 'border-color 0.2s ease, padding-left 0.2s ease',
+              resize: 'vertical',
+            }}
+            onFocus={(e) => {
+              e.currentTarget.style.borderColor = 'var(--navy)';
+              e.currentTarget.style.borderLeftColor = 'var(--navy)';
+              e.currentTarget.style.paddingLeft = '12px';
+            }}
+            onBlur={(e) => {
+              e.currentTarget.style.borderColor = 'var(--border)';
+              e.currentTarget.style.borderLeftColor = 'transparent';
+              e.currentTarget.style.paddingLeft = '0';
+            }}
+          />
+
+          {error && (
+            <div
+              style={{
+                color: '#ff6b6b',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '14px',
+                padding: '12px',
+                background: 'rgba(255,107,107,0.1)',
+                borderRadius: '2px',
+              }}
+            >
+              {error}
+            </div>
+          )}
+
+          {submitted && (
+            <div
+              style={{
+                color: 'var(--chrome)',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '14px',
+                padding: '12px',
+                background: 'rgba(168,184,200,0.1)',
+                borderRadius: '2px',
+              }}
+            >
+              Thanks for reaching out! We'll get back to you soon.
+            </div>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="btn-chrome fu"
+            style={{
+              textDecoration: 'none',
+              display: 'inline-block',
+              opacity: loading ? 0.6 : 1,
+              cursor: loading ? 'wait' : 'pointer',
+              transition: 'box-shadow 0.3s ease, transform 0.15s ease-out',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 12px 40px rgba(30,61,143,0.25)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            {loading ? 'Sending...' : 'Send Message â'}
+          </button>
+        </form>
+
+        {/* Contact Info */}
+        <div
+          className="fu"
+          style={{
+            textAlign: 'center',
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '12px',
+            color: 'var(--dim)',
+            letterSpacing: '0.05em',
+          }}
+        >
+          darrin@caliberwebstudio.com Â· Detroit, MI
+        </div>
+      </div>
+    </section>
+  );
+}

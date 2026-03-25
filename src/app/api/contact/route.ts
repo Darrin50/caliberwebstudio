@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, business, phone, email, message } = body;
+    const { name, businessName: business, phone, email, message } = body;
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -17,8 +17,8 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: 'Caliber Web Studio <hello@caliberwebstudio.com>',
-      to: ['hello@caliberwebstudio.com'],
+      from: 'Caliber Web Studio <onboarding@resend.dev>',
+      to: ['singerdarrin50.ds@gmail.com'],
       reply_to: email,
       subject: `New Lead: ${name} — ${business || 'No business name'}`,
       html: `
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     // Also send confirmation to the lead
     await resend.emails.send({
-      from: 'Caliber Web Studio <hello@caliberwebstudio.com>',
+      from: 'Caliber Web Studio <onboarding@resend.dev>',
       to: [email],
       subject: `We got your message, ${name.split(' ')[0]}! 🚀`,
       html: `
@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     console.error('Contact form error:', error);
     return NextResponse.json(
       {
-        error: 'Failed to send message. Please email us directly at hello@caliberwebstudio.com',
+        error: 'Failed to send message. Please email us directly at singerdarrin50.ds@gmail.com',
       },
       { status: 500 }
     );

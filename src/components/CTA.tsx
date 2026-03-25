@@ -350,7 +350,7 @@ export default function CTA() {
             letterSpacing: '0.05em',
           }}
         >
-          hello@caliberwebstudio.com · Detroit, MI
+          singerdarrin50.ds@gmail.com · Detroit, MI
         </div>
       </div>
     </section>

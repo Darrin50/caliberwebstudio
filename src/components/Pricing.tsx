@@ -1,3 +1,5 @@
+'use client';
+
 export default function Pricing() {
   const plans = [
     {
@@ -70,7 +72,7 @@ export default function Pricing() {
             marginBottom: '16px',
           }}
         >
-          $0 to Start. Cancel Anytime.
+          $0 Down. 12-Month Growth Plan.
         </h2>
 
         {/* Subtitle */}
@@ -85,7 +87,7 @@ export default function Pricing() {
             marginBottom: '80px',
           }}
         >
-          No setup fees. No long-term contracts. Just results.
+          No setup fees. Commit to 12 months and watch your business grow. Just results.
         </p>
 
         {/* Pricing Cards Grid */}
@@ -260,7 +262,7 @@ export default function Pricing() {
             letterSpacing: '0.05em',
           }}
         >
-          All plans include free website mockup • No credit card required to start
+          All plans include free website mockup • $0 down • 12-month service agreement
         </div>
       </div>
     </section>

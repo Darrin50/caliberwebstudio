@@ -140,10 +140,16 @@ export default function Nav() {
       </Link>
 
       <ul style={{ display: 'flex', gap: '36px', listStyle: 'none', alignItems: 'center' }}>
-        {['Services', 'Process', 'Pricing', 'Work'].map((item) => (
-          <li key={item}>
+        {[
+          { label: 'Services', href: '#services' },
+          { label: 'Process', href: '#process' },
+          { label: 'Pricing', href: '#pricing' },
+          { label: 'Work', href: '#work' },
+          { label: 'Blog', href: '/blog' },
+        ].map((item) => (
+          <li key={item.label}>
             <Link
-              href={`#${item.toLowerCase()}`}
+              href={item.href}
               style={{
                 fontFamily: "'Space Mono', monospace", fontSize: '11px',
                 letterSpacing: '0.14em', textTransform: 'uppercase',
@@ -153,7 +159,7 @@ export default function Nav() {
               onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(208,216,224,0.5)')}
             >
-              {item}
+              {item.label}
             </Link>
           </li>
         ))}

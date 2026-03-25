@@ -124,7 +124,7 @@ export default function Hero() {
             marginRight: 'auto',
           }}
         >
-          We build high-performance websites that rank, convert, and grow your business. $0 to start. No contracts.
+          We build high-performance websites that rank, convert, and grow your business. $0 down to start — lock in a 12-month growth plan.
         </p>
 
         {/* CTA Buttons */}

@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: 'Caliber Web Studio <hello@caliberwebstudio.com>',
       to: ['hello@caliberwebstudio.com'],
-      replyTo: email,
+      reply_to: email,
       subject: `New Lead: ${name} — ${business || 'No business name'}`,
       html: `
         <h2>New Contact Form Submission</h2>

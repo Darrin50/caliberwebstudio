@@ -1,6 +1,6 @@
 'use client';
 
-export default function Hero() {
+export default function Hero({ children }: { children?: React.ReactNode }) {
   return (
     <section
       id="hero"
@@ -18,6 +18,7 @@ export default function Hero() {
         textAlign: 'center',
       }}
     >
+      {children}
       <div style={{ position: 'relative', zIndex: 10, maxWidth: '900px', width: '100%' }}>
         {/* Hero Label */}
         <div className="sec-label fu" style={{ justifyContent: 'center' }}>

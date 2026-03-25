@@ -12,13 +12,13 @@ export default function Process() {
       number: '02',
       title: 'Strategy & Design',
       description: 'We build a custom game plan and create a free website mockup tailored to your business. You see exactly what you\'re getting before you commit.',
-      duration: '3–5 days',
+      duration: 'Same day',
     },
     {
       number: '03',
       title: 'Build & Launch',
       description: 'Our team builds your AI-powered website, sets up your chatbot, optimizes your Google Business Profile, and configures all your systems.',
-      duration: '~2 weeks',
+      duration: '~48 hours',
     },
     {
       number: '04',
@@ -56,7 +56,7 @@ export default function Process() {
             maxWidth: '900px',
           }}
         >
-          From Call to Launch in 2 Weeks
+          From Call to Launch in 48 Hours
         </h2>
 
         {/* Process Steps */}

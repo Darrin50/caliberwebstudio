@@ -1,55 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
-
 export default function Hero() {
-  useEffect(() => {
-    const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    let animationId: number;
-    const animate = () => {
-      ctx.fillStyle = 'transparent';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      animationId = requestAnimationFrame(animate);
-    };
-    animate();
-
-    // Fade-up animation
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('on');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.fu').forEach((el) => observer.observe(el));
-
-    return () => {
-      cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', resizeCanvas);
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <section
       id="hero"
+      className="hero"
       style={{
         position: 'relative',
         overflow: 'hidden',
@@ -63,18 +18,6 @@ export default function Hero() {
         textAlign: 'center',
       }}
     >
-      <canvas
-        id="hero-canvas"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          pointerEvents: 'none',
-        }}
-      />
-
       <div style={{ position: 'relative', zIndex: 10, maxWidth: '900px', width: '100%' }}>
         {/* Hero Label */}
         <div className="sec-label fu" style={{ justifyContent: 'center' }}>
@@ -105,7 +48,7 @@ export default function Hero() {
               animation: 'shine 3s linear infinite',
             }}
           >
-            the Modern Web.
+            The Modern Web.
           </div>
         </h1>
 

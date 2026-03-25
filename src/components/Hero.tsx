@@ -18,10 +18,10 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         textAlign: 'center',
       }}
     >
-      {/* 3D canvas renders here via children — stays at z-index 1 */}
+      {/* 3D canvas renders here via children â stays at z-index 1 */}
       {children}
-      {/* All text content — always in front of canvas */}
-      <div style={{ position: 'relative', zIndex: 10, maxWidth: '900px', width: '100%', pointerEvents: 'auto' }}>
+      {/* All text content â always in front of canvas */}
+      <div style={{ position: 'relative', zIndex: 10, maxWidth: '900px', width: '100%', pointerEvents: 'none', userSelect: 'none' }}>
         {/* Hero Label */}
         <div className="sec-label fu" style={{ justifyContent: 'center' }}>
           Detroit's Premier AI Web Agency
@@ -70,7 +70,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             marginRight: 'auto',
           }}
         >
-          We build high-performance websites that rank, convert, and grow your business. $0 down to start — lock in a 12-month growth plan.
+          We build high-performance websites that rank, convert, and grow your business. $0 down to start â lock in a 12-month growth plan.
         </p>
 
         {/* CTA Buttons */}
@@ -90,6 +90,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             style={{
               textDecoration: 'none',
               display: 'inline-block',
+              pointerEvents: 'auto',
             }}
           >
             Book a Free Audit
@@ -100,6 +101,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             style={{
               textDecoration: 'none',
               display: 'inline-flex',
+              pointerEvents: 'auto',
             }}
           >
             See Our Work

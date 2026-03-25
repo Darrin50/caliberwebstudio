@@ -19,7 +19,16 @@ export default function Nav() {
       document.documentElement.setAttribute('data-theme', theme);
       currentTheme = theme;
       const icon = toggle.querySelector('.toggle-icon') as HTMLSpanElement;
-      if (icon) icon.textContent = theme === 'dark' ? 'ð' : 'âï¸';
+      if (icon) {
+        icon.textContent = theme === 'dark' ? '\u{1F319}' : '\u{2600}\u{FE0F}';
+        icon.style.transform = theme === 'dark' ? 'translateX(24px)' : 'translateX(0)';
+        icon.style.background = theme === 'dark'
+          ? 'linear-gradient(135deg, #ffcc40, #ff8800)'
+          : 'linear-gradient(135deg, #ffcc40, #ff6600)';
+      }
+      toggle.style.background = theme === 'dark'
+        ? 'rgba(168,184,200,0.15)'
+        : 'rgba(30,61,143,0.18)';
     };
 
     const blackholeSuck = (cx: number, cy: number, cb: () => void) => {
@@ -94,7 +103,6 @@ export default function Nav() {
       flash.offsetWidth;
       flash.style.transition = 'opacity 0.06s';
       flash.style.opacity = '1';
-
       const overlay = document.createElement('div');
       overlay.style.cssText = `position:fixed;inset:0;z-index:10000;pointer-events:none;background:radial-gradient(circle at ${cx}px ${cy}px,#fffbe0,#F6F7FB);clip-path:circle(0% at ${cx}px ${cy}px);`;
       document.body.appendChild(overlay);
@@ -302,7 +310,7 @@ export default function Nav() {
                 transform: 'translateX(24px)',
               }}
             >
-              ð
+              {'\u{1F319}'}
             </span>
           </button>
 
@@ -328,7 +336,7 @@ export default function Nav() {
             Start a Project
           </Link>
 
-          {/* Hamburger button â mobile only */}
+          {/* Hamburger button — mobile only */}
           <button
             className="nav-hamburger"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -474,6 +482,12 @@ export default function Nav() {
           --nav-bg: rgba(246,247,251,0.88);
           --hamburger-color: #1E3D8F;
         }
+        .nav-hamburger span {
+          background: #D0D8E0 !important;
+        }
+        [data-theme="light"] .nav-hamburger span {
+          background: #1E3D8F !important;
+        }
         @media (max-width: 768px) {
           .nav-desktop { display: none !important; }
           .nav-cta-desktop { display: none !important; }
@@ -484,3 +498,4 @@ export default function Nav() {
     </>
   );
 }
+

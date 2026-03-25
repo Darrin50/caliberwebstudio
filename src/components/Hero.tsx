@@ -18,8 +18,10 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         textAlign: 'center',
       }}
     >
+      {/* 3D canvas renders here via children — stays at z-index 1 */}
       {children}
-      <div style={{ position: 'relative', zIndex: 10, maxWidth: '900px', width: '100%' }}>
+      {/* All text content — always in front of canvas */}
+      <div style={{ position: 'relative', zIndex: 10, maxWidth: '900px', width: '100%', pointerEvents: 'auto' }}>
         {/* Hero Label */}
         <div className="sec-label fu" style={{ justifyContent: 'center' }}>
           Detroit's Premier AI Web Agency

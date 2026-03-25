@@ -9,13 +9,15 @@ import Work from '@/components/Work';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
-// Three.js scenes — client-side only (no SSR)
+// Client-side only components
 const HeroScene = dynamic(() => import('@/components/HeroScene'), { ssr: false });
 const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false });
+const FloatingElements = dynamic(() => import('@/components/FloatingElements'), { ssr: false });
+const InteractiveOrbs = dynamic(() => import('@/components/InteractiveOrbs'), { ssr: false });
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ position: 'relative' }}>
       <Nav />
       <Hero>
         <HeroScene />
@@ -27,6 +29,10 @@ export default function Home() {
       <CTA />
       <Footer />
       <ChatWidget />
+      {/* Draggable geometric shapes — scattered across the entire page */}
+      <FloatingElements />
+      {/* Interactive 3D orbs — globes, spheres and crystals per section */}
+      <InteractiveOrbs />
     </main>
   );
 }

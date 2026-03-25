@@ -32,6 +32,24 @@ export default function InteractiveOrbs() {
     const container = containerRef.current;
     if (!container) return;
 
+    // Track global mouse position for parallax
+    let mouseX = 0;
+    let mouseY = 0;
+    const onMouseMove = (e: MouseEvent) => {
+      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    };
+    window.addEventListener('mousemove', onMouseMove);
+
+    // Touch parallax
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        mouseX = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+        mouseY = (e.touches[0].clientY / window.innerHeight) * 2 - 1;
+      }
+    };
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
+
     const loadThree = () => {
       return new Promise((resolve) => {
         if ((window as any).THREE) {
@@ -50,7 +68,6 @@ export default function InteractiveOrbs() {
       const THREE = (window as any).THREE;
       const scenes: any[] = [];
 
-      // Find all sections and create a canvas for each pair
       const sections = ['services', 'process', 'pricing', 'work'];
 
       sections.forEach((sectionId) => {
@@ -60,15 +77,15 @@ export default function InteractiveOrbs() {
         const orbsForSection = ORB_CONFIGS.filter((o) => o.sectionId === sectionId);
         if (orbsForSection.length === 0) return;
 
-        // Create canvas overlay for this section
+        // Create canvas overlay â pointerEvents NONE so content stays clickable
         const canvas = document.createElement('canvas');
         canvas.style.position = 'absolute';
         canvas.style.top = '0';
         canvas.style.left = '0';
         canvas.style.width = '100%';
         canvas.style.height = '100%';
-        canvas.style.pointerEvents = 'auto';
-        canvas.style.zIndex = '2';
+        canvas.style.pointerEvents = 'none';
+        canvas.style.zIndex = '1';
         canvas.setAttribute('data-orbs', sectionId);
 
         // Make section relative if not already
@@ -88,9 +105,6 @@ export default function InteractiveOrbs() {
         camera.position.z = 18;
 
         const scene = new THREE.Scene();
-        const raycaster = new THREE.Raycaster();
-        const mouse = new THREE.Vector2();
-        const interactables: any[] = [];
         const orbs: any[] = [];
 
         orbsForSection.forEach((cfg) => {
@@ -98,14 +112,11 @@ export default function InteractiveOrbs() {
           group.position.set(...cfg.position);
 
           if (cfg.type === 'globe') {
-            // Wireframe globe with lat/long lines
             const gGeo = new THREE.SphereGeometry(cfg.size, 24, 18);
             const gMat = new THREE.MeshBasicMaterial({
               color: cfg.color, wireframe: true, transparent: true, opacity: 0.25,
             });
-            const gMesh = new THREE.Mesh(gGeo, gMat);
-            group.add(gMesh);
-            interactables.push(gMesh);
+            group.add(new THREE.Mesh(gGeo, gMat));
 
             // Inner fill
             const iFillGeo = new THREE.SphereGeometry(cfg.size * 0.95, 16, 12);
@@ -147,14 +158,11 @@ export default function InteractiveOrbs() {
               group.add(dot);
             }
           } else if (cfg.type === 'sphere') {
-            // Glass-like sphere
             const sGeo = new THREE.SphereGeometry(cfg.size, 22, 16);
             const sMat = new THREE.MeshBasicMaterial({
               color: cfg.color, wireframe: true, transparent: true, opacity: 0.3,
             });
-            const sMesh = new THREE.Mesh(sGeo, sMat);
-            group.add(sMesh);
-            interactables.push(sMesh);
+            group.add(new THREE.Mesh(sGeo, sMat));
 
             // Inner sphere
             const isGeo = new THREE.SphereGeometry(cfg.size * 0.7, 14, 10);
@@ -177,9 +185,7 @@ export default function InteractiveOrbs() {
             const cMat = new THREE.MeshBasicMaterial({
               color: cfg.color, wireframe: true, transparent: true, opacity: 0.3,
             });
-            const cMesh = new THREE.Mesh(cGeo, cMat);
-            group.add(cMesh);
-            interactables.push(cMesh);
+            group.add(new THREE.Mesh(cGeo, cMat));
 
             // Inner icosahedron
             const icGeo = new THREE.IcosahedronGeometry(cfg.size * 0.55, 0);
@@ -202,78 +208,11 @@ export default function InteractiveOrbs() {
           orbs.push({
             group,
             config: cfg,
-            rotVelX: 0,
-            rotVelY: cfg.type === 'globe' ? 0.004 : 0.006,
-            hovered: false,
             basePos: new THREE.Vector3(...cfg.position),
             phase: Math.random() * Math.PI * 2,
+            parallaxStrength: cfg.type === 'globe' ? 0.8 : 1.2,
           });
         });
-
-        // Interaction state
-        let isDragging = false;
-        let dragIndex = -1;
-        let prevX = 0;
-        let prevY = 0;
-
-        const onPointerDown = (e: PointerEvent) => {
-          const cRect = canvas.getBoundingClientRect();
-          mouse.x = ((e.clientX - cRect.left) / cRect.width) * 2 - 1;
-          mouse.y = -((e.clientY - cRect.top) / cRect.height) * 2 + 1;
-          raycaster.setFromCamera(mouse, camera);
-          const hits = raycaster.intersectObjects(interactables, false);
-          if (hits.length > 0) {
-            isDragging = true;
-            dragIndex = interactables.indexOf(hits[0].object);
-            prevX = e.clientX;
-            prevY = e.clientY;
-            canvas.style.cursor = 'grabbing';
-            e.preventDefault();
-            e.stopPropagation();
-          }
-        };
-
-        const onPointerMove = (e: PointerEvent) => {
-          if (isDragging && dragIndex >= 0 && dragIndex < orbs.length) {
-            const dx = e.clientX - prevX;
-            const dy = e.clientY - prevY;
-            const orb = orbs[dragIndex];
-            if (orb.config.type === 'globe') {
-              orb.rotVelY = dx * 0.004;
-              orb.rotVelX = dy * 0.004;
-            } else {
-              orb.group.position.x += dx * 0.03;
-              orb.group.position.y -= dy * 0.03;
-            }
-            prevX = e.clientX;
-            prevY = e.clientY;
-            e.preventDefault();
-          } else {
-            const cRect = canvas.getBoundingClientRect();
-            mouse.x = ((e.clientX - cRect.left) / cRect.width) * 2 - 1;
-            mouse.y = -((e.clientY - cRect.top) / cRect.height) * 2 + 1;
-            raycaster.setFromCamera(mouse, camera);
-            const hits = raycaster.intersectObjects(interactables, false);
-            orbs.forEach((o) => { o.hovered = false; });
-            if (hits.length > 0) {
-              canvas.style.cursor = 'grab';
-              const idx = interactables.indexOf(hits[0].object);
-              if (idx >= 0 && idx < orbs.length) orbs[idx].hovered = true;
-            } else {
-              canvas.style.cursor = '';
-            }
-          }
-        };
-
-        const onPointerUp = () => {
-          isDragging = false;
-          dragIndex = -1;
-          canvas.style.cursor = '';
-        };
-
-        canvas.addEventListener('pointerdown', onPointerDown);
-        window.addEventListener('pointermove', onPointerMove);
-        window.addEventListener('pointerup', onPointerUp);
 
         // Visibility observer â only render when section is in view
         let isVisible = false;
@@ -285,12 +224,19 @@ export default function InteractiveOrbs() {
         );
         observer.observe(sectionEl);
 
-        // Animation
+        // Animation â auto-rotate, float, and mouse parallax
         let frame = 0;
+        let smoothMX = 0;
+        let smoothMY = 0;
+
         const animate = () => {
-          const animId = requestAnimationFrame(animate);
+          requestAnimationFrame(animate);
           if (!isVisible) return;
           frame++;
+
+          // Smooth mouse tracking
+          smoothMX += (mouseX - smoothMX) * 0.03;
+          smoothMY += (mouseY - smoothMY) * 0.03;
 
           // Resize check
           const newRect = sectionEl.getBoundingClientRect();
@@ -301,26 +247,25 @@ export default function InteractiveOrbs() {
           }
 
           orbs.forEach((orb) => {
-            // Rotation
-            if (!isDragging || dragIndex !== orbs.indexOf(orb)) {
-              orb.rotVelX *= 0.97;
-              orb.rotVelY *= 0.97;
-              orb.rotVelY += (0.004 - orb.rotVelY) * 0.003;
-            }
-            orb.group.rotation.y += orb.rotVelY;
-            orb.group.rotation.x += orb.rotVelX;
+            // Auto-rotation
+            const rotSpeed = orb.config.type === 'globe' ? 0.004 : 0.006;
+            orb.group.rotation.y += rotSpeed;
+            orb.group.rotation.x += rotSpeed * 0.3;
 
-            // Float
-            if (!isDragging || dragIndex !== orbs.indexOf(orb)) {
-              const fy = Math.sin(frame * 0.01 + orb.phase) * 0.5;
-              orb.group.position.y += (orb.basePos.y + fy - orb.group.position.y) * 0.02;
-            }
+            // Mouse parallax â orbs shift toward cursor
+            const px = orb.basePos.x + smoothMX * orb.parallaxStrength;
+            const floatY = Math.sin(frame * 0.01 + orb.phase) * 0.5;
+            const py = orb.basePos.y + floatY + smoothMY * orb.parallaxStrength * -0.5;
 
-            // Hover glow
+            orb.group.position.x += (px - orb.group.position.x) * 0.02;
+            orb.group.position.y += (py - orb.group.position.y) * 0.02;
+
+            // Pulse glow based on mouse proximity (normalized screen space)
             const mainChild = orb.group.children[0];
             if (mainChild && mainChild.material) {
-              const target = orb.hovered ? 0.55 : (orb.config.type === 'globe' ? 0.25 : 0.3);
-              mainChild.material.opacity += (target - mainChild.material.opacity) * 0.06;
+              const baseOpacity = orb.config.type === 'globe' ? 0.25 : 0.3;
+              const pulse = Math.sin(frame * 0.02 + orb.phase) * 0.05;
+              mainChild.material.opacity += (baseOpacity + pulse - mainChild.material.opacity) * 0.06;
             }
           });
 
@@ -333,11 +278,6 @@ export default function InteractiveOrbs() {
           canvas,
           sectionEl,
           observer,
-          cleanupPointer: () => {
-            canvas.removeEventListener('pointerdown', onPointerDown);
-            window.removeEventListener('pointermove', onPointerMove);
-            window.removeEventListener('pointerup', onPointerUp);
-          },
         });
       });
 
@@ -345,10 +285,11 @@ export default function InteractiveOrbs() {
     });
 
     return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('touchmove', onTouchMove);
       scenesRef.current.forEach((s) => {
         s.renderer.dispose();
         s.observer.disconnect();
-        s.cleanupPointer();
         if (s.canvas.parentNode) s.canvas.parentNode.removeChild(s.canvas);
       });
     };

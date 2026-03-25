@@ -17,8 +17,12 @@ export default function Home() {
   return (
     <main>
       <Nav />
-      <Hero />
-      <HeroScene />
+      <div style={{ position: 'relative' }}>
+        <Hero />
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' }}>
+          <HeroScene />
+        </div>
+      </div>
       <Services />
       <Process />
       <Pricing />

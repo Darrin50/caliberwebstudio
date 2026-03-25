@@ -254,10 +254,6 @@ export default function HeroScene() {
     <canvas
       id="hero-canvas"
       style={{
-        position: 'absolute',
-        inset: 0,
-        zIndex: 0,
-        pointerEvents: 'none',
         width: '100%',
         height: '100%',
       }}

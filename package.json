@@ -15,7 +15,7 @@
     "three": "^0.128.0",
     "resend": "^3.0.0",
     "openai": "^4.0.0",
-    "next-mdx-remote": "^4.4.1",
+    "next-mdx-remote": "^5.0.0",
     "gray-matter": "^4.0.3"
   },
   "devDependencies": {

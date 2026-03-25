@@ -104,28 +104,33 @@ export default function Pricing() {
               key={plan.name}
               className="fu"
               style={{
-                background: 'var(--bg2)',
+                background: plan.popular
+                  ? 'linear-gradient(135deg, rgba(30,61,143,0.1), rgba(22,45,106,0.05))'
+                  : 'var(--bg2)',
                 border: `1px solid ${plan.popular ? 'var(--navy)' : 'var(--border)'}`,
                 padding: '48px 32px',
                 borderRadius: '2px',
                 position: 'relative',
                 transform: plan.popular ? 'scale(1.02)' : 'scale(1)',
                 boxShadow: plan.popular
-                  ? '0 0 40px rgba(168,184,200,0.1), 0 0 80px rgba(30,61,143,0.08)'
+                  ? '0 0 40px rgba(30,61,143,0.2), 0 0 80px rgba(30,61,143,0.1), inset 0 0 30px rgba(30,61,143,0.05)'
                   : 'none',
                 transition: 'all 0.3s ease',
               }}
               onMouseEnter={(e) => {
-                if (plan.popular) {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.transform = 'scale(1.04)';
-                }
+                const el = e.currentTarget as HTMLElement;
+                // Lift effect for all cards
+                el.style.transform = plan.popular ? 'scale(1.04) translateY(-4px)' : 'translateY(-4px)';
+                el.style.boxShadow = plan.popular
+                  ? '0 8px 48px rgba(30,61,143,0.25), 0 0 100px rgba(30,61,143,0.15), inset 0 0 30px rgba(30,61,143,0.08)'
+                  : '0 8px 32px rgba(30,61,143,0.12)';
               }}
               onMouseLeave={(e) => {
-                if (plan.popular) {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.transform = 'scale(1.02)';
-                }
+                const el = e.currentTarget as HTMLElement;
+                el.style.transform = plan.popular ? 'scale(1.02)' : 'scale(1)';
+                el.style.boxShadow = plan.popular
+                  ? '0 0 40px rgba(30,61,143,0.2), 0 0 80px rgba(30,61,143,0.1), inset 0 0 30px rgba(30,61,143,0.05)'
+                  : 'none';
               }}
             >
               {/* Popular Badge */}
@@ -222,12 +227,12 @@ export default function Pricing() {
                   >
                     <span
                       style={{
-                        color: 'var(--chrome)',
+                        color: 'var(--navy)',
                         fontSize: '16px',
                         fontWeight: 700,
                       }}
                     >
-                      ✓
+                      â
                     </span>
                     {feature}
                   </li>
@@ -262,7 +267,7 @@ export default function Pricing() {
             letterSpacing: '0.05em',
           }}
         >
-          All plans include free website mockup • $0 down • 12-month service agreement
+          All plans include free website mockup â¢ $0 down â¢ 12-month service agreement
         </div>
       </div>
     </section>

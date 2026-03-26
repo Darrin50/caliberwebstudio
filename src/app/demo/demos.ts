@@ -99,6 +99,60 @@ export const demos: DemoConfig[] = [
     chatbotGreeting:
       "Hey! Welcome to Luxe Beauty Studio 💅 Ready to book? I can check stylist availability for braids, locs, silk press, and more.",
   },
+    // Detroit's Kitchen Soul Food Restaurant
+  {
+      slug: 'detroits-kitchen',
+            businessName: "Detroit's Kitchen",
+            businessType: 'Soul Food Restaurant',
+            tagline: "Homemade Soul Food. Detroit Raised. Family Fed.",
+            primaryColor: '#8B1A1A',
+            accentColor: '#D4A017',
+            services: [
+        {
+                  name: 'Sunday Plate',
+                  description: 'Fried chicken, mac & cheese, collard greens, and cornbread — just like grandma made it.',
+                  price: '$16',
+        },
+        {
+                  name: 'Smothered Pork Chops',
+                  description: 'Thick-cut pork chops smothered in savory onion gravy. Served with two sides.',
+                  price: '$18',
+        },
+        {
+                  name: 'Catfish Platter',
+                  description: 'Crispy fried catfish with hush puppies, coleslaw, and your choice of side.',
+                  price: '$17',
+        },
+        {
+                  name: 'Oxtails',
+                  description: 'Slow-braised tender oxtails in rich brown gravy. Served with rice and a side.',
+                  price: '$22',
+        },
+        {
+                  name: 'Sides',
+                  description: "Mac & cheese, candied yams, black-eyed peas, collard greens, cornbread. Any two with your entree.",
+                  price: '$5 each',
+        },
+        {
+                  name: 'Catering',
+                  description: 'Feeding a crowd? We do family reunions, church events, and office lunches. Call ahead to order.',
+                  price: 'Call for quote',
+        },
+            ],
+            hours: [
+        { day: 'Tuesday – Thursday', hours: '11:00 AM – 8:00 PM' },
+        { day: 'Friday – Saturday', hours: '11:00 AM – 10:00 PM' },
+        { day: 'Sunday', hours: '12:00 PM – 7:00 PM' },
+        { day: 'Monday', hours: 'Closed' },
+            ],
+            phone: '(313) 555-0412',
+            address: '7821 Gratiot Ave',
+            city: 'Detroit, MI 48213',
+            about:
+        "Detroit's Kitchen has been feeding the east side since 1987. Started by Miss Loretta out of a love for cooking and community, we've grown from a small carryout to a full sit-down spot — but the recipes haven't changed one bit. Everything is made from scratch daily: the mac & cheese, the greens, the cornbread. No shortcuts, no frozen food, just real soul food with real love in every plate. Come hungry. Leave happy.",
+              chatbotGreeting:
+        "Hey, welcome to Detroit's Kitchen! We're cooking fresh daily. Want to see our menu, check our hours, or ask about catering?",
+          },
 ]
 
 export function getDemo(slug: string): DemoConfig | undefined {

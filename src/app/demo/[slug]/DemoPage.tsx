@@ -38,7 +38,7 @@ const DEMO_DATA: Record<string, {
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: '/demo/barber/interior.png',
+    aboutImg: 'https://images.unsplash.com/photo-1585747860019-024db4655bfb?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -55,13 +55,13 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1600&q=85',
-    heroAlt: 'Metro Plumbing & Drain technician on the job',
+    heroImg: 'https://images.unsplash.com/photo-1676210134190-3f2c0d5434ff76?auto=format&fit=crop&w=1600&q=85',
+    heroAlt: 'Metro Plumbing technician repairing a water heater',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=800&q=80', alt: 'Plumber at work' },
-      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80', alt: 'Clean pipe installation' },
-      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80', alt: 'Plumbing pipes' },
-      { url: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80', alt: 'Under-sink work' },
+      { url: 'https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
+      { url: 'https://images.unsplash.com/photo-1676210134188-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Pipe repair inside a wall — residential job' },
+      { url: 'https://images.unsplash.com/photo-1584265549731-fc0d5434ff76?auto=format&fit=crop&w=800&q=80', alt: 'Faucet and sink repair close-up' },
+      { url: 'https://images.unsplash.com/photo-1620653713380-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Plumber with tools — ready for the job' },
     ],
     beforeAfter: [
       {
@@ -77,7 +77,7 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1694875119129-d79757ef3780?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
       { num: '4.8★', label: 'Google Rating' },
@@ -101,14 +101,14 @@ const DEMO_DATA: Record<string, {
       { url: '/demo/salon/pixie-cut.png', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
       { url: '/demo/salon/silk-press.png', alt: 'Bone-straight silk press — long, sleek, damage-free' },
       { url: '/demo/salon/twist-braids.png', alt: 'Passion twists with ombre — protective style goals' },
-      { url: '/demo/salon/hero-ponytail.png', alt: 'Sleek high ponytail with swoop bangs — salon fresh' },
+      { url: 'https://images.unsplash.com/photo-1633257245586-9addcf688fbe?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural curls — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: '/demo/salon/pixie-cut.png',
+    aboutImg: 'https://images.unsplash.com/photo-1588527962980-72746d95973e?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },

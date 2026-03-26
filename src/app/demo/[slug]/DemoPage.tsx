@@ -28,9 +28,9 @@ const DEMO_DATA: Record<string, {
     gallery: [
       { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80', alt: 'Barber delivering a crisp fade on a Black man' },
       { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80', alt: 'Detroit barber shaping a taper on a client' },
-      { url: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80', alt: 'Urban barbershop interior — Detroit Cuts' },
-      { url: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=800&q=80', alt: 'Black man showing off a fresh shape-up and lineup' },
-      { url: 'https://images.unsplash.com/photo-1582095133179-bfd08e2fb6b9?auto=format&fit=crop&w=800&q=80', alt: 'Close-up of waves and a precision line-up' },
+      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80&crop=faces', alt: 'Close-up — precision scissors work at Detroit Cuts' },
+      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80&crop=left', alt: 'Barber detailing a taper on a Black client' },
+      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80&crop=bottom', alt: 'Fresh edge and fade — the Detroit Cuts standard' },
       { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80&crop=right', alt: 'Master barber at work — straight razor finish' },
     ],
     reviews: [

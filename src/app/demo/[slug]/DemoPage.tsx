@@ -108,7 +108,7 @@ const DEMO_DATA: Record<string, {
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1588527962980-72746d95973e?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1611042553365-9b101441c135?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -223,7 +223,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
 
     .dw .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .dw .gal-item { overflow: hidden; border-radius: 6px; }
-    .dw .gal-item img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 0.4s; }
+    .dw .gal-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; transition: transform 0.4s; }
     .dw .gal-item:hover img { transform: scale(1.04); }
 
     .dw .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }

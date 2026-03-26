@@ -23,22 +23,22 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: 'https://images.unsplash.com/photo-1632777234321-19c84a481670?auto=format&fit=crop&w=1600&q=85',
-    heroAlt: 'Fresh taper fade at Detroit Cuts Barbershop',
+    heroImg: '/demo/barber/hero.png',
+    heroAlt: 'Master barber with Detroit Tigers cap giving a fresh cut at Detroit Cuts Barbershop',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1744636574936-9b3de5c85d0d?auto=format&fit=crop&w=800&q=80', alt: 'Crispy afro fade side part' },
-      { url: 'https://images.unsplash.com/photo-1718925420311-f8c07ed884fe?auto=format&fit=crop&w=800&q=80', alt: 'Tight buzz cut close-up' },
-      { url: 'https://images.unsplash.com/photo-1747359636934-d07c9d0ce134?auto=format&fit=crop&w=800&q=80', alt: 'Clean braided style with fade' },
-      { url: 'https://images.unsplash.com/photo-1545921772-ec7d64bc0bba?auto=format&fit=crop&w=800&q=80', alt: 'Fresh cut in the barbershop chair' },
-      { url: 'https://images.unsplash.com/photo-1653908093988-5149d9159742?auto=format&fit=crop&w=800&q=80', alt: "Kid's cut, fresh and clean" },
-      { url: 'https://images.unsplash.com/photo-1633795350752-1889647b684a?auto=format&fit=crop&w=800&q=80', alt: 'Taper fade back view' },
+      { url: '/demo/barber/fade-closeup.png', alt: 'Clean taper fade close-up — precision lineup' },
+      { url: '/demo/barber/waves.png', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: '/demo/barber/exterior.png', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
+      { url: '/demo/barber/two-barbers.png', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: '/demo/barber/kids-cut.png', alt: "Kid's cut — young king leaving the chair fresh" },
+      { url: '/demo/barber/interior.png', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1747359636963-279b956b556e?auto=format&fit=crop&w=800&q=80',
+    aboutImg: '/demo/barber/interior.png',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -65,18 +65,11 @@ const DEMO_DATA: Record<string, {
     ],
     beforeAfter: [
       {
-        before: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=80',
-        after: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=700&q=80',
-        beforeLabel: 'Old pipes under bathroom sink — persistent leak and corrosion',
-        afterLabel: 'New PVC lines, sealed connections, leak-free',
-        title: 'Under-Sink Drain Overhaul',
-      },
-      {
-        before: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=700&q=80',
-        after: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=700&q=80',
-        beforeLabel: 'Water heater showing rust and sediment buildup — pressure issues',
-        afterLabel: 'New fixtures installed, clean finish, zero leaks',
-        title: 'Bathroom Fixture Replacement',
+        before: '/demo/plumbing/sink-before.png',
+        after: '/demo/plumbing/sink-after.png',
+        beforeLabel: 'Clogged kitchen sink — standing water and debris buildup',
+        afterLabel: 'Drain cleared, sparkling clean — flowing like new',
+        title: 'Kitchen Sink Drain Clearing',
       },
     ],
     reviews: [
@@ -101,25 +94,21 @@ const DEMO_DATA: Record<string, {
   },
 
   'luxe-salon': {
-    heroImg: 'https://images.unsplash.com/photo-1583899536095-98b6c82324ed?auto=format&fit=crop&w=1600&q=85',
-    heroAlt: 'Stunning Black woman with beautiful natural hair — Luxe Beauty Studio Detroit',
+    heroImg: '/demo/salon/hero-ponytail.png',
+    heroAlt: 'Sleek ponytail with laid baby hairs — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1757866332825-42368c1105e8?auto=format&fit=crop&w=800&q=80', alt: 'Box braids — clean square parts, flawless technique' },
-      { url: 'https://images.unsplash.com/photo-1588527962980-72746d95973e?auto=format&fit=crop&w=800&q=80', alt: 'Natural curly hair portrait' },
-      { url: 'https://images.unsplash.com/photo-1614173968962-0e61c5ed196f?auto=format&fit=crop&w=800&q=80', alt: 'Black woman with long braids' },
-      { url: 'https://images.unsplash.com/photo-1653263171083-71aad2fc6dfb?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful locs — healthy and defined' },
-      { url: 'https://images.unsplash.com/photo-1762745103094-6760fab8eb50?auto=format&fit=crop&w=800&q=80', alt: 'Client fresh out of the chair at Luxe Beauty Studio' },
-      { url: 'https://images.unsplash.com/photo-1626383126210-15c15e62d9ba?auto=format&fit=crop&w=800&q=80', alt: 'Luxe Beauty Studio salon interior — Detroit' },
-      { url: 'https://images.unsplash.com/photo-1616258802130-5177dd65cc33?auto=format&fit=crop&w=800&q=80', alt: 'Protective style — braids and natural texture' },
-      { url: 'https://images.unsplash.com/photo-1631955081622-fb57ae4cb686?auto=format&fit=crop&w=800&q=80', alt: 'Long box braids — vacation ready' },
-      { url: 'https://images.unsplash.com/photo-1533675080656-5aeaec05b16c?auto=format&fit=crop&w=800&q=80', alt: 'Braided style — streetwear chic' },
+      { url: '/demo/salon/fulani-braids.png', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
+      { url: '/demo/salon/pixie-cut.png', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
+      { url: '/demo/salon/silk-press.png', alt: 'Bone-straight silk press — long, sleek, damage-free' },
+      { url: '/demo/salon/twist-braids.png', alt: 'Passion twists with ombre — protective style goals' },
+      { url: '/demo/salon/hero-ponytail.png', alt: 'Sleek high ponytail with swoop bangs — salon fresh' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1695141197936-caf67b34a25c?auto=format&fit=crop&w=800&q=80',
+    aboutImg: '/demo/salon/pixie-cut.png',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { posts, getPost } from "../posts";
 
 export async function generateStaticParams() {
@@ -46,6 +48,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Nav />
       <main style={{ minHeight: "100vh", paddingTop: "80px", paddingBottom: "80px" }}>
         <div style={{ maxWidth: "760px", margin: "0 auto", padding: "0 24px" }}>
           {/* Breadcrumb */}
@@ -79,7 +82,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </div>
           </header>
 
-          {/* Divider */}
           <hr style={{ border: "none", borderTop: "1px solid var(--border-color, rgba(255,255,255,0.1))", marginBottom: "40px" }} />
 
           {/* Article Body */}
@@ -94,14 +96,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               .replace(/<li>/g, '<li style="margin-bottom:0.5em;font-size:clamp(0.95rem,2vw,1.05rem)">')
               .replace(/<a /g, '<a style="color:var(--accent,#00d4ff);text-decoration:underline;text-underline-offset:3px" ')
               .replace(/<strong>/g, '<strong style="color:var(--text-primary,#fff);font-weight:700">')
-              .replace(/<pre /g, '<pre style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;overflow-x:auto;margin:0 0 1.25em;font-size:0.88rem" ')
             }}
           />
 
-          {/* Divider */}
           <hr style={{ border: "none", borderTop: "1px solid var(--border-color, rgba(255,255,255,0.1))", margin: "48px 0" }} />
 
-          {/* CTA Box */}
+          {/* CTA */}
           <div style={{ background: "linear-gradient(135deg, rgba(0,212,255,0.08) 0%, rgba(99,102,241,0.08) 100%)", border: "1px solid rgba(0,212,255,0.2)", borderRadius: "16px", padding: "clamp(24px,5vw,36px)", textAlign: "center", marginBottom: "48px" }}>
             <h2 style={{ fontSize: "clamp(1.2rem,3vw,1.5rem)", fontWeight: 700, color: "var(--text-primary, #fff)", marginBottom: "12px" }}>
               Ready to Grow Your Detroit Business Online?
@@ -127,11 +127,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </h2>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))", gap: "16px" }}>
                 {related.map((rel) => (
-                  <Link
-                    key={rel.slug}
-                    href={`/blog/${rel.slug}`}
-                    style={{ display: "block", background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "12px", padding: "20px", textDecoration: "none" }}
-                  >
+                  <Link key={rel.slug} href={`/blog/${rel.slug}`}
+                    style={{ display: "block", background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "12px", padding: "20px", textDecoration: "none" }}>
                     <p style={{ fontSize: "0.75rem", color: "var(--accent, #00d4ff)", marginBottom: "8px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em" }}>
                       {rel.category}
                     </p>
@@ -144,7 +141,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </section>
           )}
 
-          {/* Back to Blog */}
           <div style={{ marginTop: "40px", textAlign: "center" }}>
             <Link href="/blog" style={{ fontSize: "0.9rem", color: "var(--text-secondary, rgba(255,255,255,0.6))", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
               ← Back to all articles
@@ -152,6 +148,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

@@ -398,7 +398,7 @@ export default function CTA() {
               e.currentTarget.style.boxShadow = 'none';
             }}
           >
-            {loading ? 'Sending...' : 'Send Message â'}
+            {loading ? 'Sending...' : 'Send Message →'}
           </button>
         </form>
 
@@ -413,7 +413,7 @@ export default function CTA() {
             letterSpacing: '0.05em',
           }}
         >
-          darrin@caliberwebstudio.com Â· Detroit, MI
+          darrin@caliberwebstudio.com · Detroit, MI
         </div>
       </div>
     </section>

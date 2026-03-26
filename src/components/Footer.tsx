@@ -146,7 +146,7 @@ export default function Footer() {
           flex: 1,
         }}
       >
-        Â© 2026 High Caliber Operations LLC Â· Detroit, MI
+        © 2026 High Caliber Operations LLC · Detroit, MI
       </div>
 
       {/* Right: Tagline */}

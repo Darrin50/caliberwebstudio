@@ -30,30 +30,30 @@ export default function HeroScene() {
 
       const THREE = (window as any).THREE;
 
-      // ââ Renderer ââ
+      // ── Renderer ──
       const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setClearColor(0x000000, 0);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       rendererRef.current = renderer;
 
-      // ââ Camera ââ
+      // ── Camera ──
       const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
       camera.position.z = 24;
 
-      // ââ Scene ââ
+      // ── Scene ──
       const scene = new THREE.Scene();
       const sceneGroup = new THREE.Group();
       scene.add(sceneGroup);
 
-      // ââ Raycaster for interactivity ââ
+      // ── Raycaster for interactivity ──
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
       const interactables: any[] = [];
 
-      // âââââââââââââââââââââââââââââââââââââââââââââ
-      //  MAIN GLOBE â wireframe earth, left side
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
+      //  MAIN GLOBE — wireframe earth, left side
+      // ─────────────────────────────────────────────
       const globeGroup = new THREE.Group();
       globeGroup.position.set(-10, 1, -2);
       sceneGroup.add(globeGroup);
@@ -135,9 +135,9 @@ export default function HeroScene() {
         globeGroup.add(arc);
       });
 
-      // âââââââââââââââââââââââââââââââââââââââââââââ
-      //  FLOATING SPHERES â interactive, right side
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
+      //  FLOATING SPHERES — interactive, right side
+      // ─────────────────────────────────────────────
       const spheres: {
         mesh: any;
         basePos: any;
@@ -202,9 +202,9 @@ export default function HeroScene() {
         });
       });
 
-      // âââââââââââââââââââââââââââââââââââââââââââââ
-      //  PARTICLES â denser star field
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
+      //  PARTICLES — denser star field
+      // ─────────────────────────────────────────────
       const particlesGeometry = new THREE.BufferGeometry();
       const particleCount = 1600;
       const positions = new Float32Array(particleCount * 3);
@@ -228,9 +228,9 @@ export default function HeroScene() {
       grid.position.y = -10;
       sceneGroup.add(grid);
 
-      // âââââââââââââââââââââââââââââââââââââââââââââ
-      //  DRAG-TO-SPIN HINT â fades in then out
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
+      //  DRAG-TO-SPIN HINT — fades in then out
+      // ─────────────────────────────────────────────
       const hintEl = document.createElement('div');
       hintEl.style.cssText = [
         'position:absolute',
@@ -255,16 +255,16 @@ export default function HeroScene() {
         'opacity:0',
         'user-select:none',
       ].join(';');
-      hintEl.textContent = 'â²  drag to spin';
+      hintEl.textContent = '⟲  drag to spin';
       canvas.parentElement?.appendChild(hintEl);
       // Fade in after short delay, then fade out after 3 s visible
       const hintFadeIn  = setTimeout(() => { hintEl.style.opacity = '1'; }, 600);
       const hintFadeOut = setTimeout(() => { hintEl.style.opacity = '0'; }, 3600);
       const hintRemove  = setTimeout(() => { hintEl.remove(); }, 4500);
 
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
       //  INTERACTION STATE
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
       let isDragging = false;
       let dragTarget: 'globe' | 'sphere' | null = null;
       let dragSphereIndex = -1;
@@ -276,7 +276,7 @@ export default function HeroScene() {
       let globeRotVelY = 0.003;
       let hoveredObj: any = null;
 
-      // ââ Pointer events ââ
+      // ── Pointer events ──
       const onPointerDown = (e: PointerEvent) => {
         const rect = canvas.getBoundingClientRect();
         mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
@@ -364,7 +364,7 @@ export default function HeroScene() {
       window.addEventListener('pointermove', onPointerMove);
       window.addEventListener('pointerup', onPointerUp);
 
-      // Touch is handled by pointer events â no separate touch listeners needed.
+      // Touch is handled by pointer events — no separate touch listeners needed.
       // touch-action CSS on the canvas allows vertical scrolling on mobile.
 
       // Scroll parallax
@@ -383,15 +383,15 @@ export default function HeroScene() {
       };
       window.addEventListener('resize', onResize);
 
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
       //  ANIMATION LOOP
-      // âââââââââââââââââââââââââââââââââââââââââââââ
+      // ─────────────────────────────────────────────
       let frameCount = 0;
       const animate = () => {
         requestAnimationFrame(animate);
         frameCount++;
 
-        // ââ Globe rotation with momentum ââ
+        // ── Globe rotation with momentum ──
         if (!isDragging || dragTarget !== 'globe') {
           globeRotVelX *= 0.98; // friction
           globeRotVelY *= 0.98;
@@ -411,7 +411,7 @@ export default function HeroScene() {
           dp.mesh.material.opacity = 0.5 + Math.sin(frameCount * 0.03 + dp.phase) * 0.5;
         });
 
-        // ââ Floating spheres ââ
+        // ── Floating spheres ──
         spheres.forEach((s, i) => {
           const isThisDragged = isDragging && dragSphereIndex === i;
 
@@ -422,7 +422,7 @@ export default function HeroScene() {
             s.mesh.position.x += (s.basePos.x + floatX - s.mesh.position.x) * 0.01;
             s.mesh.position.y += (s.basePos.y + floatY - s.mesh.position.y) * 0.01;
 
-            // Rotation inertia â decay and apply to the whole group
+            // Rotation inertia — decay and apply to the whole group
             s.rotVelX *= 0.95;
             s.rotVelY *= 0.95;
             s.mesh.rotation.y += s.rotVelY;
@@ -449,13 +449,13 @@ export default function HeroScene() {
           }
         });
 
-        // ââ Particles gentle drift ââ
+        // ── Particles gentle drift ──
         particles.rotation.y += 0.0003;
 
-        // ââ Grid scroll ââ
+        // ── Grid scroll ──
         grid.position.z += 0.03;
 
-        // ââ Camera smooth follow ââ
+        // ── Camera smooth follow ──
         camera.position.x += (targetCamX * 1.0 - camera.position.x) * 0.02;
         camera.position.y += (-targetCamY * 0.6 - camera.position.y) * 0.02;
 

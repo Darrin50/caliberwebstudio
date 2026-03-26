@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import type { DemoConfig } from '../demos';
 
-/* âââ Per-slug photo & content data âââ */h
+/* âââ Per-slug photo & content data âââ */
 const DEMO_DATA: Record<string, {
   heroImg: string;
   heroAlt: string;

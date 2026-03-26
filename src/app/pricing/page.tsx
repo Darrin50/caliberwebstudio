@@ -4,29 +4,85 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Pricing | Caliber Web Studio – Detroit Web Design Packages",
-  description: "Simple, transparent pricing for Detroit small businesses. One-time website packages starting at $999. No monthly fees, no surprises.",
+  title: "Pricing | Caliber Web Studio – Monthly Web & Growth Plans",
+  description: "Simple, transparent monthly pricing for Detroit small businesses. AI-powered website plans starting at $197/mo. $0 down, no surprise fees.",
   alternates: { canonical: "https://caliberwebstudio.com/pricing" },
   openGraph: {
     title: "Pricing | Caliber Web Studio",
-    description: "One-time website packages starting at $999 for Detroit small businesses. Choose Starter, Growth, or Premium.",
+    description: "Monthly website and growth plans starting at $197/mo for Detroit small businesses. Starter, Growth, or Domination.",
     url: "https://caliberwebstudio.com/pricing",
     type: "website",
   },
 };
 
 const plans = [
-  { name: "Starter", price: "$999", billing: "one-time", popular: false, features: ["5-page website","Mobile-first design","Basic SEO setup","Contact form","1 round of revisions","Delivered in 2 weeks"] },
-  { name: "Growth", price: "$1,499", billing: "one-time", popular: true, features: ["Everything in Starter","AI chatbot widget","Google Business optimization","AEO / GEO optimization","Blog setup (5 posts)","2 rounds of revisions","Delivered in 2 weeks"] },
-  { name: "Premium", price: "$2,499", billing: "one-time", popular: false, features: ["Everything in Growth","Custom animations","10 blog posts","Monthly SEO report","Priority support","3 rounds of revisions","Delivered in 3 weeks"] },
+  {
+    name: "Starter",
+    price: "$197",
+    billing: "/mo",
+    popular: false,
+    features: [
+      "AI-optimized website",
+      "AI chatbot widget",
+      "Google Business Profile setup",
+      "Schema markup & local SEO",
+      "Basic client dashboard",
+      "Hosting & SSL included",
+      "1 monthly update request",
+      "Text & email support",
+    ],
+  },
+  {
+    name: "Growth",
+    price: "$397",
+    billing: "/mo",
+    popular: true,
+    features: [
+      "Everything in Starter",
+      "Review management system",
+      "Social media auto-posting",
+      "AI content engine (blog posts)",
+      "Full client dashboard",
+      "Priority support",
+    ],
+  },
+  {
+    name: "Domination",
+    price: "$697",
+    billing: "/mo",
+    popular: false,
+    features: [
+      "Everything in Growth",
+      "AI citation tracking",
+      "AI phone receptionist",
+      "Full automation suite",
+      "Advanced SEO reporting",
+      "Dedicated account management",
+    ],
+  },
 ];
 
 const faqs = [
-  { q: "Do I have to pay everything upfront?", a: "We typically take 50% upfront and 50% upon delivery. For larger projects, we can discuss a milestone-based payment schedule that works for your budget." },
-  { q: "How long does it take to build my website?", a: "Starter and Growth packages are delivered in 2 weeks. Premium projects with custom animations take 3 weeks. The timeline starts once we receive your content and initial payment." },
-  { q: "What payment methods do you accept?", a: "We accept all major credit/debit cards, ACH bank transfer, and PayPal. We will send you a secure invoice link once you are ready to get started." },
-  { q: "What happens if I need changes after launch?", a: "Each plan includes a set number of revision rounds before launch. After launch, you can add the $99/mo maintenance plan which covers updates and ongoing support, or purchase one-off revisions at our hourly rate." },
-  { q: "Is hosting included in the one-time price?", a: "The one-time fee covers design and development. Hosting is not included but is available through our $99/mo maintenance add-on, which also covers updates, chatbot monitoring, and a monthly performance report." },
+  {
+    q: "Is there any upfront cost?",
+    a: "$0 down. We build your site first, show you a free mockup, and you only start paying when you say yes. Your first payment kicks in when you are happy with the result.",
+  },
+  {
+    q: "How long does it take to get my site live?",
+    a: "We deliver in as little as 3 business days after you send us your business info. Our AI-powered process is built for speed without sacrificing quality.",
+  },
+  {
+    q: "What is included in the monthly plan?",
+    a: "Your plan covers design, development, hosting, SSL, ongoing support, and monthly updates. No separate hosting bill, no hidden fees — it is all in one flat monthly rate.",
+  },
+  {
+    q: "Can I cancel anytime?",
+    a: "Plans are on a 12-month agreement with a 14-day preview period before your first payment. If you do not love the site within those 14 days, we will take it down and you owe nothing.",
+  },
+  {
+    q: "What payment methods do you accept?",
+    a: "We accept all major credit/debit cards and ACH bank transfer via Stripe. You will receive a secure billing link once you are ready to get started.",
+  },
 ];
 
 export default function PricingPage() {
@@ -35,17 +91,21 @@ export default function PricingPage() {
       <Nav />
       <main style={{ minHeight: "100vh", paddingTop: "80px", paddingBottom: "80px", background: "var(--bg, #0a0a0e)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
+
+          {/* Hero */}
           <div style={{ textAlign: "center", marginBottom: "72px", paddingTop: "40px" }}>
             <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "16px", fontFamily: "'Space Mono', monospace" }}>
               Transparent Pricing
             </p>
             <h1 style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)", fontWeight: 800, lineHeight: 1.1, color: "var(--text-primary, #fff)", marginBottom: "20px", letterSpacing: "-0.02em" }}>
-              Simple, One-Time Packages
+              Simple Monthly Plans
             </h1>
             <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "560px", margin: "0 auto", lineHeight: 1.7 }}>
-              No monthly lock-ins. No hidden fees. Pay once, own your site forever.
+              $0 down. We build the site first — you only pay when you love it. Everything included in one flat monthly rate.
             </p>
           </div>
+
+          {/* Plans */}
           <div className="pricing-grid">
             {plans.map((plan) => (
               <div key={plan.name} className={`pricing-card${plan.popular ? " pricing-card--popular" : ""}`}>
@@ -53,11 +113,16 @@ export default function PricingPage() {
                 <p style={{ fontSize: "0.75rem", letterSpacing: "0.16em", textTransform: "uppercase", color: plan.popular ? "var(--accent, #0070f3)" : "var(--text-secondary, rgba(255,255,255,0.5))", marginBottom: "10px", fontFamily: "'Space Mono', monospace" }}>
                   {plan.name}
                 </p>
-                <span style={{ fontSize: "clamp(2.4rem, 5vw, 3rem)", fontWeight: 800, color: "var(--text-primary, #fff)", lineHeight: 1, display: "block", marginBottom: "6px" }}>
-                  {plan.price}
-                </span>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary, rgba(255,255,255,0.45))", marginBottom: "32px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>
-                  {plan.billing}
+                <div style={{ display: "flex", alignItems: "flex-end", gap: "2px", marginBottom: "6px" }}>
+                  <span style={{ fontSize: "clamp(2.4rem, 5vw, 3rem)", fontWeight: 800, color: "var(--text-primary, #fff)", lineHeight: 1 }}>
+                    {plan.price}
+                  </span>
+                  <span style={{ fontSize: "1rem", color: "var(--text-secondary, rgba(255,255,255,0.5))", marginBottom: "6px", fontFamily: "'Space Mono', monospace" }}>
+                    {plan.billing}
+                  </span>
+                </div>
+                <p style={{ fontSize: "0.75rem", color: "var(--text-secondary, rgba(255,255,255,0.4))", marginBottom: "32px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>
+                  billed monthly · $0 upfront
                 </p>
                 <ul style={{ listStyle: "none", margin: "0 0 36px 0", padding: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
                   {plan.features.map((feat) => (
@@ -67,20 +132,12 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/#contact" className={`pricing-cta${plan.popular ? " pricing-cta--popular" : ""}`}>Get Started</Link>
+                <Link href="/#contact" className={`pricing-cta${plan.popular ? " pricing-cta--popular" : ""}`}>Get Started — $0 Down</Link>
               </div>
             ))}
           </div>
-          <div className="addon-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
-              <div style={{ background: "var(--accent, #0070f3)", borderRadius: "10px", width: "44px", height: "44px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem", flexShrink: 0 }}>🔧</div>
-              <div style={{ flex: 1, minWidth: "200px" }}>
-                <p style={{ fontWeight: 700, color: "var(--text-primary, #fff)", marginBottom: "4px", fontSize: "1rem" }}>Monthly Maintenance — <span style={{ color: "var(--accent, #0070f3)" }}>$99/mo</span></p>
-                <p style={{ fontSize: "0.85rem", color: "var(--text-secondary, rgba(255,255,255,0.6))", lineHeight: 1.6, margin: 0 }}>Hosting · Updates · Chatbot monitoring · Monthly performance report</p>
-              </div>
-              <Link href="/#contact" style={{ padding: "10px 22px", border: "1px solid var(--accent, #0070f3)", color: "var(--accent, #0070f3)", borderRadius: "8px", fontSize: "0.85rem", fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>Add to Plan</Link>
-            </div>
-          </div>
+
+          {/* FAQ */}
           <div style={{ marginTop: "96px" }}>
             <div style={{ textAlign: "center", marginBottom: "52px" }}>
               <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>FAQ</p>
@@ -95,27 +152,97 @@ export default function PricingPage() {
               ))}
             </div>
           </div>
+
+          {/* CTA */}
           <div style={{ textAlign: "center", marginTop: "80px", padding: "52px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
             <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "14px", letterSpacing: "-0.01em" }}>Not sure which plan is right for you?</h2>
-            <p style={{ color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7 }}>Book a free 15-minute call and we will recommend the best fit for your goals and budget.</p>
+            <p style={{ color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7 }}>Book a free 15-minute call and we will recommend the best monthly plan for your goals and budget.</p>
             <Link href="/#contact" style={{ display: "inline-block", padding: "14px 36px", background: "var(--accent, #0070f3)", color: "#fff", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", letterSpacing: "0.02em" }}>Book a Free Consultation</Link>
           </div>
+
         </div>
       </main>
       <Footer />
       <style>{`
-        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; align-items: start; }
-        .pricing-card { position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 20px; padding: 36px 28px 32px; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
-        .pricing-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.18); box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
-        .pricing-card--popular { background: linear-gradient(145deg, rgba(0,112,243,0.14) 0%, rgba(0,112,243,0.06) 100%); border-color: rgba(0,112,243,0.45); box-shadow: 0 0 0 1px rgba(0,112,243,0.2), 0 8px 40px rgba(0,112,243,0.18); }
-        .pricing-card--popular:hover { transform: translateY(-6px); box-shadow: 0 0 0 1px rgba(0,112,243,0.35), 0 24px 64px rgba(0,112,243,0.28); border-color: rgba(0,112,243,0.65); }
-        .popular-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #0070f3; color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; white-space: nowrap; font-family: 'Space Mono', monospace; box-shadow: 0 4px 20px rgba(0,112,243,0.45); }
-        .pricing-cta { display: block; text-align: center; padding: 13px 24px; border-radius: 9px; font-weight: 700; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.2s; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
-        .pricing-cta:hover { opacity: 0.85; transform: translateY(-1px); }
-        .pricing-cta--popular { background: #0070f3; color: #fff; border-color: transparent; box-shadow: 0 4px 20px rgba(0,112,243,0.4); }
-        .addon-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 24px 28px; margin-top: 24px; }
-        @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; } }
-        @media (max-width: 600px) { .addon-card { padding: 20px; } }
+        .pricing-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+          margin-bottom: 32px;
+          align-items: start;
+        }
+        .pricing-card {
+          position: relative;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.09);
+          border-radius: 20px;
+          padding: 36px 28px 32px;
+          transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .pricing-card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(255,255,255,0.18);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+        }
+        .pricing-card--popular {
+          background: linear-gradient(145deg, rgba(0,112,243,0.14) 0%, rgba(0,112,243,0.06) 100%);
+          border-color: rgba(0,112,243,0.45);
+          box-shadow: 0 0 0 1px rgba(0,112,243,0.2), 0 8px 40px rgba(0,112,243,0.18);
+        }
+        .pricing-card--popular:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 0 0 1px rgba(0,112,243,0.35), 0 24px 64px rgba(0,112,243,0.28);
+          border-color: rgba(0,112,243,0.65);
+        }
+        .popular-badge {
+          position: absolute;
+          top: -14px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #0070f3;
+          color: #fff;
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          padding: 5px 16px;
+          border-radius: 20px;
+          white-space: nowrap;
+          font-family: 'Space Mono', monospace;
+          box-shadow: 0 4px 20px rgba(0,112,243,0.45);
+        }
+        .pricing-cta {
+          display: block;
+          text-align: center;
+          padding: 13px 24px;
+          border-radius: 9px;
+          font-weight: 700;
+          font-size: 0.9rem;
+          text-decoration: none;
+          letter-spacing: 0.04em;
+          transition: opacity 0.2s, transform 0.2s;
+          background: rgba(255,255,255,0.08);
+          color: #fff;
+          border: 1px solid rgba(255,255,255,0.12);
+        }
+        .pricing-cta:hover {
+          opacity: 0.85;
+          transform: translateY(-1px);
+        }
+        .pricing-cta--popular {
+          background: #0070f3;
+          color: #fff;
+          border-color: transparent;
+          box-shadow: 0 4px 20px rgba(0,112,243,0.4);
+        }
+        @media (max-width: 900px) {
+          .pricing-grid {
+            grid-template-columns: 1fr;
+            max-width: 440px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
       `}</style>
     </>
   );

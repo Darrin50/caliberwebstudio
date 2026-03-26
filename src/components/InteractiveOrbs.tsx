@@ -59,8 +59,7 @@ export default function InteractiveOrbs() {
         const orbsForSection = ORB_CONFIGS.filter((o) => o.sectionId === sectionId);
         if (orbsForSection.length === 0) return;
 
-        // Create canvas overlay with pointer-events auto for drag interaction
-        // touch-action allows scrolling on mobile while still capturing taps on orbs
+        // Create canvas overlay â touch-action allows scrolling on mobile
         const canvas = document.createElement('canvas');
         canvas.style.position = 'absolute';
         canvas.style.top = '0';
@@ -204,6 +203,8 @@ export default function InteractiveOrbs() {
             basePos: new THREE.Vector3(...cfg.position),
             phase: Math.random() * Math.PI * 2,
             dragging: false,
+            rotVelX: 0,
+            rotVelY: 0,
           });
         });
 
@@ -225,7 +226,7 @@ export default function InteractiveOrbs() {
           const hits = raycaster.intersectObjects(interactables, false);
 
           if (hits.length > 0) {
-            // Hit an orb â start dragging
+            // Hit an orb â start drag-to-spin
             const hitObj = hits[0].object;
             const orbIdx = interactables.indexOf(hitObj);
             if (orbIdx >= 0) {
@@ -253,15 +254,12 @@ export default function InteractiveOrbs() {
             const dy = e.clientY - prevY;
             const orb = orbs[dragOrbIndex];
 
-            if (orb.config.type === 'globe') {
-              // Rotate globe on drag
-              orb.group.rotation.y += dx * 0.005;
-              orb.group.rotation.x += dy * 0.005;
-            } else {
-              // Move sphere/crystal
-              orb.group.position.x += dx * 0.03;
-              orb.group.position.y -= dy * 0.03;
-            }
+            // All types now spin/rotate on drag â store velocity for inertia
+            orb.rotVelY = dx * 0.007;
+            orb.rotVelX = dy * 0.007;
+            orb.group.rotation.y += orb.rotVelY;
+            orb.group.rotation.x += orb.rotVelX;
+
             prevX = e.clientX;
             prevY = e.clientY;
           } else {
@@ -293,7 +291,7 @@ export default function InteractiveOrbs() {
         );
         observer.observe(sectionEl);
 
-        // Animation â auto-rotate, float, parallax
+        // Animation â auto-rotate, float, inertia decay
         let frame = 0;
 
         const animate = () => {
@@ -310,20 +308,28 @@ export default function InteractiveOrbs() {
           }
 
           orbs.forEach((orb, i) => {
-            if (isDragging && dragOrbIndex === i) return; // skip auto-animation while dragging
+            const isThisDragged = isDragging && dragOrbIndex === i;
 
-            // Auto-rotation
-            const rotSpeed = orb.config.type === 'globe' ? 0.004 : 0.006;
-            orb.group.rotation.y += rotSpeed;
-            orb.group.rotation.x += rotSpeed * 0.3;
+            if (!isThisDragged) {
+              // Rotation inertia decay â keep spinning with momentum after release
+              orb.rotVelX *= 0.94;
+              orb.rotVelY *= 0.94;
+              orb.group.rotation.y += orb.rotVelY;
+              orb.group.rotation.x += orb.rotVelX;
 
-            // Float
-            const floatY = Math.sin(frame * 0.01 + orb.phase) * 0.5;
-            const py = orb.basePos.y + floatY;
-            orb.group.position.x += (orb.basePos.x - orb.group.position.x) * 0.005;
-            orb.group.position.y += (py - orb.group.position.y) * 0.01;
+              // Auto-rotation on top of inertia
+              const rotSpeed = orb.config.type === 'globe' ? 0.004 : 0.006;
+              orb.group.rotation.y += rotSpeed;
+              orb.group.rotation.x += rotSpeed * 0.3;
 
-            // Pulse glow
+              // Float
+              const floatY = Math.sin(frame * 0.01 + orb.phase) * 0.5;
+              const py = orb.basePos.y + floatY;
+              orb.group.position.x += (orb.basePos.x - orb.group.position.x) * 0.005;
+              orb.group.position.y += (py - orb.group.position.y) * 0.01;
+            }
+
+            // Pulse glow (always)
             const mainChild = orb.group.children[0];
             if (mainChild && mainChild.material) {
               const baseOpacity = orb.config.type === 'globe' ? 0.25 : 0.3;
@@ -341,6 +347,8 @@ export default function InteractiveOrbs() {
           canvas,
           sectionEl,
           observer,
+          onPointerMove,
+          onPointerUp,
         });
       });
 
@@ -349,6 +357,8 @@ export default function InteractiveOrbs() {
 
     return () => {
       scenesRef.current.forEach((s) => {
+        window.removeEventListener('pointermove', s.onPointerMove);
+        window.removeEventListener('pointerup', s.onPointerUp);
         s.renderer.dispose();
         s.observer.disconnect();
         if (s.canvas.parentNode) s.canvas.parentNode.removeChild(s.canvas);

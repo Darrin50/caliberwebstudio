@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import type { DemoConfig } from '../demos';
 
-/* âââ Per-slug photo & content data âââ */
+/* âââ Per-slug photo & content data âââ */h
 const DEMO_DATA: Record<string, {
   heroImg: string;
   heroAlt: string;
@@ -23,22 +23,22 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=85',
-    heroAlt: 'Barber giving a fresh fade at Detroit Cuts',
+    heroImg: 'https://images.unsplash.com/photo-1632777234321-19c84a481670?auto=format&fit=crop&w=1600&q=85',
+    heroAlt: 'Fresh taper fade at Detroit Cuts Barbershop',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80', alt: 'Fresh fade haircut' },
-      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80', alt: 'Barber at work on a taper' },
-      { url: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80', alt: 'Crisp fade close-up' },
-      { url: 'https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=800&q=80', alt: 'Professional barber with clippers' },
-      { url: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80', alt: 'Barbershop interior' },
-      { url: 'https://images.unsplash.com/photo-1582095133179-bfd08e2533cf?auto=format&fit=crop&w=800&q=80', alt: 'Line-up edge work' },
+      { url: 'https://images.unsplash.com/photo-1744636574936-9b3de5c85d0d?auto=format&fit=crop&w=800&q=80', alt: 'Crispy afro fade side part' },
+      { url: 'https://images.unsplash.com/photo-1718925420311-f8c07ed884fe?auto=format&fit=crop&w=800&q=80', alt: 'Tight buzz cut close-up' },
+      { url: 'https://images.unsplash.com/photo-1747359636934-d07c9d0ce134?auto=format&fit=crop&w=800&q=80', alt: 'Clean braided style with fade' },
+      { url: 'https://images.unsplash.com/photo-1545921772-ec7d64bc0bba?auto=format&fit=crop&w=800&q=80', alt: 'Fresh cut in the barbershop chair' },
+      { url: 'https://images.unsplash.com/photo-1653908093988-5149d9159742?auto=format&fit=crop&w=800&q=80', alt: "Kid's cut, fresh and clean" },
+      { url: 'https://images.unsplash.com/photo-1633795350752-1889647b684a?auto=format&fit=crop&w=800&q=80', alt: 'Taper fade back view' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1747359636963-279b956b556e?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9â', label: 'Google Rating' },

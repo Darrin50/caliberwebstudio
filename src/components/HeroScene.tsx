@@ -51,9 +51,9 @@ export default function HeroScene() {
       const mouse = new THREE.Vector2();
       const interactables: any[] = [];
 
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       //  MAIN GLOBE â wireframe earth, left side
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       const globeGroup = new THREE.Group();
       globeGroup.position.set(-10, 1, -2);
       sceneGroup.add(globeGroup);
@@ -135,10 +135,18 @@ export default function HeroScene() {
         globeGroup.add(arc);
       });
 
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       //  FLOATING SPHERES â interactive, right side
-      // ââââââââââââââââââââââââââââââââââââââ
-      const spheres: { mesh: any; basePos: THREE.Vector3; velocity: THREE.Vector3; hovered: boolean; phase: number }[] = [];
+      // âââââââââââââââââââââââââââââââââââââââââââââ
+      const spheres: {
+        mesh: any;
+        basePos: any;
+        velocity: any;
+        hovered: boolean;
+        phase: number;
+        rotVelX: number;
+        rotVelY: number;
+      }[] = [];
 
       const sphereConfigs = [
         { pos: [12, 4, -3], size: 2.2, color: 0x1e3d8f, opacity: 0.35 },
@@ -189,12 +197,14 @@ export default function HeroScene() {
           velocity: new THREE.Vector3(0, 0, 0),
           hovered: false,
           phase: Math.random() * Math.PI * 2,
+          rotVelX: 0,
+          rotVelY: 0,
         });
       });
 
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       //  PARTICLES â denser star field
-      // ââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       const particlesGeometry = new THREE.BufferGeometry();
       const particleCount = 1600;
       const positions = new Float32Array(particleCount * 3);
@@ -218,9 +228,43 @@ export default function HeroScene() {
       grid.position.y = -10;
       sceneGroup.add(grid);
 
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
+      //  DRAG-TO-SPIN HINT â fades in then out
+      // âââââââââââââââââââââââââââââââââââââââââââââ
+      const hintEl = document.createElement('div');
+      hintEl.style.cssText = [
+        'position:absolute',
+        'bottom:42%',
+        'left:50%',
+        'transform:translateX(-50%)',
+        'z-index:5',
+        'background:rgba(30,61,143,0.18)',
+        'backdrop-filter:blur(8px)',
+        '-webkit-backdrop-filter:blur(8px)',
+        'border:1px solid rgba(90,143,255,0.28)',
+        'border-radius:24px',
+        'padding:9px 20px',
+        'color:rgba(168,184,200,0.92)',
+        "font-family:'Inter',sans-serif",
+        'font-size:13px',
+        'font-weight:500',
+        'letter-spacing:0.05em',
+        'pointer-events:none',
+        'white-space:nowrap',
+        'transition:opacity 0.8s ease',
+        'opacity:0',
+        'user-select:none',
+      ].join(';');
+      hintEl.textContent = 'â²  drag to spin';
+      canvas.parentElement?.appendChild(hintEl);
+      // Fade in after short delay, then fade out after 3 s visible
+      const hintFadeIn  = setTimeout(() => { hintEl.style.opacity = '1'; }, 600);
+      const hintFadeOut = setTimeout(() => { hintEl.style.opacity = '0'; }, 3600);
+      const hintRemove  = setTimeout(() => { hintEl.remove(); }, 4500);
+
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       //  INTERACTION STATE
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       let isDragging = false;
       let dragTarget: 'globe' | 'sphere' | null = null;
       let dragSphereIndex = -1;
@@ -251,7 +295,7 @@ export default function HeroScene() {
           } else {
             dragTarget = 'sphere';
             const idx = interactables.indexOf(hits[0].object);
-            dragSphereIndex = idx - 1; // offset by globe being [0]
+            dragSphereIndex = idx - 1; // offset: globe is interactables[0]
             canvas.style.cursor = 'grabbing';
           }
           e.preventDefault();
@@ -275,9 +319,12 @@ export default function HeroScene() {
             globeRotVelY = dx * 0.003;
             globeRotVelX = dy * 0.003;
           } else if (dragTarget === 'sphere' && dragSphereIndex >= 0 && dragSphereIndex < spheres.length) {
+            // Rotate the sphere group based on drag delta, store velocity for inertia
             const s = spheres[dragSphereIndex];
-            s.mesh.position.x += dx * 0.04;
-            s.mesh.position.y -= dy * 0.04;
+            s.rotVelY = dx * 0.008;
+            s.rotVelX = dy * 0.008;
+            s.mesh.rotation.y += s.rotVelY;
+            s.mesh.rotation.x += s.rotVelX;
           }
 
           prevMouseX = e.clientX;
@@ -336,9 +383,9 @@ export default function HeroScene() {
       };
       window.addEventListener('resize', onResize);
 
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       //  ANIMATION LOOP
-      // ââââââââââââââââââââââââââââââââââââââ
+      // âââââââââââââââââââââââââââââââââââââââââââââ
       let frameCount = 0;
       const animate = () => {
         requestAnimationFrame(animate);
@@ -366,19 +413,27 @@ export default function HeroScene() {
 
         // ââ Floating spheres ââ
         spheres.forEach((s, i) => {
-          if (!isDragging || dragSphereIndex !== i) {
-            // Float motion
+          const isThisDragged = isDragging && dragSphereIndex === i;
+
+          if (!isThisDragged) {
+            // Float motion (position drifts back to base when not grabbed)
             const floatY = Math.sin(frameCount * 0.012 + s.phase) * 0.8;
             const floatX = Math.cos(frameCount * 0.008 + s.phase * 1.3) * 0.3;
             s.mesh.position.x += (s.basePos.x + floatX - s.mesh.position.x) * 0.01;
             s.mesh.position.y += (s.basePos.y + floatY - s.mesh.position.y) * 0.01;
+
+            // Rotation inertia â decay and apply to the whole group
+            s.rotVelX *= 0.95;
+            s.rotVelY *= 0.95;
+            s.mesh.rotation.y += s.rotVelY;
+            s.mesh.rotation.x += s.rotVelX;
+
+            // Subtle auto self-spin of the wireframe mesh
+            s.mesh.children[0].rotation.y += 0.005 + i * 0.001;
+            s.mesh.children[0].rotation.x += 0.002;
           }
 
-          // Sphere self-rotation
-          s.mesh.children[0].rotation.y += 0.005 + i * 0.001;
-          s.mesh.children[0].rotation.x += 0.002;
-
-          // Orbit ring rotation
+          // Orbit ring always spins regardless
           if (s.mesh.children[2]) {
             s.mesh.children[2].rotation.z += 0.008 + i * 0.002;
           }
@@ -388,7 +443,6 @@ export default function HeroScene() {
           s.mesh.children[0].material.opacity += (targetOpacity - s.mesh.children[0].material.opacity) * 0.08;
           const innerTarget = s.hovered ? 0.25 : sphereConfigs[i].opacity * 0.3;
           s.mesh.children[1].material.opacity += (innerTarget - s.mesh.children[1].material.opacity) * 0.08;
-          // Ring glow on hover
           if (s.mesh.children[2]) {
             const ringTarget = s.hovered ? 0.2 : 0.08;
             s.mesh.children[2].material.opacity += (ringTarget - s.mesh.children[2].material.opacity) * 0.08;
@@ -411,6 +465,10 @@ export default function HeroScene() {
       animate();
 
       return () => {
+        clearTimeout(hintFadeIn);
+        clearTimeout(hintFadeOut);
+        clearTimeout(hintRemove);
+        hintEl.remove();
         window.removeEventListener('scroll', onScroll);
         window.removeEventListener('resize', onResize);
         window.removeEventListener('pointermove', onPointerMove);

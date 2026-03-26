@@ -176,7 +176,7 @@ export default function Nav() {
   const navItems = [
     { label: 'Services', href: '#services' },
     { label: 'Process', href: '#process' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Pricing', href: '/pricing' },
     { label: 'Work', href: '#work' },
     { label: 'Blog', href: '/blog' },
   ];

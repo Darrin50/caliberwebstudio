@@ -1,109 +1,125 @@
-'use client';
-import Link from 'next/link';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { posts } from "./posts";
 
-interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  category: string;
-}
+export const metadata: Metadata = {
+  title: "Blog | Web Design, SEO & AI Tips for Detroit Small Businesses",
+  description: "Expert articles on web design, local SEO, AI-powered marketing, and digital growth strategies for Detroit and Metro Michigan small businesses.",
+  alternates: { canonical: "https://caliberwebstudio.com/blog" },
+  openGraph: {
+    title: "Blog | Caliber Web Studio",
+    description: "Expert tips on web design, local SEO, and AI marketing for Detroit small businesses.",
+    url: "https://caliberwebstudio.com/blog",
+    type: "website",
+  },
+};
 
-const posts: BlogPost[] = [
-  {
-    slug: 'why-local-businesses-need-ai-websites',
-    title: 'Why Local Businesses Need an AI-Powered Website in 2026',
-    excerpt: 'The days of a simple 5-page website are over. Here\'s why Detroit businesses that adopt AI-powered sites are outranking and outearning their competition.',
-    date: 'March 10, 2026',
-    readTime: '5 min read',
-    category: 'Strategy',
-  },
-  {
-    slug: 'google-business-profile-domination',
-    title: 'How to Dominate Google Business Profile in Your City',
-    excerpt: 'Your GBP listing is often the first thing a customer sees. Learn the exact optimization strategy we use to push our clients to the top of local search.',
-    date: 'March 3, 2026',
-    readTime: '7 min read',
-    category: 'Local SEO',
-  },
-  {
-    slug: 'review-automation-guide',
-    title: 'The Review Automation Playbook: Get 5-Star Reviews on Autopilot',
-    excerpt: 'Reviews are currency. We break down the automated system that helped one of our Detroit clients go from 12 reviews to 200+ in 90 days.',
-    date: 'February 24, 2026',
-    readTime: '6 min read',
-    category: 'Reputation',
-  },
-];
+const categoryColors: Record<string, string> = {
+  "Detroit Web Design": "var(--accent, #00d4ff)",
+  "Pricing & Value": "#a78bfa",
+  "AI & Technology": "#34d399",
+  "SEO": "#fb923c",
+  "Industry Guides": "#f472b6",
+  "Advice": "#facc15",
+  "Strategy": "#60a5fa",
+};
 
-export default function BlogPage() {
+export default function BlogIndex() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: 'var(--bg)' }}>
-      {/* Header Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-navy mb-4 text-sm font-semibold tracking-wide uppercase">
+    <main style={{ minHeight: "100vh", paddingTop: "80px", paddingBottom: "80px" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "64px" }}>
+          <p style={{ fontSize: "0.85rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent, #00d4ff)", marginBottom: "16px" }}>
             Resources
-          </div>
-          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Insights & Strategy
+          </p>
+          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, lineHeight: 1.15, color: "var(--text-primary, #fff)", marginBottom: "20px" }}>
+            Detroit Business Growth Blog
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl">
-            Strategies and insights to help your local business compete and win online.
+          <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "var(--text-secondary, rgba(255,255,255,0.7))", maxWidth: "600px", margin: "0 auto", lineHeight: 1.7 }}>
+            Web design, local SEO, AI marketing, and digital growth strategies built for Detroit small businesses.
           </p>
         </div>
-      </section>
 
-      {/* Blog Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`}>
-                <div
-                  className="h-full p-7 rounded-lg border transition-all duration-300 cursor-pointer group hover:shadow-lg"
-                  style={{
-                    backgroundColor: 'var(--bg2)',
-                    borderColor: 'var(--border)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#3b5998';
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--border)';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                >
-                  {/* Category Badge */}
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold text-navy bg-gray-700 rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
+        {/* Posts Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 340px), 1fr))", gap: "28px" }}>
+          {posts.map((post) => (
+            <article
+              key={post.slug}
+              style={{
+                background: "var(--card-bg, rgba(255,255,255,0.04))",
+                border: "1px solid var(--border-color, rgba(255,255,255,0.08))",
+                borderRadius: "16px",
+                padding: "28px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+                transition: "border-color 0.2s, transform 0.2s",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+                <span style={{
+                  fontSize: "0.75rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: categoryColors[post.category] || "var(--accent, #00d4ff)",
+                  background: `${categoryColors[post.category] || "var(--accent, #00d4ff)"}1a`,
+                  padding: "4px 10px",
+                  borderRadius: "20px",
+                }}>
+                  {post.category}
+                </span>
+                <time style={{ fontSize: "0.8rem", color: "var(--text-secondary, rgba(255,255,255,0.5))" }} dateTime={post.date}>
+                  {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                </time>
+              </div>
 
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-navy transition-colors">
-                    {post.title}
-                  </h3>
+              <h2 style={{ fontSize: "1.1rem", fontWeight: 700, lineHeight: 1.4, color: "var(--text-primary, #fff)", margin: 0 }}>
+                {post.title}
+              </h2>
 
-                  {/* Excerpt */}
-                  <p className="text-gray-400 text-sm mb-5 line-clamp-3">
-                    {post.excerpt}
-                  </p>
+              <p style={{ fontSize: "0.9rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", lineHeight: 1.65, margin: 0, flex: 1 }}>
+                {post.description}
+              </p>
 
-                  {/* Meta */}
-                  <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-700">
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
+              <Link
+                href={`/blog/${post.slug}`}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  fontSize: "0.875rem",
+                  fontWeight: 600,
+                  color: "var(--accent, #00d4ff)",
+                  textDecoration: "none",
+                  marginTop: "4px",
+                }}
+              >
+                Read article <span aria-hidden="true">→</span>
               </Link>
-            ))}
+            </article>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div style={{ textAlign: "center", marginTop: "80px", padding: "48px 24px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
+          <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 700, color: "var(--text-primary, #fff)", marginBottom: "16px" }}>
+            Ready to Grow Your Detroit Business Online?
+          </h2>
+          <p style={{ color: "var(--text-secondary, rgba(255,255,255,0.7))", marginBottom: "28px", fontSize: "1rem" }}>
+            Custom websites, local SEO, AI chatbots, and more — starting at $197/mo with $0 down.
+          </p>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/#pricing" style={{ padding: "12px 28px", background: "var(--accent, #00d4ff)", color: "#000", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>
+              View Plans
+            </Link>
+            <Link href="/#contact" style={{ padding: "12px 28px", background: "transparent", border: "1px solid var(--accent, #00d4ff)", color: "var(--accent, #00d4ff)", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>
+              Free Consultation
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

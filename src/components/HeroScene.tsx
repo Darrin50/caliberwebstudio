@@ -46,7 +46,7 @@ export default function HeroScene() {
       const sceneGroup = new THREE.Group();
       scene.add(sceneGroup);
 
-      // ── Raycaster for interactivity ──
+      // ── Raycaster for hover effects ──
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
       const interactables: any[] = [];
@@ -136,7 +136,7 @@ export default function HeroScene() {
       });
 
       // ─────────────────────────────────────────────
-      //  FLOATING SPHERES — interactive, right side
+      //  FLOATING SPHERES — hover glow, right side
       // ─────────────────────────────────────────────
       const spheres: {
         mesh: any;
@@ -265,43 +265,38 @@ export default function HeroScene() {
       // ─────────────────────────────────────────────
       //  INTERACTION STATE
       // ─────────────────────────────────────────────
-      let isDragging = false;
-      let dragTarget: 'globe' | 'sphere' | null = null;
-      let dragSphereIndex = -1;
-      let prevMouseX = 0;
-      let prevMouseY = 0;
-      let targetCamX = 0;
-      let targetCamY = 0;
+      let isDragging     = false;
+      let dragStarted    = false;  // true once pointer moved past threshold
+      let touchScrolling = false;  // true when touch intent is vertical scroll
+      let pointerDownX   = 0;
+      let pointerDownY   = 0;
+      let prevMouseX     = 0;
+      let prevMouseY     = 0;
+      let targetCamX     = 0;
+      let targetCamY     = 0;
+
+      // Globe's own idle rotation velocity
       let globeRotVelX = 0;
       let globeRotVelY = 0.003;
+
+      // Scene-level drag inertia (whole sceneGroup)
+      let sceneRotVelX = 0;
+      let sceneRotVelY = 0;
+
       let hoveredObj: any = null;
 
-      // ── Pointer events ──
+      // ── Pointer down — record start, don't capture yet ──
       const onPointerDown = (e: PointerEvent) => {
-        const rect = canvas.getBoundingClientRect();
-        mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-        mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-        raycaster.setFromCamera(mouse, camera);
-
-        const hits = raycaster.intersectObjects(interactables, false);
-        if (hits.length > 0) {
-          isDragging = true;
-          prevMouseX = e.clientX;
-          prevMouseY = e.clientY;
-
-          if (hits[0].object === globe) {
-            dragTarget = 'globe';
-            canvas.style.cursor = 'grabbing';
-          } else {
-            dragTarget = 'sphere';
-            const idx = interactables.indexOf(hits[0].object);
-            dragSphereIndex = idx - 1; // offset: globe is interactables[0]
-            canvas.style.cursor = 'grabbing';
-          }
-          e.preventDefault();
-        }
+        pointerDownX  = e.clientX;
+        pointerDownY  = e.clientY;
+        prevMouseX    = e.clientX;
+        prevMouseY    = e.clientY;
+        dragStarted   = false;
+        isDragging    = false;
+        touchScrolling = false;
       };
 
+      // ── Pointer move — determine intent, then rotate or scroll ──
       const onPointerMove = (e: PointerEvent) => {
         const rect = canvas.getBoundingClientRect();
         mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
@@ -311,61 +306,96 @@ export default function HeroScene() {
         targetCamX = (e.clientX / window.innerWidth - 0.5) * 2;
         targetCamY = (e.clientY / window.innerHeight - 0.5) * 2;
 
-        if (isDragging) {
-          const dx = e.clientX - prevMouseX;
-          const dy = e.clientY - prevMouseY;
+        const buttonHeld = e.buttons > 0;
 
-          if (dragTarget === 'globe') {
-            globeRotVelY = dx * 0.003;
-            globeRotVelX = dy * 0.003;
-          } else if (dragTarget === 'sphere' && dragSphereIndex >= 0 && dragSphereIndex < spheres.length) {
-            // Rotate the sphere group based on drag delta, store velocity for inertia
-            const s = spheres[dragSphereIndex];
-            s.rotVelY = dx * 0.008;
-            s.rotVelX = dy * 0.008;
-            s.mesh.rotation.y += s.rotVelY;
-            s.mesh.rotation.x += s.rotVelX;
+        if (buttonHeld) {
+          const totalDx = e.clientX - pointerDownX;
+          const totalDy = e.clientY - pointerDownY;
+          const totalDist = Math.sqrt(totalDx * totalDx + totalDy * totalDy);
+
+          // Determine intent once the pointer has moved far enough
+          if (!dragStarted && !touchScrolling && totalDist > 5) {
+            if (e.pointerType === 'touch' && Math.abs(totalDy) > Math.abs(totalDx) * 1.4) {
+              // Vertical intent on touch → let the page scroll naturally
+              touchScrolling = true;
+            } else {
+              // Horizontal or mouse drag → take control and spin the scene
+              dragStarted = true;
+              isDragging  = true;
+              canvas.style.cursor = 'grabbing';
+              // Capture so we keep receiving events even outside the canvas
+              try { canvas.setPointerCapture(e.pointerId); } catch { /* ignore */ }
+            }
           }
 
-          prevMouseX = e.clientX;
-          prevMouseY = e.clientY;
-          e.preventDefault();
+          // If we confirmed it's a page-scroll touch, stop processing here
+          if (touchScrolling) {
+            prevMouseX = e.clientX;
+            prevMouseY = e.clientY;
+            return;
+          }
+
+          if (isDragging) {
+            const dx = e.clientX - prevMouseX;
+            const dy = e.clientY - prevMouseY;
+
+            // Update scene-level velocities and apply immediately
+            sceneRotVelY = dx * 0.005;
+            sceneRotVelX = dy * 0.003;
+
+            sceneGroup.rotation.y += sceneRotVelY;
+            // Clamp vertical tilt so the scene never flips
+            sceneGroup.rotation.x = Math.max(
+              -Math.PI / 3,
+              Math.min(Math.PI / 3, sceneGroup.rotation.x + sceneRotVelX)
+            );
+
+            e.preventDefault();
+          }
         } else {
-          // Hover detection
+          // No button held — reset drag state and do hover detection
+          if (isDragging || dragStarted) {
+            isDragging    = false;
+            dragStarted   = false;
+            touchScrolling = false;
+            canvas.style.cursor = 'grab';
+          }
+
           raycaster.setFromCamera(mouse, camera);
           const hits = raycaster.intersectObjects(interactables, false);
           if (hits.length > 0) {
             canvas.style.cursor = 'grab';
-            if (hoveredObj !== hits[0].object) {
-              hoveredObj = hits[0].object;
-            }
-            // Mark hovered sphere
+            if (hoveredObj !== hits[0].object) hoveredObj = hits[0].object;
             spheres.forEach((s) => { s.hovered = false; });
             if (hits[0].object !== globe) {
               const idx = interactables.indexOf(hits[0].object) - 1;
               if (idx >= 0 && idx < spheres.length) spheres[idx].hovered = true;
             }
           } else {
-            canvas.style.cursor = '';
+            canvas.style.cursor = 'grab';
             hoveredObj = null;
             spheres.forEach((s) => { s.hovered = false; });
           }
         }
+
+        prevMouseX = e.clientX;
+        prevMouseY = e.clientY;
       };
 
-      const onPointerUp = () => {
-        isDragging = false;
-        dragTarget = null;
-        dragSphereIndex = -1;
-        canvas.style.cursor = hoveredObj ? 'grab' : '';
+      // ── Pointer up / cancel — release and keep inertia ──
+      const onPointerUp = (e: PointerEvent) => {
+        isDragging    = false;
+        dragStarted   = false;
+        touchScrolling = false;
+        canvas.style.cursor = 'grab';
+        try { canvas.releasePointerCapture(e.pointerId); } catch { /* ignore */ }
       };
 
-      canvas.addEventListener('pointerdown', onPointerDown);
-      window.addEventListener('pointermove', onPointerMove);
-      window.addEventListener('pointerup', onPointerUp);
-
-      // Touch is handled by pointer events — no separate touch listeners needed.
-      // touch-action CSS on the canvas allows vertical scrolling on mobile.
+      // All pointer events on the canvas element itself
+      canvas.addEventListener('pointerdown',   onPointerDown);
+      canvas.addEventListener('pointermove',   onPointerMove);
+      canvas.addEventListener('pointerup',     onPointerUp);
+      canvas.addEventListener('pointercancel', onPointerUp);
 
       // Scroll parallax
       const onScroll = () => {
@@ -391,13 +421,24 @@ export default function HeroScene() {
         requestAnimationFrame(animate);
         frameCount++;
 
-        // ── Globe rotation with momentum ──
-        if (!isDragging || dragTarget !== 'globe') {
-          globeRotVelX *= 0.98; // friction
-          globeRotVelY *= 0.98;
-          // Add subtle auto-rotation
-          globeRotVelY += (0.003 - globeRotVelY) * 0.005;
+        // ── Scene-level drag inertia ──
+        // When not dragging, smoothly decay the drag velocity and keep spinning
+        if (!isDragging) {
+          sceneRotVelX *= 0.93;
+          sceneRotVelY *= 0.93;
+          sceneGroup.rotation.y += sceneRotVelY;
+          sceneGroup.rotation.x = Math.max(
+            -Math.PI / 3,
+            Math.min(Math.PI / 3, sceneGroup.rotation.x + sceneRotVelX)
+          );
         }
+
+        // ── Globe's own idle rotation (independent of scene drag) ──
+        // Friction + gentle nudge back toward idle speed — always runs,
+        // so the globe resumes auto-spin from wherever the drag left it.
+        globeRotVelX *= 0.98;
+        globeRotVelY *= 0.98;
+        globeRotVelY += (0.003 - globeRotVelY) * 0.005;
         globeGroup.rotation.y += globeRotVelY;
         globeGroup.rotation.x += globeRotVelX;
 
@@ -413,25 +454,21 @@ export default function HeroScene() {
 
         // ── Floating spheres ──
         spheres.forEach((s, i) => {
-          const isThisDragged = isDragging && dragSphereIndex === i;
+          // Float position always drifts gently
+          const floatY = Math.sin(frameCount * 0.012 + s.phase) * 0.8;
+          const floatX = Math.cos(frameCount * 0.008 + s.phase * 1.3) * 0.3;
+          s.mesh.position.x += (s.basePos.x + floatX - s.mesh.position.x) * 0.01;
+          s.mesh.position.y += (s.basePos.y + floatY - s.mesh.position.y) * 0.01;
 
-          if (!isThisDragged) {
-            // Float motion (position drifts back to base when not grabbed)
-            const floatY = Math.sin(frameCount * 0.012 + s.phase) * 0.8;
-            const floatX = Math.cos(frameCount * 0.008 + s.phase * 1.3) * 0.3;
-            s.mesh.position.x += (s.basePos.x + floatX - s.mesh.position.x) * 0.01;
-            s.mesh.position.y += (s.basePos.y + floatY - s.mesh.position.y) * 0.01;
+          // Rotation inertia — decay and apply to the whole group
+          s.rotVelX *= 0.95;
+          s.rotVelY *= 0.95;
+          s.mesh.rotation.y += s.rotVelY;
+          s.mesh.rotation.x += s.rotVelX;
 
-            // Rotation inertia — decay and apply to the whole group
-            s.rotVelX *= 0.95;
-            s.rotVelY *= 0.95;
-            s.mesh.rotation.y += s.rotVelY;
-            s.mesh.rotation.x += s.rotVelX;
-
-            // Subtle auto self-spin of the wireframe mesh
-            s.mesh.children[0].rotation.y += 0.005 + i * 0.001;
-            s.mesh.children[0].rotation.x += 0.002;
-          }
+          // Subtle auto self-spin of the wireframe mesh
+          s.mesh.children[0].rotation.y += 0.005 + i * 0.001;
+          s.mesh.children[0].rotation.x += 0.002;
 
           // Orbit ring always spins regardless
           if (s.mesh.children[2]) {
@@ -455,11 +492,10 @@ export default function HeroScene() {
         // ── Grid scroll ──
         grid.position.z += 0.03;
 
-        // ── Camera smooth follow ──
+        // ── Camera smooth parallax follow ──
         camera.position.x += (targetCamX * 1.0 - camera.position.x) * 0.02;
         camera.position.y += (-targetCamY * 0.6 - camera.position.y) * 0.02;
 
-        // Render every frame for smooth interaction
         renderer.render(scene, camera);
       };
       animate();
@@ -471,8 +507,10 @@ export default function HeroScene() {
         hintEl.remove();
         window.removeEventListener('scroll', onScroll);
         window.removeEventListener('resize', onResize);
-        window.removeEventListener('pointermove', onPointerMove);
-        window.removeEventListener('pointerup', onPointerUp);
+        canvas.removeEventListener('pointerdown',   onPointerDown);
+        canvas.removeEventListener('pointermove',   onPointerMove);
+        canvas.removeEventListener('pointerup',     onPointerUp);
+        canvas.removeEventListener('pointercancel', onPointerUp);
         renderer.dispose();
       };
     });
@@ -486,7 +524,11 @@ export default function HeroScene() {
         inset: 0,
         zIndex: 1,
         pointerEvents: 'auto',
-        touchAction: 'pan-y pinch-zoom',
+        // touch-action: none gives us full pointer control so we can spin in any direction.
+        // Our intent-detection logic (in onPointerMove) handles vertical-scroll pass-through
+        // on touch by releasing pointer capture when vertical swipe is detected.
+        touchAction: 'none',
+        cursor: 'grab',
         width: '100%',
         height: '100%',
       }}

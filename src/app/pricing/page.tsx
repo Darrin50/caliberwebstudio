@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Pricing | Caliber Web Studio – Monthly Web & Growth Plans",
+  title: { absolute: 'Pricing | Caliber Web Studio – Monthly Web & Growth Plans' },
   description: "Simple, transparent monthly pricing for Detroit small businesses. AI-powered website plans starting at $197/mo. $0 down, no surprise fees.",
   alternates: { canonical: "https://caliberwebstudio.com/pricing" },
   openGraph: {

@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Can I cancel anytime?",
-    a: "Plans are on a 12-month agreement with a 14-day preview period before your first payment. If you do not love the site within those 14 days, we will take it down and you owe nothing.",
+    a: "Plans start with a 12-month agreement. After month 12, cancel anytime with 30 days notice.",
   },
   {
     q: "What payment methods do you accept?",

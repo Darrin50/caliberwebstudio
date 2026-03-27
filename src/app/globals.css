@@ -41,12 +41,16 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* ensure base size for mobile readability */
+}
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--silver);
+  line-height: 1.65; /* mobile readability */
   overflow-x: hidden;
   transition: background 0.4s ease, color 0.4s ease;
 }
@@ -198,4 +202,21 @@ body {
 input:focus, textarea:focus {
   border-left: 2px solid var(--navy) !important;
   padding-left: 12px !important;
+}
+
+/* ── Mobile typography ── */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .btn-chrome,
+  .btn-line {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    padding: 14px 28px;
+  }
+  .sec-label {
+    font-size: 11px;
+  }
 }

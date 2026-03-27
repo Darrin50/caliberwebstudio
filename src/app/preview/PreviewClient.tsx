@@ -748,7 +748,7 @@ export default function PreviewClient() {
                 <div className="rv" key={i}>
                   <Stars count={r.stars} accent={accent} />
                   <p className="rv-text">&ldquo;{r.text}&rdquo;</p>
-                  <div className="rv-name"— {r.name}</div>
+                  <div className="rv-name">— {r.name}</div>
                 </div>
               ))}
             </div>

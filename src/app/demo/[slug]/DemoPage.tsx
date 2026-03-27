@@ -58,10 +58,10 @@ const DEMO_DATA: Record<string, {
     heroImg: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Metro Plumbing technician repairing a water heater',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
-      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Pipe repair inside a wall — residential job' },
+      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=85', alt: 'Plumber working on pipes under a cabinet' },
+      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1200&q=85', alt: 'Pipe repair inside a wall — residential job' },
       { url: 'https://images.unsplash.com/photo-1584265549731-fc0d5434ff76?auto=format&fit=crop&w=800&q=80', alt: 'Faucet and sink repair close-up' },
-      { url: 'https://images.unsplash.com/photo-1582015752624-e8b1bc4e6019-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Plumber with tools — ready for the job' },
+      { url: 'https://images.unsplash.com/photo-1582015752624-e8b1bc4e6019?auto=format&fit=crop&w=1200&q=85', alt: 'Plumber with tools — ready for the job' },
     ],
     beforeAfter: [
       {
@@ -77,7 +77,7 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486-d79757ef3780?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1200&q=85',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
       { num: '4.8★', label: 'Google Rating' },
@@ -101,14 +101,14 @@ const DEMO_DATA: Record<string, {
       { url: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
       { url: 'https://images.unsplash.com/photo-1562322140-8baeadadec4d?auto=format&fit=crop&w=800&q=80', alt: 'Bone-straight silk press — long, sleek, damage-free' },
       { url: 'https://images.unsplash.com/photo-1590037094905-e0e3b5d08bdc?auto=format&fit=crop&w=800&q=80', alt: 'Passion twists with ombre — protective style goals' },
-      { url: 'https://images.unsplash.com/photo-1522337360826-9a37efa4e4fc-9addcf688fbe?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural curls — volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-1522337360826-9a37efa4e4fc?auto=format&fit=crop&w=1200&q=85', alt: 'Beautiful natural curls — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1560869713-7d0a29430803-9b101441c135?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=85',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },

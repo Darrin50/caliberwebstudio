@@ -23,15 +23,15 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?auto=format&fit=crop&w=1600&q=85',
+    heroImg: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?auto=format&fit=crop&w=1200&q=80',
     heroAlt: 'Master barber with Detroit Tigers cap giving a fresh cut at Detroit Cuts Barbershop',
     gallery: [
       { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80', alt: 'Clean taper fade close-up — precision lineup' },
-      { url: 'https://images.unsplash.com/photo-1598030473526-8dd21bd41af9?auto=format&fit=crop&w=800&q=80', alt: 'Fresh 360 waves with skin fade — Detroit style' },
-      { url: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?auto=format&fit=crop&w=800&q=80', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
-      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
-      { url: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80', alt: "Kid's cut — young king leaving the chair fresh" },
-      { url: 'https://images.unsplash.com/photo-1598030473526-8dd21bd41af9?auto=format&fit=crop&w=800&q=80', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
+      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: 'https://images.unsplash.com/photo-1582015752624-e8b1bc4e6019?auto=format&fit=crop&w=800&q=80', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
+      { url: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: 'https://images.unsplash.com/photo-1633941599726-fba6a3be4e64?auto=format&fit=crop&w=800&q=80', alt: "Kid's cut — young king leaving the chair fresh" },
+      { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
@@ -55,13 +55,13 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1-3f2c0d5434ff76?auto=format&fit=crop&w=1600&q=85',
+    heroImg: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1-3f2c0d5434ff76?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Metro Plumbing technician repairing a water heater',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
-      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Pipe repair inside a wall — residential job' },
+      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
+      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Pipe repair inside a wall — residential job' },
       { url: 'https://images.unsplash.com/photo-1584265549731-fc0d5434ff76?auto=format&fit=crop&w=800&q=80', alt: 'Faucet and sink repair close-up' },
-      { url: 'https://images.unsplash.com/photo-1620653713380-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Plumber with tools — ready for the job' },
+      { url: 'https://images.unsplash.com/photo-1582015752624-e8b1bc4e6019-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Plumber with tools — ready for the job' },
     ],
     beforeAfter: [
       {
@@ -94,14 +94,14 @@ const DEMO_DATA: Record<string, {
   },
 
   'luxe-salon': {
-    heroImg: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1600&q=85',
+    heroImg: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80',
     heroAlt: 'Sleek ponytail with laid baby hairs — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
-      { url: 'https://images.unsplash.com/photo-1522337360826-da8f6ded9e3d?auto=format&fit=crop&w=800&q=80', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
-      { url: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80', alt: 'Bone-straight silk press — long, sleek, damage-free' },
-      { url: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80', alt: 'Passion twists with ombre — protective style goals' },
-      { url: 'https://images.unsplash.com/photo-1522337360826-da8f6ded9e3d-9addcf688fbe?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural curls — volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-1522337360826-9a37efa4e4fc?auto=format&fit=crop&w=800&q=80', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
+      { url: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
+      { url: 'https://images.unsplash.com/photo-1562322140-8baeadadec4d?auto=format&fit=crop&w=800&q=80', alt: 'Bone-straight silk press — long, sleek, damage-free' },
+      { url: 'https://images.unsplash.com/photo-1590037094905-e0e3b5d08bdc?auto=format&fit=crop&w=800&q=80', alt: 'Passion twists with ombre — protective style goals' },
+      { url: 'https://images.unsplash.com/photo-1522337360826-9a37efa4e4fc-9addcf688fbe?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural curls — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
@@ -123,6 +123,32 @@ const DEMO_DATA: Record<string, {
       radius: '8px',
     },
   },
+  'detroits-kitchen': {
+    hero: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+    name: "Detroit's Kitchen",
+    tagline: 'Authentic Soul Food in the Heart of Detroit',
+    phone: '(313) 555-0199',
+    address: '2847 Woodward Ave, Detroit, MI 48201',
+    hours: 'Mon–Sat 11am–9pm | Sun 12pm–7pm',
+    about: 'Family recipes passed down for generations. Detroit’s Kitchen brings you the warmest soul food experience in the city — from smothered chicken to sweet potato pie.',
+    theme: { bg: '#1a0a0a', accent: '#D4A017', text: '#f5f0e8', radius: '8px' },
+    stats: [
+      { label: 'Years Serving Detroit', value: '22+' },
+      { label: 'Menu Items', value: '40+' },
+      { label: 'Happy Customers/Month', value: '2,000+' },
+    ],
+    gallery: [
+      { src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80', alt: 'Soul food spread' },
+      { src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80', alt: 'Kitchen cooking' },
+      { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', alt: 'Restaurant dining room' },
+    ],
+    reviews: [
+      { name: 'Marcus T.', rating: 5, text: 'Best soul food in Detroit, period. The smothered chicken is unbelievable.' },
+      { name: 'Denise W.', rating: 5, text: 'Feels like grandma’s kitchen. Warm, welcoming, and absolutely delicious.' },
+      { name: 'James R.', rating: 5, text: 'I drive 45 minutes just for their sweet potato pie. Worth every mile.' },
+    ],
+  },
+
 };
 
 function Stars({ count }: { count: number }) {
@@ -133,36 +159,6 @@ function Stars({ count }: { count: number }) {
       ))}
     </div>
   );
-
-  'detroits-kitchen': {
-    heroImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85',
-    heroAlt: "Detroit's Kitchen soul food restaurant — warm, welcoming, and homemade",
-    gallery: [
-      { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', alt: "Sunday Plate at Detroit's Kitchen" },
-      { url: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80', alt: 'Crispy Southern fried chicken fresh from the kitchen' },
-      { url: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80', alt: 'Homestyle ingredients for authentic soul food' },
-      { url: 'https://images.unsplash.com/photo-1484980972926-edee96e0960d?auto=format&fit=crop&w=800&q=80', alt: 'Smothered pork chops with savory gravy and sides' },
-    ],
-    reviews: [
-      { name: 'Marcus J.', rating: 5, text: "Grandma's recipes done right. The Sunday Plate hits every time." },
-      { name: 'Keisha T.', rating: 5, text: 'Oxtails so tender they fall off the bone. Best soul food in Detroit.' },
-      { name: 'DeShawn M.', rating: 5, text: 'Catfish platter is unmatched. This place feels like home.' },
-    ],
-    aboutImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
-    stats: [
-      { label: 'Years Serving Detroit', value: '20+' },
-      { label: 'Family Recipes', value: '50+' },
-      { label: 'Happy Diners', value: '10K+' },
-    ],
-    ctaLabel: 'View Full Menu',
-    announceBar: '\ud83c\udf57 Sunday Plates available all week — Dine in or take out!',
-    theme: {
-      bg: '#1a0a0a',
-      accent: '#D4A017',
-      text: '#f5f0e8',
-      radius: '8px',
-    },
-  },
 }
 
 export default function DemoPage({ config }: { config: DemoConfig }) {
@@ -577,3 +573,4 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
     </>
   );
 }
+

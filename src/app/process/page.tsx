@@ -77,7 +77,7 @@ export default function ProcessPage() {
 
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', textAlign: 'center', borderTop: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
           <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: '24px' }}>Ready to Start?</h2>
-          <p style={{ color: 'var(--chrome, #A8B8C8)', fontSize: '18px', maxWidth: '480px', margin: '0 auto 40px' }}>No contracts. No upfront cost. Just a free mockup of your new site in 48 hours.</p>
+          <p style={{ color: 'var(--chrome, #A8B8C8)', fontSize: '18px', maxWidth: '480px', margin: '0 auto 40px' }}>No upfront cost. Just a free mockup of your new site in 48 hours — no commitment required to see what’s possible.</p>
           <Link href="/#contact" style={{ display: 'inline-block', background: 'var(--navy, #1E3D8F)', color: '#fff', fontFamily: 'Space Mono, monospace', fontSize: '13px', letterSpacing: '2px', textTransform: 'uppercase', padding: '18px 40px', textDecoration: 'none' }}>Start a Free Project</Link>
         </section>
 

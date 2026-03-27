@@ -124,31 +124,33 @@ const DEMO_DATA: Record<string, {
     },
   },
   'detroits-kitchen': {
-    hero: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-    name: "Detroit's Kitchen",
-    tagline: 'Authentic Soul Food in the Heart of Detroit',
-    phone: '(313) 555-0199',
-    address: '2847 Woodward Ave, Detroit, MI 48201',
-    hours: 'Mon–Sat 11am–9pm | Sun 12pm–7pm',
-    about: 'Family recipes passed down for generations. Detroit’s Kitchen brings you the warmest soul food experience in the city — from smothered chicken to sweet potato pie.',
-    theme: { bg: '#1a0a0a', accent: '#D4A017', text: '#f5f0e8', radius: '8px' },
-    stats: [
-      { label: 'Years Serving Detroit', value: '22+' },
-      { label: 'Menu Items', value: '40+' },
-      { label: 'Happy Customers/Month', value: '2,000+' },
-    ],
+    heroImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+    heroAlt: "Detroit's Kitchen soul food restaurant in Detroit MI",
     gallery: [
-      { src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80', alt: 'Soul food spread' },
-      { src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80', alt: 'Kitchen cooking' },
-      { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', alt: 'Restaurant dining room' },
+      { url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80', alt: 'Soul food spread' },
+      { url: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80', alt: 'Home-cooked meal' },
+      { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', alt: 'Restaurant dining room' },
+    ],
+    aboutImg: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+    theme: {
+      bg: '#1a0a0a', bg2: '#2a1408', bg3: '#3d2010',
+      accent: '#D4A017', accent2: '#B8860B',
+      text: '#f5f0e8', muted: '#c9bfad', light: '#fff8ec',
+      radius: '8px',
+    },
+    announceBar: 'Now Open Sundays 12–7pm — Dine In & Takeout Available',
+    stats: [
+      { num: '22+', label: 'Years Serving Detroit' },
+      { num: '40+', label: 'Menu Items' },
+      { num: '2,000+', label: 'Happy Guests/Month' },
     ],
     reviews: [
-      { name: 'Marcus T.', rating: 5, text: 'Best soul food in Detroit, period. The smothered chicken is unbelievable.' },
-      { name: 'Denise W.', rating: 5, text: 'Feels like grandma’s kitchen. Warm, welcoming, and absolutely delicious.' },
-      { name: 'James R.', rating: 5, text: 'I drive 45 minutes just for their sweet potato pie. Worth every mile.' },
+      { name: 'Marcus T.', stars: 5, text: 'Best soul food in Detroit, period. The smothered chicken is unbelievable.' },
+      { name: 'Denise W.', stars: 5, text: 'Feels like grandma’s kitchen. Warm, welcoming, and absolutely delicious.' },
+      { name: 'James R.', stars: 5, text: 'I drive 45 minutes just for their sweet potato pie. Worth every mile.' },
     ],
+    ctaLabel: 'Get Your Restaurant Online',
   },
-
 };
 
 function Stars({ count }: { count: number }) {
@@ -573,4 +575,5 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
     </>
   );
 }
+
 

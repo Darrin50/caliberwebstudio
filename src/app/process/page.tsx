@@ -4,7 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Our Process | Caliber Web Studio',
+  title: { absolute: 'Our Process | Caliber Web Studio' },
   description: 'See exactly how Caliber Web Studio builds your AI-powered website — free mockup first, you approve, then we launch in 24 hours.',
   alternates: { canonical: 'https://caliberwebstudio.com/process' },
 };
@@ -23,7 +23,7 @@ const faqs = [
   { q: "How long does the whole process take?", a: "From first contact to live site: typically 5-7 business days. Mockup in 48 hours, approval is on your timeline, launch within 24 hours of your go-ahead." },
   { q: "What if I need changes after launch?", a: "All plans include ongoing updates and maintenance. You're never on your own after we go live." },
   { q: "Do I own my site?", a: "Your content and domain are always yours. Your monthly plan covers hosting, maintenance, and continuous improvements." },
-  { q: "What if I want to cancel?", a: "Month-to-month means no long-term contracts. Cancel anytime with 30 days notice." },
+  { q: "What if I want to cancel?", a: "Plans start with a 12-month agreement. After month 12, cancel anytime with 30 days notice." },
 ];
 
 export default function ProcessPage() {

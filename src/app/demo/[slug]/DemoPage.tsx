@@ -23,15 +23,15 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: '/demo/barber/hero.png',
+    heroImg: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Master barber with Detroit Tigers cap giving a fresh cut at Detroit Cuts Barbershop',
     gallery: [
-      { url: '/demo/barber/fade-closeup.png', alt: 'Clean taper fade close-up — precision lineup' },
-      { url: '/demo/barber/waves.png', alt: 'Fresh 360 waves with skin fade — Detroit style' },
-      { url: '/demo/barber/exterior.png', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
-      { url: '/demo/barber/two-barbers.png', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
-      { url: '/demo/barber/kids-cut.png', alt: "Kid's cut — young king leaving the chair fresh" },
-      { url: '/demo/barber/interior.png', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
+      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80', alt: 'Clean taper fade close-up — precision lineup' },
+      { url: 'https://images.unsplash.com/photo-1598030473526-8dd21bd41af9?auto=format&fit=crop&w=800&q=80', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?auto=format&fit=crop&w=800&q=80', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
+      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80', alt: "Kid's cut — young king leaving the chair fresh" },
+      { url: 'https://images.unsplash.com/photo-1598030473526-8dd21bd41af9?auto=format&fit=crop&w=800&q=80', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
@@ -55,18 +55,18 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1676210134190-3f2c0d5434ff76?auto=format&fit=crop&w=1600&q=85',
+    heroImg: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1-3f2c0d5434ff76?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Metro Plumbing technician repairing a water heater',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
-      { url: 'https://images.unsplash.com/photo-1676210134188-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Pipe repair inside a wall — residential job' },
+      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
+      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Pipe repair inside a wall — residential job' },
       { url: 'https://images.unsplash.com/photo-1584265549731-fc0d5434ff76?auto=format&fit=crop&w=800&q=80', alt: 'Faucet and sink repair close-up' },
       { url: 'https://images.unsplash.com/photo-1620653713380-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Plumber with tools — ready for the job' },
     ],
     beforeAfter: [
       {
-        before: '/demo/plumbing/sink-before.png',
-        after: '/demo/plumbing/sink-after.png',
+        before: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80',
+        after: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80',
         beforeLabel: 'Clogged kitchen sink — standing water and debris buildup',
         afterLabel: 'Drain cleared, sparkling clean — flowing like new',
         title: 'Kitchen Sink Drain Clearing',
@@ -77,7 +77,7 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1694875119129-d79757ef3780?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486-d79757ef3780?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
       { num: '4.8★', label: 'Google Rating' },
@@ -94,21 +94,21 @@ const DEMO_DATA: Record<string, {
   },
 
   'luxe-salon': {
-    heroImg: '/demo/salon/hero-ponytail.png',
+    heroImg: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Sleek ponytail with laid baby hairs — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: '/demo/salon/fulani-braids.png', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
-      { url: '/demo/salon/pixie-cut.png', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
-      { url: '/demo/salon/silk-press.png', alt: 'Bone-straight silk press — long, sleek, damage-free' },
-      { url: '/demo/salon/twist-braids.png', alt: 'Passion twists with ombre — protective style goals' },
-      { url: 'https://images.unsplash.com/photo-1633257245586-9addcf688fbe?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural curls — volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
+      { url: 'https://images.unsplash.com/photo-1522337360826-da8f6ded9e3d?auto=format&fit=crop&w=800&q=80', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
+      { url: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80', alt: 'Bone-straight silk press — long, sleek, damage-free' },
+      { url: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80', alt: 'Passion twists with ombre — protective style goals' },
+      { url: 'https://images.unsplash.com/photo-1522337360826-da8f6ded9e3d-9addcf688fbe?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural curls — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1611042553365-9b101441c135?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1560869713-7d0a29430803-9b101441c135?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -133,6 +133,36 @@ function Stars({ count }: { count: number }) {
       ))}
     </div>
   );
+
+  'detroits-kitchen': {
+    heroImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85',
+    heroAlt: "Detroit's Kitchen soul food restaurant — warm, welcoming, and homemade",
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', alt: "Sunday Plate at Detroit's Kitchen" },
+      { url: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80', alt: 'Crispy Southern fried chicken fresh from the kitchen' },
+      { url: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80', alt: 'Homestyle ingredients for authentic soul food' },
+      { url: 'https://images.unsplash.com/photo-1484980972926-edee96e0960d?auto=format&fit=crop&w=800&q=80', alt: 'Smothered pork chops with savory gravy and sides' },
+    ],
+    reviews: [
+      { name: 'Marcus J.', rating: 5, text: "Grandma's recipes done right. The Sunday Plate hits every time." },
+      { name: 'Keisha T.', rating: 5, text: 'Oxtails so tender they fall off the bone. Best soul food in Detroit.' },
+      { name: 'DeShawn M.', rating: 5, text: 'Catfish platter is unmatched. This place feels like home.' },
+    ],
+    aboutImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+    stats: [
+      { label: 'Years Serving Detroit', value: '20+' },
+      { label: 'Family Recipes', value: '50+' },
+      { label: 'Happy Diners', value: '10K+' },
+    ],
+    ctaLabel: 'View Full Menu',
+    announceBar: '\ud83c\udf57 Sunday Plates available all week — Dine in or take out!',
+    theme: {
+      bg: '#1a0a0a',
+      accent: '#D4A017',
+      text: '#f5f0e8',
+      radius: '8px',
+    },
+  },
 }
 
 export default function DemoPage({ config }: { config: DemoConfig }) {

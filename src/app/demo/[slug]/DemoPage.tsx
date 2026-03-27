@@ -23,22 +23,22 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?auto=format&fit=crop&w=1200&q=80',
+    heroImg: 'https://images.pexels.com/photos/7447148/pexels-photo-7447148.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
     heroAlt: 'Master barber with Detroit Tigers cap giving a fresh cut at Detroit Cuts Barbershop',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80', alt: 'Clean taper fade close-up — precision lineup' },
-      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80', alt: 'Fresh 360 waves with skin fade — Detroit style' },
-      { url: 'https://images.unsplash.com/photo-1582015752624-e8b1bc4e6019?auto=format&fit=crop&w=800&q=80', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
-      { url: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
-      { url: 'https://images.unsplash.com/photo-1633941599726-fba6a3be4e64?auto=format&fit=crop&w=800&q=80', alt: "Kid's cut — young king leaving the chair fresh" },
-      { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
+      { url: 'https://images.pexels.com/photos/7697316/pexels-photo-7697316.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Clean taper fade close-up — precision lineup' },
+      { url: 'https://images.pexels.com/photos/7697390/pexels-photo-7697390.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: 'https://images.pexels.com/photos/7697283/pexels-photo-7697283.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
+      { url: 'https://images.pexels.com/photos/7697642/pexels-photo-7697642.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: 'https://images.pexels.com/photos/7697639/pexels-photo-7697639.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: "Kid's cut — young king leaving the chair fresh" },
+      { url: 'https://images.pexels.com/photos/7697445/pexels-photo-7697445.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1585747860019-024db4655bfb?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.pexels.com/photos/7447136/pexels-photo-7447136.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -55,7 +55,7 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1-3f2c0d5434ff76?auto=format&fit=crop&w=1600&q=85',
+    heroImg: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Metro Plumbing technician repairing a water heater',
     gallery: [
       { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
@@ -195,6 +195,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
   const isBarber = config.slug === 'detroit-cuts';
   const isPlumbing = config.slug === 'metro-plumbing';
   const isSalon = config.slug === 'luxe-salon';
+  const isRestaurant = config.slug === 'detroits-kitchen';
 
   const css = `
     .dw *, .dw *::before, .dw *::after { box-sizing: border-box; }
@@ -354,6 +355,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
               {isBarber && (<>Fresh Cuts.<br /><span>Sharp Fades.</span><br />No Waiting.</>)}
               {isPlumbing && (<>Detroit&apos;s<br /><span>Trusted</span><br />Plumber.</>)}
               {isSalon && (<>Your Hair.<br />Your Crown.<br /><span>Protected.</span></>)}
+            {isRestaurant && (<>Detroit&apos;s<br /><span>Soul Food.</span><br />Made Fresh.</>)}
             </h1>
             <p className="hero-sub">{config.tagline}</p>
             <div className="hero-btns">
@@ -469,6 +471,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                   {isPlumbing && 'Every technician is Michigan-licensed, background checked, and trained in the latest techniques. When we give you a price, that\'s the price. No hidden fees.'}
                   {isSalon && 'Detroit is home. Our clients are our community. Every appointment is a chance to make someone feel like the royalty they are.'}
                 </p>
+          {isRestaurant && <p className="about-para">Detroit's Kitchen has been serving the community since day one — real comfort food, made from scratch, with love. We believe everyone deserves a hot meal that feels like home.</p>}
                 <div className="stats">
                   {data.stats.map(s => (
                     <div key={s.label}>

@@ -38,7 +38,7 @@ export default function Footer() {
         }}
       >
         <a
-          href="#"
+          href="https://www.linkedin.com/company/caliber-web-studio"
           style={{
             color: 'var(--dim)',
             transition: 'color 0.2s ease',
@@ -60,7 +60,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="#"
+          href="https://twitter.com/caliberwebstudio"
           style={{
             color: 'var(--dim)',
             transition: 'color 0.2s ease',
@@ -80,7 +80,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="#"
+          href="https://www.instagram.com/caliberwebstudio"
           style={{
             color: 'var(--dim)',
             transition: 'color 0.2s ease',

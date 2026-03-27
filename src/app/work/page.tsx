@@ -4,7 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Our Work | Caliber Web Studio',
+  title: { absolute: 'Our Work | Caliber Web Studio' },
   description: "Real websites built for real Detroit businesses. See case studies for Detroit Cuts, Metro Plumbing, Luxe Salon, and Detroit's Kitchen.",
   alternates: { canonical: 'https://caliberwebstudio.com/work' },
 };
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const projects = [
   {
     slug: 'detroit-cuts',
+    image: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?w=600&auto=format&fit=crop',
     category: 'Barbershop',
     title: 'Detroit Cuts',
     headline: 'From Zero Online Presence to Fully Booked',
@@ -21,6 +22,7 @@ const projects = [
   },
   {
     slug: 'metro-plumbing',
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&auto=format&fit=crop',
     category: 'Plumbing',
     title: 'Metro Plumbing',
     headline: 'Emergency Calls Up 60% in 90 Days',
@@ -30,6 +32,7 @@ const projects = [
   },
   {
     slug: 'luxe-salon',
+    image: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&auto=format&fit=crop',
     category: 'Beauty and Salon',
     title: 'Luxe Salon',
     headline: 'A Brand as Polished as Their Work',
@@ -39,6 +42,7 @@ const projects = [
   },
   {
     slug: 'detroits-kitchen',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop',
     category: 'Restaurant',
     title: "Detroit's Kitchen",
     headline: 'More Reservations, Less Phone Tag',
@@ -65,6 +69,7 @@ export default function WorkPage() {
             <div key={project.slug} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: i < projects.length - 1 ? 'clamp(80px,10vw,140px)' : 0, alignItems: 'center', direction: i % 2 === 0 ? 'ltr' : 'rtl' }}>
 
               <div style={{ background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '8px', aspectRatio: '16/10', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', direction: 'ltr' }}>
+                {project.image && <img src={project.image} alt={project.title + ' preview'} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7, borderRadius: '8px' }} />}
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(30,61,143,0.15) 0%, transparent 60%)' }} />
                 <div style={{ textAlign: 'center', zIndex: 1, position: 'relative' }}>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(20px,3vw,32px)', color: '#fff', marginBottom: '8px' }}>{project.title}</div>

@@ -214,7 +214,7 @@ const INDUSTRIES: Record<string, IndustryTemplate> = {
       { name: 'Silk Press', description: 'Smooth, sleek, damage-free silk press with deep conditioning treatment. Perfect for any occasion.', price: 'From $95' },
       { name: 'Natural Hair Styling', description: 'Twist-outs, wash & gos, bantu knots, and afro sets. We celebrate every texture and curl pattern.', price: 'From $65' },
       { name: 'Sew-In / Weave', description: 'Full sew-in installation with leave-out or closure. Natural, undetectable finish every single time.', price: 'From $180' },
-      { name: 'Bridal Package', description: 'Complete wedding day glam — trial run included. Braids, locs, updos, or blowouts. Your day, your style.', price: 'From $275' },
+      { name: 'Bridal Package', description: 'Complete wedding day glam — trial run included. Braids, locs, updos, or blowouts. Your day, your style.', price": 'From $275' },
     ],
     hours: [
       { day: 'Tuesday – Friday', hours: '10:00 AM – 7:00 PM' },
@@ -329,7 +329,7 @@ const INDUSTRIES: Record<string, IndustryTemplate> = {
     stats: [
       { num: '5+', label: 'Years in Detroit' },
       { num: '4.8★', label: 'Google Rating' },
-      { num: '500+', label: 'Products In-Stock' },
+      { num": '500+', label: 'Products In-Stock' },
     ],
     reviews: [
       { name: 'Lisa M.', stars: 5, text: "Best local shop in Detroit. The staff is so helpful and the selection is always fresh. I shop here every week." },
@@ -408,7 +408,20 @@ const INDUSTRIES: Record<string, IndustryTemplate> = {
 
 };
 
-/* ─0────────────────────────
+/* ─────────────────────────────────────────────
+   Stars helper
+───────────────────────────────────────────── */
+function Stars({ count, accent }: { count: number; accent: string }) {
+  return (
+    <div style={{ display: 'flex', gap: 2, marginBottom: 12 }}>
+      {Array.from({ length: count }).map((_, i) => (
+        <span key={i} style={{ color: accent, fontSize: 15 }}★</span>
+      ))}
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
    Main component
 ───────────────────────────────────────────── */
 export default function PreviewClient() {
@@ -735,7 +748,7 @@ export default function PreviewClient() {
                 <div className="rv" key={i}>
                   <Stars count={r.stars} accent={accent} />
                   <p className="rv-text">&ldquo;{r.text}&rdquo;</p>
-                  <div className="rv-name">— {r.name}</div>
+                  <div className="rv-name"— {r.name}</div>
                 </div>
               ))}
             </div>
@@ -763,27 +776,27 @@ export default function PreviewClient() {
               <div className="ct-block">
                 <h3>Get In Touch</h3>
                 <div className="ci">
-                  <div className="ci-icon">📍</div>
+                  <div className="ci-icon"📍</div>
                   <div>
                     <div className="ci-lbl">Address</div>
                     <div className="ci-val">{address}<br />{city}</div>
                   </div>
                 </div>
                 <div className="ci">
-                  <div className="ci-icon">📞</div>
+                  <div className="ci-icon"📞</div>
                   <div>
                     <div className="ci-lbl">Phone</div>
                     <div className="ci-val">{phone}</div>
                   </div>
                 </div>
                 <div className="ci">
-                  <div className="ci-icon">✉️</div>
+                  <div className="ci-icon"✉️</div>
                   <div>
                     <div className="ci-lbl">Email</div>
-                    <div className="ci-val">info@{company.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '')}.com</div>
+                    <div className="ci-val">info@{company.toLowerCase().replace(/\\s+/g, '').replace(/[^a-z0-9]/g, '')}.com</div>
                   </div>
                 </div>
-                <a href={`tel:${phone.replace(/\D/g, '')}`} className="cta-btn">
+                <a href={`tel:${phone.replace(/\\D/g, '')}`} className="cta-btn">
                   {tmpl.ctaLabel}
                 </a>
               </div>

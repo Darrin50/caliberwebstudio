@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const projects = [
   {
     slug: 'detroit-cuts',
-    image: 'https://images.unsplash.com/photo-1621605815971-0f9d43e13b8d?w=600&auto=format&fit=crop',
+    image: 'https://images.pexels.com/photos/7447148/pexels-photo-7447148.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     category: 'Barbershop',
     title: 'Detroit Cuts',
     headline: 'From Zero Online Presence to Fully Booked',

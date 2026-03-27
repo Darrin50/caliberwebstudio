@@ -4,7 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Services | Caliber Web Studio',
+  title: { absolute: 'Services | Caliber Web Studio' },
   description: 'AI-powered websites for Detroit small businesses. Starter, Growth, and Domination plans — all with $0 down and no long-term contracts.',
   alternates: { canonical: 'https://caliberwebstudio.com/services' },
 };

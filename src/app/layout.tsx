@@ -334,6 +334,8 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <head>
+        {/* Restore saved theme before first paint — prevents flash of wrong theme */}
+        <script dangerouslySetInnerHTML={{__html: `(function(){try{var t=window['localStorage'].getItem('caliber-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`}} />
         {/* Structured Data */}
         <script
           type="application/ld+json"

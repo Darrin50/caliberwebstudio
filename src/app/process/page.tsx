@@ -5,16 +5,16 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: { absolute: 'Our Process | Caliber Web Studio' },
-  description: 'See exactly how Caliber Web Studio builds your AI-powered website — free mockup first, you approve, then we launch in 24 hours.',
+  description: 'See exactly how Caliber Web Studio builds your AI-powered website â free mockup first, you approve, then we launch in 24 hours.',
   alternates: { canonical: 'https://caliberwebstudio.com/process' },
 };
 
 const steps = [
-  { number: '01', title: 'We Research Your Business', duration: 'Free — No Commitment', desc: "We study your industry, competitors, and local market before touching a pixel. You get a site built for your specific customers, not a recycled template." },
-  { number: '02', title: 'We Build Your Mockup', duration: '48 Hours', desc: "Within 48 hours you'll see a full design of your new site. Real content, real layout, real branding — nothing generic." },
+  { number: '01', title: 'We Research Your Business', duration: 'Free â No Commitment', desc: "We study your industry, competitors, and local market before touching a pixel. You get a site built for your specific customers, not a recycled template." },
+  { number: '02', title: 'We Build Your Mockup', duration: '48 Hours', desc: "Within 48 hours you'll see a full design of your new site. Real content, real layout, real branding â nothing generic." },
   { number: '03', title: 'You Review & Approve', duration: 'Your Call', desc: "Take as much time as you need. Request changes, tweaks, or full redesigns until it's exactly right. No pressure, no rushing." },
   { number: '04', title: 'We Launch in 24 Hours', duration: '24 Hours', desc: "Once you give the go-ahead, your site goes live within 24 hours. Fast, clean, and optimized from day one." },
-  { number: '05', title: "Your Monthly Plan Begins", duration: "After You're Live", desc: "Your 14-day preview period starts at launch. Once you're satisfied, your monthly plan kicks in — no surprises, no hidden fees." },
+  { number: '05', title: "Your Monthly Plan Begins", duration: "After You're Live", desc: "Your 14-day preview period starts at launch. Once you're satisfied, your monthly plan kicks in â no surprises, no hidden fees." },
 ];
 
 const faqs = [
@@ -38,11 +38,11 @@ export default function ProcessPage() {
           <p style={{ fontSize: 'clamp(16px,2vw,20px)', color: 'var(--chrome, #A8B8C8)', maxWidth: '560px', margin: '0 auto' }}>$0 down. Free mockup. Live in days. Here is exactly what happens from first contact to your finished site.</p>
         </section>
 
-        <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(160px,1fr))', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
+        <section className="stats-strip" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(160px,1fr))', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
           {([['$0','Down to start'],['48hrs','Mockup delivered'],['14 days','Preview period'],['$0','Surprise fees']] as [string,string][]).map(([val, label]) => (
             <div key={label} style={{ padding: '40px 32px', textAlign: 'center', borderRight: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
-              <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: '8px' }}>{val}</div>
-              <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)' }}>{label}</div>
+              <div className="stat-val" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: '8px' }}>{val}</div>
+              <div className="stat-label" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)' }}>{label}</div>
             </div>
           ))}
         </section>
@@ -77,7 +77,7 @@ export default function ProcessPage() {
 
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', textAlign: 'center', borderTop: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
           <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: '24px' }}>Ready to Start?</h2>
-          <p style={{ color: 'var(--chrome, #A8B8C8)', fontSize: '18px', maxWidth: '480px', margin: '0 auto 40px' }}>No upfront cost. Just a free mockup of your new site in 48 hours — no commitment required to see what’s possible.</p>
+          <p style={{ color: 'var(--chrome, #A8B8C8)', fontSize: '18px', maxWidth: '480px', margin: '0 auto 40px' }}>No upfront cost. Just a free mockup of your new site in 48 hours â no commitment required to see whatâs possible.</p>
           <Link href="/#contact" style={{ display: 'inline-block', background: 'var(--navy, #1E3D8F)', color: '#fff', fontFamily: 'Space Mono, monospace', fontSize: '13px', letterSpacing: '2px', textTransform: 'uppercase', padding: '18px 40px', textDecoration: 'none' }}>Start a Free Project</Link>
         </section>
 

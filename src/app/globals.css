@@ -220,3 +220,34 @@ input:focus, textarea:focus {
     font-size: 11px;
   }
 }
+
+/* ── Light mode: fix hardcoded #fff text on sub-pages ──────────────────── */
+/* Headings use inline color:#fff throughout sub-pages; !important overrides inline styles */
+[data-theme="light"] main h1,
+[data-theme="light"] main h2,
+[data-theme="light"] main h3 {
+    color: #0e1020 !important;
+}
+
+/* Large stat / price numbers rendered as <div> with inline color:#fff */
+[data-theme="light"] main section div[style*="font-family: Syne"],
+[data-theme="light"] main section div[style*="fontFamily"] {
+    color: var(--white);
+}
+
+/* Pricing page card fixes */
+[data-theme="light"] .pricing-card {
+    background: rgba(30, 61, 143, 0.04) !important;
+    border-color: rgba(30, 61, 143, 0.15) !important;
+}
+[data-theme="light"] .pricing-card:hover {
+    border-color: rgba(30, 61, 143, 0.3) !important;
+}
+[data-theme="light"] .pricing-cta {
+    background: rgba(30, 61, 143, 0.08) !important;
+    color: var(--navy) !important;
+    border-color: rgba(30, 61, 143, 0.2) !important;
+}
+[data-theme="light"] .pricing-cta:hover {
+    background: rgba(30, 61, 143, 0.14) !important;
+}

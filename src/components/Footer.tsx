@@ -157,6 +157,8 @@ export default function Footer() {
           color: 'var(--dim)',
           letterSpacing: '0.05em',
           textAlign: 'right',
+          whiteSpace: 'nowrap',
+          minWidth: 'fit-content',
         }}
       >
         Measure. Design. Rise.

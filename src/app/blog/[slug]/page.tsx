@@ -27,11 +27,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+function extractFirstImage(html: string): { src: string; alt: string } | null {
+  const match = html.match(/<img[^>]+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>/);
+  if (!match) return null;
+  return { src: match[1], alt: match[2] };
+}
+
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
 
+  const heroImage = extractFirstImage(post.content);
   const related = posts.filter((p) => post.relatedSlugs.includes(p.slug)).slice(0, 4);
 
   const articleSchema = {
@@ -59,6 +66,18 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <span style={{ margin: "0 8px" }}>›</span>
             <span style={{ color: "var(--text-primary, #fff)" }}>{post.category}</span>
           </nav>
+
+          {/* Hero Image */}
+          {heroImage && (
+            <div style={{ marginBottom: "40px", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={heroImage.src}
+                alt={heroImage.alt}
+                style={{ width: "100%", height: "auto", maxHeight: "480px", objectFit: "cover", display: "block" }}
+              />
+            </div>
+          )}
 
           {/* Article Header */}
           <header style={{ marginBottom: "40px" }}>

@@ -17,7 +17,6 @@ export default function Nav() {
     const applyTheme = (theme: string) => {
       document.documentElement.setAttribute('data-theme', theme);
       currentTheme = theme;
-    try { window['localStorage'].setItem('caliber-theme', theme); } catch(_e) {}
       const icon = toggle.querySelector('.toggle-icon') as HTMLSpanElement;
       if (icon) {
         icon.textContent = theme === 'dark' ? '\u{1F319}' : '\u{2600}\u{FE0F}';
@@ -30,15 +29,6 @@ export default function Nav() {
       toggle.style.background =
         theme === 'dark' ? 'rgba(168,184,200,0.15)' : 'rgba(30,61,143,0.18)';
     };
-
-    // Restore saved theme on mount — persists preference across page loads
-    try {
-      const saved = window['localStorage'].getItem('caliber-theme');
-      if (saved === 'light' || saved === 'dark') {
-        currentTheme = saved;
-        applyTheme(saved);
-      }
-    } catch(_e) {}
 
     const blackholeSuck = (cx: number, cy: number, cb: () => void) => {
       const overlay = document.createElement('div');
@@ -138,9 +128,10 @@ export default function Nav() {
 
   const navItems = [
     { label: 'Services', href: '/services' },
-    { label: 'Process', href: '/process' },
+    { label: 'Launch Package', href: '/startup-complete' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Work', href: '/work' },
+    { label: 'FAQ', href: '/faq' },
     { label: 'Blog', href: '/blog' },
   ];
 

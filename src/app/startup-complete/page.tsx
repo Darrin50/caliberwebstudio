@@ -5,9 +5,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Startup Complete — Done-For-You Business Launch in 48 Hours',
-  description:
-    "Caliber Web Studio's premium done-for-you package. LLC guidance, website, AI chatbot, brand kit, Google profile, and more — fully operational in 48 hours. Starting at $5,000.",
-  alternates: { canonical: 'https://caliberwebstudio.com/startup-complete' },
+  description: "Caliber Web Studio's premium done-for-you package. LLC guidance, website, AI chatbot, brand kit, Google profile, and more — fully operational in 48 hours. Starting at $5,000.",
+  alternates: {
+    canonical: 'https://caliberwebstudio.com/startup-complete'
+  },
   openGraph: {
     title: 'Startup Complete | Caliber Web Studio',
     description: "We'll turn your idea into a running business in 48 hours. Everything you need — built, deployed, and ready to take customers.",
@@ -22,19 +23,29 @@ const serviceSchema = {
   name: 'Startup Complete',
   alternateName: 'Done-For-You Business Launch Package',
   description: 'A premium done-for-you service that transforms your business idea into a fully operational company in 48 hours. Includes LLC formation guidance, EIN registration, professional domain and business email, full Next.js website (5–7 pages), AI chatbot, Google Business Profile, social media accounts, brand kit, 30 days of scheduled content, email/SMS automation, pitch deck, and one-pager.',
-  provider: { '@id': 'https://caliberwebstudio.com/#organization' },
+  provider: {
+    '@id': 'https://caliberwebstudio.com/#organization'
+  },
   url: 'https://caliberwebstudio.com/startup-complete',
   offers: {
     '@type': 'Offer',
     name: 'Startup Complete Package',
     price: '5000',
     priceCurrency: 'USD',
-    priceSpecification: { '@type': 'UnitPriceSpecification', price: '5000', priceCurrency: 'USD', description: 'One flat fee, no surprises. Starting price.' },
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '5000',
+      priceCurrency: 'USD',
+      description: 'One flat fee, no surprises. Starting price.'
+    },
     availability: 'https://schema.org/InStock',
     url: 'https://caliberwebstudio.com/startup-complete',
   },
   serviceType: 'Business Launch',
-  areaServed: { '@type': 'Country', name: 'United States' },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States'
+  },
 };
 
 const checklistItems = [
@@ -57,13 +68,12 @@ export default function StartupCompletePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Nav />
       <main style={{ paddingTop: '72px', background: 'var(--bg)', minHeight: '100vh' }}>
-
         <section style={{ padding: 'clamp(80px, 12vw, 140px) clamp(20px, 6vw, 80px) clamp(60px, 8vw, 100px)', maxWidth: '1100px', margin: '0 auto', textAlign: 'center', position: 'relative' }}>
           <p className="sec-label fu" style={{ justifyContent: 'center', marginBottom: '28px' }}>Done-For-You Launch Package</p>
-          <h1 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 'clamp(2.2rem, 6vw, 4.5rem)', lineHeight: 1.1, letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--chrome), var(--white), var(--chrome))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '28px' }}>
+          <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 'clamp(2.2rem, 6vw, 4.5rem)', lineHeight: 1.1, letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--chrome), var(--white), var(--chrome))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '28px' }}>
             We&apos;ll Turn Your Idea Into a<br />Running Business in 48 Hours
           </h1>
-          <p className="fu" style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--dim)', maxWidth: '640px', margin: '0 auto 44px', lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--dim)', maxWidth: '640px', margin: '0 auto 44px', lineHeight: 1.7 }}>
             Everything you need to launch — built, deployed, and ready to take customers.
           </p>
           <div className="fu" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -132,7 +142,6 @@ export default function StartupCompletePage() {
           <h2 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)', color: 'var(--white)', marginBottom: '28px', letterSpacing: '-0.02em' }}>Your business is 48 hours away.</h2>
           <Link href="/contact" className="btn-chrome fu">Book Your Launch Call</Link>
         </section>
-
       </main>
       <Footer />
     </>

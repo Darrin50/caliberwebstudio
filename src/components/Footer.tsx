@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -149,19 +150,63 @@ export default function Footer() {
         © 2026 High Caliber Operations LLC · Detroit, MI
       </div>
 
-      {/* Right: Tagline */}
+      {/* Right: Legal links + Tagline */}
       <div
         style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '9px',
-          color: 'var(--dim)',
-          letterSpacing: '0.05em',
-          textAlign: 'right',
-          whiteSpace: 'nowrap',
-          minWidth: 'fit-content',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-end',
+          gap: '6px',
         }}
       >
-        Measure. Design. Rise.
+        <div
+          style={{
+            display: 'flex',
+            gap: '16px',
+          }}
+        >
+          <Link
+            href="/terms"
+            style={{
+              fontFamily: "'Space Mono', monospace",
+              fontSize: '9px',
+              color: 'var(--dim)',
+              letterSpacing: '0.05em',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}
+          >
+            Terms
+          </Link>
+          <Link
+            href="/privacy"
+            style={{
+              fontFamily: "'Space Mono', monospace",
+              fontSize: '9px',
+              color: 'var(--dim)',
+              letterSpacing: '0.05em',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}
+          >
+            Privacy
+          </Link>
+        </div>
+        <div
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '9px',
+            color: 'var(--dim)',
+            letterSpacing: '0.05em',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Measure. Design. Rise.
+        </div>
       </div>
       </div>
     </footer>

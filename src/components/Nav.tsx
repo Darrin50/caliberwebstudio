@@ -175,6 +175,7 @@ export default function Nav() {
     { label: 'Launch Package', href: '/startup-complete' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Work', href: '/work' },
+    { label: 'About', href: '/about' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },

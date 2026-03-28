@@ -251,3 +251,16 @@ input:focus, textarea:focus {
 [data-theme="light"] .pricing-cta:hover {
     background: rgba(30, 61, 143, 0.14) !important;
 }
+
+/* ── Process stats strip: light mode contrast fix ── */
+[data-theme="light"] .stats-strip {
+  background: #f8f9fa;
+}
+[data-theme="light"] .stats-strip .stat-val {
+  color: #0a0a0a !important;
+}
+[data-theme="light"] .stats-strip .stat-label {
+  color: #374151 !important;
+}
+
+Page_Down

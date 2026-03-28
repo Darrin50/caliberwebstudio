@@ -55,13 +55,13 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1676210134190-3f2c0d5434ff76?auto=format&fit=crop&w=1600&q=85',
-    heroAlt: 'Metro Plumbing technician repairing a water heater',
+    heroImg: 'https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=1600&q=85',
+    heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working on pipes under a cabinet' },
-      { url: 'https://images.unsplash.com/photo-1676210134188-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Pipe repair inside a wall — residential job' },
+      { url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80', alt: 'Modern bathroom renovation — clean new fixtures and tile' },
+      { url: 'https://images.unsplash.com/photo-1676210134188-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Plumber tightening drain connections under a sink' },
       { url: 'https://images.unsplash.com/photo-1584265549731-fc0d5434ff76?auto=format&fit=crop&w=800&q=80', alt: 'Faucet and sink repair close-up' },
-      { url: 'https://images.unsplash.com/photo-1620653713380-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Plumber with tools — ready for the job' },
+      { url: 'https://images.unsplash.com/photo-1620653713380-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Water heater pipe fitting — professional repair' },
     ],
     beforeAfter: [
       {
@@ -77,7 +77,7 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1694875119129-d79757ef3780?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
       { num: '4.8★', label: 'Google Rating' },

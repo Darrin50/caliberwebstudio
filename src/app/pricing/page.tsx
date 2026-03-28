@@ -81,6 +81,42 @@ export default function PricingPage() {
               <Link href="/#contact" style={{ padding: "10px 22px", border: "1px solid var(--accent, #0070f3)", color: "var(--accent, #0070f3)", borderRadius: "8px", fontSize: "0.85rem", fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>Add to Plan</Link>
             </div>
           </div>
+
+          {/* Startup Complete — premium one-time offer */}
+          <div style={{ marginTop: "72px" }}>
+            <div style={{ textAlign: "center", marginBottom: "36px" }}>
+              <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#f59e0b", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>One-Time Investment</p>
+              <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "12px", letterSpacing: "-0.01em" }}>Launch Your Entire Business</h2>
+              <p style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>Everything you need to go from idea to fully operational — website, brand, AI systems, and legal setup — delivered in 48 hours.</p>
+            </div>
+            <div className="startup-card">
+              <div className="startup-badge">48-Hour Delivery</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }}>
+                <div>
+                  <p style={{ fontSize: "0.75rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "#f59e0b", marginBottom: "10px", fontFamily: "'Space Mono', monospace" }}>Startup Complete</p>
+                  <span style={{ fontSize: "clamp(2.6rem, 5vw, 3.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", lineHeight: 1, display: "block", marginBottom: "6px" }}>$5,000</span>
+                  <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.45)", marginBottom: "8px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>starting price · one-time</p>
+                  <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", marginBottom: "32px", lineHeight: 1.6 }}>Custom scope up to $15,000 depending on brand complexity and business needs.</p>
+                  <Link href="/#contact" className="startup-cta">Get a Custom Quote</Link>
+                </div>
+                <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
+                  {[
+                    "LLC + EIN filing assistance",
+                    "Full web presence (website + SEO + chatbot + GBP)",
+                    "AI systems setup (chatbot, review automation, content engine)",
+                    "Complete brand kit (logo direction, colors, fonts, social templates)",
+                    "Everything delivered in 48 hours",
+                  ].map((feat) => (
+                    <li key={feat} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.5 }}>
+                      <span style={{ color: "#f59e0b", fontSize: "1rem", lineHeight: 1.5, flexShrink: 0 }}>✓</span>
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div style={{ marginTop: "96px" }}>
             <div style={{ textAlign: "center", marginBottom: "52px" }}>
               <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>FAQ</p>
@@ -114,8 +150,13 @@ export default function PricingPage() {
         .pricing-cta:hover { opacity: 0.85; transform: translateY(-1px); }
         .pricing-cta--popular { background: #0070f3; color: #fff; border-color: transparent; box-shadow: 0 4px 20px rgba(0,112,243,0.4); }
         .addon-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 24px 28px; margin-top: 24px; }
-        @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; } }
-        @media (max-width: 600px) { .addon-card { padding: 20px; } }
+        .startup-card { position: relative; background: linear-gradient(145deg, rgba(245,158,11,0.1) 0%, rgba(245,158,11,0.04) 60%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(245,158,11,0.35); border-radius: 24px; padding: 52px 48px 48px; box-shadow: 0 0 0 1px rgba(245,158,11,0.12), 0 12px 60px rgba(245,158,11,0.12); transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+        .startup-card:hover { border-color: rgba(245,158,11,0.55); box-shadow: 0 0 0 1px rgba(245,158,11,0.2), 0 20px 80px rgba(245,158,11,0.2); }
+        .startup-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, #d97706, #f59e0b); color: #000; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 18px; border-radius: 20px; white-space: nowrap; font-family: 'Space Mono', monospace; box-shadow: 0 4px 20px rgba(245,158,11,0.45); }
+        .startup-cta { display: inline-block; padding: 14px 32px; background: linear-gradient(90deg, #d97706, #f59e0b); color: #000; border-radius: 9px; font-weight: 700; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 24px rgba(245,158,11,0.35); }
+        .startup-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+        @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; } .startup-card { padding: 48px 28px 36px; } .startup-card > div { grid-template-columns: 1fr !important; gap: 32px !important; } }
+        @media (max-width: 600px) { .addon-card { padding: 20px; } .startup-card { padding: 44px 20px 32px; } }
       `}</style>
     </>
   );

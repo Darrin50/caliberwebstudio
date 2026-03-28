@@ -232,7 +232,7 @@ export default function Pricing() {
                         fontWeight: 700,
                       }}
                     >
-                      â
+                      ✓
                     </span>
                     {feature}
                   </li>
@@ -267,7 +267,7 @@ export default function Pricing() {
             letterSpacing: '0.05em',
           }}
         >
-          All plans include free website mockup â¢ $0 down â¢ 12-month service agreement
+          All plans include free website mockup • $0 down • 12-month service agreement
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ export default function Work() {
     {
       category: 'HVAC',
       title: 'Detroit HVAC Company',
-      result: 'Page 3 â Page 1 in 6 weeks',
+      result: 'Page 3 → Page 1 in 6 weeks',
       description: 'Full AI website, chatbot, GBP optimization, and review automation. Went from 12 Google reviews to 200+ in 90 days.',
       metrics: [
         { value: '200+', label: 'Reviews' },
@@ -247,7 +247,7 @@ export default function Work() {
               display: 'inline-block',
             }}
           >
-            Get Results Like These â
+            Get Results Like These →
           </a>
         </div>
       </div>

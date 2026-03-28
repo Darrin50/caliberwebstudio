@@ -255,7 +255,7 @@ export default function FloatingElements() {
         el.offsetY = my - el.y;
         el.opacity = Math.min(el.opacity + 0.15, 0.6);
         activeRef.current = el;
-        canvas.style.cursor = 'grabbing';
+        document.body.style.cursor = 'grabbing';
         e.preventDefault();
       }
     };
@@ -274,7 +274,7 @@ export default function FloatingElements() {
         const mx = e.clientX - rect.left;
         const my = e.clientY - rect.top + window.scrollY;
         const hovered = hitTest(mx, my);
-        canvas.style.cursor = hovered ? 'grab' : '';
+        document.body.style.cursor = hovered ? 'grab' : '';
       }
     };
 
@@ -283,7 +283,7 @@ export default function FloatingElements() {
         activeRef.current.dragging = false;
         activeRef.current.opacity = Math.max(activeRef.current.opacity - 0.1, 0.2);
         activeRef.current = null;
-        canvas.style.cursor = '';
+        document.body.style.cursor = '';
       }
     };
 
@@ -324,10 +324,10 @@ export default function FloatingElements() {
       }
     };
 
-    canvas.addEventListener('mousedown', onMouseDown);
+    window.addEventListener('mousedown', onMouseDown);
     window.addEventListener('mousemove', onMouseMove);
     window.addEventListener('mouseup', onMouseUp);
-    canvas.addEventListener('touchstart', onTouchStart, { passive: false });
+    window.addEventListener('touchstart', onTouchStart, { passive: false });
     window.addEventListener('touchmove', onTouchMove, { passive: false });
     window.addEventListener('touchend', onTouchEnd);
 
@@ -352,10 +352,10 @@ export default function FloatingElements() {
     return () => {
       cancelAnimationFrame(animRef.current);
       clearInterval(resizeInterval);
-      canvas.removeEventListener('mousedown', onMouseDown);
+      window.removeEventListener('mousedown', onMouseDown);
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseup', onMouseUp);
-      canvas.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchstart', onTouchStart);
       window.removeEventListener('touchmove', onTouchMove);
       window.removeEventListener('touchend', onTouchEnd);
     };
@@ -370,7 +370,7 @@ export default function FloatingElements() {
         left: 0,
         width: '100%',
         zIndex: 5,
-        pointerEvents: 'auto',
+        pointerEvents: 'none',
       }}
     />
   );

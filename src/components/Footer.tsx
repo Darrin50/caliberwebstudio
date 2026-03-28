@@ -38,7 +38,7 @@ export default function Footer() {
         }}
       >
         <a
-          href="#"
+          href="https://www.linkedin.com/company/caliber-web-studio"
           style={{
             color: 'var(--dim)',
             transition: 'color 0.2s ease',
@@ -60,7 +60,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="#"
+          href="https://twitter.com/caliberwebstudio"
           style={{
             color: 'var(--dim)',
             transition: 'color 0.2s ease',
@@ -80,7 +80,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="#"
+          href="https://www.instagram.com/caliberwebstudio"
           style={{
             color: 'var(--dim)',
             transition: 'color 0.2s ease',
@@ -146,7 +146,7 @@ export default function Footer() {
           flex: 1,
         }}
       >
-        Â© 2026 High Caliber Operations LLC Â· Detroit, MI
+        © 2026 High Caliber Operations LLC · Detroit, MI
       </div>
 
       {/* Right: Tagline */}
@@ -157,6 +157,8 @@ export default function Footer() {
           color: 'var(--dim)',
           letterSpacing: '0.05em',
           textAlign: 'right',
+          whiteSpace: 'nowrap',
+          minWidth: 'fit-content',
         }}
       >
         Measure. Design. Rise.

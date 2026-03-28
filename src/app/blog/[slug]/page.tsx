@@ -27,11 +27,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+function extractFirstImage(html: string): { src: string; alt: string } | null {
+  const match = html.match(/<img[^>]+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>/);
+  if (!match) return null;
+  return { src: match[1], alt: match[2] };
+}
+
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
 
+  const heroImage = extractFirstImage(post.content);
   const related = posts.filter((p) => post.relatedSlugs.includes(p.slug)).slice(0, 4);
 
   const articleSchema = {
@@ -49,16 +56,28 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Nav />
-      <main style={{ minHeight: "100vh", paddingTop: "80px", paddingBottom: "80px" }}>
-        <div style={{ maxWidth: "760px", margin: "0 auto", padding: "0 24px" }}>
+      <main style={{ minHeight: "100vh", paddingTop: "clamp(60px, 8vw, 80px)", paddingBottom: "clamp(60px, 8vw, 80px)" }}>
+        <div style={{ maxWidth: "760px", margin: "0 auto", padding: "0 clamp(16px, 6vw, 24px)" }}>
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" style={{ marginBottom: "32px", fontSize: "0.875rem", color: "var(--text-secondary, rgba(255,255,255,0.55))" }}>
-            <Link href="/" style={{ color: "var(--text-secondary, rgba(255,255,255,0.55))", textDecoration: "none" }}>Home</Link>
+          <nav aria-label="Breadcrumb" style={{ marginBottom: "32px", fontSize: "0.875rem", color: "var(--text-secondary, rgba(255,255,255,0.7))" }}>
+            <Link href="/" style={{ color: "var(--text-secondary, rgba(255,255,255,0.7))", textDecoration: "none" }}>Home</Link>
             <span style={{ margin: "0 8px" }}>›</span>
-            <Link href="/blog" style={{ color: "var(--text-secondary, rgba(255,255,255,0.55))", textDecoration: "none" }}>Blog</Link>
+            <Link href="/blog" style={{ color: "var(--text-secondary, rgba(255,255,255,0.7))", textDecoration: "none" }}>Blog</Link>
             <span style={{ margin: "0 8px" }}>›</span>
             <span style={{ color: "var(--text-primary, #fff)" }}>{post.category}</span>
           </nav>
+
+          {/* Hero Image */}
+          {heroImage && (
+            <div style={{ marginBottom: "40px", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={heroImage.src}
+                alt={heroImage.alt}
+                style={{ width: "100%", height: "auto", maxHeight: "480px", objectFit: "cover", display: "block" }}
+              />
+            </div>
+          )}
 
           {/* Article Header */}
           <header style={{ marginBottom: "40px" }}>
@@ -90,10 +109,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             dangerouslySetInnerHTML={{ __html: post.content
               .replace(/<h2>/g, '<h2 style="font-size:clamp(1.2rem,3vw,1.5rem);font-weight:700;color:var(--text-primary,#fff);margin:2em 0 0.75em;line-height:1.3">')
               .replace(/<h3>/g, '<h3 style="font-size:clamp(1rem,2.5vw,1.2rem);font-weight:700;color:var(--text-primary,#fff);margin:1.5em 0 0.5em">')
-              .replace(/<p>/g, '<p style="margin:0 0 1.25em;font-size:clamp(0.95rem,2vw,1.05rem);line-height:1.8">')
+              .replace(/<p>/g, '<p style="margin:0 0 1.25em;font-size:clamp(1rem,2vw,1.075rem);line-height:1.8">')
               .replace(/<ul>/g, '<ul style="margin:0 0 1.25em;padding-left:1.5em">')
               .replace(/<ol>/g, '<ol style="margin:0 0 1.25em;padding-left:1.5em">')
-              .replace(/<li>/g, '<li style="margin-bottom:0.5em;font-size:clamp(0.95rem,2vw,1.05rem)">')
+              .replace(/<li>/g, '<li style="margin-bottom:0.5em;font-size:clamp(1rem,2vw,1.075rem)">')
               .replace(/<a /g, '<a style="color:var(--accent,#00d4ff);text-decoration:underline;text-underline-offset:3px" ')
               .replace(/<strong>/g, '<strong style="color:var(--text-primary,#fff);font-weight:700">')
             }}

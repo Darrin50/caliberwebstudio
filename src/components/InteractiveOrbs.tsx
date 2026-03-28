@@ -59,7 +59,7 @@ export default function InteractiveOrbs() {
         const orbsForSection = ORB_CONFIGS.filter((o) => o.sectionId === sectionId);
         if (orbsForSection.length === 0) return;
 
-        // Create canvas overlay â touch-action allows scrolling on mobile
+        // Create canvas overlay — touch-action allows scrolling on mobile
         const canvas = document.createElement('canvas');
         canvas.style.position = 'absolute';
         canvas.style.top = '0';
@@ -170,7 +170,7 @@ export default function InteractiveOrbs() {
             grMesh.rotation.x = Math.PI * 0.4;
             group.add(grMesh);
           } else {
-            // Crystal â icosahedron
+            // Crystal — icosahedron
             const cGeo = new THREE.IcosahedronGeometry(cfg.size, 0);
             const cMat = new THREE.MeshBasicMaterial({
               color: cfg.color, wireframe: true, transparent: true, opacity: 0.3,
@@ -208,7 +208,7 @@ export default function InteractiveOrbs() {
           });
         });
 
-        // ââ Drag interaction with click-through ââ
+        // ── Drag interaction with click-through ──
         let isDragging = false;
         let dragOrbIndex = -1;
         let prevX = 0;
@@ -226,7 +226,7 @@ export default function InteractiveOrbs() {
           const hits = raycaster.intersectObjects(interactables, false);
 
           if (hits.length > 0) {
-            // Hit an orb â start drag-to-spin
+            // Hit an orb — start drag-to-spin
             const hitObj = hits[0].object;
             const orbIdx = interactables.indexOf(hitObj);
             if (orbIdx >= 0) {
@@ -238,7 +238,7 @@ export default function InteractiveOrbs() {
               e.stopPropagation();
             }
           } else {
-            // Missed all orbs â let click pass through to content below
+            // Missed all orbs — let click pass through to content below
             canvas.style.pointerEvents = 'none';
             const below = document.elementFromPoint(e.clientX, e.clientY);
             canvas.style.pointerEvents = 'auto';
@@ -254,7 +254,7 @@ export default function InteractiveOrbs() {
             const dy = e.clientY - prevY;
             const orb = orbs[dragOrbIndex];
 
-            // All types now spin/rotate on drag â store velocity for inertia
+            // All types now spin/rotate on drag — store velocity for inertia
             orb.rotVelY = dx * 0.007;
             orb.rotVelX = dy * 0.007;
             orb.group.rotation.y += orb.rotVelY;
@@ -281,7 +281,7 @@ export default function InteractiveOrbs() {
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('pointerup', onPointerUp);
 
-        // Visibility observer â only render when section is in view
+        // Visibility observer — only render when section is in view
         let isVisible = false;
         const observer = new IntersectionObserver(
           (entries) => {
@@ -291,7 +291,7 @@ export default function InteractiveOrbs() {
         );
         observer.observe(sectionEl);
 
-        // Animation â auto-rotate, float, inertia decay
+        // Animation — auto-rotate, float, inertia decay
         let frame = 0;
 
         const animate = () => {
@@ -311,7 +311,7 @@ export default function InteractiveOrbs() {
             const isThisDragged = isDragging && dragOrbIndex === i;
 
             if (!isThisDragged) {
-              // Rotation inertia decay â keep spinning with momentum after release
+              // Rotation inertia decay — keep spinning with momentum after release
               orb.rotVelX *= 0.94;
               orb.rotVelY *= 0.94;
               orb.group.rotation.y += orb.rotVelY;

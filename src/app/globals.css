@@ -2,51 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --navy:   #1E3D8F;
-  --navy2:  #162d6a;
+  --navy:  #1E3D8F;
+  --navy2: #162d6a;
   --chrome: #A8B8C8;
-  --bg:     #0e0e0e;
-  --bg2:    #141414;
-  --bg3:    #181818;
+  --bg: #0e0e0e;
+  --bg2: #141414;
+  --bg3: #181818;
   --silver: #D0D8E0;
-  --white:  #F4F6F8;
-  --dim:    rgba(208,216,224,0.45);
+  --white: #F4F6F8;
+  --dim: rgba(208,216,224,0.45);
   --border: rgba(168,184,200,0.1);
   /* Blog / content page tokens (dark mode) */
-  --text-primary:   #ffffff;
+  --text-primary: #ffffff;
   --text-secondary: rgba(255,255,255,0.75);
-  --accent:         #00d4ff;
-  --card-bg:        rgba(255,255,255,0.04);
-  --border-color:   rgba(255,255,255,0.08);
+  --accent: #00d4ff;
+  --card-bg: rgba(255,255,255,0.04);
+  --border-color: rgba(255,255,255,0.08);
 }
 
 [data-theme="light"] {
-  --navy:   #1E3D8F;
-  --navy2:  #2a52b0;
+  --navy: #1E3D8F;
+  --navy2: #2a52b0;
   --chrome: #5a6a7a;
-  --bg:     #F6F7FB;
-  --bg2:    #ECEEF4;
-  --bg3:    #E4E7F0;
+  --bg: #F6F7FB;
+  --bg2: #ECEEF4;
+  --bg3: #E4E7F0;
   --silver: #2a2d40;
-  --white:  #0e1020;
-  --dim:    rgba(20,20,40,0.55);
+  --white: #0e1020;
+  --dim: rgba(20,20,40,0.55);
   --border: rgba(30,61,143,0.1);
   /* Blog / content page tokens (light mode) */
-  --text-primary:   #0e1020;
+  --text-primary: #0e1020;
   --text-secondary: rgba(14,16,32,0.72);
-  --accent:         #0077aa;
-  --card-bg:        rgba(0,0,0,0.04);
-  --border-color:   rgba(30,61,143,0.1);
+  --accent: #0077aa;
+  --card-bg: rgba(0,0,0,0.04);
+  --border-color: rgba(30,61,143,0.1);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* ensure base size for mobile readability */
+}
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--silver);
+  line-height: 1.65; /* mobile readability */
   overflow-x: hidden;
   transition: background 0.4s ease, color 0.4s ease;
 }
@@ -87,10 +91,10 @@ body {
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @keyframes shine { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 @keyframes meteor-fall {
-  0%   { opacity: 0; top: -20%; }
-  5%   { opacity: 1; }
-  80%  { opacity: 0.6; }
-  100% { opacity: 0; top: 110%; }
+  0%    { opacity: 0; top: -20%; }
+  5%    { opacity: 1; }
+  80%   { opacity: 0.6; }
+  100%  { opacity: 0; top: 110%; }
 }
 @keyframes sun-rise {
   0%   { transform: translateY(0) scale(1); opacity: 0; }
@@ -155,7 +159,8 @@ body {
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--dim); padding: 16px 36px;
   border: 1px solid rgba(168,184,200,0.2); cursor: none;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  text-decoration: none; display: inline-flex;
+  align-items: center; gap: 8px;
   transition: color 0.2s, transform 0.15s ease-out;
 }
 .btn-line:hover { color: var(--silver); }
@@ -178,24 +183,71 @@ body {
 [data-theme="light"] #sound-toggle { border-color: rgba(30,61,143,0.15); }
 
 /* Premium hover glow for cards */
-.svc-card:hover, .case-card:hover {
-  box-shadow: 0 12px 40px rgba(30,61,143,0.12);
-}
+.svc-card:hover, .case-card:hover { box-shadow: 0 12px 40px rgba(30,61,143,0.12); }
 
 /* Smooth gradient accent line */
-.accent-line {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--navy), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.svc-card:hover .accent-line,
-.case-card:hover .accent-line {
-  opacity: 1;
-}
+.accent-line { height: 2px; background: linear-gradient(90deg, transparent, var(--navy), transparent); opacity: 0; transition: opacity 0.3s ease; }
+.svc-card:hover .accent-line, .case-card:hover .accent-line { opacity: 1; }
 
 /* Form input focus enhancement */
-input:focus, textarea:focus {
-  border-left: 2px solid var(--navy) !important;
-  padding-left: 12px !important;
+input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; padding-left: 12px !important; }
+
+/* ── Mobile typography ── */
+@media (max-width: 640px) {
+  body { font-size: 16px; line-height: 1.7; }
+  .btn-chrome, .btn-line { font-size: 13px; letter-spacing: 0.08em; padding: 14px 28px; }
+  .sec-label { font-size: 11px; }
+}
+
+/* ── Light mode: fix hardcoded #fff text on sub-pages ──────────────────── */
+/* Headings use inline color:#fff throughout sub-pages; !important overrides inline styles */
+[data-theme="light"] main h1,
+[data-theme="light"] main h2,
+[data-theme="light"] main h3 {
+  color: #0e1020 !important;
+}
+
+/* Large stat / price numbers rendered as <div> with inline color:#fff */
+[data-theme="light"] main section div[style*="font-family: Syne"],
+[data-theme="light"] main section div[style*="fontFamily"] {
+  color: var(--white);
+}
+
+/* Hero H1 light mode contrast fix */
+[data-theme="light"] h1 {
+  color: #0a0a0a !important;
+}
+
+[data-theme="light"] h1 div {
+  color: #0a0a0a !important;
+  -webkit-text-fill-color: #0a0a0a !important;
+  background: none !important;
+}
+
+/* Pricing page card fixes */
+[data-theme="light"] .pricing-card {
+  background: rgba(30, 61, 143, 0.04) !important;
+  border-color: rgba(30, 61, 143, 0.15) !important;
+}
+[data-theme="light"] .pricing-card:hover {
+  border-color: rgba(30, 61, 143, 0.3) !important;
+}
+[data-theme="light"] .pricing-cta {
+  background: rgba(30, 61, 143, 0.08) !important;
+  color: var(--navy) !important;
+  border-color: rgba(30, 61, 143, 0.2) !important;
+}
+[data-theme="light"] .pricing-cta:hover {
+  background: rgba(30, 61, 143, 0.14) !important;
+}
+
+/* ── Process stats strip: light mode contrast fix ── */
+[data-theme="light"] .stats-strip {
+  background: #f8f9fa;
+}
+[data-theme="light"] .stats-strip .stat-val {
+  color: #0a0a0a !important;
+}
+[data-theme="light"] .stats-strip .stat-label {
+  color: #374151 !important;
 }

@@ -23,22 +23,22 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: '/demo/barber/hero.png',
+    heroImg: 'https://images.pexels.com/photos/7447148/pexels-photo-7447148.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
     heroAlt: 'Master barber with Detroit Tigers cap giving a fresh cut at Detroit Cuts Barbershop',
     gallery: [
-      { url: '/demo/barber/fade-closeup.png', alt: 'Clean taper fade close-up — precision lineup' },
-      { url: '/demo/barber/waves.png', alt: 'Fresh 360 waves with skin fade — Detroit style' },
-      { url: '/demo/barber/exterior.png', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
-      { url: '/demo/barber/two-barbers.png', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
-      { url: '/demo/barber/kids-cut.png', alt: "Kid's cut — young king leaving the chair fresh" },
-      { url: '/demo/barber/interior.png', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
+      { url: 'https://images.pexels.com/photos/7697316/pexels-photo-7697316.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Clean taper fade close-up — precision lineup' },
+      { url: 'https://images.pexels.com/photos/7697390/pexels-photo-7697390.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: 'https://images.pexels.com/photos/7697283/pexels-photo-7697283.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
+      { url: 'https://images.pexels.com/photos/7697642/pexels-photo-7697642.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: 'https://images.pexels.com/photos/7697639/pexels-photo-7697639.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: "Kid's cut — young king leaving the chair fresh" },
+      { url: 'https://images.pexels.com/photos/7697445/pexels-photo-7697445.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1585747860019-024db4655bfb?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.pexels.com/photos/7447136/pexels-photo-7447136.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -94,21 +94,21 @@ const DEMO_DATA: Record<string, {
   },
 
   'luxe-salon': {
-    heroImg: '/demo/salon/hero-ponytail.png',
+    heroImg: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80',
     heroAlt: 'Sleek ponytail with laid baby hairs — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: '/demo/salon/fulani-braids.png', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
-      { url: '/demo/salon/pixie-cut.png', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
-      { url: '/demo/salon/silk-press.png', alt: 'Bone-straight silk press — long, sleek, damage-free' },
-      { url: '/demo/salon/twist-braids.png', alt: 'Passion twists with ombre — protective style goals' },
-      { url: 'https://images.unsplash.com/photo-1633257245586-9addcf688fbe?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural curls — volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-1522337360826-9a37efa4e4fc?auto=format&fit=crop&w=800&q=80', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
+      { url: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
+      { url: 'https://images.unsplash.com/photo-1562322140-8baeadadec4d?auto=format&fit=crop&w=800&q=80', alt: 'Bone-straight silk press — long, sleek, damage-free' },
+      { url: 'https://images.unsplash.com/photo-1590037094905-e0e3b5d08bdc?auto=format&fit=crop&w=800&q=80', alt: 'Passion twists with ombre — protective style goals' },
+      { url: 'https://images.unsplash.com/photo-1522337360826-9a37efa4e4fc?auto=format&fit=crop&w=1200&q=85', alt: 'Beautiful natural curls — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1611042553365-9b101441c135?auto=format&fit=crop&w=800&q=80',
+    aboutImg: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=85',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -122,6 +122,34 @@ const DEMO_DATA: Record<string, {
       text: '#FAF4EE', muted: '#9a8a8f', light: '#E0CAC0',
       radius: '8px',
     },
+  },
+  'detroits-kitchen': {
+    heroImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+    heroAlt: "Detroit's Kitchen soul food restaurant in Detroit MI",
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80', alt: 'Soul food spread' },
+      { url: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80', alt: 'Home-cooked meal' },
+      { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', alt: 'Restaurant dining room' },
+    ],
+    aboutImg: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+    theme: {
+      bg: '#1a0a0a', bg2: '#2a1408', bg3: '#3d2010',
+      accent: '#D4A017', accent2: '#B8860B',
+      text: '#f5f0e8', muted: '#c9bfad', light: '#fff8ec',
+      radius: '8px',
+    },
+    announceBar: 'Now Open Sundays 12–7pm — Dine In & Takeout Available',
+    stats: [
+      { num: '22+', label: 'Years Serving Detroit' },
+      { num: '40+', label: 'Menu Items' },
+      { num: '2,000+', label: 'Happy Guests/Month' },
+    ],
+    reviews: [
+      { name: 'Marcus T.', stars: 5, text: 'Best soul food in Detroit, period. The smothered chicken is unbelievable.' },
+      { name: 'Denise W.', stars: 5, text: 'Feels like grandma’s kitchen. Warm, welcoming, and absolutely delicious.' },
+      { name: 'James R.', stars: 5, text: 'I drive 45 minutes just for their sweet potato pie. Worth every mile.' },
+    ],
+    ctaLabel: 'Get Your Restaurant Online',
   },
 };
 
@@ -167,6 +195,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
   const isBarber = config.slug === 'detroit-cuts';
   const isPlumbing = config.slug === 'metro-plumbing';
   const isSalon = config.slug === 'luxe-salon';
+  const isRestaurant = config.slug === 'detroits-kitchen';
 
   const css = `
     .dw *, .dw *::before, .dw *::after { box-sizing: border-box; }
@@ -326,6 +355,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
               {isBarber && (<>Fresh Cuts.<br /><span>Sharp Fades.</span><br />No Waiting.</>)}
               {isPlumbing && (<>Detroit&apos;s<br /><span>Trusted</span><br />Plumber.</>)}
               {isSalon && (<>Your Hair.<br />Your Crown.<br /><span>Protected.</span></>)}
+            {isRestaurant && (<>Detroit&apos;s<br /><span>Soul Food.</span><br />Made Fresh.</>)}
             </h1>
             <p className="hero-sub">{config.tagline}</p>
             <div className="hero-btns">
@@ -441,6 +471,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                   {isPlumbing && 'Every technician is Michigan-licensed, background checked, and trained in the latest techniques. When we give you a price, that\'s the price. No hidden fees.'}
                   {isSalon && 'Detroit is home. Our clients are our community. Every appointment is a chance to make someone feel like the royalty they are.'}
                 </p>
+          {isRestaurant && <p className="about-para">Detroit's Kitchen has been serving the community since day one — real comfort food, made from scratch, with love. We believe everyone deserves a hot meal that feels like home.</p>}
                 <div className="stats">
                   {data.stats.map(s => (
                     <div key={s.label}>
@@ -547,3 +578,5 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
     </>
   );
 }
+
+

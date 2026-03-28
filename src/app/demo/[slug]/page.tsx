@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!config) return { title: 'Demo Not Found' };
 
   return {
-    title: `${config.businessName} â ${config.businessType} in ${config.city.split(',')[0]}`,
+    title: `${config.businessName} — ${config.businessType} in ${config.city.split(',')[0]}`,
     description: config.about,
     robots: { index: false, follow: false }, // Don't index demo pages
   };

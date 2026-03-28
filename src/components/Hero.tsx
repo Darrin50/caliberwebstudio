@@ -1,5 +1,4 @@
 'use client';
-
 export default function Hero({ children }: { children?: React.ReactNode }) {
   return (
     <section
@@ -18,16 +17,26 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         textAlign: 'center',
       }}
     >
-      {/* 3D canvas renders here via children â stays at z-index 1 */}
+      {/* 3D canvas renders here via children — stays at z-index 1 */}
       {children}
-      {/* All text content â always in front of canvas */}
-      <div style={{ position: 'relative', zIndex: 10, maxWidth: '900px', width: '100%', pointerEvents: 'none', userSelect: 'none' }}>
+
+      {/* All text content — always in front of canvas */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          maxWidth: '900px',
+          width: '100%',
+          pointerEvents: 'none',
+          userSelect: 'none',
+        }}
+      >
         {/* Hero Label */}
         <div className="sec-label fu" style={{ justifyContent: 'center' }}>
-          Detroit's Premier AI Web Agency
+          Detroit&apos;s Premier AI Web Agency
         </div>
 
-        {/* Main Heading */}
+        {/* Main Heading — FIX 2: explicit white color + z-index so always visible on load */}
         <h1
           style={{
             fontFamily: "'Syne', sans-serif",
@@ -35,11 +44,13 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             fontWeight: 800,
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
-            color: 'var(--silver)',
+            color: '#ffffff',
             margin: '32px 0 0',
+            position: 'relative',
+            zIndex: 10,
           }}
         >
-          <div className="fu">Architects of</div>
+          <div className="fu" style={{ color: '#ffffff' }}>Architects of</div>
           <div
             className="fu"
             style={{
@@ -70,10 +81,11 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             marginRight: 'auto',
           }}
         >
-          We build high-performance websites that rank, convert, and grow your business. $0 down to start â lock in a 12-month growth plan.
+          We build high-performance websites that rank, convert, and grow your
+          business. $0 down to start — lock in a 12-month growth plan.
         </p>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons — FIX 3: primary CTA now links to /contact page */}
         <div
           className="fu"
           style={{
@@ -85,7 +97,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
           }}
         >
           <a
-            href="#contact"
+            href="/contact"
             className="btn-chrome"
             style={{
               textDecoration: 'none',
@@ -93,7 +105,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
               pointerEvents: 'auto',
             }}
           >
-            Book a Free Audit
+            Get Your Free Site Audit →
           </a>
           <a
             href="#work"

@@ -48,6 +48,7 @@ export default function BlogIndex() {
           {/* Posts Grid */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 340px), 1fr))", gap: "28px" }}>
             {posts.map((post) => (
+              <Link href={`/blog/${post.slug}`} style={{textDecoration:'none',color:'inherit',display:'block'}}>
               <article
                 key={post.slug}
                 style={{
@@ -82,13 +83,13 @@ export default function BlogIndex() {
                   {post.description}
                 </p>
 
-                <Link
-                  href={`/blog/${post.slug}`}
+                <span
                   style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "0.875rem", fontWeight: 600, color: "var(--accent, #00d4ff)", textDecoration: "none", marginTop: "4px" }}
                 >
                   Read article <span aria-hidden="true">→</span>
-                </Link>
+                </span>
               </article>
+              </Link>
             ))}
           </div>
 
@@ -115,3 +116,4 @@ export default function BlogIndex() {
     </>
   );
 }
+

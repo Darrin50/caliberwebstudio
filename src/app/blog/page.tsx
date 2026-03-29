@@ -67,11 +67,11 @@ export default function BlogIndex() {
                 }}
               >
                 {(() => {
-                  const thumb = extractFirstImage(post.content);
+                  const thumb = post.thumbnail ?? extractFirstImage(post.content);
                   return thumb ? (
                     <div style={{ width: "100%", height: "180px", overflow: "hidden", flexShrink: 0 }}>
                       <img
-                        src={`${thumb.split('?')[0]}?w=600&auto=format&fit=crop&q=70`}
+                        src={thumb.startsWith('/') ? thumb : `${thumb.split('?')[0]}?w=600&auto=format&fit=crop&q=70`}
                         alt={post.title}
                         loading="lazy"
                         className="blog-thumb-img"

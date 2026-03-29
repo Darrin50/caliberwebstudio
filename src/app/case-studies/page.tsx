@@ -129,24 +129,12 @@ export default function CaseStudiesPage() {
                 href={`/case-studies/${cs.slug}`}
                 style={{ textDecoration: 'none', display: 'block' }}
               >
-                <article style={{
+                <article className="cs-card" style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid var(--border)',
                   borderRadius: '12px',
                   overflow: 'hidden',
-                  transition: 'transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease',
-                }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.transform = 'translateY(-6px)';
-                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(168,184,200,0.25)';
-                    (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 60px rgba(0,0,0,0.4)';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)';
-                    (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-                  }}
-                >
+                }}>
                   {/* Card Image */}
                   <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden' }}>
                     <img
@@ -316,6 +304,14 @@ export default function CaseStudiesPage() {
         <style>{`
           @media (max-width: 1100px) {
             .cs-card-grid { grid-template-columns: 1fr !important; }
+          }
+          .cs-card {
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+          }
+          .cs-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(168,184,200,0.25) !important;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
           }
         `}</style>
 

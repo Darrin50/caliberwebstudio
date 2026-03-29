@@ -36,11 +36,9 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Barbershop',
     tagline: 'From zero online presence to fully booked — 24/7.',
     accentColor: '#C9A84C',
-    heroImg:
-      'https://images.pexels.com/photos/7447148/pexels-photo-7447148.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop',
-    heroAlt: 'Master barber giving a fresh cut at Detroit Cuts Barbershop',
-    cardImg:
-      'https://images.pexels.com/photos/7447148/pexels-photo-7447148.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    heroImg: '/demo/barber/hero.png',
+    heroAlt: 'Black barber giving a fresh fade at Detroit Cuts Barbershop',
+    cardImg: '/demo/barber/hero.png',
     keyMetric: '40%',
     keyMetricLabel: 'Appointments Booked Online',
     cardDesc:
@@ -97,11 +95,9 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Plumbing / Home Services',
     tagline: 'Emergency calls answered at 2am — by a website.',
     accentColor: '#E8631A',
-    heroImg:
-      'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1600&q=85',
+    heroImg: '/demo/plumbing/hero.png',
     heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
-    cardImg:
-      'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop',
+    cardImg: '/demo/plumbing/hero.png',
     keyMetric: '60%',
     keyMetricLabel: 'Increase in Emergency Calls',
     cardDesc:

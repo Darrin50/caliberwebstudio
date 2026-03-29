@@ -23,22 +23,22 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: 'https://images.pexels.com/photos/7447148/pexels-photo-7447148.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
-    heroAlt: 'Master barber with Detroit Tigers cap giving a fresh cut at Detroit Cuts Barbershop',
+    heroImg: '/demo/barber/hero.png',
+    heroAlt: 'Black barber giving a fresh fade to a client at Detroit Cuts Barbershop',
     gallery: [
-      { url: 'https://images.pexels.com/photos/7697316/pexels-photo-7697316.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Clean taper fade close-up — precision lineup' },
-      { url: 'https://images.pexels.com/photos/7697390/pexels-photo-7697390.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Fresh 360 waves with skin fade — Detroit style' },
-      { url: 'https://images.pexels.com/photos/7697283/pexels-photo-7697283.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Detroit Cuts Barbershop storefront — Cuts, Fades, Shaves' },
-      { url: 'https://images.pexels.com/photos/7697642/pexels-photo-7697642.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
-      { url: 'https://images.pexels.com/photos/7697639/pexels-photo-7697639.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: "Kid's cut — young king leaving the chair fresh" },
-      { url: 'https://images.pexels.com/photos/7697445/pexels-photo-7697445.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', alt: 'Classic barbershop interior — leather chairs and neon Open sign' },
+      { url: '/demo/barber/fade-closeup.png', alt: 'Clean taper fade close-up — precision lineup' },
+      { url: '/demo/barber/waves.png', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: '/demo/barber/interior.png', alt: 'Detroit Cuts Barbershop interior — leather chairs and neon Open sign' },
+      { url: '/demo/barber/two-barbers.png', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: '/demo/barber/about.png', alt: 'Detroit Cuts owner — proud to serve the community' },
+      { url: '/demo/barber/hero.png', alt: 'Fresh cut in progress — Detroit Cuts signature fade' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: 'https://images.pexels.com/photos/7447136/pexels-photo-7447136.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+    aboutImg: '/demo/barber/about.png',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -55,13 +55,13 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1600&q=85',
+    heroImg: '/demo/plumbing/hero.png',
     heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80', alt: 'Modern bathroom renovation — clean new fixtures and tile' },
-      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80', alt: 'Plumber tightening drain connections under a sink' },
-      { url: 'https://images.unsplash.com/photo-1584265549731-fc0d5434ff76?auto=format&fit=crop&w=800&q=80', alt: 'Faucet and sink repair close-up' },
-      { url: 'https://images.unsplash.com/photo-1620653713380-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Water heater pipe fitting — professional repair' },
+      { url: '/demo/plumbing/pipes.png', alt: 'Copper pipe connection — professional plumbing work' },
+      { url: '/demo/plumbing/water-heater.png', alt: 'Water heater installation in progress' },
+      { url: '/demo/plumbing/about.png', alt: 'Metro Plumbing van — on the way to your home' },
+      { url: '/demo/plumbing/hero.png', alt: 'Plumber working under kitchen sink — same-day service' },
     ],
     beforeAfter: [
       {
@@ -77,7 +77,7 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80',
+    aboutImg: '/demo/plumbing/about.png',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
       { num: '4.8★', label: 'Google Rating' },

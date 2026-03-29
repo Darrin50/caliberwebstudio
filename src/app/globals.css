@@ -87,6 +87,11 @@ body {
   #cursor-dot, #cursor-outer { display: none !important; }
 }
 
+/* Restore default cursor on content pages (blog, legal, about) */
+/* ClientEffects hides the custom cursor elements on these pages */
+body.content-page, body.content-page * { cursor: auto !important; }
+body.content-page a, body.content-page button { cursor: pointer !important; }
+
 /* Animations */
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @keyframes shine { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }

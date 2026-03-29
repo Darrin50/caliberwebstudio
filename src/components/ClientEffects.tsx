@@ -3,10 +3,14 @@ import { useEffect } from 'react';
 
 export default function ClientEffects() {
   useEffect(() => {
-    // ── BLOG PAGES: skip all ambient visual effects ──
-    // Blog pages get a clean, distraction-free reading layout
-    const isBlog = window.location.pathname.startsWith('/blog');
-    if (isBlog) {
+    // ── CONTENT PAGES: skip all ambient visual effects ──
+    // Blog, legal, and about pages get a clean, distraction-free layout
+    const path = window.location.pathname;
+    const isContentPage = path.startsWith('/blog') || path === '/terms' || path === '/privacy' || path === '/about';
+    if (isContentPage) {
+      // Mark body so CSS can restore native cursor on these pages
+      document.body.classList.add('content-page');
+
       // Hide the meteor/sun overlay divs injected by the root layout
       const meteorField = document.getElementById('meteorField');
       const sunParticles = document.getElementById('sunParticles');
@@ -27,7 +31,10 @@ export default function ClientEffects() {
         { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
       );
       document.querySelectorAll('.fu').forEach((el) => obs.observe(el));
-      return () => obs.disconnect();
+      return () => {
+        obs.disconnect();
+        document.body.classList.remove('content-page');
+      };
     }
 
     // ── CURSOR ──

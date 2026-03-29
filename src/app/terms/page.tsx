@@ -31,12 +31,17 @@ export default function TermsPage() {
         {/* Hero */}
         <section
           style={{
-            padding: "clamp(60px, 10vw, 100px) clamp(20px, 6vw, 80px) 40px",
+            padding: "clamp(60px, 10vw, 100px) clamp(20px, 6vw, 80px) 48px",
             borderBottom: "1px solid var(--border)",
+            position: "relative",
+            overflow: "hidden",
           }}
         >
-          <div style={{ maxWidth: "780px", margin: "0 auto" }}>
+          {/* Subtle top gradient */}
+          <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(30,61,143,0.15) 0%, transparent 70%)", pointerEvents: "none" }} />
+          <div style={{ maxWidth: "780px", margin: "0 auto", position: "relative" }}>
             <div
+              className="fu"
               style={{
                 fontFamily: "'Space Mono', monospace",
                 fontSize: "0.7rem",
@@ -60,6 +65,7 @@ export default function TermsPage() {
               Legal
             </div>
             <h1
+              className="fu"
               style={{
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(2rem, 5vw, 3rem)",
@@ -73,6 +79,7 @@ export default function TermsPage() {
               Terms of Service
             </h1>
             <p
+              className="fu"
               style={{
                 fontFamily: "'Space Mono', monospace",
                 fontSize: "0.75rem",
@@ -92,6 +99,7 @@ export default function TermsPage() {
           }}
         >
           <div
+            className="fu"
             style={{
               maxWidth: "780px",
               margin: "0 auto",
@@ -507,6 +515,12 @@ export default function TermsPage() {
         .legal-section a:hover {
           opacity: 0.8;
         }
+        /* Hero .fu stagger */
+        .fu:nth-child(1) { transition-delay: 0s; }
+        .fu:nth-child(2) { transition-delay: 0.1s; }
+        .fu:nth-child(3) { transition-delay: 0.2s; }
+        /* Content block fades in slightly after hero */
+        section + section .fu { transition-delay: 0.15s; }
       `}</style>
     </>
   );

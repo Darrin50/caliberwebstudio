@@ -524,10 +524,9 @@ export default function HeroScene() {
         inset: 0,
         zIndex: 1,
         pointerEvents: 'auto',
-        // touch-action: none gives us full pointer control so we can spin in any direction.
-        // Our intent-detection logic (in onPointerMove) handles vertical-scroll pass-through
-        // on touch by releasing pointer capture when vertical swipe is detected.
-        touchAction: 'none',
+        // pan-y lets the browser handle vertical touch scroll natively (no blocking).
+        // Horizontal drags are still intercepted by our pointer event logic for spinning.
+        touchAction: 'pan-y',
         cursor: 'grab',
         width: '100%',
         height: '100%',

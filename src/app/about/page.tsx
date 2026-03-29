@@ -115,14 +115,17 @@ export default function AboutPage() {
 
         {/* ── Hero ── */}
         <section style={{ padding: 'clamp(120px,16vw,180px) clamp(20px,6vw,80px) clamp(80px,10vw,120px)', textAlign: 'center', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,61,143,0.18) 0%, transparent 70%)', pointerEvents: 'none' }} />
-          <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px', position: 'relative' }}>About Caliber Web Studio</p>
-          <h1 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(36px,6vw,80px)', lineHeight: 1.0, color: '#fff', marginBottom: '32px', position: 'relative' }}>
+          {/* Top gradient glow */}
+          <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,61,143,0.22) 0%, transparent 70%)', pointerEvents: 'none' }} />
+          {/* Bottom gradient fade */}
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to bottom, transparent, rgba(14,14,14,0.4))', pointerEvents: 'none' }} />
+          <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px', position: 'relative' }}>About Caliber Web Studio</p>
+          <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(36px,6vw,80px)', lineHeight: 1.0, color: '#fff', marginBottom: '32px', position: 'relative' }}>
             Built in Detroit.<br />
             Powered by AI.<br />
             <span style={{ background: 'linear-gradient(135deg, #1E3D8F, #A8B8C8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Designed to Dominate.</span>
           </h1>
-          <p style={{ fontSize: 'clamp(17px,2vw,22px)', color: 'var(--chrome, #A8B8C8)', maxWidth: '620px', margin: '0 auto', lineHeight: 1.65, position: 'relative' }}>
+          <p className="fu" style={{ fontSize: 'clamp(17px,2vw,22px)', color: 'var(--chrome, #A8B8C8)', maxWidth: '620px', margin: '0 auto', lineHeight: 1.65, position: 'relative' }}>
             We&apos;re not a web design agency. We&apos;re an architecture firm for your digital presence — building systems that attract customers, convert leads, and compound over time.
           </p>
         </section>
@@ -130,8 +133,8 @@ export default function AboutPage() {
         {/* ── The Story ── */}
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
           <div style={{ maxWidth: '820px', margin: '0 auto' }}>
-            <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px' }}>The Story</p>
-            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '40px', lineHeight: 1.1 }}>
+            <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px' }}>The Story</p>
+            <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '40px', lineHeight: 1.1 }}>
               Local Businesses Deserve Better
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -154,8 +157,8 @@ export default function AboutPage() {
         {/* ── What Makes Us Different ── */}
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>What Makes Us Different</p>
-            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '56px', lineHeight: 1.1 }}>
+            <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>What Makes Us Different</p>
+            <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '56px', lineHeight: 1.1 }}>
               Not an Agency. An Advantage.
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
@@ -173,8 +176,8 @@ export default function AboutPage() {
         {/* ── The Numbers ── */}
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))', background: 'rgba(30,61,143,0.06)' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-            <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>By the Numbers</p>
-            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '64px', lineHeight: 1.1 }}>
+            <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>By the Numbers</p>
+            <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '64px', lineHeight: 1.1 }}>
               Results, Not Promises
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2px', background: 'var(--border, rgba(168,184,200,0.12))' }}>
@@ -194,8 +197,8 @@ export default function AboutPage() {
         {/* ── Tech Stack ── */}
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>Under the Hood</p>
-            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '16px', lineHeight: 1.1 }}>
+            <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>Under the Hood</p>
+            <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '16px', lineHeight: 1.1 }}>
               Fortune 500 Tech.<br />Local Business Price.
             </h2>
             <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--chrome, #A8B8C8)', maxWidth: '580px', marginBottom: '56px', lineHeight: 1.7 }}>
@@ -214,11 +217,11 @@ export default function AboutPage() {
 
         {/* ── CTA ── */}
         <section style={{ padding: 'clamp(100px,12vw,160px) clamp(20px,6vw,80px)', textAlign: 'center' }}>
-          <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px' }}>Let&apos;s Build</p>
-          <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,64px)', color: '#fff', marginBottom: '24px', lineHeight: 1.05 }}>
+          <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px' }}>Let&apos;s Build</p>
+          <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,64px)', color: '#fff', marginBottom: '24px', lineHeight: 1.05 }}>
             Ready to See What We<br />Can Build for You?
           </h2>
-          <p style={{ color: 'var(--chrome, #A8B8C8)', fontSize: 'clamp(16px,1.8vw,20px)', maxWidth: '520px', margin: '0 auto 48px', lineHeight: 1.65 }}>
+          <p className="fu" style={{ color: 'var(--chrome, #A8B8C8)', fontSize: 'clamp(16px,1.8vw,20px)', maxWidth: '520px', margin: '0 auto 48px', lineHeight: 1.65 }}>
             We&apos;ll build your site. You&apos;ll see it live. Then you decide. No risk, no pressure, no templates.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -229,6 +232,24 @@ export default function AboutPage() {
 
       </main>
       <Footer />
+
+      <style>{`
+        /* About page: fade-up reveal uses the global .fu / .fu.on system */
+        /* Stagger delays for hero elements */
+        .about-hero-label { transition-delay: 0s !important; }
+        .about-hero-h1    { transition-delay: 0.1s !important; }
+        .about-hero-sub   { transition-delay: 0.2s !important; }
+
+        /* Differentiator card hover enhancement */
+        .diff-card {
+          transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+        }
+        .diff-card:hover {
+          border-color: rgba(30,61,143,0.5) !important;
+          transform: translateY(-3px) !important;
+          box-shadow: 0 12px 32px rgba(30,61,143,0.15) !important;
+        }
+      `}</style>
     </>
   );
 }

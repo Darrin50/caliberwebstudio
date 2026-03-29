@@ -300,7 +300,6 @@ export default function FloatingElements() {
         el.offsetY = my - el.y;
         el.opacity = Math.min(el.opacity + 0.15, 0.6);
         activeRef.current = el;
-        e.preventDefault();
       }
     };
 
@@ -312,7 +311,6 @@ export default function FloatingElements() {
         el.x = touch.clientX - rect.left - el.offsetX;
         el.y = touch.clientY - rect.top + window.scrollY - el.offsetY;
         el.baseY = el.y;
-        e.preventDefault();
       }
     };
 
@@ -327,8 +325,9 @@ export default function FloatingElements() {
     window.addEventListener('mousedown', onMouseDown);
     window.addEventListener('mousemove', onMouseMove);
     window.addEventListener('mouseup', onMouseUp);
-    window.addEventListener('touchstart', onTouchStart, { passive: false });
-    window.addEventListener('touchmove', onTouchMove, { passive: false });
+    // passive: true so these never block page scroll
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
     window.addEventListener('touchend', onTouchEnd);
 
     // Animation loop

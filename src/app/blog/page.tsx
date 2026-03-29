@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   },
 };
 
+function extractFirstImage(content: string): string | null {
+  const match = content.match(/<img[^>]+src="([^"]+)"/);
+  return match ? match[1] : null;
+}
+
 const categoryColors: Record<string, string> = {
   "Detroit Web Design": "var(--accent, #00d4ff)",
   "Pricing & Value": "#a78bfa",
@@ -55,12 +60,28 @@ export default function BlogIndex() {
                   background: "var(--card-bg, rgba(255,255,255,0.04))",
                   border: "1px solid var(--border-color, rgba(255,255,255,0.08))",
                   borderRadius: "16px",
-                  padding: "28px",
+                  overflow: "hidden",
                   display: "flex",
                   flexDirection: "column",
-                  gap: "12px",
+                  gap: "0",
                 }}
               >
+                {(() => {
+                  const thumb = extractFirstImage(post.content);
+                  return thumb ? (
+                    <div style={{ width: "100%", height: "180px", overflow: "hidden", flexShrink: 0 }}>
+                      <img
+                        src={`${thumb.split('?')[0]}?w=600&auto=format&fit=crop&q=70`}
+                        alt={post.title}
+                        loading="lazy"
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.3s ease" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                      />
+                    </div>
+                  ) : null;
+                })()}
+                <div style={{ padding: "24px", display: "flex", flexDirection: "column", gap: "12px", flex: 1 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
                   <span style={{
                     fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
@@ -88,6 +109,7 @@ export default function BlogIndex() {
                 >
                   Read article <span aria-hidden="true">→</span>
                 </span>
+                </div>
               </article>
               </Link>
             ))}

@@ -6,20 +6,13 @@ export default function ClientEffects() {
     // ── CONTENT PAGES: skip all ambient visual effects ──
     // Blog, legal, and about pages get a clean, distraction-free layout
     const path = window.location.pathname;
-    const isContentPage = path.startsWith('/blog') || path === '/terms' || path === '/privacy' || path === '/about';
+    const isContentPage = path.startsWith('/blog') || path === '/terms' || path === '/privacy' || path === '/about' || path.startsWith('/case-studies') || path === '/faq' || path === '/pricing';
     if (isContentPage) {
-      // Mark body so CSS can restore native cursor on these pages
-      document.body.classList.add('content-page');
-
       // Hide the meteor/sun overlay divs injected by the root layout
       const meteorField = document.getElementById('meteorField');
       const sunParticles = document.getElementById('sunParticles');
-      const cursorDot = document.getElementById('cursor-dot');
-      const cursorOuter = document.getElementById('cursor-outer');
       if (meteorField) meteorField.style.display = 'none';
       if (sunParticles) sunParticles.style.display = 'none';
-      if (cursorDot) cursorDot.style.display = 'none';
-      if (cursorOuter) cursorOuter.style.display = 'none';
 
       // Scroll reveal only
       const obs = new IntersectionObserver(
@@ -31,80 +24,8 @@ export default function ClientEffects() {
         { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
       );
       document.querySelectorAll('.fu').forEach((el) => obs.observe(el));
-      return () => {
-        obs.disconnect();
-        document.body.classList.remove('content-page');
-      };
+      return () => { obs.disconnect(); };
     }
-
-    // ── CURSOR ──
-    const dot = document.getElementById('cursor-dot')!;
-    const ring = document.getElementById('cursor-outer')!;
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', (e) => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-    });
-    const lerp = () => {
-      rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1;
-      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-      requestAnimationFrame(lerp);
-    };
-    lerp();
-    document.querySelectorAll('button,.svc-card,.price-card,.card-3d,.nav-btn,nav ul a').forEach((el) => {
-      (el as HTMLElement).addEventListener('mouseenter', () => { ring.style.width = '60px'; ring.style.height = '60px'; });
-      (el as HTMLElement).addEventListener('mouseleave', () => { ring.style.width = '40px'; ring.style.height = '40px'; });
-    });
-
-    // ── CURSOR PARTICLE TRAIL ──
-    const cvs = document.createElement('canvas');
-    cvs.style.cssText = 'position:fixed;inset:0;z-index:9998;pointer-events:none;';
-    document.body.appendChild(cvs);
-    const ctx = cvs.getContext('2d')!;
-    let W: number, H: number;
-    const resizeCvs = () => { W = cvs.width = window.innerWidth; H = cvs.height = window.innerHeight; };
-    resizeCvs();
-    window.addEventListener('resize', resizeCvs);
-    interface Spark { x: number; y: number; vx: number; vy: number; life: number; decay: number; size: number; color: number[]; }
-    const sparks: Spark[] = [];
-    let lastX = 0, lastY = 0, lastSpawn = 0;
-    document.addEventListener('mousemove', (e) => {
-      const now = performance.now();
-      const dx = e.clientX - lastX, dy = e.clientY - lastY;
-      const speed = Math.sqrt(dx * dx + dy * dy);
-      lastX = e.clientX; lastY = e.clientY;
-      if (now - lastSpawn < 4 || speed < 2) return;
-      lastSpawn = now;
-      const count = Math.min(Math.floor(speed / 8) + 1, 4);
-      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-      for (let i = 0; i < count; i++) {
-        sparks.push({
-          x: e.clientX + (Math.random() - 0.5) * 8, y: e.clientY + (Math.random() - 0.5) * 8,
-          vx: dx * 0.08 + (Math.random() - 0.5) * 1.5, vy: dy * 0.08 + (Math.random() - 0.5) * 1.5 - 0.5,
-          life: 1, decay: 0.015 + Math.random() * 0.02, size: Math.random() * 3 + 1.5,
-          color: isDark
-            ? (Math.random() > 0.4 ? [255, 200 + (Math.random() * 55 | 0), 60 + (Math.random() * 60 | 0)] : [80 + (Math.random() * 60 | 0), 140 + (Math.random() * 60 | 0), 255])
-            : (Math.random() > 0.4 ? [30, 61, 143] : [255, 180, 40]),
-        });
-      }
-    });
-    const sparkFrame = () => {
-      requestAnimationFrame(sparkFrame);
-      ctx.clearRect(0, 0, W, H);
-      for (let i = sparks.length - 1; i >= 0; i--) {
-        const s = sparks[i];
-        s.x += s.vx; s.y += s.vy; s.vy += 0.03; s.vx *= 0.98; s.life -= s.decay;
-        if (s.life <= 0) { sparks.splice(i, 1); continue; }
-        const a = s.life * 0.7;
-        ctx.beginPath(); ctx.arc(s.x, s.y, s.size * s.life, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${s.color[0]},${s.color[1]},${s.color[2]},${a})`; ctx.fill();
-        if (s.life > 0.3) {
-          ctx.beginPath(); ctx.arc(s.x, s.y, s.size * s.life * 2.5, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${s.color[0]},${s.color[1]},${s.color[2]},${a * 0.15})`; ctx.fill();
-        }
-      }
-    };
-    sparkFrame();
 
     // ── GENERATE METEORS ──
     const meteorField = document.getElementById('meteorField');
@@ -233,7 +154,7 @@ export default function ClientEffects() {
     });
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-    return () => { themeObserver.disconnect(); cvs.remove(); soundBtn.remove(); };
+    return () => { themeObserver.disconnect(); soundBtn.remove(); };
   }, []);
 
   return null;

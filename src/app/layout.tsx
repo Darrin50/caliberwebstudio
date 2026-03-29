@@ -357,10 +357,6 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {/* Cursor */}
-        <div id="cursor-dot" />
-        <div id="cursor-outer" />
-
         {/* Ambient particle fields */}
         <div className="meteor-field" id="meteorField" />
         <div className="sun-particles" id="sunParticles" />

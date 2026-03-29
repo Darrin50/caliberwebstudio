@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: { absolute: 'Pricing | Caliber Web Studio – Monthly Web & Growth Plans' },
@@ -132,7 +133,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/#contact" className={`pricing-cta${plan.popular ? " pricing-cta--popular" : ""}`}>Get Started — $0 Down</Link>
+                <CheckoutButton plan={plan.name.toLowerCase()} className={`pricing-cta${plan.popular ? " pricing-cta--popular" : ""}`}>Get Started — $0 Down</CheckoutButton>
               </div>
             ))}
           </div>
@@ -152,7 +153,7 @@ export default function PricingPage() {
                   <span style={{ fontSize: "clamp(2.6rem, 5vw, 3.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", lineHeight: 1, display: "block", marginBottom: "6px" }}>$5,000</span>
                   <p style={{ fontSize: "0.8rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "8px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>starting price · one-time</p>
                   <p style={{ fontSize: "0.85rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "32px", lineHeight: 1.6 }}>Custom scope up to $15,000 depending on brand complexity and business needs.</p>
-                  <Link href="/#contact" className="startup-cta">Get a Custom Quote</Link>
+                  <CheckoutButton plan="startup" className="startup-cta">Get Started — $5,000</CheckoutButton>
                 </div>
                 <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
                   {[

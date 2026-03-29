@@ -123,15 +123,28 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         <div
           className="fu"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '40px',
             marginTop: '80px',
             paddingTop: '80px',
             borderTop: '1px solid var(--border)',
             maxWidth: '600px',
             marginLeft: 'auto',
             marginRight: 'auto',
+          }}
+        >
+          <p style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '10px',
+            letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            color: 'var(--navy)',
+            marginBottom: '32px',
+            textAlign: 'center',
+          }}>By the Numbers</p>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '40px',
           }}
         >
           {[
@@ -164,6 +177,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

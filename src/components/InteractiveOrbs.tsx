@@ -66,9 +66,9 @@ export default function InteractiveOrbs() {
         canvas.style.left = '0';
         canvas.style.width = '100%';
         canvas.style.height = '100%';
-        canvas.style.pointerEvents = 'auto';
+        canvas.style.pointerEvents = 'none';
         canvas.style.touchAction = 'pan-y pinch-zoom';
-        canvas.style.zIndex = '2';
+        canvas.style.zIndex = '-1';
         canvas.setAttribute('data-orbs', sectionId);
 
         // Make section relative if not already

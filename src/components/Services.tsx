@@ -101,7 +101,7 @@ export default function Services() {
       id="services"
       style={{
         position: 'relative',
-        padding: '120px 60px',
+        padding: '80px 60px',
         background: 'var(--bg)',
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',

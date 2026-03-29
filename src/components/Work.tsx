@@ -42,7 +42,7 @@ export default function Work() {
       id="work"
       style={{
         position: 'relative',
-        padding: '120px 60px',
+        padding: '80px 60px',
         background: 'var(--bg)',
         borderBottom: '1px solid var(--border)',
       }}

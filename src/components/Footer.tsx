@@ -114,6 +114,21 @@ export default function Footer() {
             >
               Detroit, MI
             </span>
+            <a
+              href="tel:+13139438052"
+              style={{
+                fontFamily: "'Space Mono', monospace",
+                fontSize: '10px',
+                color: 'var(--dim)',
+                letterSpacing: '0.04em',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}
+            >
+              (313) 943-8052
+            </a>
           </div>
 
           {/* Social links */}

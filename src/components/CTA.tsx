@@ -68,7 +68,7 @@ export default function CTA() {
       style={{
         position: 'relative',
         overflow: 'hidden',
-        padding: '120px 60px',
+        padding: '80px 60px',
         background: 'var(--bg)',
         borderTop: '1px solid var(--border)',
         display: 'flex',
@@ -103,7 +103,7 @@ export default function CTA() {
             fontWeight: 800,
             lineHeight: 1.2,
             letterSpacing: '-0.02em',
-            color: 'var(--silver)',
+            color: '#ffffff',
             marginBottom: '60px',
             textAlign: 'center',
           }}

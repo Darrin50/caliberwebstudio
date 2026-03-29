@@ -172,11 +172,9 @@ export default function Nav() {
 
   const navItems = [
     { label: 'Services', href: '/services' },
-    { label: 'Launch Package', href: '/startup-complete' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'About', href: '/about' },
-    { label: 'FAQ', href: '/faq' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ];

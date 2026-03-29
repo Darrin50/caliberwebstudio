@@ -91,7 +91,7 @@ html.js-ready .fu:nth-child(4) { transition-delay: 0.3s; }
 html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
 
 /* Meteor field */
-.meteor-field { position: fixed; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.meteor-field { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 [data-theme="light"] .meteor-field { display: none; }
 .meteor {
   position: absolute; width: 1.5px;
@@ -101,8 +101,8 @@ html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
 }
 
 /* Sun particles */
-.sun-particles { position: fixed; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; opacity: 0; transition: opacity 0.5s; }
-[data-theme="light"] .sun-particles { opacity: 1; }
+.sun-particles { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; opacity: 0; transition: opacity 0.5s; }
+[data-theme="light"] .sun-particles { opacity: 0.1; }
 .sun-dot { position: absolute; border-radius: 50%; animation: sun-rise linear infinite; bottom: -10px; }
 
 /* Section labels */

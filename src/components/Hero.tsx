@@ -1,4 +1,3 @@
-'use client';
 export default function Hero({ children }: { children?: React.ReactNode }) {
   return (
     <section

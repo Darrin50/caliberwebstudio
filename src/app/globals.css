@@ -78,16 +78,17 @@ body {
   100% { transform: translateY(-110vh) scale(0.5); opacity: 0; }
 }
 
-/* Fade-up reveal */
-.fu {
+/* Fade-up reveal — only hides content after JS marks the page ready.
+   Before JS loads, .fu elements are fully visible so users never see a blank page. */
+html.js-ready .fu {
   opacity: 0; transform: translateY(32px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
-.fu.on { opacity: 1; transform: none; }
-.fu:nth-child(2) { transition-delay: 0.1s; }
-.fu:nth-child(3) { transition-delay: 0.2s; }
-.fu:nth-child(4) { transition-delay: 0.3s; }
-.fu:nth-child(5) { transition-delay: 0.4s; }
+.fu.on { opacity: 1 !important; transform: none !important; }
+html.js-ready .fu:nth-child(2) { transition-delay: 0.1s; }
+html.js-ready .fu:nth-child(3) { transition-delay: 0.2s; }
+html.js-ready .fu:nth-child(4) { transition-delay: 0.3s; }
+html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
 
 /* Meteor field */
 .meteor-field { position: fixed; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }

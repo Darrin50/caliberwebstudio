@@ -14,7 +14,15 @@ export default function ClientEffects() {
       if (meteorField) meteorField.style.display = 'none';
       if (sunParticles) sunParticles.style.display = 'none';
 
-      // Scroll reveal only
+      // Scroll reveal — pre-mark in-viewport elements BEFORE enabling animation
+      // so users never see a flash of invisible content
+      document.querySelectorAll('.fu').forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('on');
+        }
+      });
+      document.documentElement.classList.add('js-ready');
       const obs = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
@@ -57,6 +65,15 @@ export default function ClientEffects() {
     }
 
     // ── SCROLL REVEAL ──
+    // Pre-mark elements already visible in the viewport BEFORE enabling animation styles.
+    // This prevents a flash of invisible content when js-ready class is applied.
+    document.querySelectorAll('.fu').forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('on');
+      }
+    });
+    document.documentElement.classList.add('js-ready');
     const obs = new IntersectionObserver(
       (entries) => { entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } }); },
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }

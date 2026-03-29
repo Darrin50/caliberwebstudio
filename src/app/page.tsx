@@ -1,5 +1,3 @@
-'use client';
-import dynamic from 'next/dynamic';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
@@ -9,11 +7,7 @@ import Work from '@/components/Work';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
-
-// Client-side only components
-const HeroScene = dynamic(() => import('@/components/HeroScene'), { ssr: false });
-const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false });
-const FloatingElements = dynamic(() => import('@/components/FloatingElements'), { ssr: false });
+import { HeroScene, ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
 
 export default function Home() {
   return (

@@ -163,23 +163,23 @@ export default function FloatingElements() {
     if (!canvas) return;
     const ctx = canvas.getContext('2d')!;
 
-    const resize = () => {
-      const pageHeight = Math.max(
-        document.documentElement.scrollHeight,
-        document.body.scrollHeight
-      );
-      canvas.width = window.innerWidth;
-      canvas.height = pageHeight;
-      canvas.style.height = pageHeight + 'px';
+    // Limit to hero section height only — elements should not appear over content sections
+    const getHeroHeight = () => {
+      const hero = document.getElementById('hero') || document.querySelector('section');
+      return hero ? hero.offsetHeight : Math.min(window.innerHeight * 1.2, 900);
     };
 
-    // Generate floating elements spread across the full page
+    const resize = () => {
+      const heroHeight = getHeroHeight();
+      canvas.width = window.innerWidth;
+      canvas.height = heroHeight;
+      canvas.style.height = heroHeight + 'px';
+    };
+
+    // Generate floating elements only within the hero section
     const generateElements = () => {
-      const pageHeight = Math.max(
-        document.documentElement.scrollHeight,
-        document.body.scrollHeight
-      );
-      const count = 14;
+      const heroHeight = getHeroHeight();
+      const count = 10;
       const els: FloatEl[] = [];
 
       for (let i = 0; i < count; i++) {
@@ -187,7 +187,7 @@ export default function FloatingElements() {
         const x = isLeft
           ? 40 + Math.random() * 160
           : window.innerWidth - 40 - Math.random() * 160;
-        const y = (pageHeight / count) * i + Math.random() * (pageHeight / count) * 0.6 + 100;
+        const y = (heroHeight / count) * i + Math.random() * (heroHeight / count) * 0.6 + 60;
 
         els.push({
           id: i,
@@ -213,15 +213,12 @@ export default function FloatingElements() {
     resize();
     generateElements();
 
-    // Re-measure page height periodically (sections may animate in)
+    // Re-measure hero height periodically in case hero animates in
     const resizeInterval = setInterval(() => {
-      const pageHeight = Math.max(
-        document.documentElement.scrollHeight,
-        document.body.scrollHeight
-      );
-      if (canvas.height !== pageHeight) {
-        canvas.height = pageHeight;
-        canvas.style.height = pageHeight + 'px';
+      const heroHeight = getHeroHeight();
+      if (canvas.height !== heroHeight) {
+        canvas.height = heroHeight;
+        canvas.style.height = heroHeight + 'px';
       }
     }, 2000);
 

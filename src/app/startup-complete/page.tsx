@@ -133,7 +133,7 @@ export default function StartupCompletePage() {
               Every deliverable listed above, delivered within 48 hours of your launch call. No hidden fees, no hourly billing, no scope creep.
             </p>
             <Link href="/contact" className="btn-chrome" style={{ position: 'relative', zIndex: 1, fontSize: '12px', letterSpacing: '0.14em' }}>Book Your Launch Call</Link>
-            <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '10px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(168,184,200,0.3)', position: 'relative', zIndex: 1 }}>Limited spots available each month</p>
+            <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '10px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#f59e0b', position: 'relative', zIndex: 1 }}>Limited spots available each month</p>
           </div>
         </section>
 

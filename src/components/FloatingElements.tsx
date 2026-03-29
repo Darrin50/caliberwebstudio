@@ -365,7 +365,7 @@ export default function FloatingElements() {
         top: 0,
         left: 0,
         width: '100%',
-        zIndex: 5,
+        zIndex: -1,
         pointerEvents: 'none',
       }}
     />

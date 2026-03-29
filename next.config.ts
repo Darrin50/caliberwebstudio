@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
     // Type-checking is handled separately via tsc; allow Vercel builds to succeed
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.pexels.com' },

@@ -55,11 +55,11 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=1600&q=85',
+    heroImg: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
     gallery: [
       { url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80', alt: 'Modern bathroom renovation — clean new fixtures and tile' },
-      { url: 'https://images.unsplash.com/photo-1676210134188-4c05dd172f89?auto=format&fit=crop&w=800&q=80', alt: 'Plumber tightening drain connections under a sink' },
+      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80', alt: 'Plumber tightening drain connections under a sink' },
       { url: 'https://images.unsplash.com/photo-1584265549731-fc0d5434ff76?auto=format&fit=crop&w=800&q=80', alt: 'Faucet and sink repair close-up' },
       { url: 'https://images.unsplash.com/photo-1620653713380-7a34b773fef8?auto=format&fit=crop&w=800&q=80', alt: 'Water heater pipe fitting — professional repair' },
     ],

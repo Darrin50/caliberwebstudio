@@ -98,7 +98,7 @@ export const caseStudies: CaseStudy[] = [
     tagline: 'Emergency calls answered at 2am — by a website.',
     accentColor: '#E8631A',
     heroImg:
-      'https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?auto=format&fit=crop&w=1600&q=85',
+      'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1600&q=85',
     heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
     cardImg:
       'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop',

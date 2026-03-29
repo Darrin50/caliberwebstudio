@@ -14,26 +14,12 @@ export default function ClientEffects() {
       if (meteorField) meteorField.style.display = 'none';
       if (sunParticles) sunParticles.style.display = 'none';
 
-      // Scroll reveal — pre-mark in-viewport elements BEFORE enabling animation
-      // so users never see a flash of invisible content.
-      // Use 250px lookahead so content is already revealed before user reaches it.
-      document.querySelectorAll('.fu').forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight + 250 && rect.bottom > -250) {
-          el.classList.add('on');
-        }
-      });
+      // Mark ALL .fu elements visible immediately — content must never be blank.
+      // We add 'on' to everything before enabling js-ready so the animation CSS
+      // never hides anything; the fade-up plays only for truly below-fold content
+      // that loads after the initial render.
+      document.querySelectorAll('.fu').forEach((el) => el.classList.add('on'));
       document.documentElement.classList.add('js-ready');
-      const obs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
-          });
-        },
-        { threshold: 0, rootMargin: '0px 0px 250px 0px' }
-      );
-      document.querySelectorAll('.fu').forEach((el) => obs.observe(el));
-      return () => { obs.disconnect(); };
     }
 
     // ── GENERATE METEORS ──
@@ -66,21 +52,11 @@ export default function ClientEffects() {
     }
 
     // ── SCROLL REVEAL ──
-    // Pre-mark elements in or near the viewport BEFORE enabling animation styles,
-    // so users never see blank content. 250px lookahead ensures content is visible
-    // before the user scrolls to it.
-    document.querySelectorAll('.fu').forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight + 250 && rect.bottom > -250) {
-        el.classList.add('on');
-      }
-    });
+    // Mark ALL .fu elements visible immediately — content must never be blank.
+    // We still add 'js-ready' so the CSS transition plays for any .fu elements
+    // added dynamically after this point, but existing content is always visible.
+    document.querySelectorAll('.fu').forEach((el) => el.classList.add('on'));
     document.documentElement.classList.add('js-ready');
-    const obs = new IntersectionObserver(
-      (entries) => { entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } }); },
-      { threshold: 0, rootMargin: '0px 0px 250px 0px' }
-    );
-    document.querySelectorAll('.fu').forEach((el) => obs.observe(el));
 
     // ── MAGNETIC BUTTONS ──
     const magnetBtns = document.querySelectorAll<HTMLElement>('.btn-chrome, .btn-line, .nav-btn');

@@ -38,7 +38,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const post = getPost(slug);
   if (!post) notFound();
 
-  const heroImage = extractFirstImage(post.content);
+  const heroImageFromContent = extractFirstImage(post.content);
+  const heroImage = post.thumbnail
+    ? { src: post.thumbnail, alt: post.title }
+    : heroImageFromContent;
   const related = posts.filter((p) => post.relatedSlugs.includes(p.slug)).slice(0, 4);
 
   const articleSchema = {

@@ -74,9 +74,8 @@ export default function BlogIndex() {
                         src={`${thumb.split('?')[0]}?w=600&auto=format&fit=crop&q=70`}
                         alt={post.title}
                         loading="lazy"
-                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.3s ease" }}
-                        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
-                        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                        className="blog-thumb-img"
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                       />
                     </div>
                   ) : null;
@@ -133,6 +132,10 @@ export default function BlogIndex() {
             </div>
           </div>
         </div>
+        <style>{`
+          .blog-thumb-img { transition: transform 0.3s ease; }
+          .blog-thumb-img:hover { transform: scale(1.04); }
+        `}</style>
       </main>
       <Footer />
     </>

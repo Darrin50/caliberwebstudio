@@ -163,7 +163,7 @@ export default function AboutPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
               {differentiators.map((item) => (
-                <div key={item.label} style={{ background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '12px', padding: '36px 32px', transition: 'border-color 0.2s, transform 0.2s' }} onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(30,61,143,0.5)'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--border, rgba(168,184,200,0.12))'; (e.currentTarget as HTMLDivElement).style.transform = 'none'; }}>
+                <div key={item.label} className="diff-card" style={{ background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '12px', padding: '36px 32px' }}>
                   <div style={{ fontSize: '32px', marginBottom: '16px' }}>{item.icon}</div>
                   <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '20px', color: '#fff', marginBottom: '12px' }}>{item.label}</h3>
                   <p style={{ fontSize: '15px', color: 'var(--chrome, #A8B8C8)', lineHeight: 1.7 }}>{item.body}</p>

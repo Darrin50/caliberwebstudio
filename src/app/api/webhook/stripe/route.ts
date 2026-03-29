@@ -3,7 +3,6 @@ import Stripe from "stripe";
 import { Resend } from "resend";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const PLAN_NAMES: Record<string, string> = {
   price_1TGOei3ssao1AlQ6SXhvA2Xu: "Starter Plan ($197/mo)",
@@ -58,6 +57,7 @@ export async function POST(req: NextRequest) {
     }
 
     try {
+      const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
         from: "Caliber Web Studio <noreply@caliberwebstudio.com>",
         to: "darrin@caliberwebstudio.com",

@@ -150,8 +150,8 @@ export default function PricingPage() {
                 <div>
                   <p style={{ fontSize: "0.75rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "#f59e0b", marginBottom: "10px", fontFamily: "'Space Mono', monospace" }}>Startup Complete</p>
                   <span style={{ fontSize: "clamp(2.6rem, 5vw, 3.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", lineHeight: 1, display: "block", marginBottom: "6px" }}>$5,000</span>
-                  <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.45)", marginBottom: "8px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>starting price · one-time</p>
-                  <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", marginBottom: "32px", lineHeight: 1.6 }}>Custom scope up to $15,000 depending on brand complexity and business needs.</p>
+                  <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>starting price · one-time</p>
+                  <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "32px", lineHeight: 1.6 }}>Custom scope up to $15,000 depending on brand complexity and business needs.</p>
                   <Link href="/#contact" className="startup-cta">Get a Custom Quote</Link>
                 </div>
                 <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
@@ -162,7 +162,7 @@ export default function PricingPage() {
                     "Complete brand kit (logo direction, colors, fonts, social templates)",
                     "Everything delivered in 48 hours",
                   ].map((feat) => (
-                    <li key={feat} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.5 }}>
+                    <li key={feat} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-primary)", lineHeight: 1.5 }}>
                       <span style={{ color: "#f59e0b", fontSize: "1rem", lineHeight: 1.5, flexShrink: 0 }}>✓</span>
                       {feat}
                     </li>
@@ -274,6 +274,9 @@ export default function PricingPage() {
         .startup-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, #d97706, #f59e0b); color: #000; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 18px; border-radius: 20px; white-space: nowrap; font-family: 'Space Mono', monospace; box-shadow: 0 4px 20px rgba(245,158,11,0.45); }
         .startup-cta { display: inline-block; padding: 14px 32px; background: linear-gradient(90deg, #d97706, #f59e0b); color: #000; border-radius: 9px; font-weight: 700; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 24px rgba(245,158,11,0.35); }
         .startup-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+        [data-theme="light"] .startup-card { background: linear-gradient(145deg, rgba(245,158,11,0.07) 0%, rgba(245,158,11,0.03) 100%); border-color: rgba(245,158,11,0.45); }
+        [data-theme="light"] .startup-card p,
+        [data-theme="light"] .startup-card li { color: #1a1a1a !important; }
         @media (max-width: 900px) {
           .pricing-grid {
             grid-template-columns: 1fr;

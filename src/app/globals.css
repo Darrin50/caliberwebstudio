@@ -81,8 +81,8 @@ body {
 /* Fade-up reveal — only hides content after JS marks the page ready.
    Before JS loads, .fu elements are fully visible so users never see a blank page. */
 html.js-ready .fu {
-  opacity: 0; transform: translateY(32px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .fu.on { opacity: 1 !important; transform: none !important; }
 html.js-ready .fu:nth-child(2) { transition-delay: 0.1s; }

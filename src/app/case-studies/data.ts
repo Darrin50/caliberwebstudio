@@ -27,9 +27,9 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Barbershop',
     tagline: 'See a complete barbershop site — built and live right now.',
     accentColor: '#C9A84C',
-    heroImg: '/demo/barber/hero.png',
+    heroImg: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80',
     heroAlt: 'Detroit Cuts Barbershop demo site preview',
-    cardImg: '/demo/barber/hero.png',
+    cardImg: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80',
     cardDesc:
       'Explore this working demo to see online booking, a photo gallery, an AI chatbot, and mobile-first design. This is exactly what we build for barbershops.',
     challenge:
@@ -76,9 +76,9 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Plumbing / Home Services',
     tagline: 'A 24/7 lead-capture site built for plumbing emergencies.',
     accentColor: '#E8631A',
-    heroImg: '/demo/plumbing/hero.png',
+    heroImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80',
     heroAlt: 'Metro Plumbing demo site preview',
-    cardImg: '/demo/plumbing/hero.png',
+    cardImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80',
     cardDesc:
       'Emergency CTA above the fold, service area pages, lead capture form, and trust signals. This demo is fully functional — click through it.',
     challenge:
@@ -176,9 +176,9 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Soul Food Restaurant',
     tagline: 'Online menu, catering form, AI chatbot — everything a restaurant site needs.',
     accentColor: '#D4A017',
-    heroImg: '/demo/restaurant/hero.jpg',
+    heroImg: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80',
     heroAlt: "Detroit's Kitchen demo site preview",
-    cardImg: '/demo/restaurant/soul-food-plate.jpg',
+    cardImg: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80',
     cardDesc:
       'A full restaurant site with online menu, catering inquiry form, AI chatbot for FAQs, and a private events page. Built to show what we deliver.',
     challenge:

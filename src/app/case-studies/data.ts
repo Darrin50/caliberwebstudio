@@ -78,7 +78,7 @@ export const caseStudies: CaseStudy[] = [
     accentColor: '#E8631A',
     heroImg: '/demo/plumbing/plumber-hero.jpg',
     heroAlt: 'Metro Plumbing demo site preview',
-    cardImg: '/demo/plumbing/plumber-hero.jpg',548-c64695cc6952?w=1200&q=80',
+    cardImg: '/demo/plumbing/plumber-hero.jpg',
     cardDesc:
       'Emergency CTA above the fold, service area pages, lead capture form, and trust signals. This demo is fully functional — click through it.',
     challenge:

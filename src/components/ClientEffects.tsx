@@ -1,27 +1,41 @@
 'use client';
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ClientEffects() {
+  const pathname = usePathname();
+
+  // ── Route-change effect: reveal .fu elements + toggle ambient overlay on every navigation ──
+  // This runs on every client-side route change so the about page (and all other
+  // content pages) never render blank after a soft navigation.
   useEffect(() => {
-    // ── CONTENT PAGES: skip all ambient visual effects ──
-    // Blog, legal, and about pages get a clean, distraction-free layout
-    const path = window.location.pathname;
-    const isContentPage = path.startsWith('/blog') || path === '/terms' || path === '/privacy' || path === '/about' || path.startsWith('/case-studies') || path === '/faq' || path === '/pricing';
+    const isContentPage =
+      pathname.startsWith('/blog') ||
+      pathname === '/terms' ||
+      pathname === '/privacy' ||
+      pathname === '/about' ||
+      pathname.startsWith('/case-studies') ||
+      pathname === '/faq' ||
+      pathname === '/pricing';
+
+    const meteorField = document.getElementById('meteorField');
+    const sunParticles = document.getElementById('sunParticles');
+
     if (isContentPage) {
-      // Hide the meteor/sun overlay divs injected by the root layout
-      const meteorField = document.getElementById('meteorField');
-      const sunParticles = document.getElementById('sunParticles');
       if (meteorField) meteorField.style.display = 'none';
       if (sunParticles) sunParticles.style.display = 'none';
-
-      // Mark ALL .fu elements visible immediately — content must never be blank.
-      // We add 'on' to everything before enabling js-ready so the animation CSS
-      // never hides anything; the fade-up plays only for truly below-fold content
-      // that loads after the initial render.
-      document.querySelectorAll('.fu').forEach((el) => el.classList.add('on'));
-      document.documentElement.classList.add('js-ready');
+    } else {
+      if (meteorField) meteorField.style.display = '';
+      if (sunParticles) sunParticles.style.display = '';
     }
 
+    // Reveal all .fu elements — must run after every navigation, not just initial mount.
+    document.querySelectorAll('.fu').forEach((el) => el.classList.add('on'));
+    document.documentElement.classList.add('js-ready');
+  }, [pathname]);
+
+  // ── One-time setup: particles, magnetic buttons, ambient sound ──
+  useEffect(() => {
     // ── GENERATE METEORS ──
     const meteorField = document.getElementById('meteorField');
     if (meteorField) {
@@ -50,13 +64,6 @@ export default function ClientEffects() {
         sunParticles.appendChild(d);
       }
     }
-
-    // ── SCROLL REVEAL ──
-    // Mark ALL .fu elements visible immediately — content must never be blank.
-    // We still add 'js-ready' so the CSS transition plays for any .fu elements
-    // added dynamically after this point, but existing content is always visible.
-    document.querySelectorAll('.fu').forEach((el) => el.classList.add('on'));
-    document.documentElement.classList.add('js-ready');
 
     // ── MAGNETIC BUTTONS ──
     const magnetBtns = document.querySelectorAll<HTMLElement>('.btn-chrome, .btn-line, .nav-btn');

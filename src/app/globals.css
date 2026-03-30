@@ -310,3 +310,49 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
 [data-theme="light"] #hero-canvas {
   mix-blend-mode: multiply;
 }
+
+/* ── About page: h1 gradient span — readable in light mode ── */
+/* The gradient span uses -webkit-text-fill-color: transparent which survives the
+   h1 color override. Explicitly reset so the text is visible on light backgrounds. */
+[data-theme="light"] h1 span[style*="-webkit-text-fill-color"],
+[data-theme="light"] h1 span[style*="WebkitTextFillColor"],
+[data-theme="light"] h1 span[style*="background-clip"],
+[data-theme="light"] h1 span[style*="backgroundClip"] {
+  color: #0a0a0a !important;
+  -webkit-text-fill-color: #0a0a0a !important;
+  background: none !important;
+}
+
+/* ── Blog listing: category badge colors — darken for light mode contrast ── */
+/* Hardcoded category colors (#a78bfa, #34d399, etc.) are too light on the
+   #F6F7FB background. Apply brightness reduction to the badge spans. */
+[data-theme="light"] main article span[style*="border-radius: 20px"],
+[data-theme="light"] main article span[style*="borderRadius: \"20px\""] {
+  filter: brightness(0.62) saturate(1.2) !important;
+}
+
+/* ── Case study cards: light mode background ── */
+/* rgba(255,255,255,0.03) is invisible on light bg — give cards a subtle surface */
+[data-theme="light"] .cs-card {
+  background: rgba(30,61,143,0.04) !important;
+  border-color: rgba(30,61,143,0.12) !important;
+}
+
+/* ── Blog post: ensure prose content is readable in light mode ── */
+/* Article body rendered via dangerouslySetInnerHTML may inherit dark defaults */
+[data-theme="light"] main article h2,
+[data-theme="light"] main article h3,
+[data-theme="light"] main article h4 {
+  color: #0e1020 !important;
+}
+
+/* ── Case studies listing hero h1: uses var(--white) which is CSS-variable-aware ── */
+/* var(--white) correctly resolves to #0e1020 in light mode — no override needed.
+   But the "Start Your Project" button uses color: var(--bg) on a var(--chrome) background.
+   In light mode --chrome is #5a6a7a and --bg is #F6F7FB (near white) — readable. Fine. */
+
+/* ── Services page and other sub-pages: catch any remaining hardcoded link colors ── */
+[data-theme="light"] main a[style*="color: var(--accent"],
+[data-theme="light"] main span[style*="color: var(--accent"] {
+  color: var(--accent) !important;
+}

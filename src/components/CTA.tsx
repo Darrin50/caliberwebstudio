@@ -108,10 +108,11 @@ export default function CTA() {
             textAlign: 'center',
           }}
         >
-          <div className="fu">Let's Architect</div>
-          <div
+          <span className="fu" style={{ display: 'block' }}>Let's Architect</span>
+          <span
             className="fu"
             style={{
+              display: 'block',
               background: 'linear-gradient(90deg, var(--chrome), #fff, var(--chrome))',
               backgroundSize: '200% 100%',
               WebkitBackgroundClip: 'text',
@@ -121,7 +122,7 @@ export default function CTA() {
             }}
           >
             Your Future.
-          </div>
+          </span>
         </h2>
 
         {/* Contact Form */}

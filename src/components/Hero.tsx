@@ -49,10 +49,11 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             zIndex: 10,
           }}
         >
-          <div className="fu" style={{ color: '#ffffff' }}>Architects of</div>
-          <div
+          <span className="fu" style={{ display: 'block', color: '#ffffff' }}>Architects of</span>
+          <span
             className="fu"
             style={{
+              display: 'block',
               background: 'linear-gradient(90deg, var(--chrome), #fff, var(--chrome))',
               backgroundSize: '200% 100%',
               WebkitBackgroundClip: 'text',
@@ -62,7 +63,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             }}
           >
             The Modern Web.
-          </div>
+          </span>
         </h1>
 
         {/* Subtitle */}

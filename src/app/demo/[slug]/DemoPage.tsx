@@ -23,12 +23,13 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: '/demo/barber/hero.png',
+    heroImg: '/demo/barber/detroit-cuts-hero.png',
     heroAlt: 'Black barber giving a fresh fade to a client at Detroit Cuts Barbershop',
     gallery: [
       { url: '/demo/barber/fade-closeup.png', alt: 'Clean taper fade close-up — precision lineup' },
       { url: '/demo/barber/waves.png', alt: 'Fresh 360 waves with skin fade — Detroit style' },
       { url: '/demo/barber/interior.png', alt: 'Detroit Cuts Barbershop interior — leather chairs and neon Open sign' },
+      { url: '/demo/barber/detroit-cuts-client.png', alt: 'Young Black man sitting in the barber chair at Detroit Cuts' },
       { url: '/demo/barber/detroit-cuts-client-2.png', alt: 'Young man in the barber chair getting a fresh cut at Detroit Cuts' },
       { url: '/demo/barber/two-barbers.png', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
       { url: '/demo/barber/about.png', alt: 'Detroit Cuts owner — proud to serve the community' },

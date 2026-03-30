@@ -5,14 +5,14 @@ import Footer from '@/components/Footer';
 import { caseStudies } from './data';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Case Studies | Caliber Web Studio' },
+  title: { absolute: 'Sample Builds | Caliber Web Studio' },
   description:
-    "See how Caliber Web Studio builds websites that get results. Real case studies for Detroit Cuts, Metro Plumbing, Luxe Salon, and Detroit's Kitchen.",
+    'Live demo sites built with the same AI-powered system we use for every client. See working websites for barbershops, plumbing companies, salons, and restaurants.',
   alternates: { canonical: 'https://caliberwebstudio.com/case-studies' },
   openGraph: {
-    title: 'Case Studies | Caliber Web Studio',
+    title: 'Sample Builds | Caliber Web Studio',
     description:
-      'See how Caliber Web Studio builds websites that get results for Detroit small businesses.',
+      'Live demo sites showing exactly what we build for Detroit small businesses. Pick your industry and click through.',
     url: 'https://caliberwebstudio.com/case-studies',
     siteName: 'Caliber Web Studio',
     type: 'website',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Case Studies | Caliber Web Studio',
-  description: 'Portfolio of web design projects and results for Detroit small businesses.',
+  name: 'Sample Builds | Caliber Web Studio',
+  description: 'Live demo sites showing what Caliber Web Studio builds for small businesses.',
   url: 'https://caliberwebstudio.com/case-studies',
   publisher: {
     '@type': 'Organization',
@@ -62,7 +62,7 @@ export default function CaseStudiesPage() {
             textTransform: 'uppercase',
             color: 'var(--chrome)',
             marginBottom: '24px',
-          }}>Portfolio</p>
+          }}>Live Demo Sites</p>
           <h1 style={{
             fontFamily: 'Syne, sans-serif',
             fontWeight: 800,
@@ -71,17 +71,18 @@ export default function CaseStudiesPage() {
             color: 'var(--white)',
             marginBottom: '24px',
           }}>
-            Our Work Speaks<br />For Itself.
+            See What We Build.
           </h1>
           <p style={{
             fontSize: 'clamp(16px,2vw,20px)',
             color: 'var(--chrome)',
-            maxWidth: '560px',
+            maxWidth: '600px',
             margin: '0 auto 48px',
             lineHeight: 1.7,
           }}>
-            Four Detroit businesses. Four real problems. Four websites built to get results.
-            Here's what happened.
+            We don&apos;t just talk about it — here are four live, working websites built with the
+            same AI-powered system we&apos;ll use for your business. Pick your industry and see for
+            yourself.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{
@@ -108,11 +109,11 @@ export default function CaseStudiesPage() {
               textDecoration: 'none',
               transition: 'border-color 0.2s, color 0.2s',
               display: 'inline-block',
-            }}>See Live Demos</Link>
+            }}>See First Demo →</Link>
           </div>
         </section>
 
-        {/* ── Case Study Cards ── */}
+        {/* ── Demo Site Cards ── */}
         <section style={{
           maxWidth: '1200px',
           margin: '0 auto',
@@ -123,10 +124,10 @@ export default function CaseStudiesPage() {
             gridTemplateColumns: 'repeat(auto-fill, minmax(520px, 1fr))',
             gap: '32px',
           }}>
-            {caseStudies.map((cs, i) => (
+            {caseStudies.map((cs) => (
               <Link
                 key={cs.slug}
-                href={`/case-studies/${cs.slug}`}
+                href={`/demo/${cs.demoSlug}`}
                 style={{ textDecoration: 'none', display: 'block' }}
               >
                 <article className="cs-card" style={{
@@ -146,7 +147,7 @@ export default function CaseStudiesPage() {
                       position: 'absolute', inset: 0,
                       background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%)',
                     }} />
-                    {/* Key metric badge */}
+                    {/* Live Demo badge */}
                     <div style={{
                       position: 'absolute',
                       top: '20px',
@@ -159,12 +160,14 @@ export default function CaseStudiesPage() {
                       textAlign: 'center',
                     }}>
                       <div style={{
-                        fontFamily: 'Syne, sans-serif',
-                        fontWeight: 800,
-                        fontSize: '22px',
+                        fontFamily: 'Space Mono, monospace',
+                        fontWeight: 700,
+                        fontSize: '10px',
+                        letterSpacing: '1.5px',
+                        textTransform: 'uppercase',
                         color: cs.accentColor,
                         lineHeight: 1,
-                      }}>{cs.keyMetric}</div>
+                      }}>Live</div>
                       <div style={{
                         fontFamily: 'Space Mono, monospace',
                         fontSize: '9px',
@@ -172,9 +175,8 @@ export default function CaseStudiesPage() {
                         textTransform: 'uppercase',
                         color: 'rgba(255,255,255,0.6)',
                         marginTop: '4px',
-                        maxWidth: '90px',
                         lineHeight: 1.3,
-                      }}>{cs.keyMetricLabel}</div>
+                      }}>Working Site</div>
                     </div>
                     {/* Industry tag */}
                     <div style={{
@@ -229,7 +231,7 @@ export default function CaseStudiesPage() {
                       textTransform: 'uppercase',
                       color: cs.accentColor,
                     }}>
-                      Read Case Study
+                      View Live Demo
                       <span style={{ fontSize: '14px' }}>→</span>
                     </div>
                   </div>
@@ -253,7 +255,7 @@ export default function CaseStudiesPage() {
             textTransform: 'uppercase',
             color: 'var(--chrome)',
             marginBottom: '24px',
-          }}>Ready to be next?</p>
+          }}>Ready to get started?</p>
           <h2 style={{
             fontFamily: 'Syne, sans-serif',
             fontWeight: 800,
@@ -262,7 +264,7 @@ export default function CaseStudiesPage() {
             marginBottom: '20px',
             lineHeight: 1.1,
           }}>
-            See Your Business Built.<br />Free.
+            Your Business Could Look<br />Like This in 48 Hours.
           </h2>
           <p style={{
             color: 'var(--chrome)',
@@ -271,8 +273,8 @@ export default function CaseStudiesPage() {
             margin: '0 auto 40px',
             lineHeight: 1.7,
           }}>
-            We'll build a free mockup of your business before you spend a dollar.
-            No commitment. Just results.
+            We build with the same AI-powered system used in every demo above.
+            Start with a free mockup — no commitment required.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{

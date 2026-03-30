@@ -23,15 +23,15 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: '/demo/barber/hero.png',
-    heroAlt: 'Black barber giving a fresh fade to a client at Detroit Cuts Barbershop',
+    heroImg: '/demo/barber/detroit-cuts-hero.png',
+    heroAlt: 'Detroit Cuts barber holding clippers — professional barbershop in Detroit',
     gallery: [
+      { url: '/demo/barber/detroit-cuts-client.png', alt: 'Young man fresh out the chair at Detroit Cuts — clean fade and lineup' },
       { url: '/demo/barber/fade-closeup.png', alt: 'Clean taper fade close-up — precision lineup' },
       { url: '/demo/barber/waves.png', alt: 'Fresh 360 waves with skin fade — Detroit style' },
       { url: '/demo/barber/interior.png', alt: 'Detroit Cuts Barbershop interior — leather chairs and neon Open sign' },
       { url: '/demo/barber/two-barbers.png', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
       { url: '/demo/barber/about.png', alt: 'Detroit Cuts owner — proud to serve the community' },
-      { url: '/demo/barber/hero.png', alt: 'Fresh cut in progress — Detroit Cuts signature fade' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },

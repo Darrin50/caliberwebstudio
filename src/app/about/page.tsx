@@ -139,16 +139,16 @@ export default function AboutPage() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver, #D0D8E0)', lineHeight: 1.8 }}>
-                Caliber Web Studio was founded by <strong style={{ color: '#fff' }}>Darrin Singer</strong> in Detroit, MI — born out of frustration watching local businesses lose customers every single day because their online presence was terrible or nonexistent.
+                Caliber Web Studio was founded by <strong style={{ color: 'var(--text-primary)' }}>Darrin Singer</strong> in Detroit, MI — born out of frustration watching local businesses lose customers every single day because their online presence was terrible or nonexistent.
               </p>
               <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver, #D0D8E0)', lineHeight: 1.8 }}>
                 Great restaurants with no website. Skilled contractors invisible on Google. Shops with real community roots getting outranked by chains with bigger marketing budgets. The playing field was rigged — and it didn&apos;t have to be.
               </p>
               <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver, #D0D8E0)', lineHeight: 1.8 }}>
-                We built Caliber on a single belief: <strong style={{ color: '#fff' }}>every local business deserves enterprise-grade web technology at a price that makes sense.</strong> Not a $15/month template. Not a $20K agency engagement that takes months and delivers mediocre results. Something better.
+                We built Caliber on a single belief: <strong style={{ color: 'var(--text-primary)' }}>every local business deserves enterprise-grade web technology at a price that makes sense.</strong> Not a $15/month template. Not a $20K agency engagement that takes months and delivers mediocre results. Something better.
               </p>
               <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver, #D0D8E0)', lineHeight: 1.8 }}>
-                We&apos;re not a template shop. We&apos;re not freelancers piecing together projects. <strong style={{ color: '#fff' }}>We engineer growth systems</strong> — custom-built, AI-powered, and designed to make your business the obvious choice in your market.
+                We&apos;re not a template shop. We&apos;re not freelancers piecing together projects. <strong style={{ color: 'var(--text-primary)' }}>We engineer growth systems</strong> — custom-built, AI-powered, and designed to make your business the obvious choice in your market.
               </p>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
               {differentiators.map((item) => (
                 <div key={item.label} className="diff-card" style={{ background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '12px', padding: '36px 32px' }}>
                   <div style={{ fontSize: '32px', marginBottom: '16px' }}>{item.icon}</div>
-                  <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '20px', color: '#fff', marginBottom: '12px' }}>{item.label}</h3>
+                  <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '20px', color: 'var(--text-primary)', marginBottom: '12px' }}>{item.label}</h3>
                   <p style={{ fontSize: '15px', color: 'var(--chrome, #A8B8C8)', lineHeight: 1.7 }}>{item.body}</p>
                 </div>
               ))}
@@ -183,7 +183,7 @@ export default function AboutPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2px', background: 'var(--border, rgba(168,184,200,0.12))' }}>
               {stats.map((stat) => (
                 <div key={stat.label} style={{ background: 'var(--bg, #141414)', padding: '48px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(48px,6vw,72px)', color: '#fff', lineHeight: 1 }}>{stat.value}</div>
+                  <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(48px,6vw,72px)', color: 'var(--text-primary)', lineHeight: 1 }}>{stat.value}</div>
                   <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)' }}>{stat.label}</div>
                 </div>
               ))}
@@ -207,7 +207,7 @@ export default function AboutPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border, rgba(168,184,200,0.12))' }}>
               {techStack.map((item) => (
                 <div key={item.name} style={{ display: 'flex', alignItems: 'flex-start', gap: '32px', padding: '32px 40px', background: 'var(--bg, #141414)', flexWrap: 'wrap' }}>
-                  <div style={{ minWidth: '220px', fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '18px', color: '#fff' }}>{item.name}</div>
+                  <div style={{ minWidth: '220px', fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '18px', color: 'var(--text-primary)' }}>{item.name}</div>
                   <div style={{ flex: 1, fontSize: '15px', color: 'var(--chrome, #A8B8C8)', lineHeight: 1.7 }}>{item.desc}</div>
                 </div>
               ))}

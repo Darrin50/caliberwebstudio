@@ -215,11 +215,9 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Soul Food Restaurant',
     tagline: "From Facebook menu posts to catering inquiries rolling in.",
     accentColor: '#D4A017',
-    heroImg:
-      'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80',
+    heroImg: '/demo/restaurant/hero.jpg',
     heroAlt: "Detroit's Kitchen soul food restaurant",
-    cardImg:
-      'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+    cardImg: '/demo/restaurant/soul-food-plate.jpg',
     keyMetric: '5×',
     keyMetricLabel: 'Catering Inquiries Per Month',
     cardDesc:

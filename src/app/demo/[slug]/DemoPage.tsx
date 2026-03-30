@@ -126,14 +126,14 @@ const DEMO_DATA: Record<string, {
     },
   },
   'detroits-kitchen': {
-    heroImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+    heroImg: '/demo/restaurant/hero.jpg',
     heroAlt: "Detroit's Kitchen soul food restaurant in Detroit MI",
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80', alt: 'Soul food spread' },
-      { url: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80', alt: 'Home-cooked meal' },
-      { url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80', alt: 'Restaurant dining room' },
+      { url: '/demo/restaurant/fried-chicken.jpg', alt: 'Golden crispy fried chicken platter' },
+      { url: '/demo/restaurant/soul-food-plate.jpg', alt: 'Soul food spread with sides' },
+      { url: '/demo/restaurant/mac-and-cheese.jpg', alt: 'Creamy homemade mac and cheese' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+    aboutImg: '/demo/restaurant/chef.jpg',
     theme: {
       bg: '#1a0a0a', bg2: '#2a1408', bg3: '#3d2010',
       accent: '#D4A017', accent2: '#B8860B',

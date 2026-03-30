@@ -167,14 +167,6 @@ export default function TermsPage() {
               <ul>
                 <li>
                   <strong style={{ color: "var(--silver)" }}>
-                    Initial Commitment:
-                  </strong>{" "}
-                  All plans begin with a 12-month initial commitment period.
-                  During this period, the monthly fee will be billed
-                  automatically each month.
-                </li>
-                <li>
-                  <strong style={{ color: "var(--silver)" }}>
                     Billing Cycle:
                   </strong>{" "}
                   Subscriptions are billed monthly on the same date each month.
@@ -185,17 +177,15 @@ export default function TermsPage() {
                   <strong style={{ color: "var(--silver)" }}>
                     Cancellation:
                   </strong>{" "}
-                  After the 12-month initial commitment, you may cancel at any
-                  time by providing 30 days' written notice to{" "}
+                  You may cancel at any time by providing 30 days' written
+                  notice to{" "}
                   <a
                     href="mailto:darrin@caliberwebstudio.com"
                     style={{ color: "var(--accent)" }}
                   >
                     darrin@caliberwebstudio.com
                   </a>
-                  . Cancellation during the initial 12-month commitment period
-                  may result in an early termination fee equal to the remaining
-                  monthly fees owed for that period.
+                  . There are no long-term contracts or early termination fees.
                 </li>
                 <li>
                   <strong style={{ color: "var(--silver)" }}>
@@ -378,9 +368,8 @@ export default function TermsPage() {
               <ul>
                 <li>
                   <strong style={{ color: "var(--silver)" }}>By You:</strong>{" "}
-                  After the 12-month initial commitment period, with 30 days'
-                  written notice. During the initial period, termination may
-                  result in early termination fees as described in Section 2.
+                  At any time, with 30 days' written notice. There are no
+                  early termination fees.
                 </li>
                 <li>
                   <strong style={{ color: "var(--silver)" }}>By Us:</strong> We

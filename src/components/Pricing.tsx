@@ -87,7 +87,7 @@ export default function Pricing() {
             marginBottom: '80px',
           }}
         >
-          No setup fees. Commit to 12 months and watch your business grow. Just results.
+          No setup fees. No contracts. Pay monthly, cancel anytime with 30 days notice. Just results.
         </p>
 
         {/* Pricing Cards Grid */}
@@ -267,7 +267,7 @@ export default function Pricing() {
             letterSpacing: '0.05em',
           }}
         >
-          All plans include free website mockup • $0 down • 12-month service agreement
+          All plans include free website mockup • $0 down • cancel anytime with 30 days notice
         </div>
       </div>
     </section>

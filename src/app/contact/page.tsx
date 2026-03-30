@@ -134,7 +134,7 @@ export default function ContactPage() {
               Ready to see the pricing?
             </h2>
             <p style={{ color: "var(--text-secondary)", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7 }}>
-              All plans start at $0 down. No contracts for the first 12 months.
+              All plans start at $0 down. No contracts — ever. Cancel anytime with 30 days notice.
             </p>
             <Link href="/pricing" style={{ display: "inline-block", padding: "14px 36px", background: "var(--accent, #0070f3)", color: "#fff", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", letterSpacing: "0.02em" }}>
               View Pricing Plans

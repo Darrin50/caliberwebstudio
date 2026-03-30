@@ -49,10 +49,10 @@ const differentiators = [
 ];
 
 const stats = [
-  { value: '30+', label: 'Sites Launched' },
-  { value: '3', label: 'Day Avg. Launch Time' },
-  { value: '100%', label: 'Client Satisfaction' },
-  { value: '30+', label: 'Blog Posts Published' },
+  { value: '$0', label: 'Down to Start' },
+  { value: '48hr', label: 'Mockup Turnaround' },
+  { value: '5–7', label: 'Days to Launch' },
+  { value: '30', label: 'In-Depth Guides Published' },
 ];
 
 const techStack = [
@@ -177,9 +177,9 @@ export default function AboutPage() {
         {/* ── The Numbers ── */}
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))', background: 'rgba(30,61,143,0.06)' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-            <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>By the Numbers</p>
+            <p className="fu" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>How We Work</p>
             <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: '64px', lineHeight: 1.1 }}>
-              Results, Not Promises
+              Built Around Your Confidence
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2px', background: 'var(--border, rgba(168,184,200,0.12))' }}>
               {stats.map((stat) => (
@@ -190,7 +190,7 @@ export default function AboutPage() {
               ))}
             </div>
             <p style={{ marginTop: '32px', fontSize: '13px', color: 'var(--dim, rgba(208,216,224,0.45))', fontStyle: 'italic' }}>
-              100% satisfaction backed by our demo-first model — you love it before you pay for it.
+              Demo-first model — you see exactly what you're getting before you ever pay a cent.
             </p>
           </div>
         </section>

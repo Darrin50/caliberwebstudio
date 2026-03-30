@@ -82,7 +82,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
           }}
         >
           We build high-performance websites that rank, convert, and grow your
-          business. $0 down to start — lock in a 12-month growth plan.
+          business. $0 down — see your free mockup before you ever pay a cent.
         </p>
 
         {/* CTA Buttons — FIX 3: primary CTA now links to /contact page */}
@@ -140,7 +140,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             color: 'var(--navy)',
             marginBottom: '32px',
             textAlign: 'center',
-          }}>By the Numbers</p>
+          }}>How It Works</p>
         <div
           style={{
             display: 'grid',
@@ -149,9 +149,9 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
           }}
         >
           {[
-            { metric: '500+', label: 'Businesses Served' },
-            { metric: '97%', label: 'Client Retention' },
             { metric: '$0', label: 'Down to Start' },
+            { metric: '48hr', label: 'Mockup Turnaround' },
+            { metric: '100%', label: 'Free Until You Approve' },
           ].map((stat) => (
             <div key={stat.label} style={{ textAlign: 'center' }}>
               <div

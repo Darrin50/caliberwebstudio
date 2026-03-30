@@ -97,13 +97,13 @@ const DEMO_DATA: Record<string, {
 
   'luxe-salon': {
     heroImg: '/demo/salon/hero-ponytail.png',
-    heroAlt: 'Sleek ponytail with laid baby hairs — Luxe Beauty Studio Detroit',
+    heroAlt: 'Black woman with stunning natural afro — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: '/demo/salon/fulani-braids.png', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
-      { url: '/demo/salon/pixie-cut.png', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
+      { url: '/demo/salon/fulani-braids.png', alt: 'Senegalese twist braids — flawless protective style at Luxe Beauty Studio' },
+      { url: '/demo/salon/pixie-cut.png', alt: 'Natural TWA pixie cut — defined and gorgeous at Luxe Beauty Studio' },
       { url: '/demo/salon/silk-press.png', alt: 'Bone-straight silk press — long, sleek, damage-free' },
-      { url: '/demo/salon/twist-braids.png', alt: 'Twist braids — protective style goals' },
-      { url: '/demo/salon/hero-ponytail.png', alt: 'Beautiful natural style — volume and definition on point' },
+      { url: '/demo/salon/twist-braids.png', alt: 'Long box braids — protective style goals at Luxe Beauty Studio Detroit' },
+      { url: '/demo/salon/hero-ponytail.png', alt: 'Beautiful natural afro — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },

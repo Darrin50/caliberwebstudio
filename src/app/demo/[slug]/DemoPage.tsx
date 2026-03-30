@@ -23,24 +23,24 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: '/demo/barber/detroit-cuts-hero.png',
+    heroImg: 'https://images.unsplash.com/photo-N9nFgunCLAc?w=1200&auto=format&fit=crop&q=80',
     heroAlt: 'Black barber giving a fresh fade to a client at Detroit Cuts Barbershop',
     gallery: [
-      { url: '/demo/barber/fade-closeup.png', alt: 'Clean taper fade close-up — precision lineup' },
-      { url: '/demo/barber/waves.png', alt: 'Fresh 360 waves with skin fade — Detroit style' },
-      { url: '/demo/barber/interior.png', alt: 'Detroit Cuts Barbershop interior — leather chairs and neon Open sign' },
-      { url: '/demo/barber/detroit-cuts-client.png', alt: 'Young Black man sitting in the barber chair at Detroit Cuts' },
-      { url: '/demo/barber/detroit-cuts-client-2.png', alt: 'Young man in the barber chair getting a fresh cut at Detroit Cuts' },
-      { url: '/demo/barber/two-barbers.png', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
-      { url: '/demo/barber/about.png', alt: 'Detroit Cuts owner — proud to serve the community' },
-      { url: '/demo/barber/hero.png', alt: 'Fresh cut in progress — Detroit Cuts signature fade' },
+      { url: 'https://images.unsplash.com/photo-mDmYTytLFMA?w=800&auto=format&fit=crop&q=80', alt: 'Clean taper fade close-up — precision lineup' },
+      { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&auto=format&fit=crop&q=80', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: 'https://images.unsplash.com/photo-BX8OTlmHOaI?w=800&auto=format&fit=crop&q=80', alt: 'Detroit Cuts Barbershop interior — leather chairs and neon Open sign' },
+      { url: 'https://images.unsplash.com/photo-lCtgUXYrqCo?w=800&auto=format&fit=crop&q=80', alt: 'Young Black man sitting in the barber chair at Detroit Cuts' },
+      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&auto=format&fit=crop&q=80', alt: 'Young man in the barber chair getting a fresh cut at Detroit Cuts' },
+      { url: 'https://images.unsplash.com/photo-CCTCHXEsan8?w=800&auto=format&fit=crop&q=80', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: 'https://images.unsplash.com/photo-B1LNDUtInxA?w=800&auto=format&fit=crop&q=80', alt: 'Detroit Cuts owner — proud to serve the community' },
+      { url: 'https://images.unsplash.com/photo-N9nFgunCLAc?w=800&auto=format&fit=crop&q=80', alt: 'Fresh cut in progress — Detroit Cuts signature fade' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: '/demo/barber/about.png',
+    aboutImg: 'https://images.unsplash.com/photo-B1LNDUtInxA?w=800&auto=format&fit=crop&q=80',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -57,13 +57,13 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: '/demo/plumbing/hero.png',
+    heroImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80',
     heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
     gallery: [
       { url: '/demo/plumbing/pipes.png', alt: 'Copper pipe connection — professional plumbing work' },
       { url: '/demo/plumbing/water-heater.png', alt: 'Water heater installation in progress' },
       { url: '/demo/plumbing/about.png', alt: 'Metro Plumbing van — on the way to your home' },
-      { url: '/demo/plumbing/hero.png', alt: 'Plumber working under kitchen sink — same-day service' },
+      { url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop&q=80', alt: 'Plumber working under kitchen sink — same-day service' },
     ],
     beforeAfter: [
       {
@@ -96,21 +96,21 @@ const DEMO_DATA: Record<string, {
   },
 
   'luxe-salon': {
-    heroImg: '/demo/salon/hero-ponytail.png',
-    heroAlt: 'Sleek ponytail with laid baby hairs — Luxe Beauty Studio Detroit',
+    heroImg: 'https://images.unsplash.com/photo-xmSWVeGEnJw?w=1200&auto=format&fit=crop&q=80',
+    heroAlt: 'Black woman with full natural afro — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: '/demo/salon/fulani-braids.png', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
-      { url: '/demo/salon/pixie-cut.png', alt: 'Chic pixie cut — styled and sleek at Luxe Beauty Studio' },
-      { url: '/demo/salon/silk-press.png', alt: 'Bone-straight silk press — long, sleek, damage-free' },
-      { url: '/demo/salon/twist-braids.png', alt: 'Twist braids — protective style goals' },
-      { url: '/demo/salon/hero-ponytail.png', alt: 'Beautiful natural style — volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-tS4DRCx3Sfw?w=800&auto=format&fit=crop&q=80', alt: 'Box braids being installed — flawless feed-in technique' },
+      { url: 'https://images.unsplash.com/photo-62wQhEghaw0?w=800&auto=format&fit=crop&q=80', alt: 'Natural afro — styled and radiant at Luxe Beauty Studio' },
+      { url: 'https://images.unsplash.com/photo-HyoTmwZQwWU?w=800&auto=format&fit=crop&q=80', alt: 'Full natural afro — volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-EUedgXxvTAs?w=800&auto=format&fit=crop&q=80', alt: 'Twist braids — protective style goals' },
+      { url: 'https://images.unsplash.com/photo-DjfAARZ4D1I?w=800&auto=format&fit=crop&q=80', alt: 'Natural styles — Black women celebrating their hair' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: '/demo/salon/silk-press.png',
+    aboutImg: 'https://images.unsplash.com/photo-0i7fbspgDaY?w=800&auto=format&fit=crop&q=80',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -126,14 +126,14 @@ const DEMO_DATA: Record<string, {
     },
   },
   'detroits-kitchen': {
-    heroImg: '/demo/restaurant/hero.jpg',
+    heroImg: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&auto=format&fit=crop&q=80',
     heroAlt: "Detroit's Kitchen soul food restaurant in Detroit MI",
     gallery: [
-      { url: '/demo/restaurant/fried-chicken.jpg', alt: 'Golden crispy fried chicken platter' },
-      { url: '/demo/restaurant/soul-food-plate.jpg', alt: 'Soul food spread with sides' },
-      { url: '/demo/restaurant/mac-and-cheese.jpg', alt: 'Creamy homemade mac and cheese' },
+      { url: 'https://images.unsplash.com/photo-NbXjZomyNEM?w=800&auto=format&fit=crop&q=80', alt: 'Golden crispy fried chicken platter' },
+      { url: 'https://images.unsplash.com/photo-D7553GOff0k?w=800&auto=format&fit=crop&q=80', alt: 'Chicken and waffles — Detroit soul food classic' },
+      { url: 'https://images.unsplash.com/photo-OYqXprumKqM?w=800&auto=format&fit=crop&q=80', alt: 'Creamy homemade mac and cheese' },
     ],
-    aboutImg: '/demo/restaurant/chef.jpg',
+    aboutImg: 'https://images.unsplash.com/photo-CwMdIMCB0LU?w=800&auto=format&fit=crop&q=80',
     theme: {
       bg: '#1a0a0a', bg2: '#2a1408', bg3: '#3d2010',
       accent: '#D4A017', accent2: '#B8860B',

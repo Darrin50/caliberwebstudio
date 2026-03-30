@@ -95,7 +95,11 @@ export default async function CaseStudyPage({ params }: Props) {
           />
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.88) 100%)',
+            background: 'rgba(0,0,0,0.6)',
+          }} />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.55) 100%)',
           }} />
           <div style={{
             position: 'relative', zIndex: 2,

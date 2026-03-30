@@ -27,7 +27,7 @@ export default function ContactPage() {
             <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "16px", fontFamily: "'Space Mono', monospace" }}>
               Free Strategy Call
             </p>
-            <h1 style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)", fontWeight: 800, lineHeight: 1.1, color: "#ffffff", marginBottom: "20px", letterSpacing: "-0.02em", position: "relative", zIndex: 10 }}>
+            <h1 style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)", fontWeight: 800, lineHeight: 1.1, color: "var(--text-primary)", marginBottom: "20px", letterSpacing: "-0.02em", position: "relative", zIndex: 10 }}>
               Let&apos;s Build Something
             </h1>
             <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "560px", margin: "0 auto", lineHeight: 1.7 }}>
@@ -38,7 +38,7 @@ export default function ContactPage() {
           <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
             {/* Contact Form */}
             <div style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "20px", padding: "40px 36px" }}>
-              <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#ffffff", marginBottom: "28px", letterSpacing: "-0.01em" }}>
+              <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "28px", letterSpacing: "-0.01em" }}>
                 Book Your Free Strategy Call
               </h2>
               <form action="https://formsubmit.co/singerdarrin50.ds@gmail.com" method="POST" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -47,28 +47,28 @@ export default function ContactPage() {
                 <input type="hidden" name="_captcha" value="false" />
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Name *</label>
-                  <input type="text" name="name" required placeholder="Your full name" style={{ width: "100%", padding: "12px 16px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
+                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Name *</label>
+                  <input type="text" name="name" required placeholder="Your full name" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Business Name *</label>
-                  <input type="text" name="business_name" required placeholder="Your business name" style={{ width: "100%", padding: "12px 16px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
+                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Business Name *</label>
+                  <input type="text" name="business_name" required placeholder="Your business name" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Phone</label>
-                  <input type="tel" name="phone" placeholder="(313) 555-0100" style={{ width: "100%", padding: "12px 16px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
+                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Phone</label>
+                  <input type="tel" name="phone" placeholder="(313) 555-0100" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Email *</label>
-                  <input type="email" name="email" required placeholder="you@yourbusiness.com" style={{ width: "100%", padding: "12px 16px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
+                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Email *</label>
+                  <input type="email" name="email" required placeholder="you@yourbusiness.com" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Tell Us About Your Business</label>
-                  <textarea name="message" rows={4} placeholder="What kind of business do you run? What are your biggest challenges right now?" style={{ width: "100%", padding: "12px 16px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none", resize: "vertical" }} />
+                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Tell Us About Your Business</label>
+                  <textarea name="message" rows={4} placeholder="What kind of business do you run? What are your biggest challenges right now?" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none", resize: "vertical" }} />
                 </div>
 
                 <button type="submit" style={{ padding: "14px 32px", background: "var(--accent, #0070f3)", color: "#fff", border: "none", borderRadius: "9px", fontWeight: 700, fontSize: "1rem", cursor: "pointer", letterSpacing: "0.02em", marginTop: "4px" }}>
@@ -80,7 +80,7 @@ export default function ContactPage() {
             {/* Right Side */}
             <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
               <div>
-                <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#ffffff", marginBottom: "20px", letterSpacing: "-0.01em" }}>
+                <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px", letterSpacing: "-0.01em" }}>
                   What Happens Next?
                 </h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -94,8 +94,8 @@ export default function ContactPage() {
                         {item.step}
                       </div>
                       <div>
-                        <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#ffffff", marginBottom: "4px" }}>{item.title}</div>
-                        <div style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.6 }}>{item.desc}</div>
+                        <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "4px" }}>{item.title}</div>
+                        <div style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>{item.desc}</div>
                       </div>
                     </div>
                   ))}
@@ -103,19 +103,19 @@ export default function ContactPage() {
               </div>
 
               <div style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "16px", padding: "28px" }}>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#ffffff", marginBottom: "20px" }}>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "20px" }}>
                   Prefer to reach out directly?
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-                  <a href="mailto:hello@caliberwebstudio.com" style={{ display: "flex", alignItems: "center", gap: "12px", color: "rgba(255,255,255,0.7)", textDecoration: "none", fontSize: "0.9rem" }}>
+                  <a href="mailto:hello@caliberwebstudio.com" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
                     <span style={{ fontSize: "1.1rem" }}>✉️</span>
                     hello@caliberwebstudio.com
                   </a>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "rgba(255,255,255,0.7)", fontSize: "0.9rem" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
                     <span style={{ fontSize: "1.1rem" }}>📍</span>
                     Detroit, Michigan
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "rgba(255,255,255,0.7)", fontSize: "0.9rem" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
                     <span style={{ fontSize: "1.1rem" }}>⏱️</span>
                     Response within 1 business day
                   </div>
@@ -126,10 +126,10 @@ export default function ContactPage() {
 
           {/* Bottom CTA */}
           <div style={{ textAlign: "center", marginTop: "80px", padding: "52px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
-            <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "#ffffff", marginBottom: "14px", letterSpacing: "-0.01em" }}>
+            <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "14px", letterSpacing: "-0.01em" }}>
               Ready to see the pricing?
             </h2>
-            <p style={{ color: "rgba(255,255,255,0.65)", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7 }}>
+            <p style={{ color: "var(--text-secondary)", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7 }}>
               All plans start at $0 down. No contracts for the first 12 months.
             </p>
             <Link href="/pricing" style={{ display: "inline-block", padding: "14px 36px", background: "var(--accent, #0070f3)", color: "#fff", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", letterSpacing: "0.02em" }}>
@@ -140,7 +140,8 @@ export default function ContactPage() {
       </main>
       <Footer />
       <style>{`
-        input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
+        input::placeholder, textarea::placeholder { color: rgba(14,16,32,0.35); }
+        [data-theme="dark"] input::placeholder, [data-theme="dark"] textarea::placeholder { color: rgba(255,255,255,0.25); }
         input:focus, textarea:focus { border-color: rgba(0,112,243,0.5) !important; box-shadow: 0 0 0 3px rgba(0,112,243,0.12); }
         @media (max-width: 768px) {
           .contact-grid { grid-template-columns: 1fr !important; }

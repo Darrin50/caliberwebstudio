@@ -12,7 +12,7 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     "slug": "best-web-designer-detroit",
-    "thumbnail": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80",
+    "thumbnail": "/blog/best-web-designer-detroit-thumb.jpg",
     "title": "Best Web Designer in Detroit \u2014 What to Look For (and Why Caliber Wins)",
     "description": "Looking for the best web designer in Detroit? Here's what separates elite agencies from average ones \u2014 and why Caliber Web Studio is Metro Detroit's top choice for small businesses.",
     "date": "2025-01-06",

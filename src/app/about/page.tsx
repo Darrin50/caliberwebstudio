@@ -90,6 +90,7 @@ const aboutSchema = {
       addressRegion: 'MI',
       addressCountry: 'US',
     },
+    telephone: '+13137992315',
     description: 'AI-powered website design and development for Detroit small businesses.',
     url: 'https://caliberwebstudio.com',
     areaServed: 'Detroit Metropolitan Area',

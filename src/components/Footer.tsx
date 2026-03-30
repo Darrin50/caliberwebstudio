@@ -115,7 +115,7 @@ export default function Footer() {
               Detroit, MI
             </span>
             <a
-              href="tel:+13139438052"
+              href="tel:+13137992315"
               style={{
                 fontFamily: "'Space Mono', monospace",
                 fontSize: '10px',
@@ -127,7 +127,7 @@ export default function Footer() {
               onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}
             >
-              (313) 943-8052
+              (313) 799-2315
             </a>
           </div>
 

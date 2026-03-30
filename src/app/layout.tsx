@@ -92,6 +92,7 @@ const localBusinessSchema = {
   logo: "https://caliberwebstudio.com/logo-full-hero.png",
   image: "https://caliberwebstudio.com/logo-full-hero.png",
   email: "darrin@caliberwebstudio.com",
+  telephone: "+13137992315",
   description:
     "Caliber Web Studio is Detroit\u2019s premier AI-powered web agency founded by Darrin Singer. We design and build high-performance websites for local businesses that rank on Google, convert visitors into customers, and drive measurable growth. Plans start at $197/mo with $0 down.",
   founder: {

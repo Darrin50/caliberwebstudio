@@ -233,3 +233,80 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
 [data-theme="light"] .stats-strip .stat-label {
   color: #374151 !important;
 }
+
+/* ── Comprehensive light mode contrast: text-bearing semantic elements ── */
+
+/* Extend heading coverage to h4-h6 */
+[data-theme="light"] main h4,
+[data-theme="light"] main h5,
+[data-theme="light"] main h6 {
+  color: #0e1020 !important;
+}
+
+/* Bold/emphasis inline text (e.g. founder names, key phrases) */
+[data-theme="light"] main strong,
+[data-theme="light"] main b {
+  color: var(--white) !important;
+}
+
+/* Body paragraphs — covers hardcoded rgba(255,255,255,x) */
+[data-theme="light"] main p {
+  color: var(--text-secondary) !important;
+}
+
+/* List items */
+[data-theme="light"] main li {
+  color: var(--text-secondary) !important;
+}
+
+/* Form labels */
+[data-theme="light"] main label {
+  color: var(--text-secondary) !important;
+}
+
+/* Form inputs and textareas */
+[data-theme="light"] main input:not([type="hidden"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+[data-theme="light"] main textarea {
+  color: var(--white) !important;
+  background: rgba(14,16,32,0.05) !important;
+  border-color: var(--border-color) !important;
+}
+[data-theme="light"] main input::placeholder,
+[data-theme="light"] main textarea::placeholder {
+  color: rgba(14,16,32,0.35) !important;
+}
+
+/* Contact-info and content links (mailto, tel, regular anchor text) */
+[data-theme="light"] main a[href^="mailto"],
+[data-theme="light"] main a[href^="tel"] {
+  color: var(--text-secondary) !important;
+}
+
+/* DIV text containers using font-family: Syne (stat values, headings, tech items) */
+/* Fix broken existing selector (fontFamily camelCase doesn't match DOM kebab-case) */
+[data-theme="light"] main section div[style*="font-family: Syne"],
+[data-theme="light"] main section div[style*="font-family:Syne"],
+[data-theme="light"] main div[style*="font-family: Syne"],
+[data-theme="light"] main div[style*="font-family: 'Syne'"] {
+  color: var(--white) !important;
+}
+
+/* DIV text containers using Space Mono (labels, step numbers text content) */
+[data-theme="light"] main div[style*="font-family: 'Space Mono'"],
+[data-theme="light"] main div[style*="font-family: Space Mono"] {
+  color: var(--text-secondary) !important;
+}
+
+/* Generic inline text divs with hardcoded white — catch step titles, card text */
+/* Scope tightly: only divs in sections with fontSize set (text-bearing, not layout) */
+[data-theme="light"] main section div[style*="fontSize: \"0.95rem\""],
+[data-theme="light"] main section div[style*="fontSize: \"0.875rem\""],
+[data-theme="light"] main section div[style*="font-size: 0.95rem"],
+[data-theme="light"] main section div[style*="font-size: 0.875rem"] {
+  color: var(--text-secondary) !important;
+}
+
+/* 3D hero canvas: improve contrast on light background via blend mode */
+[data-theme="light"] #hero-canvas {
+  mix-blend-mode: multiply;
+}

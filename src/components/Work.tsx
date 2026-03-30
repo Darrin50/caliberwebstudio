@@ -1,39 +1,38 @@
 'use client';
 
 export default function Work() {
-  const projects = [
+  const demos = [
     {
-      category: 'HVAC',
-      title: 'Detroit HVAC Company',
-      result: 'Page 3 → Page 1 in 6 weeks',
-      description: 'Full AI website, chatbot, GBP optimization, and review automation. Went from 12 Google reviews to 200+ in 90 days.',
-      metrics: [
-        { value: '200+', label: 'Reviews' },
-        { value: '6 wks', label: 'To Page 1' },
-        { value: '340%', label: 'ROI' },
-      ],
+      slug: 'detroit-cuts',
+      category: 'Barbershop',
+      title: 'Detroit Cuts',
+      description:
+        'Online booking, photo gallery, AI chatbot for after-hours, and Google Maps integration. Everything a barbershop needs to fill its calendar.',
+      features: ['Online Booking', 'Photo Gallery', 'AI Chatbot', 'Mobile-First'],
     },
     {
-      category: 'Home Services',
-      title: 'Metro Remodeling Co.',
-      result: '40% drop in lead costs',
-      description: 'AI-powered website with smart lead scoring, automated follow-ups, and review engine. Cut cost per lead nearly in half.',
-      metrics: [
-        { value: '40%', label: 'Lower CPL' },
-        { value: '3x', label: 'More Leads' },
-        { value: '250%', label: 'ROI' },
-      ],
+      slug: 'metro-plumbing',
+      category: 'Plumbing',
+      title: 'Metro Plumbing & Drain',
+      description:
+        'Emergency call CTA above the fold, service area pages built for local SEO, and a 24/7 lead capture form that routes to the on-call team.',
+      features: ['Emergency CTA', 'Service Area Pages', 'Lead Capture', 'Trust Signals'],
     },
     {
-      category: 'Legal',
-      title: 'Southfield Law Firm',
-      result: '#1 for "injury lawyer Southfield"',
-      description: 'Custom website with AI chatbot for case intake, GBP domination strategy, and automated review system for client testimonials.',
-      metrics: [
-        { value: '#1', label: 'Local Rank' },
-        { value: '85+', label: 'Reviews' },
-        { value: '400%', label: 'ROI' },
-      ],
+      slug: 'luxe-salon',
+      category: 'Beauty / Salon',
+      title: 'Luxe Beauty Studio',
+      description:
+        'Gallery-first design, online booking with stylist selection, natural hair SEO structure, and an embedded Instagram feed.',
+      features: ['Online Booking', 'Gallery Design', 'Natural Hair SEO', 'Instagram Feed'],
+    },
+    {
+      slug: 'detroits-kitchen',
+      category: 'Restaurant',
+      title: "Detroit's Kitchen",
+      description:
+        'Online menu, catering inquiry form, AI chatbot for FAQs, and a private events page to capture that revenue stream.',
+      features: ['Online Menu', 'Catering Form', 'AI Chatbot', 'Events Page'],
     },
   ];
 
@@ -49,7 +48,7 @@ export default function Work() {
     >
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
         {/* Section Label */}
-        <div className="sec-label fu">Case Studies</div>
+        <div className="sec-label fu">Live Demo Sites</div>
 
         {/* Heading */}
         <h2
@@ -65,7 +64,7 @@ export default function Work() {
             maxWidth: '900px',
           }}
         >
-          Real Businesses. Real Results.
+          We Don&apos;t Just Talk About It.
         </h2>
 
         <p
@@ -77,24 +76,27 @@ export default function Work() {
             lineHeight: 1.6,
             color: 'var(--dim)',
             marginBottom: '80px',
-            maxWidth: '600px',
+            maxWidth: '640px',
           }}
         >
-          Every project is a partnership. Here&apos;s the kind of growth AI-powered systems deliver.
+          These aren&apos;t mockups or screenshots — they&apos;re live, working websites built with
+          the same AI-powered system we&apos;ll use for your business. Pick your industry and click
+          through.
         </p>
 
-        {/* Case Study Cards */}
+        {/* Demo Cards */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '28px',
             marginBottom: '60px',
           }}
         >
-          {projects.map((project) => (
-            <div
-              key={project.title}
+          {demos.map((demo) => (
+            <a
+              key={demo.slug}
+              href={`/demo/${demo.slug}`}
               className="fu case-card"
               style={{
                 background: 'var(--bg2)',
@@ -103,6 +105,8 @@ export default function Work() {
                 overflow: 'hidden',
                 transition: 'border-color 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease',
                 position: 'relative',
+                textDecoration: 'none',
+                display: 'block',
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLElement;
@@ -128,6 +132,7 @@ export default function Work() {
                   zIndex: 1,
                 }}
               />
+
               {/* Category Tag */}
               <div style={{ padding: '32px 32px 0', position: 'relative', zIndex: 2 }}>
                 <span
@@ -142,7 +147,7 @@ export default function Work() {
                     borderRadius: '2px',
                   }}
                 >
-                  {project.category}
+                  {demo.category}
                 </span>
               </div>
 
@@ -154,24 +159,12 @@ export default function Work() {
                     fontSize: '22px',
                     fontWeight: 700,
                     color: 'var(--silver)',
-                    marginBottom: '8px',
+                    marginBottom: '12px',
                     lineHeight: 1.3,
                   }}
                 >
-                  {project.title}
+                  {demo.title}
                 </h3>
-
-                <div
-                  style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: '16px',
-                    fontWeight: 700,
-                    color: 'var(--navy)',
-                    marginBottom: '16px',
-                  }}
-                >
-                  {project.result}
-                </div>
 
                 <p
                   style={{
@@ -180,74 +173,85 @@ export default function Work() {
                     fontWeight: 400,
                     lineHeight: 1.6,
                     color: 'var(--dim)',
-                    marginBottom: '28px',
+                    marginBottom: '20px',
                   }}
                 >
-                  {project.description}
+                  {demo.description}
                 </p>
+
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '24px' }}>
+                  {demo.features.map((f) => (
+                    <span
+                      key={f}
+                      style={{
+                        fontFamily: "'Space Mono', monospace",
+                        fontSize: '9px',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        color: 'var(--chrome)',
+                        padding: '3px 8px',
+                        background: 'rgba(168,184,200,0.08)',
+                        borderRadius: '2px',
+                      }}
+                    >
+                      {f}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* Metrics Row */}
+              {/* View Demo Footer */}
               <div
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: `repeat(${project.metrics.length}, 1fr)`,
+                  padding: '16px 32px',
                   borderTop: '1px solid var(--border)',
                   background: 'linear-gradient(180deg, rgba(30,61,143,0.04) 0%, transparent 100%)',
                   position: 'relative',
                   zIndex: 2,
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
                 }}
               >
-                {project.metrics.map((metric) => (
-                  <div
-                    key={metric.label}
-                    style={{
-                      padding: '20px',
-                      textAlign: 'center',
-                      borderRight: '1px solid var(--border)',
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontFamily: "'Syne', sans-serif",
-                        fontSize: '24px',
-                        fontWeight: 800,
-                        color: 'var(--chrome)',
-                        lineHeight: 1,
-                        marginBottom: '6px',
-                      }}
-                    >
-                      {metric.value}
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "'Space Mono', monospace",
-                        fontSize: '9px',
-                        letterSpacing: '0.08em',
-                        textTransform: 'uppercase',
-                        color: 'var(--dim)',
-                      }}
-                    >
-                      {metric.label}
-                    </div>
-                  </div>
-                ))}
+                <span
+                  style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: '10px',
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    color: 'var(--navy)',
+                    fontWeight: 700,
+                  }}
+                >
+                  View Live Demo →
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: '9px',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    color: 'var(--dim)',
+                  }}
+                >
+                  Working Site
+                </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
         {/* CTA */}
         <div className="fu" style={{ textAlign: 'center' }}>
           <a
-            href="#contact"
+            href="/case-studies"
             className="btn-chrome"
             style={{
               textDecoration: 'none',
               display: 'inline-block',
             }}
           >
-            Get Results Like These →
+            Explore All Demo Sites →
           </a>
         </div>
       </div>

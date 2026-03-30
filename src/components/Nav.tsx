@@ -173,7 +173,7 @@ export default function Nav() {
   const navItems = [
     { label: 'Services', href: '/services' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Demo Sites', href: '/case-studies' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },

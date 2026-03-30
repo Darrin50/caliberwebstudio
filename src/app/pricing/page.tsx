@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: "Can I cancel anytime?",
-    a: "Plans start with a 12-month agreement. After month 12, cancel anytime with 30 days notice.",
+    a: "No contracts. Cancel anytime with 30 days written notice — no penalties, no questions.",
   },
   {
     q: "What payment methods do you accept?",

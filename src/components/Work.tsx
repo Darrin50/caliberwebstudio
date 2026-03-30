@@ -80,7 +80,7 @@ export default function Work() {
             maxWidth: '600px',
           }}
         >
-          Every project is a partnership. Here&apos;s what happens when businesses commit to 12 months of growth.
+          Every project is a partnership. Here&apos;s the kind of growth AI-powered systems deliver.
         </p>
 
         {/* Case Study Cards */}

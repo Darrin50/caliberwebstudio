@@ -27,7 +27,7 @@ export default function OnboardingLayout({ children }: { children: ReactNode }) 
     >
       {/* Theme variables */}
       <style>{`
-        #ob-root, [data-onboarding-theme="dark"] {
+        [data-onboarding-theme="dark"] {
           --ob-bg: #0A0A0A;
           --ob-card: #141414;
           --ob-input-bg: #1A1A1A;

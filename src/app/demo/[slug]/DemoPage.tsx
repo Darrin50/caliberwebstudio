@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import type { DemoConfig } from '../demos';
 
-/* âââ Per-slug photo & content data âââ */
+/* ─── Per-slug photo & content data ─── */
 const DEMO_DATA: Record<string, {
   heroImg: string;
   heroAlt: string;
@@ -26,14 +26,14 @@ const DEMO_DATA: Record<string, {
     heroImg: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80',
     heroAlt: 'Black barber giving a fresh fade to a client at Detroit Cuts Barbershop',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80', alt: 'Clean taper fade close-up â precision lineup' },
-      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80', alt: 'Fresh 360 waves with skin fade â Detroit style' },
-      { url: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80', alt: 'Detroit Cuts Barbershop â professional barber at work' },
+      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80', alt: 'Clean taper fade close-up — precision lineup' },
+      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80', alt: 'Fresh 360 waves with skin fade — Detroit style' },
+      { url: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80', alt: 'Detroit Cuts Barbershop — professional barber at work' },
       { url: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80', alt: 'Young Black man sitting in the barber chair at Detroit Cuts' },
-      { url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80', alt: 'Detroit Cuts owner â proud to serve the community' },
-      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80', alt: 'Barber crafting a precise fade â signature Detroit Cuts style' },
-      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80', alt: 'Two barbers working side by side â busy Saturday at Detroit Cuts' },
-      { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80', alt: 'Fresh cut in progress â Detroit Cuts signature fade' },
+      { url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80', alt: 'Detroit Cuts owner — proud to serve the community' },
+      { url: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80', alt: 'Barber crafting a precise fade — signature Detroit Cuts style' },
+      { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
+      { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80', alt: 'Fresh cut in progress — Detroit Cuts signature fade' },
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Been coming here two years. Jay keeps my fade tighter than anywhere else in the city. Period.' },
@@ -43,11 +43,11 @@ const DEMO_DATA: Record<string, {
     aboutImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
-      { num: '4.9â', label: 'Google Rating' },
+      { num: '4.9★', label: 'Google Rating' },
       { num: '8K+', label: 'Cuts Per Year' },
     ],
     ctaLabel: 'Call to Book Your Cut',
-    announceBar: 'âï¸ Walk-ins welcome Â· 2847 W Grand Blvd, Detroit Â· Open 6 days',
+    announceBar: '✂️ Walk-ins welcome · 2847 W Grand Blvd, Detroit · Open 6 days',
     theme: {
       bg: '#0a0a0a', bg2: '#111111', bg3: '#1a1a1a',
       accent: '#C9A84C', accent2: '#E8C470',
@@ -57,20 +57,20 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: '/demo/plumbing/plumber-hero.jpg',
+    heroImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80',
     heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80', alt: 'Copper pipe connection â professional plumbing work' },
+      { url: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80', alt: 'Copper pipe connection — professional plumbing work' },
       { url: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80', alt: 'Water heater installation in progress' },
-      { url: '/demo/plumbing/plumber-hero.jpg', alt: 'Metro Plumbing technician â same-day service' },
-      { url: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80', alt: 'Plumber working under kitchen sink â licensed and insured' },
+      { url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80', alt: 'Metro Plumbing technician — same-day service' },
+      { url: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80', alt: 'Plumber working under kitchen sink — licensed and insured' },
     ],
     beforeAfter: [
       {
         before: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80',
         after: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80',
-        beforeLabel: 'Clogged kitchen sink â standing water and debris buildup',
-        afterLabel: 'Drain cleared, sparkling clean â flowing like new',
+        beforeLabel: 'Clogged kitchen sink — standing water and debris buildup',
+        afterLabel: 'Drain cleared, sparkling clean — flowing like new',
         title: 'Kitchen Sink Drain Clearing',
       },
     ],
@@ -79,14 +79,14 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: '/demo/plumbing/plumber-about.jpg',
+    aboutImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
-      { num: '4.8â', label: 'Google Rating' },
+      { num: '4.8★', label: 'Google Rating' },
       { num: '3K+', label: 'Jobs Completed' },
     ],
-    ctaLabel: 'ð Call Now â 24/7 Emergency Line',
-    announceBar: 'ð¨ 24/7 Emergency Service Available Â· Licensed & Insured in Michigan',
+    ctaLabel: '📞 Call Now — 24/7 Emergency Line',
+    announceBar: '🚨 24/7 Emergency Service Available · Licensed & Insured in Michigan',
     theme: {
       bg: '#0A1628', bg2: '#0F1F3A', bg3: '#162848',
       accent: '#E8631A', accent2: '#F07A35',
@@ -97,27 +97,27 @@ const DEMO_DATA: Record<string, {
 
   'luxe-salon': {
     heroImg: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80',
-    heroAlt: 'Sleek ponytail with laid baby hairs â Luxe Beauty Studio Detroit',
+    heroAlt: 'Sleek ponytail with laid baby hairs — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80', alt: 'Fulani braids with honey-blonde highlights â flawless feed-in technique' },
-      { url: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&q=80', alt: 'Chic natural style â sleek and polished at Luxe Beauty Studio' },
-      { url: 'https://images.unsplash.com/photo-1595959183082-7b570b7e1e2b?w=800&q=80', alt: 'Bone-straight silk press â long, sleek, damage-free' },
-      { url: 'https://images.unsplash.com/photo-1562322140-8baeacacf281?w=800&q=80', alt: 'Protective style â twist braids goals' },
-      { url: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&q=80', alt: 'Beautiful natural style â volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80', alt: 'Fulani braids with honey-blonde highlights — flawless feed-in technique' },
+      { url: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&q=80', alt: 'Chic natural style — sleek and polished at Luxe Beauty Studio' },
+      { url: 'https://images.unsplash.com/photo-1595959183082-7b570b7e1e2b?w=800&q=80', alt: 'Bone-straight silk press — long, sleek, damage-free' },
+      { url: 'https://images.unsplash.com/photo-1562322140-8baeacacf281?w=800&q=80', alt: 'Protective style — twist braids goals' },
+      { url: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&q=80', alt: 'Beautiful natural style — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
-      { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing â my scalp felt so moisturized. These stylists really know locs.' },
+      { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
     aboutImg: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
-      { num: '4.9â', label: 'Google Rating' },
+      { num: '4.9★', label: 'Google Rating' },
       { num: '3K+', label: 'Clients Served' },
     ],
-    ctaLabel: 'ð Book Your Appointment',
-    announceBar: 'â¨ Now booking April appointments Â· 1205 Woodward Ave, Detroit Â· Tue â Sat',
+    ctaLabel: '💅 Book Your Appointment',
+    announceBar: '✨ Now booking April appointments · 1205 Woodward Ave, Detroit · Tue – Sat',
     theme: {
       bg: '#17101E', bg2: '#231830', bg3: '#30203F',
       accent: '#C9956C', accent2: '#E0AE89',
@@ -132,7 +132,7 @@ const DEMO_DATA: Record<string, {
       { url: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80', alt: 'Golden crispy fried chicken platter' },
       { url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80', alt: 'Soul food spread with sides' },
       { url: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80', alt: 'Creamy homemade mac and cheese' },
-      { url: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80', alt: 'Delicious soul food plate â Detroit\'s Kitchen' },
+      { url: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80', alt: 'Delicious soul food plate — Detroit\'s Kitchen' },
     ],
     aboutImg: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80',
     theme: {
@@ -141,7 +141,7 @@ const DEMO_DATA: Record<string, {
       text: '#f5f0e8', muted: '#c9bfad', light: '#fff8ec',
       radius: '8px',
     },
-    announceBar: 'Now Open Sundays 12â7pm â Dine In & Takeout Available',
+    announceBar: 'Now Open Sundays 12–7pm — Dine In & Takeout Available',
     stats: [
       { num: '22+', label: 'Years Serving Detroit' },
       { num: '40+', label: 'Menu Items' },
@@ -149,7 +149,7 @@ const DEMO_DATA: Record<string, {
     ],
     reviews: [
       { name: 'Marcus T.', stars: 5, text: 'Best soul food in Detroit, period. The smothered chicken is unbelievable.' },
-      { name: 'Denise W.', stars: 5, text: 'Feels like grandmaâs kitchen. Warm, welcoming, and absolutely delicious.' },
+      { name: 'Denise W.', stars: 5, text: 'Feels like grandma’s kitchen. Warm, welcoming, and absolutely delicious.' },
       { name: 'James R.', stars: 5, text: 'I drive 45 minutes just for their sweet potato pie. Worth every mile.' },
     ],
     ctaLabel: 'Get Your Restaurant Online',
@@ -160,7 +160,7 @@ function Stars({ count }: { count: number }) {
   return (
     <div style={{ display: 'flex', gap: 2, marginBottom: 12 }}>
       {Array.from({ length: count }).map((_, i) => (
-        <span key={i} style={{ color: '#F6C90E', fontSize: 15 }}>â</span>
+        <span key={i} style={{ color: '#F6C90E', fontSize: 15 }}>★</span>
       ))}
     </div>
   );
@@ -327,12 +327,12 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
 
         {data.announceBar && <div className="announce">{data.announceBar}</div>}
 
-        {/* ââ Nav ââ */}
+        {/* ── Nav ── */}
         <nav className="nav">
           <div className="nav-in">
             <div>
               <div className="logo-name">{config.businessName}</div>
-              <div className="logo-tag">{config.businessType} Â· Detroit, MI</div>
+              <div className="logo-tag">{config.businessType} · Detroit, MI</div>
             </div>
             <ul className="nav-links">
               <li><a href="#services">Services</a></li>
@@ -341,19 +341,19 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
               <li><a href="#contact">Contact</a></li>
             </ul>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-              <div className="nav-phone">ð {config.phone}</div>
+              <div className="nav-phone">📞 {config.phone}</div>
               <a href="#contact" className="nav-cta">{isPlumbing ? 'Call Now' : 'Book Now'}</a>
             </div>
           </div>
         </nav>
 
-        {/* ââ Hero ââ */}
+        {/* ── Hero ── */}
         <section className="hero">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={data.heroImg} alt={data.heroAlt} className="hero-img" />
           <div className="hero-ov" />
           <div className="hero-con">
-            <div className="hero-tag">{config.businessType} Â· Detroit, MI</div>
+            <div className="hero-tag">{config.businessType} · Detroit, MI</div>
             <h1 className="hero-title">
               {isBarber && (<>Fresh Cuts.<br /><span>Sharp Fades.</span><br />No Waiting.</>)}
               {isPlumbing && (<>Detroit&apos;s<br /><span>Trusted</span><br />Plumber.</>)}
@@ -367,13 +367,13 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
             </div>
             <div className="hero-badges">
               <div className="hbadge"><div className="bdot" /><span>{isPlumbing ? '24/7 Emergency Service' : 'Walk-ins Welcome'}</span></div>
-              <div className="hbadge"><div className="bdot" /><span>Licensed &amp; Insured Â· Detroit, MI</span></div>
+              <div className="hbadge"><div className="bdot" /><span>Licensed &amp; Insured · Detroit, MI</span></div>
               <div className="hbadge"><div className="bdot" /><span>4.8+ Stars on Google</span></div>
             </div>
           </div>
         </section>
 
-        {/* ââ Services ââ */}
+        {/* ── Services ── */}
         <section className="sec" id="services">
           <div className="con">
             <div className="shdr">
@@ -382,7 +382,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
               <div className="dvdr" />
               <p className="ssub">
                 {isBarber && 'Every cut done right the first time. No rushing, no corners cut.'}
-                {isPlumbing && 'From slow drains to major emergencies â we handle it all, fast and clean.'}
+                {isPlumbing && 'From slow drains to major emergencies — we handle it all, fast and clean.'}
                 {isSalon && 'Every client leaves feeling confident. We take our time, we do it right.'}
               </p>
             </div>
@@ -400,7 +400,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
           </div>
         </section>
 
-        {/* ââ Gallery / Before-After ââ */}
+        {/* ── Gallery / Before-After ── */}
         <section className="sec sec-alt" id="gallery">
           <div className="con">
             <div className="shdr">
@@ -452,7 +452,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
           </div>
         </section>
 
-        {/* ââ About ââ */}
+        {/* ── About ── */}
         <section className="sec sec-dark" id="about">
           <div className="con">
             <div className="about-grid">
@@ -474,7 +474,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                   {isPlumbing && 'Every technician is Michigan-licensed, background checked, and trained in the latest techniques. When we give you a price, that\'s the price. No hidden fees.'}
                   {isSalon && 'Detroit is home. Our clients are our community. Every appointment is a chance to make someone feel like the royalty they are.'}
                 </p>
-          {isRestaurant && <p className="about-para">Detroit's Kitchen has been serving the community since day one â real comfort food, made from scratch, with love. We believe everyone deserves a hot meal that feels like home.</p>}
+          {isRestaurant && <p className="about-para">Detroit's Kitchen has been serving the community since day one — real comfort food, made from scratch, with love. We believe everyone deserves a hot meal that feels like home.</p>}
                 <div className="stats">
                   {data.stats.map(s => (
                     <div key={s.label}>
@@ -488,7 +488,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
           </div>
         </section>
 
-        {/* ââ Reviews ââ */}
+        {/* ── Reviews ── */}
         <section className="sec sec-alt">
           <div className="con">
             <div className="shdr">
@@ -501,14 +501,14 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                 <div className="rv" key={i}>
                   <Stars count={r.stars} />
                   <p className="rv-text">&ldquo;{r.text}&rdquo;</p>
-                  <div className="rv-name">â {r.name}</div>
+                  <div className="rv-name">— {r.name}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ââ Hours & Contact ââ */}
+        {/* ── Hours & Contact ── */}
         <section className="sec" id="contact">
           <div className="con">
             <div className="shdr">
@@ -534,21 +534,21 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
               <div className="ct-block">
                 <h3>Get In Touch</h3>
                 <div className="ci">
-                  <div className="ci-icon">ð</div>
+                  <div className="ci-icon">📍</div>
                   <div>
                     <div className="ci-lbl">Address</div>
                     <div className="ci-val">{config.address}<br />{config.city}</div>
                   </div>
                 </div>
                 <div className="ci">
-                  <div className="ci-icon">ð</div>
+                  <div className="ci-icon">📞</div>
                   <div>
                     <div className="ci-lbl">Phone{isPlumbing ? ' (24/7)' : ''}</div>
                     <div className="ci-val">{config.phone}</div>
                   </div>
                 </div>
                 <div className="ci">
-                  <div className="ci-icon">âï¸</div>
+                  <div className="ci-icon">✉️</div>
                   <div>
                     <div className="ci-lbl">Email</div>
                     <div className="ci-val">info@{config.slug.replace('-', '')}.com</div>
@@ -562,11 +562,11 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
           </div>
         </section>
 
-        {/* ââ Footer ââ */}
+        {/* ── Footer ── */}
         <footer className="footer">
           <div className="footer-in">
             <div className="f-copy">
-              Â© {new Date().getFullYear()} {config.businessName} Â· {config.address}, {config.city}
+              © {new Date().getFullYear()} {config.businessName} · {config.address}, {config.city}
             </div>
             <div className="f-badge">
               Website by{' '}

@@ -107,6 +107,13 @@ export default function ServicesPage() {
                 </div>
               ))}
             </div>
+            <div style={{ marginTop: '32px', padding: '24px 28px', background: 'rgba(30,61,143,0.1)', border: '1px solid rgba(30,61,143,0.3)', borderRadius: '6px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+              <div>
+                <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '16px', color: '#fff' }}>AI Chatbot — Included on Every Plan</span>
+                <span style={{ display: 'block', fontSize: '13px', color: 'var(--chrome, #A8B8C8)', marginTop: '4px' }}>Answers questions, captures leads, and books appointments 24/7. Trained on your business.</span>
+              </div>
+              <Link href="/services/ai-chatbot" style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--navy, #1E3D8F)', textDecoration: 'none', whiteSpace: 'nowrap', fontWeight: 700 }}>Learn More →</Link>
+            </div>
           </div>
         </section>
 

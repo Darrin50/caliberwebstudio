@@ -71,7 +71,7 @@ RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 6. Still in Resend, go to **Domains**
 7. Click **Add Domain**
-8. Enter `hello@caliberwebstudio.com` (or any email you want to send from)
+8. Enter `darrin@caliberwebstudio.com` (or any email you want to send from)
 9. Resend will give you DNS records to add (you'll do this after domain setup)
 
 ### OpenAI API Key (AI Features)
@@ -244,7 +244,7 @@ If you see a Vercel error page, the domain isn't connected yet. Wait 10-20 more 
 
 ## Part 7: Set Up Resend Email Domain (Optional but Recommended)
 
-To send emails from `hello@caliberwebstudio.com` instead of a Resend subdomain:
+To send emails from `darrin@caliberwebstudio.com` instead of a Resend subdomain:
 
 1. Go to [resend.com](https://resend.com) → **Domains**
 2. Click **Add Domain**
@@ -287,7 +287,7 @@ Once everything is live, test these:
 
 ### "Contact form not sending emails"
 - Verify your Resend API key is correct.
-- In Resend, make sure `hello@caliberwebstudio.com` is a verified sender domain.
+- In Resend, make sure `darrin@caliberwebstudio.com` is a verified sender domain.
 - Check the Vercel deployment logs for error messages.
 
 ### "Chatbot not responding"

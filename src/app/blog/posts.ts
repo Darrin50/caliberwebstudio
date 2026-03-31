@@ -364,7 +364,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-detroit-small-businesses-need-a-website",
-    "thumbnail": "https://images.unsplash.com/photo-1564419320461-6262af184cbb?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
     "title": "Why Every Detroit Small Business Needs a Website in 2025",
     "description": "Still running your Detroit business without a proper website? Here are the real, data-backed reasons why a professional website is no longer optional \u2014 and what you're losing every month without one.",
     "date": "2025-01-16",
@@ -462,7 +462,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-caliber-web-studio-helps-detroit-businesses",
-    "thumbnail": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
     "title": "How Caliber Web Studio Helps Detroit Businesses Grow Online",
     "description": "From web design to AI chatbots and local SEO, here's exactly how Caliber Web Studio helps Detroit small businesses get found online, win customers, and grow revenue.",
     "date": "2025-01-20",
@@ -3238,7 +3238,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-barbers",
-    "thumbnail": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1585747860019-5ee6db0a8cc1?w=1200&q=80",
     "title": "Website Design for Barbers and Barbershops in Detroit",
     "description": "Your Detroit barbershop needs more than Instagram to grow. A professional website with online booking, hours, and local SEO turns browsers into loyal clients.",
     "date": "2025-05-10",
@@ -3354,7 +3354,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-plumbers-contractors",
-    "thumbnail": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+    "thumbnail": "/demo/plumbing/plumber-hero.jpg",
     "title": "Website Design for Plumbers and Contractors in Detroit",
     "description": "Detroit contractors need websites that generate leads, not just look good. Discover what a high-converting contractor website must include to win jobs in Metro Detroit.",
     "date": "2025-05-15",
@@ -3688,7 +3688,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-auto-repair-shops",
-    "thumbnail": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80",
     "title": "Website Design for Auto Repair Shops in Metro Detroit",
     "description": "Auto repair shops in Detroit need websites that earn trust and get calls. See what a high-converting auto shop website needs to win customers in Metro Detroit.",
     "date": "2025-06-01",

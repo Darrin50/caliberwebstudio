@@ -29,14 +29,14 @@ export default function ThankYouPage() {
           </h1>
 
           <p style={{ fontSize: "1.05rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", lineHeight: 1.7, marginBottom: "48px" }}>
-            Your payment was confirmed. Darrin will reach out within <strong style={{ color: "var(--text-primary, #fff)" }}>24 hours</strong> to kick things off and collect your business details.
+            Your payment was confirmed. Your Caliber team will reach out within <strong style={{ color: "var(--text-primary, #fff)" }}>24 hours</strong> to kick things off and collect your business details.
           </p>
 
           <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "32px", marginBottom: "40px", textAlign: "left" }}>
             <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary, #fff)", marginBottom: "20px" }}>What happens next</h2>
             <ol style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                ["24 hrs", "Darrin contacts you to collect your business info, brand assets, and goals"],
+                ["24 hrs", "A Caliber specialist contacts you to collect your business info, brand assets, and goals"],
                 ["3 days", "Your AI-optimized website mockup is ready for review"],
                 ["Go-live", "After your approval, your site goes live and all included services are activated"],
               ].map(([time, text]) => (

@@ -20,7 +20,7 @@ const textareaBase: React.CSSProperties = {
   border: '1px solid var(--ob-border-strong)',
   borderRadius: '12px',
   padding: '14px 16px',
-  color: 'var(--ob-text)',
+  color: 'var(--ob-input-text)',
   fontSize: '16px',
   fontFamily: "'Inter', sans-serif",
   lineHeight: 1.7,
@@ -223,8 +223,8 @@ export default function StoryStep() {
       <div
         style={{
           padding: '16px 20px',
-          background: 'rgba(30,61,143,0.08)',
-          border: '1px solid rgba(30,61,143,0.2)',
+          background: 'var(--ob-note-bg)',
+          border: '1px solid var(--ob-note-border)',
           borderRadius: '12px',
         }}
       >

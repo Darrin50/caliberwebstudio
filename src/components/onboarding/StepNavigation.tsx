@@ -44,8 +44,8 @@ export default function StepNavigation({
           opacity: isFirst ? 0 : 1,
           pointerEvents: isFirst ? 'none' : 'auto',
           background: 'var(--ob-surface)',
-          border: '1px solid var(--ob-border)',
-          color: 'var(--ob-text-secondary)',
+          border: '1px solid var(--ob-btn-back-border)',
+          color: 'var(--ob-btn-back-text)',
           transition: 'all 0.2s ease',
         }}
         onMouseEnter={(e) => {
@@ -55,7 +55,7 @@ export default function StepNavigation({
           }
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.color = 'var(--ob-text-secondary)'
+          e.currentTarget.style.color = 'var(--ob-btn-back-text)'
           e.currentTarget.style.background = 'var(--ob-surface)'
         }}
       >
@@ -69,8 +69,8 @@ export default function StepNavigation({
           disabled={isSubmitting}
           style={{
             padding: '12px 32px',
-            background: isSubmitting ? 'rgba(30,61,143,0.5)' : 'var(--ob-navy)',
-            color: '#fff',
+            background: isSubmitting ? 'rgba(30,61,143,0.5)' : 'var(--ob-btn-primary-bg)',
+            color: 'var(--ob-btn-primary-text)',
             border: 'none',
             borderRadius: '12px',
             fontSize: '0.875rem',
@@ -88,8 +88,8 @@ export default function StepNavigation({
                 style={{
                   width: '14px',
                   height: '14px',
-                  border: '2px solid rgba(255,255,255,0.2)',
-                  borderTopColor: '#fff',
+                  border: '2px solid rgba(30,61,143,0.2)',
+                  borderTopColor: 'var(--ob-btn-primary-text)',
                   borderRadius: '50%',
                   display: 'inline-block',
                   animation: 'spin 0.8s linear infinite',
@@ -107,20 +107,14 @@ export default function StepNavigation({
           onClick={onNext}
           style={{
             padding: '12px 32px',
-            background: 'var(--ob-navy)',
-            color: '#fff',
+            background: 'var(--ob-btn-primary-bg)',
+            color: 'var(--ob-btn-primary-text)',
             border: 'none',
             borderRadius: '12px',
             fontSize: '0.875rem',
             fontWeight: 600,
             cursor: 'pointer',
-            transition: 'background 0.2s ease',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = '#2449A8'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'var(--ob-navy)'
+            transition: 'all 0.2s ease',
           }}
         >
           Continue →

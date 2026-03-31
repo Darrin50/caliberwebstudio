@@ -265,11 +265,12 @@ export default function OnboardingPage() {
 
         {/* Card */}
         <div
+          className="ob-main-card"
           style={{
-            background: 'var(--ob-card)',
             border: '1px solid var(--ob-border)',
             borderRadius: '20px',
             overflow: 'hidden',
+            background: 'var(--ob-card)',
           }}
         >
           <FormProvider {...methods}>

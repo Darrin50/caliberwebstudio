@@ -153,8 +153,9 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             { metric: '48hr', label: 'Mockup Turnaround' },
             { metric: '100%', label: 'Free Until You Approve' },
           ].map((stat) => (
-            <div key={stat.label} style={{ textAlign: 'center' }}>
+            <div key={stat.label} className="stat-card" style={{ textAlign: 'center' }}>
               <div
+                className="stat-metric"
                 style={{
                   fontFamily: "'Syne', sans-serif",
                   fontSize: '36px',
@@ -166,6 +167,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                 {stat.metric}
               </div>
               <div
+                className="stat-label"
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: '14px',

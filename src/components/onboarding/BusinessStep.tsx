@@ -30,7 +30,7 @@ const input: React.CSSProperties = {
   border: '1px solid var(--ob-border-strong)',
   borderRadius: '12px',
   padding: '12px 16px',
-  color: 'var(--ob-text)',
+  color: 'var(--ob-input-text)',
   fontSize: '16px',
   fontFamily: "'Inter', sans-serif",
   outline: 'none',

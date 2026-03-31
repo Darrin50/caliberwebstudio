@@ -356,3 +356,37 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
 [data-theme="light"] main span[style*="color: var(--accent"] {
   color: var(--accent) !important;
 }
+
+/* ── Hero "How It Works" stat cards: add card containers in light mode ── */
+[data-theme="light"] .stat-card {
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 24px 16px;
+}
+[data-theme="light"] .stat-card .stat-metric {
+  color: #ffffff !important;
+}
+[data-theme="light"] .stat-card .stat-label {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* ── Blog article body: ensure fully readable text in light mode ── */
+/* article inline style uses var(--text-secondary) which is semi-opaque; make solid */
+[data-theme="light"] main article {
+  color: #1c1e2a !important;
+}
+[data-theme="light"] main article p {
+  color: #2a2d40 !important;
+}
+
+/* ── Section headings: reduce max font-size in light mode so they feel contained ── */
+/* Dark mode uses clamp(36px,6vw,72px); at 72px solid dark text is very heavy in light */
+[data-theme="light"] #services h2 {
+  font-size: clamp(28px, 4vw, 52px) !important;
+}
+
+/* ── Light mode text-secondary: make body copy more opaque for better contrast ── */
+/* rgba(14,16,32,0.72) is ~7:1 contrast but perceived as faint; bump opacity */
+[data-theme="light"] {
+  --text-secondary: rgba(14, 16, 32, 0.84);
+}

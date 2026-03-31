@@ -3384,7 +3384,7 @@ export const posts: BlogPost[] = [
 
 <p>Speed to first contact is the variable that wins emergency jobs. When three contractors show up in search results, the one who answers first gets the work.</p>
 
-<img src="/blog/website-design-for-plumbers-contractors-1.jpg" alt="Plumber working on aging pipes in a Detroit basement" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/demo/plumbing/plumber-hero.jpg" alt="Plumber working on aging pipes in a Detroit basement" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Seasonal Demand: Build a Website That Handles the Spikes</h2>
 
@@ -3410,7 +3410,7 @@ export const posts: BlogPost[] = [
 <li><strong>Google reviews embedded prominently</strong> — A 4.8-star average with 90 reviews on your homepage does more sales work than any headline you could write.</li>
 </ul>
 
-<img src="/blog/website-design-for-plumbers-contractors-2.jpg" alt="Licensed contractor reviewing plans on a Detroit job site" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/demo/plumbing/plumber-about.jpg" alt="Licensed contractor reviewing plans on a Detroit job site" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Service Area Pages: Win Metro Detroit Neighborhood by Neighborhood</h2>
 
@@ -3430,7 +3430,7 @@ export const posts: BlogPost[] = [
 
 <p>That's a lead captured at 10pm that you call at 8am — before they've called anyone else.</p>
 
-<img src="/blog/website-design-for-plumbers-contractors-3.jpg" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/demo/plumbing/plumber-about.jpg" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reviews: The Referral Network That Scales</h2>
 

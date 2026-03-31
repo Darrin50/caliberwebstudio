@@ -57,10 +57,10 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80',
+    heroImg: '/demo/plumbing/plumber-hero.jpg',
     heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80', alt: 'Copper pipe connection — professional plumbing work' },
+      { url: '/demo/plumbing/plumber-hero.jpg', alt: 'Copper pipe connection — professional plumbing work' },
       { url: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80', alt: 'Water heater installation in progress' },
       { url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80', alt: 'Metro Plumbing technician — same-day service' },
       { url: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80', alt: 'Plumber working under kitchen sink — licensed and insured' },
@@ -79,7 +79,7 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+    aboutImg: '/demo/plumbing/plumber-about.jpg',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
       { num: '4.8★', label: 'Google Rating' },

@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 // Stripe Price IDs (created in Stripe dashboard)
 const PRICE_IDS: Record<string, string> = {
   starter:    "price_1TGOei3ssao1AlQ6SXhvA2Xu", // Starter Plan $197/mo
@@ -13,6 +11,10 @@ const PRICE_IDS: Record<string, string> = {
 
 export async function POST(req: NextRequest) {
   try {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      return NextResponse.json({ error: "Stripe not configured" }, { status: 500 });
+    }
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
     const { plan } = await req.json();
 
     const priceId = PRICE_IDS[plan as string];

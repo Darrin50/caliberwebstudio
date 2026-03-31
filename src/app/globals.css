@@ -33,7 +33,7 @@
   --border: rgba(30,61,143,0.1);
   /* Blog / content page tokens (light mode) */
   --text-primary: #0e1020;
-  --text-secondary: rgba(14,16,32,0.72);
+  --text-secondary: rgba(14, 16, 32, 0.84);
   --accent: #0077aa;
   --card-bg: rgba(0,0,0,0.04);
   --border-color: rgba(30,61,143,0.1);
@@ -183,11 +183,7 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
   color: #0e1020 !important;
 }
 
-/* Large stat / price numbers rendered as <div> with inline color:#fff */
-[data-theme="light"] main section div[style*="font-family: Syne"],
-[data-theme="light"] main section div[style*="fontFamily"] {
-  color: var(--white);
-}
+/* (Syne stat/price overrides consolidated below in comprehensive section) */
 
 /* Hero H1 light mode contrast fix */
 [data-theme="light"] h1 {
@@ -200,14 +196,7 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
   background: none !important;
 }
 
-/* Pricing page card fixes */
-[data-theme="light"] .pricing-card {
-  background: rgba(30, 61, 143, 0.04) !important;
-  border-color: rgba(30, 61, 143, 0.15) !important;
-}
-[data-theme="light"] .pricing-card:hover {
-  border-color: rgba(30, 61, 143, 0.3) !important;
-}
+/* Pricing CTA buttons */
 [data-theme="light"] .pricing-cta {
   background: rgba(30, 61, 143, 0.08) !important;
   color: var(--navy) !important;
@@ -385,9 +374,10 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
   background: #ffffff !important;
 }
 
-/* Fix 5: Blog article — add visual card container + ensure content doesn't bleed */
+/* Blog article — card container + readable text in light mode */
 [data-theme="light"] main article {
   background: #ffffff;
+  color: #333333 !important;
   border-radius: 16px;
   padding: 40px clamp(20px,5vw,48px);
   box-shadow: 0 2px 24px rgba(30,61,143,0.07);
@@ -436,23 +426,13 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
   color: rgba(255, 255, 255, 0.82) !important;
 }
 
-/* ── Blog article body: ensure fully readable text in light mode ── */
-/* article inline style uses var(--text-secondary) which is semi-opaque; make solid */
-[data-theme="light"] main article {
-  color: #333333 !important;
-}
+/* Blog article child elements — solid contrast */
 [data-theme="light"] main article p,
 [data-theme="light"] main article li {
   color: #333333 !important;
 }
 [data-theme="light"] main article strong {
   color: #111111 !important;
-}
-
-/* ── Light mode text-secondary: make body copy more opaque for better contrast ── */
-/* rgba(14,16,32,0.72) is ~7:1 contrast but perceived as faint; bump opacity */
-[data-theme="light"] {
-  --text-secondary: rgba(14, 16, 32, 0.84);
 }
 
 /* ── Hero h1: all spans dark in light mode (catches hardcoded color:#fff spans) ── */

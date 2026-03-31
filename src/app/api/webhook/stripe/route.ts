@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 const PLAN_NAMES: Record<string, string> = {
   price_1TGOei3ssao1AlQ6SXhvA2Xu: "Starter Plan ($197/mo)",
   price_1TGOgD3ssao1AlQ6PusxEqvu: "Growth Plan ($397/mo)",
@@ -15,9 +13,11 @@ export async function POST(req: NextRequest) {
   const body = await req.text();
   const sig = req.headers.get("stripe-signature");
 
-  if (!sig || !process.env.STRIPE_WEBHOOK_SECRET) {
-    return NextResponse.json({ error: "Missing signature or webhook secret" }, { status: 400 });
+  if (!sig || !process.env.STRIPE_WEBHOOK_SECRET || !process.env.STRIPE_SECRET_KEY) {
+    return NextResponse.json({ error: "Missing signature or webhook/Stripe secret" }, { status: 400 });
   }
+
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
   let event: Stripe.Event;
   try {

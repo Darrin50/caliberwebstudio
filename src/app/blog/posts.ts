@@ -12,7 +12,7 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     "slug": "best-web-designer-detroit",
-    "thumbnail": "/blog/best-web-designer-detroit-thumb.jpg",
+    "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
     "title": "Best Web Designer in Detroit \u2014 What to Look For (and Why Caliber Wins)",
     "description": "Looking for the best web designer in Detroit? Here's what separates elite agencies from average ones \u2014 and why Caliber Web Studio is Metro Detroit's top choice for small businesses.",
     "date": "2025-01-06",
@@ -130,7 +130,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "affordable-website-design-detroit",
-    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80",
     "title": "Affordable Website Design in Detroit \u2014 Real Value Without the $10K Invoice",
     "description": "Affordable website design in Detroit doesn't mean cheap. See how Caliber Web Studio delivers premium, SEO-ready websites for Detroit small businesses starting at $197/mo with $0 down.",
     "date": "2025-01-09",
@@ -1989,7 +1989,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-to-show-up-in-chatgpt-and-perplexity",
-    "thumbnail": "https://images.unsplash.com/photo-1655722349920-b20a8e0f47d4?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80",
     "title": "How to Show Up in ChatGPT and Perplexity Search Results",
     "description": "More customers are using AI tools like ChatGPT and Perplexity to find local businesses. Here's the practical strategy for getting your Detroit business recommended by AI search.",
     "date": "2025-02-24",
@@ -2187,7 +2187,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "local-seo-guide-for-small-businesses",
-    "thumbnail": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
     "title": "The Complete Local SEO Guide for Detroit Small Businesses",
     "description": "Want more customers finding your Detroit business on Google? This complete local SEO guide covers everything you need to rank in your city and neighborhood.",
     "date": "2025-02-27",

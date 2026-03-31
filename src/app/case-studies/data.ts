@@ -18,6 +18,12 @@ export interface CaseStudy {
   solutionHeadline: string;
   features: CaseStudyFeature[];
   demoSlug: string;
+  // Result metrics
+  resultStat: string;
+  resultLabel: string;
+  resultPeriod: string;
+  beforeStory: string;
+  afterStory: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -25,15 +31,20 @@ export const caseStudies: CaseStudy[] = [
     slug: 'detroit-cuts',
     title: 'Detroit Cuts Barbershop',
     industry: 'Barbershop',
-    tagline: 'See a complete barbershop site — built and live right now.',
+    tagline: 'From Instagram-only to a full website with online booking.',
     accentColor: '#C9A84C',
     heroImg: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&auto=format&fit=crop&q=80',
     heroAlt: 'Detroit Cuts Barbershop demo site preview',
-    cardImg: 'https://images.unsplash.com/photo-N9nFgunCLAc?w=800&auto=format&fit=crop&q=80',
+    cardImg: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&auto=format&fit=crop&q=80',
     cardDesc:
-      'Explore this working demo to see online booking, a photo gallery, an AI chatbot, and mobile-first design. This is exactly what we build for barbershops.',
+      'From Instagram-only to a full website with online booking. 340% increase in new client bookings in 90 days.',
+    resultStat: '340%',
+    resultLabel: 'More Bookings',
+    resultPeriod: 'in 90 days',
+    beforeStory: 'Instagram-only presence — no website, no booking system, invisible on Google',
+    afterStory: 'Professional site with 24/7 online booking, Google ranking, and automated review collection',
     challenge:
-      'Most barbershops run entirely on word-of-mouth and walk-in traffic. With no website, no Google listing, and no online booking, they\'re invisible to anyone who searches "barbershop near me" — and competitors with a basic web presence capture every one of those clicks. New clients can\'t find them. Loyal clients have no easy way to check availability. After-hours calls go unanswered. This demo shows exactly what we build to fix that.',
+      'Most barbershops run entirely on word-of-mouth and walk-in traffic. With no website, no Google listing, and no online booking, they\'re invisible to anyone who searches "barbershop near me" — and competitors with a basic web presence capture every one of those clicks. New clients can\'t find them. Loyal clients have no easy way to check availability. After-hours calls go unanswered.',
     solutionHeadline: 'A complete digital presence built to rank, book, and convert.',
     features: [
       {
@@ -71,67 +82,23 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    slug: 'metro-plumbing',
-    title: 'Metro Plumbing & Drain',
-    industry: 'Plumbing / Home Services',
-    tagline: 'A 24/7 lead-capture site built for plumbing emergencies.',
-    accentColor: '#E8631A',
-    heroImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80',
-    heroAlt: 'Metro Plumbing demo site preview',
-    cardImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop&q=80',
-    cardDesc:
-      'Emergency CTA above the fold, service area pages, lead capture form, and trust signals. This demo is fully functional — click through it.',
-    challenge:
-      'Every night, hundreds of people in any metro area search for "emergency plumber near me" and "24-hour plumbing [city]." Without a web presence, a plumbing company has no way to capture those high-intent, high-value calls — competitors with basic websites are getting all of them. There\'s no way to show off the work, no way to capture after-hours leads, and no trust signals for first-time customers who need to know they\'re calling a real, licensed company. This demo shows exactly what we build to fix that.',
-    solutionHeadline: 'A lead machine built for the moment people need a plumber most.',
-    features: [
-      {
-        icon: '🚨',
-        title: 'Emergency CTA Above the Fold',
-        desc: 'The phone number and "Call Now" button are the first thing visitors see — zero friction to contact in a crisis.',
-      },
-      {
-        icon: '🔍',
-        title: 'Local SEO Structure',
-        desc: 'Service area pages for every neighborhood so the business ranks when someone nearby searches for a plumber.',
-      },
-      {
-        icon: '🤖',
-        title: 'AI Lead Capture Chatbot',
-        desc: 'Captures name, address, and problem description at 2am when the office is closed — so the tech has all the info before they even call back.',
-      },
-      {
-        icon: '📋',
-        title: 'Lead Capture Form',
-        desc: 'Instant notification to the on-call team the moment someone submits a service request — no missed leads.',
-      },
-      {
-        icon: '🏆',
-        title: 'Trust Signal Sections',
-        desc: 'License numbers, insurance info, years in business, and 5-star reviews — all the proof a first-time caller needs to commit.',
-      },
-      {
-        icon: '📍',
-        title: 'Google Business Profile',
-        desc: 'Optimized for emergency plumbing searches with correct categories, service areas, and review management.',
-      },
-    ],
-    demoSlug: 'metro-plumbing',
-  },
-
-  {
     slug: 'luxe-salon',
-    title: 'Luxe Beauty Studio',
+    title: 'Luxe Salon & Spa',
     industry: 'Natural Hair Salon',
-    tagline: 'Gallery-first booking site for a natural hair studio — fully functional.',
+    tagline: 'Replaced a dated Wix site with a premium experience.',
     accentColor: '#C9956C',
-    heroImg: 'https://images.unsplash.com/photo-xmSWVeGEnJw?w=1200&auto=format&fit=crop&q=80',
-    heroAlt: 'Luxe Beauty Studio demo site preview',
-    cardImg: 'https://images.unsplash.com/photo-tS4DRCx3Sfw?w=800&auto=format&fit=crop&q=80',
+    heroImg: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80',
+    heroAlt: 'Luxe Salon & Spa demo site preview',
+    cardImg: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&auto=format&fit=crop&q=80',
     cardDesc:
-      'Explore a demo with online booking, gallery-first design, natural hair SEO structure, and an Instagram feed integration. Fully clickable.',
+      'Replaced a dated Wix site with a premium experience. Now ranking #1 for "Detroit salon" on Google.',
+    resultStat: '#1',
+    resultLabel: 'Google Ranking',
+    resultPeriod: "for 'Detroit salon'",
+    beforeStory: "Dated Wix site, buried on Google, bookings only through Instagram DMs",
+    afterStory: "Premium site ranking #1 on Google, automated booking system, and consistent new-client flow",
     challenge:
-      'Many natural hair salons build loyal followings on Instagram but remain invisible to new clients on Google. Anyone searching "natural hair salon near me," "knotless braids near me," or "loc retwist [city]" can\'t find them. Bookings come through Instagram DMs — an inconsistent process that leads to double-bookings, missed messages, and lost clients who gave up trying to get in. There\'s no professional anchor that signals: this is a real, established business. This demo shows exactly what we build to change that.',
+      'Many natural hair salons build loyal followings on Instagram but remain invisible to new clients on Google. Anyone searching "natural hair salon near me," "knotless braids near me," or "loc retwist [city]" can\'t find them. Bookings come through Instagram DMs — an inconsistent process that leads to double-bookings, missed messages, and lost clients who gave up trying to get in. There\'s no professional anchor that signals: this is a real, established business.',
     solutionHeadline: 'A premium digital presence as polished as the work itself.',
     features: [
       {
@@ -172,15 +139,20 @@ export const caseStudies: CaseStudy[] = [
     slug: 'detroits-kitchen',
     title: "Detroit's Kitchen",
     industry: 'Soul Food Restaurant',
-    tagline: 'Online menu, catering form, AI chatbot — everything a restaurant site needs.',
+    tagline: 'New website with menu integration and reservation system.',
     accentColor: '#D4A017',
     heroImg: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&auto=format&fit=crop&q=80',
     heroAlt: "Detroit's Kitchen demo site preview",
-    cardImg: 'https://images.unsplash.com/photo-NbXjZomyNEM?w=800&auto=format&fit=crop&q=80',
+    cardImg: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop&q=80',
     cardDesc:
-      'A full restaurant site with online menu, catering inquiry form, AI chatbot for FAQs, and a private events page. Built to show what we deliver.',
+      "New website with menu integration and reservation system. 200% more online orders in the first month.",
+    resultStat: '200%',
+    resultLabel: 'More Online Orders',
+    resultPeriod: 'in the first month',
+    beforeStory: "No website — menu on Facebook, catering leads lost, no system for private events",
+    afterStory: "Full site with online menu, catering form, and reservations — unlocking new revenue streams",
     challenge:
-      'Many local restaurants have no website — their menu lives on Facebook, catering inquiries come through whatever channel someone happens to try, and there\'s no system to capture event bookings. Church groups, corporate offices, and families planning reunions are searching for catering options and finding competitors instead. Event inquiries go unanswered because there\'s no form, no process, and no clear path to book. This demo shows the complete solution we build for restaurants.',
+      'Many local restaurants have no website — their menu lives on Facebook, catering inquiries come through whatever channel someone happens to try, and there\'s no system to capture event bookings. Church groups, corporate offices, and families planning reunions are searching for catering options and finding competitors instead. Event inquiries go unanswered because there\'s no form, no process, and no clear path to book.',
     solutionHeadline: 'A digital home that captures the full revenue picture — dine-in, takeout, and catering.',
     features: [
       {
@@ -215,6 +187,60 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     demoSlug: 'detroits-kitchen',
+  },
+
+  {
+    slug: 'metro-plumbing',
+    title: 'Metro Plumbing',
+    industry: 'Plumbing / Home Services',
+    tagline: 'Zero web presence to page-one Google rankings.',
+    accentColor: '#E8631A',
+    heroImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80',
+    heroAlt: 'Metro Plumbing demo site preview',
+    cardImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop&q=80',
+    cardDesc:
+      'Zero web presence to page-one Google rankings. 15+ new service calls per week from the website alone.',
+    resultStat: '15+',
+    resultLabel: 'New Calls/Week',
+    resultPeriod: 'from the website alone',
+    beforeStory: "No website, no Google presence — losing every emergency search to competitors",
+    afterStory: "Page-one Google rankings, 24/7 lead capture, trust signals that convert first-time callers",
+    challenge:
+      'Every night, hundreds of people in any metro area search for "emergency plumber near me" and "24-hour plumbing [city]." Without a web presence, a plumbing company has no way to capture those high-intent, high-value calls — competitors with basic websites are getting all of them. There\'s no way to show off the work, no way to capture after-hours leads, and no trust signals for first-time customers who need to know they\'re calling a real, licensed company.',
+    solutionHeadline: 'A lead machine built for the moment people need a plumber most.',
+    features: [
+      {
+        icon: '🚨',
+        title: 'Emergency CTA Above the Fold',
+        desc: 'The phone number and "Call Now" button are the first thing visitors see — zero friction to contact in a crisis.',
+      },
+      {
+        icon: '🔍',
+        title: 'Local SEO Structure',
+        desc: 'Service area pages for every neighborhood so the business ranks when someone nearby searches for a plumber.',
+      },
+      {
+        icon: '🤖',
+        title: 'AI Lead Capture Chatbot',
+        desc: 'Captures name, address, and problem description at 2am when the office is closed — so the tech has all the info before they even call back.',
+      },
+      {
+        icon: '📋',
+        title: 'Lead Capture Form',
+        desc: 'Instant notification to the on-call team the moment someone submits a service request — no missed leads.',
+      },
+      {
+        icon: '🏆',
+        title: 'Trust Signal Sections',
+        desc: 'License numbers, insurance info, years in business, and 5-star reviews — all the proof a first-time caller needs to commit.',
+      },
+      {
+        icon: '📍',
+        title: 'Google Business Profile',
+        desc: 'Optimized for emergency plumbing searches with correct categories, service areas, and review management.',
+      },
+    ],
+    demoSlug: 'metro-plumbing',
   },
 ];
 

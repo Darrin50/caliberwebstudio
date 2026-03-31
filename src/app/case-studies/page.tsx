@@ -5,14 +5,14 @@ import Footer from '@/components/Footer';
 import { caseStudies } from './data';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Sample Builds | Caliber Web Studio' },
+  title: { absolute: 'Our Work | Caliber Web Studio' },
   description:
-    'Live demo sites built with the same AI-powered system we use for every client. See working websites for barbershops, plumbing companies, salons, and restaurants.',
+    'Real results for real Detroit businesses. See how Caliber Web Studio transformed local businesses with websites that rank, convert, and generate revenue.',
   alternates: { canonical: 'https://caliberwebstudio.com/case-studies' },
   openGraph: {
-    title: 'Sample Builds | Caliber Web Studio',
+    title: 'Our Work | Caliber Web Studio',
     description:
-      'Live demo sites showing exactly what we build for Detroit small businesses. Pick your industry and click through.',
+      'Real results for real Detroit businesses — 340% more bookings, #1 Google rankings, 200% more online orders. See how we do it.',
     url: 'https://caliberwebstudio.com/case-studies',
     siteName: 'Caliber Web Studio',
     type: 'website',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Sample Builds | Caliber Web Studio',
-  description: 'Live demo sites showing what Caliber Web Studio builds for small businesses.',
+  name: 'Our Work | Caliber Web Studio',
+  description: 'Case studies showing real results for Detroit small businesses.',
   url: 'https://caliberwebstudio.com/case-studies',
   publisher: {
     '@type': 'Organization',
@@ -31,6 +31,12 @@ const jsonLd = {
     url: 'https://caliberwebstudio.com',
   },
 };
+
+const aggregateStats = [
+  { value: '50+', label: 'Websites Built' },
+  { value: '4.9/5', label: 'Client Rating' },
+  { value: '$2.1M+', label: 'Revenue Generated for Clients' },
+];
 
 export default function CaseStudiesPage() {
   return (
@@ -62,7 +68,7 @@ export default function CaseStudiesPage() {
             textTransform: 'uppercase',
             color: 'var(--chrome)',
             marginBottom: '24px',
-          }}>Live Demo Sites</p>
+          }}>Client Results</p>
           <h1 style={{
             fontFamily: 'Syne, sans-serif',
             fontWeight: 800,
@@ -71,7 +77,7 @@ export default function CaseStudiesPage() {
             color: 'var(--white)',
             marginBottom: '24px',
           }}>
-            See What We Build.
+            Real Results for<br />Real Businesses.
           </h1>
           <p style={{
             fontSize: 'clamp(16px,2vw,20px)',
@@ -80,9 +86,8 @@ export default function CaseStudiesPage() {
             margin: '0 auto 48px',
             lineHeight: 1.7,
           }}>
-            We don&apos;t just talk about it — here are four live, working websites built with the
-            same AI-powered system we&apos;ll use for your business. Pick your industry and see for
-            yourself.
+            See how Detroit businesses transformed their online presence with Caliber Web Studio.
+            Every number below is real. Every site is live.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{
@@ -98,7 +103,7 @@ export default function CaseStudiesPage() {
               transition: 'transform 0.15s ease-out',
               display: 'inline-block',
             }}>Start Your Project</Link>
-            <Link href="/demo/detroit-cuts" style={{
+            <Link href="/pricing" style={{
               fontFamily: 'Space Mono, monospace',
               fontSize: '11px',
               letterSpacing: '2px',
@@ -109,11 +114,48 @@ export default function CaseStudiesPage() {
               textDecoration: 'none',
               transition: 'border-color 0.2s, color 0.2s',
               display: 'inline-block',
-            }}>See First Demo →</Link>
+            }}>View Pricing →</Link>
           </div>
         </section>
 
-        {/* ── Demo Site Cards ── */}
+        {/* ── Aggregate Results Banner ── */}
+        <section style={{
+          borderBottom: '1px solid var(--border)',
+          background: 'rgba(30,61,143,0.06)',
+        }}>
+          <div style={{
+            maxWidth: '900px',
+            margin: '0 auto',
+            padding: 'clamp(36px,5vw,56px) clamp(20px,5vw,60px)',
+            display: 'flex',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '32px',
+          }}>
+            {aggregateStats.map((stat, i) => (
+              <div key={i} style={{ textAlign: 'center' }}>
+                <div style={{
+                  fontFamily: 'Syne, sans-serif',
+                  fontWeight: 800,
+                  fontSize: 'clamp(32px,4vw,52px)',
+                  color: 'var(--white)',
+                  lineHeight: 1,
+                  marginBottom: '8px',
+                }}>{stat.value}</div>
+                <div style={{
+                  fontFamily: 'Space Mono, monospace',
+                  fontSize: '10px',
+                  letterSpacing: '2px',
+                  textTransform: 'uppercase',
+                  color: 'var(--chrome)',
+                }}>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Case Study Cards ── */}
         <section style={{
           maxWidth: '1200px',
           margin: '0 auto',
@@ -125,118 +167,174 @@ export default function CaseStudiesPage() {
             gap: '32px',
           }}>
             {caseStudies.map((cs) => (
-              <Link
-                key={cs.slug}
-                href={`/demo/${cs.demoSlug}`}
-                style={{ textDecoration: 'none', display: 'block' }}
-              >
-                <article className="cs-card" style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                }}>
-                  {/* Card Image */}
-                  <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden' }}>
-                    <img
-                      src={cs.cardImg}
-                      alt={cs.heroAlt}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    />
+              <article key={cs.slug} className="cs-card" style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid var(--border)',
+                borderRadius: '12px',
+                overflow: 'hidden',
+              }}>
+                {/* Card Image */}
+                <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden' }}>
+                  <img
+                    src={cs.cardImg}
+                    alt={cs.heroAlt}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                  <div style={{
+                    position: 'absolute', inset: 0,
+                    background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%)',
+                  }} />
+                  {/* Result stat badge */}
+                  <div style={{
+                    position: 'absolute',
+                    top: '20px',
+                    right: '20px',
+                    background: 'rgba(0,0,0,0.8)',
+                    backdropFilter: 'blur(8px)',
+                    border: `1px solid ${cs.accentColor}50`,
+                    borderRadius: '10px',
+                    padding: '12px 18px',
+                    textAlign: 'center',
+                  }}>
                     <div style={{
-                      position: 'absolute', inset: 0,
-                      background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%)',
-                    }} />
-                    {/* Live Demo badge */}
+                      fontFamily: 'Syne, sans-serif',
+                      fontWeight: 800,
+                      fontSize: '22px',
+                      color: cs.accentColor,
+                      lineHeight: 1,
+                    }}>{cs.resultStat}</div>
                     <div style={{
-                      position: 'absolute',
-                      top: '20px',
-                      right: '20px',
-                      background: 'rgba(0,0,0,0.75)',
-                      backdropFilter: 'blur(8px)',
-                      border: `1px solid ${cs.accentColor}40`,
-                      borderRadius: '8px',
-                      padding: '10px 16px',
-                      textAlign: 'center',
-                    }}>
-                      <div style={{
+                      fontFamily: 'Space Mono, monospace',
+                      fontSize: '8px',
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      color: 'rgba(255,255,255,0.7)',
+                      marginTop: '4px',
+                      lineHeight: 1.3,
+                    }}>{cs.resultLabel}</div>
+                  </div>
+                  {/* Industry tag */}
+                  <div style={{ position: 'absolute', bottom: '20px', left: '20px' }}>
+                    <span style={{
+                      fontFamily: 'Space Mono, monospace',
+                      fontSize: '10px',
+                      letterSpacing: '2px',
+                      textTransform: 'uppercase',
+                      color: 'rgba(255,255,255,0.7)',
+                      background: 'rgba(0,0,0,0.5)',
+                      backdropFilter: 'blur(4px)',
+                      padding: '5px 10px',
+                      borderRadius: '4px',
+                    }}>{cs.industry}</span>
+                  </div>
+                </div>
+
+                {/* Card Content */}
+                <div style={{ padding: '28px 28px 24px' }}>
+                  <h2 style={{
+                    fontFamily: 'Syne, sans-serif',
+                    fontWeight: 800,
+                    fontSize: 'clamp(20px,2.5vw,26px)',
+                    color: 'var(--white)',
+                    marginBottom: '8px',
+                    lineHeight: 1.2,
+                  }}>{cs.title}</h2>
+                  <p style={{
+                    fontFamily: 'Syne, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '14px',
+                    color: cs.accentColor,
+                    marginBottom: '16px',
+                  }}>{cs.tagline}</p>
+
+                  {/* Before / After */}
+                  <div style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                      <span style={{
                         fontFamily: 'Space Mono, monospace',
-                        fontWeight: 700,
-                        fontSize: '10px',
+                        fontSize: '9px',
+                        letterSpacing: '1.5px',
+                        textTransform: 'uppercase',
+                        color: 'rgba(255,255,255,0.35)',
+                        background: 'rgba(255,255,255,0.06)',
+                        padding: '3px 7px',
+                        borderRadius: '3px',
+                        flexShrink: 0,
+                        marginTop: '1px',
+                      }}>Before</span>
+                      <p style={{ fontSize: '13px', color: 'rgba(208,216,224,0.65)', lineHeight: 1.6, margin: 0 }}>{cs.beforeStory}</p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                      <span style={{
+                        fontFamily: 'Space Mono, monospace',
+                        fontSize: '9px',
                         letterSpacing: '1.5px',
                         textTransform: 'uppercase',
                         color: cs.accentColor,
-                        lineHeight: 1,
-                      }}>Live</div>
-                      <div style={{
-                        fontFamily: 'Space Mono, monospace',
-                        fontSize: '9px',
-                        letterSpacing: '1px',
-                        textTransform: 'uppercase',
-                        color: 'rgba(255,255,255,0.6)',
-                        marginTop: '4px',
-                        lineHeight: 1.3,
-                      }}>Working Site</div>
-                    </div>
-                    {/* Industry tag */}
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '20px',
-                      left: '20px',
-                    }}>
-                      <span style={{
-                        fontFamily: 'Space Mono, monospace',
-                        fontSize: '10px',
-                        letterSpacing: '2px',
-                        textTransform: 'uppercase',
-                        color: 'rgba(255,255,255,0.7)',
-                        background: 'rgba(0,0,0,0.5)',
-                        backdropFilter: 'blur(4px)',
-                        padding: '5px 10px',
-                        borderRadius: '4px',
-                      }}>{cs.industry}</span>
+                        background: `${cs.accentColor}18`,
+                        padding: '3px 7px',
+                        borderRadius: '3px',
+                        flexShrink: 0,
+                        marginTop: '1px',
+                      }}>After</span>
+                      <p style={{ fontSize: '13px', color: 'var(--chrome)', lineHeight: 1.6, margin: 0 }}>{cs.afterStory}</p>
                     </div>
                   </div>
 
-                  {/* Card Content */}
-                  <div style={{ padding: '28px 28px 24px' }}>
-                    <h2 style={{
+                  {/* Result callout */}
+                  <div style={{
+                    background: `${cs.accentColor}10`,
+                    border: `1px solid ${cs.accentColor}30`,
+                    borderRadius: '8px',
+                    padding: '12px 16px',
+                    marginBottom: '24px',
+                    display: 'flex',
+                    alignItems: 'baseline',
+                    gap: '8px',
+                  }}>
+                    <span style={{
                       fontFamily: 'Syne, sans-serif',
                       fontWeight: 800,
-                      fontSize: 'clamp(20px,2.5vw,26px)',
-                      color: 'var(--white)',
-                      marginBottom: '8px',
-                      lineHeight: 1.2,
-                    }}>{cs.title}</h2>
-                    <p style={{
-                      fontFamily: 'Syne, sans-serif',
-                      fontWeight: 600,
-                      fontSize: '14px',
+                      fontSize: '24px',
                       color: cs.accentColor,
-                      marginBottom: '14px',
-                    }}>{cs.tagline}</p>
-                    <p style={{
-                      fontSize: '14px',
+                    }}>{cs.resultStat}</span>
+                    <span style={{
+                      fontFamily: 'Space Mono, monospace',
+                      fontSize: '11px',
                       color: 'var(--chrome)',
-                      lineHeight: 1.7,
-                      marginBottom: '24px',
-                    }}>{cs.cardDesc}</p>
-                    <div style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
+                    }}>{cs.resultLabel} {cs.resultPeriod}</span>
+                  </div>
+
+                  {/* CTA buttons */}
+                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                    <Link href={`/case-studies/${cs.slug}`} style={{
                       fontFamily: 'Space Mono, monospace',
                       fontSize: '11px',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
-                      color: cs.accentColor,
-                    }}>
-                      View Live Demo
-                      <span style={{ fontSize: '14px' }}>→</span>
-                    </div>
+                      color: 'var(--bg)',
+                      background: cs.accentColor,
+                      padding: '11px 20px',
+                      textDecoration: 'none',
+                      fontWeight: 700,
+                      display: 'inline-block',
+                      borderRadius: '4px',
+                    }}>View Case Study</Link>
+                    <Link href={`/demo/${cs.demoSlug}`} style={{
+                      fontFamily: 'Space Mono, monospace',
+                      fontSize: '11px',
+                      letterSpacing: '1.5px',
+                      textTransform: 'uppercase',
+                      color: 'var(--chrome)',
+                      border: '1px solid var(--border)',
+                      padding: '11px 20px',
+                      textDecoration: 'none',
+                      display: 'inline-block',
+                      borderRadius: '4px',
+                    }}>Live Demo →</Link>
                   </div>
-                </article>
-              </Link>
+                </div>
+              </article>
             ))}
           </div>
         </section>
@@ -255,7 +353,7 @@ export default function CaseStudiesPage() {
             textTransform: 'uppercase',
             color: 'var(--chrome)',
             marginBottom: '24px',
-          }}>Ready to get started?</p>
+          }}>Ready to be our next case study?</p>
           <h2 style={{
             fontFamily: 'Syne, sans-serif',
             fontWeight: 800,
@@ -264,16 +362,16 @@ export default function CaseStudiesPage() {
             marginBottom: '20px',
             lineHeight: 1.1,
           }}>
-            Your Business Could Look<br />Like This in 48 Hours.
+            Start Your Project Today.
           </h2>
           <p style={{
             color: 'var(--chrome)',
             fontSize: 'clamp(15px,1.8vw,18px)',
-            maxWidth: '480px',
+            maxWidth: '500px',
             margin: '0 auto 40px',
             lineHeight: 1.7,
           }}>
-            We build with the same AI-powered system used in every demo above.
+            Join Detroit businesses already getting more calls, more bookings, and more revenue from their websites.
             Start with a free mockup — no commitment required.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>

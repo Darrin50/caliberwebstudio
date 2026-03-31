@@ -378,20 +378,7 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
   margin-right: auto;
 }
 
-/* Fix 3: Hero "How It Works" stat cards — floating stats need a card surface in light mode */
-[data-theme="light"] .stat-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 28px 20px;
-  box-shadow: 0 2px 20px rgba(30,61,143,0.1);
-  border: 1px solid rgba(30,61,143,0.1);
-}
-[data-theme="light"] .stat-metric {
-  color: var(--navy) !important;
-}
-[data-theme="light"] .stat-card .stat-label {
-  color: #374151 !important;
-}
+/* Fix 3: Hero "How It Works" stat cards — see navy-bg version below (overrides this) */
 
 /* Fix 4: Process page stats strip — add individual cell card feel */
 [data-theme="light"] .stats-strip > div {

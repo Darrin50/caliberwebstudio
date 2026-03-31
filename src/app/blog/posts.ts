@@ -769,7 +769,7 @@ export const posts: BlogPost[] = [
 <h3>Generic Design That Doesn't Convert</h3>
 <p>Template-based design is designed for the average visitor, which means it's optimized for nobody in particular. A salon in Grosse Pointe needs to convey a different brand promise than a plumber in Downriver. Generic templates can't do this. The conversion rate of a generic template site is typically half that of a custom-designed site built for a specific customer journey.</p>
 
-<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Professional website performance analytics showing strong traffic and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Professional website performance analytics showing strong traffic and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Compounding Cost: Lost Leads Are the Real Expense</h2>
 
@@ -1147,7 +1147,7 @@ export const posts: BlogPost[] = [
 
 <p>Short answer: for most local small businesses, the ROI is between 3x and 15x annually. The range depends on your industry, your local competition, and the quality of the site and SEO work behind it.</p>
 
-<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Successful business owner reviewing revenue growth chart from website leads" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Successful business owner reviewing revenue growth chart from website leads" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Think About Website ROI</h2>
 
@@ -1711,7 +1711,7 @@ export const posts: BlogPost[] = [
 
 <p>This means writing content that sounds like a knowledgeable friend answering a question — specific, detailed, empathetic to the uncertainty the customer feels, and free of marketing-speak. AI systems are sophisticated at identifying content that's genuinely helpful vs. content that's keyword-stuffed or promotional. Helpful content wins every time.</p>
 
-<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Detroit business owner checking AI visibility across multiple answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Detroit business owner checking AI visibility across multiple answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Detroit Businesses That Win With AEO: Three Real Examples</h2>
 
@@ -2335,7 +2335,7 @@ export const posts: BlogPost[] = [
   <li><strong>FAQ compilations:</strong> "10 questions Detroit homeowners ask about [service]" — captures multiple long-tail keywords in one post</li>
 </ul>
 
-<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Content calendar and blog strategy for Detroit small business local SEO" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Content calendar and blog strategy for Detroit small business local SEO" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Link Building for Local Businesses</h2>
 
@@ -2680,7 +2680,7 @@ export const posts: BlogPost[] = [
 
 <p>Post weekly. Each post should include: a keyword-rich description mentioning your service and location, a photo (posts with photos get more engagement), and a clear call-to-action button (Book, Call, Order, Get Offer, or Learn More).</p>
 
-<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Google Business Profile posts showing local business activity and updates" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Google Business Profile posts showing local business activity and updates" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Services, Products, and Menu</h2>
 
@@ -3212,7 +3212,7 @@ export const posts: BlogPost[] = [
   <li>Monitor Google Search Console for ranking improvements</li>
 </ul>
 
-<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="High-ranking website on Google first page after implementing SEO fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="High-ranking website on Google first page after implementing SEO fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Caliber Sites Rank</h2>
 

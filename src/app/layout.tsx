@@ -1,6 +1,28 @@
 import type { Metadata } from "next";
+import { Syne, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import ClientEffects from "@/components/ClientEffects";
+
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+  display: "swap",
+});
 
 /* ─── SEO / AEO / GEO: Full Metadata ─── */
 export const metadata: Metadata = {
@@ -333,7 +355,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="dark" className={`${syne.variable} ${inter.variable} ${spaceMono.variable}`}>
       <head>
         {/* Restore saved theme before first paint — prevents flash of wrong theme */}
         <script dangerouslySetInnerHTML={{__html: `(function(){try{var t=window['localStorage'].getItem('caliber-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`}} />

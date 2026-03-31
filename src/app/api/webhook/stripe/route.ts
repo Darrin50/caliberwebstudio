@@ -2,13 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
 
-const PLAN_NAMES: Record<string, string> = {
-  price_1TGOei3ssao1AlQ6SXhvA2Xu: "Starter Plan ($197/mo)",
-  price_1TGOgD3ssao1AlQ6PusxEqvu: "Growth Plan ($397/mo)",
-  price_1TGOfX3ssao1AlQ6ICkoBWam: "Domination Plan ($697/mo)",
-  price_1TGOgx3ssao1AlQ6uOOxc2Xi: "Startup Complete ($5,000 one-time)",
-};
-
 export async function POST(req: NextRequest) {
   const body = await req.text();
   const sig = req.headers.get("stripe-signature");

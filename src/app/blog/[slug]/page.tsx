@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { posts, getPost } from "../posts";
@@ -73,11 +74,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {/* Hero Image */}
           {heroImage && (
             <div style={{ marginBottom: "40px", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={heroImage.src}
                 alt={heroImage.alt}
+                width={1200}
+                height={480}
                 style={{ width: "100%", height: "auto", maxHeight: "480px", objectFit: "cover", display: "block" }}
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
               />
             </div>
           )}

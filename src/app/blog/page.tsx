@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { posts } from "./posts";
@@ -70,13 +71,14 @@ export default function BlogIndex() {
                 {(() => {
                   const thumb = post.thumbnail ?? extractFirstImage(post.content);
                   return thumb ? (
-                    <div style={{ width: "100%", height: "180px", overflow: "hidden", flexShrink: 0 }}>
-                      <img
+                    <div style={{ width: "100%", height: "180px", overflow: "hidden", flexShrink: 0, position: "relative" }}>
+                      <Image
                         src={thumb.startsWith('/') ? thumb : `${thumb.split('?')[0]}?w=600&auto=format&fit=crop&q=70`}
                         alt={post.title}
-                        loading="lazy"
+                        fill
                         className="blog-thumb-img"
-                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                        style={{ objectFit: "cover" }}
+                        sizes="(max-width: 768px) 100vw, 340px"
                       />
                     </div>
                   ) : null;

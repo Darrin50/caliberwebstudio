@@ -1989,7 +1989,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-to-show-up-in-chatgpt-and-perplexity",
-    "thumbnail": "https://images.unsplash.com/photo-1655722349920-b20a8e0f47d4?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80",
     "title": "How to Show Up in ChatGPT and Perplexity Search Results",
     "description": "More customers are using AI tools like ChatGPT and Perplexity to find local businesses. Here's the practical strategy for getting your Detroit business recommended by AI search.",
     "date": "2025-02-24",
@@ -2187,7 +2187,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "local-seo-guide-for-small-businesses",
-    "thumbnail": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
     "title": "The Complete Local SEO Guide for Detroit Small Businesses",
     "description": "Want more customers finding your Detroit business on Google? This complete local SEO guide covers everything you need to rank in your city and neighborhood.",
     "date": "2025-02-27",

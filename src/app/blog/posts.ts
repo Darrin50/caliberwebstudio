@@ -130,7 +130,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "affordable-website-design-detroit",
-    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
     "title": "Affordable Website Design in Detroit \u2014 Real Value Without the $10K Invoice",
     "description": "Affordable website design in Detroit doesn't mean cheap. See how Caliber Web Studio delivers premium, SEO-ready websites for Detroit small businesses starting at $197/mo with $0 down.",
     "date": "2025-01-09",
@@ -364,7 +364,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-detroit-small-businesses-need-a-website",
-    "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80",
     "title": "Why Every Detroit Small Business Needs a Website in 2025",
     "description": "Still running your Detroit business without a proper website? Here are the real, data-backed reasons why a professional website is no longer optional \u2014 and what you're losing every month without one.",
     "date": "2025-01-16",
@@ -1312,7 +1312,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-an-ai-chatbot-for-business",
-    "thumbnail": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&q=80",
     "title": "What Is an AI Chatbot for Business \u2014 and Do Detroit Small Businesses Need One?",
     "description": "AI chatbots aren't just for big companies anymore. Here's what an AI chatbot actually does for a local Detroit business, what it costs, and whether it's worth it.",
     "date": "2025-02-10",
@@ -1457,7 +1457,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-ai-is-changing-local-business-marketing",
-    "thumbnail": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80",
     "title": "How AI Is Changing Local Business Marketing in 2025",
     "description": "AI isn't just for tech companies. Here's how artificial intelligence is transforming marketing for small businesses in Detroit and what you need to know to stay competitive.",
     "date": "2025-02-13",
@@ -1603,7 +1603,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-aeo-answer-engine-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
     "title": "What Is AEO (Answer Engine Optimization) and Why Your Detroit Business Needs It",
     "description": "Answer Engine Optimization (AEO) is the new SEO \u2014 optimizing your content to be chosen by AI tools like ChatGPT and Google's AI Overviews. Here's what it is and how to do it.",
     "date": "2025-02-17",
@@ -1787,7 +1787,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-geo-generative-engine-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1526379879527-8559ecfcaec3?w=1200&q=80",
     "title": "What Is GEO (Generative Engine Optimization)? A Guide for Detroit Business Owners",
     "description": "GEO \u2014 Generative Engine Optimization \u2014 is the practice of optimizing your online presence to appear in AI-generated search results. Here's what it means for your Detroit business.",
     "date": "2025-02-20",
@@ -3030,7 +3030,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-small-business-websites-dont-rank",
-    "thumbnail": "https://images.unsplash.com/photo-1533750516457-a7f992034fec?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=1200&q=80",
     "title": "Why Small Business Websites Don't Rank (And How to Fix It)",
     "description": "Most small business websites fail at SEO for the same handful of reasons. Learn what's holding your Detroit business back from page one and how to fix it fast.",
     "date": "2025-05-05",

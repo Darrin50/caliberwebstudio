@@ -5,6 +5,7 @@ import {
   saveSubmission,
   markSlugSubmitted,
 } from '@/lib/onboarding-data'
+import { buildClientEmail, buildDarrinEmail } from '@/lib/emails/onboarding-confirmation'
 
 export async function POST(req: NextRequest) {
   try {
@@ -65,58 +66,20 @@ export async function POST(req: NextRequest) {
     })
     markSlugSubmitted(slug || 'unknown')
 
-    // ── TODO: Notion API integration ──────────────────────────────────────
-    // When ready, create a new page in your Notion database:
-    //
-    // const notion = new Client({ auth: process.env.NOTION_API_KEY })
-    // await notion.pages.create({
-    //   parent: { database_id: process.env.NOTION_DATABASE_ID! },
-    //   properties: {
-    //     Name: { title: [{ text: { content: data.business.name } }] },
-    //     Slug: { rich_text: [{ text: { content: slug } }] },
-    //     Email: { email: data.contact.email },
-    //     SubmittedAt: { date: { start: submittedAt } },
-    //   },
-    // })
+    // ── Fire all integrations in parallel — failures are isolated ─────────
+    const results = await Promise.allSettled([
+      sendClientEmail(data),
+      sendDarrinEmail(payload),
+      fireN8nWebhook(payload),
+      createNotionPage(payload),
+    ])
 
-    // ── n8n webhook ───────────────────────────────────────────────────────
-    if (process.env.N8N_WEBHOOK_URL) {
-      try {
-        const webhookRes = await fetch(process.env.N8N_WEBHOOK_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        })
-        if (!webhookRes.ok) {
-          console.error('[onboarding] n8n webhook failed:', webhookRes.status)
-        }
-      } catch (webhookErr) {
-        console.error('[onboarding] n8n webhook error:', webhookErr)
-        // Don't fail the submission if webhook fails
+    results.forEach((result, i) => {
+      const labels = ['client-email', 'darrin-email', 'n8n-webhook', 'notion']
+      if (result.status === 'rejected') {
+        console.error(`[onboarding] ${labels[i]} failed:`, result.reason)
       }
-    }
-
-    // ── TODO: Send email via Resend ───────────────────────────────────────
-    // Notification to Darrin:
-    //
-    // const { Resend } = await import('resend')
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    //
-    // await resend.emails.send({
-    //   from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
-    //   to: ['darrin@caliberwebstudio.com'],
-    //   subject: `New Onboarding: ${data.business.name}`,
-    //   html: buildInternalEmail(payload),
-    // })
-    //
-    // Confirmation to client:
-    // await resend.emails.send({
-    //   from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
-    //   to: [data.contact.email],
-    //   reply_to: 'darrin@caliberwebstudio.com',
-    //   subject: `Got it! Your site is being built — Caliber Web Studio`,
-    //   html: buildClientEmail(data),
-    // })
+    })
 
     // ── Return success ────────────────────────────────────────────────────
     return NextResponse.json({
@@ -132,5 +95,196 @@ export async function POST(req: NextRequest) {
       },
       { status: 500 }
     )
+  }
+}
+
+// ─── Client confirmation email ────────────────────────────────────────────────
+
+async function sendClientEmail(data: Parameters<typeof buildClientEmail>[0]) {
+  const html = buildClientEmail(data)
+  const subject = "We're building your website — here's what's next"
+
+  if (!process.env.RESEND_API_KEY) {
+    console.log('[onboarding] RESEND_API_KEY not set — client email payload:', {
+      to: data.contact.email,
+      subject,
+    })
+    return
+  }
+
+  const { Resend } = await import('resend')
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
+  const { error } = await resend.emails.send({
+    from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
+    to: [data.contact.email],
+    reply_to: 'darrin@caliberwebstudio.com',
+    subject,
+    html,
+  })
+
+  if (error) throw new Error(`Resend client email error: ${JSON.stringify(error)}`)
+}
+
+// ─── Internal notification to Darrin ─────────────────────────────────────────
+
+async function sendDarrinEmail(payload: Parameters<typeof buildDarrinEmail>[0]) {
+  const html = buildDarrinEmail(payload)
+  const subject = `🚀 New Client Onboarding: ${payload.business.name}`
+
+  if (!process.env.RESEND_API_KEY) {
+    console.log('[onboarding] RESEND_API_KEY not set — darrin email payload:', {
+      to: 'darrin@caliberwebstudio.com',
+      subject,
+    })
+    return
+  }
+
+  const { Resend } = await import('resend')
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
+  const { error } = await resend.emails.send({
+    from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
+    to: ['darrin@caliberwebstudio.com'],
+    subject,
+    html,
+  })
+
+  if (error) throw new Error(`Resend darrin email error: ${JSON.stringify(error)}`)
+}
+
+// ─── n8n webhook ──────────────────────────────────────────────────────────────
+
+async function fireN8nWebhook(payload: object) {
+  if (!process.env.N8N_WEBHOOK_URL) {
+    console.log('[onboarding] N8N_WEBHOOK_URL not set — skipping webhook')
+    return
+  }
+
+  const res = await fetch(process.env.N8N_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
+
+  if (!res.ok) {
+    throw new Error(`n8n webhook responded with status ${res.status}`)
+  }
+}
+
+// ─── Notion page creation ─────────────────────────────────────────────────────
+
+async function createNotionPage(payload: {
+  slug: string
+  submittedAt: string
+  business: { name: string; industry: string }
+  contact: { ownerName: string; email: string; phone?: string | null }
+  services: { items: { name: string; price?: string | null; description?: string | null }[] }
+  brand: {
+    primaryColor: string
+    secondaryColor?: string | null
+    accentColor?: string | null
+    stylePreference: string
+    logoUrl?: string | null
+    notes?: string | null
+  }
+  photos: { items?: { url: string; fileName: string; caption?: string | null }[] | null }
+  story: {
+    yourStory: string
+    whatMakesDifferent: string
+    targetCustomers?: string | null
+    anythingElse?: string | null
+  }
+}) {
+  if (!process.env.NOTION_API_KEY || !process.env.NOTION_DATABASE_ID) {
+    console.log('[onboarding] NOTION_API_KEY or NOTION_DATABASE_ID not set — skipping Notion')
+    return
+  }
+
+  const { Client } = await import('@notionhq/client')
+  const notion = new Client({ auth: process.env.NOTION_API_KEY })
+
+  const servicesSummary = payload.services.items
+    .map((s) => `• ${s.name}${s.price ? ` (${s.price})` : ''}`)
+    .join('\n')
+
+  const photosSummary =
+    payload.photos.items && payload.photos.items.length > 0
+      ? payload.photos.items.map((p) => `• ${p.fileName}: ${p.url}`).join('\n')
+      : 'None uploaded'
+
+  await notion.pages.create({
+    parent: { database_id: process.env.NOTION_DATABASE_ID },
+    properties: {
+      'Business Name': {
+        title: [{ text: { content: payload.business.name } }],
+      },
+      Owner: {
+        rich_text: [{ text: { content: payload.contact.ownerName } }],
+      },
+      Email: {
+        email: payload.contact.email,
+      },
+      Phone: {
+        phone_number: payload.contact.phone ?? null,
+      },
+      Industry: {
+        rich_text: [{ text: { content: payload.business.industry } }],
+      },
+      Status: {
+        select: { name: 'New Submission' },
+      },
+    },
+    children: [
+      notionHeading2('Submission Details'),
+      notionParagraph(`Slug: ${payload.slug}`),
+      notionParagraph(`Submitted At: ${payload.submittedAt}`),
+      notionHeading3('Brand'),
+      notionParagraph(`Primary Color: ${payload.brand.primaryColor}`),
+      notionParagraph(`Secondary Color: ${payload.brand.secondaryColor ?? 'N/A'}`),
+      notionParagraph(`Accent Color: ${payload.brand.accentColor ?? 'N/A'}`),
+      notionParagraph(`Style: ${payload.brand.stylePreference}`),
+      notionParagraph(`Logo: ${payload.brand.logoUrl ?? 'None'}`),
+      notionParagraph(`Brand Notes: ${payload.brand.notes ?? 'None'}`),
+      notionHeading3('Services'),
+      notionParagraph(servicesSummary),
+      notionHeading3('Story'),
+      notionParagraph(`Your Story:\n${payload.story.yourStory}`),
+      notionParagraph(`What Makes Different:\n${payload.story.whatMakesDifferent}`),
+      notionParagraph(`Target Customers: ${payload.story.targetCustomers ?? 'N/A'}`),
+      notionParagraph(`Additional Notes: ${payload.story.anythingElse ?? 'N/A'}`),
+      notionHeading3('Photos'),
+      notionParagraph(photosSummary),
+    ],
+  })
+}
+
+function notionHeading2(text: string) {
+  return {
+    object: 'block' as const,
+    type: 'heading_2' as const,
+    heading_2: {
+      rich_text: [{ type: 'text' as const, text: { content: text } }],
+    },
+  }
+}
+
+function notionHeading3(text: string) {
+  return {
+    object: 'block' as const,
+    type: 'heading_3' as const,
+    heading_3: {
+      rich_text: [{ type: 'text' as const, text: { content: text } }],
+    },
+  }
+}
+
+function notionParagraph(text: string) {
+  return {
+    object: 'block' as const,
+    type: 'paragraph' as const,
+    paragraph: {
+      rich_text: [{ type: 'text' as const, text: { content: text.slice(0, 2000) } }],
+    },
   }
 }

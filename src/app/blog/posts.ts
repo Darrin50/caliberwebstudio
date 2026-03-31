@@ -130,7 +130,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "affordable-website-design-detroit",
-    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80",
     "title": "Affordable Website Design in Detroit \u2014 Real Value Without the $10K Invoice",
     "description": "Affordable website design in Detroit doesn't mean cheap. See how Caliber Web Studio delivers premium, SEO-ready websites for Detroit small businesses starting at $197/mo with $0 down.",
     "date": "2025-01-09",
@@ -3354,7 +3354,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-plumbers-contractors",
-    "thumbnail": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+    "thumbnail": "/demo/plumbing/plumber-hero.jpg",
     "title": "Website Design for Plumbers and Contractors in Detroit",
     "description": "Detroit contractors need websites that generate leads, not just look good. Discover what a high-converting contractor website must include to win jobs in Metro Detroit.",
     "date": "2025-05-15",

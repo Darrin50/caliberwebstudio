@@ -12,7 +12,7 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     "slug": "best-web-designer-detroit",
-    "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+    "thumbnail": "/blog/best-web-designer-detroit-thumb.jpg",
     "title": "Best Web Designer in Detroit \u2014 What to Look For (and Why Caliber Wins)",
     "description": "Looking for the best web designer in Detroit? Here's what separates elite agencies from average ones \u2014 and why Caliber Web Studio is Metro Detroit's top choice for small businesses.",
     "date": "2025-01-06",
@@ -122,7 +122,7 @@ export const posts: BlogPost[] = [
 
 <p>Detroit businesses deserve websites that work as hard as they do. Don't settle for less.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">Ready to work with a web designer who's accountable for results?</strong>
   <p style="margin:12px 0 0;">See exactly what's included in our plans, with no-fluff pricing and real Detroit client outcomes. <a href="/pricing" style="color:#2563eb;font-weight:600;">View our pricing</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free site audit</a> — we'll tell you exactly what's holding your current site back.</p>
 </div>
@@ -130,7 +130,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "affordable-website-design-detroit",
-    "thumbnail": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
     "title": "Affordable Website Design in Detroit \u2014 Real Value Without the $10K Invoice",
     "description": "Affordable website design in Detroit doesn't mean cheap. See how Caliber Web Studio delivers premium, SEO-ready websites for Detroit small businesses starting at $197/mo with $0 down.",
     "date": "2025-01-09",
@@ -237,7 +237,7 @@ export const posts: BlogPost[] = [
 
 <p>For Detroit small businesses, that usually means working with a partner who stays accountable after launch day — someone who treats your website as an ongoing investment, not a one-time transaction.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">See what $197/month actually gets you.</strong>
   <p style="margin:12px 0 0;">Custom-built. Professionally designed. Optimized for your Detroit neighborhood and industry. $0 down. <a href="/pricing" style="color:#2563eb;font-weight:600;">Compare plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">schedule a free consultation</a> — we'll audit your current site and show you exactly what's missing.</p>
 </div>
@@ -356,7 +356,7 @@ export const posts: BlogPost[] = [
 
 <p>Caliber Web Studio builds custom Next.js sites for Detroit small businesses starting at $197/month with $0 down. We handle the build, hosting, maintenance, and SEO. You get a partner who stays accountable for your results — not a vendor who disappears after the invoice clears.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">Stop guessing. Make the call.</strong>
   <p style="margin:12px 0 0;">We'll audit your current website — or tell you exactly what you need if you don't have one — and show you a clear path to a site that actually generates leads. No sales pitch. Just honest analysis. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free audit today.</a></p>
 </div>
@@ -454,7 +454,7 @@ export const posts: BlogPost[] = [
 
 <p>The businesses winning in Detroit's local market have professional websites. The ones losing don't. It really is that simple.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">Find out why your competitors are showing up — and you're not.</strong>
   <p style="margin:12px 0 0;">We'll run a free audit on your current online presence and show you exactly what it would take to start showing up in local search. No obligation. Just honest analysis from a Detroit-based team that knows the market. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free audit now.</a></p>
 </div>
@@ -548,7 +548,7 @@ export const posts: BlogPost[] = [
 
 <p>That's it. No mystery. No bait-and-switch. No disappearing after launch. If you want to understand why this model produces better outcomes than the alternatives, read our full breakdown of the <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> — and then decide if you're ready to stop leaving leads on the table.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">See what we build — and what it produces.</strong>
   <p style="margin:12px 0 0;">Browse our work, review our plans, or get a free audit of your current website. We'll show you exactly what's holding your online presence back and what it would take to fix it. <a href="/work" style="color:#2563eb;font-weight:600;">View our work</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free site audit.</a></p>
 </div>
@@ -712,7 +712,7 @@ export const posts: BlogPost[] = [
 
 <p>The upfront build model ($2,000–$8,000) can work if you have in-house capability to handle ongoing SEO and maintenance. For most small business owners who are focused on running their business, the all-in monthly model is the smarter economic choice.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">Get a clear price for your specific situation.</strong>
   <p style="margin:12px 0 0;">No ranges. No "it depends." We'll look at your business, your market, and your goals — and give you a straight recommendation. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our pricing</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">talk to us directly.</a></p>
 </div>
@@ -819,7 +819,7 @@ export const posts: BlogPost[] = [
 
 <p>The question isn't whether a professional website is worth the investment. The question is how much longer you're willing to pay for a site that isn't working while your competitors' professional sites continue compounding their advantage.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">Stop paying for a site that doesn't work.</strong>
   <p style="margin:12px 0 0;">We'll audit your current website and show you exactly why it isn't generating leads — and what it would take to fix it. $0 upfront. Real results. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free audit today.</a></p>
 </div>
@@ -997,7 +997,7 @@ export const posts: BlogPost[] = [
 
 <p>That's the deal. If it sounds too good compared to what you've been quoted elsewhere, read through the comparison table above — then decide what you're worth.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">Ready to see your site built in under 30 days?</strong>
   <p style="margin:12px 0 0;">No upfront cost. No contract. Just a professional website that works for your business from day one. <a href="/pricing" style="color:#2563eb;font-weight:600;">Compare all plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">schedule a free consultation.</a></p>
 </div>
@@ -1126,7 +1126,7 @@ export const posts: BlogPost[] = [
 
 <p>Every month your website underperforms is a month your competitors capture the customers you should have had. The monthly model solves that problem at $197/month with $0 upfront, ongoing performance accountability, and the ability to cancel anytime if we don't deliver.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">The math is done. The next step is yours.</strong>
   <p style="margin:12px 0 0;">$0 upfront. Month-to-month. A professional website that generates leads from day one. Stop leaving revenue on the table. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">talk to us today.</a></p>
 </div>
@@ -1304,7 +1304,7 @@ export const posts: BlogPost[] = [
 
 <p>What makes the difference between good ROI and great ROI is quality of execution: how fast the site loads, how well it's optimized for local search, how consistently it's maintained and improved. These are the exact factors that separate Caliber's approach from the alternatives.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="font-size:1.1em;">Get a custom ROI projection for your business.</strong>
   <p style="margin:12px 0 0;">We'll analyze your market, estimate your traffic opportunity, and show you a realistic projection of what a professional website should return for your specific business. No obligation. Just clear numbers. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free projection today.</a></p>
 </div>
@@ -1989,7 +1989,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-to-show-up-in-chatgpt-and-perplexity",
-    "thumbnail": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80",
     "title": "How to Show Up in ChatGPT and Perplexity Search Results",
     "description": "More customers are using AI tools like ChatGPT and Perplexity to find local businesses. Here's the practical strategy for getting your Detroit business recommended by AI search.",
     "date": "2025-02-24",
@@ -2187,7 +2187,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "local-seo-guide-for-small-businesses",
-    "thumbnail": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
     "title": "The Complete Local SEO Guide for Detroit Small Businesses",
     "description": "Want more customers finding your Detroit business on Google? This complete local SEO guide covers everything you need to rank in your city and neighborhood.",
     "date": "2025-02-27",
@@ -3238,7 +3238,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-barbers",
-    "thumbnail": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1599351431202-1802df29a977?w=1200&q=80",
     "title": "Website Design for Barbers and Barbershops in Detroit",
     "description": "Your Detroit barbershop needs more than Instagram to grow. A professional website with online booking, hours, and local SEO turns browsers into loyal clients.",
     "date": "2025-05-10",
@@ -3354,7 +3354,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-plumbers-contractors",
-    "thumbnail": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+    "thumbnail": "/demo/plumbing/plumber-hero.jpg",
     "title": "Website Design for Plumbers and Contractors in Detroit",
     "description": "Detroit contractors need websites that generate leads, not just look good. Discover what a high-converting contractor website must include to win jobs in Metro Detroit.",
     "date": "2025-05-15",
@@ -3384,7 +3384,7 @@ export const posts: BlogPost[] = [
 
 <p>Speed to first contact is the variable that wins emergency jobs. When three contractors show up in search results, the one who answers first gets the work.</p>
 
-<img src="/blog/website-design-for-plumbers-contractors-1.jpg" alt="Plumber working on aging pipes in a Detroit basement" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/demo/plumbing/plumber-hero.jpg" alt="Plumber working on aging pipes in a Detroit basement" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Seasonal Demand: Build a Website That Handles the Spikes</h2>
 
@@ -3410,7 +3410,7 @@ export const posts: BlogPost[] = [
 <li><strong>Google reviews embedded prominently</strong> — A 4.8-star average with 90 reviews on your homepage does more sales work than any headline you could write.</li>
 </ul>
 
-<img src="/blog/website-design-for-plumbers-contractors-2.jpg" alt="Licensed contractor reviewing plans on a Detroit job site" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/demo/plumbing/plumber-about.jpg" alt="Licensed contractor reviewing plans on a Detroit job site" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Service Area Pages: Win Metro Detroit Neighborhood by Neighborhood</h2>
 
@@ -3430,7 +3430,7 @@ export const posts: BlogPost[] = [
 
 <p>That's a lead captured at 10pm that you call at 8am — before they've called anyone else.</p>
 
-<img src="/blog/website-design-for-plumbers-contractors-3.jpg" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/demo/plumbing/plumber-about.jpg" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reviews: The Referral Network That Scales</h2>
 

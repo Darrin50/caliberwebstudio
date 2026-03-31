@@ -12,7 +12,7 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     "slug": "best-web-designer-detroit",
-    "thumbnail": "/blog/best-web-designer-detroit-thumb.jpg",
+    "thumbnail": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80",
     "title": "Best Web Designer in Detroit \u2014 What to Look For (and Why Caliber Wins)",
     "description": "Looking for the best web designer in Detroit? Here's what separates elite agencies from average ones \u2014 and why Caliber Web Studio is Metro Detroit's top choice for small businesses.",
     "date": "2025-01-06",
@@ -25,7 +25,7 @@ export const posts: BlogPost[] = [
 
 <p>Detroit's business landscape is unlike anywhere else. A plumber in Lincoln Park competes differently than a salon in Midtown. A restaurant on Corktown's Michigan Avenue has different needs than a law firm in Grosse Pointe. The best web designer for your business isn't the cheapest one you found on Thumbtack — it's the one who understands your market, your customers, and how to turn a website into a revenue machine.</p>
 
-<img src="/blog/best-web-designer-detroit-1.jpg" alt="Designer reviewing website analytics and performance metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80" alt="Designer reviewing website analytics and performance metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What "Best" Actually Means for a Detroit Small Business</h2>
 
@@ -59,7 +59,7 @@ export const posts: BlogPost[] = [
 <h3>They Use Wix, Squarespace, or Generic WordPress Themes</h3>
 <p>These platforms have their place — but not for serious local businesses trying to compete online. They're slow, they're generic, and they hand you a digital storefront that looks identical to a thousand others. The best web designers build custom or use high-performance frameworks that give you a technical advantage.</p>
 
-<img src="/blog/best-web-designer-detroit-2.jpg" alt="Business dashboard showing website traffic, leads, and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Business dashboard showing website traffic, leads, and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Case Studies: What Real Results Look Like in Detroit</h2>
 
@@ -104,7 +104,7 @@ export const posts: BlogPost[] = [
 
 <p>For most Detroit small businesses, the retainer model delivers the best outcome-per-dollar. You get professional quality with zero upfront cost and ongoing performance accountability. Before you decide, read our full breakdown of <a href="/blog/affordable-website-design-detroit">affordable website design options in Detroit</a> and understand why <a href="/blog/why-cheap-websites-cost-more">cheap websites almost always cost more in the long run</a>.</p>
 
-<img src="/blog/best-web-designer-detroit-3.jpg" alt="Professional website design displayed on multiple devices" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&q=80" alt="Professional website design displayed on multiple devices" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What Makes Caliber Web Studio Different</h2>
 
@@ -122,7 +122,7 @@ export const posts: BlogPost[] = [
 
 <p>Detroit businesses deserve websites that work as hard as they do. Don't settle for less.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Ready to work with a web designer who's accountable for results?</strong>
   <p style="margin:12px 0 0;">See exactly what's included in our plans, with no-fluff pricing and real Detroit client outcomes. <a href="/pricing" style="color:#2563eb;font-weight:600;">View our pricing</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free site audit</a> — we'll tell you exactly what's holding your current site back.</p>
 </div>
@@ -130,7 +130,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "affordable-website-design-detroit",
-    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
     "title": "Affordable Website Design in Detroit \u2014 Real Value Without the $10K Invoice",
     "description": "Affordable website design in Detroit doesn't mean cheap. See how Caliber Web Studio delivers premium, SEO-ready websites for Detroit small businesses starting at $197/mo with $0 down.",
     "date": "2025-01-09",
@@ -143,7 +143,7 @@ export const posts: BlogPost[] = [
 
 <p>This guide is for Detroit small business owners who need a professional website without burning their operating capital — and who want to understand what they're actually getting for their money.</p>
 
-<img src="/blog/affordable-website-design-detroit-1.jpg" alt="Small business owner reviewing website cost breakdown and budget spreadsheet" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Small business owner reviewing website cost breakdown and budget spreadsheet" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Detroit Web Design Market: What You're Actually Choosing Between</h2>
 
@@ -183,7 +183,7 @@ export const posts: BlogPost[] = [
 <h3>Warren, Sterling Heights, and the Inner Ring Suburbs</h3>
 <p>High-competition, price-sensitive markets. Trades, auto shops, and service businesses here live and die by their Google Maps ranking. Local SEO isn't optional — it's the entire game. Your website is mostly a credibility signal that supports your Google Business Profile. Fast, mobile-optimized, with clear service areas and customer reviews prominently displayed.</p>
 
-<img src="/blog/affordable-website-design-detroit-2.jpg" alt="Dashboard showing website performance growth and lead generation over time" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Dashboard showing website performance growth and lead generation over time" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What "Affordable" Really Means: The ROI Frame</h2>
 
@@ -217,7 +217,7 @@ export const posts: BlogPost[] = [
   <li>Ongoing optimization based on actual performance data</li>
 </ul>
 
-<img src="/blog/affordable-website-design-detroit-3.jpg" alt="Revenue growth chart showing website investment returns" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80" alt="Revenue growth chart showing website investment returns" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Caliber's Pricing Model: Built for Detroit Small Businesses</h2>
 
@@ -237,7 +237,7 @@ export const posts: BlogPost[] = [
 
 <p>For Detroit small businesses, that usually means working with a partner who stays accountable after launch day — someone who treats your website as an ongoing investment, not a one-time transaction.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">See what $197/month actually gets you.</strong>
   <p style="margin:12px 0 0;">Custom-built. Professionally designed. Optimized for your Detroit neighborhood and industry. $0 down. <a href="/pricing" style="color:#2563eb;font-weight:600;">Compare plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">schedule a free consultation</a> — we'll audit your current site and show you exactly what's missing.</p>
 </div>
@@ -245,7 +245,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "detroit-web-design-agency-vs-freelancer",
-    "thumbnail": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
     "title": "Detroit Web Design Agency vs. Freelancer \u2014 Which Is Right for Your Business?",
     "description": "Should you hire a Detroit web design agency or a freelancer? We break down the real pros, cons, and costs so you can make the right call for your small business.",
     "date": "2025-01-13",
@@ -258,7 +258,7 @@ export const posts: BlogPost[] = [
 
 <p>For Detroit small business owners, choosing between an agency and a freelancer for web design is one of the most consequential decisions you'll make. The wrong choice costs you money, time, and — most painfully — the leads you should have been generating during those lost months. Let's cut through the noise.</p>
 
-<img src="/blog/detroit-web-design-agency-vs-freelancer-1.jpg" alt="Frustrated small business owner at desk reviewing website performance analytics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Frustrated small business owner at desk reviewing website performance analytics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What You're Actually Choosing Between</h2>
 
@@ -300,7 +300,7 @@ export const posts: BlogPost[] = [
 
 <p>If the answers are vague, evasive, or involve additional fees for basic support, that tells you everything about how accountability will work in practice.</p>
 
-<img src="/blog/detroit-web-design-agency-vs-freelancer-2.jpg" alt="Team collaborating on website project planning and strategy meeting" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Team collaborating on website project planning and strategy meeting" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>When a Freelancer Is the Right Choice</h2>
 
@@ -336,7 +336,7 @@ export const posts: BlogPost[] = [
 
 <p>Check out our full guide on <a href="/blog/best-web-designer-detroit">how to find the best web designer in Detroit</a> for the due diligence checklist before signing anything.</p>
 
-<img src="/blog/detroit-web-design-agency-vs-freelancer-3.jpg" alt="Business owner signing a web design contract" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=1200&q=80" alt="Business owner signing a web design contract" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Decision Framework</h2>
 
@@ -356,7 +356,7 @@ export const posts: BlogPost[] = [
 
 <p>Caliber Web Studio builds custom Next.js sites for Detroit small businesses starting at $197/month with $0 down. We handle the build, hosting, maintenance, and SEO. You get a partner who stays accountable for your results — not a vendor who disappears after the invoice clears.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Stop guessing. Make the call.</strong>
   <p style="margin:12px 0 0;">We'll audit your current website — or tell you exactly what you need if you don't have one — and show you a clear path to a site that actually generates leads. No sales pitch. Just honest analysis. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free audit today.</a></p>
 </div>
@@ -364,7 +364,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-detroit-small-businesses-need-a-website",
-    "thumbnail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1564419320461-6262af184cbb?w=1200&q=80",
     "title": "Why Every Detroit Small Business Needs a Website in 2025",
     "description": "Still running your Detroit business without a proper website? Here are the real, data-backed reasons why a professional website is no longer optional \u2014 and what you're losing every month without one.",
     "date": "2025-01-16",
@@ -377,7 +377,7 @@ export const posts: BlogPost[] = [
 
 <p>This isn't theory. This is how your customers are finding your competitors right now.</p>
 
-<img src="/blog/why-detroit-small-businesses-need-a-website-1.jpg" alt="Business owner using laptop to check customer reviews and online presence" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80" alt="Business owner using laptop to check customer reviews and online presence" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Numbers Don't Lie</h2>
 
@@ -413,7 +413,7 @@ export const posts: BlogPost[] = [
 <h3>The Hamtramck Auto Shop Invisible Online</h3>
 <p>An independent auto repair shop in Hamtramck does excellent work — better than the franchise shop two miles away — but loses customers because they don't appear in local search. When someone searches "auto repair Hamtramck," the franchise shows up first because they have hundreds of national backlinks and a well-optimized website. A properly built local site with service-specific pages, neighborhood-relevant content, and strong on-page SEO can level that playing field. Local SEO done right beats national brand recognition at the local search level.</p>
 
-<img src="/blog/why-detroit-small-businesses-need-a-website-2.jpg" alt="Growth chart showing increase in customer inquiries and website traffic over time" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="Growth chart showing increase in customer inquiries and website traffic over time" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The "I Have Facebook/Instagram" Objection</h2>
 
@@ -442,7 +442,7 @@ export const posts: BlogPost[] = [
 <h3>Builds Authority Over Time</h3>
 <p>Unlike advertising, which stops working the moment you stop paying, a well-optimized website builds compounding value. Every month of proper SEO builds domain authority. Every piece of quality content increases your ranking potential. The business that started investing in their website two years ago is harder to displace today. The business that starts today will have that same advantage in two years.</p>
 
-<img src="/blog/why-detroit-small-businesses-need-a-website-3.jpg" alt="Customer discovering a local business through their website" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Customer discovering a local business through their website" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Get a Professional Website Without Breaking the Bank</h2>
 
@@ -454,7 +454,7 @@ export const posts: BlogPost[] = [
 
 <p>The businesses winning in Detroit's local market have professional websites. The ones losing don't. It really is that simple.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Find out why your competitors are showing up — and you're not.</strong>
   <p style="margin:12px 0 0;">We'll run a free audit on your current online presence and show you exactly what it would take to start showing up in local search. No obligation. Just honest analysis from a Detroit-based team that knows the market. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free audit now.</a></p>
 </div>
@@ -475,7 +475,7 @@ export const posts: BlogPost[] = [
 
 <p>Caliber Web Studio was built as the answer to that pattern. We're a Detroit-based web design agency focused on one outcome: building websites that generate real business growth for local small businesses. Here's exactly how we do it — and why Detroit digital marketing requires a different approach than generic web design.</p>
 
-<img src="/blog/how-caliber-web-studio-helps-detroit-businesses-1.jpg" alt="Team working together on website design and strategy during meeting" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80" alt="Team working together on website design and strategy during meeting" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Foundation: Custom Next.js Development</h2>
 
@@ -500,7 +500,7 @@ export const posts: BlogPost[] = [
 <h3>Content That Ranks and Converts</h3>
 <p>We create service pages, location pages, and blog content targeted at the specific searches your customers are making. A plumber in Dearborn needs content that ranks for "plumber Dearborn MI," "emergency plumber Dearborn," and "water heater installation Dearborn" — not generic plumbing content that competes nationally. Hyper-local content strategy is where most web design agencies fail Detroit businesses.</p>
 
-<img src="/blog/how-caliber-web-studio-helps-detroit-businesses-2.jpg" alt="Analytics dashboard showing traffic growth, leads, and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Analytics dashboard showing traffic growth, leads, and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>AI Tools: The New Edge in Detroit Digital Marketing</h2>
 
@@ -534,7 +534,7 @@ export const posts: BlogPost[] = [
 <h3>Ongoing Partnership, Not One-Time Transaction</h3>
 <p>After launch, we monitor your site weekly — checking Core Web Vitals, indexing status, broken links, security vulnerabilities, and ranking movements. When issues appear, we fix them before they affect your business. When Google updates its algorithm and your rankings shift, we analyze the change and adapt your strategy. This is ongoing work that most one-time builds simply don't provide.</p>
 
-<img src="/blog/how-caliber-web-studio-helps-detroit-businesses-3.jpg" alt="Business growth strategy planning in a modern office" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80" alt="Business growth strategy planning in a modern office" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Who We Work Best With</h2>
 
@@ -548,7 +548,7 @@ export const posts: BlogPost[] = [
 
 <p>That's it. No mystery. No bait-and-switch. No disappearing after launch. If you want to understand why this model produces better outcomes than the alternatives, read our full breakdown of the <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> — and then decide if you're ready to stop leaving leads on the table.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">See what we build — and what it produces.</strong>
   <p style="margin:12px 0 0;">Browse our work, review our plans, or get a free audit of your current website. We'll show you exactly what's holding your online presence back and what it would take to fix it. <a href="/work" style="color:#2563eb;font-weight:600;">View our work</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free site audit.</a></p>
 </div>
@@ -569,7 +569,7 @@ export const posts: BlogPost[] = [
 
 <p>Short answer: anywhere from $0 to $50,000+, depending on what you're actually buying. The more useful question is: what should a serious Detroit small business expect to spend to get a website that actually generates leads?</p>
 
-<img src="/blog/how-much-does-a-small-business-website-cost-1.jpg" alt="Business owner analyzing website costs and budget breakdown spreadsheet" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80" alt="Business owner analyzing website costs and budget breakdown spreadsheet" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Full Spectrum: Every Option at Every Price Point</h2>
 
@@ -644,7 +644,7 @@ export const posts: BlogPost[] = [
 
 <p>The math is stark. If you built a site for $4,000 and then separately paid for hosting, maintenance, and SEO, you'd be looking at $1,100–$2,000 per month — plus your upfront build cost. Our all-in model at $197/month represents a dramatic cost reduction while including everything. For the full breakdown of what's included, see <a href="/blog/whats-included-in-197-per-month-website">what's included in the $197/month website</a>.</p>
 
-<img src="/blog/how-much-does-a-small-business-website-cost-2.jpg" alt="Team brainstorming website project and discussing design options" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="Team brainstorming website project and discussing design options" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Hidden Costs Nobody Talks About</h2>
 
@@ -690,7 +690,7 @@ export const posts: BlogPost[] = [
 
 <p>If your website is meant to generate new customers (as opposed to just existing for people who already know about you), then the cheapest option is almost never the best option. Read our full guide to <a href="/blog/affordable-website-design-detroit">affordable website design in Detroit</a> for a framework that matches cost to your actual business needs.</p>
 
-<img src="/blog/how-much-does-a-small-business-website-cost-3.jpg" alt="Stack of money next to a professional website on laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Stack of money next to a professional website on laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The ROI Frame: What Your Website Should Return</h2>
 
@@ -712,7 +712,7 @@ export const posts: BlogPost[] = [
 
 <p>The upfront build model ($2,000–$8,000) can work if you have in-house capability to handle ongoing SEO and maintenance. For most small business owners who are focused on running their business, the all-in monthly model is the smarter economic choice.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Get a clear price for your specific situation.</strong>
   <p style="margin:12px 0 0;">No ranges. No "it depends." We'll look at your business, your market, and your goals — and give you a straight recommendation. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our pricing</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">talk to us directly.</a></p>
 </div>
@@ -720,7 +720,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-cheap-websites-cost-more",
-    "thumbnail": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80",
     "title": "Why Cheap Websites Actually Cost More",
     "description": "That $500 website deal might look attractive \u2014 until you see the full bill. Here's why cheap websites end up costing Detroit small businesses far more than a professional solution.",
     "date": "2025-01-27",
@@ -733,7 +733,7 @@ export const posts: BlogPost[] = [
 
 <p>This is the pattern we see repeatedly with Detroit small businesses. It doesn't matter if you're a plumber in Lincoln Park, a restaurant in Eastern Market, or a salon in Midtown — the cheap website lifecycle is almost always the same.</p>
 
-<img src="/blog/why-cheap-websites-cost-more-1.jpg" alt="Frustrated business owner reviewing slow website performance and lack of traffic" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="Frustrated business owner reviewing slow website performance and lack of traffic" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The 18-Month Pattern: Why Cheap Sites Always End Up Here</h2>
 
@@ -769,7 +769,7 @@ export const posts: BlogPost[] = [
 <h3>Generic Design That Doesn't Convert</h3>
 <p>Template-based design is designed for the average visitor, which means it's optimized for nobody in particular. A salon in Grosse Pointe needs to convey a different brand promise than a plumber in Downriver. Generic templates can't do this. The conversion rate of a generic template site is typically half that of a custom-designed site built for a specific customer journey.</p>
 
-<img src="/blog/why-cheap-websites-cost-more-2.jpg" alt="Professional website performance analytics showing strong traffic and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Professional website performance analytics showing strong traffic and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Compounding Cost: Lost Leads Are the Real Expense</h2>
 
@@ -796,7 +796,7 @@ export const posts: BlogPost[] = [
 
 <p>None of these numbers are speculative — they're based on what properly optimized local business sites actually deliver. For the full analysis, see our guide to <a href="/blog/affordable-website-design-detroit">affordable website design that actually produces ROI</a>.</p>
 
-<img src="/blog/why-cheap-websites-cost-more-3.jpg" alt="Business owner paying unexpected fees after a cheap website fails" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Business owner paying unexpected fees after a cheap website fails" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Tell If Your Current Site Is a Cheap Site in Disguise</h2>
 
@@ -819,7 +819,7 @@ export const posts: BlogPost[] = [
 
 <p>The question isn't whether a professional website is worth the investment. The question is how much longer you're willing to pay for a site that isn't working while your competitors' professional sites continue compounding their advantage.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Stop paying for a site that doesn't work.</strong>
   <p style="margin:12px 0 0;">We'll audit your current website and show you exactly why it isn't generating leads — and what it would take to fix it. $0 upfront. Real results. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free audit today.</a></p>
 </div>
@@ -827,7 +827,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "whats-included-in-197-per-month-website",
-    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80",
     "title": "What's Actually Included in a $197/Month Website from Caliber Web Studio?",
     "description": "Our Starter Plan starts at $197/month with $0 down. Here's exactly what that includes \u2014 no hidden fees, no vague promises, just a complete breakdown of every deliverable.",
     "date": "2025-01-30",
@@ -838,7 +838,7 @@ export const posts: BlogPost[] = [
 
 <p>When people see $197/month for a professional website, the first reaction is usually skepticism: "What's the catch?" Fair question. Here's the complete, transparent answer — including exactly what you'd pay if you bought each service separately, and what happens month by month after you sign up.</p>
 
-<img src="/blog/whats-included-in-197-per-month-website-1.jpg" alt="Web designer creating responsive website design on multiple devices" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&q=80" alt="Web designer creating responsive website design on multiple devices" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Full List: Everything in the $197/Month Launch Plan</h2>
 
@@ -944,7 +944,7 @@ export const posts: BlogPost[] = [
 
 <p>The all-in monthly model isn't just more convenient — it's dramatically less expensive when you account for what's actually required to run a professional, maintained, SEO-optimized web presence. For context on how this compares across the full range of website options, see our complete breakdown of <a href="/blog/how-much-does-a-small-business-website-cost">small business website costs</a>.</p>
 
-<img src="/blog/whats-included-in-197-per-month-website-2.jpg" alt="Security locks and protection representing website security and safety" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80" alt="Security locks and protection representing website security and safety" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Month-by-Month: What Happens After You Sign Up</h2>
 
@@ -989,7 +989,7 @@ export const posts: BlogPost[] = [
 
 <p>Month-to-month terms exist because we're confident enough in our results not to need a contract to keep clients. That confidence should tell you something. If you're weighing whether the monthly model makes sense economically, our post on <a href="/blog/is-paying-monthly-for-a-website-worth-it">whether paying monthly is worth it</a> runs the complete analysis. And if you're comparing this to a cheap one-time build, see why <a href="/blog/why-cheap-websites-cost-more">cheap websites always cost more in the long run</a>.</p>
 
-<img src="/blog/whats-included-in-197-per-month-website-3.jpg" alt="Business owner reviewing monthly website performance report" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Business owner reviewing monthly website performance report" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Bottom Line</h2>
 
@@ -997,7 +997,7 @@ export const posts: BlogPost[] = [
 
 <p>That's the deal. If it sounds too good compared to what you've been quoted elsewhere, read through the comparison table above — then decide what you're worth.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Ready to see your site built in under 30 days?</strong>
   <p style="margin:12px 0 0;">No upfront cost. No contract. Just a professional website that works for your business from day one. <a href="/pricing" style="color:#2563eb;font-weight:600;">Compare all plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">schedule a free consultation.</a></p>
 </div>
@@ -1005,7 +1005,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "is-paying-monthly-for-a-website-worth-it",
-    "thumbnail": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
     "title": "Is Paying Monthly for a Website Worth It? (Honest Answer)",
     "description": "Monthly website subscriptions are gaining popularity \u2014 but are they worth it compared to paying upfront? We give you the honest breakdown to help Detroit business owners decide.",
     "date": "2025-02-03",
@@ -1016,7 +1016,7 @@ export const posts: BlogPost[] = [
 
 <p>Is paying monthly for a website worth it? Let's skip the preamble and run the numbers. By the end of this post, you'll have a clear, math-based answer for your specific situation — not a vague "it depends" from someone trying to sell you something.</p>
 
-<img src="/blog/is-paying-monthly-for-a-website-worth-it-1.jpg" alt="Business owner checking cash flow and financial metrics on dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Business owner checking cash flow and financial metrics on dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Two Models Side by Side</h2>
 
@@ -1095,7 +1095,7 @@ export const posts: BlogPost[] = [
 
 <p>These projections are based on documented outcomes from professionally optimized local business websites. They assume proper SEO implementation, which is included in all Caliber plans. For the full analysis of why professional sites generate this level of ROI, see our <a href="/blog/roi-of-a-professional-website">complete ROI guide</a>.</p>
 
-<img src="/blog/is-paying-monthly-for-a-website-worth-it-2.jpg" alt="Business owner celebrating customer acquisition and revenue growth from website" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Business owner celebrating customer acquisition and revenue growth from website" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>When Monthly Doesn't Make Sense</h2>
 
@@ -1118,7 +1118,7 @@ export const posts: BlogPost[] = [
 
 <p>The business that starts a monthly retainer today will have a 12-month SEO advantage over the competitor who starts in a year. That's not just next year's leads — it's a sustainable structural advantage. And that advantage is entirely lost if you cut costs now by going cheap. This is the core argument we make in our post on <a href="/blog/why-cheap-websites-cost-more">why cheap websites always cost more</a>.</p>
 
-<img src="/blog/is-paying-monthly-for-a-website-worth-it-3.jpg" alt="Investment growth graph showing monthly website returns" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80" alt="Investment growth graph showing monthly website returns" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Bottom Line</h2>
 
@@ -1126,7 +1126,7 @@ export const posts: BlogPost[] = [
 
 <p>Every month your website underperforms is a month your competitors capture the customers you should have had. The monthly model solves that problem at $197/month with $0 upfront, ongoing performance accountability, and the ability to cancel anytime if we don't deliver.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">The math is done. The next step is yours.</strong>
   <p style="margin:12px 0 0;">$0 upfront. Month-to-month. A professional website that generates leads from day one. Stop leaving revenue on the table. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">talk to us today.</a></p>
 </div>
@@ -1134,7 +1134,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "roi-of-a-professional-website",
-    "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
     "title": "The ROI of a Professional Website for Detroit Small Businesses",
     "description": "Can you actually measure the return on investment from a professional website? Yes \u2014 and the numbers are compelling. Here's how Detroit small businesses calculate website ROI.",
     "date": "2025-02-06",
@@ -1147,7 +1147,7 @@ export const posts: BlogPost[] = [
 
 <p>Short answer: for most local small businesses, the ROI is between 3x and 15x annually. The range depends on your industry, your local competition, and the quality of the site and SEO work behind it.</p>
 
-<img src="/blog/roi-of-a-professional-website-1.jpg" alt="Successful business owner reviewing revenue growth chart from website leads" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Successful business owner reviewing revenue growth chart from website leads" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Think About Website ROI</h2>
 
@@ -1249,7 +1249,7 @@ export const posts: BlogPost[] = [
 <h3>Ongoing SEO Investment</h3>
 <p>A website built once and left alone has declining ROI as competitors continue optimizing. Ongoing SEO — content, technical optimization, backlink building, Google Business Profile management — is what maintains and grows your position over time. The difference between a Launch plan ($197/month, basic SEO) and a Growth plan ($397/month, active SEO campaign) is typically 2–3x more organic traffic within 6 months.</p>
 
-<img src="/blog/roi-of-a-professional-website-2.jpg" alt="Business dashboard showing website ROI and customer acquisition metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Business dashboard showing website ROI and customer acquisition metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Compounding Effect: Why ROI Grows Over Time</h2>
 
@@ -1288,7 +1288,7 @@ export const posts: BlogPost[] = [
 <h3>Form Submission Tracking</h3>
 <p>Every contact form submission should trigger a goal conversion in Google Analytics. This lets you see not just that forms were submitted, but which pages and which traffic sources drove those submissions.</p>
 
-<img src="/blog/roi-of-a-professional-website-3.jpg" alt="Detroit business owner reviewing website ROI with accountant" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Detroit business owner reviewing website ROI with accountant" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Alternative: What You're Paying by Not Investing</h2>
 
@@ -1304,7 +1304,7 @@ export const posts: BlogPost[] = [
 
 <p>What makes the difference between good ROI and great ROI is quality of execution: how fast the site loads, how well it's optimized for local search, how consistently it's maintained and improved. These are the exact factors that separate Caliber's approach from the alternatives.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Get a custom ROI projection for your business.</strong>
   <p style="margin:12px 0 0;">We'll analyze your market, estimate your traffic opportunity, and show you a realistic projection of what a professional website should return for your specific business. No obligation. Just clear numbers. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free projection today.</a></p>
 </div>
@@ -1312,7 +1312,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-an-ai-chatbot-for-business",
-    "thumbnail": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
     "title": "What Is an AI Chatbot for Business \u2014 and Do Detroit Small Businesses Need One?",
     "description": "AI chatbots aren't just for big companies anymore. Here's what an AI chatbot actually does for a local Detroit business, what it costs, and whether it's worth it.",
     "date": "2025-02-10",
@@ -1341,7 +1341,7 @@ export const posts: BlogPost[] = [
   <li><strong>Handles multiple conversations simultaneously:</strong> Your chatbot can talk to 50 people at once. Your staff can't.</li>
 </ul>
 
-<img src="/blog/what-is-an-ai-chatbot-for-business-1.jpg" alt="AI chatbot interface on a Detroit business website" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80" alt="AI chatbot interface on a Detroit business website" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Do Detroit Small Businesses Actually Need One?</h2>
 
@@ -1379,7 +1379,7 @@ export const posts: BlogPost[] = [
 
 <p>That's the conservative version of this math.</p>
 
-<img src="/blog/what-is-an-ai-chatbot-for-business-2.jpg" alt="Business owner reviewing chatbot lead capture analytics dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80" alt="Business owner reviewing chatbot lead capture analytics dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How AI Chatbots Actually Work</h2>
 
@@ -1421,7 +1421,7 @@ export const posts: BlogPost[] = [
 
 <p><strong>"Isn't it expensive?"</strong> A part-time receptionist in Detroit costs $25,000-$35,000/year. A chatbot costs $600-$1,800/year — and handles after-hours coverage that no human receptionist provides. The math is straightforward.</p>
 
-<img src="/blog/what-is-an-ai-chatbot-for-business-3.jpg" alt="Detroit small business owner getting instant chatbot lead notifications on phone" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Detroit small business owner getting instant chatbot lead notifications on phone" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How Chatbots Fit Into Your Broader Digital Strategy</h2>
 
@@ -1457,7 +1457,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-ai-is-changing-local-business-marketing",
-    "thumbnail": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?w=1200&q=80",
     "title": "How AI Is Changing Local Business Marketing in 2025",
     "description": "AI isn't just for tech companies. Here's how artificial intelligence is transforming marketing for small businesses in Detroit and what you need to know to stay competitive.",
     "date": "2025-02-13",
@@ -1513,7 +1513,7 @@ export const posts: BlogPost[] = [
 <h3>5. Predictive Analytics Have Moved to Small Business</h3>
 <p>AI tools now analyze your website traffic, identify patterns in which visitors convert, predict when customers need your service, and flag at-risk relationships before they churn. A Detroit HVAC company can use predictive analytics to send furnace tune-up reminders in September specifically to customers whose equipment is now 3 years old — before they need emergency service, and before a competitor reaches them first.</p>
 
-<img src="/blog/how-ai-is-changing-local-business-marketing-1.jpg" alt="Detroit small business owner reviewing AI marketing analytics dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80" alt="Detroit small business owner reviewing AI marketing analytics dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What This Means for Your Marketing Strategy Right Now</h2>
 
@@ -1532,7 +1532,7 @@ export const posts: BlogPost[] = [
 
 <p>Actively solicit specific reviews. Respond to every review, including negative ones — your responses are visible to AI scrapers and signal professionalism. Maintain review recency: a 5-star average from 2020 is weaker than a growing 4.7 with fresh 2025 reviews.</p>
 
-<img src="/blog/how-ai-is-changing-local-business-marketing-2.jpg" alt="Google AI Overviews showing local business recommendations in search results" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Google AI Overviews showing local business recommendations in search results" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Detroit Business AI Adoption Snapshot</h2>
 
@@ -1585,7 +1585,7 @@ export const posts: BlogPost[] = [
   <li>Implement the full framework from our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide</a></li>
 </ul>
 
-<img src="/blog/how-ai-is-changing-local-business-marketing-3.jpg" alt="Detroit small business team implementing AI-driven marketing strategy" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="Detroit small business team implementing AI-driven marketing strategy" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>AI Is an Equalizer — If You Use It Early</h2>
 <p>For decades, big brands with big budgets owned local marketing. They outspent independents on ads, SEO agencies, and content teams. AI is dismantling that advantage. The tools that used to cost $50,000/year are now accessible to any small business for a fraction of that.</p>
@@ -1603,7 +1603,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-aeo-answer-engine-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80",
     "title": "What Is AEO (Answer Engine Optimization) and Why Your Detroit Business Needs It",
     "description": "Answer Engine Optimization (AEO) is the new SEO \u2014 optimizing your content to be chosen by AI tools like ChatGPT and Google's AI Overviews. Here's what it is and how to do it.",
     "date": "2025-02-17",
@@ -1628,7 +1628,7 @@ export const posts: BlogPost[] = [
 
 <p>The funnel compressed from five steps to two. Either your business is part of the answer, or it isn't. There's no "page 2" in AI search. There's just in or out.</p>
 
-<img src="/blog/what-is-aeo-answer-engine-optimization-1.jpg" alt="AI search results showing answer engine optimization in action" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI search results showing answer engine optimization in action" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Three Answer Engines That Matter Most for Detroit Businesses</h2>
 
@@ -1665,7 +1665,7 @@ export const posts: BlogPost[] = [
 
 <p>When a customer asks ChatGPT "how much does it cost to replace a water heater in Dearborn" — the AEO-optimized site has a page that answers that question directly and specifically. That's the site ChatGPT cites. That's the business the customer calls.</p>
 
-<img src="/blog/what-is-aeo-answer-engine-optimization-2.jpg" alt="Schema markup structure that helps websites appear in AI answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80" alt="Schema markup structure that helps websites appear in AI answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Five Pillars of AEO for Local Business</h2>
 
@@ -1711,7 +1711,7 @@ export const posts: BlogPost[] = [
 
 <p>This means writing content that sounds like a knowledgeable friend answering a question — specific, detailed, empathetic to the uncertainty the customer feels, and free of marketing-speak. AI systems are sophisticated at identifying content that's genuinely helpful vs. content that's keyword-stuffed or promotional. Helpful content wins every time.</p>
 
-<img src="/blog/what-is-aeo-answer-engine-optimization-3.jpg" alt="Detroit business owner checking AI visibility across multiple answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Detroit business owner checking AI visibility across multiple answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Detroit Businesses That Win With AEO: Three Real Examples</h2>
 
@@ -1787,7 +1787,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-geo-generative-engine-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1526379879527-8559ecfcaec3?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
     "title": "What Is GEO (Generative Engine Optimization)? A Guide for Detroit Business Owners",
     "description": "GEO \u2014 Generative Engine Optimization \u2014 is the practice of optimizing your online presence to appear in AI-generated search results. Here's what it means for your Detroit business.",
     "date": "2025-02-20",
@@ -1813,7 +1813,7 @@ export const posts: BlogPost[] = [
 
 <p>Think of it this way: AEO asks "does AI point to my business?" GEO asks "does AI think like my business when composing answers about my field?"</p>
 
-<img src="/blog/what-is-geo-generative-engine-optimization-1.jpg" alt="Generative AI models synthesizing content from multiple structured data sources" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?w=1200&q=80" alt="Generative AI models synthesizing content from multiple structured data sources" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How Generative AI Models Work: The Technical Foundation</h2>
 
@@ -1926,7 +1926,7 @@ export const posts: BlogPost[] = [
   <li>Local language and context: references to specific Detroit neighborhoods, local landmarks, Detroit-area specifics</li>
 </ul>
 
-<img src="/blog/what-is-geo-generative-engine-optimization-2.jpg" alt="Detroit business content strategy optimized for generative AI models" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Detroit business content strategy optimized for generative AI models" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>GEO in Practice: Detroit Business Examples</h2>
 
@@ -1948,7 +1948,7 @@ export const posts: BlogPost[] = [
   <li><strong>Featured snippet ownership:</strong> Pages that earn featured snippets are the same pages AI Overviews tend to cite — track snippet ownership for your key questions</li>
 </ul>
 
-<img src="/blog/what-is-geo-generative-engine-optimization-3.jpg" alt="Analytics dashboard showing AI-driven traffic and brand mention tracking" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Analytics dashboard showing AI-driven traffic and brand mention tracking" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The GEO Roadmap: 6 Months to Generative AI Visibility</h2>
 
@@ -1989,7 +1989,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-to-show-up-in-chatgpt-and-perplexity",
-    "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80",
     "title": "How to Show Up in ChatGPT and Perplexity Search Results",
     "description": "More customers are using AI tools like ChatGPT and Perplexity to find local businesses. Here's the practical strategy for getting your Detroit business recommended by AI search.",
     "date": "2025-02-24",
@@ -2078,7 +2078,7 @@ export const posts: BlogPost[] = [
   <li>Case studies from actual local customers (with permission) that mention the specific city or neighborhood</li>
 </ul>
 
-<img src="/blog/how-to-show-up-in-chatgpt-and-perplexity-1.jpg" alt="AI assistant displaying local Detroit business recommendations with source citations" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI assistant displaying local Detroit business recommendations with source citations" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Schema Markup: Speaking AI's Native Language</h2>
 
@@ -2116,7 +2116,7 @@ export const posts: BlogPost[] = [
 
 <p>AI models that encounter inconsistent NAP across sources will reduce their confidence that all these mentions refer to the same business — which means reduced recommendations. Audit your NAP consistency across your top 20 citations annually and correct any variations immediately.</p>
 
-<img src="/blog/how-to-show-up-in-chatgpt-and-perplexity-2.jpg" alt="Business directory listings showing consistent NAP information across platforms" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80" alt="Business directory listings showing consistent NAP information across platforms" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Advanced: Getting Mentioned in Third-Party AI-Retrieved Content</h2>
 
@@ -2163,7 +2163,7 @@ export const posts: BlogPost[] = [
 
 <p>For the full SEO foundation that AI visibility is built on, read our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide</a>. And for the deeper strategic framework behind why all of this works, our guides on <a href="/blog/what-is-aeo-answer-engine-optimization">answer engine optimization</a> and <a href="/blog/what-is-geo-generative-engine-optimization">generative engine optimization</a> explain the principles behind the tactics.</p>
 
-<img src="/blog/how-to-show-up-in-chatgpt-and-perplexity-3.jpg" alt="Detroit business owner tracking AI visibility metrics and search performance" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80" alt="Detroit business owner tracking AI visibility metrics and search performance" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Your 30-Day AI Visibility Sprint</h2>
 <p>If you want to start showing up in ChatGPT and Perplexity within 30 days, here's the highest-impact sequence:</p>
@@ -2187,7 +2187,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "local-seo-guide-for-small-businesses",
-    "thumbnail": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80",
     "title": "The Complete Local SEO Guide for Detroit Small Businesses",
     "description": "Want more customers finding your Detroit business on Google? This complete local SEO guide covers everything you need to rank in your city and neighborhood.",
     "date": "2025-02-27",
@@ -2236,7 +2236,7 @@ export const posts: BlogPost[] = [
 
 <p>See our full <a href="/blog/google-business-profile-optimization">Google Business Profile optimization guide</a> for the complete step-by-step checklist.</p>
 
-<img src="/blog/local-seo-guide-for-small-businesses-1.jpg" alt="Google Business Profile optimization for Detroit local business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Google Business Profile optimization for Detroit local business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Google Reviews: The Currency of Local SEO</h2>
 
@@ -2284,7 +2284,7 @@ export const posts: BlogPost[] = [
 
 <p>Make each location page genuinely unique — different content, different photos, different testimonials. Duplicate location pages (copy-paste with city name swapped) get penalized by Google as thin content.</p>
 
-<img src="/blog/local-seo-guide-for-small-businesses-2.jpg" alt="Local SEO keyword strategy for Detroit small business service pages" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Local SEO keyword strategy for Detroit small business service pages" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Local Citations: The NAP Consistency System</h2>
 
@@ -2335,7 +2335,7 @@ export const posts: BlogPost[] = [
   <li><strong>FAQ compilations:</strong> "10 questions Detroit homeowners ask about [service]" — captures multiple long-tail keywords in one post</li>
 </ul>
 
-<img src="/blog/local-seo-guide-for-small-businesses-3.jpg" alt="Content calendar and blog strategy for Detroit small business local SEO" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Content calendar and blog strategy for Detroit small business local SEO" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Link Building for Local Businesses</h2>
 
@@ -2446,7 +2446,7 @@ export const posts: BlogPost[] = [
 
 <p>For the complete GBP optimization system, read our dedicated <a href="/blog/google-business-profile-optimization">Google Business Profile guide</a>.</p>
 
-<img src="/blog/how-to-get-on-first-page-of-google-1.jpg" alt="Google search results showing local map pack and organic rankings for Detroit business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Google search results showing local map pack and organic rankings for Detroit business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>On-Page SEO: The Website Signals That Drive Organic Rankings</h2>
 
@@ -2507,7 +2507,7 @@ export const posts: BlogPost[] = [
   <li>General business directories (Yellow Pages, Manta, Hotfrog, Foursquare)</li>
 </ol>
 
-<img src="/blog/how-to-get-on-first-page-of-google-2.jpg" alt="Local citation strategy showing consistent NAP information across business directories" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80" alt="Local citation strategy showing consistent NAP information across business directories" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Link Building: The Organic Rankings Accelerator</h2>
 
@@ -2549,7 +2549,7 @@ export const posts: BlogPost[] = [
 
 <p>Also relevant to this discussion: our guide on <a href="/blog/why-small-business-websites-dont-rank">why small business websites don't rank</a> covers the technical and content gaps that keep most sites off page one, with specific fixes for each.</p>
 
-<img src="/blog/how-to-get-on-first-page-of-google-3.jpg" alt="First page Google rankings for Detroit small business keywords" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="First page Google rankings for Detroit small business keywords" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Page One Timeline: Realistic Expectations</h2>
 
@@ -2576,7 +2576,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "google-business-profile-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80",
     "title": "Google Business Profile Optimization: The Complete Guide for Detroit Businesses",
     "description": "Your Google Business Profile is often the first thing potential customers see. Here's how to fully optimize it for maximum visibility in Detroit local search.",
     "date": "2025-03-06",
@@ -2598,7 +2598,7 @@ export const posts: BlogPost[] = [
 
 <h2>The Complete GBP Optimization Checklist</h2>
 
-<img src="/blog/google-business-profile-optimization-1.jpg" alt="Optimized Google Business Profile with photos and reviews" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Optimized Google Business Profile with photos and reviews" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Business Information: Getting the Foundation Right</h3>
 <p>Every field in your GBP contributes to ranking signals. Work through each one completely:</p>
@@ -2635,7 +2635,7 @@ export const posts: BlogPost[] = [
 <h3>Photo Upload Cadence</h3>
 <p>Add minimum 3 new photos per month. Google's algorithm weights photo recency — a profile with 50 photos all uploaded 3 years ago ranks lower than a profile with 60 photos where the last 20 were added in the last 6 months. Set a recurring monthly calendar reminder: upload 3+ new photos on the first of every month.</p>
 
-<img src="/blog/google-business-profile-optimization-2.jpg" alt="Google Business Profile photos showing team members and completed work" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Google Business Profile photos showing team members and completed work" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Google Reviews: The Ranking Signal You Can Actually Control</h2>
 
@@ -2680,7 +2680,7 @@ export const posts: BlogPost[] = [
 
 <p>Post weekly. Each post should include: a keyword-rich description mentioning your service and location, a photo (posts with photos get more engagement), and a clear call-to-action button (Book, Call, Order, Get Offer, or Learn More).</p>
 
-<img src="/blog/google-business-profile-optimization-3.jpg" alt="Google Business Profile posts showing local business activity and updates" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Google Business Profile posts showing local business activity and updates" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Services, Products, and Menu</h2>
 
@@ -2801,7 +2801,7 @@ export const posts: BlogPost[] = [
 
 <p>Equally important: Google's AI Overviews pull heavily from pages with FAQPage schema markup. If you want your business to be cited in AI-generated answers to questions about your service category, FAQ schema is your most direct technical lever. This is why schema markup is foundational to the <a href="/blog/what-is-aeo-answer-engine-optimization">answer engine optimization strategy</a> we build into every Caliber website.</p>
 
-<img src="/blog/what-is-schema-markup-1.jpg" alt="Rich search results showing schema markup star ratings and FAQ accordions" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="Rich search results showing schema markup star ratings and FAQ accordions" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Essential Schema Types for Detroit Small Businesses</h2>
 
@@ -2943,7 +2943,7 @@ export const posts: BlogPost[] = [
 <h3>5. Review Schema</h3>
 <p>Review and AggregateRating schema makes your business's review data explicit to search engines. When your aggregate rating is marked up with schema, Google can display star ratings directly in your search results — a visual differentiator that significantly increases click-through rates compared to results without ratings displayed.</p>
 
-<img src="/blog/what-is-schema-markup-2.jpg" alt="Schema markup implementation showing LocalBusiness and FAQPage structured data" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80" alt="Schema markup implementation showing LocalBusiness and FAQPage structured data" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Implement Schema Markup</h2>
 
@@ -2991,7 +2991,7 @@ export const posts: BlogPost[] = [
 
 <p>Understanding how schema fits into the complete picture means looking at how it connects to <a href="/blog/google-business-profile-optimization">GBP optimization</a>, <a href="/blog/how-to-get-on-first-page-of-google">organic page one rankings</a>, and the question of <a href="/blog/why-small-business-websites-dont-rank">why small business websites fail to rank</a> in the first place — often because schema is missing entirely.</p>
 
-<img src="/blog/what-is-schema-markup-3.jpg" alt="Detroit business website with complete schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="Detroit business website with complete schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Common Schema Markup Mistakes to Avoid</h2>
 
@@ -3030,7 +3030,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-small-business-websites-dont-rank",
-    "thumbnail": "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80",
     "title": "Why Small Business Websites Don't Rank (And How to Fix It)",
     "description": "Most small business websites fail at SEO for the same handful of reasons. Learn what's holding your Detroit business back from page one and how to fix it fast.",
     "date": "2025-05-05",
@@ -3042,7 +3042,7 @@ export const posts: BlogPost[] = [
 
 <h2>Reason 1: No Local Signals (Your Website Doesn't Tell Google Where You Are)</h2>
 
-<img src="/blog/why-small-business-websites-dont-rank-1.jpg" alt="Geographic location map and local business signals" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Geographic location map and local business signals" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>How Google's Local Algorithm Works</h3>
 <p>Google's local search algorithm says: "This person searched 'plumber near me' in Dearborn. Show them plumbers in Dearborn and nearby areas." To make that match, Google needs to be confident that your business is located in Dearborn and serves Dearborn customers. If your website has no geographic signals, Google doesn't know where you are — and can't recommend you to local searchers.</p>
@@ -3139,7 +3139,7 @@ export const posts: BlogPost[] = [
 
 <p>Repeat for each major service. Publish one solid service page per week for a month and you'll have the content foundation to rank for 4-5 specific service keywords in your market. This is the core of what separates ranking businesses from invisible ones — read the full breakdown in our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide</a>.</p>
 
-<img src="/blog/why-small-business-websites-dont-rank-3.jpg" alt="Analytics dashboard showing traffic increase after SEO and content fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Analytics dashboard showing traffic increase after SEO and content fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reason 4: No Backlinks (Nobody Links to You)</h2>
 
@@ -3212,7 +3212,7 @@ export const posts: BlogPost[] = [
   <li>Monitor Google Search Console for ranking improvements</li>
 </ul>
 
-<img src="/blog/why-small-business-websites-dont-rank-2.jpg" alt="High-ranking website on Google first page after implementing SEO fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="High-ranking website on Google first page after implementing SEO fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Caliber Sites Rank</h2>
 
@@ -3238,7 +3238,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-barbers",
-    "thumbnail": "https://images.unsplash.com/photo-1599351431202-1802df29a977?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80",
     "title": "Website Design for Barbers and Barbershops in Detroit",
     "description": "Your Detroit barbershop needs more than Instagram to grow. A professional website with online booking, hours, and local SEO turns browsers into loyal clients.",
     "date": "2025-05-10",
@@ -3264,7 +3264,7 @@ export const posts: BlogPost[] = [
 
 <p>When someone sees your work at midnight and wants to book for Saturday, they need a clear path from "wow" to "confirmed." Instagram DMs are chaos. Phone calls at midnight go to voicemail. A website with integrated booking closes that gap — the client books, gets a confirmation text, and shows up Saturday. No back-and-forth. No forgotten DMs.</p>
 
-<img src="/blog/website-design-for-barbers-1.jpg" alt="Barber executing a precise fade at a Detroit barbershop" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1585747860019-5ee6db0a8cc1?w=1200&q=80" alt="Barber executing a precise fade at a Detroit barbershop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What Your Detroit Barbershop Website Actually Needs</h2>
 
@@ -3294,7 +3294,7 @@ export const posts: BlogPost[] = [
 
 <p>Pricing transparency doesn't drive away clients — it earns their respect and sets expectations. The client who books knowing the price is never the client who haggled at the register.</p>
 
-<img src="/blog/website-design-for-barbers-2.jpg" alt="Detroit barbershop interior with vintage chairs, mirrors, and community energy" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1200&q=80" alt="Detroit barbershop interior with vintage chairs, mirrors, and community energy" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Local SEO: Getting Found Before They Walk Past Your Door</h2>
 
@@ -3317,7 +3317,7 @@ export const posts: BlogPost[] = [
 
 <p>Our guide on <a href="/blog/how-to-get-more-google-reviews">how to get more Google reviews</a> covers the exact system that works for service businesses like barbershops.</p>
 
-<img src="/blog/website-design-for-barbers-3.jpg" alt="Barbershop website displayed on mobile showing booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&q=80" alt="Barbershop website displayed on mobile showing booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Tech That Works While You're Behind the Chair</h2>
 
@@ -3354,7 +3354,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-plumbers-contractors",
-    "thumbnail": "/demo/plumbing/plumber-hero.jpg",
+    "thumbnail": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
     "title": "Website Design for Plumbers and Contractors in Detroit",
     "description": "Detroit contractors need websites that generate leads, not just look good. Discover what a high-converting contractor website must include to win jobs in Metro Detroit.",
     "date": "2025-05-15",
@@ -3384,7 +3384,7 @@ export const posts: BlogPost[] = [
 
 <p>Speed to first contact is the variable that wins emergency jobs. When three contractors show up in search results, the one who answers first gets the work.</p>
 
-<img src="/demo/plumbing/plumber-hero.jpg" alt="Plumber working on aging pipes in a Detroit basement" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80" alt="Plumber working on aging pipes in a Detroit basement" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Seasonal Demand: Build a Website That Handles the Spikes</h2>
 
@@ -3410,7 +3410,7 @@ export const posts: BlogPost[] = [
 <li><strong>Google reviews embedded prominently</strong> — A 4.8-star average with 90 reviews on your homepage does more sales work than any headline you could write.</li>
 </ul>
 
-<img src="/demo/plumbing/plumber-about.jpg" alt="Licensed contractor reviewing plans on a Detroit job site" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="Licensed contractor reviewing plans on a Detroit job site" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Service Area Pages: Win Metro Detroit Neighborhood by Neighborhood</h2>
 
@@ -3430,7 +3430,7 @@ export const posts: BlogPost[] = [
 
 <p>That's a lead captured at 10pm that you call at 8am — before they've called anyone else.</p>
 
-<img src="/demo/plumbing/plumber-about.jpg" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reviews: The Referral Network That Scales</h2>
 
@@ -3468,7 +3468,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-salons",
-    "thumbnail": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80",
     "title": "Website Design for Hair Salons and Beauty Studios in Detroit",
     "description": "Your Detroit salon deserves a website as polished as your work. Learn what makes a beauty salon website drive bookings and build a loyal client base in Metro Detroit.",
     "date": "2025-05-20",
@@ -3497,7 +3497,7 @@ export const posts: BlogPost[] = [
 
 <p>Professional photography matters here. Natural hair photography requires good lighting, often warmer tones, and a photographer who understands how to capture texture. Budget $300–$500 for a two-hour shoot and come out with 40–60 gallery-ready images that do sales work for years.</p>
 
-<img src="/blog/website-design-for-salons-1.jpg" alt="Natural hair stylist working on a client in a Detroit salon" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80" alt="Natural hair stylist working on a client in a Detroit salon" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Natural Hair, Braids, and Protective Styles Deserve Their Own Pages</h2>
 
@@ -3526,7 +3526,7 @@ export const posts: BlogPost[] = [
 
 <p>Platforms like StyleSeat, Vagaro, and Square Appointments all handle salon bookings well. The right one depends on your team size and how much customization you need. The critical thing is that the booking lives on your website — not just linked from Instagram — so clients who find you through Google can book without leaving the page.</p>
 
-<img src="/blog/website-design-for-salons-2.jpg" alt="Client consultation at a Detroit natural hair salon" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Client consultation at a Detroit natural hair salon" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reviews and Social Proof in Detroit's Salon Market</h2>
 
@@ -3551,7 +3551,7 @@ export const posts: BlogPost[] = [
 
 <p>For the broader picture of how local search works and why some salons rank above others, the <a href="/blog/local-seo-guide-for-small-businesses">local SEO guide for small businesses</a> gives you the full framework.</p>
 
-<img src="/blog/website-design-for-salons-3.jpg" alt="Salon website displayed on a phone with booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&q=80" alt="Salon website displayed on a phone with booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Stylist Profiles That Build Individual Loyalty</h2>
 
@@ -3617,7 +3617,7 @@ export const posts: BlogPost[] = [
 
 <p>For Dearborn's Middle Eastern restaurants specifically: English and Arabic menus on the same page, with clear transliterations of dish names, serve a bilingual community and rank for both language search queries. That's a small technical investment with real search impact.</p>
 
-<img src="/blog/website-design-for-restaurants-1.jpg" alt="Beautifully plated dish at a Detroit restaurant" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Beautifully plated dish at a Detroit restaurant" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Eastern Market, Corktown, and Dearborn — Location Shapes Everything</h2>
 
@@ -3639,7 +3639,7 @@ export const posts: BlogPost[] = [
 
 <p>The goal is: a diner who finds your website should be able to make a reservation or place an order without leaving your site. Every click to a third-party platform is a potential drop-off.</p>
 
-<img src="/blog/website-design-for-restaurants-2.jpg" alt="Detroit restaurant interior with warm lighting and community energy" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=80" alt="Detroit restaurant interior with warm lighting and community energy" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Food Photography That Does the Selling</h2>
 
@@ -3657,7 +3657,7 @@ export const posts: BlogPost[] = [
 
 <p>Pair your review strategy with a fully optimized Google Business Profile. For restaurants, this means listing your cuisine type, price range, dine-in/takeout/delivery options, parking situation, and uploading new photos regularly. The <a href="/blog/google-business-profile-optimization">GBP optimization guide</a> covers the full checklist.</p>
 
-<img src="/blog/website-design-for-restaurants-3.jpg" alt="Restaurant website on laptop showing menu and online reservation system" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="Restaurant website on laptop showing menu and online reservation system" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Restaurant Website Checklist</h2>
 
@@ -3688,7 +3688,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-auto-repair-shops",
-    "thumbnail": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
     "title": "Website Design for Auto Repair Shops in Metro Detroit",
     "description": "Auto repair shops in Detroit need websites that earn trust and get calls. See what a high-converting auto shop website needs to win customers in Metro Detroit.",
     "date": "2025-06-01",
@@ -3718,7 +3718,7 @@ export const posts: BlogPost[] = [
 <li><strong>License and insurance displayed</strong> — Michigan dealer/repair license numbers visible on the page. Not hidden in fine print.</li>
 </ul>
 
-<img src="/blog/website-design-for-auto-repair-shops-1.jpg" alt="ASE-certified mechanic working on an engine at a Detroit auto repair shop" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80" alt="ASE-certified mechanic working on an engine at a Detroit auto repair shop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Transparency Wins Jobs — Show Prices, Show Process</h2>
 
@@ -3742,7 +3742,7 @@ export const posts: BlogPost[] = [
 
 <p>Our guide on <a href="/blog/how-to-get-more-google-reviews">how to get more Google reviews</a> covers the specific mechanics of building a review system that works for auto repair shops — including how to ask, when to ask, and how to respond to negative reviews when they happen.</p>
 
-<img src="/blog/website-design-for-auto-repair-shops-2.jpg" alt="Clean, professional auto repair shop floor with organized equipment" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="Clean, professional auto repair shop floor with organized equipment" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Local SEO: Being Found When Detroit Drivers Search</h2>
 
@@ -3766,7 +3766,7 @@ export const posts: BlogPost[] = [
 
 <p>An AI chatbot on your website can go further — answering common questions at any hour: "Do you work on diesels?" "What does a brake inspection cost?" "Are you open Saturdays?" Without requiring anyone on your staff to be available at midnight. Read more about <a href="/blog/what-is-an-ai-chatbot-for-business">what an AI chatbot can do for service businesses</a>.</p>
 
-<img src="/blog/website-design-for-auto-repair-shops-3.jpg" alt="Detroit driver finding an auto repair shop on their phone" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="Detroit driver finding an auto repair shop on their phone" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Photos That Build Confidence</h2>
 
@@ -4404,7 +4404,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-to-get-more-google-reviews",
-    "thumbnail": "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&q=80",
     "title": "How to Get More Google Reviews for Your Detroit Business",
     "description": "Google reviews are one of the strongest local SEO signals. Here's a proven system for getting more 5-star reviews for your Detroit small business \u2014 without begging.",
     "date": "2025-06-25",

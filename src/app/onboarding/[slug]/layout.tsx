@@ -55,8 +55,9 @@ export default function OnboardingLayout({ children }: { children: ReactNode }) 
 
         /* Light mode — page-level tokens (header, progress bar, text below card) */
         [data-onboarding-theme="light"] {
-          --ob-bg: #FAFAFA;
+          --ob-bg: #F8F9FA;
           --ob-card: #FFFFFF;
+          --ob-main-card-bg: #FFFFFF;
           --ob-input-bg: #FFFFFF;
           --ob-input-text: #111111;
           --ob-border: rgba(0,0,0,0.08);
@@ -82,7 +83,7 @@ export default function OnboardingLayout({ children }: { children: ReactNode }) 
 
         /* Light mode — inside the blue form card (overrides page-level tokens) */
         [data-onboarding-theme="light"] .ob-main-card {
-          background: #1E3D8F;
+          --ob-main-card-bg: #1E3D8F;
           --ob-card: rgba(255,255,255,0.11);
           --ob-input-bg: #FFFFFF;
           --ob-input-text: #111111;

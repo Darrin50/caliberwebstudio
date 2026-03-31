@@ -270,7 +270,7 @@ export default function OnboardingPage() {
             border: '1px solid var(--ob-border)',
             borderRadius: '20px',
             overflow: 'hidden',
-            background: 'var(--ob-card)',
+            background: 'var(--ob-main-card-bg, var(--ob-card))',
           }}
         >
           <FormProvider {...methods}>

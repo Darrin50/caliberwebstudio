@@ -5,11 +5,11 @@ import type { OnboardingFormData } from './schema'
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
-  background: '#1A1A1A',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--ob-input-bg)',
+  border: '1px solid var(--ob-border-strong)',
   borderRadius: '12px',
   padding: '12px 16px',
-  color: '#fff',
+  color: 'var(--ob-text)',
   fontSize: '16px',
   fontFamily: "'Inter', sans-serif",
   outline: 'none',
@@ -23,7 +23,7 @@ const labelStyle: React.CSSProperties = {
   fontWeight: 600,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginBottom: '8px',
   fontFamily: "'Space Mono', monospace",
 }
@@ -39,7 +39,7 @@ function onFocus(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
 }
 function onBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
-  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
   e.currentTarget.style.boxShadow = 'none'
 }
 
@@ -62,7 +62,7 @@ export default function ServicesStep() {
           style={{
             fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
             fontWeight: 800,
-            color: '#fff',
+            color: 'var(--ob-text)',
             marginBottom: '6px',
             letterSpacing: '-0.02em',
             fontFamily: "'Syne', sans-serif",
@@ -70,7 +70,7 @@ export default function ServicesStep() {
         >
           What services do you offer?
         </h2>
-        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+        <p style={{ color: 'var(--ob-label)', fontSize: '0.9rem', lineHeight: 1.6 }}>
           Add everything you want on your website. You can always edit later.
         </p>
       </div>
@@ -80,8 +80,8 @@ export default function ServicesStep() {
           <div
             key={field.id}
             style={{
-              background: '#141414',
-              border: '1px solid rgba(255,255,255,0.06)',
+              background: 'var(--ob-card)',
+              border: '1px solid var(--ob-border)',
               borderRadius: '16px',
               padding: '20px',
               display: 'flex',
@@ -102,7 +102,7 @@ export default function ServicesStep() {
                   fontWeight: 600,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   fontFamily: "'Space Mono', monospace",
                 }}
               >
@@ -114,7 +114,7 @@ export default function ServicesStep() {
                   onClick={() => remove(index)}
                   style={{
                     fontSize: '0.75rem',
-                    color: 'rgba(255,255,255,0.3)',
+                    color: 'var(--ob-text-faint)',
                     background: 'none',
                     border: 'none',
                     cursor: 'pointer',
@@ -125,7 +125,7 @@ export default function ServicesStep() {
                     e.currentTarget.style.color = '#f87171'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'rgba(255,255,255,0.3)'
+                    e.currentTarget.style.color = 'var(--ob-text-faint)'
                   }}
                 >
                   Remove
@@ -189,21 +189,21 @@ export default function ServicesStep() {
             style={{
               width: '100%',
               padding: '14px',
-              border: '1px dashed rgba(255,255,255,0.2)',
+              border: '1px dashed var(--ob-border-strong)',
               borderRadius: '14px',
               background: 'none',
-              color: 'rgba(255,255,255,0.4)',
+              color: 'var(--ob-text-dim)',
               fontSize: '0.875rem',
               cursor: 'pointer',
               transition: 'all 0.2s',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.color = 'rgba(255,255,255,0.7)'
-              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)'
+              e.currentTarget.style.color = 'var(--ob-text-secondary)'
+              e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.color = 'rgba(255,255,255,0.4)'
-              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'
+              e.currentTarget.style.color = 'var(--ob-text-dim)'
+              e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
             }}
           >
             + Add Another Service

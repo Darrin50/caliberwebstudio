@@ -26,11 +26,11 @@ const INDUSTRIES = [
 
 const input: React.CSSProperties = {
   width: '100%',
-  background: '#1A1A1A',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--ob-input-bg)',
+  border: '1px solid var(--ob-border-strong)',
   borderRadius: '12px',
   padding: '12px 16px',
-  color: '#fff',
+  color: 'var(--ob-text)',
   fontSize: '16px',
   fontFamily: "'Inter', sans-serif",
   outline: 'none',
@@ -44,7 +44,7 @@ const label: React.CSSProperties = {
   fontWeight: 600,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginBottom: '8px',
   fontFamily: "'Space Mono', monospace",
 }
@@ -57,7 +57,7 @@ const error: React.CSSProperties = {
 
 const helper: React.CSSProperties = {
   fontSize: '0.75rem',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginTop: '4px',
   lineHeight: 1.5,
 }
@@ -67,7 +67,7 @@ function focusStyle(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | H
   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
 }
 function blurStyle(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
-  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
   e.currentTarget.style.boxShadow = 'none'
 }
 
@@ -84,7 +84,7 @@ export default function BusinessStep() {
           style={{
             fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
             fontWeight: 800,
-            color: '#fff',
+            color: 'var(--ob-text)',
             marginBottom: '6px',
             letterSpacing: '-0.02em',
             fontFamily: "'Syne', sans-serif",
@@ -92,7 +92,7 @@ export default function BusinessStep() {
         >
           Tell us about your business.
         </h2>
-        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+        <p style={{ color: 'var(--ob-label)', fontSize: '0.9rem', lineHeight: 1.6 }}>
           This helps us understand who you are and what you do.
         </p>
       </div>
@@ -136,7 +136,7 @@ export default function BusinessStep() {
               Select your industry
             </option>
             {INDUSTRIES.map((ind) => (
-              <option key={ind} value={ind} style={{ background: '#1A1A1A' }}>
+              <option key={ind} value={ind} style={{ background: 'var(--ob-select-bg)' }}>
                 {ind}
               </option>
             ))}
@@ -173,7 +173,7 @@ export default function BusinessStep() {
               onFocus={focusStyle}
               onBlur={blurStyle}
             />
-            <p style={helper}>Leave blank if you don't have one</p>
+            <p style={helper}>Leave blank if you don&apos;t have one</p>
           </div>
         </div>
       </div>

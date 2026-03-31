@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: { absolute: "We're on it. | Caliber Web Studio" },
@@ -42,7 +43,7 @@ export default async function SuccessPage({
     <div
       style={{
         minHeight: '100vh',
-        background: '#0A0A0A',
+        background: 'var(--ob-bg)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -59,31 +60,16 @@ export default async function SuccessPage({
             marginBottom: '48px',
           }}
         >
-          <div
-            style={{
-              width: '36px',
-              height: '36px',
-              borderRadius: '10px',
-              background: '#1E3D8F',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <span
-              style={{
-                color: '#fff',
-                fontSize: '0.85rem',
-                fontWeight: 800,
-                fontFamily: "'Syne', sans-serif",
-              }}
-            >
-              C
-            </span>
-          </div>
+          <Image
+            src="/logo-mark-nav.png"
+            alt="Caliber Web Studio"
+            width={36}
+            height={36}
+            style={{ borderRadius: '8px' }}
+          />
           <span
             style={{
-              color: 'rgba(255,255,255,0.4)',
+              color: 'var(--ob-text-dim)',
               fontSize: '0.85rem',
               letterSpacing: '0.06em',
             }}
@@ -98,7 +84,7 @@ export default async function SuccessPage({
             style={{
               fontSize: 'clamp(2rem, 5vw, 2.75rem)',
               fontWeight: 800,
-              color: '#fff',
+              color: 'var(--ob-text)',
               letterSpacing: '-0.03em',
               marginBottom: '12px',
               fontFamily: "'Syne', sans-serif",
@@ -110,7 +96,7 @@ export default async function SuccessPage({
           <p
             style={{
               fontSize: '1rem',
-              color: 'rgba(255,255,255,0.5)',
+              color: 'var(--ob-text-secondary)',
               lineHeight: 1.7,
             }}
           >
@@ -144,13 +130,13 @@ export default async function SuccessPage({
                       background: isDone
                         ? 'rgba(30,61,143,0.2)'
                         : isInProgress
-                        ? 'rgba(255,255,255,0.06)'
-                        : 'rgba(255,255,255,0.03)',
+                        ? 'var(--ob-surface-hover)'
+                        : 'var(--ob-surface)',
                       border: isDone
                         ? '1px solid rgba(30,61,143,0.4)'
                         : isInProgress
-                        ? '1px solid rgba(255,255,255,0.12)'
-                        : '1px solid rgba(255,255,255,0.06)',
+                        ? '1px solid var(--ob-dot-inactive)'
+                        : '1px solid var(--ob-border)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -168,7 +154,7 @@ export default async function SuccessPage({
                         minHeight: '32px',
                         background: isDone
                           ? 'rgba(30,61,143,0.3)'
-                          : 'rgba(255,255,255,0.06)',
+                          : 'var(--ob-border)',
                         margin: '6px 0',
                       }}
                     />
@@ -197,10 +183,10 @@ export default async function SuccessPage({
                         fontSize: '0.95rem',
                         fontWeight: 700,
                         color: isDone
-                          ? '#fff'
+                          ? 'var(--ob-text)'
                           : isInProgress
-                          ? 'rgba(255,255,255,0.85)'
-                          : 'rgba(255,255,255,0.4)',
+                          ? 'var(--ob-text-secondary)'
+                          : 'var(--ob-text-dim)',
                         letterSpacing: '-0.01em',
                       }}
                     >
@@ -211,7 +197,7 @@ export default async function SuccessPage({
                         fontSize: '0.72rem',
                         color: isDone
                           ? '#1E3D8F'
-                          : 'rgba(255,255,255,0.25)',
+                          : 'var(--ob-text-faint)',
                         flexShrink: 0,
                         fontFamily: "'Space Mono', monospace",
                         paddingTop: '2px',
@@ -224,10 +210,10 @@ export default async function SuccessPage({
                     style={{
                       fontSize: '0.85rem',
                       color: isDone
-                        ? 'rgba(255,255,255,0.55)'
+                        ? 'var(--ob-text-secondary)'
                         : isInProgress
-                        ? 'rgba(255,255,255,0.4)'
-                        : 'rgba(255,255,255,0.25)',
+                        ? 'var(--ob-text-dim)'
+                        : 'var(--ob-text-faint)',
                       lineHeight: 1.6,
                       margin: 0,
                     }}
@@ -245,8 +231,8 @@ export default async function SuccessPage({
           style={{
             marginTop: '48px',
             padding: '20px 24px',
-            background: '#141414',
-            border: '1px solid rgba(255,255,255,0.06)',
+            background: 'var(--ob-card)',
+            border: '1px solid var(--ob-border)',
             borderRadius: '16px',
           }}
         >
@@ -256,7 +242,7 @@ export default async function SuccessPage({
               fontWeight: 600,
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
-              color: '#6B6B6B',
+              color: 'var(--ob-label)',
               marginBottom: '14px',
               fontFamily: "'Space Mono', monospace",
             }}
@@ -270,7 +256,7 @@ export default async function SuccessPage({
                 display: 'flex',
                 alignItems: 'center',
                 gap: '10px',
-                color: 'rgba(255,255,255,0.6)',
+                color: 'var(--ob-text-secondary)',
                 textDecoration: 'none',
                 fontSize: '0.875rem',
                 transition: 'color 0.2s',
@@ -285,7 +271,7 @@ export default async function SuccessPage({
                 display: 'flex',
                 alignItems: 'center',
                 gap: '10px',
-                color: 'rgba(255,255,255,0.6)',
+                color: 'var(--ob-text-secondary)',
                 textDecoration: 'none',
                 fontSize: '0.875rem',
               }}
@@ -302,7 +288,7 @@ export default async function SuccessPage({
             href="/"
             style={{
               fontSize: '0.8rem',
-              color: 'rgba(255,255,255,0.25)',
+              color: 'var(--ob-text-faint)',
               textDecoration: 'none',
               transition: 'color 0.2s',
             }}

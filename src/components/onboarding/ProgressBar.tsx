@@ -18,14 +18,14 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
             fontSize: '0.7rem',
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
-            color: '#6B6B6B',
+            color: 'var(--ob-label)',
             fontWeight: 600,
             fontFamily: "'Space Mono', monospace",
           }}
         >
           Step {currentStep} of {totalSteps}
         </span>
-        <span style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>
+        <span style={{ fontSize: '0.75rem', color: 'var(--ob-label)' }}>
           {STEP_TITLES[currentStep - 1]}
         </span>
       </div>
@@ -35,7 +35,7 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
         style={{
           width: '100%',
           height: '2px',
-          background: 'rgba(255,255,255,0.06)',
+          background: 'var(--ob-progress-track)',
           borderRadius: '9999px',
           overflow: 'hidden',
         }}
@@ -44,7 +44,7 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
           style={{
             height: '100%',
             width: `${progress}%`,
-            background: '#1E3D8F',
+            background: 'var(--ob-navy)',
             borderRadius: '9999px',
             transition: 'width 0.5s ease-out',
           }}
@@ -71,10 +71,10 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
                 height: '6px',
                 borderRadius: '50%',
                 background: isComplete
-                  ? '#1E3D8F'
+                  ? 'var(--ob-navy)'
                   : isCurrent
-                  ? '#fff'
-                  : 'rgba(255,255,255,0.12)',
+                  ? 'var(--ob-text)'
+                  : 'var(--ob-dot-inactive)',
                 transform: isCurrent ? 'scale(1.4)' : 'scale(1)',
                 transition: 'all 0.3s ease',
               }}

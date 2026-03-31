@@ -28,7 +28,7 @@ export default function StepNavigation({
         justifyContent: 'space-between',
         paddingTop: '24px',
         marginTop: '24px',
-        borderTop: '1px solid rgba(255,255,255,0.06)',
+        borderTop: '1px solid var(--ob-border)',
       }}
     >
       <button
@@ -43,20 +43,20 @@ export default function StepNavigation({
           cursor: isFirst ? 'default' : 'pointer',
           opacity: isFirst ? 0 : 1,
           pointerEvents: isFirst ? 'none' : 'auto',
-          background: 'rgba(255,255,255,0.04)',
-          border: '1px solid rgba(255,255,255,0.06)',
-          color: 'rgba(255,255,255,0.6)',
+          background: 'var(--ob-surface)',
+          border: '1px solid var(--ob-border)',
+          color: 'var(--ob-text-secondary)',
           transition: 'all 0.2s ease',
         }}
         onMouseEnter={(e) => {
           if (!isFirst) {
-            e.currentTarget.style.color = '#fff'
-            e.currentTarget.style.background = 'rgba(255,255,255,0.08)'
+            e.currentTarget.style.color = 'var(--ob-text)'
+            e.currentTarget.style.background = 'var(--ob-surface-hover)'
           }
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.color = 'rgba(255,255,255,0.6)'
-          e.currentTarget.style.background = 'rgba(255,255,255,0.04)'
+          e.currentTarget.style.color = 'var(--ob-text-secondary)'
+          e.currentTarget.style.background = 'var(--ob-surface)'
         }}
       >
         ← Back
@@ -69,7 +69,7 @@ export default function StepNavigation({
           disabled={isSubmitting}
           style={{
             padding: '12px 32px',
-            background: isSubmitting ? 'rgba(30,61,143,0.5)' : '#1E3D8F',
+            background: isSubmitting ? 'rgba(30,61,143,0.5)' : 'var(--ob-navy)',
             color: '#fff',
             border: 'none',
             borderRadius: '12px',
@@ -107,7 +107,7 @@ export default function StepNavigation({
           onClick={onNext}
           style={{
             padding: '12px 32px',
-            background: '#1E3D8F',
+            background: 'var(--ob-navy)',
             color: '#fff',
             border: 'none',
             borderRadius: '12px',
@@ -120,7 +120,7 @@ export default function StepNavigation({
             e.currentTarget.style.background = '#2449A8'
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = '#1E3D8F'
+            e.currentTarget.style.background = 'var(--ob-navy)'
           }}
         >
           Continue →

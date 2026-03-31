@@ -9,18 +9,18 @@ const labelStyle: React.CSSProperties = {
   fontWeight: 600,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginBottom: '8px',
   fontFamily: "'Space Mono', monospace",
 }
 
 const textareaBase: React.CSSProperties = {
   width: '100%',
-  background: '#1A1A1A',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--ob-input-bg)',
+  border: '1px solid var(--ob-border-strong)',
   borderRadius: '12px',
   padding: '14px 16px',
-  color: '#fff',
+  color: 'var(--ob-text)',
   fontSize: '16px',
   fontFamily: "'Inter', sans-serif",
   lineHeight: 1.7,
@@ -41,14 +41,14 @@ const errorStyle: React.CSSProperties = {
 
 const helperStyle: React.CSSProperties = {
   fontSize: '0.78rem',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginTop: '6px',
   lineHeight: 1.5,
 }
 
 const charCountStyle = (atLimit: boolean): React.CSSProperties => ({
   fontSize: '0.72rem',
-  color: atLimit ? '#f87171' : '#6B6B6B',
+  color: atLimit ? '#f87171' : 'var(--ob-label)',
   marginTop: '4px',
   textAlign: 'right',
   fontFamily: "'Space Mono', monospace",
@@ -67,7 +67,7 @@ function onFocusStyle(e: React.FocusEvent<HTMLTextAreaElement>) {
 }
 
 function onBlurStyle(e: React.FocusEvent<HTMLTextAreaElement>) {
-  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
   e.currentTarget.style.boxShadow = 'none'
 }
 
@@ -144,7 +144,7 @@ export default function StoryStep() {
           style={{
             fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
             fontWeight: 800,
-            color: '#fff',
+            color: 'var(--ob-text)',
             marginBottom: '8px',
             letterSpacing: '-0.02em',
             fontFamily: "'Syne', sans-serif",
@@ -155,7 +155,7 @@ export default function StoryStep() {
         <p
           style={{
             fontSize: '0.95rem',
-            color: 'rgba(255,255,255,0.5)',
+            color: 'var(--ob-text-secondary)',
             lineHeight: 1.7,
             maxWidth: '520px',
           }}
@@ -231,12 +231,12 @@ export default function StoryStep() {
         <p
           style={{
             fontSize: '0.82rem',
-            color: 'rgba(255,255,255,0.5)',
+            color: 'var(--ob-text-secondary)',
             lineHeight: 1.65,
             margin: 0,
           }}
         >
-          <span style={{ color: 'rgba(255,255,255,0.75)', fontWeight: 600 }}>Write naturally.</span>{' '}
+          <span style={{ color: 'var(--ob-text)', fontWeight: 600 }}>Write naturally.</span>{' '}
           Don&apos;t worry about sounding &quot;professional&quot; — authentic words convert better
           than marketing fluff. We&apos;ll polish the formatting, but the voice should be yours.
         </p>

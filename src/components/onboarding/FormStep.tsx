@@ -57,8 +57,8 @@ export default function FormStep({ heading, subheading, children, stepKey }: For
         animate="visible"
         exit="exit"
         style={{
-          backgroundColor: '#141414',
-          border: '1px solid rgba(255,255,255,0.06)',
+          backgroundColor: 'var(--ob-card)',
+          border: '1px solid var(--ob-border)',
           borderRadius: '12px',
           padding: '24px',
         }}
@@ -70,7 +70,7 @@ export default function FormStep({ heading, subheading, children, stepKey }: For
             style={{
               fontSize: '22px',
               fontWeight: 700,
-              color: '#FFFFFF',
+              color: 'var(--ob-text)',
               margin: 0,
               lineHeight: 1.25,
             }}
@@ -81,7 +81,7 @@ export default function FormStep({ heading, subheading, children, stepKey }: For
             <p
               style={{
                 fontSize: '14px',
-                color: '#A0A0A0',
+                color: 'var(--ob-label)',
                 margin: '8px 0 0',
                 lineHeight: 1.5,
               }}

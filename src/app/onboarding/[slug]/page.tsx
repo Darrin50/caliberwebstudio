@@ -5,6 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 
 import {
   onboardingSchema,
@@ -220,7 +221,7 @@ export default function OnboardingPage() {
     <div
       style={{
         minHeight: '100vh',
-        background: '#0A0A0A',
+        background: 'var(--ob-bg)',
         padding: '0',
       }}
     >
@@ -241,31 +242,16 @@ export default function OnboardingPage() {
               marginBottom: '24px',
             }}
           >
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '8px',
-                background: '#1E3D8F',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <span
-                style={{
-                  color: '#fff',
-                  fontSize: '0.75rem',
-                  fontWeight: 800,
-                  fontFamily: "'Syne', sans-serif",
-                }}
-              >
-                C
-              </span>
-            </div>
+            <Image
+              src="/logo-mark-nav.png"
+              alt="Caliber Web Studio"
+              width={32}
+              height={32}
+              style={{ borderRadius: '8px' }}
+            />
             <span
               style={{
-                color: 'rgba(255,255,255,0.4)',
+                color: 'var(--ob-text-dim)',
                 fontSize: '0.8rem',
                 letterSpacing: '0.08em',
               }}
@@ -280,8 +266,8 @@ export default function OnboardingPage() {
         {/* Card */}
         <div
           style={{
-            background: '#141414',
-            border: '1px solid rgba(255,255,255,0.06)',
+            background: 'var(--ob-card)',
+            border: '1px solid var(--ob-border)',
             borderRadius: '20px',
             overflow: 'hidden',
           }}
@@ -321,7 +307,7 @@ export default function OnboardingPage() {
             textAlign: 'center',
             marginTop: '16px',
             fontSize: '0.75rem',
-            color: 'rgba(255,255,255,0.2)',
+            color: 'var(--ob-text-faint)',
             letterSpacing: '0.06em',
           }}
         >
@@ -347,12 +333,12 @@ export default function OnboardingPage() {
               background:
                 toast.type === 'error'
                   ? 'rgba(248,113,113,0.12)'
-                  : '#1E1E1E',
+                  : 'var(--ob-card)',
               border:
                 toast.type === 'error'
                   ? '1px solid rgba(248,113,113,0.3)'
-                  : '1px solid rgba(255,255,255,0.08)',
-              color: toast.type === 'error' ? '#fca5a5' : '#fff',
+                  : '1px solid var(--ob-border)',
+              color: toast.type === 'error' ? '#fca5a5' : 'var(--ob-text)',
               fontSize: '0.85rem',
               padding: '12px 20px',
               borderRadius: '12px',
@@ -379,8 +365,6 @@ export default function OnboardingPage() {
         * { box-sizing: border-box; }
         input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
         input[type="color"]::-webkit-color-swatch { border: none; }
-        ::placeholder { color: rgba(255,255,255,0.2) !important; }
-        select option { background: #1A1A1A !important; }
       `}</style>
     </div>
   )

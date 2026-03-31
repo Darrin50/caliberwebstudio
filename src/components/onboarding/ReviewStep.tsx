@@ -51,8 +51,8 @@ function Section({
   return (
     <div
       style={{
-        background: '#141414',
-        border: '1px solid rgba(255,255,255,0.06)',
+        background: 'var(--ob-card)',
+        border: '1px solid var(--ob-border)',
         borderRadius: '16px',
         overflow: 'hidden',
       }}
@@ -64,7 +64,7 @@ function Section({
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '14px 20px',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
+          borderBottom: '1px solid var(--ob-border)',
         }}
       >
         <span
@@ -73,7 +73,7 @@ function Section({
             fontWeight: 600,
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
-            color: '#6B6B6B',
+            color: 'var(--ob-label)',
             fontFamily: "'Space Mono', monospace",
           }}
         >
@@ -107,7 +107,7 @@ function Section({
       {/* Body */}
       <div style={{ padding: '16px 20px' }}>
         {children || (
-          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.25)', fontStyle: 'italic' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--ob-text-faint)', fontStyle: 'italic' }}>
             {empty || 'No data entered'}
           </p>
         )}
@@ -124,13 +124,13 @@ function Row({ label, value }: { label: string; value?: string | null }) {
         display: 'flex',
         gap: '16px',
         padding: '6px 0',
-        borderBottom: '1px solid rgba(255,255,255,0.04)',
+        borderBottom: '1px solid var(--ob-border)',
       }}
     >
       <span
         style={{
           fontSize: '0.78rem',
-          color: '#6B6B6B',
+          color: 'var(--ob-label)',
           width: '120px',
           flexShrink: 0,
           paddingTop: '1px',
@@ -138,7 +138,7 @@ function Row({ label, value }: { label: string; value?: string | null }) {
       >
         {label}
       </span>
-      <span style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.5 }}>
+      <span style={{ fontSize: '0.875rem', color: 'var(--ob-text-secondary)', lineHeight: 1.5 }}>
         {value}
       </span>
     </div>
@@ -173,7 +173,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
           style={{
             fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
             fontWeight: 800,
-            color: '#fff',
+            color: 'var(--ob-text)',
             marginBottom: '6px',
             letterSpacing: '-0.02em',
             fontFamily: "'Syne', sans-serif",
@@ -181,7 +181,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
         >
           Review everything.
         </h2>
-        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+        <p style={{ color: 'var(--ob-label)', fontSize: '0.9rem', lineHeight: 1.6 }}>
           Look everything over before you submit. Click any &quot;Edit&quot; button to go back and make changes.
         </p>
       </div>
@@ -221,7 +221,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   fontWeight: 600,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   marginBottom: '8px',
                   fontFamily: "'Space Mono', monospace",
                 }}
@@ -245,16 +245,16 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                         display: 'flex',
                         justifyContent: 'space-between',
                         padding: '4px 0',
-                        borderBottom: '1px solid rgba(255,255,255,0.04)',
+                        borderBottom: '1px solid var(--ob-border)',
                       }}
                     >
-                      <span style={{ fontSize: '0.8rem', color: '#6B6B6B' }}>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--ob-label)' }}>
                         {DAY_LABELS[day]}
                       </span>
                       <span
                         style={{
                           fontSize: '0.8rem',
-                          color: h.closed ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.8)',
+                          color: h.closed ? 'var(--ob-text-faint)' : 'var(--ob-text-secondary)',
                           fontStyle: h.closed ? 'italic' : 'normal',
                         }}
                       >
@@ -283,8 +283,8 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                 key={i}
                 style={{
                   padding: '10px 14px',
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.06)',
+                  background: 'var(--ob-surface)',
+                  border: '1px solid var(--ob-border)',
                   borderRadius: '10px',
                 }}
               >
@@ -297,7 +297,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   }}
                 >
                   <span
-                    style={{ fontSize: '0.9rem', fontWeight: 600, color: '#fff' }}
+                    style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--ob-text)' }}
                   >
                     {svc.name}
                   </span>
@@ -305,7 +305,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                     <span
                       style={{
                         fontSize: '0.78rem',
-                        color: '#6B6B6B',
+                        color: 'var(--ob-label)',
                         flexShrink: 0,
                       }}
                     >
@@ -317,7 +317,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   <p
                     style={{
                       fontSize: '0.8rem',
-                      color: 'rgba(255,255,255,0.5)',
+                      color: 'var(--ob-text-secondary)',
                       marginTop: '4px',
                       lineHeight: 1.5,
                     }}
@@ -342,7 +342,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                 fontWeight: 600,
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                color: '#6B6B6B',
+                color: 'var(--ob-label)',
                 marginBottom: '10px',
                 fontFamily: "'Space Mono', monospace",
               }}
@@ -372,15 +372,15 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                           height: '40px',
                           borderRadius: '50%',
                           background: color,
-                          border: '2px solid rgba(255,255,255,0.1)',
+                          border: '2px solid var(--ob-border-strong)',
                           boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
                         }}
                       />
-                      <span style={{ fontSize: '0.7rem', color: '#6B6B6B' }}>{label}</span>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--ob-label)' }}>{label}</span>
                       <span
                         style={{
                           fontSize: '0.65rem',
-                          color: 'rgba(255,255,255,0.25)',
+                          color: 'var(--ob-text-faint)',
                           fontFamily: "'Space Mono', monospace",
                         }}
                       >
@@ -408,7 +408,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   fontWeight: 600,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   marginBottom: '8px',
                   fontFamily: "'Space Mono', monospace",
                 }}
@@ -420,8 +420,8 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   width: '120px',
                   height: '80px',
                   borderRadius: '10px',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  background: '#1A1A1A',
+                  border: '1px solid var(--ob-border)',
+                  background: 'var(--ob-input-bg)',
                   overflow: 'hidden',
                   position: 'relative',
                 }}
@@ -452,7 +452,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
             <p
               style={{
                 fontSize: '0.8rem',
-                color: 'rgba(255,255,255,0.5)',
+                color: 'var(--ob-text-secondary)',
                 marginBottom: '10px',
               }}
             >
@@ -473,7 +473,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                     aspectRatio: '1',
                     borderRadius: '8px',
                     overflow: 'hidden',
-                    background: '#1A1A1A',
+                    background: 'var(--ob-input-bg)',
                   }}
                 >
                   <Image
@@ -523,14 +523,14 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   display: 'flex',
                   gap: '12px',
                   padding: '6px 0',
-                  borderBottom: '1px solid rgba(255,255,255,0.04)',
+                  borderBottom: '1px solid var(--ob-border)',
                   alignItems: 'center',
                 }}
               >
                 <span
                   style={{
                     fontSize: '0.78rem',
-                    color: '#6B6B6B',
+                    color: 'var(--ob-label)',
                     width: '88px',
                     flexShrink: 0,
                   }}
@@ -569,7 +569,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   fontWeight: 600,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   marginBottom: '6px',
                   fontFamily: "'Space Mono', monospace",
                 }}
@@ -579,7 +579,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
               <p
                 style={{
                   fontSize: '0.875rem',
-                  color: 'rgba(255,255,255,0.75)',
+                  color: 'var(--ob-text-secondary)',
                   lineHeight: 1.7,
                   whiteSpace: 'pre-wrap',
                 }}
@@ -596,7 +596,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   fontWeight: 600,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   marginBottom: '6px',
                   fontFamily: "'Space Mono', monospace",
                 }}
@@ -606,7 +606,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
               <p
                 style={{
                   fontSize: '0.875rem',
-                  color: 'rgba(255,255,255,0.75)',
+                  color: 'var(--ob-text-secondary)',
                   lineHeight: 1.7,
                   whiteSpace: 'pre-wrap',
                 }}
@@ -623,7 +623,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   fontWeight: 600,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   marginBottom: '6px',
                   fontFamily: "'Space Mono', monospace",
                 }}
@@ -633,7 +633,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
               <p
                 style={{
                   fontSize: '0.875rem',
-                  color: 'rgba(255,255,255,0.75)',
+                  color: 'var(--ob-text-secondary)',
                   lineHeight: 1.7,
                 }}
               >
@@ -649,7 +649,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
                   fontWeight: 600,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   marginBottom: '6px',
                   fontFamily: "'Space Mono', monospace",
                 }}
@@ -659,7 +659,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
               <p
                 style={{
                   fontSize: '0.875rem',
-                  color: 'rgba(255,255,255,0.75)',
+                  color: 'var(--ob-text-secondary)',
                   lineHeight: 1.7,
                 }}
               >
@@ -673,10 +673,10 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
       {/* ── Agreement ── */}
       <div
         style={{
-          background: '#141414',
+          background: 'var(--ob-card)',
           border: errors.agreement
             ? '1px solid rgba(248,113,113,0.4)'
-            : '1px solid rgba(255,255,255,0.06)',
+            : '1px solid var(--ob-border)',
           borderRadius: '16px',
           padding: '20px',
           transition: 'border-color 0.2s',
@@ -705,7 +705,7 @@ export default function ReviewStep({ onEditStep }: ReviewStepProps) {
           <span
             style={{
               fontSize: '0.85rem',
-              color: 'rgba(255,255,255,0.65)',
+              color: 'var(--ob-text-secondary)',
               lineHeight: 1.65,
             }}
           >

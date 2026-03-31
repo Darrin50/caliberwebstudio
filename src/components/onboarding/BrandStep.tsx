@@ -28,11 +28,11 @@ const STYLE_OPTIONS = [
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
-  background: '#1A1A1A',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--ob-input-bg)',
+  border: '1px solid var(--ob-border-strong)',
   borderRadius: '12px',
   padding: '12px 16px',
-  color: '#fff',
+  color: 'var(--ob-text)',
   fontSize: '16px',
   fontFamily: "'Inter', sans-serif",
   outline: 'none',
@@ -46,7 +46,7 @@ const labelStyle: React.CSSProperties = {
   fontWeight: 600,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginBottom: '8px',
   fontFamily: "'Space Mono', monospace",
 }
@@ -62,7 +62,7 @@ function onFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
 }
 function onBlur(e: React.FocusEvent<HTMLTextAreaElement>) {
-  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
   e.currentTarget.style.boxShadow = 'none'
 }
 
@@ -91,7 +91,7 @@ export default function BrandStep() {
           style={{
             fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
             fontWeight: 800,
-            color: '#fff',
+            color: 'var(--ob-text)',
             marginBottom: '6px',
             letterSpacing: '-0.02em',
             fontFamily: "'Syne', sans-serif",
@@ -99,7 +99,7 @@ export default function BrandStep() {
         >
           Brand & Colors
         </h2>
-        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+        <p style={{ color: 'var(--ob-label)', fontSize: '0.9rem', lineHeight: 1.6 }}>
           Tell us about your visual identity. Don&apos;t worry if you don&apos;t have everything — we&apos;ll work with what you have.
         </p>
       </div>
@@ -118,7 +118,7 @@ export default function BrandStep() {
                   width: '100%',
                   height: '64px',
                   borderRadius: '12px',
-                  border: '1px solid rgba(255,255,255,0.1)',
+                  border: '1px solid var(--ob-border-strong)',
                   background: value,
                   position: 'relative',
                   overflow: 'hidden',
@@ -141,14 +141,14 @@ export default function BrandStep() {
                 />
               </div>
               <span
-                style={{ fontSize: '0.72rem', color: '#6B6B6B', textAlign: 'center' }}
+                style={{ fontSize: '0.72rem', color: 'var(--ob-label)', textAlign: 'center' }}
               >
                 {label}
               </span>
               <span
                 style={{
                   fontSize: '0.65rem',
-                  color: 'rgba(255,255,255,0.25)',
+                  color: 'var(--ob-text-faint)',
                   fontFamily: "'Space Mono', monospace",
                 }}
               >
@@ -160,7 +160,7 @@ export default function BrandStep() {
         {errors.brand?.primaryColor && (
           <p style={errorStyle}>{errors.brand.primaryColor.message}</p>
         )}
-        <p style={{ fontSize: '0.75rem', color: '#6B6B6B', marginTop: '8px' }}>
+        <p style={{ fontSize: '0.75rem', color: 'var(--ob-label)', marginTop: '8px' }}>
           Click any swatch to open the color picker
         </p>
       </div>
@@ -188,8 +188,8 @@ export default function BrandStep() {
                   borderRadius: '14px',
                   border: isSelected
                     ? '1px solid #1E3D8F'
-                    : '1px solid rgba(255,255,255,0.06)',
-                  background: isSelected ? 'rgba(30,61,143,0.12)' : '#141414',
+                    : '1px solid var(--ob-border)',
+                  background: isSelected ? 'rgba(30,61,143,0.12)' : 'var(--ob-card)',
                   cursor: 'pointer',
                   transition: 'all 0.2s',
                 }}
@@ -205,13 +205,13 @@ export default function BrandStep() {
                     style={{
                       fontSize: '0.875rem',
                       fontWeight: 600,
-                      color: '#fff',
+                      color: 'var(--ob-text)',
                       marginBottom: '2px',
                     }}
                   >
                     {opt.label}
                   </div>
-                  <div style={{ fontSize: '0.75rem', color: '#6B6B6B', lineHeight: 1.4 }}>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--ob-label)', lineHeight: 1.4 }}>
                     {opt.desc}
                   </div>
                 </div>
@@ -227,23 +227,23 @@ export default function BrandStep() {
       {/* Logo upload placeholder */}
       <div>
         <label style={labelStyle}>Logo File</label>
-        <p style={{ fontSize: '0.75rem', color: '#6B6B6B', marginBottom: '12px' }}>
+        <p style={{ fontSize: '0.75rem', color: 'var(--ob-label)', marginBottom: '12px' }}>
           Upload your logo if you have one — PNG, SVG, or JPG preferred
         </p>
         <div
           style={{
-            border: '1px dashed rgba(255,255,255,0.15)',
+            border: '1px dashed var(--ob-border-strong)',
             borderRadius: '14px',
             padding: '28px',
             textAlign: 'center',
-            background: 'rgba(255,255,255,0.02)',
+            background: 'var(--ob-surface)',
           }}
         >
           <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>🖼</div>
-          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.35)', marginBottom: '6px' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--ob-text-dim)', marginBottom: '6px' }}>
             Logo upload coming soon
           </p>
-          <p style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>
+          <p style={{ fontSize: '0.75rem', color: 'var(--ob-label)' }}>
             You can email it to darrin@caliberwebstudio.com in the meantime
           </p>
           <input {...register('brand.logoUrl')} type="hidden" />

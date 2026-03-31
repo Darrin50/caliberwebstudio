@@ -40,11 +40,11 @@ const SOCIAL_PLATFORMS = [
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
-  background: '#1A1A1A',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--ob-input-bg)',
+  border: '1px solid var(--ob-border-strong)',
   borderRadius: '12px',
   padding: '12px 16px',
-  color: '#fff',
+  color: 'var(--ob-text)',
   fontSize: '16px',
   fontFamily: "'Inter', sans-serif",
   outline: 'none',
@@ -58,7 +58,7 @@ const labelStyle: React.CSSProperties = {
   fontWeight: 600,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginBottom: '8px',
   fontFamily: "'Space Mono', monospace",
 }
@@ -74,7 +74,7 @@ function onFocus(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
 }
 function onBlur(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
-  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
   e.currentTarget.style.boxShadow = 'none'
 }
 
@@ -94,7 +94,7 @@ export default function ContactStep() {
           style={{
             fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
             fontWeight: 800,
-            color: '#fff',
+            color: 'var(--ob-text)',
             marginBottom: '6px',
             letterSpacing: '-0.02em',
             fontFamily: "'Syne', sans-serif",
@@ -102,7 +102,7 @@ export default function ContactStep() {
         >
           Contact & Location
         </h2>
-        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+        <p style={{ color: 'var(--ob-label)', fontSize: '0.9rem', lineHeight: 1.6 }}>
           How customers can reach you and where you&apos;re located.
         </p>
       </div>
@@ -202,7 +202,7 @@ export default function ContactStep() {
         <p
           style={{
             fontSize: '0.75rem',
-            color: '#6B6B6B',
+            color: 'var(--ob-label)',
             marginBottom: '12px',
             lineHeight: 1.5,
           }}
@@ -211,8 +211,8 @@ export default function ContactStep() {
         </p>
         <div
           style={{
-            background: '#141414',
-            border: '1px solid rgba(255,255,255,0.06)',
+            background: 'var(--ob-card)',
+            border: '1px solid var(--ob-border)',
             borderRadius: '12px',
             overflow: 'hidden',
           }}
@@ -229,14 +229,14 @@ export default function ContactStep() {
                   padding: '10px 16px',
                   borderBottom:
                     i < DAYS.length - 1
-                      ? '1px solid rgba(255,255,255,0.04)'
+                      ? '1px solid var(--ob-border)'
                       : 'none',
                 }}
               >
                 <span
                   style={{
                     fontSize: '0.8rem',
-                    color: 'rgba(255,255,255,0.5)',
+                    color: 'var(--ob-text-secondary)',
                     width: '88px',
                     flexShrink: 0,
                   }}
@@ -257,12 +257,12 @@ export default function ContactStep() {
                     {...register(`contact.hours.${day}.open`)}
                     disabled={!!isClosed}
                     style={{
-                      background: '#1A1A1A',
-                      border: '1px solid rgba(255,255,255,0.1)',
+                      background: 'var(--ob-input-bg)',
+                      border: '1px solid var(--ob-border-strong)',
                       borderRadius: '8px',
                       padding: '6px 8px',
                       fontSize: '0.8rem',
-                      color: '#fff',
+                      color: 'var(--ob-text)',
                       flex: 1,
                       outline: 'none',
                       cursor: isClosed ? 'not-allowed' : 'pointer',
@@ -270,24 +270,24 @@ export default function ContactStep() {
                     }}
                   >
                     {TIMES.map((t) => (
-                      <option key={t} value={t} style={{ background: '#1A1A1A' }}>
+                      <option key={t} value={t} style={{ background: 'var(--ob-select-bg)' }}>
                         {t}
                       </option>
                     ))}
                   </select>
-                  <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', flexShrink: 0 }}>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--ob-text-faint)', flexShrink: 0 }}>
                     to
                   </span>
                   <select
                     {...register(`contact.hours.${day}.close`)}
                     disabled={!!isClosed}
                     style={{
-                      background: '#1A1A1A',
-                      border: '1px solid rgba(255,255,255,0.1)',
+                      background: 'var(--ob-input-bg)',
+                      border: '1px solid var(--ob-border-strong)',
                       borderRadius: '8px',
                       padding: '6px 8px',
                       fontSize: '0.8rem',
-                      color: '#fff',
+                      color: 'var(--ob-text)',
                       flex: 1,
                       outline: 'none',
                       cursor: isClosed ? 'not-allowed' : 'pointer',
@@ -295,7 +295,7 @@ export default function ContactStep() {
                     }}
                   >
                     {TIMES.map((t) => (
-                      <option key={t} value={t} style={{ background: '#1A1A1A' }}>
+                      <option key={t} value={t} style={{ background: 'var(--ob-select-bg)' }}>
                         {t}
                       </option>
                     ))}
@@ -315,7 +315,7 @@ export default function ContactStep() {
                     {...register(`contact.hours.${day}.closed`)}
                     style={{ accentColor: '#1E3D8F', width: '14px', height: '14px' }}
                   />
-                  <span style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>Closed</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--ob-label)' }}>Closed</span>
                 </label>
               </div>
             )
@@ -329,7 +329,7 @@ export default function ContactStep() {
         <p
           style={{
             fontSize: '0.75rem',
-            color: '#6B6B6B',
+            color: 'var(--ob-label)',
             marginBottom: '12px',
             lineHeight: 1.5,
           }}
@@ -345,7 +345,7 @@ export default function ContactStep() {
               <span
                 style={{
                   fontSize: '0.75rem',
-                  color: '#6B6B6B',
+                  color: 'var(--ob-label)',
                   width: '80px',
                   flexShrink: 0,
                 }}

@@ -21,18 +21,18 @@ const labelStyle: React.CSSProperties = {
   fontWeight: 600,
   letterSpacing: '0.12em',
   textTransform: 'uppercase',
-  color: '#6B6B6B',
+  color: 'var(--ob-label)',
   marginBottom: '8px',
   fontFamily: "'Space Mono', monospace",
 }
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
-  background: '#1A1A1A',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--ob-input-bg)',
+  border: '1px solid var(--ob-border-strong)',
   borderRadius: '10px',
   padding: '9px 12px',
-  color: '#fff',
+  color: 'var(--ob-text)',
   fontSize: '14px',
   fontFamily: "'Inter', sans-serif",
   outline: 'none',
@@ -45,7 +45,7 @@ function onFocus(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
 }
 function onBlur(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
-  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
   e.currentTarget.style.boxShadow = 'none'
 }
 
@@ -98,7 +98,7 @@ export default function PhotosStep() {
           style={{
             fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
             fontWeight: 800,
-            color: '#fff',
+            color: 'var(--ob-text)',
             marginBottom: '6px',
             letterSpacing: '-0.02em',
             fontFamily: "'Syne', sans-serif",
@@ -106,7 +106,7 @@ export default function PhotosStep() {
         >
           Photos & Media
         </h2>
-        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+        <p style={{ color: 'var(--ob-label)', fontSize: '0.9rem', lineHeight: 1.6 }}>
           Upload photos of your work, team, or business. High quality images make a big difference.
         </p>
       </div>
@@ -115,19 +115,19 @@ export default function PhotosStep() {
       <label
         style={{
           display: 'block',
-          border: `1px dashed ${uploading ? '#1E3D8F' : 'rgba(255,255,255,0.2)'}`,
+          border: `1px dashed ${uploading ? '#1E3D8F' : 'var(--ob-border-strong)'}`,
           borderRadius: '16px',
           padding: '32px',
           textAlign: 'center',
           cursor: uploading ? 'wait' : 'pointer',
-          background: 'rgba(255,255,255,0.02)',
+          background: 'var(--ob-surface)',
           transition: 'all 0.2s',
         }}
         onMouseEnter={(e) => {
-          if (!uploading) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)'
+          if (!uploading) e.currentTarget.style.borderColor = 'var(--ob-text-secondary)'
         }}
         onMouseLeave={(e) => {
-          if (!uploading) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'
+          if (!uploading) e.currentTarget.style.borderColor = 'var(--ob-border-strong)'
         }}
       >
         <input
@@ -141,10 +141,10 @@ export default function PhotosStep() {
         <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>
           {uploading ? '⏳' : '📸'}
         </div>
-        <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', marginBottom: '4px', fontWeight: 500 }}>
+        <p style={{ fontSize: '0.9rem', color: 'var(--ob-text-secondary)', marginBottom: '4px', fontWeight: 500 }}>
           {uploading ? 'Uploading...' : 'Click to upload photos'}
         </p>
-        <p style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>
+        <p style={{ fontSize: '0.75rem', color: 'var(--ob-label)' }}>
           JPG, PNG, WebP, HEIC or SVG · Max 20MB per file · Up to 20 photos
         </p>
       </label>
@@ -168,14 +168,14 @@ export default function PhotosStep() {
               <div
                 key={field.id}
                 style={{
-                  background: '#141414',
-                  border: '1px solid rgba(255,255,255,0.06)',
+                  background: 'var(--ob-card)',
+                  border: '1px solid var(--ob-border)',
                   borderRadius: '12px',
                   overflow: 'hidden',
                 }}
               >
                 {/* Thumbnail */}
-                <div style={{ position: 'relative', aspectRatio: '4/3', background: '#1A1A1A' }}>
+                <div style={{ position: 'relative', aspectRatio: '4/3', background: 'var(--ob-input-bg)' }}>
                   <Image
                     src={field.url}
                     alt={field.caption || `Photo ${index + 1}`}
@@ -229,11 +229,11 @@ export default function PhotosStep() {
                     onFocus={onFocus}
                     onBlur={onBlur}
                   >
-                    <option value="" style={{ background: '#1A1A1A' }}>
+                    <option value="" style={{ background: 'var(--ob-select-bg)' }}>
                       Category...
                     </option>
                     {CATEGORIES.map((c) => (
-                      <option key={c.value} value={c.value} style={{ background: '#1A1A1A' }}>
+                      <option key={c.value} value={c.value} style={{ background: 'var(--ob-select-bg)' }}>
                         {c.label}
                       </option>
                     ))}
@@ -253,7 +253,7 @@ export default function PhotosStep() {
           style={{
             textAlign: 'center',
             fontSize: '0.8rem',
-            color: 'rgba(255,255,255,0.25)',
+            color: 'var(--ob-text-faint)',
             marginTop: '-8px',
           }}
         >

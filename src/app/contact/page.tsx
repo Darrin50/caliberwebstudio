@@ -107,9 +107,9 @@ export default function ContactPage() {
                   Prefer to reach out directly?
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-                  <a href="mailto:hello@caliberwebstudio.com" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
+                  <a href="mailto:darrin@caliberwebstudio.com" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
                     <span style={{ fontSize: "1.1rem" }}>✉️</span>
-                    hello@caliberwebstudio.com
+                    darrin@caliberwebstudio.com
                   </a>
                   <a href="tel:+13137992315" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
                     <span style={{ fontSize: "1.1rem" }}>📞</span>

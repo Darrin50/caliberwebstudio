@@ -1,62 +1,87 @@
-'use client';
+'use client'
 
-type ProgressBarProps = {
-  currentStep: number;
-  totalSteps: number;
-  stepTitle: string;
-};
+import { STEP_TITLES } from './schema'
 
-export default function ProgressBar({ currentStep, totalSteps, stepTitle }: ProgressBarProps) {
-  const percent = ((currentStep - 1) / (totalSteps - 1)) * 100;
+interface ProgressBarProps {
+  currentStep: number
+  totalSteps: number
+}
+
+export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProps) {
+  const progress = ((currentStep - 1) / (totalSteps - 1)) * 100
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        paddingTop: '60px', // below the header
-      }}
-    >
+    <div className="w-full mb-8">
+      <div className="flex justify-between items-center mb-3">
+        <span
+          style={{
+            fontSize: '0.7rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#6B6B6B',
+            fontWeight: 600,
+            fontFamily: "'Space Mono', monospace",
+          }}
+        >
+          Step {currentStep} of {totalSteps}
+        </span>
+        <span style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>
+          {STEP_TITLES[currentStep - 1]}
+        </span>
+      </div>
+
       {/* Track */}
       <div
         style={{
-          height: '3px',
-          backgroundColor: 'rgba(255,255,255,0.05)',
-          position: 'relative',
+          width: '100%',
+          height: '2px',
+          background: 'rgba(255,255,255,0.06)',
+          borderRadius: '9999px',
           overflow: 'hidden',
         }}
       >
-        {/* Fill */}
         <div
           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
             height: '100%',
-            backgroundColor: '#1E3D8F',
-            width: `${percent}%`,
-            transition: 'width 700ms cubic-bezier(0.4, 0, 0.2, 1)',
+            width: `${progress}%`,
+            background: '#1E3D8F',
+            borderRadius: '9999px',
+            transition: 'width 0.5s ease-out',
           }}
         />
       </div>
 
-      {/* Step label */}
+      {/* Step dots */}
       <div
         style={{
-          textAlign: 'center',
+          display: 'flex',
+          justifyContent: 'space-between',
           marginTop: '10px',
-          fontSize: '11px',
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-          color: '#6B6B6B',
-          fontWeight: 500,
         }}
       >
-        Step {currentStep} of {totalSteps} &mdash; {stepTitle}
+        {STEP_TITLES.map((_, i) => {
+          const stepNum = i + 1
+          const isComplete = stepNum < currentStep
+          const isCurrent = stepNum === currentStep
+          return (
+            <div
+              key={stepNum}
+              style={{
+                width: '6px',
+                height: '6px',
+                borderRadius: '50%',
+                background: isComplete
+                  ? '#1E3D8F'
+                  : isCurrent
+                  ? '#fff'
+                  : 'rgba(255,255,255,0.12)',
+                transform: isCurrent ? 'scale(1.4)' : 'scale(1)',
+                transition: 'all 0.3s ease',
+              }}
+            />
+          )
+        })}
       </div>
     </div>
-  );
+  )
 }

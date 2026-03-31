@@ -1,133 +1,265 @@
-'use client';
+'use client'
 
-import { useFormContext } from 'react-hook-form';
-import { motion } from 'framer-motion';
-import PhotoUploader from './PhotoUploader';
+import { useState } from 'react'
+import { useFormContext, useFieldArray } from 'react-hook-form'
+import { useParams } from 'next/navigation'
+import Image from 'next/image'
+import type { OnboardingFormData } from './schema'
 
-const inputCls =
-  'w-full bg-[#1A1A1A] border border-white/10 focus:border-[#1E3D8F] focus:shadow-[0_0_0_3px_rgba(30,61,143,0.15)] text-white placeholder-[#4A4A4A] p-[14px_16px] text-base rounded-lg outline-none transition-all duration-200';
-const labelCls = 'block text-xs uppercase tracking-wider text-[#6B6B6B] mb-1.5';
+const CATEGORIES = [
+  { value: 'hero', label: 'Hero / Featured' },
+  { value: 'team', label: 'Team / Staff' },
+  { value: 'products', label: 'Products' },
+  { value: 'services', label: 'Services / Work' },
+  { value: 'gallery', label: 'Gallery' },
+  { value: 'other', label: 'Other' },
+] as const
 
-const SOCIAL_FIELDS = [
-  {
-    name: 'instagram',
-    label: 'Instagram Handle',
-    placeholder: '@yourbusiness',
-    prefix: '@',
-    type: 'text',
-  },
-  {
-    name: 'facebook',
-    label: 'Facebook URL',
-    placeholder: 'facebook.com/yourbusiness',
-    type: 'url',
-  },
-  {
-    name: 'googleBusiness',
-    label: 'Google Business URL',
-    placeholder: 'g.page/yourbusiness',
-    type: 'url',
-  },
-  {
-    name: 'yelp',
-    label: 'Yelp URL',
-    placeholder: 'yelp.com/biz/yourbusiness',
-    type: 'url',
-  },
-  {
-    name: 'tiktok',
-    label: 'TikTok Handle',
-    placeholder: '@yourbusiness',
-    prefix: '@',
-    type: 'text',
-  },
-  {
-    name: 'youtube',
-    label: 'YouTube URL',
-    placeholder: 'youtube.com/@yourchannel',
-    type: 'url',
-  },
-  {
-    name: 'existingWebsite',
-    label: 'Existing Website URL',
-    placeholder: 'yourbusiness.com',
-    type: 'url',
-  },
-] as const;
+const labelStyle: React.CSSProperties = {
+  display: 'block',
+  fontSize: '0.7rem',
+  fontWeight: 600,
+  letterSpacing: '0.12em',
+  textTransform: 'uppercase',
+  color: '#6B6B6B',
+  marginBottom: '8px',
+  fontFamily: "'Space Mono', monospace",
+}
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
-};
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  background: '#1A1A1A',
+  border: '1px solid rgba(255,255,255,0.1)',
+  borderRadius: '10px',
+  padding: '9px 12px',
+  color: '#fff',
+  fontSize: '14px',
+  fontFamily: "'Inter', sans-serif",
+  outline: 'none',
+  boxSizing: 'border-box',
+  transition: 'border-color 0.2s, box-shadow 0.2s',
+}
 
-const item = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-};
+function onFocus(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
+  e.currentTarget.style.borderColor = '#1E3D8F'
+  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
+}
+function onBlur(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
+  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.boxShadow = 'none'
+}
 
 export default function PhotosStep() {
-  const { register } = useFormContext();
+  const params = useParams()
+  const slug = params?.slug as string
+  const { register, control } = useFormContext<OnboardingFormData>()
+  const { fields, append, remove } = useFieldArray({ control, name: 'photos.items' })
+  const [uploading, setUploading] = useState(false)
+  const [uploadError, setUploadError] = useState('')
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || [])
+    if (!files.length) return
+
+    setUploading(true)
+    setUploadError('')
+
+    for (const file of files) {
+      try {
+        const formData = new FormData()
+        formData.append('file', file)
+        if (slug) formData.append('slug', slug)
+
+        const res = await fetch('/api/upload', { method: 'POST', body: formData })
+        const data = await res.json()
+
+        if (!res.ok) throw new Error(data.error || 'Upload failed')
+
+        append({
+          url: data.url,
+          fileName: data.fileName,
+          fileSize: data.fileSize,
+          caption: '',
+          category: undefined,
+        })
+      } catch (err) {
+        setUploadError(err instanceof Error ? err.message : 'Upload failed')
+      }
+    }
+
+    setUploading(false)
+    e.target.value = ''
+  }
 
   return (
-    <motion.div variants={container} initial="hidden" animate="show" className="space-y-8">
-      <motion.div variants={item}>
-        <h2 className="text-2xl font-semibold text-white">Show off your work.</h2>
-        <p className="mt-1 text-[#6B6B6B] text-sm">
-          Upload photos that showcase your business. Great photos build trust.
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h2
+          style={{
+            fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
+            fontWeight: 800,
+            color: '#fff',
+            marginBottom: '6px',
+            letterSpacing: '-0.02em',
+            fontFamily: "'Syne', sans-serif",
+          }}
+        >
+          Photos & Media
+        </h2>
+        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+          Upload photos of your work, team, or business. High quality images make a big difference.
         </p>
-      </motion.div>
+      </div>
 
-      {/* Photo uploader */}
-      <motion.div variants={item}>
-        <PhotoUploader />
-      </motion.div>
-
-      {/* Divider */}
-      <motion.div variants={item} className="flex items-center gap-4">
-        <div className="flex-1 h-px bg-white/[0.06]" />
-        <span className="text-xs uppercase tracking-widest text-[#4A4A4A]">
-          Social &amp; Web Presence
-        </span>
-        <div className="flex-1 h-px bg-white/[0.06]" />
-      </motion.div>
-
-      {/* Social fields — 2-col on sm+ */}
-      <motion.div
-        variants={item}
-        className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5"
+      {/* Upload area */}
+      <label
+        style={{
+          display: 'block',
+          border: `1px dashed ${uploading ? '#1E3D8F' : 'rgba(255,255,255,0.2)'}`,
+          borderRadius: '16px',
+          padding: '32px',
+          textAlign: 'center',
+          cursor: uploading ? 'wait' : 'pointer',
+          background: 'rgba(255,255,255,0.02)',
+          transition: 'all 0.2s',
+        }}
+        onMouseEnter={(e) => {
+          if (!uploading) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)'
+        }}
+        onMouseLeave={(e) => {
+          if (!uploading) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'
+        }}
       >
-        {SOCIAL_FIELDS.map((field) => (
-          <div key={field.name}>
-            <label className={labelCls}>
-              {field.label}{' '}
-              <span className="text-[#4A4A4A] normal-case tracking-normal text-xs font-normal">
-                (optional)
-              </span>
-            </label>
-            {field.type === 'url' ? (
-              <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#4A4A4A] text-base select-none pointer-events-none">
-                  https://
-                </span>
-                <input
-                  {...register(`social.${field.name}`)}
-                  type="text"
-                  placeholder={field.placeholder}
-                  inputMode="url"
-                  className={`${inputCls} pl-[84px]`}
-                />
+        <input
+          type="file"
+          accept=".jpg,.jpeg,.png,.webp,.heic,.svg"
+          multiple
+          onChange={handleFileChange}
+          disabled={uploading}
+          style={{ display: 'none' }}
+        />
+        <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>
+          {uploading ? '⏳' : '📸'}
+        </div>
+        <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', marginBottom: '4px', fontWeight: 500 }}>
+          {uploading ? 'Uploading...' : 'Click to upload photos'}
+        </p>
+        <p style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>
+          JPG, PNG, WebP, HEIC or SVG · Max 20MB per file · Up to 20 photos
+        </p>
+      </label>
+
+      {uploadError && (
+        <p style={{ fontSize: '0.8rem', color: '#f87171', textAlign: 'center' }}>{uploadError}</p>
+      )}
+
+      {/* Photo grid */}
+      {fields.length > 0 && (
+        <div>
+          <label style={labelStyle}>Uploaded Photos ({fields.length})</label>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+              gap: '12px',
+            }}
+          >
+            {fields.map((field, index) => (
+              <div
+                key={field.id}
+                style={{
+                  background: '#141414',
+                  border: '1px solid rgba(255,255,255,0.06)',
+                  borderRadius: '12px',
+                  overflow: 'hidden',
+                }}
+              >
+                {/* Thumbnail */}
+                <div style={{ position: 'relative', aspectRatio: '4/3', background: '#1A1A1A' }}>
+                  <Image
+                    src={field.url}
+                    alt={field.caption || `Photo ${index + 1}`}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => remove(index)}
+                    style={{
+                      position: 'absolute',
+                      top: '6px',
+                      right: '6px',
+                      width: '24px',
+                      height: '24px',
+                      borderRadius: '50%',
+                      background: 'rgba(0,0,0,0.7)',
+                      border: '1px solid rgba(255,255,255,0.15)',
+                      color: 'rgba(255,255,255,0.7)',
+                      fontSize: '14px',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      lineHeight: 1,
+                    }}
+                    title="Remove photo"
+                  >
+                    ×
+                  </button>
+                </div>
+
+                {/* Meta inputs */}
+                <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <input
+                    {...register(`photos.items.${index}.caption`)}
+                    placeholder="Add a caption..."
+                    style={{ ...inputStyle, padding: '7px 10px', fontSize: '12px' }}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                  />
+                  <select
+                    {...register(`photos.items.${index}.category`)}
+                    style={{
+                      ...inputStyle,
+                      padding: '7px 10px',
+                      fontSize: '12px',
+                      cursor: 'pointer',
+                      appearance: 'none' as const,
+                    }}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                  >
+                    <option value="" style={{ background: '#1A1A1A' }}>
+                      Category...
+                    </option>
+                    {CATEGORIES.map((c) => (
+                      <option key={c.value} value={c.value} style={{ background: '#1A1A1A' }}>
+                        {c.label}
+                      </option>
+                    ))}
+                  </select>
+                  {/* Hidden fields for url/fileName */}
+                  <input {...register(`photos.items.${index}.url`)} type="hidden" />
+                  <input {...register(`photos.items.${index}.fileName`)} type="hidden" />
+                </div>
               </div>
-            ) : (
-              <input
-                {...register(`social.${field.name}`)}
-                type="text"
-                placeholder={field.placeholder}
-                className={inputCls}
-              />
-            )}
+            ))}
           </div>
-        ))}
-      </motion.div>
-    </motion.div>
-  );
+        </div>
+      )}
+
+      {fields.length === 0 && (
+        <p
+          style={{
+            textAlign: 'center',
+            fontSize: '0.8rem',
+            color: 'rgba(255,255,255,0.25)',
+            marginTop: '-8px',
+          }}
+        >
+          No photos yet — this step is optional, but photos dramatically improve results
+        </p>
+      )}
+    </div>
+  )
 }

@@ -1,106 +1,215 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
-import { useFormContext, useFieldArray } from 'react-hook-form';
-import { motion, AnimatePresence } from 'framer-motion';
-import ServiceBlock from './ServiceBlock';
+import { useFormContext, useFieldArray } from 'react-hook-form'
+import type { OnboardingFormData } from './schema'
 
-const INITIAL_COUNT = 3;
-const MAX_SERVICES = 20;
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  background: '#1A1A1A',
+  border: '1px solid rgba(255,255,255,0.1)',
+  borderRadius: '12px',
+  padding: '12px 16px',
+  color: '#fff',
+  fontSize: '16px',
+  fontFamily: "'Inter', sans-serif",
+  outline: 'none',
+  boxSizing: 'border-box',
+  transition: 'border-color 0.2s, box-shadow 0.2s',
+}
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
-};
+const labelStyle: React.CSSProperties = {
+  display: 'block',
+  fontSize: '0.7rem',
+  fontWeight: 600,
+  letterSpacing: '0.12em',
+  textTransform: 'uppercase',
+  color: '#6B6B6B',
+  marginBottom: '8px',
+  fontFamily: "'Space Mono', monospace",
+}
 
-const item = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-};
+const errorStyle: React.CSSProperties = {
+  fontSize: '0.75rem',
+  color: '#f87171',
+  marginTop: '4px',
+}
+
+function onFocus(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  e.currentTarget.style.borderColor = '#1E3D8F'
+  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
+}
+function onBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.boxShadow = 'none'
+}
 
 export default function ServicesStep() {
-  const { control } = useFormContext();
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = useFormContext<OnboardingFormData>()
+
   const { fields, append, remove } = useFieldArray({
     control,
-    name: 'services',
-  });
-
-  // Seed with 3 empty slots on first render
-  useEffect(() => {
-    if (fields.length === 0) {
-      for (let i = 0; i < INITIAL_COUNT; i++) {
-        append({ name: '', description: '', price: '' }, { shouldFocus: false });
-      }
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    name: 'services.items',
+  })
 
   return (
-    <motion.div variants={container} initial="hidden" animate="show" className="space-y-6">
-      <motion.div variants={item}>
-        <h2 className="text-2xl font-semibold text-white">What do you offer?</h2>
-        <p className="mt-1 text-[#6B6B6B] text-sm">
-          Add the services your customers can book or inquire about.
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h2
+          style={{
+            fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
+            fontWeight: 800,
+            color: '#fff',
+            marginBottom: '6px',
+            letterSpacing: '-0.02em',
+            fontFamily: "'Syne', sans-serif",
+          }}
+        >
+          What services do you offer?
+        </h2>
+        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+          Add everything you want on your website. You can always edit later.
         </p>
-      </motion.div>
-
-      {/* Service blocks */}
-      <div className="space-y-4">
-        <AnimatePresence initial={false}>
-          {fields.map((field, index) => (
-            <motion.div
-              key={field.id}
-              initial={{ opacity: 0, y: 16, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.15 } }}
-              transition={{ duration: 0.25 }}
-            >
-              <ServiceBlock
-                index={index}
-                onRemove={index > 0 ? () => remove(index) : undefined}
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
       </div>
 
-      {/* Add button */}
-      {fields.length < MAX_SERVICES && (
-        <motion.div variants={item}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        {fields.map((field, index) => (
+          <div
+            key={field.id}
+            style={{
+              background: '#141414',
+              border: '1px solid rgba(255,255,255,0.06)',
+              borderRadius: '16px',
+              padding: '20px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '14px',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <span
+                style={{
+                  fontSize: '0.7rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: '#6B6B6B',
+                  fontFamily: "'Space Mono', monospace",
+                }}
+              >
+                Service {index + 1}
+              </span>
+              {fields.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => remove(index)}
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'rgba(255,255,255,0.3)',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '2px 8px',
+                    transition: 'color 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#f87171'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'rgba(255,255,255,0.3)'
+                  }}
+                >
+                  Remove
+                </button>
+              )}
+            </div>
+
+            <div>
+              <label style={labelStyle}>Service Name *</label>
+              <input
+                {...register(`services.items.${index}.name`)}
+                placeholder="e.g. Kitchen Remodeling"
+                style={inputStyle}
+                onFocus={onFocus}
+                onBlur={onBlur}
+              />
+              {errors.services?.items?.[index]?.name && (
+                <p style={errorStyle}>{errors.services.items[index].name?.message}</p>
+              )}
+            </div>
+
+            <div>
+              <label style={labelStyle}>Short Description</label>
+              <textarea
+                {...register(`services.items.${index}.description`)}
+                rows={2}
+                placeholder="Briefly describe what's included in this service..."
+                style={{
+                  ...inputStyle,
+                  resize: 'none',
+                  lineHeight: 1.6,
+                }}
+                onFocus={onFocus}
+                onBlur={onBlur}
+              />
+            </div>
+
+            <div>
+              <label style={labelStyle}>Price / Starting At</label>
+              <input
+                {...register(`services.items.${index}.price`)}
+                placeholder="e.g. Starting at $500 · Call for Quote · Free Estimates"
+                style={inputStyle}
+                onFocus={onFocus}
+                onBlur={onBlur}
+              />
+            </div>
+          </div>
+        ))}
+
+        {(errors.services?.items as { message?: string } | undefined)?.message && (
+          <p style={errorStyle}>
+            {(errors.services?.items as { message?: string }).message}
+          </p>
+        )}
+
+        {fields.length < 20 && (
           <button
             type="button"
             onClick={() => append({ name: '', description: '', price: '' })}
-            className="w-full border-2 border-dashed border-white/10 rounded-xl p-5 flex items-center justify-center gap-2.5 text-[#6B6B6B] hover:border-[#1E3D8F]/40 hover:text-white hover:bg-[#1E3D8F]/5 transition-all duration-200 group"
+            style={{
+              width: '100%',
+              padding: '14px',
+              border: '1px dashed rgba(255,255,255,0.2)',
+              borderRadius: '14px',
+              background: 'none',
+              color: 'rgba(255,255,255,0.4)',
+              fontSize: '0.875rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = 'rgba(255,255,255,0.7)'
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = 'rgba(255,255,255,0.4)'
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'
+            }}
           >
-            <div className="w-7 h-7 rounded-full border border-current flex items-center justify-center group-hover:border-[#1E3D8F]/60">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.75"
-                strokeLinecap="round"
-              >
-                <path d="M7 2v10M2 7h10" />
-              </svg>
-            </div>
-            <span className="text-sm font-medium">Add Another Service</span>
-            <span className="text-xs opacity-60 ml-1">
-              ({fields.length}/{MAX_SERVICES})
-            </span>
+            + Add Another Service
           </button>
-        </motion.div>
-      )}
-
-      {fields.length >= MAX_SERVICES && (
-        <motion.p
-          variants={item}
-          className="text-center text-xs text-[#6B6B6B]"
-        >
-          Maximum of {MAX_SERVICES} services reached.
-        </motion.p>
-      )}
-    </motion.div>
-  );
+        )}
+      </div>
+    </div>
+  )
 }

@@ -1,267 +1,268 @@
-'use client';
+'use client'
 
-import { useRef, useState } from 'react';
-import { useFormContext, Controller } from 'react-hook-form';
-import { motion, AnimatePresence } from 'framer-motion';
-import ColorPicker from './ColorPicker';
-import StyleSelector from './StyleSelector';
+import { useFormContext } from 'react-hook-form'
+import type { OnboardingFormData } from './schema'
 
-const inputCls =
-  'w-full bg-[#1A1A1A] border border-white/10 focus:border-[#1E3D8F] focus:shadow-[0_0_0_3px_rgba(30,61,143,0.15)] text-white placeholder-[#4A4A4A] p-[14px_16px] text-base rounded-lg outline-none transition-all duration-200';
-const labelCls = 'block text-xs uppercase tracking-wider text-[#6B6B6B] mb-1.5';
+const STYLE_OPTIONS = [
+  {
+    value: 'modern-minimal',
+    label: 'Modern / Minimal',
+    desc: 'Clean lines, white space, refined typography',
+  },
+  {
+    value: 'bold-dynamic',
+    label: 'Bold / Dynamic',
+    desc: 'Strong colors, energy, commanding presence',
+  },
+  {
+    value: 'classic-professional',
+    label: 'Classic / Professional',
+    desc: 'Trustworthy, established, timeless',
+  },
+  {
+    value: 'playful-creative',
+    label: 'Playful / Creative',
+    desc: 'Fun, colorful, expressive personality',
+  },
+] as const
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
-};
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  background: '#1A1A1A',
+  border: '1px solid rgba(255,255,255,0.1)',
+  borderRadius: '12px',
+  padding: '12px 16px',
+  color: '#fff',
+  fontSize: '16px',
+  fontFamily: "'Inter', sans-serif",
+  outline: 'none',
+  boxSizing: 'border-box',
+  transition: 'border-color 0.2s, box-shadow 0.2s',
+}
 
-const item = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-};
+const labelStyle: React.CSSProperties = {
+  display: 'block',
+  fontSize: '0.7rem',
+  fontWeight: 600,
+  letterSpacing: '0.12em',
+  textTransform: 'uppercase',
+  color: '#6B6B6B',
+  marginBottom: '8px',
+  fontFamily: "'Space Mono', monospace",
+}
 
-const MAX_LOGO_SIZE = 10 * 1024 * 1024; // 10 MB
+const errorStyle: React.CSSProperties = {
+  fontSize: '0.75rem',
+  color: '#f87171',
+  marginTop: '4px',
+}
+
+function onFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
+  e.currentTarget.style.borderColor = '#1E3D8F'
+  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
+}
+function onBlur(e: React.FocusEvent<HTMLTextAreaElement>) {
+  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.boxShadow = 'none'
+}
 
 export default function BrandStep() {
-  const { control, setValue } = useFormContext();
-  const [logoPreview, setLogoPreview] = useState<string | null>(null);
-  const [logoError, setLogoError] = useState<string | null>(null);
-  const logoInputRef = useRef<HTMLInputElement>(null);
+  const {
+    register,
+    watch,
+    formState: { errors },
+  } = useFormContext<OnboardingFormData>()
 
-  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const stylePreference = watch('brand.stylePreference')
+  const primaryColor = watch('brand.primaryColor') || '#1E3D8F'
+  const secondaryColor = watch('brand.secondaryColor') || '#ffffff'
+  const accentColor = watch('brand.accentColor') || '#00d4ff'
 
-    setLogoError(null);
-
-    if (file.size > MAX_LOGO_SIZE) {
-      setLogoError('File is too large. Max size is 10 MB.');
-      return;
-    }
-
-    const url = URL.createObjectURL(file);
-    setLogoPreview(url);
-    setValue('logo', file, { shouldDirty: true });
-
-    // Reset so same file can be re-uploaded
-    e.target.value = '';
-  };
-
-  const removeLogo = () => {
-    if (logoPreview) URL.revokeObjectURL(logoPreview);
-    setLogoPreview(null);
-    setValue('logo', null);
-  };
+  const colors = [
+    { key: 'brand.primaryColor' as const, label: 'Primary *', value: primaryColor },
+    { key: 'brand.secondaryColor' as const, label: 'Secondary', value: secondaryColor },
+    { key: 'brand.accentColor' as const, label: 'Accent', value: accentColor },
+  ]
 
   return (
-    <motion.div variants={container} initial="hidden" animate="show" className="space-y-8">
-      <motion.div variants={item}>
-        <h2 className="text-2xl font-semibold text-white">Make it yours.</h2>
-        <p className="mt-1 text-[#6B6B6B] text-sm">
-          Choose a look and feel that matches your brand.
-        </p>
-      </motion.div>
-
-      {/* Color preference toggle */}
-      <motion.div variants={item} className="space-y-4">
-        <label className={labelCls}>Brand Colors</label>
-        <Controller
-          name="hasExactColors"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => (
-            <div className="flex gap-3">
-              {[
-                { value: true,  label: 'Yes, I have exact colors' },
-                { value: false, label: 'No, pick something that fits' },
-              ].map(({ value, label }) => (
-                <button
-                  key={String(value)}
-                  type="button"
-                  onClick={() => field.onChange(value)}
-                  className={`flex-1 py-3 px-4 rounded-xl border text-sm font-medium transition-all duration-200 text-center ${
-                    field.value === value
-                      ? 'border-[#1E3D8F] bg-[#1E3D8F]/10 text-white shadow-[0_0_0_1px_rgba(30,61,143,0.4)]'
-                      : 'border-white/10 bg-[#141414] text-[#6B6B6B] hover:border-white/20 hover:text-white'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          )}
-        />
-
-        {/* Conditional panels */}
-        <Controller
-          name="hasExactColors"
-          control={control}
-          defaultValue={false}
-          render={({ field: { value: hasColors } }) => (
-            <AnimatePresence mode="wait">
-              {hasColors ? (
-                <motion.div
-                  key="color-pickers"
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.2 }}
-                  className="space-y-4 pt-2"
-                >
-                  <ColorPicker
-                    name="primaryColor"
-                    label="Primary Color"
-                    required
-                  />
-                  <ColorPicker
-                    name="secondaryColor"
-                    label="Secondary Color"
-                    required={false}
-                  />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="style-selector"
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.2 }}
-                  className="pt-2"
-                >
-                  <StyleSelector />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          )}
-        />
-      </motion.div>
-
-      {/* Logo upload */}
-      <motion.div variants={item} className="space-y-2">
-        <label className={labelCls}>
-          Logo{' '}
-          <span className="text-[#4A4A4A] normal-case tracking-normal text-xs font-normal">
-            (optional)
-          </span>
-        </label>
-
-        <div
-          className={`relative border-2 border-dashed rounded-xl transition-all duration-200 cursor-pointer ${
-            logoPreview
-              ? 'border-white/10 bg-[#141414]'
-              : 'border-white/10 bg-[#141414] hover:border-white/20 hover:bg-[#181818]'
-          }`}
-          onClick={() => !logoPreview && logoInputRef.current?.click()}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+      <div>
+        <h2
+          style={{
+            fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
+            fontWeight: 800,
+            color: '#fff',
+            marginBottom: '6px',
+            letterSpacing: '-0.02em',
+            fontFamily: "'Syne', sans-serif",
+          }}
         >
-          <input
-            ref={logoInputRef}
-            type="file"
-            accept=".png,.svg,.jpg,.jpeg,.webp"
-            className="hidden"
-            onChange={handleLogoUpload}
-          />
-
-          <AnimatePresence mode="wait">
-            {logoPreview ? (
-              <motion.div
-                key="preview"
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.2 }}
-                className="p-6 flex flex-col items-center gap-4"
-              >
-                <div className="relative">
-                  <img
-                    src={logoPreview}
-                    alt="Logo preview"
-                    className="max-h-28 max-w-full object-contain rounded-lg"
-                  />
-                </div>
-                <div className="flex items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      logoInputRef.current?.click();
-                    }}
-                    className="text-xs text-[#6B6B6B] hover:text-white transition-colors px-3 py-1.5 rounded-lg border border-white/10 hover:border-white/20"
-                  >
-                    Replace
-                  </button>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      removeLogo();
-                    }}
-                    className="text-xs text-[#6B6B6B] hover:text-red-400 transition-colors px-3 py-1.5 rounded-lg border border-white/10 hover:border-red-400/30"
-                  >
-                    Remove
-                  </button>
-                </div>
-              </motion.div>
-            ) : (
-              <motion.div
-                key="dropzone"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.15 }}
-                className="p-8 flex flex-col items-center gap-3 text-center"
-              >
-                {/* Upload icon */}
-                <div className="w-12 h-12 rounded-full bg-white/[0.04] flex items-center justify-center">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#4A4A4A"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="3" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-white text-sm font-medium">
-                    Drop your logo or click to browse
-                  </p>
-                  <p className="text-[#4A4A4A] text-xs mt-1">
-                    PNG, SVG, JPG, WebP · Max 10 MB
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        {logoError && <p className="text-xs text-red-400">{logoError}</p>}
-      </motion.div>
-
-      {/* Font preference */}
-      <motion.div variants={item} className="space-y-2">
-        <label className={labelCls}>
-          Tagline or Slogan{' '}
-          <span className="text-[#4A4A4A] normal-case tracking-normal text-xs font-normal">
-            (optional)
-          </span>
-        </label>
-        <input
-          type="text"
-          className={inputCls}
-          placeholder="e.g. Built Different. Proven Results."
-          {...{ name: 'brandTagline' }}
-          onChange={(e) => setValue('brandTagline', e.target.value)}
-        />
-        <p className="text-xs text-[#4A4A4A]">
-          This will appear below your business name on your site.
+          Brand & Colors
+        </h2>
+        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+          Tell us about your visual identity. Don&apos;t worry if you don&apos;t have everything — we&apos;ll work with what you have.
         </p>
-      </motion.div>
-    </motion.div>
-  );
+      </div>
+
+      {/* Color pickers */}
+      <div>
+        <label style={labelStyle}>Your Brand Colors</label>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px' }}>
+          {colors.map(({ key, label, value }) => (
+            <div
+              key={key}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}
+            >
+              <div
+                style={{
+                  width: '100%',
+                  height: '64px',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  background: value,
+                  position: 'relative',
+                  overflow: 'hidden',
+                  cursor: 'pointer',
+                }}
+              >
+                <input
+                  type="color"
+                  {...register(key)}
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    opacity: 0,
+                    cursor: 'pointer',
+                    border: 'none',
+                    padding: 0,
+                  }}
+                />
+              </div>
+              <span
+                style={{ fontSize: '0.72rem', color: '#6B6B6B', textAlign: 'center' }}
+              >
+                {label}
+              </span>
+              <span
+                style={{
+                  fontSize: '0.65rem',
+                  color: 'rgba(255,255,255,0.25)',
+                  fontFamily: "'Space Mono', monospace",
+                }}
+              >
+                {value}
+              </span>
+            </div>
+          ))}
+        </div>
+        {errors.brand?.primaryColor && (
+          <p style={errorStyle}>{errors.brand.primaryColor.message}</p>
+        )}
+        <p style={{ fontSize: '0.75rem', color: '#6B6B6B', marginTop: '8px' }}>
+          Click any swatch to open the color picker
+        </p>
+      </div>
+
+      {/* Style preference */}
+      <div>
+        <label style={labelStyle}>Style Preference *</label>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '12px',
+          }}
+        >
+          {STYLE_OPTIONS.map((opt) => {
+            const isSelected = stylePreference === opt.value
+            return (
+              <label
+                key={opt.value}
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '12px',
+                  padding: '16px',
+                  borderRadius: '14px',
+                  border: isSelected
+                    ? '1px solid #1E3D8F'
+                    : '1px solid rgba(255,255,255,0.06)',
+                  background: isSelected ? 'rgba(30,61,143,0.12)' : '#141414',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                }}
+              >
+                <input
+                  type="radio"
+                  {...register('brand.stylePreference')}
+                  value={opt.value}
+                  style={{ marginTop: '2px', accentColor: '#1E3D8F' }}
+                />
+                <div>
+                  <div
+                    style={{
+                      fontSize: '0.875rem',
+                      fontWeight: 600,
+                      color: '#fff',
+                      marginBottom: '2px',
+                    }}
+                  >
+                    {opt.label}
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: '#6B6B6B', lineHeight: 1.4 }}>
+                    {opt.desc}
+                  </div>
+                </div>
+              </label>
+            )
+          })}
+        </div>
+        {errors.brand?.stylePreference && (
+          <p style={errorStyle}>{errors.brand.stylePreference.message}</p>
+        )}
+      </div>
+
+      {/* Logo upload placeholder */}
+      <div>
+        <label style={labelStyle}>Logo File</label>
+        <p style={{ fontSize: '0.75rem', color: '#6B6B6B', marginBottom: '12px' }}>
+          Upload your logo if you have one — PNG, SVG, or JPG preferred
+        </p>
+        <div
+          style={{
+            border: '1px dashed rgba(255,255,255,0.15)',
+            borderRadius: '14px',
+            padding: '28px',
+            textAlign: 'center',
+            background: 'rgba(255,255,255,0.02)',
+          }}
+        >
+          <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>🖼</div>
+          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.35)', marginBottom: '6px' }}>
+            Logo upload coming soon
+          </p>
+          <p style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>
+            You can email it to darrin@caliberwebstudio.com in the meantime
+          </p>
+          <input {...register('brand.logoUrl')} type="hidden" />
+          <input {...register('brand.logoFileName')} type="hidden" />
+        </div>
+      </div>
+
+      {/* Notes */}
+      <div>
+        <label style={labelStyle}>Additional Brand Notes</label>
+        <textarea
+          {...register('brand.notes')}
+          rows={3}
+          placeholder="Any other details — fonts you like, websites you admire, things to avoid..."
+          style={{ ...inputStyle, resize: 'none', lineHeight: 1.6 }}
+          onFocus={onFocus}
+          onBlur={onBlur}
+        />
+      </div>
+    </div>
+  )
 }

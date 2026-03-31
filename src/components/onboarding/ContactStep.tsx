@@ -1,206 +1,373 @@
-'use client';
+'use client'
 
-import { useFormContext, Controller } from 'react-hook-form';
-import { motion } from 'framer-motion';
-import TagInput from './TagInput';
-import HoursGrid from './HoursGrid';
+import { useFormContext } from 'react-hook-form'
+import type { OnboardingFormData } from './schema'
 
-const US_STATES = [
-  { code: 'AL', name: 'Alabama' }, { code: 'AK', name: 'Alaska' },
-  { code: 'AZ', name: 'Arizona' }, { code: 'AR', name: 'Arkansas' },
-  { code: 'CA', name: 'California' }, { code: 'CO', name: 'Colorado' },
-  { code: 'CT', name: 'Connecticut' }, { code: 'DE', name: 'Delaware' },
-  { code: 'FL', name: 'Florida' }, { code: 'GA', name: 'Georgia' },
-  { code: 'HI', name: 'Hawaii' }, { code: 'ID', name: 'Idaho' },
-  { code: 'IL', name: 'Illinois' }, { code: 'IN', name: 'Indiana' },
-  { code: 'IA', name: 'Iowa' }, { code: 'KS', name: 'Kansas' },
-  { code: 'KY', name: 'Kentucky' }, { code: 'LA', name: 'Louisiana' },
-  { code: 'ME', name: 'Maine' }, { code: 'MD', name: 'Maryland' },
-  { code: 'MA', name: 'Massachusetts' }, { code: 'MI', name: 'Michigan' },
-  { code: 'MN', name: 'Minnesota' }, { code: 'MS', name: 'Mississippi' },
-  { code: 'MO', name: 'Missouri' }, { code: 'MT', name: 'Montana' },
-  { code: 'NE', name: 'Nebraska' }, { code: 'NV', name: 'Nevada' },
-  { code: 'NH', name: 'New Hampshire' }, { code: 'NJ', name: 'New Jersey' },
-  { code: 'NM', name: 'New Mexico' }, { code: 'NY', name: 'New York' },
-  { code: 'NC', name: 'North Carolina' }, { code: 'ND', name: 'North Dakota' },
-  { code: 'OH', name: 'Ohio' }, { code: 'OK', name: 'Oklahoma' },
-  { code: 'OR', name: 'Oregon' }, { code: 'PA', name: 'Pennsylvania' },
-  { code: 'RI', name: 'Rhode Island' }, { code: 'SC', name: 'South Carolina' },
-  { code: 'SD', name: 'South Dakota' }, { code: 'TN', name: 'Tennessee' },
-  { code: 'TX', name: 'Texas' }, { code: 'UT', name: 'Utah' },
-  { code: 'VT', name: 'Vermont' }, { code: 'VA', name: 'Virginia' },
-  { code: 'WA', name: 'Washington' }, { code: 'WV', name: 'West Virginia' },
-  { code: 'WI', name: 'Wisconsin' }, { code: 'WY', name: 'Wyoming' },
-];
+const DAYS = [
+  'monday',
+  'tuesday',
+  'wednesday',
+  'thursday',
+  'friday',
+  'saturday',
+  'sunday',
+] as const
 
-const inputCls =
-  'w-full bg-[#1A1A1A] border border-white/10 focus:border-[#1E3D8F] focus:shadow-[0_0_0_3px_rgba(30,61,143,0.15)] text-white placeholder-[#4A4A4A] p-[14px_16px] text-base rounded-lg outline-none transition-all duration-200';
-const labelCls = 'block text-xs uppercase tracking-wider text-[#6B6B6B] mb-1.5';
-const errorCls = 'mt-1 text-xs text-red-400';
-
-function formatPhone(value: string): string {
-  const digits = value.replace(/\D/g, '').slice(0, 10);
-  if (digits.length <= 3) return digits;
-  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
-  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+const DAY_LABELS: Record<string, string> = {
+  monday: 'Monday',
+  tuesday: 'Tuesday',
+  wednesday: 'Wednesday',
+  thursday: 'Thursday',
+  friday: 'Friday',
+  saturday: 'Saturday',
+  sunday: 'Sunday',
 }
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
-};
+const TIMES = [
+  '6:00 AM', '7:00 AM', '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM',
+  '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM',
+  '6:00 PM', '7:00 PM', '8:00 PM', '9:00 PM', '10:00 PM', '11:00 PM',
+]
 
-const item = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-};
+const SOCIAL_PLATFORMS = [
+  { key: 'facebook' as const, label: 'Facebook', placeholder: 'https://facebook.com/yourbusiness' },
+  { key: 'instagram' as const, label: 'Instagram', placeholder: 'https://instagram.com/yourbusiness' },
+  { key: 'twitter' as const, label: 'Twitter / X', placeholder: 'https://twitter.com/yourbusiness' },
+  { key: 'linkedin' as const, label: 'LinkedIn', placeholder: 'https://linkedin.com/in/yourname' },
+  { key: 'yelp' as const, label: 'Yelp', placeholder: 'https://yelp.com/biz/yourbusiness' },
+  { key: 'google' as const, label: 'Google', placeholder: 'https://g.page/yourbusiness' },
+]
+
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  background: '#1A1A1A',
+  border: '1px solid rgba(255,255,255,0.1)',
+  borderRadius: '12px',
+  padding: '12px 16px',
+  color: '#fff',
+  fontSize: '16px',
+  fontFamily: "'Inter', sans-serif",
+  outline: 'none',
+  boxSizing: 'border-box',
+  transition: 'border-color 0.2s, box-shadow 0.2s',
+}
+
+const labelStyle: React.CSSProperties = {
+  display: 'block',
+  fontSize: '0.7rem',
+  fontWeight: 600,
+  letterSpacing: '0.12em',
+  textTransform: 'uppercase',
+  color: '#6B6B6B',
+  marginBottom: '8px',
+  fontFamily: "'Space Mono', monospace",
+}
+
+const errorStyle: React.CSSProperties = {
+  fontSize: '0.75rem',
+  color: '#f87171',
+  marginTop: '4px',
+}
+
+function onFocus(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
+  e.currentTarget.style.borderColor = '#1E3D8F'
+  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(30,61,143,0.2)'
+}
+function onBlur(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
+  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+  e.currentTarget.style.boxShadow = 'none'
+}
 
 export default function ContactStep() {
   const {
     register,
-    control,
+    watch,
     formState: { errors },
-  } = useFormContext();
+  } = useFormContext<OnboardingFormData>()
+
+  const hours = watch('contact.hours')
 
   return (
-    <motion.div variants={container} initial="hidden" animate="show" className="space-y-6">
-      <motion.div variants={item}>
-        <h2 className="text-2xl font-semibold text-white">Where can customers find you?</h2>
-      </motion.div>
-
-      {/* Phone */}
-      <motion.div variants={item}>
-        <label className={labelCls}>Phone Number</label>
-        <Controller
-          name="phone"
-          control={control}
-          defaultValue=""
-          rules={{
-            pattern: {
-              value: /^\(\d{3}\) \d{3}-\d{4}$/,
-              message: 'Enter a valid phone number',
-            },
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+      <div>
+        <h2
+          style={{
+            fontSize: 'clamp(1.4rem, 3vw, 1.75rem)',
+            fontWeight: 800,
+            color: '#fff',
+            marginBottom: '6px',
+            letterSpacing: '-0.02em',
+            fontFamily: "'Syne', sans-serif",
           }}
-          render={({ field }) => (
+        >
+          Contact & Location
+        </h2>
+        <p style={{ color: '#6B6B6B', fontSize: '0.9rem', lineHeight: 1.6 }}>
+          How customers can reach you and where you&apos;re located.
+        </p>
+      </div>
+
+      {/* Contact info */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+          <div>
+            <label style={labelStyle}>Your Name *</label>
             <input
-              {...field}
-              type="tel"
-              inputMode="numeric"
-              placeholder="(313) 555-0000"
-              onChange={(e) => field.onChange(formatPhone(e.target.value))}
-              className={inputCls}
+              {...register('contact.ownerName')}
+              placeholder="Your full name"
+              style={inputStyle}
+              onFocus={onFocus}
+              onBlur={onBlur}
             />
-          )}
-        />
-        {errors.phone && <p className={errorCls}>{String(errors.phone.message)}</p>}
-      </motion.div>
-
-      {/* Email */}
-      <motion.div variants={item}>
-        <label className={labelCls}>Email Address</label>
-        <input
-          {...register('email', {
-            pattern: {
-              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-              message: 'Enter a valid email address',
-            },
-          })}
-          type="email"
-          placeholder="hello@yourbusiness.com"
-          className={inputCls}
-        />
-        {errors.email && <p className={errorCls}>{String(errors.email.message)}</p>}
-      </motion.div>
-
-      {/* Street Address */}
-      <motion.div variants={item}>
-        <label className={labelCls}>Street Address</label>
-        <input
-          {...register('streetAddress')}
-          type="text"
-          placeholder="123 Main Street"
-          className={inputCls}
-        />
-      </motion.div>
-
-      {/* Suite / Unit */}
-      <motion.div variants={item}>
-        <label className={labelCls}>
-          Suite / Unit{' '}
-          <span className="text-[#4A4A4A] normal-case tracking-normal text-xs font-normal">
-            (optional)
-          </span>
-        </label>
-        <input
-          {...register('suite')}
-          type="text"
-          placeholder="Suite 200, Unit B, etc."
-          className={inputCls}
-        />
-      </motion.div>
-
-      {/* City + State */}
-      <motion.div variants={item} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="sm:col-span-2">
-          <label className={labelCls}>City</label>
-          <input
-            {...register('city')}
-            type="text"
-            placeholder="Detroit"
-            className={inputCls}
-          />
-        </div>
-        <div>
-          <label className={labelCls}>State</label>
-          <div className="relative">
-            <select
-              {...register('state')}
-              defaultValue="MI"
-              className={`${inputCls} appearance-none cursor-pointer pr-9`}
-            >
-              {US_STATES.map((s) => (
-                <option key={s.code} value={s.code} className="bg-[#1A1A1A]">
-                  {s.code}
-                </option>
-              ))}
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#6B6B6B" strokeWidth="1.5">
-                <path d="M2 4l4 4 4-4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
+            {errors.contact?.ownerName && (
+              <p style={errorStyle}>{errors.contact.ownerName.message}</p>
+            )}
+          </div>
+          <div>
+            <label style={labelStyle}>Email *</label>
+            <input
+              {...register('contact.email')}
+              type="email"
+              placeholder="you@yourbusiness.com"
+              style={inputStyle}
+              onFocus={onFocus}
+              onBlur={onBlur}
+            />
+            {errors.contact?.email && (
+              <p style={errorStyle}>{errors.contact.email.message}</p>
+            )}
           </div>
         </div>
-      </motion.div>
 
-      {/* ZIP */}
-      <motion.div variants={item}>
-        <label className={labelCls}>ZIP Code</label>
-        <input
-          {...register('zip', {
-            pattern: {
-              value: /^\d{5}(-\d{4})?$/,
-              message: 'Enter a valid ZIP code',
-            },
+        <div>
+          <label style={labelStyle}>Phone Number</label>
+          <input
+            {...register('contact.phone')}
+            type="tel"
+            placeholder="(313) 555-0100"
+            style={inputStyle}
+            onFocus={onFocus}
+            onBlur={onBlur}
+          />
+        </div>
+
+        <div>
+          <label style={labelStyle}>Street Address</label>
+          <input
+            {...register('contact.address')}
+            placeholder="123 Main St"
+            style={inputStyle}
+            onFocus={onFocus}
+            onBlur={onBlur}
+          />
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 80px 100px', gap: '12px' }}>
+          <div>
+            <label style={labelStyle}>City</label>
+            <input
+              {...register('contact.city')}
+              placeholder="Detroit"
+              style={inputStyle}
+              onFocus={onFocus}
+              onBlur={onBlur}
+            />
+          </div>
+          <div>
+            <label style={labelStyle}>State</label>
+            <input
+              {...register('contact.state')}
+              placeholder="MI"
+              style={inputStyle}
+              onFocus={onFocus}
+              onBlur={onBlur}
+            />
+          </div>
+          <div>
+            <label style={labelStyle}>ZIP</label>
+            <input
+              {...register('contact.zip')}
+              placeholder="48201"
+              style={inputStyle}
+              onFocus={onFocus}
+              onBlur={onBlur}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Business Hours */}
+      <div>
+        <label style={labelStyle}>Business Hours</label>
+        <p
+          style={{
+            fontSize: '0.75rem',
+            color: '#6B6B6B',
+            marginBottom: '12px',
+            lineHeight: 1.5,
+          }}
+        >
+          Check &quot;Closed&quot; for days you&apos;re not open
+        </p>
+        <div
+          style={{
+            background: '#141414',
+            border: '1px solid rgba(255,255,255,0.06)',
+            borderRadius: '12px',
+            overflow: 'hidden',
+          }}
+        >
+          {DAYS.map((day, i) => {
+            const isClosed = hours?.[day]?.closed
+            return (
+              <div
+                key={day}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '10px 16px',
+                  borderBottom:
+                    i < DAYS.length - 1
+                      ? '1px solid rgba(255,255,255,0.04)'
+                      : 'none',
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: '0.8rem',
+                    color: 'rgba(255,255,255,0.5)',
+                    width: '88px',
+                    flexShrink: 0,
+                  }}
+                >
+                  {DAY_LABELS[day]}
+                </span>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    flex: 1,
+                    opacity: isClosed ? 0.3 : 1,
+                    transition: 'opacity 0.2s',
+                  }}
+                >
+                  <select
+                    {...register(`contact.hours.${day}.open`)}
+                    disabled={!!isClosed}
+                    style={{
+                      background: '#1A1A1A',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      borderRadius: '8px',
+                      padding: '6px 8px',
+                      fontSize: '0.8rem',
+                      color: '#fff',
+                      flex: 1,
+                      outline: 'none',
+                      cursor: isClosed ? 'not-allowed' : 'pointer',
+                      appearance: 'none' as const,
+                    }}
+                  >
+                    {TIMES.map((t) => (
+                      <option key={t} value={t} style={{ background: '#1A1A1A' }}>
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                  <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', flexShrink: 0 }}>
+                    to
+                  </span>
+                  <select
+                    {...register(`contact.hours.${day}.close`)}
+                    disabled={!!isClosed}
+                    style={{
+                      background: '#1A1A1A',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      borderRadius: '8px',
+                      padding: '6px 8px',
+                      fontSize: '0.8rem',
+                      color: '#fff',
+                      flex: 1,
+                      outline: 'none',
+                      cursor: isClosed ? 'not-allowed' : 'pointer',
+                      appearance: 'none' as const,
+                    }}
+                  >
+                    {TIMES.map((t) => (
+                      <option key={t} value={t} style={{ background: '#1A1A1A' }}>
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <label
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    flexShrink: 0,
+                    cursor: 'pointer',
+                  }}
+                >
+                  <input
+                    type="checkbox"
+                    {...register(`contact.hours.${day}.closed`)}
+                    style={{ accentColor: '#1E3D8F', width: '14px', height: '14px' }}
+                  />
+                  <span style={{ fontSize: '0.75rem', color: '#6B6B6B' }}>Closed</span>
+                </label>
+              </div>
+            )
           })}
-          type="text"
-          inputMode="numeric"
-          placeholder="48201"
-          maxLength={10}
-          className={inputCls}
-        />
-        {errors.zip && <p className={errorCls}>{String(errors.zip.message)}</p>}
-      </motion.div>
+        </div>
+      </div>
 
-      {/* Service Area — TagInput */}
-      <motion.div variants={item}>
-        <TagInput name="serviceArea" label="Service Area" />
-      </motion.div>
-
-      {/* Hours of Operation */}
-      <motion.div variants={item}>
-        <HoursGrid />
-      </motion.div>
-    </motion.div>
-  );
+      {/* Social Media */}
+      <div>
+        <label style={labelStyle}>Social Media Links</label>
+        <p
+          style={{
+            fontSize: '0.75rem',
+            color: '#6B6B6B',
+            marginBottom: '12px',
+            lineHeight: 1.5,
+          }}
+        >
+          Add any profiles you want linked on your site — all optional
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {SOCIAL_PLATFORMS.map(({ key, label, placeholder }) => (
+            <div
+              key={key}
+              style={{ display: 'flex', alignItems: 'center', gap: '12px' }}
+            >
+              <span
+                style={{
+                  fontSize: '0.75rem',
+                  color: '#6B6B6B',
+                  width: '80px',
+                  flexShrink: 0,
+                }}
+              >
+                {label}
+              </span>
+              <input
+                {...register(`contact.social.${key}`)}
+                placeholder={placeholder}
+                style={{
+                  ...inputStyle,
+                  padding: '10px 14px',
+                  fontSize: '14px',
+                  borderRadius: '10px',
+                }}
+                onFocus={onFocus}
+                onBlur={onBlur}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
 }

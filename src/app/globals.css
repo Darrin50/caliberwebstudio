@@ -23,7 +23,7 @@
 [data-theme="light"] {
   --navy: #1E3D8F;
   --navy2: #2a52b0;
-  --chrome: #5a6a7a;
+  --chrome: #374151; /* darkened from #5a6a7a for WCAG AAA contrast on light bg */
   --bg: #F6F7FB;
   --bg2: #ECEEF4;
   --bg3: #E4E7F0;
@@ -343,18 +343,97 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
 [data-theme="light"] main article h2,
 [data-theme="light"] main article h3,
 [data-theme="light"] main article h4 {
-  color: #0e1020 !important;
+  color: #111111 !important;
 }
 
 /* ── Case studies listing hero h1: uses var(--white) which is CSS-variable-aware ── */
 /* var(--white) correctly resolves to #0e1020 in light mode — no override needed.
    But the "Start Your Project" button uses color: var(--bg) on a var(--chrome) background.
-   In light mode --chrome is #5a6a7a and --bg is #F6F7FB (near white) — readable. Fine. */
+   In light mode --chrome is #374151 and --bg is #F6F7FB (near white) — readable. Fine. */
 
 /* ── Services page and other sub-pages: catch any remaining hardcoded link colors ── */
 [data-theme="light"] main a[style*="color: var(--accent"],
 [data-theme="light"] main span[style*="color: var(--accent"] {
   color: var(--accent) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   LIGHT MODE FIX PASS — March 2026
+   Fixes: gradient headings, stat cards, section heading width, blog readability
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Fix 1: Gradient text on h1 directly (faq, startup-complete pages use it on h1 itself, not span) */
+[data-theme="light"] h1[style*="-webkit-text-fill-color"],
+[data-theme="light"] h1[style*="background-clip"] {
+  color: #0a0a0a !important;
+  -webkit-text-fill-color: #0a0a0a !important;
+  background-image: none !important;
+  background: none !important;
+}
+
+/* Fix 2: Section heading max-width — prevent full-viewport heading spans in light mode */
+[data-theme="light"] main section h1 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fix 3: Hero "How It Works" stat cards — floating stats need a card surface in light mode */
+[data-theme="light"] .stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 20px;
+  box-shadow: 0 2px 20px rgba(30,61,143,0.1);
+  border: 1px solid rgba(30,61,143,0.1);
+}
+[data-theme="light"] .stat-metric {
+  color: var(--navy) !important;
+}
+[data-theme="light"] .stat-card .stat-label {
+  color: #374151 !important;
+}
+
+/* Fix 4: Process page stats strip — add individual cell card feel */
+[data-theme="light"] .stats-strip > div {
+  background: #ffffff !important;
+}
+
+/* Fix 5: Blog article — add visual card container + ensure content doesn't bleed */
+[data-theme="light"] main article {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px clamp(20px,5vw,48px);
+  box-shadow: 0 2px 24px rgba(30,61,143,0.07);
+  border: 1px solid rgba(30,61,143,0.08);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fix 5b: Blog article images — contain within article width */
+[data-theme="light"] main article img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix 6: Hardcoded #fff text in sections not caught by h1-h6 rules */
+[data-theme="light"] main section > p,
+[data-theme="light"] main section > div > p {
+  color: var(--text-secondary) !important;
+}
+
+/* Fix 7: Hardcoded color:#fff on stat values in About page numbers section */
+[data-theme="light"] main section > div > div > div[style*="font-family: Syne"],
+[data-theme="light"] main section > div > div > div[style*="font-family:'Syne'"],
+[data-theme="light"] main section > div > div > div[style*="fontFamily"] {
+  color: var(--white) !important;
+}
+
+/* Fix 8: Blog post CTA block in light mode */
+[data-theme="light"] main article + div,
+[data-theme="light"] main > div > div[style*="background: linear-gradient"] {
+  border-color: rgba(30,61,143,0.2) !important;
+  background: rgba(30,61,143,0.05) !important;
 }
 
 /* ── Hero "How It Works" stat cards: add card containers in light mode ── */
@@ -373,20 +452,120 @@ input:focus, textarea:focus { border-left: 2px solid var(--navy) !important; pad
 /* ── Blog article body: ensure fully readable text in light mode ── */
 /* article inline style uses var(--text-secondary) which is semi-opaque; make solid */
 [data-theme="light"] main article {
-  color: #1c1e2a !important;
+  color: #333333 !important;
 }
-[data-theme="light"] main article p {
-  color: #2a2d40 !important;
+[data-theme="light"] main article p,
+[data-theme="light"] main article li {
+  color: #333333 !important;
 }
-
-/* ── Section headings: reduce max font-size in light mode so they feel contained ── */
-/* Dark mode uses clamp(36px,6vw,72px); at 72px solid dark text is very heavy in light */
-[data-theme="light"] #services h2 {
-  font-size: clamp(28px, 4vw, 52px) !important;
+[data-theme="light"] main article strong {
+  color: #111111 !important;
 }
 
 /* ── Light mode text-secondary: make body copy more opaque for better contrast ── */
 /* rgba(14,16,32,0.72) is ~7:1 contrast but perceived as faint; bump opacity */
 [data-theme="light"] {
   --text-secondary: rgba(14, 16, 32, 0.84);
+}
+
+/* ── Hero h1: all spans dark in light mode (catches hardcoded color:#fff spans) ── */
+[data-theme="light"] h1 span {
+  color: #0a0a0a !important;
+  -webkit-text-fill-color: #0a0a0a !important;
+  background: none !important;
+}
+
+/* ── Services heading: tighten font-size + enforce max-width in light mode ── */
+[data-theme="light"] #services h2 {
+  font-size: clamp(22px, 3vw, 44px) !important;
+  max-width: 680px !important;
+}
+
+/* ── Service cards: white surface + visible shadow in light mode ── */
+[data-theme="light"] .svc-card {
+  background: #ffffff !important;
+  border-color: rgba(30, 61, 143, 0.12) !important;
+  box-shadow: 0 2px 16px rgba(30, 61, 143, 0.07) !important;
+}
+[data-theme="light"] .svc-card:hover {
+  border-color: var(--navy) !important;
+  box-shadow: 0 8px 32px rgba(30, 61, 143, 0.14) !important;
+}
+
+/* ── Process cards: white surface + shadow in light mode ── */
+[data-theme="light"] .process-card {
+  background: #ffffff !important;
+  border-color: rgba(30, 61, 143, 0.12) !important;
+  box-shadow: 0 2px 16px rgba(30, 61, 143, 0.06) !important;
+}
+[data-theme="light"] .process-card:hover {
+  border-color: var(--navy) !important;
+  box-shadow: 0 8px 32px rgba(30, 61, 143, 0.12) !important;
+}
+
+/* ── Pricing cards: white surface + visible borders in light mode ── */
+[data-theme="light"] .pricing-card {
+  background: #ffffff !important;
+  border-color: rgba(30, 61, 143, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(30, 61, 143, 0.08) !important;
+}
+[data-theme="light"] .pricing-card:hover {
+  border-color: rgba(30, 61, 143, 0.35) !important;
+  box-shadow: 0 8px 36px rgba(30, 61, 143, 0.13) !important;
+}
+[data-theme="light"] .pricing-card--popular {
+  background: rgba(30, 61, 143, 0.05) !important;
+  border-color: var(--navy) !important;
+  box-shadow: 0 8px 40px rgba(30, 61, 143, 0.15) !important;
+}
+[data-theme="light"] .pricing-card--popular:hover {
+  box-shadow: 0 12px 56px rgba(30, 61, 143, 0.22) !important;
+}
+
+/* ── Footer: readable text contrast in light mode ── */
+[data-theme="light"] footer span,
+[data-theme="light"] footer p {
+  color: rgba(14, 16, 32, 0.65) !important;
+}
+[data-theme="light"] footer a {
+  color: rgba(14, 16, 32, 0.60) !important;
+}
+[data-theme="light"] footer a:hover {
+  color: var(--navy) !important;
+}
+
+/* ── Blog listing: card surfaces in light mode ── */
+/* --card-bg is rgba(0,0,0,0.04) in light mode — nearly invisible on #F6F7FB */
+[data-theme="light"] .blog-card {
+  background: #ffffff !important;
+  border-color: rgba(30, 61, 143, 0.18) !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07) !important;
+}
+[data-theme="light"] .blog-listing-cta {
+  background: #ffffff !important;
+  border-color: rgba(30, 61, 143, 0.18) !important;
+}
+
+/* ── Blog listing: category badge contrast ── */
+/* Neon category colors (#facc15, #a78bfa, #34d399 etc.) are unreadable on white */
+[data-theme="light"] .blog-category-badge {
+  filter: brightness(0.58) saturate(1.3) !important;
+}
+
+/* ── Blog article: related post card surfaces ── */
+[data-theme="light"] .blog-related-card {
+  background: #ffffff !important;
+  border-color: rgba(30, 61, 143, 0.18) !important;
+}
+
+/* ── Blog article: CTA banner contrast ── */
+/* rgba(0,212,255,0.08) bg + rgba(0,212,255,0.2) border are invisible in light mode */
+[data-theme="light"] .blog-cta-banner {
+  background: linear-gradient(135deg, rgba(0, 119, 170, 0.07) 0%, rgba(30, 61, 143, 0.07) 100%) !important;
+  border-color: rgba(30, 61, 143, 0.25) !important;
+}
+
+/* ── Blog article: h1 title color ── */
+[data-theme="light"] main header h1 {
+  color: #111111 !important;
 }

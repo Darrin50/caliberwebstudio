@@ -102,7 +102,7 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className="fu"
+              className={`fu pricing-card${plan.popular ? ' pricing-card--popular' : ''}`}
               style={{
                 background: plan.popular
                   ? 'linear-gradient(135deg, rgba(30,61,143,0.1), rgba(22,45,106,0.05))'

@@ -85,7 +85,7 @@ export default function Process() {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="fu"
+              className="fu process-card"
               style={{
                 background: 'var(--bg2)',
                 border: '1px solid var(--border)',

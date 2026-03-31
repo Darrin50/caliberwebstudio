@@ -172,6 +172,7 @@ export default function Nav() {
 
   const navItems = [
     { label: 'Services', href: '/services' },
+    { label: 'Review Automation', href: '/services/review-automation' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo Sites', href: '/case-studies' },
     { label: 'About', href: '/about' },

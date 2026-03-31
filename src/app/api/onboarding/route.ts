@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { onboardingSchema } from '@/components/onboarding/schema'
+import {
+  hasEmailSubmitted,
+  saveSubmission,
+  markSlugSubmitted,
+} from '@/lib/onboarding-data'
 
 export async function POST(req: NextRequest) {
   try {
@@ -21,6 +26,18 @@ export async function POST(req: NextRequest) {
     }
 
     const data = parsed.data
+
+    // ── Duplicate email check ─────────────────────────────────────────────
+    if (hasEmailSubmitted(data.contact.email)) {
+      return NextResponse.json(
+        {
+          error:
+            "It looks like you've already submitted your information. If you need to make changes, contact us at darrin@caliberwebstudio.com or (313) 799-2315.",
+        },
+        { status: 409 }
+      )
+    }
+
     const submittedAt = new Date().toISOString()
 
     // ── Build webhook payload ─────────────────────────────────────────────
@@ -38,6 +55,15 @@ export async function POST(req: NextRequest) {
 
     // ── Console log (always — useful for debugging) ───────────────────────
     console.log('[onboarding] New submission:', JSON.stringify(payload, null, 2))
+
+    // ── Record submission (duplicate-email guard) ─────────────────────────
+    saveSubmission({
+      slug: slug || 'unknown',
+      email: data.contact.email,
+      businessName: data.business.name,
+      submittedAt,
+    })
+    markSlugSubmitted(slug || 'unknown')
 
     // ── TODO: Notion API integration ──────────────────────────────────────
     // When ready, create a new page in your Notion database:

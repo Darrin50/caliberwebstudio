@@ -56,6 +56,7 @@ export default function BlogIndex() {
               <Link href={`/blog/${post.slug}`} style={{textDecoration:'none',color:'inherit',display:'block'}}>
               <article
                 key={post.slug}
+                className="blog-card"
                 style={{
                   background: "var(--card-bg, rgba(255,255,255,0.04))",
                   border: "1px solid var(--border-color, rgba(255,255,255,0.08))",
@@ -82,7 +83,7 @@ export default function BlogIndex() {
                 })()}
                 <div style={{ padding: "24px", display: "flex", flexDirection: "column", gap: "12px", flex: 1 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
-                  <span style={{
+                  <span className="blog-category-badge" style={{
                     fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
                     color: categoryColors[post.category] || "var(--accent, #00d4ff)",
                     background: `${categoryColors[post.category] || "var(--accent, #00d4ff)"}1a`,
@@ -115,7 +116,7 @@ export default function BlogIndex() {
           </div>
 
           {/* Bottom CTA */}
-          <div style={{ textAlign: "center", marginTop: "80px", padding: "48px 24px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
+          <div className="blog-listing-cta" style={{ textAlign: "center", marginTop: "80px", padding: "48px 24px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
             <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 700, color: "var(--text-primary, #fff)", marginBottom: "16px" }}>
               Ready to Grow Your Detroit Business Online?
             </h2>

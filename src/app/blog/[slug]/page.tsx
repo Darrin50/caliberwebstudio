@@ -108,6 +108,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
           {/* Article Body */}
           <article
+            className="blog-article-body"
             style={{ color: "var(--text-secondary, rgba(255,255,255,0.8))", lineHeight: 1.8, fontSize: "1.05rem" }}
             dangerouslySetInnerHTML={{ __html: post.content
               .replace(/<h2>/g, '<h2 style="font-size:clamp(1.2rem,3vw,1.5rem);font-weight:700;color:var(--text-primary,#fff);margin:2em 0 0.75em;line-height:1.3">')
@@ -124,7 +125,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <hr style={{ border: "none", borderTop: "1px solid var(--border-color, rgba(255,255,255,0.1))", margin: "48px 0" }} />
 
           {/* CTA */}
-          <div style={{ background: "linear-gradient(135deg, rgba(0,212,255,0.08) 0%, rgba(99,102,241,0.08) 100%)", border: "1px solid rgba(0,212,255,0.2)", borderRadius: "16px", padding: "clamp(24px,5vw,36px)", textAlign: "center", marginBottom: "48px" }}>
+          <div className="blog-cta-banner" style={{ background: "linear-gradient(135deg, rgba(0,212,255,0.08) 0%, rgba(99,102,241,0.08) 100%)", border: "1px solid rgba(0,212,255,0.2)", borderRadius: "16px", padding: "clamp(24px,5vw,36px)", textAlign: "center", marginBottom: "48px" }}>
             <h2 style={{ fontSize: "clamp(1.2rem,3vw,1.5rem)", fontWeight: 700, color: "var(--text-primary, #fff)", marginBottom: "12px" }}>
               Ready to Grow Your Detroit Business Online?
             </h2>
@@ -150,6 +151,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))", gap: "16px" }}>
                 {related.map((rel) => (
                   <Link key={rel.slug} href={`/blog/${rel.slug}`}
+                    className="blog-related-card"
                     style={{ display: "block", background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "12px", padding: "20px", textDecoration: "none" }}>
                     <p style={{ fontSize: "0.75rem", color: "var(--accent, #00d4ff)", marginBottom: "8px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em" }}>
                       {rel.category}

@@ -660,12 +660,20 @@ html[data-theme="light"] .stats-strip .stat-label { color: #374151; }
 html[data-theme="light"] .stats-strip > div { background: #ffffff; }
 
 html[data-theme="light"] .stat-card {
-  background: var(--navy);
-  border-radius: 12px;
-  padding: 24px 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 20px;
+  border: 1px solid rgba(30,61,143,0.08);
+  box-shadow: 0 2px 20px rgba(30,61,143,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.3s ease;
 }
-html[data-theme="light"] .stat-card .stat-metric { color: #ffffff; }
-html[data-theme="light"] .stat-card .stat-label { color: rgba(255,255,255,0.82); }
+html[data-theme="light"] .stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(30,61,143,0.14), 0 0 0 1px rgba(30,61,143,0.1);
+}
+html[data-theme="light"] .stat-card .stat-metric { color: var(--navy); }
+html[data-theme="light"] .stat-card .stat-label { color: var(--dim); }
 
 /* ═══════════════════════════════════════════════════════
    LIGHT MODE — FOOTER
@@ -761,3 +769,129 @@ html[data-theme="light"] .addon-card:hover {
 
 [data-theme="light"] main a[style*="color: var(--accent"],
 [data-theme="light"] main span[style*="color: var(--accent"] { color: var(--accent) !important; }
+
+/* ═══════════════════════════════════════════════════════
+   PREMIUM 70K UPGRADES — light mode depth & motion
+   ═══════════════════════════════════════════════════════ */
+
+/* Page background: subtle gradient depth instead of flat gray */
+[data-theme="light"] body {
+  background: linear-gradient(180deg, #f0f0f2 0%, #f5f5f7 8%, #f5f5f7 92%, #f0f0f2 100%);
+}
+
+/* Sections: alternate surface depth for visual rhythm */
+[data-theme="light"] .section-light {
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06), 0 -1px 0 rgba(0,0,0,0.04);
+}
+[data-theme="light"] .section-dark {
+  background: #f5f5f7;
+}
+
+/* Universal card lift — all light-mode cards */
+[data-theme="light"] .svc-card,
+[data-theme="light"] .case-card,
+[data-theme="light"] .process-card,
+[data-theme="light"] .pricing-card,
+[data-theme="light"] .stat-card,
+[data-theme="light"] .diff-card,
+[data-theme="light"] .addon-card,
+[data-theme="light"] .blog-card {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease,
+              border-color 0.25s ease !important;
+}
+
+/* Unified premium hover — cards gravitate up */
+[data-theme="light"] .svc-card:hover,
+[data-theme="light"] .case-card:hover,
+[data-theme="light"] .process-card:hover,
+[data-theme="light"] .pricing-card:hover,
+[data-theme="light"] .diff-card:hover,
+[data-theme="light"] .addon-card:hover,
+[data-theme="light"] .blog-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 24px 56px rgba(30,61,143,0.13),
+              0 8px 16px rgba(30,61,143,0.08),
+              0 0 0 1px rgba(30,61,143,0.1) !important;
+}
+
+/* Subtle inner-glow on card borders in light mode */
+[data-theme="light"] .svc-card,
+[data-theme="light"] .process-card,
+[data-theme="light"] .pricing-card {
+  box-shadow: 0 2px 20px rgba(30,61,143,0.07),
+              0 1px 3px rgba(0,0,0,0.04),
+              inset 0 1px 0 rgba(255,255,255,0.9) !important;
+}
+
+/* Scroll reveal — smooth upward gravitation */
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger reveal delays for grids */
+.reveal-stagger > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 0.12s; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 0.24s; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 0.36s; }
+.reveal-stagger > *:nth-child(5) { transition-delay: 0.48s; }
+.reveal-stagger > *:nth-child(6) { transition-delay: 0.60s; }
+
+/* Section headings — premium sizing in light mode */
+[data-theme="light"] main section h2 {
+  letter-spacing: -0.03em;
+}
+
+/* Scrollbar — clean light mode */
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(30,61,143,0.15);
+}
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(30,61,143,0.28);
+}
+
+/* Accent line hover — premium blue sweep */
+[data-theme="light"] .svc-card:hover .accent-line,
+[data-theme="light"] .case-card:hover .accent-line {
+  opacity: 1;
+  background: linear-gradient(90deg, transparent, var(--navy), var(--chrome), transparent);
+}
+
+/* Nav border — clean separation in light mode */
+[data-theme="light"] .site-nav {
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+}
+
+/* Button upgrade — stronger presence */
+[data-theme="light"] .btn-chrome {
+  background: var(--navy) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 20px rgba(30,61,143,0.25);
+  letter-spacing: 0.1em;
+}
+[data-theme="light"] .btn-chrome:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(30,61,143,0.35) !important;
+}
+
+/* Sec-label — premium micro-type */
+[data-theme="light"] .sec-label {
+  color: var(--navy);
+  opacity: 0.8;
+  letter-spacing: 0.22em;
+}
+
+/* Section border-top separators — subtle */
+[data-theme="light"] main section {
+  border-color: rgba(0,0,0,0.05) !important;
+}

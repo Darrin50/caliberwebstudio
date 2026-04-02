@@ -25,7 +25,7 @@ export default function Nav() {
     const applyTheme = (theme: string) => {
       document.documentElement.setAttribute('data-theme', theme);
       currentTheme = theme;
-      try { localStorage.setItem('caliber-theme', theme); } catch(e) {}
+      try { localStorage.setItem('caliber-theme-v2', theme); } catch(e) {}
       const icon = toggle.querySelector('.toggle-icon') as HTMLSpanElement;
       if (icon) {
         icon.textContent = theme === 'dark' ? '🌙' : '☀️';

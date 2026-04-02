@@ -84,9 +84,7 @@ export default function SocialProof() {
         </div>
 
         {/* Stats row */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+        <div className="social-proof-stats" style={{
           gap: '1px',
           background: 'var(--border)',
           borderRadius: '2px',
@@ -128,6 +126,15 @@ export default function SocialProof() {
           ))}
         </div>
       </div>
+      <style>{`
+        .social-proof-stats {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: 500px) {
+          .social-proof-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+      `}</style>
     </section>
   );
 }

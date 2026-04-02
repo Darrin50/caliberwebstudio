@@ -76,11 +76,11 @@ const plans = [
 ];
 
 const addons = [
-  { name: 'Logo Design', price: '+$149/mo', desc: 'Professional logo package with full brand guidelines.' },
   { name: 'Social Media Kit', price: '+$99/mo', desc: 'Branded templates for Instagram, Facebook, and Google Business.' },
-  { name: 'Google Ads Management', price: '+$299/mo', desc: 'Full setup and monthly management of Google Ads campaigns.' },
-  { name: 'Video Production', price: '+$199/mo', desc: 'Short-form video content for your site and social channels.' },
+  { name: 'Logo Design', price: '+$149/mo', desc: 'Professional logo package with full brand guidelines.' },
   { name: 'Email Marketing', price: '+$149/mo', desc: 'Monthly email campaigns to your customer list.' },
+  { name: 'Video Production', price: '+$199/mo', desc: 'Short-form video content for your site and social channels.' },
+  { name: 'Google Ads Management', price: '+$299/mo', desc: 'Full setup and monthly management of Google Ads campaigns.' },
 ];
 
 export default function ServicesPage() {
@@ -100,7 +100,7 @@ export default function ServicesPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <p className="fu sec-label">Included in Every Plan</p>
             <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#fff', marginBottom: 'clamp(36px,5vw,56px)', letterSpacing: '-0.025em' }}>The Foundation Is Never Negotiated</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px' }}>
+            <div className="foundation-grid">
               {foundation.map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '16px', background: 'rgba(30,61,143,0.08)', border: '1px solid rgba(30,61,143,0.2)', borderRadius: '6px' }}>
                   <span style={{ color: 'var(--navy, #1E3D8F)', fontWeight: 700, fontSize: '18px', lineHeight: 1 }}>&#10003;</span>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <p className="fu sec-label" style={{ justifyContent: 'center' }}>Plans</p>
             <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#fff', marginBottom: 'clamp(40px,5vw,64px)', textAlign: 'center', letterSpacing: '-0.025em' }}>Choose Your Level</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+            <div className="services-plans-grid">
               {plans.map(plan => (
                 <div key={plan.name} style={{ background: plan.popular ? 'var(--navy, #1E3D8F)' : 'var(--bg2, #1a1a1a)', border: plan.popular ? '2px solid var(--navy, #1E3D8F)' : '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '8px', padding: '40px 32px', position: 'relative' }}>
                   {plan.popular && (
@@ -172,6 +172,27 @@ export default function ServicesPage() {
 
       </main>
       <Footer />
+      <style>{`
+        .foundation-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+        @media (max-width: 960px) {
+          .foundation-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+          .foundation-grid { grid-template-columns: 1fr; }
+        }
+        .services-plans-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        @media (max-width: 860px) {
+          .services-plans-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+        }
+      `}</style>
     </>
   );
 }

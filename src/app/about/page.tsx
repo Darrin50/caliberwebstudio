@@ -22,6 +22,7 @@ const differentiators = [
   { label: 'Demo-First Model', icon: '🎯', body: "See your real, fully-built website before you pay a single dollar. We build it. You approve it. Then we talk money. Zero risk on your end." },
   { label: 'Detroit-Focused', icon: '🏙️', body: "We know the local market, the local competitors, the local customers. We're not a remote agency guessing at your audience — we live here too." },
   { label: 'Done-For-You', icon: '🛠️', body: 'Zero tech knowledge required. We handle the design, development, hosting, SEO, and ongoing updates. You run your business. We run your web presence.' },
+  { label: 'Proven ROI', icon: '📈', body: 'Every decision is backed by data — not guesses. We track rankings, traffic, and leads month over month so you always know exactly what your investment is returning.' },
 ];
 
 const stats = [
@@ -134,7 +135,13 @@ export default function AboutPage() {
               ))}
             </ScrollRevealGroup>
           </div>
-          <style>{`.diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(16px,2vw,24px); }`}</style>
+          <style>{`
+            .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px,2vw,24px); }
+            @media (max-width: 900px) { .diff-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media (max-width: 600px) { .diff-grid { grid-template-columns: 1fr; } }
+            .about-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
+            @media (max-width: 640px) { .about-stats-grid { grid-template-columns: repeat(2, 1fr); } }
+          `}</style>
         </section>
 
         {/* ── The Numbers ── */}
@@ -149,7 +156,7 @@ export default function AboutPage() {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={140}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1px', background: 'var(--border)' }}>
+              <div className="about-stats-grid">
                 {stats.map((stat) => (
                   <div key={stat.label} style={{ background: 'var(--bg2)', padding: 'clamp(32px,4vw,52px) 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
                     <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(40px,5vw,64px)', color: 'var(--text-primary)', lineHeight: 1, letterSpacing: '-0.02em' }}>{stat.value}</div>

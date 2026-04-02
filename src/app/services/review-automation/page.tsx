@@ -63,11 +63,11 @@ const faq = [
   },
   {
     q: 'How does the system know when a customer is ready?',
-    a: 'We connect to your booking system, POS, or CRM to trigger review requests automatically. If you don't have one, we set up a simple manual trigger that takes seconds to use.',
+    a: "We connect to your booking system, POS, or CRM to trigger review requests automatically. If you don't have one, we set up a simple manual trigger that takes seconds to use.",
   },
   {
-    q: 'Is this against Google's terms of service?',
-    a: 'No. Asking customers for honest reviews is completely within Google's guidelines. What's not allowed is incentivizing reviews or filtering who gets to post — our system does neither.',
+    q: "Is this against Google's terms of service?",
+    a: "No. Asking customers for honest reviews is completely within Google's guidelines. What's not allowed is incentivizing reviews or filtering who gets to post — our system does neither.",
   },
   {
     q: 'Do I have to respond to every review?',

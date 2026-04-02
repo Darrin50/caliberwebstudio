@@ -55,7 +55,7 @@ const faq = [
   },
   {
     q: 'What if a customer leaves a negative review?',
-    a: 'Our smart routing catches unhappy customers before they post publicly. They're redirected to a private feedback form so you can address the issue first. This dramatically reduces public negative reviews.',
+    a: 'Our smart routing catches unhappy customers before they post publicly. They&apos;re redirected to a private feedback form so you can address the issue first. This dramatically reduces public negative reviews.',
   },
   {
     q: 'Which review platforms does this support?',

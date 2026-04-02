@@ -134,24 +134,36 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
           }}>How It Works</p>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
-            gap: '32px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+            gap: '16px',
           }}>
             {[
-              { metric: '$0', label: 'Down to Start', count: null },
-              { metric: '48hr', label: 'Mockup Turnaround', count: null },
-              { metric: '100%', label: 'Free Until You Approve', count: null },
+              { metric: '$0', label: 'Down to Start', icon: '💳', detail: 'No upfront cost' },
+              { metric: '48hr', label: 'Mockup Turnaround', icon: '⚡', detail: 'See it before paying' },
+              { metric: '100%', label: 'Free Until You Approve', icon: '✓', detail: 'Zero risk guarantee' },
             ].map((stat) => (
-              <div key={stat.label} className="stat-card" style={{ textAlign: 'center' }}>
+              <div key={stat.label} className="stat-card" style={{
+                textAlign: 'left',
+                borderTop: '3px solid var(--navy)',
+                padding: '24px 20px 20px',
+              }}>
+                <div style={{
+                  fontSize: '20px',
+                  marginBottom: '14px',
+                  lineHeight: 1,
+                }}>
+                  {stat.icon}
+                </div>
                 <div
                   className="stat-metric"
                   style={{
                     fontFamily: "'Syne', sans-serif",
-                    fontSize: 'clamp(28px, 4vw, 40px)',
+                    fontSize: 'clamp(24px, 3.5vw, 32px)',
                     fontWeight: 800,
-                    color: 'var(--chrome)',
-                    marginBottom: '8px',
-                    letterSpacing: '-0.02em',
+                    color: 'var(--navy)',
+                    marginBottom: '6px',
+                    letterSpacing: '-0.03em',
+                    lineHeight: 1,
                   }}
                 >
                   {stat.metric}
@@ -161,12 +173,21 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: '13px',
-                    fontWeight: 400,
-                    color: 'var(--dim)',
-                    letterSpacing: '0.02em',
+                    fontWeight: 600,
+                    color: 'var(--text)',
+                    marginBottom: '4px',
+                    letterSpacing: '-0.01em',
                   }}
                 >
                   {stat.label}
+                </div>
+                <div style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '11px',
+                  color: 'var(--dim)',
+                  letterSpacing: '0.01em',
+                }}>
+                  {stat.detail}
                 </div>
               </div>
             ))}

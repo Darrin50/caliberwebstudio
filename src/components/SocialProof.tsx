@@ -21,14 +21,10 @@ export default function SocialProof() {
       style={{
         position: 'relative',
         padding: 'clamp(40px, 5vw, 64px) clamp(20px, 6vw, 60px)',
-        background: 'var(--bg2)',
-        borderBottom: '1px solid var(--border)',
+        background: 'var(--bg)',
         overflow: 'hidden',
       }}
     >
-      {/* Subtle top shimmer */}
-      <div className="section-divider" style={{ position: 'absolute', top: 0, left: 0, right: 0 }} />
-
       <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto' }}>
         {/* Trust statement */}
         <p style={{
@@ -38,7 +34,7 @@ export default function SocialProof() {
           textTransform: 'uppercase',
           color: 'var(--dim)',
           textAlign: 'center',
-          marginBottom: '28px',
+          marginBottom: '20px',
         }}>
           Trusted by Detroit businesses · Built on world-class infrastructure
         </p>
@@ -50,7 +46,7 @@ export default function SocialProof() {
           justifyContent: 'center',
           alignItems: 'center',
           flexWrap: 'wrap',
-          marginBottom: '48px',
+          marginBottom: '32px',
         }}>
           {badges.map((badge) => (
             <div key={badge.label} style={{
@@ -64,11 +60,7 @@ export default function SocialProof() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = '0.75'; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = '0.45'; }}
             >
-              <span style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: '16px',
-                color: 'var(--chrome)',
-              }}>
+              <span style={{ fontFamily: "'Syne', sans-serif", fontSize: '16px', color: 'var(--chrome)' }}>
                 {badge.icon}
               </span>
               <span style={{
@@ -85,27 +77,27 @@ export default function SocialProof() {
           ))}
         </div>
 
-        {/* Stats row */}
+        {/* Stats — single rounded card */}
         <div className="social-proof-stats" style={{
-          gap: '1px',
-          background: 'var(--border)',
-          borderRadius: '2px',
+          background: 'var(--bg2)',
+          borderRadius: '20px',
           overflow: 'hidden',
+          border: '1px solid var(--border)',
         }}>
-          {stats.map((stat) => (
+          {stats.map((stat, i) => (
             <div key={stat.label} style={{
-              background: 'var(--bg)',
-              padding: 'clamp(20px, 3vw, 32px) clamp(16px, 2vw, 24px)',
+              padding: 'clamp(28px, 3.5vw, 44px) clamp(20px, 2.5vw, 36px)',
               textAlign: 'center',
+              borderRight: i < stats.length - 1 ? '1px solid var(--border)' : 'none',
             }}>
               <div style={{
                 fontFamily: "'Syne', sans-serif",
-                fontSize: 'clamp(28px, 4vw, 40px)',
+                fontSize: 'clamp(28px, 4vw, 44px)',
                 fontWeight: 800,
                 color: 'var(--silver)',
-                letterSpacing: '-0.02em',
+                letterSpacing: '-0.03em',
                 lineHeight: 1,
-                marginBottom: '6px',
+                marginBottom: '8px',
               }}>
                 <span
                   data-count={stat.value}
@@ -118,7 +110,7 @@ export default function SocialProof() {
               <div style={{
                 fontFamily: "'Space Mono', monospace",
                 fontSize: '10px',
-                letterSpacing: '0.1em',
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
                 color: 'var(--dim)',
               }}>
@@ -133,8 +125,11 @@ export default function SocialProof() {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
         }
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
           .social-proof-stats { grid-template-columns: repeat(2, 1fr); }
+          .social-proof-stats > div:nth-child(2) { border-right: none !important; }
+          .social-proof-stats > div:nth-child(1),
+          .social-proof-stats > div:nth-child(2) { border-bottom: 1px solid var(--border); }
         }
       `}</style>
     </section>

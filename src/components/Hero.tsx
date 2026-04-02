@@ -33,7 +33,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         style={{
           position: 'relative',
           zIndex: 10,
-          maxWidth: '860px',
+          maxWidth: '1100px',
           width: '100%',
           pointerEvents: 'none',
           userSelect: 'none',
@@ -118,38 +118,37 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             marginTop: 'clamp(64px, 8vw, 100px)',
             paddingTop: 'clamp(48px, 6vw, 80px)',
             borderTop: '1px solid var(--border)',
-            maxWidth: '540px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            width: '100%',
           }}
         >
           <p style={{
             fontFamily: "'Space Mono', monospace",
-            fontSize: '10px',
-            letterSpacing: '0.2em',
+            fontSize: '11px',
+            letterSpacing: '0.22em',
             textTransform: 'uppercase',
             color: 'var(--navy)',
-            marginBottom: '32px',
+            marginBottom: '28px',
             textAlign: 'center',
           }}>How It Works</p>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: '16px',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '20px',
           }}>
             {[
-              { metric: '$0', label: 'Down to Start', icon: '💳', detail: 'No upfront cost' },
-              { metric: '48hr', label: 'Mockup Turnaround', icon: '⚡', detail: 'See it before paying' },
+              { metric: '$0', label: 'Down to Start', icon: '💳', detail: 'No upfront cost — ever' },
+              { metric: '48hr', label: 'Mockup Turnaround', icon: '⚡', detail: 'See it before you pay a cent' },
               { metric: '100%', label: 'Free Until You Approve', icon: '✓', detail: 'Zero risk guarantee' },
             ].map((stat) => (
               <div key={stat.label} className="stat-card" style={{
                 textAlign: 'left',
                 borderTop: '3px solid var(--navy)',
-                padding: '24px 20px 20px',
+                padding: '32px 28px 28px',
+                pointerEvents: 'auto',
               }}>
                 <div style={{
-                  fontSize: '20px',
-                  marginBottom: '14px',
+                  fontSize: '26px',
+                  marginBottom: '20px',
                   lineHeight: 1,
                 }}>
                   {stat.icon}
@@ -158,10 +157,10 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                   className="stat-metric"
                   style={{
                     fontFamily: "'Syne', sans-serif",
-                    fontSize: 'clamp(24px, 3.5vw, 32px)',
+                    fontSize: 'clamp(32px, 3.5vw, 44px)',
                     fontWeight: 800,
                     color: 'var(--navy)',
-                    marginBottom: '6px',
+                    marginBottom: '10px',
                     letterSpacing: '-0.03em',
                     lineHeight: 1,
                   }}
@@ -172,10 +171,10 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                   className="stat-label"
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    fontSize: '13px',
+                    fontSize: '15px',
                     fontWeight: 600,
                     color: 'var(--text)',
-                    marginBottom: '4px',
+                    marginBottom: '6px',
                     letterSpacing: '-0.01em',
                   }}
                 >
@@ -183,9 +182,10 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
                 </div>
                 <div style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: '11px',
+                  fontSize: '13px',
                   color: 'var(--dim)',
                   letterSpacing: '0.01em',
+                  lineHeight: 1.5,
                 }}>
                   {stat.detail}
                 </div>

@@ -54,7 +54,7 @@ export default function Process() {
                 background: 'var(--bg2)',
                 border: '1px solid var(--border)',
                 padding: 'clamp(32px, 4vw, 48px)',
-                borderRadius: '2px',
+                borderRadius: '20px',
                 position: 'relative',
                 overflow: 'hidden',
               }}
@@ -104,9 +104,9 @@ export default function Process() {
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   color: 'var(--chrome)',
-                  padding: '3px 10px',
+                  padding: '4px 12px',
                   border: '1px solid var(--border)',
-                  borderRadius: '2px',
+                  borderRadius: '100px',
                 }}>
                   {step.duration}
                 </div>

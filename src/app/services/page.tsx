@@ -76,11 +76,10 @@ const plans = [
 ];
 
 const addons = [
-  { name: 'Social Media Kit', price: '+$99/mo', desc: 'Branded templates for Instagram, Facebook, and Google Business.' },
-  { name: 'Logo Design', price: '+$149/mo', desc: 'Professional logo package with full brand guidelines.' },
-  { name: 'Email Marketing', price: '+$149/mo', desc: 'Monthly email campaigns to your customer list.' },
-  { name: 'Video Production', price: '+$199/mo', desc: 'Short-form video content for your site and social channels.' },
-  { name: 'Google Ads Management', price: '+$299/mo', desc: 'Full setup and monthly management of Google Ads campaigns.' },
+  { name: 'Social Media Kit', price: '+$99/mo', desc: 'Branded templates for Instagram, Facebook, and Google Business. Posted and scheduled for you monthly.' },
+  { name: 'Logo Design', price: '+$149/mo', desc: 'Professional logo package with full brand guidelines, color palette, and multiple file formats.' },
+  { name: 'Video Production', price: '+$199/mo', desc: 'Short-form video content for your site and social channels, edited and ready to post.' },
+  { name: 'Google Ads Management', price: '+$299/mo', desc: 'Full setup and monthly management of Google Ads campaigns targeting your service area.' },
 ];
 
 export default function ServicesPage() {
@@ -150,14 +149,12 @@ export default function ServicesPage() {
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>Add-Ons</p>
             <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(24px,3vw,40px)', color: '#fff', marginBottom: '48px' }}>Power Up Any Plan</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border, rgba(168,184,200,0.12))' }}>
+            <div className="addons-grid">
               {addons.map(addon => (
-                <div key={addon.name} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '28px 32px', background: 'var(--bg, #141414)', gap: '24px', flexWrap: 'wrap' }}>
-                  <div>
-                    <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '18px', color: '#fff', marginBottom: '4px' }}>{addon.name}</div>
-                    <div style={{ fontSize: '14px', color: 'var(--chrome, #A8B8C8)' }}>{addon.desc}</div>
-                  </div>
-                  <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '14px', color: 'var(--navy, #1E3D8F)', whiteSpace: 'nowrap', fontWeight: 700 }}>{addon.price}</div>
+                <div key={addon.name} className="addon-card" style={{ background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '12px', padding: '28px 28px 24px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '20px', color: 'var(--silver, #D0D8E0)', lineHeight: 1.2 }}>{addon.name}</div>
+                  <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '28px', background: 'linear-gradient(90deg, var(--navy, #1E3D8F), #0077aa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1 }}>{addon.price}</div>
+                  <div style={{ fontSize: '14px', color: 'var(--chrome, #A8B8C8)', lineHeight: 1.6 }}>{addon.desc}</div>
                 </div>
               ))}
             </div>
@@ -192,6 +189,16 @@ export default function ServicesPage() {
         @media (max-width: 860px) {
           .services-plans-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
         }
+        .addons-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        @media (max-width: 600px) {
+          .addons-grid { grid-template-columns: 1fr; }
+        }
+        .addon-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .addon-card:hover { border-color: rgba(30,61,143,0.4) !important; box-shadow: 0 8px 32px rgba(30,61,143,0.1); }
       `}</style>
     </>
   );

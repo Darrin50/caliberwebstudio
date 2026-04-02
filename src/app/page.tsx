@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import { HeroScene, ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
+import SocialProof from '@/components/SocialProof';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero>
         <HeroScene />
       </Hero>
+      <SocialProof />
       <Services />
       <Process />
       <Pricing />
@@ -24,7 +26,6 @@ export default function Home() {
       <CTA />
       <Footer />
       <ChatWidget />
-      {/* Draggable geometric shapes — scattered across the entire page */}
       <FloatingElements />
     </main>
   );

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
+import { ScrollReveal, ScrollRevealGroup } from './ScrollReveal';
 
-/* Premium SVG icons — clean line art matching the design system */
 const icons: Record<string, React.ReactNode> = {
   website: (
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -38,7 +38,6 @@ const icons: Record<string, React.ReactNode> = {
   reviews: (
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="M20 4 L24.5 13.5 L35 15 L27.5 22 L29.5 32.5 L20 27.5 L10.5 32.5 L12.5 22 L5 15 L15.5 13.5 Z" />
-      <path d="M20 10 L22.5 15.5 L28.5 16.5 L24 20.5 L25 26.5 L20 23.5 L15 26.5 L16 20.5 L11.5 16.5 L17.5 15.5 Z" fill="currentColor" stroke="none" opacity="0.15" />
     </svg>
   ),
   social: (
@@ -55,110 +54,77 @@ const icons: Record<string, React.ReactNode> = {
       <rect x="22" y="4" width="14" height="8" rx="2" />
       <rect x="4" y="22" width="14" height="14" rx="2" />
       <rect x="22" y="16" width="14" height="20" rx="2" />
-      <line x1="8" y1="10" x2="14" y2="10" opacity="0.4" />
-      <line x1="8" y1="28" x2="14" y2="28" opacity="0.4" />
-      <path d="M26 28 L30 24 L34 30" opacity="0.4" />
     </svg>
   ),
 };
 
-export default function Services() {
-  const services = [
-    {
-      icon: 'website',
-      title: 'AI-Powered Website',
-      description: 'Custom-built, blazing-fast sites with built-in AI features that work 24/7',
-    },
-    {
-      icon: 'chatbot',
-      title: 'AI Chatbot',
-      description: 'Intelligent chat that qualifies leads, books appointments, and answers questions automatically',
-    },
-    {
-      icon: 'gbp',
-      title: 'Google Business Profile',
-      description: 'Optimized GBP with schema markup so you dominate local search results',
-    },
-    {
-      icon: 'reviews',
-      title: 'Review Engine',
-      description: 'Automated review requests that build your reputation on autopilot',
-    },
-    {
-      icon: 'social',
-      title: 'Social Content',
-      description: 'AI-generated posts, graphics, and captions scheduled and posted for you',
-    },
-    {
-      icon: 'dashboard',
-      title: 'Client Dashboard',
-      description: 'Real-time analytics showing rankings, traffic, leads, and ROI in one place',
-    },
-  ];
+const services = [
+  { icon: 'website', title: 'AI-Powered Website', description: 'Custom-built, blazing-fast sites with built-in AI features that work 24/7' },
+  { icon: 'chatbot', title: 'AI Chatbot', description: 'Intelligent chat that qualifies leads, books appointments, and answers questions automatically' },
+  { icon: 'gbp', title: 'Google Business Profile', description: 'Optimized GBP with schema markup so you dominate local search results' },
+  { icon: 'reviews', title: 'Review Engine', description: 'Automated review requests that build your reputation on autopilot' },
+  { icon: 'social', title: 'Social Content', description: 'AI-generated posts, graphics, and captions scheduled and posted for you' },
+  { icon: 'dashboard', title: 'Client Dashboard', description: 'Real-time analytics showing rankings, traffic, leads, and ROI in one place' },
+];
 
+export default function Services() {
   return (
     <section
       id="services"
       style={{
         position: 'relative',
-        padding: '80px 60px',
-        background: 'var(--bg)',
+        padding: 'var(--section-pad-lg) clamp(20px, 6vw, 60px)',
+        background: 'var(--bg2)',
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',
       }}
     >
-      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-        <div className="sec-label fu">What We Build</div>
+      {/* Shimmer divider at top */}
+      <div className="section-divider" style={{ position: 'absolute', top: 0, left: 0, right: 0 }} />
 
-        <h2
-          className="fu"
-          style={{
-            fontFamily: "'Syne', sans-serif",
-            fontSize: 'clamp(36px, 6vw, 72px)',
-            fontWeight: 800,
-            lineHeight: 1.2,
-            letterSpacing: '-0.02em',
-            color: 'var(--silver)',
-            marginBottom: '80px',
-            maxWidth: '900px',
-          }}
-        >
-          Every Tool You Need to Dominate Your Market
-        </h2>
+      <div style={{ maxWidth: 'var(--content-max-wide)', margin: '0 auto' }}>
+        <ScrollReveal>
+          <div className="sec-label">What We Build</div>
+        </ScrollReveal>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '28px',
-          }}
-        >
+        <ScrollReveal delay={80}>
+          <h2
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: 'clamp(36px, 5vw, 60px)',
+              fontWeight: 800,
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              color: 'var(--silver)',
+              marginBottom: 'clamp(48px, 6vw, 80px)',
+              maxWidth: '780px',
+            }}
+          >
+            Every Tool You Need to Dominate Your Market
+          </h2>
+        </ScrollReveal>
+
+        <ScrollRevealGroup className="services-grid" stagger={80}>
           {services.map((service) => (
             <div
               key={service.title}
-              className="svc-card fu"
+              className="svc-card tilt-card"
               style={{
-                background: 'var(--bg2)',
+                background: 'var(--bg)',
                 border: '1px solid var(--border)',
-                padding: '36px 32px',
+                padding: 'clamp(28px, 4vw, 40px)',
                 borderRadius: '2px',
-                transition: 'border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease',
                 cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLElement;
                 el.style.borderColor = 'var(--navy)';
-                el.style.transform = 'translateY(-6px)';
-                el.style.boxShadow = '0 12px 40px rgba(30,61,143,0.12)';
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLElement;
                 el.style.borderColor = 'var(--border)';
-                el.style.transform = 'translateY(0)';
-                el.style.boxShadow = 'none';
               }}
             >
-              {/* Premium SVG Icon */}
               <div
                 style={{
                   color: 'var(--navy)',
@@ -175,7 +141,6 @@ export default function Services() {
               >
                 {icons[service.icon]}
               </div>
-
               <h3
                 style={{
                   fontFamily: "'Syne', sans-serif",
@@ -183,29 +148,34 @@ export default function Services() {
                   fontWeight: 700,
                   lineHeight: 1.3,
                   color: 'var(--silver)',
-                  marginBottom: '16px',
-                  textAlign: 'left',
+                  marginBottom: '12px',
                 }}
               >
                 {service.title}
               </h3>
-
               <p
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: '15px',
-                  fontWeight: 400,
-                  lineHeight: 1.6,
+                  lineHeight: 1.7,
                   color: 'var(--dim)',
-                  textAlign: 'left',
+                  maxWidth: '100%',
                 }}
               >
                 {service.description}
               </p>
             </div>
           ))}
-        </div>
+        </ScrollRevealGroup>
       </div>
+
+      <style>{`
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: clamp(16px, 2vw, 24px);
+        }
+      `}</style>
     </section>
   );
 }

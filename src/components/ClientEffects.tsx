@@ -5,9 +5,7 @@ import { usePathname } from 'next/navigation';
 export default function ClientEffects() {
   const pathname = usePathname();
 
-  // ── Route-change effect: reveal .fu elements + toggle ambient overlay on every navigation ──
-  // This runs on every client-side route change so the about page (and all other
-  // content pages) never render blank after a soft navigation.
+  // Route-change: reveal .fu elements + toggle ambient overlay
   useEffect(() => {
     const isContentPage =
       pathname.startsWith('/blog') ||
@@ -29,14 +27,13 @@ export default function ClientEffects() {
       if (sunParticles) sunParticles.style.display = '';
     }
 
-    // Reveal all .fu elements — must run after every navigation, not just initial mount.
     document.querySelectorAll('.fu').forEach((el) => el.classList.add('on'));
     document.documentElement.classList.add('js-ready');
   }, [pathname]);
 
-  // ── One-time setup: particles, magnetic buttons, ambient sound ──
+  // One-time setup
   useEffect(() => {
-    // ── GENERATE METEORS ──
+    // ── METEORS ──
     const meteorField = document.getElementById('meteorField');
     if (meteorField) {
       for (let i = 0; i < 8; i++) {
@@ -51,7 +48,7 @@ export default function ClientEffects() {
       }
     }
 
-    // ── GENERATE SUN DOTS ──
+    // ── SUN DOTS ──
     const sunParticles = document.getElementById('sunParticles');
     if (sunParticles) {
       for (let i = 0; i < 30; i++) {
@@ -65,19 +62,134 @@ export default function ClientEffects() {
       }
     }
 
+    // ── SCROLL PROGRESS BAR ──
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    progressBar.style.width = '100%';
+    document.body.appendChild(progressBar);
+
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+      progressBar.style.transform = `scaleX(${progress})`;
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    // ── MOUSE-FOLLOW GLOW ──
+    const glow = document.createElement('div');
+    glow.className = 'mouse-glow';
+    glow.style.left = '-300px';
+    glow.style.top = '-300px';
+    document.body.appendChild(glow);
+
+    let glowX = -300, glowY = -300;
+    let targetX = -300, targetY = -300;
+    let rafId: number;
+
+    const animateGlow = () => {
+      glowX += (targetX - glowX) * 0.08;
+      glowY += (targetY - glowY) * 0.08;
+      glow.style.left = glowX + 'px';
+      glow.style.top = glowY + 'px';
+      rafId = requestAnimationFrame(animateGlow);
+    };
+    animateGlow();
+
+    const onMouseMove = (e: MouseEvent) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+    };
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+
     // ── MAGNETIC BUTTONS ──
-    const magnetBtns = document.querySelectorAll<HTMLElement>('.btn-chrome, .btn-line, .nav-btn');
-    magnetBtns.forEach((btn) => {
-      btn.addEventListener('mousemove', (e) => {
-        const rect = btn.getBoundingClientRect();
-        const bx = rect.left + rect.width / 2, by = rect.top + rect.height / 2;
-        const dx = e.clientX - bx, dy = e.clientY - by;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const maxDist = Math.max(rect.width, rect.height) / 2 + 120;
-        if (dist < maxDist) { const pull = (1 - dist / maxDist) * 0.35; btn.style.transform = `translate(${dx * pull}px, ${dy * pull}px)`; }
+    const applyMagnetic = () => {
+      const magnetBtns = document.querySelectorAll<HTMLElement>('.btn-chrome, .btn-line, .nav-btn');
+      magnetBtns.forEach((btn) => {
+        const onMove = (e: MouseEvent) => {
+          const rect = btn.getBoundingClientRect();
+          const bx = rect.left + rect.width / 2, by = rect.top + rect.height / 2;
+          const dx = e.clientX - bx, dy = e.clientY - by;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const maxDist = Math.max(rect.width, rect.height) / 2 + 80;
+          if (dist < maxDist) {
+            const pull = (1 - dist / maxDist) * 0.3;
+            btn.style.transform = `translate(${dx * pull}px, ${dy * pull}px)`;
+            // Ripple position
+            const rx = ((e.clientX - rect.left) / rect.width) * 100;
+            const ry = ((e.clientY - rect.top) / rect.height) * 100;
+            btn.style.setProperty('--rx', `${rx}%`);
+            btn.style.setProperty('--ry', `${ry}%`);
+          }
+        };
+        const onLeave = () => { btn.style.transform = 'translate(0px, 0px)'; };
+        btn.addEventListener('mousemove', onMove);
+        btn.addEventListener('mouseleave', onLeave);
       });
-      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0px, 0px)'; });
+    };
+    // Apply after DOM settles
+    setTimeout(applyMagnetic, 500);
+
+    // ── 3D CARD TILT ──
+    const applyTilt = () => {
+      const tiltCards = document.querySelectorAll<HTMLElement>('.tilt-card');
+      tiltCards.forEach((card) => {
+        const onMove = (e: MouseEvent) => {
+          const rect = card.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (e.clientX - cx) / (rect.width / 2);
+          const dy = (e.clientY - cy) / (rect.height / 2);
+          card.style.transform = `perspective(600px) rotateY(${dx * 3}deg) rotateX(${-dy * 3}deg) translateY(-4px)`;
+        };
+        const onLeave = () => {
+          card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) translateY(0)';
+        };
+        card.addEventListener('mousemove', onMove);
+        card.addEventListener('mouseleave', onLeave);
+      });
+    };
+    setTimeout(applyTilt, 500);
+
+    // ── COUNTER ANIMATIONS ──
+    const animateCounters = () => {
+      const counters = document.querySelectorAll<HTMLElement>('[data-count]');
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          if (el.dataset.counted) return;
+          el.dataset.counted = '1';
+          const target = parseInt(el.dataset.count || '0', 10);
+          const duration = 1800;
+          const start = performance.now();
+          const prefix = el.dataset.prefix || '';
+          const suffix = el.dataset.suffix || '';
+          const frame = (now: number) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+            el.textContent = prefix + current + suffix;
+            if (progress < 1) requestAnimationFrame(frame);
+          };
+          requestAnimationFrame(frame);
+          counterObserver.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach((el) => counterObserver.observe(el));
+      return counterObserver;
+    };
+    const counterObserver = animateCounters();
+
+    // Re-apply tilt and magnetic on DOM mutations (dynamic content)
+    const mutationObs = new MutationObserver(() => {
+      applyMagnetic();
+      applyTilt();
     });
+    mutationObs.observe(document.body, { childList: true, subtree: true });
 
     // ── AMBIENT SOUND ──
     let actx: AudioContext | null = null;
@@ -85,9 +197,11 @@ export default function ClientEffects() {
     const soundBtn = document.createElement('button');
     soundBtn.id = 'sound-toggle'; soundBtn.innerHTML = '🔇'; soundBtn.title = 'Toggle ambient sound';
     document.body.appendChild(soundBtn);
+
     interface SoundLayer { fadeIn: () => void; fadeOut: () => void; }
     let spaceSound: SoundLayer | null = null;
     let natureSound: SoundLayer | null = null;
+
     const createSpaceHum = (): SoundLayer => {
       const ctx2 = actx!;
       const o1 = ctx2.createOscillator(); o1.type = 'sine'; o1.frequency.value = 432;
@@ -107,6 +221,7 @@ export default function ClientEffects() {
         fadeOut() { master.gain.setTargetAtTime(0, ctx2.currentTime, 0.3); },
       };
     };
+
     const createNatureSound = (): SoundLayer => {
       const ctx2 = actx!;
       const o1 = ctx2.createOscillator(); o1.type = 'sine'; o1.frequency.value = 528;
@@ -136,6 +251,7 @@ export default function ClientEffects() {
         fadeOut() { master.gain.setTargetAtTime(0, ctx2.currentTime, 0.3); },
       };
     };
+
     const startSound = () => {
       if (!actx) actx = new (window.AudioContext || (window as any).webkitAudioContext)();
       if (actx.state === 'suspended') actx.resume();
@@ -145,10 +261,12 @@ export default function ClientEffects() {
       const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
       if (isDark) { spaceSound.fadeIn(); natureSound.fadeOut(); } else { natureSound.fadeIn(); spaceSound.fadeOut(); }
     };
+
     soundBtn.addEventListener('click', () => {
       if (soundPlaying) { soundPlaying = false; soundBtn.innerHTML = '🔇'; spaceSound?.fadeOut(); natureSound?.fadeOut(); }
       else { soundBtn.innerHTML = '🔊'; startSound(); }
     });
+
     const themeObserver = new MutationObserver(() => {
       if (!soundPlaying) return;
       const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
@@ -156,7 +274,17 @@ export default function ClientEffects() {
     });
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-    return () => { themeObserver.disconnect(); soundBtn.remove(); };
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('scroll', updateProgress);
+      window.removeEventListener('mousemove', onMouseMove);
+      themeObserver.disconnect();
+      mutationObs.disconnect();
+      counterObserver.disconnect();
+      soundBtn.remove();
+      progressBar.remove();
+      glow.remove();
+    };
   }, []);
 
   return null;

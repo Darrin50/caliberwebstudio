@@ -39,14 +39,14 @@ export default function BlogIndex() {
       <main style={{ minHeight: "100vh", paddingTop: "80px", paddingBottom: "80px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
           {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: "64px" }}>
-            <p style={{ fontSize: "0.85rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent, #00d4ff)", marginBottom: "16px" }}>
+          <div style={{ textAlign: "center", marginBottom: "clamp(56px, 8vw, 88px)", paddingTop: "clamp(40px, 6vw, 64px)" }}>
+            <p className="fu sec-label" style={{ justifyContent: "center" }}>
               Resources
             </p>
-            <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, lineHeight: 1.15, color: "var(--text-primary, #fff)", marginBottom: "20px" }}>
+            <h1 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(44px, 7vw, 80px)", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--text-primary, #fff)", margin: "20px 0 24px" }}>
               Detroit Business Growth Blog
             </h1>
-            <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "var(--text-secondary, rgba(255,255,255,0.7))", maxWidth: "600px", margin: "0 auto", lineHeight: 1.7 }}>
+            <p className="fu" style={{ fontSize: "clamp(17px, 2vw, 20px)", color: "var(--text-secondary, rgba(255,255,255,0.7))", maxWidth: "560px", margin: "0 auto", lineHeight: 1.7 }}>
               Web design, local SEO, AI marketing, and digital growth strategies built for Detroit small businesses.
             </p>
           </div>

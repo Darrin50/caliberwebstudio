@@ -7,6 +7,13 @@ import Image from 'next/image';
 export default function Nav() {
   const toggleRef = useRef<HTMLButtonElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     const toggle = toggleRef.current;
@@ -172,19 +179,17 @@ export default function Nav() {
 
   const navItems = [
     { label: 'Services', href: '/services' },
-    { label: 'Review Automation', href: '/services/review-automation' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Our Work', href: '/case-studies' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Contact', href: '/contact' },
   ];
 
   return (
     <>
-      <nav className="site-nav" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 clamp(16px, 4vw, 40px)', height: '72px', background: 'var(--nav-bg)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', borderBottom: '1px solid var(--border)', transition: 'background 0.4s ease' }}>
+      <nav className="site-nav" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 clamp(16px, 4vw, 40px)', height: '72px', background: 'var(--nav-bg)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent', transition: 'background 0.4s ease, border-color 0.4s ease' }}>
         <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
-          <Image src="/logo-mark-nav.png" alt="Caliber Web Studio" width={36} height={36} style={{ objectFit: 'contain' }} priority />
+          <Image src="/logo-mark-nav.png" alt="Caliber Web Studio" width={36} height={36} style={{ objectFit: 'contain', animation: 'logo-breathe 3s ease-in-out infinite' }} priority />
           <span className="nav-logo-text" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: '14px', letterSpacing: '0.08em', textTransform: 'uppercase', background: 'linear-gradient(135deg, var(--chrome), var(--white), var(--chrome))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Caliber Web Studio</span>
         </Link>
 

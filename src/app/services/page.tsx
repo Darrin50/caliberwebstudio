@@ -89,16 +89,17 @@ export default function ServicesPage() {
       <Nav />
       <main style={{ background: 'var(--bg, #141414)', color: 'var(--silver, #D0D8E0)', minHeight: '100vh' }}>
 
-        <section style={{ padding: 'clamp(80px,12vw,140px) clamp(20px,6vw,80px) clamp(60px,8vw,100px)', textAlign: 'center', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
-          <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px' }}>What We Build</p>
-          <h1 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(36px,6vw,72px)', lineHeight: 1.05, color: '#fff', marginBottom: '24px' }}>Every Tool You Need to<br />Dominate Your Market</h1>
-          <p style={{ fontSize: 'clamp(16px,2vw,20px)', color: 'var(--chrome, #A8B8C8)', maxWidth: '560px', margin: '0 auto' }}>Three plans. One mission. Get your Detroit business the online presence it deserves — with zero risk and no upfront cost.</p>
+        <section style={{ padding: 'clamp(140px,16vw,180px) clamp(20px,6vw,80px) clamp(80px,10vw,120px)', textAlign: 'center', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,61,143,0.18) 0%, transparent 70%)', pointerEvents: 'none' }} />
+          <p className="fu sec-label" style={{ justifyContent: 'center' }}>What We Build</p>
+          <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px,7vw,88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: '#fff', margin: '20px 0 24px' }}>Every Tool You Need to<br />Dominate Your Market</h1>
+          <p className="fu" style={{ fontSize: 'clamp(17px,2vw,20px)', color: 'var(--chrome, #A8B8C8)', maxWidth: '520px', margin: '0 auto', lineHeight: 1.7 }}>Three plans. One mission. Get your Detroit business the online presence it deserves — with zero risk and no upfront cost.</p>
         </section>
 
-        <section style={{ padding: 'clamp(60px,8vw,120px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))', background: 'var(--bg2)' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px' }}>Included in Every Plan</p>
-            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(24px,3vw,40px)', color: '#fff', marginBottom: '48px' }}>The Foundation Is Never Negotiated</h2>
+            <p className="fu sec-label">Included in Every Plan</p>
+            <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#fff', marginBottom: 'clamp(36px,5vw,56px)', letterSpacing: '-0.025em' }}>The Foundation Is Never Negotiated</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px' }}>
               {foundation.map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '16px', background: 'rgba(30,61,143,0.08)', border: '1px solid rgba(30,61,143,0.2)', borderRadius: '6px' }}>
@@ -117,10 +118,10 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section style={{ padding: 'clamp(60px,8vw,120px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border, rgba(168,184,200,0.12))' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '16px', textAlign: 'center' }}>Plans</p>
-            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(24px,3vw,40px)', color: '#fff', marginBottom: '56px', textAlign: 'center' }}>Choose Your Level</h2>
+            <p className="fu sec-label" style={{ justifyContent: 'center' }}>Plans</p>
+            <h2 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#fff', marginBottom: 'clamp(40px,5vw,64px)', textAlign: 'center', letterSpacing: '-0.025em' }}>Choose Your Level</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
               {plans.map(plan => (
                 <div key={plan.name} style={{ background: plan.popular ? 'var(--navy, #1E3D8F)' : 'var(--bg2, #1a1a1a)', border: plan.popular ? '2px solid var(--navy, #1E3D8F)' : '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '8px', padding: '40px 32px', position: 'relative' }}>

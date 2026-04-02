@@ -397,11 +397,27 @@ export default function HeroScene() {
       canvas.addEventListener('pointerup',     onPointerUp);
       canvas.addEventListener('pointercancel', onPointerUp);
 
-      // Scroll parallax
+      // Scroll parallax + rotation
+      let lastScrollY = 0;
       const onScroll = () => {
-        const scrollProgress = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        const scrollY = window.scrollY;
+        const scrollProgress = scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+
+        // Camera pullback as you scroll deeper
         camera.position.z = 24 + scrollProgress * 14;
         sceneGroup.rotation.z = scrollProgress * 0.08;
+
+        // Delta-based rotation nudge — blends naturally with drag inertia
+        const delta = scrollY - lastScrollY;
+        sceneRotVelY += delta * 0.00018;
+        globeRotVelY += delta * 0.00012;
+        lastScrollY = scrollY;
+
+        // CSS parallax: canvas scrolls at 30% of page speed, scales down slightly
+        const translateY = scrollY * 0.3;
+        const scale = Math.max(0.82, 1 - scrollY * 0.00025);
+        canvas.style.transform = `translateY(${translateY}px) scale(${scale})`;
+        canvas.style.transformOrigin = 'center top';
       };
       window.addEventListener('scroll', onScroll);
 

@@ -23,14 +23,13 @@ const plans = [
     billing: "/mo",
     popular: false,
     features: [
-      "AI-Powered Custom Website",
-      "Mobile-Responsive Design",
-      "AI Chatbot (24/7 Lead Capture)",
-      "Google Business Profile Setup",
-      "Schema Markup & Technical SEO",
+      "AI-Built Website",
+      "AI Chatbot (Basic)",
+      "Google Business Profile Optimization",
+      "Schema Markup",
       "Basic Analytics Dashboard",
-      "Monthly Performance Report",
       "SSL & Security Updates",
+      "Monthly Performance Report",
     ],
   },
   {
@@ -39,15 +38,13 @@ const plans = [
     billing: "/mo",
     popular: true,
     features: [
-      "Everything in Starter, plus:",
-      "Review Management System",
-      "Social Media Auto-Posting",
-      "AI Content Engine (Blog + Social)",
-      "Full Client Dashboard",
-      "Google Business Profile Optimization",
-      "Reputation Monitoring",
-      "Monthly Strategy Call",
+      "Everything in Starter",
+      "Review Automation",
+      "Social Content Engine",
+      "Advanced Analytics",
       "Priority Support",
+      "Monthly Strategy Call",
+      "Reputation Monitoring",
     ],
   },
   {
@@ -56,13 +53,11 @@ const plans = [
     billing: "/mo",
     popular: false,
     features: [
-      "Everything in Growth, plus:",
-      "AI Citation Tracking & Building",
-      "AI Phone Receptionist (24/7)",
-      "Full Marketing Automation Suite",
-      "Competitor Analysis Reports",
-      "Advanced Analytics & Insights",
-      "Custom Integrations",
+      "Everything in Growth",
+      "Citation Tracking & Building",
+      "AI Phone Assistant",
+      "Full Marketing Automation",
+      "White-Glove Setup",
       "Dedicated Account Manager",
       "Weekly Strategy Sessions",
     ],
@@ -131,7 +126,7 @@ export default function PricingPage() {
                 <p style={{ fontSize: "0.75rem", color: "var(--text-secondary, rgba(255,255,255,0.4))", marginBottom: "32px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>
                   billed monthly · $0 upfront
                 </p>
-                <ul style={{ listStyle: "none", margin: "0 0 32px 0", padding: 0, display: "flex", flexDirection: "column", gap: "12px", flex: 1 }}>
+                <ul className="pricing-features" style={{ listStyle: "none", margin: "0 0 32px 0", padding: 0, display: "flex", flexDirection: "column", gap: "12px", flex: 1 }}>
                   {plan.features.map((feat) => {
                     const isDivider = feat.startsWith("Everything");
                     return (
@@ -227,6 +222,10 @@ export default function PricingPage() {
           transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
           display: flex;
           flex-direction: column;
+          min-height: 100%;
+        }
+        .pricing-features {
+          flex: 1;
         }
         .pricing-card:hover {
           transform: translateY(-6px);

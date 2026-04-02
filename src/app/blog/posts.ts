@@ -3238,7 +3238,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "website-design-for-barbers",
-    "thumbnail": "https://images.unsplash.com/photo-1585747860019-5ee6db0a8cc1?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1512864084360-7c0c4d0a0845?w=1200&q=80",
     "title": "Website Design for Barbers and Barbershops in Detroit",
     "description": "Your Detroit barbershop needs more than Instagram to grow. A professional website with online booking, hours, and local SEO turns browsers into loyal clients.",
     "date": "2025-05-10",

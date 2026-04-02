@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ScrollReveal, ScrollRevealGroup } from './ScrollReveal';
 
 const demos = [
@@ -9,6 +10,8 @@ const demos = [
     title: 'Detroit Cuts',
     description: 'Online booking, photo gallery, AI chatbot for after-hours, and Google Maps integration. Everything a barbershop needs to fill its calendar.',
     features: ['Online Booking', 'Photo Gallery', 'AI Chatbot', 'Mobile-First'],
+    image: '/demo/barber/detroit-cuts-hero.png',
+    gradient: 'linear-gradient(135deg, #1E3D8F 0%, #0d1f4d 100%)',
   },
   {
     slug: 'metro-plumbing',
@@ -16,6 +19,8 @@ const demos = [
     title: 'Metro Plumbing & Drain',
     description: 'Emergency call CTA above the fold, service area pages built for local SEO, and a 24/7 lead capture form that routes to the on-call team.',
     features: ['Emergency CTA', 'Service Area Pages', 'Lead Capture', 'Trust Signals'],
+    image: '/demo/plumbing/hero.png',
+    gradient: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
   },
   {
     slug: 'luxe-salon',
@@ -23,6 +28,8 @@ const demos = [
     title: 'Luxe Beauty Studio',
     description: 'Gallery-first design, online booking with stylist selection, natural hair SEO structure, and an embedded Instagram feed.',
     features: ['Online Booking', 'Gallery Design', 'Natural Hair SEO', 'Instagram Feed'],
+    image: '/demo/salon/hero-ponytail.png',
+    gradient: 'linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%)',
   },
   {
     slug: 'detroits-kitchen',
@@ -30,6 +37,8 @@ const demos = [
     title: "Detroit's Kitchen",
     description: 'Online menu, catering inquiry form, AI chatbot for FAQs, and a private events page to capture that revenue stream.',
     features: ['Online Menu', 'Catering Form', 'AI Chatbot', 'Events Page'],
+    image: '/demo/restaurant/hero.jpg',
+    gradient: 'linear-gradient(135deg, #92400e 0%, #78350f 100%)',
   },
 ];
 
@@ -96,14 +105,29 @@ export default function Work() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--navy)'; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; }}
             >
-              {/* Top gradient */}
+              {/* Hero image preview */}
               <div style={{
-                position: 'absolute', top: 0, left: 0, right: 0, height: '80px',
-                background: 'linear-gradient(180deg, rgba(30,61,143,0.08) 0%, transparent 100%)',
-                pointerEvents: 'none', zIndex: 1,
-              }} />
+                position: 'relative',
+                width: '100%',
+                height: '180px',
+                overflow: 'hidden',
+                background: demo.gradient,
+              }}>
+                <Image
+                  src={demo.image}
+                  alt={`${demo.title} website preview`}
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'top', opacity: 0.85 }}
+                  sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw"
+                />
+                <div style={{
+                  position: 'absolute', inset: 0,
+                  background: 'linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.5) 100%)',
+                  pointerEvents: 'none',
+                }} />
+              </div>
 
-              <div style={{ padding: '28px 28px 0', position: 'relative', zIndex: 2 }}>
+              <div style={{ padding: '20px 28px 0', position: 'relative', zIndex: 2 }}>
                 <span style={{
                   fontFamily: "'Space Mono', monospace",
                   fontSize: '10px', letterSpacing: '0.1em',
@@ -184,12 +208,9 @@ export default function Work() {
       <style>{`
         .work-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: clamp(16px, 2vw, 24px);
+          grid-template-columns: repeat(2, 1fr);
+          gap: clamp(16px, 2vw, 28px);
           margin-bottom: 0;
-        }
-        @media (max-width: 1000px) {
-          .work-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
           .work-grid { grid-template-columns: 1fr; }

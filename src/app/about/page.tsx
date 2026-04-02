@@ -2,40 +2,43 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: { absolute: 'About | Caliber Web Studio' },
-  description: 'Caliber Web Studio is a Detroit-rooted, AI-powered web studio founded by Darrin Singer. We engineer growth systems for local businesses — not templates, not fluff.',
+  title: { absolute: 'About | Caliber Web Studio — Built in Detroit' },
+  description: 'Caliber Web Studio is a Detroit-rooted digital studio founded by Darrin Singer. We build enterprise-grade web systems for local businesses — not templates, not agencies, not excuses.',
   alternates: { canonical: 'https://caliberwebstudio.com/about' },
   openGraph: {
     title: 'About Caliber Web Studio — Built in Detroit. Powered by AI.',
-    description: 'Founded by Darrin Singer in Detroit, MI. We build enterprise-grade web technology for local businesses at a price that makes sense.',
+    description: 'Founded by Darrin Singer in Detroit, MI. We engineer growth systems for local businesses at a price that finally makes sense.',
     url: 'https://caliberwebstudio.com/about',
     type: 'website',
   },
 };
 
-const differentiators = [
-  { label: 'AI-Powered Everything', icon: '⚡', body: 'Chatbots, content generation, SEO automation, and review management — all built in-house. Not bolted on. Not outsourced. Engineered from the ground up.' },
-  { label: 'Speed: 3-Day Launch', icon: '🚀', body: 'Most agencies take weeks. We take 72 hours. Your site is live, tested, and generating leads before your competitors finish their kickoff call.' },
-  { label: 'Demo-First Model', icon: '🎯', body: "See your real, fully-built website before you pay a single dollar. We build it. You approve it. Then we talk money. Zero risk on your end." },
-  { label: 'Detroit-Focused', icon: '🏙️', body: "We know the local market, the local competitors, the local customers. We're not a remote agency guessing at your audience — we live here too." },
-  { label: 'Done-For-You', icon: '🛠️', body: 'Zero tech knowledge required. We handle the design, development, hosting, SEO, and ongoing updates. You run your business. We run your web presence.' },
-  { label: 'Proven ROI', icon: '📈', body: 'Every decision is backed by data — not guesses. We track rankings, traffic, and leads month over month so you always know exactly what your investment is returning.' },
-];
-
-const stats = [
-  { value: '$0', label: 'Down to Start' },
-  { value: '48hr', label: 'Mockup Turnaround' },
-  { value: '5–7', label: 'Days to Launch' },
-  { value: '90+', label: 'Lighthouse Score' },
+const values = [
+  {
+    label: 'Skin in the game',
+    body: 'We build your site before you pay a dollar. If we can\'t show you something worth investing in, you owe us nothing. We don\'t win unless you win.',
+  },
+  {
+    label: 'Speed as respect',
+    body: 'Your time is your business. We don\'t do 6-week timelines or 3-month "discovery phases." Mockup in 48 hours. Live in a week. That\'s how it should work.',
+  },
+  {
+    label: 'No mystery pricing',
+    body: 'One flat monthly rate. No setup fees. No surprise invoices. No nickel-and-diming for basic changes. You know exactly what you\'re paying and exactly what you\'re getting.',
+  },
+  {
+    label: 'Local knowledge matters',
+    body: 'We\'re not a remote agency guessing at your market. We\'re in Detroit. We know the neighborhoods, the competition, and the customers you\'re trying to reach.',
+  },
 ];
 
 const techStack = [
-  { name: 'Next.js + Vercel', desc: 'The same stack powering Fortune 500 companies. Enterprise-grade performance, 99.99% uptime, global CDN delivery.' },
-  { name: 'AI Chatbots', desc: '24/7 lead capture and customer support — custom-trained on your business, your services, your FAQs.' },
-  { name: 'SEO Infrastructure', desc: 'Structured data, Core Web Vitals, semantic markup, and automated content pipelines built in from day one.' },
+  { name: 'Next.js + Vercel', desc: 'The same infrastructure powering Fortune 500 companies — 99.99% uptime, global CDN, sub-second load times.' },
+  { name: 'AI Systems', desc: 'Custom-trained chatbots, automated review pipelines, and content engines built specifically for your business — not generic SaaS tools.' },
+  { name: 'Local SEO Infrastructure', desc: 'Schema markup, geo-targeted pages, Core Web Vitals optimization, and Google Business Profile management all baked into every build.' },
 ];
 
 const aboutSchema = {
@@ -55,8 +58,6 @@ const aboutSchema = {
   },
 };
 
-const PAD = 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 80px)';
-
 export default function AboutPage() {
   return (
     <>
@@ -64,11 +65,11 @@ export default function AboutPage() {
       <Nav />
       <main style={{ background: 'var(--bg)', color: 'var(--silver)', minHeight: '100vh' }}>
 
-        {/* ── Hero ── */}
+        {/* Hero */}
         <section style={{ padding: 'clamp(140px,18vw,200px) clamp(20px,6vw,80px) clamp(80px,10vw,120px)', textAlign: 'center', borderBottom: '1px solid var(--border)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,61,143,0.22) 0%, transparent 70%)', pointerEvents: 'none' }} />
           <ScrollReveal>
-            <p className="sec-label fu" style={{ justifyContent: 'center' }}>About Caliber Web Studio</p>
+            <p className="sec-label fu" style={{ justifyContent: 'center' }}>Our Story</p>
           </ScrollReveal>
           <ScrollReveal delay={80}>
             <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px,7vw,88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: '#fff', margin: '24px 0 28px', position: 'relative' }}>
@@ -79,97 +80,106 @@ export default function AboutPage() {
           </ScrollReveal>
           <ScrollReveal delay={160}>
             <p className="fu" style={{ fontSize: 'clamp(17px,2vw,22px)', color: 'var(--chrome)', maxWidth: '580px', margin: '0 auto', lineHeight: 1.7, position: 'relative' }}>
-              We&apos;re not a web design agency. We&apos;re an architecture firm for your digital presence — building systems that attract customers, convert leads, and compound over time.
+              We&apos;re not a web design agency. We engineer growth systems — built to attract customers, capture leads, and compound over time.
             </p>
           </ScrollReveal>
         </section>
 
-        {/* ── The Story ── */}
-        <section style={{ padding: PAD, borderBottom: '1px solid var(--border)' }}>
+        {/* The Story — Darrin + mission */}
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(48px,6vw,96px)', alignItems: 'center' }}>
+            <ScrollReveal>
+              <div>
+                <p className="sec-label">The Founder</p>
+                <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: '28px', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
+                  Darrin Singer<br />
+                  <span style={{ fontSize: '0.55em', color: 'var(--chrome)', fontWeight: 600, letterSpacing: '-0.01em' }}>Founder, Caliber Web Studio</span>
+                </h2>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                  <p style={{ fontSize: 'clamp(15px,1.5vw,17px)', color: 'var(--silver)', lineHeight: 1.8 }}>
+                    Caliber Web Studio was born out of a simple frustration: watching great Detroit businesses lose customers every day because their online presence was invisible, broken, or embarrassing.
+                  </p>
+                  <p style={{ fontSize: 'clamp(15px,1.5vw,17px)', color: 'var(--silver)', lineHeight: 1.8 }}>
+                    Great restaurants with no website. Skilled contractors invisible on Google. Barbershops and salons with real community roots getting outranked by chains with bigger marketing budgets. The playing field was rigged.
+                  </p>
+                  <p style={{ fontSize: 'clamp(15px,1.5vw,17px)', color: 'var(--silver)', lineHeight: 1.8 }}>
+                    So I built Caliber on one belief: <strong style={{ color: '#fff' }}>every local business deserves enterprise-grade web technology at a price that actually makes sense.</strong> Not a $15/month template. Not a $20K agency engagement. Something better.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Founder visual / quote card */}
+            <ScrollReveal delay={120}>
+              <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '20px', padding: 'clamp(32px,4vw,52px)', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, width: '200px', height: '200px', background: 'radial-gradient(circle at top right, rgba(30,61,143,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+                <div style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(48px,6vw,80px)', color: 'rgba(30,61,143,0.2)', lineHeight: 0.8, marginBottom: '24px', fontWeight: 800 }}>"</div>
+                <blockquote style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(18px,2.2vw,26px)', color: '#fff', lineHeight: 1.35, margin: '0 0 28px', letterSpacing: '-0.015em' }}>
+                  Local businesses deserve the same tools big brands take for granted — without the agency price tag.
+                </blockquote>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                  <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '15px', color: 'var(--silver)' }}>Darrin Singer</span>
+                  <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--dim)' }}>Founder · Detroit, MI</span>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+          <style>{`.about-founder-grid { grid-template-columns: 1fr !important; } @media (max-width: 760px) { .about-story-grid { grid-template-columns: 1fr !important; } }`}</style>
+        </section>
+
+        {/* The Mission */}
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border)', background: 'var(--bg2)' }}>
           <div style={{ maxWidth: '780px', margin: '0 auto' }}>
             <ScrollReveal>
-              <p className="sec-label">The Story</p>
+              <p className="sec-label">Why We Exist</p>
             </ScrollReveal>
             <ScrollReveal delay={80}>
               <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#fff', marginBottom: '40px', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
-                Local Businesses Deserve Better
+                The Playing Field<br />Doesn&apos;t Have to Be Rigged
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={140}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver)', lineHeight: 1.8, maxWidth: '100%' }}>
-                  Caliber Web Studio was founded by <strong style={{ color: 'var(--text-primary)' }}>Darrin Singer</strong> in Detroit, MI — born out of frustration watching local businesses lose customers every single day because their online presence was terrible or nonexistent.
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver)', lineHeight: 1.8 }}>
+                  Big chains dominate local search not because they&apos;re better — but because they have bigger marketing budgets, dedicated IT teams, and agencies on retainer. A neighborhood barbershop or family-owned plumbing company shouldn&apos;t lose to a franchise just because it can&apos;t afford a $10,000 website.
                 </p>
-                <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver)', lineHeight: 1.8, maxWidth: '100%' }}>
-                  Great restaurants with no website. Skilled contractors invisible on Google. Shops with real community roots getting outranked by chains with bigger marketing budgets. The playing field was rigged — and it didn&apos;t have to be.
+                <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver)', lineHeight: 1.8 }}>
+                  AI changed the math. What took six weeks and $15K five years ago takes 72 hours and a fraction of the cost today. We passed that advantage directly to local business owners — and we built our entire model around it.
                 </p>
-                <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver)', lineHeight: 1.8, maxWidth: '100%' }}>
-                  We built Caliber on a single belief: <strong style={{ color: 'var(--text-primary)' }}>every local business deserves enterprise-grade web technology at a price that makes sense.</strong> Not a $15/month template. Not a $20K agency engagement. Something better.
-                </p>
-                <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver)', lineHeight: 1.8, maxWidth: '100%' }}>
-                  We&apos;re not a template shop. We&apos;re not freelancers piecing together projects. <strong style={{ color: 'var(--text-primary)' }}>We engineer growth systems</strong> — custom-built, AI-powered, and designed to make your business the obvious choice in your market.
+                <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--silver)', lineHeight: 1.8 }}>
+                  <strong style={{ color: '#fff' }}>We engineer growth systems</strong> — not brochure sites. Every site we build captures leads, answers questions at 2 AM, builds reviews on autopilot, and ranks on Google for the searches your customers are already doing.
                 </p>
               </div>
             </ScrollReveal>
           </div>
         </section>
 
-        {/* ── What Makes Us Different ── */}
-        <section style={{ padding: PAD, borderBottom: '1px solid var(--border)', background: 'var(--bg2)' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+        {/* Core Values */}
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <ScrollReveal>
-              <p className="sec-label">What Makes Us Different</p>
+              <p className="sec-label">How We Operate</p>
             </ScrollReveal>
             <ScrollReveal delay={80}>
               <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#fff', marginBottom: 'clamp(40px,5vw,64px)', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
-                Not an Agency. An Advantage.
+                Four Rules We Don&apos;t Break
               </h2>
             </ScrollReveal>
-            <ScrollRevealGroup className="diff-grid" stagger={80}>
-              {differentiators.map((item) => (
-                <div key={item.label} className="diff-card tilt-card" style={{ background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '2px', padding: 'clamp(28px,4vw,40px)' }}>
-                  <div style={{ fontSize: '32px', marginBottom: '20px' }}>{item.icon}</div>
-                  <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '20px', color: 'var(--text-primary)', marginBottom: '12px', letterSpacing: '-0.01em' }}>{item.label}</h3>
-                  <p style={{ fontSize: '15px', color: 'var(--chrome)', lineHeight: 1.7, maxWidth: '100%' }}>{item.body}</p>
-                </div>
-              ))}
-            </ScrollRevealGroup>
-          </div>
-          <style>{`
-            .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px,2vw,24px); }
-            @media (max-width: 900px) { .diff-grid { grid-template-columns: repeat(2, 1fr); } }
-            @media (max-width: 600px) { .diff-grid { grid-template-columns: 1fr; } }
-            .about-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
-            @media (max-width: 640px) { .about-stats-grid { grid-template-columns: repeat(2, 1fr); } }
-          `}</style>
-        </section>
-
-        {/* ── The Numbers ── */}
-        <section style={{ padding: PAD, borderBottom: '1px solid var(--border)' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-            <ScrollReveal>
-              <p className="sec-label" style={{ justifyContent: 'center' }}>How We Work</p>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#fff', marginBottom: 'clamp(40px,5vw,60px)', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
-                Built Around Your Confidence
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={140}>
-              <div className="about-stats-grid">
-                {stats.map((stat) => (
-                  <div key={stat.label} style={{ background: 'var(--bg2)', padding: 'clamp(32px,4vw,52px) 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                    <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(40px,5vw,64px)', color: 'var(--text-primary)', lineHeight: 1, letterSpacing: '-0.02em' }}>{stat.value}</div>
-                    <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--chrome)' }}>{stat.label}</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
+              {values.map((v, i) => (
+                <ScrollReveal key={v.label} delay={i * 70}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: '40px', padding: 'clamp(28px,3.5vw,44px) clamp(24px,4vw,44px)', background: 'var(--bg)', alignItems: 'start' }}>
+                    <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(17px,2vw,22px)', color: '#fff', lineHeight: 1.25, letterSpacing: '-0.015em' }}>{v.label}</div>
+                    <p style={{ fontSize: '15px', color: 'var(--chrome)', lineHeight: 1.75, margin: 0 }}>{v.body}</p>
                   </div>
-                ))}
-              </div>
-            </ScrollReveal>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ── Tech Stack ── */}
-        <section style={{ padding: PAD, borderBottom: '1px solid var(--border)', background: 'var(--bg2)' }}>
+        {/* Tech under the hood */}
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border)', background: 'var(--bg2)' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <ScrollReveal>
               <p className="sec-label">Under the Hood</p>
@@ -179,14 +189,14 @@ export default function AboutPage() {
                 Fortune 500 Tech.<br />Local Business Price.
               </h2>
               <p style={{ fontSize: 'clamp(16px,1.6vw,19px)', color: 'var(--chrome)', maxWidth: '540px', marginBottom: 'clamp(40px,5vw,56px)', lineHeight: 1.7 }}>
-                Your site runs on the same infrastructure trusted by global enterprises — not shared WordPress hosting that buckles under traffic.
+                Your site runs on the same infrastructure trusted by global enterprises — not shared WordPress hosting that buckles under real traffic.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={140}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
                 {techStack.map((item) => (
                   <div key={item.name} style={{ display: 'flex', alignItems: 'flex-start', gap: '40px', padding: 'clamp(24px,3vw,36px) clamp(24px,4vw,44px)', background: 'var(--bg)', flexWrap: 'wrap' }}>
-                    <div style={{ minWidth: '200px', fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '18px', color: 'var(--text-primary)' }}>{item.name}</div>
+                    <div style={{ minWidth: '200px', fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '18px', color: '#fff' }}>{item.name}</div>
                     <div style={{ flex: 1, minWidth: '200px', fontSize: '15px', color: 'var(--chrome)', lineHeight: 1.7 }}>{item.desc}</div>
                   </div>
                 ))}
@@ -195,31 +205,36 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── CTA ── */}
+        {/* CTA — unique to About: see the work */}
         <section style={{ padding: 'clamp(100px,12vw,160px) clamp(20px,6vw,80px)', textAlign: 'center' }}>
           <ScrollReveal>
-            <p className="sec-label" style={{ justifyContent: 'center' }}>Let&apos;s Build</p>
+            <p className="sec-label" style={{ justifyContent: 'center' }}>See It in Action</p>
           </ScrollReveal>
           <ScrollReveal delay={80}>
             <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(36px,5vw,64px)', color: '#fff', marginBottom: '24px', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
-              Ready to See What We<br />Can Build for You?
+              Actions Speak Louder<br />Than Agency Decks
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={140}>
             <p style={{ color: 'var(--chrome)', fontSize: 'clamp(16px,1.8vw,20px)', maxWidth: '480px', margin: '0 auto 48px', lineHeight: 1.7 }}>
-              We&apos;ll build your site. You&apos;ll see it live. Then you decide. No risk, no pressure, no templates.
+              Browse four live, working demo sites — each one built for a real Detroit industry. See exactly what we deliver before committing to anything.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/pricing" className="btn-chrome" style={{ textDecoration: 'none' }}>See Pricing</Link>
-              <Link href="/contact" className="btn-line" style={{ textDecoration: 'none' }}>Get in Touch</Link>
+              <Link href="/work" className="btn-chrome" style={{ textDecoration: 'none' }}>Browse Live Demos</Link>
+              <Link href="/contact" className="btn-line" style={{ textDecoration: 'none' }}>Start a Conversation</Link>
             </div>
           </ScrollReveal>
         </section>
 
       </main>
       <Footer />
+      <style>{`
+        @media (max-width: 760px) {
+          .about-story-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </>
   );
 }

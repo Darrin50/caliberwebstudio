@@ -9,6 +9,8 @@ interface Message {
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
+  const [showNudge, setShowNudge] = useState(false);
+  const [nudgeDismissed, setNudgeDismissed] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
@@ -18,6 +20,20 @@ export default function ChatWidget() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Show nudge after 15s idle if chat hasn't been opened
+  useEffect(() => {
+    if (nudgeDismissed || open) return;
+    const timer = setTimeout(() => {
+      if (!open) setShowNudge(true);
+    }, 15000);
+    return () => clearTimeout(timer);
+  }, [nudgeDismissed, open]);
+
+  // Hide nudge once chat is opened
+  useEffect(() => {
+    if (open) setShowNudge(false);
+  }, [open]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -67,6 +83,60 @@ export default function ChatWidget() {
 
   return (
     <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999 }}>
+      {/* Idle Nudge Bubble */}
+      {showNudge && !open && (
+        <div style={{
+          position: 'fixed',
+          bottom: '90px',
+          right: '24px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          animation: 'nudgeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+          zIndex: 9998,
+        }}>
+          <button
+            onClick={() => { setOpen(true); setShowNudge(false); setNudgeDismissed(true); }}
+            style={{
+              background: 'var(--navy)',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '100px',
+              padding: '10px 18px',
+              fontFamily: "'Inter', sans-serif",
+              fontSize: '13px',
+              fontWeight: 600,
+              cursor: 'pointer',
+              whiteSpace: 'nowrap',
+              boxShadow: '0 4px 20px rgba(30,61,143,0.35)',
+              letterSpacing: '-0.01em',
+            }}
+          >
+            Ask us anything →
+          </button>
+          <button
+            onClick={() => { setShowNudge(false); setNudgeDismissed(true); }}
+            style={{
+              background: 'var(--bg2)',
+              color: 'var(--dim)',
+              border: '1px solid var(--border)',
+              borderRadius: '50%',
+              width: '24px',
+              height: '24px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '11px',
+              cursor: 'pointer',
+              padding: 0,
+              flexShrink: 0,
+            }}
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       {/* Chat Button */}
       <button
         onClick={() => setOpen(!open)}
@@ -303,6 +373,10 @@ export default function ChatWidget() {
             @keyframes typing {
               0%, 60%, 100% { opacity: 1; }
               30% { opacity: 0.3; }
+            }
+            @keyframes nudgeIn {
+              from { opacity: 0; transform: translateY(10px) scale(0.95); }
+              to   { opacity: 1; transform: translateY(0)    scale(1); }
             }
           `}</style>
         </div>

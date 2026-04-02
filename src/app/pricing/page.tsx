@@ -64,28 +64,6 @@ const plans = [
   },
 ];
 
-const faqs = [
-  {
-    q: "Is there any upfront cost?",
-    a: "$0 down. We build your site first, show you a free mockup, and you only start paying when you say yes. Your first payment kicks in when you are happy with the result.",
-  },
-  {
-    q: "How long does it take to get my site live?",
-    a: "We deliver in as little as 3 business days after you send us your business info. Our AI-powered process is built for speed without sacrificing quality.",
-  },
-  {
-    q: "What is included in the monthly plan?",
-    a: "Your plan covers design, development, hosting, SSL, ongoing support, and monthly updates. No separate hosting bill, no hidden fees — it is all in one flat monthly rate.",
-  },
-  {
-    q: "Can I cancel anytime?",
-    a: "No contracts. Cancel anytime with 30 days written notice — no penalties, no questions.",
-  },
-  {
-    q: "What payment methods do you accept?",
-    a: "We accept all major credit/debit cards and ACH bank transfer via Stripe. You will receive a secure billing link once you are ready to get started.",
-  },
-];
 
 export default function PricingPage() {
   return (
@@ -180,26 +158,15 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div style={{ marginTop: "96px" }}>
-            <div style={{ textAlign: "center", marginBottom: "52px" }}>
-              <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>FAQ</p>
-              <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "0", letterSpacing: "-0.01em" }}>Common Questions</h2>
+          {/* FAQ teaser — sends to /faq */}
+          <div style={{ marginTop: "80px", textAlign: "center", padding: "44px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
+            <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>Got Questions?</p>
+            <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "14px", letterSpacing: "-0.01em" }}>We&apos;ve answered the most common ones.</h2>
+            <p style={{ color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7, maxWidth: "460px", margin: "0 auto 28px" }}>Pricing, timelines, ownership, cancellation, and more — all in one place.</p>
+            <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+              <Link href="/faq" style={{ display: "inline-block", padding: "13px 32px", background: "var(--accent, #0070f3)", color: "#fff", borderRadius: "9px", fontWeight: 700, textDecoration: "none", fontSize: "0.9rem", letterSpacing: "0.02em" }}>Browse the Full FAQ</Link>
+              <Link href="/contact" style={{ display: "inline-block", padding: "13px 32px", background: "transparent", color: "var(--text-secondary, rgba(255,255,255,0.7))", borderRadius: "9px", fontWeight: 600, textDecoration: "none", fontSize: "0.9rem", border: "1px solid rgba(255,255,255,0.12)" }}>Talk to a Human</Link>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px", margin: "0 auto" }}>
-              {faqs.map((faq, i) => (
-                <div key={i} style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "14px", padding: "28px 32px" }}>
-                  <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary, #fff)", marginBottom: "10px", lineHeight: 1.4 }}>{faq.q}</h3>
-                  <p style={{ fontSize: "0.9rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div style={{ textAlign: "center", marginTop: "80px", padding: "52px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
-            <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "14px", letterSpacing: "-0.01em" }}>Not sure which plan is right for you?</h2>
-            <p style={{ color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7 }}>Book a free 15-minute call and we will recommend the best monthly plan for your goals and budget.</p>
-            <Link href="/#contact" style={{ display: "inline-block", padding: "14px 36px", background: "var(--accent, #0070f3)", color: "#fff", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", letterSpacing: "0.02em" }}>Book a Free Consultation</Link>
           </div>
 
         </div>

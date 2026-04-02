@@ -185,7 +185,9 @@ function ServiceRow({ service, index }: { service: typeof services[0]; index: nu
           background: hovered ? service.bg : 'rgba(0,0,0,0.03)',
           border: `1px solid ${hovered ? service.color + '40' : 'var(--border)'}`,
           color: hovered ? service.color : 'var(--chrome)',
-          transition: 'all 0.22s ease',
+          transition: 'all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          transform: hovered ? 'scale(1.12)' : 'scale(1)',
+          boxShadow: hovered ? `0 4px 14px ${service.color}25` : 'none',
         }}>
           {icons[service.icon]}
         </div>
@@ -204,10 +206,11 @@ function ServiceRow({ service, index }: { service: typeof services[0]; index: nu
             fontFamily: "'Syne', sans-serif",
             fontSize: 'clamp(15px, 1.8vw, 18px)',
             fontWeight: 700,
-            color: 'var(--silver)',
+            color: hovered ? service.color : 'var(--silver)',
             letterSpacing: '-0.02em',
             lineHeight: 1.2,
             margin: 0,
+            transition: 'color 0.22s ease',
           }}>
             {service.title}
           </h3>
@@ -237,22 +240,24 @@ function ServiceRow({ service, index }: { service: typeof services[0]; index: nu
         </p>
       </div>
 
-      {/* Arrow — always visible but colored on hover */}
+      {/* Arrow — slides in from right on hover */}
       <div style={{
         zIndex: 1,
-        width: '32px',
-        height: '32px',
+        width: '36px',
+        height: '36px',
         borderRadius: '50%',
-        border: `1px solid ${hovered ? service.color + '50' : 'var(--border)'}`,
+        border: `1px solid ${hovered ? service.color + '60' : 'var(--border)'}`,
         background: hovered ? service.bg : 'transparent',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         color: hovered ? service.color : 'var(--dim)',
-        fontSize: '14px',
+        fontSize: '15px',
         flexShrink: 0,
-        transition: 'all 0.22s ease',
-        transform: hovered ? 'translateX(2px)' : 'translateX(0)',
+        transition: 'all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
+        transform: hovered ? 'translateX(4px) scale(1.08)' : 'translateX(-4px) scale(0.92)',
+        opacity: hovered ? 1 : 0.4,
+        boxShadow: hovered ? `0 0 16px ${service.color}30` : 'none',
       }}>
         →
       </div>

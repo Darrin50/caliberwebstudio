@@ -1,149 +1,213 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
+import { ScrollReveal } from '@/components/ScrollReveal';
+import CheckoutButton from '@/components/CheckoutButton';
 
 export const metadata: Metadata = {
-  title: 'Startup Complete — Done-For-You Business Launch in 48 Hours',
-  description: "Caliber Web Studio's premium done-for-you package. LLC guidance, website, AI chatbot, brand kit, Google profile, and more — fully operational in 48 hours. Starting at $5,000.",
-  alternates: {
-    canonical: 'https://caliberwebstudio.com/startup-complete'
-  },
+  title: { absolute: 'Startup Complete | Caliber Web Studio — Launch in 48 Hours' },
+  description: 'Go from zero to fully operational in 48 hours. Website, brand kit, AI systems, Google Business Profile, and LLC filing assistance — all done for you.',
+  alternates: { canonical: 'https://caliberwebstudio.com/startup-complete' },
   openGraph: {
-    title: 'Startup Complete | Caliber Web Studio',
-    description: "We'll turn your idea into a running business in 48 hours. Everything you need — built, deployed, and ready to take customers.",
+    title: 'Startup Complete — Launch Your Business in 48 Hours',
+    description: 'Everything you need to launch: website, brand, AI systems, Google setup, and legal filing assistance. One package. 48-hour delivery.',
     url: 'https://caliberwebstudio.com/startup-complete',
+    type: 'website',
   },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  '@id': 'https://caliberwebstudio.com/startup-complete#service',
-  name: 'Startup Complete',
-  alternateName: 'Done-For-You Business Launch Package',
-  description: 'A premium done-for-you service that transforms your business idea into a fully operational company in 48 hours. Includes LLC formation guidance, EIN registration, professional domain and business email, full Next.js website (5–7 pages), AI chatbot, Google Business Profile, social media accounts, brand kit, 30 days of scheduled content, email/SMS automation, pitch deck, and one-pager.',
-  provider: {
-    '@id': 'https://caliberwebstudio.com/#organization'
+const deliverables = [
+  {
+    category: 'Web Presence',
+    color: '#1E3D8F',
+    bg: 'rgba(30,61,143,0.1)',
+    items: ['Custom AI-powered website (up to 5 pages)', 'Google Business Profile setup & optimization', 'Schema markup & local SEO structure', 'AI chatbot trained on your business', 'Contact & lead capture forms', 'SSL certificate & secure hosting'],
   },
-  url: 'https://caliberwebstudio.com/startup-complete',
-  offers: {
-    '@type': 'Offer',
-    name: 'Startup Complete Package',
-    price: '5000',
-    priceCurrency: 'USD',
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: '5000',
-      priceCurrency: 'USD',
-      description: 'One flat fee, no surprises. Starting price.'
-    },
-    availability: 'https://schema.org/InStock',
-    url: 'https://caliberwebstudio.com/startup-complete',
+  {
+    category: 'Brand Identity',
+    color: '#7c3aed',
+    bg: 'rgba(124,58,237,0.1)',
+    items: ['Logo concept direction and final files', 'Color palette (hex, RGB, CMYK)', 'Typography selection and pairing', 'Social media profile templates (3 platforms)', 'Business card layout', 'Brand guidelines document (PDF)'],
   },
-  serviceType: 'Business Launch',
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States'
+  {
+    category: 'AI Systems',
+    color: '#0891b2',
+    bg: 'rgba(8,145,178,0.1)',
+    items: ['AI chatbot widget (trained & deployed)', 'Review request automation setup', 'Lead routing to your phone or email', 'Contact form with spam protection', 'Performance tracking (Analytics + Search Console)'],
   },
-};
+  {
+    category: 'Legal & Setup',
+    color: '#d97706',
+    bg: 'rgba(217,119,6,0.1)',
+    items: ['LLC filing assistance (Michigan)', 'EIN application guidance', 'Business address setup consultation', 'Operating agreement template', 'Launch checklist — nothing falls through'],
+  },
+];
 
-const checklistItems = [
-  { label: 'LLC formation guidance', detail: 'We walk you through the exact steps to legally form your business.' },
-  { label: 'EIN registration', detail: 'Your federal Employer Identification Number, handled.' },
-  { label: 'Professional domain + business email', detail: 'A domain that means business and an email that earns trust.' },
-  { label: 'Full website (5–7 pages, Next.js)', detail: 'Production-grade, blazing-fast — the same stack used by Netflix and TikTok.' },
-  { label: 'AI chatbot installed and configured', detail: 'Engages visitors 24/7, qualifies leads, and never misses a message.' },
-  { label: 'Google Business Profile setup', detail: 'So customers can find you instantly in Maps and Search.' },
-  { label: 'Social media accounts created', detail: 'Profiles built, branded, and ready for your first post.' },
-  { label: 'Brand kit (logo concept, colors, fonts)', detail: 'A cohesive visual identity that looks like you mean it.' },
-  { label: '30 days of content scheduled', detail: 'A full month of posts lined up so you launch with momentum.' },
-  { label: 'Email/SMS automation installed', detail: 'Follow-ups and nurture sequences that run on autopilot.' },
-  { label: 'Pitch deck + one-pager', detail: 'Professional assets ready for investors, partners, or clients.' },
+const timeline = [
+  { time: 'Hour 0', title: 'Kickoff Call', desc: 'We spend 60 minutes gathering everything we need — business info, brand preferences, service details, target customers. This is the only thing we need from you.' },
+  { time: 'Hours 1–24', title: 'We Build', desc: 'Website mockup, brand concepts, and AI system configuration happen simultaneously. You run your business while we work.' },
+  { time: 'Hours 24–36', title: 'Your Review', desc: 'We send everything for your review. One round of feedback — design tweaks, copy adjustments, branding direction.' },
+  { time: 'Hours 36–48', title: 'Final Delivery', desc: 'Site goes live on your domain. Brand files delivered. AI systems activated. Legal guidance provided. You\'re open for business.' },
+];
+
+const faqs = [
+  { q: 'What\'s the price?', a: 'Startup Complete starts at $5,000 for a standard small business launch. Complex projects with advanced features or multiple locations are scoped individually up to $15,000. We quote before you commit.' },
+  { q: 'Does this replace the monthly plan?', a: 'Startup Complete is a one-time launch package. After delivery, a monthly plan ($197–$697/mo) covers hosting, maintenance, and ongoing growth. We\'ll recommend the right tier for your stage.' },
+  { q: 'Do I need a business idea already?', a: 'Yes — you should have your business concept, target market, and service list ready. We execute on what you\'ve already decided. We\'re not a business planning service.' },
+  { q: 'What about the LLC filing?', a: 'We provide guidance and template documents to help you file your own LLC in Michigan. This is not legal advice, and we don\'t file on your behalf. For complex situations, we\'ll recommend a local attorney.' },
+  { q: 'Can I get revisions after delivery?', a: 'One full revision round is included within 7 days of delivery. After that, changes are handled through your monthly plan or billed at our hourly rate.' },
 ];
 
 export default function StartupCompletePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Nav />
-      <main style={{ paddingTop: '72px', background: 'var(--bg)', minHeight: '100vh' }}>
-        <section style={{ padding: 'clamp(80px, 12vw, 140px) clamp(20px, 6vw, 80px) clamp(60px, 8vw, 100px)', maxWidth: '1100px', margin: '0 auto', textAlign: 'center', position: 'relative' }}>
-          <p className="sec-label fu" style={{ justifyContent: 'center', marginBottom: '28px' }}>Done-For-You Launch Package</p>
-          <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 'clamp(2.2rem, 6vw, 4.5rem)', lineHeight: 1.1, letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--chrome), var(--white), var(--chrome))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '28px' }}>
-            We&apos;ll Turn Your Idea Into a<br />Running Business in 48 Hours
-          </h1>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--dim)', maxWidth: '640px', margin: '0 auto 44px', lineHeight: 1.7 }}>
-            Everything you need to launch — built, deployed, and ready to take customers.
-          </p>
-          <div className="fu" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/contact" className="btn-chrome">Book Your Launch Call</Link>
-            <a href="#whats-included" className="btn-line">See What&apos;s Included</a>
-          </div>
-          <div aria-hidden="true" style={{ position: 'absolute', top: '10%', left: '50%', transform: 'translateX(-50%)', width: '600px', height: '600px', background: 'radial-gradient(ellipse, rgba(30,61,143,0.18) 0%, transparent 70%)', pointerEvents: 'none', zIndex: 0 }} />
-        </section>
+      <main style={{ background: 'var(--bg)', color: 'var(--silver)', minHeight: '100vh' }}>
 
-        <section id="whats-included" style={{ padding: 'clamp(60px, 8vw, 100px) clamp(20px, 6vw, 80px)', maxWidth: '1100px', margin: '0 auto' }}>
-          <p className="sec-label fu">What&apos;s Included</p>
-          <h2 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: 'var(--white)', marginBottom: '16px', letterSpacing: '-0.02em' }}>
-            Everything to Go from Zero to Open
-          </h2>
-          <p className="fu" style={{ color: 'var(--dim)', fontSize: '1rem', marginBottom: '56px', maxWidth: '520px' }}>
-            Every deliverable is built by our team. You show up to the call with an idea. We hand you a business.
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
-            {checklistItems.map((item, i) => (
-              <div key={i} className="fu svc-card" style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '2px', padding: '28px 28px 28px 24px', display: 'flex', gap: '16px', alignItems: 'flex-start', position: 'relative', overflow: 'hidden', transition: 'border-color 0.2s, transform 0.2s' }}>
-                <div className="accent-line" style={{ position: 'absolute', top: 0, left: 0, right: 0 }} />
-                <div style={{ flexShrink: 0, width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(30,61,143,0.2)', border: '1px solid rgba(30,61,143,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '2px' }}>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M2.5 7L5.5 10L11.5 4" stroke="var(--navy)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <div>
-                  <p style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '0.95rem', color: 'var(--silver)', marginBottom: '6px' }}>{item.label}</p>
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', color: 'var(--dim)', lineHeight: 1.6 }}>{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) clamp(20px, 6vw, 80px)', maxWidth: '1100px', margin: '0 auto' }}>
-          <div className="fu" style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderLeft: '3px solid var(--navy)', padding: 'clamp(40px, 6vw, 64px) clamp(28px, 5vw, 56px)', borderRadius: '2px', maxWidth: '760px' }}>
-            <p className="sec-label" style={{ marginBottom: '24px' }}>Who It&apos;s For</p>
-            <blockquote style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: 'clamp(1.4rem, 3.5vw, 2.25rem)', color: 'var(--white)', lineHeight: 1.3, letterSpacing: '-0.01em', fontStyle: 'normal', margin: 0 }}>
-              &ldquo;You have the idea. You have the drive. You just need someone to build the machine.&rdquo;
-            </blockquote>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.95rem', color: 'var(--dim)', marginTop: '24px', lineHeight: 1.7 }}>
-              Startup Complete is for founders, side-hustlers, and first-time business owners who are ready to move fast. No hand-holding required — we do the heavy lifting so you can focus on your customers from day one.
+        {/* Hero */}
+        <section style={{ padding: 'clamp(140px,16vw,180px) clamp(20px,6vw,80px) clamp(80px,10vw,120px)', borderBottom: '1px solid var(--border)', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,158,11,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
+          <ScrollReveal>
+            <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#f59e0b', background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)', borderRadius: '100px', padding: '6px 18px', display: 'inline-block', marginBottom: '24px' }}>
+              One-Time Package · 48-Hour Delivery
+            </span>
+          </ScrollReveal>
+          <ScrollReveal delay={80}>
+            <h1 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px,7vw,88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: '#fff', margin: '0 0 24px' }}>
+              Startup Complete
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal delay={140}>
+            <p style={{ fontSize: 'clamp(17px,2vw,22px)', color: 'var(--chrome)', maxWidth: '600px', margin: '0 auto 16px', lineHeight: 1.7 }}>
+              Go from idea to fully operational business in 48 hours — website, brand, AI systems, Google presence, and legal setup. Done for you, start to finish.
             </p>
-          </div>
-        </section>
-
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) clamp(20px, 6vw, 80px)', maxWidth: '1100px', margin: '0 auto' }}>
-          <div className="fu" style={{ display: 'flex', flexDirection: 'column' as const, alignItems: 'center', textAlign: 'center', gap: '32px', padding: 'clamp(48px, 7vw, 80px) clamp(28px, 5vw, 60px)', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '2px', position: 'relative', overflow: 'hidden' }}>
-            <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 100%, rgba(30,61,143,0.12) 0%, transparent 60%)', pointerEvents: 'none' }} />
-            <p className="sec-label" style={{ justifyContent: 'center' }}>Investment</p>
-            <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 'clamp(3rem, 8vw, 5.5rem)', lineHeight: 1, background: 'linear-gradient(135deg, var(--chrome), var(--white))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', letterSpacing: '-0.03em' }}>$5,000</div>
-              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--dim)', marginTop: '12px' }}>Starting price — one flat fee, no surprises</p>
+          </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: '8px', margin: '32px 0' }}>
+              <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(48px,7vw,80px)', color: '#fff', lineHeight: 1, letterSpacing: '-0.03em' }}>$5,000</span>
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '16px', color: 'var(--dim)' }}>starting · one-time</span>
             </div>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '1rem', color: 'var(--dim)', maxWidth: '480px', lineHeight: 1.7, position: 'relative', zIndex: 1 }}>
-              Every deliverable listed above, delivered within 48 hours of your launch call. No hidden fees, no hourly billing, no scope creep.
-            </p>
-            <Link href="/contact" className="btn-chrome" style={{ position: 'relative', zIndex: 1, fontSize: '12px', letterSpacing: '0.14em' }}>Book Your Launch Call</Link>
-            <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '10px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#f59e0b', position: 'relative', zIndex: 1 }}>Limited spots available each month</p>
+          </ScrollReveal>
+          <ScrollReveal delay={220}>
+            <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <CheckoutButton plan="startup" className="startup-hero-cta">Get Started — $5,000</CheckoutButton>
+              <Link href="/contact" className="btn-line" style={{ textDecoration: 'none' }}>Ask a Question First</Link>
+            </div>
+          </ScrollReveal>
+        </section>
+
+        {/* Deliverables */}
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <ScrollReveal>
+              <p className="sec-label">What You Get</p>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,52px)', color: '#fff', marginBottom: 'clamp(40px,5vw,64px)', letterSpacing: '-0.025em' }}>
+                Everything. In 48 Hours.
+              </h2>
+            </ScrollReveal>
+            <div className="startup-grid">
+              {deliverables.map((cat, i) => (
+                <ScrollReveal key={cat.category} delay={i * 80}>
+                  <div style={{ background: cat.bg, border: `1px solid ${cat.color}25`, borderRadius: '20px', padding: 'clamp(28px,4vw,40px)' }}>
+                    <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '20px', color: cat.color, marginBottom: '20px' }}>{cat.category}</div>
+                    <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '11px' }}>
+                      {cat.items.map(item => (
+                        <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--silver)', lineHeight: 1.55 }}>
+                          <span style={{ color: cat.color, fontWeight: 700, fontSize: '15px', lineHeight: 1.4, flexShrink: 0 }}>✓</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section style={{ padding: 'clamp(48px, 6vw, 80px) clamp(20px, 6vw, 80px)', borderTop: '1px solid var(--border)', textAlign: 'center' }}>
-          <p className="fu" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>Ready to launch?</p>
-          <h2 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)', color: 'var(--white)', marginBottom: '28px', letterSpacing: '-0.02em' }}>Your business is 48 hours away.</h2>
-          <Link href="/contact" className="btn-chrome fu">Book Your Launch Call</Link>
+        {/* 48hr timeline */}
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border)', background: 'var(--bg2)' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <ScrollReveal>
+              <p className="sec-label">The Process</p>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: 'clamp(40px,5vw,60px)', letterSpacing: '-0.025em' }}>
+                48 Hours, Start to Open
+              </h2>
+            </ScrollReveal>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
+              {timeline.map((step, i) => (
+                <ScrollReveal key={i} delay={i * 70}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '32px', padding: 'clamp(24px,3vw,36px) clamp(24px,4vw,40px)', background: 'var(--bg)', alignItems: 'start' }}>
+                    <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#f59e0b', fontWeight: 700, paddingTop: '3px' }}>{step.time}</div>
+                    <div>
+                      <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(16px,2vw,20px)', color: '#fff', marginBottom: '8px', letterSpacing: '-0.01em' }}>{step.title}</h3>
+                      <p style={{ fontSize: '15px', color: 'var(--chrome)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
         </section>
+
+        {/* FAQ */}
+        <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)', borderBottom: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <ScrollReveal>
+              <p className="sec-label">Questions</p>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: 'clamp(36px,5vw,52px)', letterSpacing: '-0.025em' }}>Common Questions</h2>
+            </ScrollReveal>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
+              {faqs.map((faq, i) => (
+                <ScrollReveal key={i} delay={i * 55}>
+                  <div style={{ background: 'var(--bg)', padding: 'clamp(24px,3vw,36px) clamp(24px,4vw,40px)' }}>
+                    <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(16px,1.8vw,20px)', color: '#fff', marginBottom: '10px', letterSpacing: '-0.01em' }}>{faq.q}</h3>
+                    <p style={{ fontSize: '15px', color: 'var(--chrome)', lineHeight: 1.75, margin: 0 }}>{faq.a}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section style={{ padding: 'clamp(100px,12vw,160px) clamp(20px,6vw,80px)', textAlign: 'center' }}>
+          <ScrollReveal>
+            <p className="sec-label" style={{ justifyContent: 'center' }}>Ready to Launch?</p>
+          </ScrollReveal>
+          <ScrollReveal delay={80}>
+            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,60px)', color: '#fff', marginBottom: '20px', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+              Your Business. Live.<br />In 48 Hours.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={140}>
+            <p style={{ color: 'var(--chrome)', fontSize: 'clamp(16px,1.8vw,19px)', maxWidth: '480px', margin: '0 auto 44px', lineHeight: 1.7 }}>
+              Starting at $5,000. Scoped to your business. Everything delivered — or your money back.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <CheckoutButton plan="startup" className="startup-hero-cta">Get Started — $5,000</CheckoutButton>
+              <Link href="/contact" className="btn-line" style={{ textDecoration: 'none' }}>Talk Through Your Project</Link>
+            </div>
+          </ScrollReveal>
+        </section>
+
       </main>
       <Footer />
+      <style>{`
+        .startup-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        @media (max-width: 680px) { .startup-grid { grid-template-columns: 1fr; } }
+        .startup-hero-cta { display: inline-block; padding: 15px 36px; background: linear-gradient(90deg, #d97706, #f59e0b); color: #000; border-radius: 9px; font-weight: 700; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.02em; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 24px rgba(245,158,11,0.35); border: none; cursor: pointer; font-family: inherit; }
+        .startup-hero-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+      `}</style>
     </>
   );
 }

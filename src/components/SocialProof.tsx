@@ -1,3 +1,5 @@
+'use client';
+
 export default function SocialProof() {
   const badges = [
     { label: 'Next.js', icon: '▲' },

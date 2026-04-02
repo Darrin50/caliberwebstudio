@@ -172,8 +172,14 @@ export default function Services() {
       <style>{`
         .services-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: clamp(16px, 2vw, 24px);
+        }
+        @media (max-width: 900px) {
+          .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+          .services-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </section>

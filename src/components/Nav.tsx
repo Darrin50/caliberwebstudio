@@ -19,12 +19,13 @@ export default function Nav() {
     const toggle = toggleRef.current;
     if (!toggle) return;
 
-    let currentTheme = 'dark';
+    let currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     let transitioning = false;
 
     const applyTheme = (theme: string) => {
       document.documentElement.setAttribute('data-theme', theme);
       currentTheme = theme;
+      try { localStorage.setItem('caliber-theme', theme); } catch(e) {}
       const icon = toggle.querySelector('.toggle-icon') as HTMLSpanElement;
       if (icon) {
         icon.textContent = theme === 'dark' ? '🌙' : '☀️';
@@ -33,6 +34,9 @@ export default function Nav() {
       }
       toggle.style.background = theme === 'dark' ? 'rgba(168,184,200,0.15)' : 'rgba(30,61,143,0.18)';
     };
+
+    // Sync button state with current theme on mount
+    applyTheme(currentTheme);
 
     const blackholeSuck = (cx: number, cy: number, cb: () => void) => {
       const overlay = document.createElement('div');
@@ -104,7 +108,7 @@ export default function Nav() {
       flash.style.opacity = '1';
 
       const overlay = document.createElement('div');
-      overlay.style.cssText = `position:fixed;inset:0;z-index:10000;pointer-events:none;background:radial-gradient(circle at ${cx}px ${cy}px,#fffbe0,#F6F7FB);clip-path:circle(0% at ${cx}px ${cy}px);`;
+      overlay.style.cssText = `position:fixed;inset:0;z-index:10000;pointer-events:none;background:radial-gradient(circle at ${cx}px ${cy}px,#fffbe0,#f5f5f7);clip-path:circle(0% at ${cx}px ${cy}px);`;
       document.body.appendChild(overlay);
 
       const core = document.createElement('div');
@@ -203,7 +207,7 @@ export default function Nav() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           <button ref={toggleRef} id="themeToggle" title="Toggle theme" style={{ width: '52px', height: '28px', borderRadius: '14px', border: 'none', background: 'rgba(168,184,200,0.15)', cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '3px', transition: 'background 0.3s' }}>
-            <span className="toggle-icon" style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'linear-gradient(135deg, #ffcc40, #ff8800)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', transition: 'transform 0.3s', transform: 'translateX(24px)' }}>{'🌙'}</span>
+            <span className="toggle-icon" style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'linear-gradient(135deg, #ffcc40, #ff6600)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', transition: 'transform 0.3s', transform: 'translateX(0)' }}>{'☀️'}</span>
           </button>
 
           <Link href="/#contact" className="nav-btn nav-cta-desktop" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--bg)', background: 'var(--chrome)', padding: '11px 26px', border: 'none', textDecoration: 'none', fontWeight: 700, transition: 'transform 0.15s ease-out', display: 'inline-block' }}>Start a Project</Link>
@@ -232,7 +236,7 @@ export default function Nav() {
         }
 
         [data-theme="light"] {
-          --nav-bg: rgba(246,247,251,0.88);
+          --nav-bg: rgba(245,245,247,0.88);
           --hamburger-color: #1E3D8F;
         }
 

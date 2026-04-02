@@ -123,7 +123,7 @@ export default function AIChatbotPage() {
             <p style={{ fontSize: '16px', color: 'var(--chrome, #A8B8C8)', marginBottom: '56px', maxWidth: '520px' }}>One tool that handles the repetitive work so your team can focus on the work that actually needs a human.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
               {features.map(f => (
-                <div key={f.title} style={{ padding: '32px', background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.1))', borderRadius: '6px', transition: 'border-color 0.2s, transform 0.2s' }} onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(30,61,143,0.5)'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)'; }} onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--border, rgba(168,184,200,0.1))'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}>
+                <div key={f.title} className="tilt-card" style={{ padding: '32px', background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.1))', borderRadius: '6px', transition: 'border-color 0.2s, transform 0.2s' }}>
                   <div style={{ fontSize: '28px', marginBottom: '16px', lineHeight: 1 }}>{f.icon}</div>
                   <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '18px', color: '#fff', marginBottom: '10px' }}>{f.title}</h3>
                   <p style={{ fontSize: '14px', color: 'var(--chrome, #A8B8C8)', lineHeight: 1.6 }}>{f.desc}</p>

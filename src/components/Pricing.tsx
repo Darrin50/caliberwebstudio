@@ -114,7 +114,7 @@ export default function Pricing() {
                   : 'var(--bg)',
                 border: `1px solid ${plan.popular ? 'var(--navy)' : 'var(--border)'}`,
                 padding: 'clamp(32px, 4vw, 48px) clamp(24px, 3vw, 36px)',
-                borderRadius: '2px',
+                borderRadius: '20px',
                 position: 'relative',
                 transform: plan.popular ? 'scale(1.02)' : 'scale(1)',
                 boxShadow: plan.popular
@@ -145,7 +145,7 @@ export default function Pricing() {
                   padding: '5px 18px', fontSize: '11px', fontWeight: 700,
                   fontFamily: "'Space Mono', monospace",
                   letterSpacing: '0.1em', textTransform: 'uppercase',
-                  borderRadius: '2px',
+                  borderRadius: '100px',
                 }}>
                   Most Popular
                 </div>

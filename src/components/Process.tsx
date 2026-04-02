@@ -81,60 +81,73 @@ export default function Process() {
                 }}
               />
 
-              {/* Big number */}
-              <div
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: 'clamp(64px, 8vw, 96px)',
-                  fontWeight: 800,
-                  background: 'linear-gradient(135deg, var(--navy), var(--chrome))',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  lineHeight: 1,
-                  marginBottom: '16px',
-                  letterSpacing: '-0.03em',
-                }}
-              >
-                {step.number}
+              {/* Step header row */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '28px',
+              }}>
+                <div style={{
+                  fontFamily: "'Space Mono', monospace",
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--navy)',
+                }}>
+                  Step {step.number}
+                </div>
+                <div style={{
+                  fontFamily: "'Space Mono', monospace",
+                  fontSize: '10px',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  color: 'var(--chrome)',
+                  padding: '3px 10px',
+                  border: '1px solid var(--border)',
+                  borderRadius: '2px',
+                }}>
+                  {step.duration}
+                </div>
               </div>
 
-              {/* Duration badge */}
+              {/* Divider */}
               <div style={{
-                fontFamily: "'Space Mono', monospace",
-                fontSize: '10px',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: 'var(--chrome)',
-                marginBottom: '20px',
-                padding: '4px 12px',
-                border: '1px solid var(--border)',
-                display: 'inline-block',
-                borderRadius: '2px',
-              }}>
-                {step.duration}
-              </div>
+                height: '1px',
+                background: 'var(--border)',
+                marginBottom: '24px',
+              }} />
 
               <h3 style={{
                 fontFamily: "'Syne', sans-serif",
-                fontSize: '22px',
+                fontSize: 'clamp(17px, 1.8vw, 20px)',
                 fontWeight: 700,
                 color: 'var(--silver)',
-                marginBottom: '14px',
-                lineHeight: 1.3,
+                marginBottom: '12px',
+                lineHeight: 1.25,
+                letterSpacing: '-0.01em',
               }}>
                 {step.title}
               </h3>
 
               <p style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: '15px',
+                fontSize: '14px',
                 lineHeight: 1.7,
                 color: 'var(--dim)',
-                maxWidth: '100%',
               }}>
                 {step.description}
               </p>
+
+              {/* Bottom arrow accent */}
+              <div style={{
+                marginTop: '28px',
+                fontFamily: "'Space Mono', monospace",
+                fontSize: '14px',
+                color: 'var(--navy)',
+                opacity: 0.5,
+              }}>→</div>
             </div>
           ))}
         </ScrollRevealGroup>

@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
-import { industries } from './data';
+import { ScrollReveal } from '@/components/ScrollReveal';
+import IndustriesGrid from './IndustriesGrid';
 
 export const metadata: Metadata = {
   title: { absolute: 'Industries We Serve | Caliber Web Studio — Detroit Local Business' },
@@ -36,42 +35,12 @@ export default function IndustriesPage() {
 
         <section style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,6vw,80px)' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <ScrollRevealGroup className="industries-grid" stagger={80}>
-              {industries.map(ind => (
-                <Link key={ind.slug} href={`/industries/${ind.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
-                  <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '20px', padding: 'clamp(28px,4vw,44px)', transition: 'all 0.25s ease', cursor: 'pointer' }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = ind.color + '60'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)'; (e.currentTarget as HTMLElement).style.boxShadow = `0 12px 40px ${ind.color}15`; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
-                  >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px', gap: '16px' }}>
-                      <div>
-                        <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: ind.color, background: ind.bg, border: `1px solid ${ind.color}30`, borderRadius: '100px', padding: '4px 12px', display: 'inline-block', marginBottom: '12px' }}>
-                          {ind.plural}
-                        </span>
-                        <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(20px,2.5vw,28px)', color: '#fff', margin: 0, letterSpacing: '-0.02em', lineHeight: 1.2 }}>{ind.headline}</h2>
-                      </div>
-                      <div style={{ background: ind.bg, border: `1px solid ${ind.color}30`, borderRadius: '12px', padding: '12px 16px', textAlign: 'center', flexShrink: 0 }}>
-                        <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '20px', color: ind.color, lineHeight: 1 }}>{ind.resultStat.value}</div>
-                        <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '9px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--dim)', marginTop: '4px', maxWidth: '80px' }}>{ind.resultStat.label}</div>
-                      </div>
-                    </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: ind.color, fontWeight: 700 }}>See What We Build →</span>
-                      {ind.demoSlug && <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '10px', color: 'var(--dim)', letterSpacing: '0.06em' }}>Live demo available</span>}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </ScrollRevealGroup>
+            <IndustriesGrid />
           </div>
         </section>
 
       </main>
       <Footer />
-      <style>{`
-        .industries-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-        @media (max-width: 680px) { .industries-grid { grid-template-columns: 1fr; } }
-      `}</style>
     </>
   );
 }

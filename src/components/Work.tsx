@@ -28,8 +28,8 @@ const demos = [
     title: 'Luxe Beauty Studio',
     description: 'Gallery-first design, online booking with stylist selection, natural hair SEO structure, and an embedded Instagram feed.',
     features: ['Online Booking', 'Gallery Design', 'Natural Hair SEO', 'Instagram Feed'],
-    image: '/demo/salon/hero-ponytail.png',
-    gradient: 'linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%)',
+    image: null,
+    gradient: 'linear-gradient(135deg, #c084fc 0%, #6d28d9 50%, #4c1d95 100%)',
   },
   {
     slug: 'detroits-kitchen',
@@ -112,19 +112,46 @@ export default function Work() {
                 height: '180px',
                 overflow: 'hidden',
                 background: demo.gradient,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}>
-                <Image
-                  src={demo.image}
-                  alt={`${demo.title} website preview`}
-                  fill
-                  style={{ objectFit: 'cover', objectPosition: 'top', opacity: 0.85 }}
-                  sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw"
-                />
-                <div style={{
-                  position: 'absolute', inset: 0,
-                  background: 'linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.5) 100%)',
-                  pointerEvents: 'none',
-                }} />
+                {demo.image ? (
+                  <>
+                    <Image
+                      src={demo.image}
+                      alt={`${demo.title} website preview`}
+                      fill
+                      style={{ objectFit: 'cover', objectPosition: 'top', opacity: 0.85 }}
+                      sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw"
+                    />
+                    <div style={{
+                      position: 'absolute', inset: 0,
+                      background: 'linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.5) 100%)',
+                      pointerEvents: 'none',
+                    }} />
+                  </>
+                ) : (
+                  <>
+                    {/* Decorative gradient card content */}
+                    <div style={{
+                      position: 'absolute', inset: 0,
+                      background: 'radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.12) 0%, transparent 60%)',
+                    }} />
+                    <div style={{
+                      fontFamily: "'Syne', sans-serif",
+                      fontSize: 'clamp(28px, 4vw, 38px)',
+                      fontWeight: 800,
+                      color: 'rgba(255,255,255,0.15)',
+                      letterSpacing: '-0.02em',
+                      userSelect: 'none',
+                      textAlign: 'center',
+                      lineHeight: 1.1,
+                    }}>
+                      {demo.title}
+                    </div>
+                  </>
+                )}
               </div>
 
               <div style={{ padding: '20px 28px 0', position: 'relative', zIndex: 2 }}>

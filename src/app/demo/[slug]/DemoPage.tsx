@@ -96,21 +96,21 @@ const DEMO_DATA: Record<string, {
   },
 
   'luxe-salon': {
-    heroImg: '/demo/salon/hero-ponytail.png',
-    heroAlt: 'Black woman with stunning natural afro — Luxe Beauty Studio Detroit',
+    heroImg: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=85',
+    heroAlt: 'Black woman with stunning natural hair — Luxe Beauty Studio Detroit',
     gallery: [
-      { url: '/demo/salon/fulani-braids.png', alt: 'Senegalese twist braids — flawless protective style at Luxe Beauty Studio' },
-      { url: '/demo/salon/pixie-cut.png', alt: 'Natural TWA pixie cut — defined and gorgeous at Luxe Beauty Studio' },
-      { url: '/demo/salon/silk-press.png', alt: 'Bone-straight silk press — long, sleek, damage-free' },
-      { url: '/demo/salon/twist-braids.png', alt: 'Long box braids — protective style goals at Luxe Beauty Studio Detroit' },
-      { url: '/demo/salon/hero-ponytail.png', alt: 'Beautiful natural afro — volume and definition on point' },
+      { url: 'https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=800&q=80', alt: 'Knotless box braids — flawless protective style at Luxe Beauty Studio' },
+      { url: 'https://images.unsplash.com/photo-1620122301084-d86f1ea6f8e6?auto=format&fit=crop&w=800&q=80', alt: 'Natural TWA — defined curls and gorgeous texture at Luxe Beauty Studio' },
+      { url: 'https://images.unsplash.com/photo-1560066984-138daaa7a6e4?auto=format&fit=crop&w=800&q=80', alt: 'Luxe Beauty Studio Detroit — luxury salon interior' },
+      { url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80', alt: 'Long braids — protective style goals at Luxe Beauty Studio Detroit' },
+      { url: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural hair — volume and definition on point' },
     ],
     reviews: [
       { name: 'Tiffany W.', stars: 5, text: "Jasmine did my knotless braids and they lasted two full months. So neat, so light. I won't go anywhere else in Detroit." },
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: '/demo/salon/silk-press.png',
+    aboutImg: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -254,7 +254,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
 
     .dw .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .dw .gal-item { overflow: hidden; border-radius: 6px; }
-    .dw .gal-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; transition: transform 0.4s; }
+    .dw .gal-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: ${isSalon ? 'center' : 'top'}; transition: transform 0.4s; }
     .dw .gal-item:hover img { transform: scale(1.04); }
 
     .dw .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }

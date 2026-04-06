@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
@@ -7,6 +8,13 @@ export const metadata: Metadata = {
   title: { absolute: 'Sample Builds | Caliber Web Studio' },
   description: 'Live demo sites built for Detroit businesses — barbershops, plumbers, salons, and restaurants. Click through and see exactly what we build.',
   alternates: { canonical: 'https://caliberwebstudio.com/work' },
+  openGraph: {
+    title: 'Sample Builds | Caliber Web Studio',
+    description: 'Live demo sites built for Detroit businesses — barbershops, plumbers, salons, and restaurants. Click through and see exactly what we build.',
+    url: 'https://caliberwebstudio.com/work',
+    type: 'website',
+    images: [{ url: '/logo-full-hero.png', alt: 'Caliber Web Studio Sample Builds', width: 1200, height: 630 }],
+  },
 };
 
 const projects = [
@@ -69,7 +77,7 @@ export default function WorkPage() {
             <div key={project.slug} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: i < projects.length - 1 ? 'clamp(80px,10vw,140px)' : 0, alignItems: 'center', direction: i % 2 === 0 ? 'ltr' : 'rtl' }}>
 
               <div style={{ background: 'var(--bg2, #1a1a1a)', border: '1px solid var(--border, rgba(168,184,200,0.12))', borderRadius: '8px', aspectRatio: '16/10', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', direction: 'ltr' }}>
-                {project.image && <img src={project.image} alt={project.title + ' demo preview'} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7, borderRadius: '8px' }} />}
+                {project.image && <Image src={project.image} alt={project.title + ' demo preview'} fill style={{ objectFit: 'cover', opacity: 0.7, borderRadius: '8px' }} sizes="(max-width: 768px) 100vw, 50vw" />}
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(30,61,143,0.15) 0%, transparent 60%)' }} />
                 <div style={{ textAlign: 'center', zIndex: 1, position: 'relative' }}>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(20px,3vw,32px)', color: '#fff', marginBottom: '8px' }}>{project.title}</div>

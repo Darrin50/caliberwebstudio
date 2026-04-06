@@ -209,6 +209,103 @@ export default function Pricing() {
             All plans include free website mockup · $0 down · cancel anytime with 30 days notice
           </div>
         </ScrollReveal>
+
+        {/* Startup Complete — featured offer */}
+        <ScrollReveal delay={260}>
+          <div style={{
+            marginTop: 'clamp(56px, 8vw, 80px)',
+            position: 'relative',
+            background: 'linear-gradient(145deg, rgba(245,158,11,0.08) 0%, rgba(245,158,11,0.03) 60%, var(--bg) 100%)',
+            border: '1px solid rgba(245,158,11,0.3)',
+            borderRadius: '24px',
+            padding: 'clamp(40px, 5vw, 56px) clamp(28px, 4vw, 52px)',
+            boxShadow: '0 0 0 1px rgba(245,158,11,0.1), 0 12px 60px rgba(245,158,11,0.1)',
+          }}>
+            <div style={{
+              position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)',
+              background: 'linear-gradient(90deg, #d97706, #f59e0b)',
+              color: '#000', fontSize: '10px', fontWeight: 700,
+              letterSpacing: '0.14em', textTransform: 'uppercase',
+              padding: '5px 20px', borderRadius: '100px', whiteSpace: 'nowrap',
+              fontFamily: "'Space Mono', monospace",
+              boxShadow: '0 4px 20px rgba(245,158,11,0.4)',
+            }}>
+              One-Time Package · 48-Hour Delivery
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px, 5vw, 56px)', alignItems: 'center' }} className="startup-inner">
+              <div>
+                <div style={{
+                  fontFamily: "'Space Mono', monospace", fontSize: '10px',
+                  letterSpacing: '0.16em', textTransform: 'uppercase',
+                  color: '#f59e0b', marginBottom: '12px',
+                }}>
+                  Startup Complete
+                </div>
+                <div style={{
+                  fontFamily: "'Syne', sans-serif", fontWeight: 800,
+                  fontSize: 'clamp(32px, 5vw, 48px)', color: 'var(--silver)',
+                  lineHeight: 1, letterSpacing: '-0.02em', marginBottom: '8px',
+                }}>
+                  From Idea to<br />Open Business
+                </div>
+                <div style={{
+                  fontFamily: "'Syne', sans-serif", fontWeight: 800,
+                  fontSize: 'clamp(40px, 5vw, 52px)', color: '#fff',
+                  lineHeight: 1, letterSpacing: '-0.02em', margin: '20px 0 6px',
+                }}>
+                  $5,000
+                </div>
+                <div style={{
+                  fontFamily: "'Space Mono', monospace", fontSize: '11px',
+                  color: 'var(--dim)', letterSpacing: '0.05em', marginBottom: '24px',
+                }}>
+                  starting price · one-time · scoped to your business
+                </div>
+                <a
+                  href="/startup-complete"
+                  style={{
+                    display: 'inline-block',
+                    padding: '14px 32px',
+                    background: 'linear-gradient(90deg, #d97706, #f59e0b)',
+                    color: '#000', borderRadius: '9px',
+                    fontWeight: 700, fontSize: '14px',
+                    textDecoration: 'none', letterSpacing: '0.04em',
+                    transition: 'opacity 0.2s, transform 0.2s',
+                    boxShadow: '0 4px 24px rgba(245,158,11,0.35)',
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.9'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  Launch Your Business →
+                </a>
+              </div>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {[
+                  'LLC formation + EIN registration guidance',
+                  'Business bank account setup guidance',
+                  'Domain + professional email',
+                  'Full 5–7 page website + AI chatbot',
+                  'Google Business Profile created & optimized',
+                  'Brand kit (logo, colors, fonts)',
+                  'Social media accounts set up (3 platforms)',
+                  '30 days of content scheduled',
+                  'Email/SMS automation',
+                  'Pitch deck + one-pager',
+                ].map((item) => (
+                  <li key={item} style={{
+                    display: 'flex', alignItems: 'flex-start', gap: '10px',
+                    fontFamily: "'Inter', sans-serif", fontSize: '13px',
+                    color: 'var(--dim)', lineHeight: 1.55,
+                  }}>
+                    <span style={{ color: '#f59e0b', fontWeight: 700, fontSize: '14px', lineHeight: 1.4, flexShrink: 0 }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
 
       <style>{`
@@ -226,6 +323,7 @@ export default function Pricing() {
             margin-right: auto;
           }
           .pricing-cards-grid .pricing-card--popular { transform: scale(1) !important; }
+          .startup-inner { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>

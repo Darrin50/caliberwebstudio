@@ -142,10 +142,15 @@ export default function PricingPage() {
                 </div>
                 <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
                   {[
-                    "LLC + EIN filing assistance",
-                    "Full web presence (website + SEO + chatbot + GBP)",
-                    "AI systems setup (chatbot, review automation, content engine)",
-                    "Complete brand kit (logo direction, colors, fonts, social templates)",
+                    "LLC formation assistance + EIN registration guidance",
+                    "Business bank account setup guidance",
+                    "Domain + professional email",
+                    "Full 5–7 page website + AI chatbot + Google Business Profile",
+                    "Brand kit (logo, colors, fonts, social templates)",
+                    "Social media accounts created & branded (3 platforms)",
+                    "30 days of content scheduled & queued",
+                    "Email/SMS automation setup",
+                    "Pitch deck + one-pager",
                     "Everything delivered in 48 hours",
                   ].map((feat) => (
                     <li key={feat} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-primary, rgba(255,255,255,0.9))", lineHeight: 1.5 }}>

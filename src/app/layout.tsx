@@ -227,6 +227,15 @@ const localBusinessSchema = {
           },
         },
       },
+      {
+        "@type": "Offer",
+        name: "Startup Complete",
+        description:
+          "Go from idea to fully operational business in 48 hours. Includes LLC formation assistance, EIN registration guidance, business bank account setup guidance, domain + professional email, full 5–7 page website, AI chatbot, Google Business Profile, brand kit, social media accounts (3 platforms), 30 days of content, email/SMS automation, and pitch deck + one-pager.",
+        price: "5000",
+        priceCurrency: "USD",
+        url: "https://caliberwebstudio.com/startup-complete",
+      },
     ],
   },
   sameAs: [],

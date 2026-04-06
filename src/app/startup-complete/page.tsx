@@ -22,25 +22,25 @@ const deliverables = [
     category: 'Web Presence',
     color: '#1E3D8F',
     bg: 'rgba(30,61,143,0.1)',
-    items: ['Custom AI-powered website (up to 5 pages)', 'Google Business Profile setup & optimization', 'Schema markup & local SEO structure', 'AI chatbot trained on your business', 'Contact & lead capture forms', 'SSL certificate & secure hosting'],
+    items: ['Full 5–7 page custom website', 'Domain registration + professional email setup', 'Google Business Profile created & optimized', 'Schema markup & local SEO structure', 'AI chatbot trained on your business', 'Contact & lead capture forms', 'SSL certificate & secure hosting'],
   },
   {
     category: 'Brand Identity',
     color: '#7c3aed',
     bg: 'rgba(124,58,237,0.1)',
-    items: ['Logo concept direction and final files', 'Color palette (hex, RGB, CMYK)', 'Typography selection and pairing', 'Social media profile templates (3 platforms)', 'Business card layout', 'Brand guidelines document (PDF)'],
+    items: ['Logo concept direction and final files', 'Color palette (hex, RGB, CMYK)', 'Typography selection and pairing', 'Social media accounts created & branded (3 platforms)', 'Pitch deck + one-pager (print & digital)', 'Business card layout', 'Brand guidelines document (PDF)'],
   },
   {
-    category: 'AI Systems',
+    category: 'AI Systems & Growth',
     color: '#0891b2',
     bg: 'rgba(8,145,178,0.1)',
-    items: ['AI chatbot widget (trained & deployed)', 'Review request automation setup', 'Lead routing to your phone or email', 'Contact form with spam protection', 'Performance tracking (Analytics + Search Console)'],
+    items: ['AI chatbot widget (trained & deployed)', 'Email/SMS automation setup', '30 days of content scheduled & queued', 'Review request automation setup', 'Lead routing to your phone or email', 'Performance tracking (Analytics + Search Console)'],
   },
   {
     category: 'Legal & Setup',
     color: '#d97706',
     bg: 'rgba(217,119,6,0.1)',
-    items: ['LLC filing assistance (Michigan)', 'EIN application guidance', 'Business address setup consultation', 'Operating agreement template', 'Launch checklist — nothing falls through'],
+    items: ['LLC formation assistance (Michigan)', 'EIN registration guidance', 'Business bank account setup guidance', 'Business address setup consultation', 'Operating agreement template', 'Launch checklist — nothing falls through'],
   },
 ];
 

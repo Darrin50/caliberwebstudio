@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'AI-powered websites, chatbots, review automation, and local SEO for Detroit businesses. One flat monthly rate, zero upfront.',
     url: 'https://caliberwebstudio.com/services',
     type: 'website',
+    images: [{ url: 'https://caliberwebstudio.com/logo-full-hero.png', width: 1200, height: 630, alt: 'Caliber Web Studio Services' }],
   },
 };
 
@@ -93,9 +94,32 @@ const addons = [
   { name: 'Google Ads Management', price: '+$299/mo', desc: 'Full setup and monthly management of Google Ads campaigns targeting your service area and keywords.' },
 ];
 
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Caliber Web Studio Services',
+  description: 'Web design, AI chatbot, local SEO, review automation, and social content services for Detroit businesses.',
+  url: 'https://caliberwebstudio.com/services',
+  itemListElement: services.map((svc, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Service',
+      name: svc.title,
+      description: svc.body,
+      provider: {
+        '@type': 'Organization',
+        name: 'Caliber Web Studio',
+        url: 'https://caliberwebstudio.com',
+      },
+    },
+  })),
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
       <Nav />
       <main style={{ background: 'var(--bg)', color: 'var(--silver)', minHeight: '100vh' }}>
 

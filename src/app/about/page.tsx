@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Founded by Darrin Singer in Detroit, MI. We engineer growth systems for local businesses at a price that finally makes sense.',
     url: 'https://caliberwebstudio.com/about',
     type: 'website',
+    images: [{ url: '/logo-full-hero.png', alt: 'Caliber Web Studio — Built in Detroit', width: 1200, height: 630 }],
   },
 };
 

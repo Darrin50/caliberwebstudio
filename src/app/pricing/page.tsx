@@ -78,7 +78,7 @@ export default function PricingPage() {
               Transparent Pricing
             </p>
             <h1 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(44px, 7vw, 80px)", fontWeight: 800, lineHeight: 1.05, color: "var(--text-primary, #fff)", margin: "20px 0 24px", letterSpacing: "-0.03em" }}>
-              Simple Monthly Plans
+              Pricing — Simple Monthly Plans
             </h1>
             <p className="fu" style={{ fontSize: "clamp(17px, 2vw, 20px)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
               $0 down. We build it first. You only pay when you love it.

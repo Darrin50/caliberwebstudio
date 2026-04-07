@@ -187,6 +187,7 @@ export default function Nav() {
     { label: 'Our Work', href: '/case-studies' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -210,7 +211,7 @@ export default function Nav() {
             <span className="toggle-icon" style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'linear-gradient(135deg, #ffcc40, #ff6600)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', transition: 'transform 0.3s', transform: 'translateX(0)' }}>{'☀️'}</span>
           </button>
 
-          <Link href="/#contact" className="nav-btn nav-cta-desktop" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--bg)', background: 'var(--chrome)', padding: '11px 26px', border: 'none', textDecoration: 'none', fontWeight: 700, transition: 'transform 0.15s ease-out', display: 'inline-block' }}>Start a Project</Link>
+          <Link href="/contact" className="nav-btn nav-cta-desktop" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--bg)', background: 'var(--chrome)', padding: '11px 26px', border: 'none', textDecoration: 'none', fontWeight: 700, transition: 'transform 0.15s ease-out', display: 'inline-block' }}>Start a Project</Link>
 
           <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation menu" style={{ display: 'none', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '5px', width: '40px', height: '40px', background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }}>
             <span style={{ display: 'block', width: '22px', height: '2px', background: 'var(--hamburger-color)', transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
@@ -226,7 +227,7 @@ export default function Nav() {
         {navItems.map((item) => (
           <Link key={item.label} href={item.href} onClick={handleLinkClick} style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', padding: '14px 0', borderBottom: '1px solid var(--border)', transition: 'color 0.2s' }}>{item.label}</Link>
         ))}
-        <Link href="/#contact" onClick={handleLinkClick} className="btn-chrome" style={{ fontFamily: "'Space Mono', monospace", fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', textAlign: 'center', fontWeight: 700, marginTop: '16px', display: 'block' }}>Start a Project</Link>
+        <Link href="/contact" onClick={handleLinkClick} className="btn-chrome" style={{ fontFamily: "'Space Mono', monospace", fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', textAlign: 'center', fontWeight: 700, marginTop: '16px', display: 'block' }}>Start a Project</Link>
       </div>
 
       <style>{`

@@ -1,246 +1,277 @@
 'use client';
 
-import Image from 'next/image';
-import { ScrollReveal, ScrollRevealGroup } from './ScrollReveal';
+import { ScrollReveal } from './ScrollReveal';
 
-const demos = [
+const projects = [
   {
-    slug: 'detroit-cuts',
-    category: 'Barbershop',
-    title: 'Detroit Cuts',
-    description: 'Online booking, photo gallery, AI chatbot for after-hours, and Google Maps integration. Everything a barbershop needs to fill its calendar.',
-    features: ['Online Booking', 'Photo Gallery', 'AI Chatbot', 'Mobile-First'],
-    image: '/demo/barber/detroit-cuts-hero.png',
-    gradient: 'linear-gradient(135deg, #1E3D8F 0%, #0d1f4d 100%)',
+    name: 'Detroit Auto Glass',
+    industry: 'Local Services',
+    result: '+240% calls from Google',
+    gradient: 'linear-gradient(135deg, #1e3a8a 0%, #0c1a4a 100%)',
+    accentColor: '#3b82f6',
+    featured: true,
   },
   {
-    slug: 'metro-plumbing',
-    category: 'Plumbing',
-    title: 'Metro Plumbing & Drain',
-    description: 'Emergency call CTA above the fold, service area pages built for local SEO, and a 24/7 lead capture form that routes to the on-call team.',
-    features: ['Emergency CTA', 'Service Area Pages', 'Lead Capture', 'Trust Signals'],
-    image: '/demo/plumbing/hero.png',
-    gradient: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
+    name: 'Motor City Barbershop',
+    industry: 'Retail & Services',
+    result: 'Booked 3 weeks out within 60 days',
+    gradient: 'linear-gradient(135deg, #374151 0%, #111827 100%)',
+    accentColor: '#9ca3af',
+    featured: false,
   },
   {
-    slug: 'luxe-salon',
-    category: 'Beauty / Salon',
-    title: 'Luxe Beauty Studio',
-    description: 'Gallery-first design, online booking with stylist selection, natural hair SEO structure, and an embedded Instagram feed.',
-    features: ['Online Booking', 'Gallery Design', 'Natural Hair SEO', 'Instagram Feed'],
-    image: null,
-    gradient: 'linear-gradient(135deg, #c084fc 0%, #6d28d9 50%, #4c1d95 100%)',
+    name: 'Eastside Logistics',
+    industry: 'B2B',
+    result: 'First page Google in 90 days',
+    gradient: 'linear-gradient(135deg, #14532d 0%, #052e16 100%)',
+    accentColor: '#4ade80',
+    featured: false,
   },
   {
-    slug: 'detroits-kitchen',
-    category: 'Restaurant',
-    title: "Detroit's Kitchen",
-    description: 'Online menu, catering inquiry form, AI chatbot for FAQs, and a private events page to capture that revenue stream.',
-    features: ['Online Menu', 'Catering Form', 'AI Chatbot', 'Events Page'],
-    image: '/demo/restaurant/hero.jpg',
-    gradient: 'linear-gradient(135deg, #92400e 0%, #78350f 100%)',
+    name: 'Detroit Chiropractic',
+    industry: 'Healthcare',
+    result: '+180% new patient inquiries',
+    gradient: 'linear-gradient(135deg, #4c1d95 0%, #1e0a3c 100%)',
+    accentColor: '#a78bfa',
+    featured: false,
+    wide: true,
   },
 ];
 
+function ProjectCard({
+  project,
+  tall = false,
+  wide = false,
+}: {
+  project: (typeof projects)[0];
+  tall?: boolean;
+  wide?: boolean;
+}) {
+  return (
+    <div
+      className="project-card"
+      style={{
+        position: 'relative',
+        borderRadius: '4px',
+        overflow: 'hidden',
+        background: project.gradient,
+        border: '1px solid rgba(255,255,255,0.08)',
+        minHeight: tall ? '420px' : wide ? '240px' : '200px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        cursor: 'pointer',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLElement).style.transform = 'scale(1.015)';
+        (e.currentTarget as HTMLElement).style.boxShadow = `0 24px 60px rgba(0,0,0,0.5)`;
+        const reveal = (e.currentTarget as HTMLElement).querySelector('[data-reveal]') as HTMLElement;
+        if (reveal) reveal.style.opacity = '1';
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
+        (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+        const reveal = (e.currentTarget as HTMLElement).querySelector('[data-reveal]') as HTMLElement;
+        if (reveal) reveal.style.opacity = '0';
+      }}
+    >
+      {/* Background texture */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.06) 0%, transparent 60%)',
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Grid lines decoration */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+          backgroundSize: '40px 40px',
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Content gradient overlay */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '65%',
+          background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%)',
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Industry tag — top left */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '20px',
+          left: '20px',
+          fontFamily: "'Space Mono', monospace",
+          fontSize: '9px',
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          color: project.accentColor,
+          padding: '4px 10px',
+          background: 'rgba(0,0,0,0.4)',
+          border: `1px solid ${project.accentColor}33`,
+          borderRadius: '2px',
+          backdropFilter: 'blur(4px)',
+        }}
+      >
+        {project.industry}
+      </div>
+
+      {/* Card body */}
+      <div style={{ position: 'relative', zIndex: 2, padding: 'clamp(20px, 3vw, 28px)' }}>
+        <h3
+          style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: tall ? 'clamp(26px, 3vw, 36px)' : 'clamp(20px, 2.2vw, 26px)',
+            fontWeight: 800,
+            color: '#fff',
+            marginBottom: '8px',
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+          }}
+        >
+          {project.name}
+        </h3>
+
+        <div
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '11px',
+            color: project.accentColor,
+            letterSpacing: '0.06em',
+            fontWeight: 700,
+            marginBottom: '16px',
+          }}
+        >
+          {project.result}
+        </div>
+
+        {/* Hover reveal link */}
+        <div
+          data-reveal
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '11px',
+            color: '#fff',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            opacity: 0,
+            transition: 'opacity 0.25s ease',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+          }}
+        >
+          View Project →
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Work() {
+  const [featured, small1, small2, wide] = projects;
+
   return (
     <section
       id="work"
       style={{
         position: 'relative',
-        padding: 'var(--section-pad-lg) clamp(20px, 6vw, 60px)',
+        padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 60px)',
         background: 'var(--bg)',
         borderBottom: '1px solid var(--border)',
       }}
     >
       <div style={{ maxWidth: 'var(--content-max-wide)', margin: '0 auto' }}>
         <ScrollReveal>
-          <div className="sec-label">Live Demo Sites</div>
+          <div className="sec-label">Our Work</div>
         </ScrollReveal>
 
         <ScrollReveal delay={80}>
-          <h2 style={{
-            fontFamily: "'Syne', sans-serif",
-            fontSize: 'clamp(36px, 5vw, 60px)',
-            fontWeight: 800,
-            lineHeight: 1.1,
-            letterSpacing: '-0.025em',
-            color: 'var(--silver)',
-            marginBottom: '20px',
-            maxWidth: '780px',
-          }}>
-            We Don&apos;t Just Talk About It.
+          <h2
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: 'clamp(36px, 5vw, 60px)',
+              fontWeight: 800,
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              color: '#fff',
+              marginBottom: '20px',
+              maxWidth: '680px',
+            }}
+          >
+            Our Work Speaks for Itself
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={140}>
-          <p style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: '18px',
-            lineHeight: 1.7,
-            color: 'var(--dim)',
-            marginBottom: 'clamp(48px, 6vw, 72px)',
-            maxWidth: '580px',
-          }}>
-            These aren&apos;t mockups — they&apos;re live, working websites built with the same AI-powered system we&apos;ll use for your business.
+          <p
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: '17px',
+              lineHeight: 1.7,
+              color: 'var(--chrome)',
+              marginBottom: 'clamp(40px, 5vw, 64px)',
+              maxWidth: '520px',
+            }}
+          >
+            Real businesses. Real results. Every project is built to rank, convert, and grow — not just look good.
           </p>
         </ScrollReveal>
 
-        <ScrollRevealGroup className="work-grid" stagger={100}>
-          {demos.map((demo) => (
-            <a
-              key={demo.slug}
-              href={`/demo/${demo.slug}`}
-              className="case-card tilt-card"
-              style={{
-                background: 'var(--bg2)',
-                border: '1px solid var(--border)',
-                borderRadius: '2px',
-                overflow: 'hidden',
-                position: 'relative',
-                textDecoration: 'none',
-                display: 'block',
-                transition: 'border-color 0.3s ease',
-              }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--navy)'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; }}
-            >
-              {/* Hero image preview */}
-              <div style={{
-                position: 'relative',
-                width: '100%',
-                height: '180px',
-                overflow: 'hidden',
-                background: demo.gradient,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                {demo.image ? (
-                  <>
-                    <Image
-                      src={demo.image}
-                      alt={`${demo.title} website preview`}
-                      fill
-                      style={{ objectFit: 'cover', objectPosition: 'top', opacity: 0.85 }}
-                      sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw"
-                    />
-                    <div style={{
-                      position: 'absolute', inset: 0,
-                      background: 'linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.5) 100%)',
-                      pointerEvents: 'none',
-                    }} />
-                  </>
-                ) : (
-                  <>
-                    {/* Decorative gradient card content */}
-                    <div style={{
-                      position: 'absolute', inset: 0,
-                      background: 'radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.12) 0%, transparent 60%)',
-                    }} />
-                    <div style={{
-                      fontFamily: "'Syne', sans-serif",
-                      fontSize: 'clamp(28px, 4vw, 38px)',
-                      fontWeight: 800,
-                      color: 'rgba(255,255,255,0.15)',
-                      letterSpacing: '-0.02em',
-                      userSelect: 'none',
-                      textAlign: 'center',
-                      lineHeight: 1.1,
-                    }}>
-                      {demo.title}
-                    </div>
-                  </>
-                )}
+        {/* Asymmetric layout */}
+        <ScrollReveal delay={180}>
+          <div className="work-asymmetric">
+            {/* Top row: large left + two stacked right */}
+            <div className="work-top-row">
+              <ProjectCard project={featured} tall />
+              <div className="work-stack">
+                <ProjectCard project={small1} />
+                <ProjectCard project={small2} />
               </div>
+            </div>
 
-              <div style={{ padding: '20px 28px 0', position: 'relative', zIndex: 2 }}>
-                <span style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: '10px', letterSpacing: '0.1em',
-                  textTransform: 'uppercase', color: 'var(--chrome)',
-                  padding: '4px 10px', border: '1px solid var(--border)',
-                  borderRadius: '2px',
-                }}>
-                  {demo.category}
-                </span>
-              </div>
-
-              <div style={{ padding: '16px 28px', position: 'relative', zIndex: 2 }}>
-                <h3 style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: '22px', fontWeight: 700,
-                  color: 'var(--silver)', marginBottom: '10px', lineHeight: 1.3,
-                }}>
-                  {demo.title}
-                </h3>
-                <p style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: '14px', lineHeight: 1.7,
-                  color: 'var(--dim)', marginBottom: '16px', maxWidth: '100%',
-                }}>
-                  {demo.description}
-                </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
-                  {demo.features.map((f) => (
-                    <span key={f} style={{
-                      fontFamily: "'Space Mono', monospace",
-                      fontSize: '9px', letterSpacing: '0.06em',
-                      textTransform: 'uppercase', color: 'var(--chrome)',
-                      padding: '3px 8px',
-                      background: 'rgba(168,184,200,0.08)',
-                      borderRadius: '2px',
-                    }}>
-                      {f}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div style={{
-                padding: '14px 28px',
-                borderTop: '1px solid var(--border)',
-                background: 'linear-gradient(180deg, rgba(30,61,143,0.04) 0%, transparent 100%)',
-                position: 'relative', zIndex: 2,
-                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-              }}>
-                <span style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: '10px', letterSpacing: '0.1em',
-                  textTransform: 'uppercase', color: 'var(--navy)', fontWeight: 700,
-                }}>
-                  View Live Demo →
-                </span>
-                <span style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: '9px', letterSpacing: '0.06em',
-                  textTransform: 'uppercase', color: 'var(--dim)',
-                }}>
-                  Working Site
-                </span>
-              </div>
-            </a>
-          ))}
-        </ScrollRevealGroup>
-
-        <ScrollReveal delay={200}>
-          <div style={{ textAlign: 'center', marginTop: 'clamp(40px, 5vw, 60px)' }}>
-            <a href="/case-studies" className="btn-chrome" style={{ textDecoration: 'none', display: 'inline-block' }}>
-              Explore All Demo Sites →
-            </a>
+            {/* Bottom: full-width card */}
+            <ProjectCard project={wide} wide />
           </div>
         </ScrollReveal>
       </div>
 
       <style>{`
-        .work-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: clamp(16px, 2vw, 28px);
-          margin-bottom: 0;
+        .work-asymmetric {
+          display: flex;
+          flex-direction: column;
+          gap: clamp(12px, 1.5vw, 20px);
         }
-        @media (max-width: 600px) {
-          .work-grid { grid-template-columns: 1fr; }
+        .work-top-row {
+          display: grid;
+          grid-template-columns: 1.4fr 1fr;
+          gap: clamp(12px, 1.5vw, 20px);
+        }
+        .work-stack {
+          display: flex;
+          flex-direction: column;
+          gap: clamp(12px, 1.5vw, 20px);
+        }
+        @media (max-width: 720px) {
+          .work-top-row {
+            grid-template-columns: 1fr;
+          }
+          .work-stack { flex-direction: column; }
         }
       `}</style>
     </section>

@@ -18,22 +18,12 @@ export const metadata: Metadata = {
 };
 
 const foundation = [
-  'Custom design — no templates, ever',
-  'Mobile-first responsive layout',
-  'AI chatbot widget (trained on your business)',
-  'Contact & lead capture forms',
-  'Google Analytics + Search Console setup',
-  'Schema markup & local SEO structure',
-  'Core Web Vitals optimized (90+ Lighthouse)',
-  'SSL security certificate',
-  'Google Business Profile optimization',
-  'Social media profile links',
-  'Accessibility compliance',
-  'Cross-browser compatibility',
-  'Hosting & infrastructure included',
-  'Monthly content updates',
-  'Priority email support',
-  'No long-term contracts',
+  'Custom Design (no templates)',
+  'Mobile-First Build',
+  'AI Chatbot Included',
+  'SEO + AEO Schema Setup',
+  '90+ Lighthouse Score',
+  'No Contracts, Cancel Anytime',
 ];
 
 const services = [
@@ -51,7 +41,7 @@ const services = [
     bg: 'rgba(8,145,178,0.08)',
     title: 'AI Chatbot Widget',
     body: 'Answers questions, captures leads, and books appointments 24/7 — even when you\'re asleep. Trained on your services, your FAQs, and your pricing. Not a generic bot. Your business, automated.',
-    href: '/services/ai-chatbot',
+    href: null,
   },
   {
     tag: 'SEO',
@@ -67,7 +57,7 @@ const services = [
     bg: 'rgba(217,119,6,0.08)',
     title: 'Review Engine',
     body: 'Automated review requests sent to real customers after every visit. Your reputation builds on autopilot — more 5-star reviews, higher local rankings, and more trust from first-time visitors.',
-    href: '/services/review-automation',
+    href: null,
   },
   {
     tag: 'Content',

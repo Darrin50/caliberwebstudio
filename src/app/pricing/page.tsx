@@ -123,6 +123,49 @@ export default function PricingPage() {
             ))}
           </div>
 
+          {/* Feature comparison table */}
+          <div style={{ marginTop: "64px", marginBottom: "16px" }}>
+            <h2 style={{ textAlign: "center", fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "36px", letterSpacing: "-0.02em" }}>
+              What&apos;s Included — Full Comparison
+            </h2>
+            <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <table className="compare-table">
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: "left" }}>Feature</th>
+                    <th>Starter</th>
+                    <th>Growth</th>
+                    <th className="col-domination">Domination</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Custom Website", true, true, true],
+                    ["Mobile Optimized", true, true, true],
+                    ["AI Chatbot", true, true, true],
+                    ["SEO + AEO Setup", true, true, true],
+                    ["Google Business Profile", true, true, true],
+                    ["48hr Turnaround", true, true, true],
+                    ["Monthly Blog Posts", "—", "4/mo", "8/mo"],
+                    ["Review Generation", "—", true, true],
+                    ["Social Media Posts", "—", "8/mo", "12/mo"],
+                    ["Competitor Monitoring", "—", "—", true],
+                    ["AI Citation Tracking", "—", "—", true],
+                    ["Priority Support", "—", "—", true],
+                    ["Dedicated Growth Call", "—", "—", "Monthly"],
+                  ].map(([feature, starter, growth, domination], i) => (
+                    <tr key={String(feature)} className={i % 2 === 1 ? "row-alt" : ""}>
+                      <td style={{ textAlign: "left", fontWeight: 500 }}>{feature}</td>
+                      <td>{starter === true ? <span className="check">✓</span> : <span className="dash">{starter}</span>}</td>
+                      <td>{growth === true ? <span className="check">✓</span> : <span className="dash">{growth}</span>}</td>
+                      <td className="col-domination">{domination === true ? <span className="check">✓</span> : <span className="dash">{domination}</span>}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           {/* Startup Complete — premium one-time offer */}
           <div style={{ marginTop: "72px" }}>
             <div style={{ textAlign: "center", marginBottom: "36px" }}>
@@ -286,6 +329,58 @@ export default function PricingPage() {
         @media (max-width: 600px) {
           .startup-card { padding: 44px 20px 32px; }
         }
+        /* Feature comparison table */
+        .compare-table {
+          width: 100%;
+          border-collapse: collapse;
+          background: #0a0e1a;
+          font-size: 0.9rem;
+          color: rgba(255,255,255,0.8);
+          min-width: 480px;
+        }
+        .compare-table th {
+          background: #0d1221;
+          padding: 14px 20px;
+          font-family: 'Space Mono', monospace;
+          font-size: 0.7rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.5);
+          text-align: center;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .compare-table td {
+          padding: 13px 20px;
+          text-align: center;
+          border-bottom: 1px solid rgba(255,255,255,0.05);
+          color: rgba(255,255,255,0.75);
+        }
+        .compare-table .row-alt td { background: rgba(255,255,255,0.02); }
+        .compare-table .col-domination {
+          border-left: 2px solid rgba(37,99,235,0.4);
+          background: rgba(37,99,235,0.04);
+        }
+        .compare-table th.col-domination {
+          border-left: 2px solid rgba(37,99,235,0.4);
+          background: rgba(37,99,235,0.1);
+          color: #93c5fd;
+        }
+        .compare-table .check {
+          color: #2563eb;
+          font-size: 1rem;
+          font-weight: 700;
+        }
+        .compare-table .dash {
+          color: rgba(255,255,255,0.3);
+          font-family: 'Space Mono', monospace;
+          font-size: 0.8rem;
+        }
+        [data-theme="light"] .compare-table { background: #fff; color: #1a1a1a; }
+        [data-theme="light"] .compare-table th { background: #f5f5f7; color: #6e6e73; }
+        [data-theme="light"] .compare-table td { color: #374151; border-bottom-color: rgba(0,0,0,0.05); }
+        [data-theme="light"] .compare-table .row-alt td { background: rgba(0,0,0,0.02); }
+        [data-theme="light"] .compare-table .col-domination { background: rgba(37,99,235,0.04); }
+        [data-theme="light"] .compare-table .dash { color: #9ca3af; }
       `}</style>
     </>
   );

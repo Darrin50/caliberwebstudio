@@ -59,7 +59,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             zIndex: 10,
           }}
         >
-          <span style={{ display: 'block', color: '#ffffff' }}>Architects of</span>
+          <span style={{ display: 'block', color: '#ffffff' }}>Detroit Websites That</span>
           <span
             style={{
               display: 'block',
@@ -71,7 +71,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
               animation: 'shine 3s linear infinite',
             }}
           >
-            The Modern Web.
+            Get Found and Win Customers.
           </span>
         </h1>
 
@@ -104,7 +104,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
           }}
         >
           <a href="/contact" className="btn-chrome" style={{ textDecoration: 'none', display: 'inline-block' }}>
-            Get Your Free Site Audit →
+            Get Your Free Mockup →
           </a>
           <a href="#work" className="btn-line" style={{ textDecoration: 'none', display: 'inline-flex' }}>
             See Our Work

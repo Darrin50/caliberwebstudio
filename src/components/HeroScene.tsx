@@ -135,72 +135,8 @@ export default function HeroScene() {
         globeGroup.add(arc);
       });
 
-      // ─────────────────────────────────────────────
-      //  FLOATING SPHERES — hover glow, right side
-      // ─────────────────────────────────────────────
-      const spheres: {
-        mesh: any;
-        basePos: any;
-        velocity: any;
-        hovered: boolean;
-        phase: number;
-        rotVelX: number;
-        rotVelY: number;
-      }[] = [];
-
-      const sphereConfigs = [
-        { pos: [12, 4, -3], size: 2.2, color: 0x1e3d8f, opacity: 0.35 },
-        { pos: [15, -2, -5], size: 1.4, color: 0x3a6fd8, opacity: 0.28 },
-        { pos: [9, -4, -1], size: 1.8, color: 0x2a52b0, opacity: 0.3 },
-        { pos: [17, 1, -8], size: 1.0, color: 0xa8b8c8, opacity: 0.2 },
-        { pos: [7, 6, -4], size: 1.2, color: 0x5a8fff, opacity: 0.25 },
-        { pos: [-6, -5, -6], size: 1.5, color: 0x3a6fd8, opacity: 0.22 },
-        { pos: [4, -6, -3], size: 0.9, color: 0x1e3d8f, opacity: 0.3 },
-      ];
-
-      sphereConfigs.forEach((cfg, i) => {
-        const group = new THREE.Group();
-
-        // Main sphere
-        const sGeo = new THREE.SphereGeometry(cfg.size, 20, 16);
-        const sMat = new THREE.MeshBasicMaterial({
-          color: cfg.color, wireframe: true, transparent: true, opacity: cfg.opacity,
-        });
-        const sMesh = new THREE.Mesh(sGeo, sMat);
-        group.add(sMesh);
-
-        // Inner glow sphere
-        const iGeo = new THREE.SphereGeometry(cfg.size * 0.92, 16, 12);
-        const iMat = new THREE.MeshBasicMaterial({
-          color: cfg.color, transparent: true, opacity: cfg.opacity * 0.3,
-        });
-        const iMesh = new THREE.Mesh(iGeo, iMat);
-        group.add(iMesh);
-
-        // Orbit ring
-        const oGeo = new THREE.RingGeometry(cfg.size * 1.3, cfg.size * 1.35, 48);
-        const oMat = new THREE.MeshBasicMaterial({
-          color: 0xa8b8c8, transparent: true, opacity: 0.08, side: THREE.DoubleSide,
-        });
-        const oMesh = new THREE.Mesh(oGeo, oMat);
-        oMesh.rotation.x = Math.PI * 0.3 + i * 0.2;
-        oMesh.rotation.y = i * 0.5;
-        group.add(oMesh);
-
-        group.position.set(cfg.pos[0], cfg.pos[1], cfg.pos[2]);
-        sceneGroup.add(group);
-        interactables.push(sMesh);
-
-        spheres.push({
-          mesh: group,
-          basePos: new THREE.Vector3(cfg.pos[0], cfg.pos[1], cfg.pos[2]),
-          velocity: new THREE.Vector3(0, 0, 0),
-          hovered: false,
-          phase: Math.random() * Math.PI * 2,
-          rotVelX: 0,
-          rotVelY: 0,
-        });
-      });
+      // Floating spheres removed — replaced by MuscleCar SVG component
+      const spheres: never[] = [];
 
       // ─────────────────────────────────────────────
       //  PARTICLES — denser star field
@@ -366,15 +302,9 @@ export default function HeroScene() {
           if (hits.length > 0) {
             canvas.style.cursor = 'grab';
             if (hoveredObj !== hits[0].object) hoveredObj = hits[0].object;
-            spheres.forEach((s) => { s.hovered = false; });
-            if (hits[0].object !== globe) {
-              const idx = interactables.indexOf(hits[0].object) - 1;
-              if (idx >= 0 && idx < spheres.length) spheres[idx].hovered = true;
-            }
           } else {
             canvas.style.cursor = 'grab';
             hoveredObj = null;
-            spheres.forEach((s) => { s.hovered = false; });
           }
         }
 
@@ -468,39 +398,8 @@ export default function HeroScene() {
           dp.mesh.material.opacity = 0.5 + Math.sin(frameCount * 0.03 + dp.phase) * 0.5;
         });
 
-        // ── Floating spheres ──
-        spheres.forEach((s, i) => {
-          // Float position always drifts gently
-          const floatY = Math.sin(frameCount * 0.012 + s.phase) * 0.8;
-          const floatX = Math.cos(frameCount * 0.008 + s.phase * 1.3) * 0.3;
-          s.mesh.position.x += (s.basePos.x + floatX - s.mesh.position.x) * 0.01;
-          s.mesh.position.y += (s.basePos.y + floatY - s.mesh.position.y) * 0.01;
-
-          // Rotation inertia — decay and apply to the whole group
-          s.rotVelX *= 0.95;
-          s.rotVelY *= 0.95;
-          s.mesh.rotation.y += s.rotVelY;
-          s.mesh.rotation.x += s.rotVelX;
-
-          // Subtle auto self-spin of the wireframe mesh
-          s.mesh.children[0].rotation.y += 0.005 + i * 0.001;
-          s.mesh.children[0].rotation.x += 0.002;
-
-          // Orbit ring always spins regardless
-          if (s.mesh.children[2]) {
-            s.mesh.children[2].rotation.z += 0.008 + i * 0.002;
-          }
-
-          // Hover glow effect
-          const targetOpacity = s.hovered ? 0.6 : sphereConfigs[i].opacity;
-          s.mesh.children[0].material.opacity += (targetOpacity - s.mesh.children[0].material.opacity) * 0.08;
-          const innerTarget = s.hovered ? 0.25 : sphereConfigs[i].opacity * 0.3;
-          s.mesh.children[1].material.opacity += (innerTarget - s.mesh.children[1].material.opacity) * 0.08;
-          if (s.mesh.children[2]) {
-            const ringTarget = s.hovered ? 0.2 : 0.08;
-            s.mesh.children[2].material.opacity += (ringTarget - s.mesh.children[2].material.opacity) * 0.08;
-          }
-        });
+        // Floating spheres removed — no-op
+        void spheres;
 
         // ── Particles gentle drift ──
         particles.rotation.y += 0.0003;

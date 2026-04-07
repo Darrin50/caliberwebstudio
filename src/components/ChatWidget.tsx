@@ -98,9 +98,9 @@ export default function ChatWidget() {
           <button
             onClick={() => { setOpen(true); setShowNudge(false); setNudgeDismissed(true); }}
             style={{
-              background: 'var(--navy)',
+              background: '#0a0e1a',
               color: '#fff',
-              border: 'none',
+              border: '1px solid #2563eb',
               borderRadius: '100px',
               padding: '10px 18px',
               fontFamily: "'Inter', sans-serif",
@@ -108,18 +108,18 @@ export default function ChatWidget() {
               fontWeight: 600,
               cursor: 'pointer',
               whiteSpace: 'nowrap',
-              boxShadow: '0 4px 20px rgba(30,61,143,0.35)',
+              boxShadow: '0 4px 20px rgba(37,99,235,0.25)',
               letterSpacing: '-0.01em',
             }}
           >
-            Ask us anything →
+            Chat with us →
           </button>
           <button
             onClick={() => { setShowNudge(false); setNudgeDismissed(true); }}
             style={{
-              background: 'var(--bg2)',
-              color: 'var(--dim)',
-              border: '1px solid var(--border)',
+              background: '#0a0e1a',
+              color: 'rgba(255,255,255,0.5)',
+              border: '1px solid rgba(37,99,235,0.3)',
               borderRadius: '50%',
               width: '24px',
               height: '24px',
@@ -137,7 +137,7 @@ export default function ChatWidget() {
         </div>
       )}
 
-      {/* Chat Button */}
+      {/* Chat Button — clean solid Caliber Blue circle, white chat icon */}
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -147,32 +147,36 @@ export default function ChatWidget() {
           width: '56px',
           height: '56px',
           borderRadius: '50%',
-          backgroundColor: 'var(--navy)',
+          backgroundColor: '#2563eb',
           border: 'none',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: '24px',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+          boxShadow: '0 4px 16px rgba(37,99,235,0.4)',
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
           zIndex: 9999,
         }}
         onMouseEnter={(e) => {
-          (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.1)';
-          (e.currentTarget as HTMLButtonElement).style.boxShadow =
-            '0 6px 16px rgba(0, 0, 0, 0.2)';
+          (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.05)';
         }}
         onMouseLeave={(e) => {
           (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)';
-          (e.currentTarget as HTMLButtonElement).style.boxShadow =
-            '0 4px 12px rgba(0, 0, 0, 0.15)';
         }}
+        aria-label={open ? 'Close chat' : 'Open chat'}
       >
-        {open ? '✕' : '💬'}
+        {open ? (
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15 5L5 15M5 5l10 10" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        ) : (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        )}
       </button>
 
-      {/* Chat Window */}
+      {/* Chat Window — fully solid, no blur */}
       {open && (
         <div
           style={{
@@ -181,53 +185,80 @@ export default function ChatWidget() {
             right: '24px',
             width: 'min(380px, calc(100vw - 32px))',
             height: 'min(520px, calc(100vh - 120px))',
-            backgroundColor: 'var(--bg)',
-            borderRadius: '12px',
+            backgroundColor: '#111827',
+            borderRadius: '16px',
             display: 'flex',
             flexDirection: 'column',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
-            border: '1px solid var(--bg3)',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(37,99,235,0.2)',
+            border: '1px solid rgba(37,99,235,0.15)',
             zIndex: 9998,
+            animation: 'slideIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
           }}
         >
           {/* Header */}
           <div
             style={{
-              padding: '16px',
-              borderBottom: '1px solid var(--bg3)',
+              padding: '16px 20px',
+              borderBottom: '1px solid rgba(255,255,255,0.06)',
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              backgroundColor: 'var(--bg2)',
-              borderRadius: '12px 12px 0 0',
+              backgroundColor: '#0f172a',
+              borderRadius: '16px 16px 0 0',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '16px', fontWeight: '600', color: 'var(--silver)' }}>
-                Caliber AI
-              </span>
-              <div
-                style={{
-                  width: '8px',
-                  height: '8px',
-                  borderRadius: '50%',
-                  backgroundColor: '#10b981',
-                  animation: 'blink 1.5s ease-in-out infinite',
-                }}
-              />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                backgroundColor: '#2563eb',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div style={{ fontSize: '14px', fontWeight: 600, color: '#f1f5f9', lineHeight: 1.2 }}>
+                  Caliber AI
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop: '2px' }}>
+                  <div style={{
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    backgroundColor: '#10b981',
+                  }} />
+                  <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.02em' }}>Online</span>
+                </div>
+              </div>
             </div>
             <button
               onClick={() => setOpen(false)}
               style={{
-                background: 'none',
+                background: 'rgba(255,255,255,0.06)',
                 border: 'none',
-                color: 'var(--silver)',
+                borderRadius: '8px',
+                color: 'rgba(255,255,255,0.5)',
                 cursor: 'pointer',
-                fontSize: '20px',
+                width: '28px',
+                height: '28px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 padding: '0',
+                transition: 'background 0.15s',
               }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.12)'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.06)'; }}
             >
-              ✕
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M9 3L3 9M3 3l6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
             </button>
           </div>
 
@@ -239,7 +270,7 @@ export default function ChatWidget() {
               padding: '16px',
               display: 'flex',
               flexDirection: 'column',
-              gap: '12px',
+              gap: '10px',
             }}
           >
             {messages.map((msg, idx) => (
@@ -248,19 +279,18 @@ export default function ChatWidget() {
                 style={{
                   display: 'flex',
                   justifyContent: msg.role === 'user' ? 'flex-end' : 'flex-start',
-                  animation: 'slideIn 0.3s ease',
+                  animation: 'msgIn 0.2s ease',
                 }}
               >
                 <div
                   style={{
-                    maxWidth: '80%',
+                    maxWidth: '82%',
                     padding: '10px 14px',
-                    borderRadius: '12px',
-                    backgroundColor:
-                      msg.role === 'user' ? '#1E3D8F' : 'var(--bg3)',
-                    color: msg.role === 'user' ? '#ffffff' : 'var(--silver)',
+                    borderRadius: msg.role === 'user' ? '14px 14px 4px 14px' : '14px 14px 14px 4px',
+                    backgroundColor: msg.role === 'user' ? '#2563eb' : '#1e293b',
+                    color: '#f1f5f9',
                     fontSize: '14px',
-                    lineHeight: '1.4',
+                    lineHeight: '1.5',
                     wordWrap: 'break-word',
                   }}
                 >
@@ -269,21 +299,19 @@ export default function ChatWidget() {
               </div>
             ))}
             {loading && (
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'flex-start',
-                }}
-              >
+              <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
                 <div
                   style={{
-                    padding: '10px 14px',
-                    borderRadius: '12px',
-                    backgroundColor: 'var(--bg3)',
-                    color: 'var(--silver)',
+                    padding: '10px 16px',
+                    borderRadius: '14px 14px 14px 4px',
+                    backgroundColor: '#1e293b',
+                    color: 'rgba(255,255,255,0.4)',
+                    fontSize: '18px',
+                    letterSpacing: '2px',
+                    animation: 'typing 1.4s infinite',
                   }}
                 >
-                  <span style={{ animation: 'typing 1.4s infinite' }}>●●●</span>
+                  •••
                 </div>
               </div>
             )}
@@ -294,11 +322,11 @@ export default function ChatWidget() {
           <div
             style={{
               padding: '12px',
-              borderTop: '1px solid var(--bg3)',
+              borderTop: '1px solid rgba(255,255,255,0.06)',
               display: 'flex',
               gap: '8px',
-              backgroundColor: 'var(--bg2)',
-              borderRadius: '0 0 12px 12px',
+              backgroundColor: '#0f172a',
+              borderRadius: '0 0 16px 16px',
             }}
           >
             <input
@@ -313,70 +341,57 @@ export default function ChatWidget() {
               placeholder="Ask me anything..."
               style={{
                 flex: 1,
-                padding: '10px 12px',
-                borderRadius: '8px',
-                border: '1px solid var(--bg3)',
-                backgroundColor: 'var(--bg)',
-                color: 'var(--silver)',
+                padding: '10px 14px',
+                borderRadius: '10px',
+                border: '1px solid rgba(255,255,255,0.08)',
+                backgroundColor: '#1e293b',
+                color: '#f1f5f9',
                 fontSize: '14px',
                 outline: 'none',
                 fontFamily: 'inherit',
+                transition: 'border-color 0.15s',
               }}
+              onFocus={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = 'rgba(37,99,235,0.5)'; }}
+              onBlur={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
               disabled={loading}
             />
             <button
               onClick={handleSendMessage}
               disabled={loading || !input.trim()}
               style={{
-                padding: '10px 14px',
-                borderRadius: '8px',
-                backgroundColor: !loading && input.trim() ? '#1E3D8F' : 'var(--bg3)',
+                width: '40px',
+                height: '40px',
+                borderRadius: '10px',
+                backgroundColor: !loading && input.trim() ? '#2563eb' : 'rgba(255,255,255,0.06)',
                 border: 'none',
                 color: '#ffffff',
                 cursor: !loading && input.trim() ? 'pointer' : 'not-allowed',
-                fontSize: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
                 transition: 'background-color 0.2s ease',
               }}
-              onMouseEnter={(e) => {
-                if (!loading && input.trim()) {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                    '#152d6f';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!loading && input.trim()) {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                    '#1E3D8F';
-                }
-              }}
             >
-              ↑
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </button>
           </div>
 
           {/* Styles */}
           <style>{`
-            @keyframes blink {
-              0%, 49%, 100% { opacity: 1; }
-              50%, 99% { opacity: 0.3; }
-            }
-            @keyframes slideIn {
-              from {
-                opacity: 0;
-                transform: translateY(10px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-            @keyframes typing {
-              0%, 60%, 100% { opacity: 1; }
-              30% { opacity: 0.3; }
+            @keyframes msgIn {
+              from { opacity: 0; transform: translateY(6px); }
+              to   { opacity: 1; transform: translateY(0); }
             }
             @keyframes nudgeIn {
               from { opacity: 0; transform: translateY(10px) scale(0.95); }
               to   { opacity: 1; transform: translateY(0)    scale(1); }
+            }
+            @keyframes typing {
+              0%, 60%, 100% { opacity: 1; }
+              30% { opacity: 0.3; }
             }
           `}</style>
         </div>

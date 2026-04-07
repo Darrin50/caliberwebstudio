@@ -6,3 +6,4 @@ import dynamic from 'next/dynamic';
 export const HeroScene = dynamic(() => import('./HeroScene'), { ssr: false });
 export const ChatWidget = dynamic(() => import('./ChatWidget'), { ssr: false });
 export const FloatingElements = dynamic(() => import('./FloatingElements'), { ssr: false });
+export const MuscleCar = dynamic(() => import('./MuscleCar'), { ssr: false });

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
@@ -113,25 +114,15 @@ export default function AboutPage() {
             {/* Founder visual / quote card */}
             <ScrollReveal delay={120}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                {/* TODO: Replace with real founder photo — src="/images/darrin-singer.jpg" */}
-                <div style={{
-                  width: '100%',
-                  maxWidth: '300px',
-                  height: '300px',
-                  margin: '0 auto',
-                  borderRadius: '16px',
-                  border: '2px dashed #2563eb',
-                  background: 'rgba(37,99,235,0.04)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '10px',
-                }}>
-                  <div style={{ fontSize: '36px', opacity: 0.3 }}>👤</div>
-                  <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(37,99,235,0.6)', textAlign: 'center', padding: '0 20px', lineHeight: 1.6, fontStyle: 'italic' }}>
-                    [ Founder Photo — Darrin Singer ]
-                  </span>
+                <div style={{ margin: '0 auto', borderRadius: '16px', overflow: 'hidden', width: '100%', maxWidth: '320px', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }}>
+                  <Image
+                    src="/images/darrin-singer.png"
+                    alt="Darrin Singer — Founder, Caliber Web Studio"
+                    width={320}
+                    height={400}
+                    style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                    priority
+                  />
                 </div>
 
                 <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '20px', padding: 'clamp(28px,3.5vw,44px)', position: 'relative', overflow: 'hidden' }}>

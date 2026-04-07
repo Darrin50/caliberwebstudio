@@ -365,7 +365,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="light" className={`${syne.variable} ${inter.variable} ${spaceMono.variable}`}>
+    <html lang="en" data-theme="dark" suppressHydrationWarning className={`${syne.variable} ${inter.variable} ${spaceMono.variable}`}>
       <head>
         {/* Restore saved theme before first paint — prevents flash of wrong theme. Default is light. */}
         <script dangerouslySetInnerHTML={{__html: `(function(){try{var t=window['localStorage'].getItem('caliber-theme-v2');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();`}} />

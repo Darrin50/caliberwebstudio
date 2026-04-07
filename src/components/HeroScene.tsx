@@ -139,33 +139,53 @@ export default function HeroScene() {
       //  FLOATING SPHERES — decorative orbs drifting through scene
       // ─────────────────────────────────────────────
       const sphereConfigs = [
-        { x:  8,  y:  3,   z: -4,  r: 0.55, color: 0x2563eb, opacity: 0.75 },
-        { x:  5,  y: -5,   z:  3,  r: 0.35, color: 0x1e3d8f, opacity: 0.6  },
-        { x: -4,  y:  7,   z:  5,  r: 0.45, color: 0x3a6fd8, opacity: 0.65 },
-        { x: 11,  y: -2,   z:  2,  r: 0.28, color: 0x5a8fff, opacity: 0.55 },
-        { x:  3,  y:  9,   z: -6,  r: 0.38, color: 0x2563eb, opacity: 0.5  },
-        { x: -6,  y: -4,   z: -3,  r: 0.30, color: 0x1e3d8f, opacity: 0.45 },
-        { x:  7,  y:  6,   z:  8,  r: 0.22, color: 0x5a8fff, opacity: 0.6  },
-        { x: -3,  y: -8,   z:  6,  r: 0.40, color: 0x3a6fd8, opacity: 0.5  },
+        { x:  9,  y:  3,   z:  4,  r: 1.1,  color: 0x4d8fff, glowColor: 0x7ab4ff },
+        { x:  6,  y: -4,   z:  8,  r: 0.75, color: 0x3a6fd8, glowColor: 0x5a9aff },
+        { x: -5,  y:  6,   z:  5,  r: 0.90, color: 0x5a8fff, glowColor: 0x88bbff },
+        { x: 12,  y: -1,   z:  3,  r: 0.60, color: 0x7ab4ff, glowColor: 0x99ccff },
+        { x:  4,  y:  8,   z: -2,  r: 0.80, color: 0x4d8fff, glowColor: 0x7ab4ff },
+        { x: -7,  y: -3,   z:  2,  r: 0.65, color: 0x5a8fff, glowColor: 0x88bbff },
+        { x:  8,  y:  5,   z:  9,  r: 0.50, color: 0x88bbff, glowColor: 0xaad4ff },
+        { x: -4,  y: -6,   z:  7,  r: 0.85, color: 0x3a6fd8, glowColor: 0x5a9aff },
       ];
 
       const spheres = sphereConfigs.map((cfg) => {
-        // Outer glow sphere (larger, transparent)
-        const glowGeo = new THREE.SphereGeometry(cfg.r * 1.6, 16, 16);
+        // Outer glow sphere (2× radius, additive blending = bright halo)
+        const glowGeo = new THREE.SphereGeometry(cfg.r * 2.2, 16, 16);
         const glowMat = new THREE.MeshBasicMaterial({
-          color: cfg.color, transparent: true, opacity: cfg.opacity * 0.18,
+          color: cfg.glowColor,
+          transparent: true,
+          opacity: 0.30,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,
         });
         const glowMesh = new THREE.Mesh(glowGeo, glowMat);
 
-        // Inner solid sphere
+        // Mid halo (1.4× radius)
+        const midGeo = new THREE.SphereGeometry(cfg.r * 1.4, 16, 16);
+        const midMat = new THREE.MeshBasicMaterial({
+          color: cfg.glowColor,
+          transparent: true,
+          opacity: 0.45,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,
+        });
+        const midMesh = new THREE.Mesh(midGeo, midMat);
+
+        // Inner solid sphere — bright core
         const innerGeo = new THREE.SphereGeometry(cfg.r, 20, 20);
         const innerMat = new THREE.MeshBasicMaterial({
-          color: cfg.color, transparent: true, opacity: cfg.opacity,
+          color: cfg.color,
+          transparent: true,
+          opacity: 0.85,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,
         });
         const innerMesh = new THREE.Mesh(innerGeo, innerMat);
 
         const group = new THREE.Group();
         group.add(glowMesh);
+        group.add(midMesh);
         group.add(innerMesh);
         group.position.set(cfg.x, cfg.y, cfg.z);
         sceneGroup.add(group);
@@ -173,6 +193,7 @@ export default function HeroScene() {
         return {
           group,
           glowMat,
+          midMat,
           innerMat,
           originX: cfg.x,
           originY: cfg.y,
@@ -449,10 +470,11 @@ export default function HeroScene() {
           s.group.position.x = s.originX + Math.sin(t) * s.driftRadius;
           s.group.position.y = s.originY + Math.cos(t * 0.7) * s.driftRadius * 0.8;
           s.group.position.z = s.originZ + Math.sin(t * 0.5) * s.driftRadius * 0.5;
-          const pulse = 0.85 + Math.sin(t * 1.8) * 0.15;
+          const pulse = 0.88 + Math.sin(t * 1.8) * 0.12;
           s.group.scale.setScalar(pulse);
-          s.glowMat.opacity  = 0.08 + Math.sin(t * 1.4) * 0.06;
-          s.innerMat.opacity = 0.45 + Math.sin(t * 1.2) * 0.2;
+          s.glowMat.opacity  = 0.22 + Math.sin(t * 1.4) * 0.08;
+          s.midMat.opacity   = 0.38 + Math.sin(t * 1.2) * 0.10;
+          s.innerMat.opacity = 0.78 + Math.sin(t * 1.2) * 0.12;
         });
 
         // ── Particles gentle drift ──

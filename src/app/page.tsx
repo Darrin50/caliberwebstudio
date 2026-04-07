@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import WorkShowcase from '@/components/WorkShowcase';
+import PhoneMockupScroll from '@/components/PhoneMockupScroll';
 import { HeroScene, ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
 
 /* ─── Shared style tokens ─────────────────────────────────────── */
@@ -326,7 +327,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ 7. TESTIMONIALS ════════════════════════════════════ */}
+      {/* ══ 7. PHONE MOCKUP SCROLL ══════════════════════════════ */}
+      <PhoneMockupScroll />
+
+      {/* ══ 8. TESTIMONIALS ════════════════════════════════════ */}
       <section
         style={{
           background: 'var(--bg3)',
@@ -414,7 +418,7 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* ══ 8. CTA / CONTACT FORM ════════════════════════════════ */}
+      {/* ══ 9. CTA / CONTACT FORM ════════════════════════════════ */}
       <CTA />
 
       <Footer />

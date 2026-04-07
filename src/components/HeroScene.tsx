@@ -135,8 +135,53 @@ export default function HeroScene() {
         globeGroup.add(arc);
       });
 
-      // Floating spheres removed — replaced by MuscleCar SVG component
-      const spheres: never[] = [];
+      // ─────────────────────────────────────────────
+      //  FLOATING SPHERES — decorative orbs drifting through scene
+      // ─────────────────────────────────────────────
+      const sphereConfigs = [
+        { x:  8,  y:  3,   z: -4,  r: 0.55, color: 0x2563eb, opacity: 0.75 },
+        { x:  5,  y: -5,   z:  3,  r: 0.35, color: 0x1e3d8f, opacity: 0.6  },
+        { x: -4,  y:  7,   z:  5,  r: 0.45, color: 0x3a6fd8, opacity: 0.65 },
+        { x: 11,  y: -2,   z:  2,  r: 0.28, color: 0x5a8fff, opacity: 0.55 },
+        { x:  3,  y:  9,   z: -6,  r: 0.38, color: 0x2563eb, opacity: 0.5  },
+        { x: -6,  y: -4,   z: -3,  r: 0.30, color: 0x1e3d8f, opacity: 0.45 },
+        { x:  7,  y:  6,   z:  8,  r: 0.22, color: 0x5a8fff, opacity: 0.6  },
+        { x: -3,  y: -8,   z:  6,  r: 0.40, color: 0x3a6fd8, opacity: 0.5  },
+      ];
+
+      const spheres = sphereConfigs.map((cfg) => {
+        // Outer glow sphere (larger, transparent)
+        const glowGeo = new THREE.SphereGeometry(cfg.r * 1.6, 16, 16);
+        const glowMat = new THREE.MeshBasicMaterial({
+          color: cfg.color, transparent: true, opacity: cfg.opacity * 0.18,
+        });
+        const glowMesh = new THREE.Mesh(glowGeo, glowMat);
+
+        // Inner solid sphere
+        const innerGeo = new THREE.SphereGeometry(cfg.r, 20, 20);
+        const innerMat = new THREE.MeshBasicMaterial({
+          color: cfg.color, transparent: true, opacity: cfg.opacity,
+        });
+        const innerMesh = new THREE.Mesh(innerGeo, innerMat);
+
+        const group = new THREE.Group();
+        group.add(glowMesh);
+        group.add(innerMesh);
+        group.position.set(cfg.x, cfg.y, cfg.z);
+        sceneGroup.add(group);
+
+        return {
+          group,
+          glowMat,
+          innerMat,
+          originX: cfg.x,
+          originY: cfg.y,
+          originZ: cfg.z,
+          phase: Math.random() * Math.PI * 2,
+          speed: 0.3 + Math.random() * 0.4,
+          driftRadius: 0.8 + Math.random() * 0.6,
+        };
+      });
 
       // ─────────────────────────────────────────────
       //  PARTICLES — denser star field
@@ -398,8 +443,17 @@ export default function HeroScene() {
           dp.mesh.material.opacity = 0.5 + Math.sin(frameCount * 0.03 + dp.phase) * 0.5;
         });
 
-        // Floating spheres removed — no-op
-        void spheres;
+        // ── Floating spheres — drift + pulse ──
+        spheres.forEach((s) => {
+          const t = frameCount * 0.008 * s.speed + s.phase;
+          s.group.position.x = s.originX + Math.sin(t) * s.driftRadius;
+          s.group.position.y = s.originY + Math.cos(t * 0.7) * s.driftRadius * 0.8;
+          s.group.position.z = s.originZ + Math.sin(t * 0.5) * s.driftRadius * 0.5;
+          const pulse = 0.85 + Math.sin(t * 1.8) * 0.15;
+          s.group.scale.setScalar(pulse);
+          s.glowMat.opacity  = 0.08 + Math.sin(t * 1.4) * 0.06;
+          s.innerMat.opacity = 0.45 + Math.sin(t * 1.2) * 0.2;
+        });
 
         // ── Particles gentle drift ──
         particles.rotation.y += 0.0003;

@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Case Studies', href: '/case-studies' },
+  { label: 'Our Work', href: '/case-studies' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -222,11 +222,11 @@ export default function Footer() {
             Services
           </span>
           {[
-            { label: 'Web Design', href: '/services' },
-            { label: 'SEO', href: '/services' },
-            { label: 'AI Chatbots', href: '/services' },
-            { label: 'Google Business', href: '/services' },
-            { label: 'Review Automation', href: '/services' },
+            { label: 'Web Design', href: '/services#web-design' },
+            { label: 'SEO', href: '/services#seo' },
+            { label: 'AI Chatbots', href: '/services/ai-chatbot' },
+            { label: 'Google Business', href: '/services#google-business' },
+            { label: 'Review Automation', href: '/services/review-automation' },
             { label: 'Launch Package', href: '/startup-complete' },
           ].map((item) => (
             <Link

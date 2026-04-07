@@ -124,8 +124,8 @@ export default function ServicesPage() {
           </ScrollReveal>
           <ScrollReveal delay={80}>
             <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px,7vw,88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: '#fff', margin: '20px 0 24px' }}>
-              Not Just a Website.<br />
-              <span style={{ background: 'linear-gradient(135deg, #1E3D8F, #0891b2)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>A Growth System.</span>
+              Our Services —<br />
+              <span style={{ background: 'linear-gradient(135deg, #1E3D8F, #0891b2)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Built to Get You Found.</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={140}>

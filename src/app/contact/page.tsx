@@ -28,7 +28,7 @@ export default function ContactPage() {
               Free Strategy Call
             </p>
             <h1 style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)", fontWeight: 800, lineHeight: 1.1, color: "var(--text-primary)", marginBottom: "20px", letterSpacing: "-0.02em", position: "relative", zIndex: 10 }}>
-              Let&apos;s Build Something
+              Contact Us — Let&apos;s Build Something
             </h1>
             <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "560px", margin: "0 auto", lineHeight: 1.7 }}>
               Tell us about your business and we&apos;ll put together a custom plan to get you more clients.

@@ -5,11 +5,10 @@ interface ScrollRevealProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  as?: keyof JSX.IntrinsicElements;
 }
 
-export function ScrollReveal({ children, className = '', delay = 0, as: Tag = 'div' }: ScrollRevealProps) {
-  const ref = useRef<HTMLElement>(null);
+export function ScrollReveal({ children, className = '', delay = 0 }: ScrollRevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -28,9 +27,9 @@ export function ScrollReveal({ children, className = '', delay = 0, as: Tag = 'd
   }, [delay]);
 
   return (
-    <Tag ref={ref as any} className={`reveal ${className}`}>
+    <div ref={ref} className={`reveal ${className}`}>
       {children}
-    </Tag>
+    </div>
   );
 }
 

@@ -2,21 +2,22 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
   return (
     <section
       id="hero"
-      className="hero"
+      data-dark-section
       style={{
         position: 'relative',
         overflow: 'hidden',
-        minHeight: '100vh',
+        height: '100vh',
+        maxHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 'clamp(120px, 16vw, 180px) clamp(20px, 6vw, 60px) clamp(80px, 10vw, 120px)',
-        background: 'var(--bg)',
+        padding: '80px clamp(20px, 6vw, 60px) 60px',
+        background: '#0a0a0a',
         textAlign: 'center',
       }}
     >
-      {/* 3D canvas behind everything */}
+      {/* 3D canvas background — absolutely positioned, never affects layout */}
       {children}
 
       {/* Radial ambient glow */}
@@ -28,7 +29,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         zIndex: 1,
       }} />
 
-      {/* All text — always in front of canvas */}
+      {/* Content — always in front of canvas */}
       <div
         style={{
           position: 'relative',
@@ -40,30 +41,27 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         }}
       >
         {/* Label */}
-        <div className="sec-label fu" style={{ justifyContent: 'center' }}>
+        <div className="sec-label" style={{ justifyContent: 'center', color: '#1e3d8f' }}>
           Detroit&apos;s Premier AI Web Agency
         </div>
 
         {/* Main Heading */}
         <h1
-          className="fu"
           style={{
             fontFamily: "'Syne', sans-serif",
-            fontSize: 'clamp(52px, 8vw, 88px)',
+            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             fontWeight: 800,
-            lineHeight: 1.0,
+            lineHeight: 1.05,
             letterSpacing: '-0.03em',
             color: '#ffffff',
-            margin: '28px 0 0',
-            position: 'relative',
-            zIndex: 10,
+            margin: '24px 0 0',
           }}
         >
           <span style={{ display: 'block', color: '#ffffff' }}>Detroit Websites That</span>
           <span
             style={{
               display: 'block',
-              background: 'linear-gradient(90deg, var(--chrome), #fff, var(--chrome))',
+              background: 'linear-gradient(90deg, #a8b8c8, #fff, #a8b8c8)',
               backgroundSize: '200% 100%',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -77,24 +75,22 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
 
         {/* Subtitle */}
         <p
-          className="fu"
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: 'clamp(17px, 2vw, 20px)',
+            fontSize: 'clamp(1rem, 1.8vw, 1.2rem)',
             fontWeight: 400,
             lineHeight: 1.7,
-            color: 'var(--dim)',
-            margin: '32px auto 48px',
-            maxWidth: '560px',
+            color: 'rgba(208,216,224,0.65)',
+            margin: '24px auto 36px',
+            maxWidth: '540px',
           }}
         >
           We build high-performance websites that rank, convert, and grow your
           business. $0 down — see your free mockup before you ever pay a cent.
         </p>
 
-        {/* CTA */}
+        {/* CTAs */}
         <div
-          className="fu"
           style={{
             display: 'flex',
             gap: '16px',
@@ -110,7 +106,6 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             See Our Work
           </a>
         </div>
-
       </div>
     </section>
   );

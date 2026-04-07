@@ -86,7 +86,7 @@ export default function Home() {
       {/* ══ 3. PROBLEM → SOLUTION ════════════════════════════════ */}
       <section
         style={{
-          background: '#f9fafb',
+          background: 'var(--bg3)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
         }}
       >
@@ -103,7 +103,7 @@ export default function Home() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: '#111827',
+              color: 'var(--silver)',
               marginBottom: 'clamp(40px, 5vw, 64px)',
               maxWidth: '700px',
             }}
@@ -115,8 +115,8 @@ export default function Home() {
           <div className="ps-grid">
             {/* Problems */}
             <div>
-              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '16px' }}>The Problem</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: '#e5e7eb' }}>
+              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Problem</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
                 {[
                   'Your website looks outdated',
                   "Google doesn't know you exist",
@@ -124,10 +124,10 @@ export default function Home() {
                 ].map((pain) => (
                   <div
                     key={pain}
-                    style={{ padding: '20px 24px', background: '#fff', display: 'flex', alignItems: 'center', gap: '14px' }}
+                    style={{ padding: '20px 24px', background: 'var(--bg2)', display: 'flex', alignItems: 'center', gap: '14px' }}
                   >
                     <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: '#ef4444', flexShrink: 0 }}>✕</span>
-                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: '#374151', lineHeight: 1.4 }}>{pain}</span>
+                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: 'var(--chrome)', lineHeight: 1.4 }}>{pain}</span>
                   </div>
                 ))}
               </div>
@@ -142,8 +142,8 @@ export default function Home() {
 
             {/* Solutions */}
             <div>
-              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '16px' }}>The Solution</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: '#e5e7eb' }}>
+              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Solution</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
                 {[
                   'Professional site that builds trust instantly',
                   'Ranked where your customers are searching',
@@ -151,10 +151,10 @@ export default function Home() {
                 ].map((fix) => (
                   <div
                     key={fix}
-                    style={{ padding: '20px 24px', background: '#f0f9ff', display: 'flex', alignItems: 'center', gap: '14px' }}
+                    style={{ padding: '20px 24px', background: 'rgba(37,99,235,0.1)', display: 'flex', alignItems: 'center', gap: '14px' }}
                   >
                     <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(37,99,235,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: BLUE, flexShrink: 0 }}>✓</span>
-                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: '#111827', fontWeight: 500, lineHeight: 1.4 }}>{fix}</span>
+                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: 'var(--silver)', fontWeight: 500, lineHeight: 1.4 }}>{fix}</span>
                   </div>
                 ))}
               </div>
@@ -219,8 +219,9 @@ export default function Home() {
       {/* ══ 5. HOW IT WORKS ══════════════════════════════════════ */}
       <section
         style={{
-          background: '#ffffff',
+          background: 'var(--bg)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
+          borderTop: '1px solid var(--border)',
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -236,13 +237,13 @@ export default function Home() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.025em',
-              color: '#111827',
+              color: 'var(--silver)',
               marginBottom: 'clamp(48px, 6vw, 80px)',
               maxWidth: '600px',
             }}
           >
             Simple process.<br />
-            <span style={{ color: '#6b7280' }}>Serious results.</span>
+            <span style={{ color: 'var(--dim)' }}>Serious results.</span>
           </h2>
 
           <div className="hiw-grid">
@@ -268,10 +269,10 @@ export default function Home() {
                 <div style={{ width: '52px', height: '52px', borderRadius: '50%', background: 'linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%)', border: '1px solid rgba(37,99,235,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', boxShadow: '0 0 28px rgba(37,99,235,0.15)' }}>
                   <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '12px', fontWeight: 700, color: '#93c5fd' }}>{step.n}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(1.1rem, 2vw, 1.35rem)', fontWeight: 800, color: '#111827', marginBottom: '12px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                <h3 style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(1.1rem, 2vw, 1.35rem)', fontWeight: 800, color: 'var(--silver)', marginBottom: '12px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
                   {step.title}
                 </h3>
-                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '15px', lineHeight: 1.75, color: '#6b7280', margin: 0, maxWidth: 'none' }}>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '15px', lineHeight: 1.75, color: 'var(--dim)', margin: 0, maxWidth: 'none' }}>
                   {step.desc}
                 </p>
               </div>
@@ -328,8 +329,9 @@ export default function Home() {
       {/* ══ 7. TESTIMONIALS ════════════════════════════════════ */}
       <section
         style={{
-          background: '#ffffff',
+          background: 'var(--bg3)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
+          borderTop: '1px solid var(--border)',
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -345,7 +347,7 @@ export default function Home() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.025em',
-              color: '#111827',
+              color: 'var(--silver)',
               marginBottom: 'clamp(40px, 5vw, 64px)',
               maxWidth: '520px',
             }}
@@ -371,8 +373,8 @@ export default function Home() {
               <div
                 key={t.name}
                 style={{
-                  background: '#f9fafb',
-                  border: '1px solid #e5e7eb',
+                  background: 'var(--bg2)',
+                  border: '1px solid var(--border)',
                   borderRadius: '12px',
                   padding: 'clamp(28px, 4vw, 44px)',
                   display: 'flex',
@@ -385,19 +387,19 @@ export default function Home() {
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${BLUE}, transparent)` }} />
 
                 {/* Quote mark */}
-                <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(60px, 7vw, 84px)', color: 'rgba(37,99,235,0.12)', lineHeight: 0.7, marginBottom: '24px', fontWeight: 800, userSelect: 'none' }}>
+                <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(60px, 7vw, 84px)', color: 'rgba(37,99,235,0.18)', lineHeight: 0.7, marginBottom: '24px', fontWeight: 800, userSelect: 'none' }}>
                   &ldquo;
                 </div>
 
                 {/* Quote */}
-                <blockquote style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(15px, 1.6vw, 18px)', lineHeight: 1.75, color: '#374151', fontWeight: 400, margin: '0 0 auto', flex: 1 }}>
+                <blockquote style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(15px, 1.6vw, 18px)', lineHeight: 1.75, color: 'var(--chrome)', fontWeight: 400, margin: '0 0 auto', flex: 1 }}>
                   {t.quote}
                 </blockquote>
 
                 {/* Attribution */}
-                <div style={{ marginTop: '28px', paddingTop: '20px', borderTop: '1px solid #e5e7eb' }}>
-                  <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '15px', color: '#111827', marginBottom: '3px' }}>{t.name}</div>
-                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '10px' }}>{t.role}</div>
+                <div style={{ marginTop: '28px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
+                  <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '15px', color: 'var(--silver)', marginBottom: '3px' }}>{t.name}</div>
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '10px' }}>{t.role}</div>
                   <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.08em', textTransform: 'uppercase', color: BLUE, padding: '3px 8px', background: 'rgba(37,99,235,0.08)', border: `1px solid rgba(37,99,235,0.2)`, borderRadius: '2px' }}>
                     {t.industry}
                   </span>

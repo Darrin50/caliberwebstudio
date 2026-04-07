@@ -537,6 +537,10 @@ input:focus, textarea:focus {
 [data-theme="light"] [data-dark-section] .sec-label { color: #1e3d8f !important; }
 [data-theme="light"] [data-dark-section] .sec-label::before { background: #1e3d8f !important; }
 
+/* Hero h1 spans — use ID specificity to beat all light-mode overrides */
+[data-theme="light"] #hero h1 { color: #ffffff !important; }
+[data-theme="light"] #hero h1 span { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; background: none !important; }
+
 [data-theme="light"] h1 { color: #0a0a0a !important; }
 [data-theme="light"] h1 div { color: #0a0a0a !important; -webkit-text-fill-color: #0a0a0a !important; background: none !important; }
 

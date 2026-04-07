@@ -527,6 +527,16 @@ input:focus, textarea:focus {
 [data-theme="light"] main h5,
 [data-theme="light"] main h6 { color: #0e1020 !important; }
 
+/* Dark sections always keep white headings — overrides light mode rule above */
+[data-theme="light"] main [data-dark-section] h1,
+[data-theme="light"] main [data-dark-section] h2,
+[data-theme="light"] main [data-dark-section] h3,
+[data-theme="light"] main [data-dark-section] h4,
+[data-theme="light"] main [data-dark-section] h5,
+[data-theme="light"] main [data-dark-section] h6 { color: #ffffff !important; }
+[data-theme="light"] [data-dark-section] .sec-label { color: #1e3d8f !important; }
+[data-theme="light"] [data-dark-section] .sec-label::before { background: #1e3d8f !important; }
+
 [data-theme="light"] h1 { color: #0a0a0a !important; }
 [data-theme="light"] h1 div { color: #0a0a0a !important; -webkit-text-fill-color: #0a0a0a !important; background: none !important; }
 

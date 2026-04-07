@@ -12,7 +12,7 @@ export default function SocialProof() {
   const stats = [
     { value: '48', suffix: 'hr', label: 'Average Delivery' },
     { value: '0', prefix: '$', label: 'Down to Start' },
-    { value: '100', suffix: '%', label: 'Free Until Approved' },
+    { value: '30', suffix: '+', label: 'Detroit Businesses' },
     { value: '90', suffix: '+', label: 'Lighthouse Score' },
   ];
 

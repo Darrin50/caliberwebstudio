@@ -72,7 +72,7 @@ export default function ContactPage() {
                 </div>
 
                 <button type="submit" style={{ padding: "14px 32px", background: "var(--accent, #0070f3)", color: "#fff", border: "none", borderRadius: "9px", fontWeight: 700, fontSize: "1rem", cursor: "pointer", letterSpacing: "0.02em", marginTop: "4px" }}>
-                  Book a Call →
+                  Send Your Details →
                 </button>
               </form>
             </div>

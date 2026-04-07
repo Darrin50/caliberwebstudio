@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Syne, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import ClientEffects from "@/components/ClientEffects";
+import dynamic from "next/dynamic";
+
+const CursorSparkle = dynamic(() => import("@/components/CursorSparkle"), { ssr: false });
 
 const syne = Syne({
   subsets: ["latin"],
@@ -393,8 +396,11 @@ export default function RootLayout({
         <div className="meteor-field" id="meteorField" />
         <div className="sun-particles" id="sunParticles" />
 
-        {/* Client-side effects: cursor, theme, particles, sound, magnetic, scroll-3d */}
+        {/* Client-side effects: cursor, theme, particles, magnetic, scroll-3d */}
         <ClientEffects />
+
+        {/* Cursor sparkle trail — desktop only */}
+        <CursorSparkle />
 
         {children}
       </body>

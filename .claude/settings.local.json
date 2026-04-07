@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(mp3|wav|ogg|aac\\)$\")"
+    ]
+  }
+}

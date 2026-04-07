@@ -112,15 +112,38 @@ export default function AboutPage() {
 
             {/* Founder visual / quote card */}
             <ScrollReveal delay={120}>
-              <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '20px', padding: 'clamp(32px,4vw,52px)', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 0, right: 0, width: '200px', height: '200px', background: 'radial-gradient(circle at top right, rgba(30,61,143,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
-                <div style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(48px,6vw,80px)', color: 'rgba(30,61,143,0.2)', lineHeight: 0.8, marginBottom: '24px', fontWeight: 800 }}>"</div>
-                <blockquote style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(18px,2.2vw,26px)', color: '#fff', lineHeight: 1.35, margin: '0 0 28px', letterSpacing: '-0.015em' }}>
-                  Local businesses deserve the same tools big brands take for granted — without the agency price tag.
-                </blockquote>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                  <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '15px', color: 'var(--silver)' }}>Darrin Singer</span>
-                  <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--dim)' }}>Founder · Detroit, MI</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                {/* TODO: Replace with real founder photo — src="/images/darrin-singer.jpg" */}
+                <div style={{
+                  width: '100%',
+                  maxWidth: '300px',
+                  height: '300px',
+                  margin: '0 auto',
+                  borderRadius: '16px',
+                  border: '2px dashed #2563eb',
+                  background: 'rgba(37,99,235,0.04)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px',
+                }}>
+                  <div style={{ fontSize: '36px', opacity: 0.3 }}>👤</div>
+                  <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(37,99,235,0.6)', textAlign: 'center', padding: '0 20px', lineHeight: 1.6, fontStyle: 'italic' }}>
+                    [ Founder Photo — Darrin Singer ]
+                  </span>
+                </div>
+
+                <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '20px', padding: 'clamp(28px,3.5vw,44px)', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ position: 'absolute', top: 0, right: 0, width: '200px', height: '200px', background: 'radial-gradient(circle at top right, rgba(30,61,143,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+                  <div style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(40px,5vw,64px)', color: 'rgba(30,61,143,0.2)', lineHeight: 0.8, marginBottom: '20px', fontWeight: 800 }}>"</div>
+                  <blockquote style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(16px,2vw,22px)', color: '#fff', lineHeight: 1.35, margin: '0 0 24px', letterSpacing: '-0.015em' }}>
+                    Local businesses deserve the same tools big brands take for granted — without the agency price tag.
+                  </blockquote>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                    <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '15px', color: 'var(--silver)' }}>Darrin Singer</span>
+                    <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--dim)' }}>Founder · Detroit, MI</span>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>

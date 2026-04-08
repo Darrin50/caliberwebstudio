@@ -3,6 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CheckoutButton from "@/components/CheckoutButton";
+import { ScrollReveal, ScrollRevealGroup } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: { absolute: 'Pricing | Caliber Web Studio – Monthly Web & Growth Plans' },
@@ -74,19 +75,25 @@ export default function PricingPage() {
 
           {/* Hero */}
           <div style={{ textAlign: "center", marginBottom: "clamp(56px, 8vw, 96px)", paddingTop: "clamp(120px, 14vw, 160px)" }}>
-            <p className="sec-label fu" style={{ justifyContent: "center" }}>
-              Transparent Pricing
-            </p>
-            <h1 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(44px, 7vw, 80px)", fontWeight: 800, lineHeight: 1.05, color: "var(--text-primary, #fff)", margin: "20px 0 24px", letterSpacing: "-0.03em" }}>
-              Pricing — Simple Monthly Plans
-            </h1>
-            <p className="fu" style={{ fontSize: "clamp(17px, 2vw, 20px)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
-              $0 down. We build it first. You only pay when you love it.
-            </p>
+            <ScrollReveal>
+              <p className="sec-label fu" style={{ justifyContent: "center" }}>
+                Transparent Pricing
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <h1 className="fu" style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(44px, 7vw, 80px)", fontWeight: 800, lineHeight: 1.05, color: "var(--text-primary, #fff)", margin: "20px 0 24px", letterSpacing: "-0.03em" }}>
+                Pricing — Simple Monthly Plans
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={140}>
+              <p className="fu" style={{ fontSize: "clamp(17px, 2vw, 20px)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
+                $0 down. We build it first. You only pay when you love it.
+              </p>
+            </ScrollReveal>
           </div>
 
           {/* Plans */}
-          <div className="pricing-grid">
+          <ScrollRevealGroup className="pricing-grid" stagger={120}>
             {plans.map((plan) => (
               <div key={plan.name} className={`pricing-card${plan.popular ? " pricing-card--popular" : ""}`}>
                 {plan.popular && <div className="popular-badge">Most Popular</div>}
@@ -121,14 +128,17 @@ export default function PricingPage() {
                 <CheckoutButton plan={plan.name.toLowerCase()} className={`pricing-cta${plan.popular ? " pricing-cta--popular" : ""}`}>Get Started</CheckoutButton>
               </div>
             ))}
-          </div>
+          </ScrollRevealGroup>
 
           {/* Feature comparison table */}
           <div style={{ marginTop: "64px", marginBottom: "16px" }}>
-            <h2 style={{ textAlign: "center", fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "36px", letterSpacing: "-0.02em" }}>
-              What&apos;s Included — Full Comparison
-            </h2>
-            <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <ScrollReveal>
+              <h2 style={{ textAlign: "center", fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "36px", letterSpacing: "-0.02em" }}>
+                What&apos;s Included — Full Comparison
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.08)" }}>
               <table className="compare-table">
                 <thead>
                   <tr>
@@ -163,17 +173,21 @@ export default function PricingPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Startup Complete — premium one-time offer */}
           <div style={{ marginTop: "72px" }}>
-            <div style={{ textAlign: "center", marginBottom: "36px" }}>
-              <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#f59e0b", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>One-Time Investment</p>
-              <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "12px", letterSpacing: "-0.01em" }}>Launch Your Entire Business</h2>
-              <p style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>Everything you need to go from idea to fully operational — website, brand, AI systems, and legal setup — delivered in 48 hours.</p>
-            </div>
-            <div className="startup-card">
+            <ScrollReveal>
+              <div style={{ textAlign: "center", marginBottom: "36px" }}>
+                <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#f59e0b", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>One-Time Investment</p>
+                <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "12px", letterSpacing: "-0.01em" }}>Launch Your Entire Business</h2>
+                <p style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>Everything you need to go from idea to fully operational — website, brand, AI systems, and legal setup — delivered in 48 hours.</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={120}>
+              <div className="startup-card">
               <div className="startup-badge">48-Hour Delivery</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }}>
                 <div>
@@ -203,11 +217,13 @@ export default function PricingPage() {
                   ))}
                 </ul>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* FAQ teaser — sends to /faq */}
-          <div style={{ marginTop: "80px", textAlign: "center", padding: "44px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
+          <ScrollReveal>
+            <div style={{ marginTop: "80px", textAlign: "center", padding: "44px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
             <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>Got Questions?</p>
             <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "14px", letterSpacing: "-0.01em" }}>We&apos;ve answered the most common ones.</h2>
             <p style={{ color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7, maxWidth: "460px", margin: "0 auto 28px" }}>Pricing, timelines, ownership, cancellation, and more — all in one place.</p>
@@ -215,7 +231,8 @@ export default function PricingPage() {
               <Link href="/faq" className="btn-chrome" style={{ textDecoration: "none" }}>Browse the Full FAQ</Link>
               <Link href="/contact" className="btn-line" style={{ textDecoration: "none" }}>Talk to a Human</Link>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
         </div>
       </main>

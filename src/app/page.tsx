@@ -5,6 +5,7 @@ import CTA from '@/components/CTA';
 import WorkShowcase from '@/components/WorkShowcase';
 import PhoneMockupScroll from '@/components/PhoneMockupScroll';
 import { HeroScene, ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
+import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 
 /* ─── Shared style tokens ─────────────────────────────────────── */
 const NAVY = 'var(--navy)';
@@ -49,7 +50,8 @@ export default function Home() {
           textAlign: 'center',
         }}
       >
-        <blockquote
+        <ScrollReveal>
+          <blockquote
           style={{
             maxWidth: '760px',
             margin: '0 auto',
@@ -82,6 +84,7 @@ export default function Home() {
             — Darrin Singer, Founder · Caliber Web Studio
           </footer>
         </blockquote>
+        </ScrollReveal>
       </section>
 
       {/* ══ 3. PROBLEM → SOLUTION ════════════════════════════════ */}
@@ -92,28 +95,33 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL, color: NAVY }}>
-            <span style={SEC_LABEL_LINE} />
-            The Problem
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL, color: NAVY }}>
+              <span style={SEC_LABEL_LINE} />
+              The Problem
+            </div>
+          </ScrollReveal>
 
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
-              color: 'var(--silver)',
-              marginBottom: 'clamp(40px, 5vw, 64px)',
-              maxWidth: '700px',
-            }}
-          >
-            Most Detroit businesses are invisible online.{' '}
-            <span style={{ color: BLUE }}>We fix that.</span>
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: 'var(--silver)',
+                marginBottom: 'clamp(40px, 5vw, 64px)',
+                maxWidth: '700px',
+              }}
+            >
+              Most Detroit businesses are invisible online.{' '}
+              <span style={{ color: BLUE }}>We fix that.</span>
+            </h2>
+          </ScrollReveal>
 
-          <div className="ps-grid">
+          <ScrollReveal delay={160}>
+            <div className="ps-grid">
             {/* Problems */}
             <div>
               <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Problem</p>
@@ -160,7 +168,8 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
 
         <style>{`
@@ -182,7 +191,8 @@ export default function Home() {
           borderBottom: '1px solid rgba(255,255,255,0.05)',
         }}
       >
-        <div className="stats-bar" style={{ maxWidth: '960px', margin: '0 auto' }}>
+        <ScrollReveal>
+          <div className="stats-bar" style={{ maxWidth: '960px', margin: '0 auto' }}>
           {[
             { value: '48hr', label: 'Average Delivery' },
             { value: '$0 Down', label: 'To Start' },
@@ -205,7 +215,8 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        </ScrollReveal>
         <style>{`
           .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); }
           @media (max-width: 600px) {
@@ -226,12 +237,15 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL }}>
-            <span style={SEC_LABEL_LINE} />
-            How It Works
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL }}>
+              <span style={SEC_LABEL_LINE} />
+              How It Works
+            </div>
+          </ScrollReveal>
 
-          <h2
+          <ScrollReveal delay={80}>
+            <h2
             style={{
               fontFamily: "'Syne', sans-serif",
               fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
@@ -245,9 +259,10 @@ export default function Home() {
           >
             Simple process.<br />
             <span style={{ color: 'var(--dim)' }}>Serious results.</span>
-          </h2>
+            </h2>
+          </ScrollReveal>
 
-          <div className="hiw-grid">
+          <ScrollRevealGroup className="hiw-grid" stagger={150}>
             {[
               {
                 n: '01',
@@ -278,7 +293,7 @@ export default function Home() {
                 </p>
               </div>
             ))}
-          </div>
+          </ScrollRevealGroup>
         </div>
         <style>{`
           .hiw-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(40px,6vw,72px); }
@@ -299,29 +314,35 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL }}>
-            <span style={{ ...SEC_LABEL_LINE }} />
-            Our Work
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL }}>
+              <span style={{ ...SEC_LABEL_LINE }} />
+              Our Work
+            </div>
+          </ScrollReveal>
 
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--text-primary)',
-              marginBottom: '16px',
-              maxWidth: '640px',
-            }}
-          >
-            Our Work Speaks for Itself
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.025em',
+                color: 'var(--text-primary)',
+                marginBottom: '16px',
+                maxWidth: '640px',
+              }}
+            >
+              Our Work Speaks for Itself
+            </h2>
+          </ScrollReveal>
 
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '17px', lineHeight: 1.7, color: 'rgba(208,216,224,0.55)', marginBottom: 'clamp(40px, 5vw, 56px)', maxWidth: '520px' }}>
+          <ScrollReveal delay={120}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '17px', lineHeight: 1.7, color: 'rgba(208,216,224,0.55)', marginBottom: 'clamp(40px, 5vw, 56px)', maxWidth: '520px' }}>
             Real businesses. Real results. Every project is built to rank, convert, and grow.
-          </p>
+            </p>
+          </ScrollReveal>
 
           <WorkShowcase />
         </div>
@@ -339,27 +360,31 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL }}>
-            <span style={SEC_LABEL_LINE} />
-            Client Testimonials
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL }}>
+              <span style={SEC_LABEL_LINE} />
+              Client Testimonials
+            </div>
+          </ScrollReveal>
 
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--silver)',
-              marginBottom: 'clamp(40px, 5vw, 64px)',
-              maxWidth: '520px',
-            }}
-          >
-            Don&apos;t take our word for it.
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.025em',
+                color: 'var(--silver)',
+                marginBottom: 'clamp(40px, 5vw, 64px)',
+                maxWidth: '520px',
+              }}
+            >
+              Don&apos;t take our word for it.
+            </h2>
+          </ScrollReveal>
 
-          <div className="testi-grid">
+          <ScrollRevealGroup className="testi-grid" stagger={150}>
             {[
               {
                 quote: "Caliber built us a site in 48 hours that I'm genuinely proud to hand to customers. We went from invisible on Google to ranking for 'auto glass Detroit' in two months. The phone hasn't stopped.",
@@ -410,7 +435,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </ScrollRevealGroup>
         </div>
         <style>{`
           .testi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: clamp(16px,2.5vw,28px); }

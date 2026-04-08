@@ -191,381 +191,375 @@ function HeroPhoto({ b, height = 170 }: { b: Biz; height?: number }) {
   );
 }
 
-// ══ HOME SCREENS — unique layout per business ═════════════════════════════════
+// ══ HOME SCREENS — unique layout per business, photo fills full phone ══════════
 
-// AUTO GLASS — emergency-first: call strip + tap-to-select repair type
+// AUTO GLASS — photo bg, frosted-glass cards overlaid
 function GlassHome({ b }: { b: Biz }) {
   return (
-    <div style={{ height: '100%', background: '#f8fafc', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      {/* Dark header band */}
-      <div style={{ background: '#0f1e35', padding: '8px 12px 10px', flexShrink: 0 }}>
-        <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
-        <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: '1.5px' }}>Same-Day · Guaranteed</div>
-      </div>
-      {/* Emergency call strip */}
-      <div style={{ background: b.accent, padding: '9px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-        <div>
-          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.75)', letterSpacing: '0.14em', textTransform: 'uppercase' }}>Emergency line</div>
-          <div style={{ fontSize: '11px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.1 }}>{b.phone}</div>
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* navy gradient scrim — darker at top and bottom */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,20,40,0.82) 0%, rgba(10,20,40,0.35) 40%, rgba(10,20,40,0.75) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand header */}
+        <div style={{ padding: '6px 12px 4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: '1.5px' }}>Same-Day · Guaranteed</div>
+          </div>
+          <div style={{ background: 'rgba(255,255,255,0.12)', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', border: '1px solid rgba(255,255,255,0.2)' }}>☰</div>
         </div>
-        <div style={{ background: '#fff', borderRadius: '50%', width: '26px', height: '26px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>📞</div>
-      </div>
-      {/* Photo */}
-      <div style={{ height: '100px', position: 'relative', overflow: 'hidden', flexShrink: 0 }}>
-        <img src={b.heroPhoto} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.6))' }} />
-        <div style={{ position: 'absolute', bottom: '8px', left: '10px', background: '#fff', borderRadius: '3px', padding: '3px 7px', fontSize: '5.5px', fontWeight: 700, color: '#0f1e35', letterSpacing: '0.06em' }}>⚡ 1-HR RESPONSE</div>
-      </div>
-      {/* Select repair type */}
-      <div style={{ padding: '8px 12px 6px', flexShrink: 0 }}>
-        <div style={{ fontSize: '5px', color: '#6b7280', letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '6px', fontFamily: 'monospace' }}>Select Repair Type</div>
-        <div style={{ display: 'flex', gap: '5px' }}>
-          {['Windshield', 'Chip Fix', 'Side Glass'].map((t, i) => (
-            <div key={t} style={{ flex: 1, padding: '7px 4px', background: i === 0 ? b.accent : '#f1f5f9', borderRadius: '4px', textAlign: 'center', fontSize: '5.5px', fontWeight: 700, color: i === 0 ? '#fff' : '#374151', border: i === 0 ? 'none' : '1px solid #e2e8f0' }}>{t}</div>
-          ))}
+        {/* Hero headline floats in middle */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 12px' }}>
+          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.6)', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+            <span style={{ width: '10px', height: '0.5px', background: b.accent, display: 'inline-block' }} />Detroit Metro
+          </div>
+          <div style={{ fontSize: '22px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.03em', textShadow: '0 2px 16px rgba(0,0,0,0.5)', marginBottom: '8px' }}>
+            Same-Day<br />Glass Repair
+          </div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', padding: '2.5px 8px', background: 'rgba(255,255,255,0.12)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.2)', width: 'fit-content', marginBottom: '14px' }}>
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e' }} />
+            <span style={{ fontSize: '4.5px', color: '#fff', fontWeight: 600 }}>⚡ 1-Hour Response</span>
+          </div>
+          {/* Repair type selector */}
+          <div style={{ display: 'flex', gap: '5px', marginBottom: '8px' }}>
+            {['Windshield', 'Chip Fix', 'Side Glass'].map((t, i) => (
+              <div key={t} style={{ flex: 1, padding: '6px 4px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.1)', borderRadius: '4px', textAlign: 'center', fontSize: '5px', fontWeight: 700, color: '#fff', border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)' }}>{t}</div>
+            ))}
+          </div>
         </div>
-      </div>
-      {/* Trust row */}
-      <div style={{ padding: '6px 12px', display: 'flex', gap: '6px', flexShrink: 0 }}>
-        {['Licensed & Bonded', 'Lifetime Warranty', 'Mobile Service'].map(t => (
-          <div key={t} style={{ flex: 1, padding: '4px 3px', background: '#f1f5f9', borderRadius: '3px', textAlign: 'center', fontSize: '4.5px', fontWeight: 600, color: '#374151' }}>{t}</div>
-        ))}
+        {/* Emergency call strip pinned to bottom */}
+        <div style={{ background: b.accent, padding: '9px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+          <div>
+            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.8)', letterSpacing: '0.14em', textTransform: 'uppercase' }}>Emergency Line · 24/7</div>
+            <div style={{ fontSize: '11px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.1 }}>{b.phone}</div>
+          </div>
+          <div style={{ background: '#fff', borderRadius: '50%', width: '26px', height: '26px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>📞</div>
+        </div>
       </div>
     </div>
   );
 }
 
-// BARBERSHOP — booking-first: next available slot + barber cards
+// BARBERSHOP — full bleed photo, booking card + barber chips overlaid
 function BarberHome({ b }: { b: Biz }) {
   return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <div style={{ padding: '8px 12px 6px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
-        <div>
-          <div style={{ fontSize: '9px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Midtown Detroit</div>
-        </div>
-        <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.08em' }}>TUE–SAT</div>
-      </div>
-      {/* Next available */}
-      <div style={{ margin: '0 12px 10px', background: 'rgba(255,255,255,0.04)', border: `1px solid ${b.accent}55`, borderLeft: `3px solid ${b.accent}`, borderRadius: '4px', padding: '8px 10px', flexShrink: 0 }}>
-        <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.16em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '4px' }}>Next Available</div>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-          <span style={{ fontSize: '18px', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1 }}>2:30</span>
-          <span style={{ fontSize: '7px', fontWeight: 600, color: 'rgba(255,255,255,0.5)' }}>PM · Today</span>
-        </div>
-        <div style={{ marginTop: '6px', padding: '5px 0', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '5.5px', fontWeight: 700, color: '#000', letterSpacing: '0.1em' }}>BOOK THIS SLOT →</div>
-      </div>
-      {/* Barbers */}
-      <div style={{ padding: '0 12px', flexShrink: 0 }}>
-        <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '6px' }}>Our Barbers</div>
-        <div style={{ display: 'flex', gap: '7px', marginBottom: '10px' }}>
-          {[['M', 'Marcus', 'Cuts & Fades'], ['D', 'DeShawn', 'Shave Specialist'], ['R', 'Rico', 'Beard Art']].map(([i, n, s]) => (
-            <div key={n} style={{ flex: 1, background: 'rgba(255,255,255,0.04)', borderRadius: '6px', padding: '7px 5px', textAlign: 'center', border: '1px solid rgba(255,255,255,0.06)' }}>
-              <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: b.accent, margin: '0 auto 4px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '8px', fontWeight: 700, color: '#000' }}>{i}</div>
-              <div style={{ fontSize: '5.5px', fontWeight: 700, color: '#fff', marginBottom: '1px' }}>{n}</div>
-              <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.4)' }}>{s}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Service chips */}
-      <div style={{ padding: '0 12px', flexShrink: 0 }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
-          {b.services.map(s => (
-            <div key={s} style={{ padding: '3px 7px', background: 'rgba(255,255,255,0.06)', borderRadius: '20px', fontSize: '5px', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.08)' }}>{s}</div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// LANDSCAPING — portfolio grid + quote CTA
-function LandHome({ b }: { b: Biz }) {
-  const colors = ['#c8e6c9','#a5d6a7','#81c784','#66bb6a'];
-  return (
-    <div style={{ height: '100%', background: '#fafafa', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <div style={{ padding: '8px 12px 6px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0, borderBottom: '1px solid #e5e7eb' }}>
-        <div>
-          <div style={{ fontSize: '8px', fontWeight: 800, color: '#0f0f0f', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Landscape Architecture</div>
-        </div>
-        <div style={{ padding: '4px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Get Quote</div>
-      </div>
-      {/* Season badge + headline */}
-      <div style={{ padding: '8px 12px 6px', flexShrink: 0 }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', padding: '2px 7px', background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '20px', marginBottom: '5px' }}>
-          <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: b.accent }} />
-          <span style={{ fontSize: '4.5px', color: b.accent, fontWeight: 600 }}>Spring bookings open</span>
-        </div>
-        <div style={{ fontSize: '13px', fontWeight: 900, color: '#0f0f0f', letterSpacing: '-0.025em', lineHeight: 1.1 }}>Elevated<br />Outdoor Living</div>
-      </div>
-      {/* 2×2 project grid */}
-      <div style={{ padding: '4px 12px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px', flexShrink: 0 }}>
-        {[['Bloomfield Estate','Design'],['Ann Arbor Home','Lawn Care'],['Grosse Pointe','Hardscape'],['Birmingham','Seasonal']].map(([name, cat], i) => (
-          <div key={name} style={{ height: '60px', borderRadius: '6px', overflow: 'hidden', position: 'relative', background: colors[i] }}>
-            <img src={b.heroPhoto} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.65))' }} />
-            <div style={{ position: 'absolute', bottom: '5px', left: '6px' }}>
-              <div style={{ fontSize: '5px', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>{name}</div>
-              <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.7)' }}>{cat}</div>
-            </div>
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Deep dark gradient — clear top, heavy bottom */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(13,11,8,0.65) 0%, rgba(13,11,8,0.2) 30%, rgba(13,11,8,0.88) 70%, rgba(13,11,8,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand top */}
+        <div style={{ padding: '6px 12px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '9px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Midtown Detroit</div>
           </div>
-        ))}
-      </div>
-      {/* CTA */}
-      <div style={{ margin: '6px 12px 0', padding: '7px 12px', background: b.accent, borderRadius: '5px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-        <div>
-          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.75)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Free Consultation</div>
-          <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff' }}>Request Your Custom Quote</div>
+          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.08em' }}>TUE–SAT</div>
         </div>
-        <div style={{ fontSize: '10px', color: '#fff' }}>›</div>
+        {/* Spacer pushes content to bottom */}
+        <div style={{ flex: 1 }} />
+        {/* Next available slot */}
+        <div style={{ margin: '0 12px 8px', background: 'rgba(255,255,255,0.06)', border: `1px solid ${b.accent}55`, borderLeft: `3px solid ${b.accent}`, borderRadius: '5px', padding: '8px 10px', backdropFilter: 'blur(8px)' }}>
+          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.16em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '3px' }}>Next Available</div>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '6px' }}>
+            <span style={{ fontSize: '18px', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1 }}>2:30</span>
+            <span style={{ fontSize: '7px', fontWeight: 600, color: 'rgba(255,255,255,0.5)' }}>PM · Today</span>
+          </div>
+          <div style={{ padding: '5px 0', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '5.5px', fontWeight: 700, color: '#000', letterSpacing: '0.1em' }}>BOOK THIS SLOT →</div>
+        </div>
+        {/* Barber avatars */}
+        <div style={{ padding: '0 12px 8px' }}>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            {[['M','Marcus','Cuts'],['D','DeShawn','Shave'],['R','Rico','Beard']].map(([i, n, s]) => (
+              <div key={n} style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '6px 4px', textAlign: 'center', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(6px)' }}>
+                <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: b.accent, margin: '0 auto 3px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '8px', fontWeight: 700, color: '#000' }}>{i}</div>
+                <div style={{ fontSize: '5px', fontWeight: 700, color: '#fff' }}>{n}</div>
+                <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.45)' }}>{s}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Service chips */}
+        <div style={{ padding: '0 12px 10px', display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+          {b.services.map(s => (
+            <div key={s} style={{ padding: '3px 7px', background: 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '4.5px', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.1)' }}>{s}</div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
-// LUXURY SALON — editorial split layout
+// LANDSCAPING — full bleed photo, quote CTA + project labels overlaid
+function LandHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Light scrim at top, strong dark at bottom */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(12,42,20,0.7) 0%, rgba(12,42,20,0.15) 35%, rgba(12,42,20,0.8) 70%, rgba(12,42,20,0.95) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand header */}
+        <div style={{ padding: '6px 12px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Landscape Architecture</div>
+          </div>
+          <div style={{ padding: '4px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Get Quote</div>
+        </div>
+        {/* Spacer */}
+        <div style={{ flex: 1 }} />
+        {/* Season badge + headline */}
+        <div style={{ padding: '0 12px 8px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', padding: '2.5px 7px', background: 'rgba(255,255,255,0.12)', border: `1px solid ${b.accent}66`, borderRadius: '20px', marginBottom: '6px', backdropFilter: 'blur(4px)' }}>
+            <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: b.accent }} />
+            <span style={{ fontSize: '4.5px', color: '#fff', fontWeight: 600 }}>Spring bookings open</span>
+          </div>
+          <div style={{ fontSize: '20px', fontWeight: 900, color: '#fff', letterSpacing: '-0.025em', lineHeight: 1.05, marginBottom: '10px', textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>Elevated<br />Outdoor Living</div>
+          {/* Project labels row */}
+          <div style={{ display: 'flex', gap: '4px', marginBottom: '8px' }}>
+            {['Design','Lawn Care','Hardscape','Seasonal'].map((cat) => (
+              <div key={cat} style={{ flex: 1, padding: '4px 3px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', textAlign: 'center', fontSize: '4px', fontWeight: 600, color: '#fff', border: '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)' }}>{cat}</div>
+            ))}
+          </div>
+          {/* CTA */}
+          <div style={{ padding: '7px 12px', background: b.accent, borderRadius: '5px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div>
+              <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.8)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Free Consultation</div>
+              <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff' }}>Request Your Custom Quote</div>
+            </div>
+            <div style={{ fontSize: '12px', color: '#fff' }}>›</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// LUXURY SALON — full bleed photo, editorial overlay
 function SalonHome({ b }: { b: Biz }) {
   return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <div style={{ padding: '7px 12px 6px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
-        <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff', letterSpacing: '0.1em' }}>{b.name.toUpperCase()}</div>
-        <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Royal Oak · Est 2017</div>
-      </div>
-      {/* Editorial split */}
-      <div style={{ display: 'flex', height: '140px', flexShrink: 0, margin: '0 12px 8px', gap: '7px' }}>
-        {/* Left: featured treatment card */}
-        <div style={{ flex: 1, background: 'rgba(255,255,255,0.04)', borderRadius: '7px', padding: '10px 9px', border: '1px solid rgba(255,255,255,0.07)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-          <div>
-            <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.16em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '4px' }}>Featured</div>
-            <div style={{ fontSize: '11px', fontWeight: 900, color: '#fff', lineHeight: 1.1, letterSpacing: '-0.02em' }}>The Art<br />of Beauty</div>
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Diagonal editorial gradient */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgba(16,12,10,0.85) 0%, rgba(16,12,10,0.3) 45%, rgba(16,12,10,0.9) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        <div style={{ padding: '6px 12px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff', letterSpacing: '0.1em' }}>{b.name.toUpperCase()}</div>
+          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Royal Oak · Est 2017</div>
+        </div>
+        {/* Big headline in the middle */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 12px' }}>
+          <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px' }}>Featured Experience</div>
+          <div style={{ fontSize: '24px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.03em', textShadow: '0 2px 20px rgba(0,0,0,0.5)', marginBottom: '5px' }}>The Art<br />of Beauty</div>
+          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.6)', marginBottom: '10px', lineHeight: 1.6 }}>Luxury color · Keratin · Signature Blowout</div>
+          <div style={{ padding: '5px 10px', background: b.accent, borderRadius: '3px', fontSize: '5px', fontWeight: 700, color: '#000', display: 'inline-block', width: 'fit-content' }}>Reserve a Session →</div>
+        </div>
+        {/* Services + rating at bottom */}
+        <div style={{ padding: '0 12px 8px' }}>
+          <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+            {b.services.map((s, i) => (
+              <div key={s} style={{ padding: '3.5px 6px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '4.5px', fontWeight: 600, color: i === 0 ? '#000' : 'rgba(255,255,255,0.7)', whiteSpace: 'nowrap', border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(4px)' }}>{s}</div>
+            ))}
           </div>
-          <div>
-            <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.5)', marginBottom: '5px', lineHeight: 1.5 }}>Luxury color · Keratin · Blowout</div>
-            <div style={{ padding: '4px 8px', background: b.accent, borderRadius: '3px', fontSize: '5px', fontWeight: 700, color: b.accent === '#c9a98a' ? '#000' : '#fff', display: 'inline-block' }}>Reserve →</div>
+          <div style={{ padding: '6px 10px', background: 'rgba(255,255,255,0.07)', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backdropFilter: 'blur(6px)' }}>
+            <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.6)' }}>Royal Oak's #1 Salon</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+              <span style={{ color: '#f59e0b', fontSize: '7px' }}>★★★★★</span>
+              <span style={{ fontSize: '5px', color: 'rgba(255,255,255,0.5)' }}>4.9</span>
+            </div>
           </div>
-        </div>
-        {/* Right: photo */}
-        <div style={{ width: '75px', borderRadius: '7px', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
-          <img src={b.heroPhoto} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to bottom, ${b.accent}33, transparent)` }} />
-        </div>
-      </div>
-      {/* Horizontal service chips */}
-      <div style={{ padding: '0 12px 8px', flexShrink: 0 }}>
-        <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '6px' }}>Services</div>
-        <div style={{ display: 'flex', gap: '4px' }}>
-          {b.services.map((s, i) => (
-            <div key={s} style={{ padding: '4px 7px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.05)', borderRadius: '20px', fontSize: '5px', fontWeight: 600, color: i === 0 ? '#000' : 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.08)' }}>{s}</div>
-          ))}
-        </div>
-      </div>
-      {/* Rating strip */}
-      <div style={{ margin: '0 12px', padding: '7px 10px', background: 'rgba(255,255,255,0.03)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-        <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.5)' }}>Royal Oak's #1 Salon</div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
-          <span style={{ color: '#f59e0b', fontSize: '7px', letterSpacing: '0.5px' }}>★★★★★</span>
-          <span style={{ fontSize: '5px', color: 'rgba(255,255,255,0.4)' }}>4.9</span>
         </div>
       </div>
     </div>
   );
 }
 
-// FITNESS STUDIO — today's class schedule
+// FITNESS STUDIO — full bleed photo, stats + schedule overlaid
 function FitnessHome({ b }: { b: Biz }) {
-  const classes = [['6:00 AM','HIIT Circuit','Marcus T.','High'],['8:30 AM','Power Yoga','Alicia M.','Med'],['12:00 PM','Strength & Lift','Dre Williams','High']];
+  const classes = [['6:00 AM','HIIT Circuit','High'],['8:30 AM','Power Yoga','Med'],['12:00 PM','Strength & Lift','High']];
   return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      {/* Header with photo */}
-      <div style={{ height: '90px', position: 'relative', flexShrink: 0, overflow: 'hidden' }}>
-        <img src={b.heroPhoto} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(5,5,5,0.6), rgba(5,5,5,0.85))' }} />
-        <div style={{ position: 'absolute', inset: 0, padding: '10px 12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div>
-              <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
-              <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Southfield, MI</div>
-            </div>
-            <div style={{ padding: '3px 7px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Join Today</div>
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Heavy dark overlay, lighter in middle so photo shows through */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(5,5,5,0.8) 0%, rgba(5,5,5,0.25) 35%, rgba(5,5,5,0.85) 65%, rgba(5,5,5,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand + join button */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div>
+            <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Southfield, MI</div>
           </div>
-          <div style={{ display: 'flex', gap: '10px' }}>
-            {[['240+', 'Members'], ['18', 'Classes/Wk'], ['6', 'Trainers']].map(([v, l]) => (
+          <div style={{ padding: '3.5px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Join Today</div>
+        </div>
+        {/* Stats — float in the clear window */}
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', padding: '0 14px' }}>
+          <div style={{ display: 'flex', gap: '16px' }}>
+            {[['240+','Members'],['18','Classes/Wk'],['6','Trainers']].map(([v, l]) => (
               <div key={l}>
-                <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
-                <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{l}</div>
+                <div style={{ fontSize: '16px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
+                <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: '2px' }}>{l}</div>
               </div>
             ))}
           </div>
         </div>
-      </div>
-      {/* Today's schedule */}
-      <div style={{ padding: '8px 12px', flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px', flexShrink: 0 }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Today's Classes</div>
-          <div style={{ fontSize: '4.5px', color: b.accent }}>View All →</div>
-        </div>
-        {classes.map(([time, name, trainer, intensity]) => (
-          <div key={name} style={{ padding: '6px 8px', background: 'rgba(255,255,255,0.04)', borderRadius: '5px', marginBottom: '5px', display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <div style={{ width: '32px', flexShrink: 0, textAlign: 'center' }}>
-              <div style={{ fontSize: '6px', fontWeight: 700, color: b.accent, lineHeight: 1 }}>{time.split(' ')[0]}</div>
-              <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.4)' }}>{time.split(' ')[1]}</div>
-            </div>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>{name}</div>
-              <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.45)', marginTop: '1px' }}>{trainer}</div>
-            </div>
-            <div style={{ padding: '2px 5px', background: intensity === 'High' ? `${b.accent}33` : 'rgba(255,255,255,0.07)', borderRadius: '3px', fontSize: '4px', fontWeight: 700, color: intensity === 'High' ? b.accent : 'rgba(255,255,255,0.5)', letterSpacing: '0.06em' }}>{intensity}</div>
+        {/* Today's classes */}
+        <div style={{ padding: '0 12px 10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5px' }}>
+            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Today's Classes</div>
+            <div style={{ fontSize: '4.5px', color: b.accent }}>View All →</div>
           </div>
-        ))}
+          {classes.map(([time, name, intensity]) => (
+            <div key={name} style={{ padding: '5px 8px', background: 'rgba(255,255,255,0.06)', borderRadius: '4px', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid rgba(255,255,255,0.07)', backdropFilter: 'blur(6px)' }}>
+              <div style={{ fontSize: '5.5px', fontWeight: 700, color: b.accent, width: '30px', flexShrink: 0 }}>{time}</div>
+              <div style={{ flex: 1, fontSize: '6px', fontWeight: 700, color: '#fff' }}>{name}</div>
+              <div style={{ padding: '1.5px 4px', background: intensity === 'High' ? `${b.accent}40` : 'rgba(255,255,255,0.08)', borderRadius: '3px', fontSize: '3.5px', fontWeight: 700, color: intensity === 'High' ? b.accent : 'rgba(255,255,255,0.5)', letterSpacing: '0.06em' }}>{intensity}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
-// FINE DINING — reservation picker + chef's dish
+// FINE DINING — full bleed photo, reservation picker at bottom
 function RestoHome({ b }: { b: Biz }) {
   return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      {/* Photo hero with restaurant branding */}
-      <div style={{ height: '110px', position: 'relative', flexShrink: 0, overflow: 'hidden' }}>
-        <img src={b.heroPhoto} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(44,28,8,0.5) 0%, rgba(8,5,3,0.75) 100%)' }} />
-        <div style={{ position: 'absolute', inset: 0, padding: '10px 12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <div>
-              <div style={{ fontSize: '9px', fontWeight: 800, color: '#fff', letterSpacing: '0.08em', fontStyle: 'italic' }}>{b.name}</div>
-              <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: '1px' }}>Corktown · Detroit</div>
-            </div>
-            <div style={{ padding: '3px 7px', background: 'rgba(255,255,255,0.12)', borderRadius: '20px', fontSize: '4.5px', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)' }}>Menu ↗</div>
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Warm dark gradient */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(12,8,3,0.75) 0%, rgba(12,8,3,0.1) 35%, rgba(12,8,3,0.85) 65%, rgba(12,8,3,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand + menu link */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div>
+            <div style={{ fontSize: '10px', fontWeight: 800, color: '#fff', letterSpacing: '0.08em', fontStyle: 'italic' }}>{b.name}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: '1px' }}>Corktown · Detroit</div>
           </div>
-          <div style={{ display: 'flex', gap: '3px' }}>
-            {['Tue–Sun', '5PM–11PM', 'Reservations'].map(t => (
-              <div key={t} style={{ padding: '2px 5px', background: 'rgba(0,0,0,0.4)', borderRadius: '2px', fontSize: '4px', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.1)' }}>{t}</div>
+          <div style={{ padding: '3px 7px', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '4.5px', color: '#fff', border: '1px solid rgba(255,255,255,0.18)' }}>Menu ↗</div>
+        </div>
+        {/* Spacer */}
+        <div style={{ flex: 1 }} />
+        {/* Info badges floating above lower panel */}
+        <div style={{ padding: '0 12px 6px', display: 'flex', gap: '3px' }}>
+          {['Tue–Sun','5PM–11PM','Reservations'].map(t => (
+            <div key={t} style={{ padding: '2px 5px', background: 'rgba(0,0,0,0.45)', borderRadius: '2px', fontSize: '4px', color: 'rgba(255,255,255,0.75)', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(4px)' }}>{t}</div>
+          ))}
+        </div>
+        {/* Reservation picker */}
+        <div style={{ padding: '8px 12px', background: 'rgba(12,8,3,0.8)', backdropFilter: 'blur(12px)', borderTop: `1px solid ${b.accent}44` }}>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px' }}>Tonight's Reservations</div>
+          <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+            {['7:00','7:30','8:00','8:30'].map((t, i) => (
+              <div key={t} style={{ flex: 1, padding: '5px 2px', background: i === 1 ? b.accent : 'rgba(255,255,255,0.07)', borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: i === 1 ? '#000' : 'rgba(255,255,255,0.7)', border: i === 1 ? 'none' : '1px solid rgba(255,255,255,0.1)' }}>{t}</div>
+            ))}
+          </div>
+          <div style={{ padding: '6px 10px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#000', letterSpacing: '0.06em' }}>Reserve Table for 2 →</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// HOME SERVICES — full bleed photo, emergency CTA + service grid overlaid
+function PlumbHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Navy gradient scrim */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(12,30,50,0.88) 0%, rgba(12,30,50,0.3) 35%, rgba(12,30,50,0.88) 65%, rgba(12,30,50,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Top bar */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '7.5px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Licensed & Bonded · Detroit Metro</div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e' }} />
+            <span style={{ fontSize: '4.5px', color: '#22c55e', fontWeight: 600 }}>Available Now</span>
+          </div>
+        </div>
+        {/* Spacer */}
+        <div style={{ flex: 1 }} />
+        {/* Emergency call banner */}
+        <div style={{ margin: '0 12px 8px', padding: '11px 12px', background: b.accent, borderRadius: '8px', textAlign: 'center', boxShadow: `0 4px 20px ${b.accent}66`, backdropFilter: 'blur(4px)' }}>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '3px' }}>Emergency Service · 24/7</div>
+          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1 }}>{b.phone}</div>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.75)', marginTop: '3px' }}>Avg response: 47 minutes</div>
+        </div>
+        {/* Service grid */}
+        <div style={{ padding: '0 12px 6px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', marginBottom: '6px' }}>
+            {[['🚿','Emergency Leak'],['🪠','Drain Clog'],['🔧','Pipe Repair'],['🛁','Water Heater']].map(([icon, label]) => (
+              <div key={label} style={{ padding: '6px 7px', background: 'rgba(255,255,255,0.08)', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.12)', display: 'flex', alignItems: 'center', gap: '5px', backdropFilter: 'blur(6px)' }}>
+                <span style={{ fontSize: '9px' }}>{icon}</span>
+                <span style={{ fontSize: '5px', fontWeight: 600, color: '#fff' }}>{label}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            {['⭐ 4.9 Rating','2,100+ Jobs','Free Estimate'].map(t => (
+              <div key={t} style={{ flex: 1, padding: '3.5px 2px', background: 'rgba(255,255,255,0.07)', borderRadius: '3px', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center', fontSize: '4px', fontWeight: 600, color: 'rgba(255,255,255,0.8)', backdropFilter: 'blur(4px)' }}>{t}</div>
             ))}
           </div>
         </div>
       </div>
-      {/* Reservation time picker */}
-      <div style={{ padding: '8px 12px', flexShrink: 0 }}>
-        <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '6px' }}>Tonight's Reservations</div>
-        <div style={{ display: 'flex', gap: '5px', marginBottom: '8px' }}>
-          {['7:00', '7:30', '8:00', '8:30'].map((t, i) => (
-            <div key={t} style={{ flex: 1, padding: '5px 3px', background: i === 1 ? b.accent : 'rgba(255,255,255,0.06)', borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: i === 1 ? '#000' : 'rgba(255,255,255,0.7)', border: i === 1 ? 'none' : '1px solid rgba(255,255,255,0.08)' }}>{t}</div>
-          ))}
-        </div>
-        <div style={{ padding: '6px 10px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#000', letterSpacing: '0.06em' }}>Reserve Table for 2 →</div>
-      </div>
-      {/* Chef's special */}
-      <div style={{ margin: '0 12px', padding: '7px 9px', background: 'rgba(255,255,255,0.04)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-        <div style={{ fontSize: '16px' }}>🍽️</div>
-        <div>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Chef's Special Tonight</div>
-          <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#fff', marginTop: '1px' }}>Braised Short Rib · Truffle Jus</div>
-          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.45)', marginTop: '1px' }}>Paired with Napa Valley Cab</div>
-        </div>
-      </div>
     </div>
   );
 }
 
-// HOME SERVICES — giant emergency CTA + service cards
-function PlumbHome({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#f0f7ff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      {/* Top bar */}
-      <div style={{ background: '#0c1e32', padding: '7px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
-        <div>
-          <div style={{ fontSize: '7.5px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
-          <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Detroit Metro · Licensed & Bonded</div>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
-          <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e' }} />
-          <span style={{ fontSize: '4.5px', color: '#22c55e', fontWeight: 600 }}>Available Now</span>
-        </div>
-      </div>
-      {/* Emergency call banner */}
-      <div style={{ margin: '10px 12px 8px', padding: '12px', background: b.accent, borderRadius: '8px', textAlign: 'center', flexShrink: 0, boxShadow: `0 4px 16px ${b.accent}55` }}>
-        <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.8)', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '3px' }}>Emergency Plumbing · 24/7</div>
-        <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1 }}>{b.phone}</div>
-        <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.75)', marginTop: '4px' }}>Avg response: 47 minutes</div>
-      </div>
-      {/* Quick service selector */}
-      <div style={{ padding: '0 12px', flexShrink: 0 }}>
-        <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px' }}>What do you need?</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px', marginBottom: '8px' }}>
-          {[['🚿','Emergency Leak'],['🪠','Drain Clog'],['🔧','Pipe Repair'],['🛁','Water Heater']].map(([icon, label]) => (
-            <div key={label} style={{ padding: '7px 8px', background: '#fff', borderRadius: '5px', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: '5px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
-              <span style={{ fontSize: '10px' }}>{icon}</span>
-              <span style={{ fontSize: '5.5px', fontWeight: 600, color: '#1e293b' }}>{label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Trust row */}
-      <div style={{ padding: '0 12px', display: 'flex', gap: '5px', flexShrink: 0 }}>
-        {['⭐ 4.9 Rating', '2,100+ Jobs', 'Free Estimate'].map(t => (
-          <div key={t} style={{ flex: 1, padding: '4px 3px', background: '#fff', borderRadius: '4px', border: '1px solid #e2e8f0', textAlign: 'center', fontSize: '4.5px', fontWeight: 600, color: '#374151' }}>{t}</div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// COSMETIC DENTISTRY — before/after + free consult banner
+// COSMETIC DENTISTRY — full bleed photo, before/after + consult CTA overlaid
 function DentalHome({ b }: { b: Biz }) {
   return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      {/* Clean header */}
-      <div style={{ padding: '7px 12px 6px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0, borderBottom: '1px solid #f1f5f9' }}>
-        <div>
-          <div style={{ fontSize: '7px', fontWeight: 800, color: '#0f172a', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
-          <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Birmingham, MI · Smile Aesthetics</div>
-        </div>
-        <div style={{ padding: '3px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Free Consult</div>
-      </div>
-      {/* Before/After panels */}
-      <div style={{ padding: '8px 12px 6px', flexShrink: 0 }}>
-        <div style={{ fontSize: '4.5px', color: '#94a3b8', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px' }}>Real Patient Results</div>
-        <div style={{ display: 'flex', gap: '4px', height: '90px', marginBottom: '6px' }}>
-          <div style={{ flex: 1, borderRadius: '6px', overflow: 'hidden', position: 'relative', background: '#f1f5f9' }}>
-            <img src={b.heroPhoto} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(80%) brightness(0.85)' }} />
-            <div style={{ position: 'absolute', bottom: '5px', left: '5px', background: 'rgba(0,0,0,0.55)', padding: '2px 5px', borderRadius: '2px', fontSize: '4.5px', fontWeight: 700, color: '#fff' }}>BEFORE</div>
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Clean teal-tinted gradient */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(5,42,32,0.82) 0%, rgba(5,42,32,0.2) 35%, rgba(5,42,32,0.88) 65%, rgba(5,42,32,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Header */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Birmingham, MI · Smile Aesthetics</div>
           </div>
-          <div style={{ width: '1.5px', background: '#e2e8f0', borderRadius: '1px', flexShrink: 0 }} />
-          <div style={{ flex: 1, borderRadius: '6px', overflow: 'hidden', position: 'relative', background: '#f0fdf4' }}>
-            <img src={b.heroPhoto} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(1.05) saturate(1.1)' }} />
-            <div style={{ position: 'absolute', bottom: '5px', left: '5px', background: b.accent, padding: '2px 5px', borderRadius: '2px', fontSize: '4.5px', fontWeight: 700, color: '#fff' }}>AFTER</div>
+          <div style={{ padding: '3px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Free Consult</div>
+        </div>
+        {/* Center headline */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 12px' }}>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '4px' }}>Smile Transformation</div>
+          <div style={{ fontSize: '22px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.03em', textShadow: '0 2px 16px rgba(0,0,0,0.5)', marginBottom: '6px' }}>Your Smile,<br />Perfected</div>
+          {/* Before/After label strip */}
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <div style={{ flex: 1, padding: '4px 6px', background: 'rgba(0,0,0,0.45)', borderRadius: '4px', textAlign: 'center', fontSize: '5px', fontWeight: 700, color: '#fff', border: '1px solid rgba(255,255,255,0.15)' }}>BEFORE ✕</div>
+            <div style={{ flex: 1, padding: '4px 6px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '5px', fontWeight: 700, color: '#fff' }}>AFTER ✓</div>
           </div>
         </div>
-      </div>
-      {/* Treatments */}
-      <div style={{ padding: '0 12px', flexShrink: 0 }}>
-        <div style={{ fontSize: '4.5px', color: '#94a3b8', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px' }}>Treatments</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', marginBottom: '7px' }}>
-          {b.services.map(s => (
-            <div key={s} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 8px', background: '#f8fafc', borderRadius: '4px', border: '1px solid #f1f5f9' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: b.accent, flexShrink: 0 }} />
-                <span style={{ fontSize: '5.5px', color: '#1e293b', fontWeight: 500 }}>{s}</span>
+        {/* Treatments + CTA */}
+        <div style={{ padding: '0 12px 10px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', marginBottom: '7px' }}>
+            {b.services.map(s => (
+              <div key={s} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 8px', background: 'rgba(255,255,255,0.07)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(4px)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: b.accent, flexShrink: 0 }} />
+                  <span style={{ fontSize: '5.5px', color: '#fff', fontWeight: 500 }}>{s}</span>
+                </div>
+                <span style={{ fontSize: '6px', color: b.accent }}>›</span>
               </div>
-              <span style={{ fontSize: '6px', color: b.accent }}>›</span>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div style={{ padding: '7px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em' }}>
+            Book Your Free Smile Consultation →
+          </div>
         </div>
-      </div>
-      {/* CTA */}
-      <div style={{ margin: '0 12px', padding: '7px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em', flexShrink: 0 }}>
-        Book Your Free Smile Consultation →
       </div>
     </div>
   );

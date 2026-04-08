@@ -83,18 +83,8 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             marginRight: 'auto',
           }}
         >
-          <span style={{ display: 'block', color: '#ffffff' }}>Detroit Websites That</span>
-          <span
-            style={{
-              display: 'block',
-              background: 'linear-gradient(90deg, #4d9de0, #ffffff, #93c5fd, #ffffff, #4d9de0)',
-              backgroundSize: '200% 100%',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              animation: 'shine 3s linear infinite',
-            }}
-          >
+          <span className="hero-line-1" style={{ display: 'block' }}>Detroit Websites That</span>
+          <span className="hero-line-2" style={{ display: 'block' }}>
             Get Found and Win Customers.
           </span>
         </h1>

@@ -14,13 +14,22 @@ export function ScrollReveal({ children, className = '', delay = 0 }: ScrollReve
     const el = ref.current;
     if (!el) return;
 
-    // If already in viewport on mount, reveal immediately (no observer needed)
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+
+    // Already scrolled past — reveal instantly, no animation
+    if (rect.bottom <= 0) {
+      el.style.transition = 'none';
+      el.classList.add('visible');
+      return;
+    }
+
+    // In viewport on mount — reveal immediately with animation
+    if (rect.top < window.innerHeight) {
       setTimeout(() => el.classList.add('visible'), delay);
       return;
     }
 
+    // Below fold — use IntersectionObserver with generous pre-trigger margin
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -28,7 +37,7 @@ export function ScrollReveal({ children, className = '', delay = 0 }: ScrollReve
           observer.unobserve(el);
         }
       },
-      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
+      { threshold: 0.01, rootMargin: '0px 0px 200px 0px' }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -51,21 +60,41 @@ export function ScrollRevealGroup({ children, className = '', stagger = 120 }: {
   useEffect(() => {
     const container = ref.current;
     if (!container) return;
-    const children = Array.from(container.children) as HTMLElement[];
-    children.forEach((child, i) => {
+    const kids = Array.from(container.children) as HTMLElement[];
+    kids.forEach((child) => {
       child.classList.add('reveal');
     });
 
+    const rect = container.getBoundingClientRect();
+
+    // Already scrolled past — reveal instantly
+    if (rect.bottom <= 0) {
+      kids.forEach((child) => {
+        child.style.transition = 'none';
+        child.classList.add('visible');
+      });
+      return;
+    }
+
+    // In viewport on mount — stagger reveal
+    if (rect.top < window.innerHeight) {
+      kids.forEach((child, i) => {
+        setTimeout(() => child.classList.add('visible'), i * stagger);
+      });
+      return;
+    }
+
+    // Below fold — observe with generous pre-trigger margin
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          children.forEach((child, i) => {
+          kids.forEach((child, i) => {
             setTimeout(() => child.classList.add('visible'), i * stagger);
           });
           observer.unobserve(container);
         }
       },
-      { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.01, rootMargin: '0px 0px 200px 0px' }
     );
     observer.observe(container);
     return () => observer.disconnect();

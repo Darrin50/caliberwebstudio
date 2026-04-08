@@ -4582,7 +4582,7 @@ export const posts: BlogPost[] = [
 
 <p>Local SEO for Detroit small businesses means showing up when someone in your neighborhood types "<a href="/industries/plumbers">plumber near</a> me" or "best barber in Hamtramck." Done right, it consistently puts your business in front of high-intent buyers at the exact moment they're ready to spend money — without paying for ads.</p>
 
-<img src="/blog/local-seo-detroit-small-businesses-2026-thumb.png" alt="Detroit skyline representing local business market" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/local-seo-detroit-small-businesses-2026-1.png" alt="Detroit skyline representing local business market" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Detroit Has Unique Local SEO Dynamics</h2>
 
@@ -4603,7 +4603,7 @@ export const posts: BlogPost[] = [
 
 <p>If you only do one thing for your local SEO, it should be this: fully optimize your Google Business Profile (GBP). It is the single most powerful lever for appearing in the local map pack — the three business listings that appear above organic results for most local searches.</p>
 
-<img src="/blog/local-seo-detroit-small-businesses-2026-1.png" alt="Google search results showing local map pack listings" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/local-seo-detroit-small-businesses-2026-2.png" alt="Google search results showing local map pack listings" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Complete Every Field</h3>
 <p>Businesses with complete GBP profiles are 70% more likely to attract location visits. Fill in every field: business name (exactly as it appears everywhere else), address, phone, website, hours, category, description, services, and attributes. Use your primary category carefully — it carries more weight than secondary categories.</p>
@@ -4630,7 +4630,7 @@ export const posts: BlogPost[] = [
 <h3>Location-Specific Service Pages</h3>
 <p>One homepage is not enough to rank across Metro Detroit. Build dedicated pages for each service you offer and each geography you serve. "HVAC Repair Detroit," "HVAC Repair Dearborn," "HVAC Repair Livonia" — each page targets a distinct audience with distinct intent. Write unique, useful content for each page. Do not duplicate content and swap the city name. Google knows.</p>
 
-<img src="/blog/local-seo-detroit-small-businesses-2026-2.png" alt="On-page SEO content structure for local service pages" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/local-seo-detroit-small-businesses-2026-3.png" alt="On-page SEO content structure for local service pages" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Link Building for Local Detroit Businesses</h2>
 
@@ -4665,7 +4665,7 @@ export const posts: BlogPost[] = [
 
 <p>Reviews are one of the top three ranking factors in Google's local algorithm. It's not just about how many you have — it's about recency, response rate, and sentiment. A business with 12 reviews all from 2021 ranks worse than a business with 40 reviews spread across the last 18 months.</p>
 
-<img src="/blog/local-seo-detroit-small-businesses-2026-3.png" alt="Google reviews stars and ratings for local business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/local-seo-detroit-small-businesses-2026-4.png" alt="Google reviews stars and ratings for local business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Review Velocity</h3>
 <p>A steady stream of new reviews signals active business to Google. Aim for a consistent pace — 4–10 new reviews per month depending on your volume. A burst of 50 reviews followed by silence looks unnatural. Build a repeatable system that generates reviews as a byproduct of good service. <a href="/blog/how-to-get-more-google-reviews">Our guide to getting more Google reviews</a> covers the exact process, including scripts and automation tools.</p>
@@ -4728,7 +4728,7 @@ export const posts: BlogPost[] = [
 
 <p><a href="/blog/what-is-schema-markup">Schema markup</a> is code you add to your website that tells Google — in plain, machine-readable language — exactly what your business is, what it offers, where it's located, and how customers have rated it. It doesn't change how your site looks. It changes how intelligently Google and AI engines understand it.</p>
 
-<img src="/blog/schema-markup-explained-local-businesses-thumb.png" alt="Code editor showing structured data and schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-1.png" alt="Code editor showing structured data and schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Schema Matters More in 2026 Than Ever Before</h2>
 
@@ -4747,7 +4747,7 @@ export const posts: BlogPost[] = [
 
 <p>For any local business, LocalBusiness schema is the most important structured data you can implement. It tells Google everything it needs to know about your physical business: who you are, where you are, how to reach you, and when you're open.</p>
 
-<img src="/blog/schema-markup-explained-local-businesses-1.png" alt="Business information structured data fields for local business schema" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-2.png" alt="Business information structured data fields for local business schema" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Core Fields You Must Include</h3>
 <p>A complete LocalBusiness schema for a Detroit small business should include:</p>
@@ -4784,7 +4784,7 @@ export const posts: BlogPost[] = [
 
 <p>FAQ schema is the highest-ROI structured data for most local businesses because it enables FAQ rich results — the accordion dropdowns that expand directly in Google search results, showing your questions and answers without the user ever visiting your site. These rich results capture enormous SERP real estate and drive significantly higher click-through rates.</p>
 
-<img src="/blog/schema-markup-explained-local-businesses-2.png" alt="FAQ schema appearing as rich results in Google search" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-3.png" alt="FAQ schema appearing as rich results in Google search" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>How to Write FAQs That Get Displayed</h3>
 <p>Google doesn't display every FAQ schema — it evaluates quality, relevance, and whether your FAQs genuinely answer common queries. Write FAQs that address the specific questions your customers actually ask: "How much does a furnace tune-up cost?" "Do you offer emergency plumbing service in Dearborn?" "What's included in your roof inspection?" The more specific and genuinely useful your FAQs, the more likely Google displays them.</p>
@@ -4848,7 +4848,7 @@ export const posts: BlogPost[] = [
 <p>LocalBusiness schema should appear on every page — it establishes business identity site-wide. FAQ schema only goes on pages that actually contain FAQs. Service schema belongs on service pages. Review/AggregateRating schema goes where you display reviews. The goal is relevant schema on every page, not the same schema copy-pasted everywhere.</p>
 
 
-<img src="/blog/schema-markup-explained-local-businesses-3.png" alt="Supporting visual for schema markup explained local businesses" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-4.png" alt="Supporting visual for schema markup explained local businesses" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Schema Markup Built Into Every Caliber Website</strong>
   <p style="margin:12px 0 0;">Every website Caliber Web Studio builds includes complete LocalBusiness, Service, FAQ, and Review schema — properly structured, validated, and maintained. You don't have to figure out the code. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Talk to us about your website today.</a></p>
@@ -4868,7 +4868,7 @@ export const posts: BlogPost[] = [
 
 <p>Professional web design ROI isn't measured in aesthetics or awards — it's measured in calls, booked jobs, and revenue generated versus dollars invested. For most Detroit small businesses, a well-built website pays for itself within 90 days. Here's the math.</p>
 
-<img src="/blog/roi-professional-web-design-numbers-thumb.png" alt="Business analytics dashboard showing website ROI metrics and conversion data" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/roi-professional-web-design-numbers-1.png" alt="Business analytics dashboard showing website ROI metrics and conversion data" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What ROI Actually Means for a Small Business Website</h2>
 
@@ -4890,7 +4890,7 @@ export const posts: BlogPost[] = [
 
 <p>Let's work through the numbers for three specific Detroit business types. These are representative scenarios, not guarantees — but they reflect real-world outcomes from professionally built local business websites.</p>
 
-<img src="/blog/roi-professional-web-design-numbers-1.png" alt="Business owner reviewing financial returns and website performance data" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/roi-professional-web-design-numbers-2.png" alt="Business owner reviewing financial returns and website performance data" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Example 1: Detroit Plumber</h3>
 <p><strong>Business profile:</strong> Residential plumbing, Dearborn and surrounding areas. Average job value: $450. Close rate on qualified leads: 55%.</p>
@@ -4917,7 +4917,7 @@ export const posts: BlogPost[] = [
 
 <p>The <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> isn't just what you gain — it's also what you stop losing. Every month your business operates without a competitive online presence, customers who are actively searching for what you offer are finding your competitors instead.</p>
 
-<img src="/blog/roi-professional-web-design-numbers-2.png" alt="Missed opportunity cost when competitors rank higher in local search" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/roi-professional-web-design-numbers-3.png" alt="Missed opportunity cost when competitors rank higher in local search" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Calculate Your Monthly Lead Bleed</h3>
 <p>Here's a simple exercise. Search Google for your top 3 service keywords from your city. Count the results on page one. If you're not there, every business that is is capturing leads that could be yours. In a market where "plumber Detroit" gets 2,400 monthly searches and the top 3 organic results capture 65% of clicks, that's 1,560 potential customer visits per month flowing to whoever ranks. If your business isn't there, you're funding your competitors' growth while paying for ads or relying on word of mouth to fill the gap.</p>
@@ -4971,7 +4971,7 @@ export const posts: BlogPost[] = [
 <p>Restaurants have a different ROI model than service businesses — success is measured in covers driven and reservations booked, not phone calls. A well-optimized restaurant website in Detroit can realistically add 60–120 reservations per month from organic search and direction requests. At $65 average per table, that's $3,900–$7,800 monthly in attributable revenue — against a website investment of $200–$300/month.</p>
 
 
-<img src="/blog/roi-professional-web-design-numbers-3.png" alt="Supporting visual for roi professional web design numbers" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/roi-professional-web-design-numbers-4.png" alt="Supporting visual for roi professional web design numbers" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">See What a Professional Website Is Worth for Your Business</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds websites for Metro Detroit small businesses that are designed to generate measurable returns — not just look good. Let us run the ROI math for your specific business and market. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free revenue projection today.</a></p>
@@ -4991,7 +4991,7 @@ export const posts: BlogPost[] = [
 
 <p>The businesses with the most Google reviews didn't beg. They built a simple, consistent system: ask at the right moment, through the right channel, with a frictionless link. Do that well, and the reviews accumulate without anyone feeling pressured.</p>
 
-<img src="/blog/get-google-reviews-without-being-annoying-thumb.png" alt="Five-star Google review rating for local business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/get-google-reviews-without-being-annoying-1.png" alt="Five-star Google review rating for local business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Timing Is Everything</h2>
 
@@ -5010,7 +5010,7 @@ export const posts: BlogPost[] = [
 
 <p>Channel choice affects response rate dramatically. Text messages have an 85–95% open rate; emails average 20–30%. For review requests, the hierarchy is clear: text first, email second, in-person third.</p>
 
-<img src="/blog/get-google-reviews-without-being-annoying-1.png" alt="Mobile phone displaying text message review request to customer" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/get-google-reviews-without-being-annoying-2.png" alt="Mobile phone displaying text message review request to customer" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Text Messages</h3>
 <p>A text message with a direct link to your Google review page is the single highest-converting review channel for most local businesses. Short, direct, no friction. Customers can tap the link, leave a review, and be done in 90 seconds. The key is the link — don't ask someone to "search for us on Google and leave a review." Give them the exact URL. Your <a href="/blog/google-business-profile-optimization">Google Business Profile</a> review link is available in your GBP dashboard under "Get more reviews."</p>
@@ -5055,7 +5055,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Google's review policies are real, and violating them risks having your reviews removed or, in extreme cases, your profile penalized. Beyond policy, some common tactics simply don't work.</p>
 
-<img src="/blog/get-google-reviews-without-being-annoying-2.png" alt="Warning signs to avoid when collecting Google reviews for your business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/get-google-reviews-without-being-annoying-3.png" alt="Warning signs to avoid when collecting Google reviews for your business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Don't Offer Incentives</h3>
 <p>Offering discounts, free services, gift cards, or any other compensation in exchange for reviews violates Google's policies and the FTC's guidelines on endorsements. Beyond legality, incentivized reviews skew sentiment and attract customers who are motivated by the reward rather than a genuine desire to share their experience. Google's systems are increasingly good at detecting and removing incentivized reviews.</p>
@@ -5122,7 +5122,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>Yes, significantly. Review count and average rating are two of the three primary factors in Google's local pack ranking algorithm (alongside proximity and relevance). A business with 80 reviews averaging 4.8 stars will consistently outrank a comparable business with 8 reviews averaging 4.5 stars in the same geography, all else being equal.</p>
 
 
-<img src="/blog/get-google-reviews-without-being-annoying-3.png" alt="Supporting visual for get google reviews without being annoying" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/get-google-reviews-without-being-annoying-4.png" alt="Supporting visual for get google reviews without being annoying" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Build Your Review Engine Into Your Website</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds review collection systems directly into the websites we design — review request integrations, response templates, and GBP optimization that turns satisfied customers into a compounding ranking advantage. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Let's build yours today.</a></p>
@@ -5142,7 +5142,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>ChatGPT and Perplexity are now answering local business queries — "best HVAC company in Dearborn," "top-rated electrician Detroit" — and citing specific businesses by name. To be one of those businesses, you need structured content, consistent data, and a digital footprint that AI systems can confidently parse and recommend.</p>
 
-<img src="/blog/chatgpt-perplexity-local-business-visibility-thumb.png" alt="AI chatbot interface showing local business search results and citations" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/chatgpt-perplexity-local-business-visibility-1.png" alt="AI chatbot interface showing local business search results and citations" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How ChatGPT and Perplexity Pull Local Business Data</h2>
 
@@ -5161,7 +5161,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Citation-worthiness is the core concept in Answer Engine Optimization (AEO). AI systems won't cite a source they're uncertain about. To earn citations, your business needs to signal trustworthiness across multiple dimensions simultaneously.</p>
 
-<img src="/blog/chatgpt-perplexity-local-business-visibility-1.png" alt="Digital authority signals that make a business citation-worthy to AI systems" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/chatgpt-perplexity-local-business-visibility-2.png" alt="Digital authority signals that make a business citation-worthy to AI systems" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Consistent NAP Across All Platforms</h3>
 <p>Name, Address, Phone — these must be identical everywhere your business appears online. Your <a href="/blog/google-business-profile-optimization">Google Business Profile</a>, website, Yelp, Facebook, Bing Places, industry directories, and any press mentions should all list the same business name, address format, and phone number. When AI systems crawl multiple sources about a business and find conflicting data — different phone numbers, inconsistent address formats, a name that appears differently on different platforms — they lose confidence. Conflicted data means fewer or no citations. Consistent data is the foundation of AI visibility.</p>
@@ -5188,7 +5188,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Build Out Your Directory and Citation Profile</h3>
 <p>Perplexity and ChatGPT pull from Yelp, Angi, HomeAdvisor, Houzz, Thumbtack, industry-specific directories, and the BBB as citation sources for local business queries. Having accurate, complete, and consistently named profiles on all relevant directories dramatically increases the probability of appearing in AI-generated local recommendations. This isn't new advice — it's been good local SEO practice for years. But AI search makes it more urgent because AI systems rely on directory data heavily when they don't have strong first-party information about a business.</p>
 
-<img src="/blog/chatgpt-perplexity-local-business-visibility-2.png" alt="Structured content and schema markup signals for AI search citation" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/chatgpt-perplexity-local-business-visibility-3.png" alt="Structured content and schema markup signals for AI search citation" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Earn Press Mentions and Local Links</h3>
 <p>A mention of your business in Crain's Detroit Business, the Detroit Free Press, a neighborhood blog, or an industry publication is an extraordinarily strong citation signal. When ChatGPT or Perplexity crawls a credible source that mentions your business by name in context, that mention adds weight to your citation profile. Sponsor local events. Get involved with community organizations. Submit expert commentary to local journalists. These activities earn the kind of editorial mentions that money can't buy and that AI systems treat as high-confidence validation.</p>
@@ -5256,7 +5256,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>Build a comprehensive, specific FAQ page on your website and implement FAQ schema markup. It's the highest-ROI single action for AI visibility because it directly creates the structured Q&A content that AI systems are designed to surface. A page with 10–15 genuine, detailed answers to the questions your customers ask is more citation-worthy than a beautifully designed homepage with no structured content.</p>
 
 
-<img src="/blog/chatgpt-perplexity-local-business-visibility-3.png" alt="Supporting visual for chatgpt perplexity local business visibility" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/chatgpt-perplexity-local-business-visibility-4.png" alt="Supporting visual for chatgpt perplexity local business visibility" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Built to Be Found — by Google and AI</strong>
   <p style="margin:12px 0 0;">Every Caliber Web Studio website is built with schema markup, FAQ content, and structured service pages designed to earn citations in AI search engines — not just rank in Google. If your business isn't showing up where your customers are searching, <a href="/contact" style="color:#1E3D8F;font-weight:600;">let's fix that today.</a></p>
@@ -5274,7 +5274,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     content: `
 <p><a href="/blog/what-is-aeo-answer-engine-optimization">Answer Engine Optimization</a> (AEO) is the practice of structuring your website's content so that AI tools — ChatGPT, Perplexity, Google AI Overviews, and others — pull from your business when answering user questions. For Detroit businesses, AEO in 2026 isn't optional; it's where your next customer finds you before they ever click a link.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-thumb.png" alt="AI search interface showing answer engine results" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/aeo-2026-detroit-businesses-guide-1.png" alt="AI search interface showing answer engine results" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>AEO vs. SEO: What's the Actual Difference?</h2>
 
@@ -5286,7 +5286,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>You need both. But if you've been ignoring AEO entirely, you're already losing ground.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-1.png" alt="Code and data structures representing structured content markup" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/aeo-2026-detroit-businesses-guide-2.png" alt="Code and data structures representing structured content markup" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How AI Engines Decide Who to Cite for Local Businesses</h2>
 
@@ -5314,7 +5314,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Detroit Restaurant</h3>
 <p>Restaurants benefit enormously from AEO because people constantly ask AI tools for dining recommendations. "Best Coney Island in Detroit" and "good <a href="/industries/restaurants">restaurants near</a> Little Caesars Arena" are AI queries that pull from Google Business Profile data, review aggregators, and structured website content. A restaurant with 200 Google reviews, a complete GBP profile with photos and hours, and a website that clearly names its cuisine type and neighborhood is going to get cited. The restaurant that hasn't touched its website since 2019 is invisible.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-2.png" alt="Business owner reviewing website content strategy on laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/aeo-2026-detroit-businesses-guide-3.png" alt="Business owner reviewing website content strategy on laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What to Change on Your Website for AEO</h2>
 
@@ -5335,7 +5335,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>5. Build Local Context Into Your Content</h3>
 <p>Every page should mention Detroit (or your specific neighborhood), your service area, and local context where it's natural. Not keyword stuffing — actual local relevance. A roofing <a href="/industries/contractors">contractor in</a> Warren, Michigan should mention Warren, the surrounding communities they serve, local weather context (Michigan winters, ice dams, freeze-thaw cycles), and local permit considerations. This geographic specificity is what AI systems use to match your business to location-based queries.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-3.png" alt="Analytics dashboard showing search visibility data" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/aeo-2026-detroit-businesses-guide-4.png" alt="Analytics dashboard showing search visibility data" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>FAQ Schema: The Technical Foundation</h2>
 
@@ -5357,7 +5357,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>Manual testing</strong> — Ask ChatGPT and Perplexity the questions your customers ask, with your city name. See if your business gets cited. Do this monthly. It's not scientific, but it's directionally useful.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-4.png" alt="Local business storefront with strong online presence indicators" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Timeline: When Does AEO Start Working?</h2>
 
@@ -5401,7 +5400,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     content: `
 <p>A $500 website isn't savings — it's a revenue leak. For most Detroit small businesses, a slow, outdated, or poorly converting website is quietly costing $2,000 to $5,000 or more in lost revenue every single month. The math is straightforward once you run it, and the result is usually uncomfortable.</p>
 
-<img src="/blog/500-dollar-website-lost-revenue-thumb.png" alt="Business owner calculating revenue losses from poor website performance" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/500-dollar-website-lost-revenue-1.png" alt="Business owner calculating revenue losses from poor website performance" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The False Economy Argument</h2>
 
@@ -5419,7 +5418,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Marcus's website gets roughly 300 visitors per month. That's not a lot, but it's enough to generate business — if the site converts. Here's the problem: his site loads in 5.8 seconds on mobile. Google recommends under 2.5 seconds. His phone number isn't clickable on mobile (it's in an image, not text). His "request a quote" form goes to an email address he checks once a day. He has no Google reviews displayed, no trust signals, and no FAQ content that might rank for voice or AI search.</p>
 
-<img src="/blog/500-dollar-website-lost-revenue-1.png" alt="Revenue calculation spreadsheet showing cost of poor website conversion" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/500-dollar-website-lost-revenue-2.png" alt="Revenue calculation spreadsheet showing cost of poor website conversion" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <p>Industry data suggests that a well-optimized local service website converts at 5–8% of visitors to leads. Marcus's site converts at roughly 1–2% — a conservative estimate for a site with his technical issues. The difference in real numbers:</p>
 
@@ -5444,7 +5443,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>A $500 Wix or Squarespace site typically scores 40–65 out of 100 on Google's PageSpeed Insights, primarily because these platforms load unnecessary JavaScript, use unoptimized images, and have template code that can't be stripped. A custom Next.js or properly optimized WordPress site typically scores 85–98.</p>
 
-<img src="/blog/500-dollar-website-lost-revenue-2.png" alt="Page speed comparison showing performance difference between website types" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/500-dollar-website-lost-revenue-3.png" alt="Page speed comparison showing performance difference between website types" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <p>The ranking difference isn't just a number on a dashboard. In the Detroit market, for local searches like "emergency plumber Detroit" or "<a href="/industries/salons">hair salon near</a> me Detroit," ranking positions 1–3 capture roughly 55–60% of clicks. Positions 4–10 share the remaining 15–20%. Position 11+ might as well not exist for most users.</p>
 
@@ -5464,7 +5463,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>Technical SEO</strong> — <a href="/blog/what-is-schema-markup">Schema markup</a>, canonical URLs, proper heading structure, and meta tags are the technical foundation of searchability. Template sites rarely have these configured correctly out of the box. Without them, your site is ranking with one hand tied behind its back.</p>
 
-<img src="/blog/500-dollar-website-lost-revenue-3.png" alt="Professional web design consultation showing quality investment" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/500-dollar-website-lost-revenue-4.png" alt="Professional web design consultation showing quality investment" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What a Professional Site Actually Costs vs. What It Returns</h2>
 
@@ -5496,7 +5495,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   <p style="margin:12px 0 0;">If your website isn't generating consistent leads, it's costing you more than it's worth. Caliber Web Studio builds fast, conversion-focused websites for Detroit small businesses — starting at $197/month with no large upfront cost. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
 
-<img src="/blog/500-dollar-website-lost-revenue-4.png" alt="Detroit small business owner confident after website investment pays off" style="width:100%;border-radius:12px;margin:32px 0;" />
 `
   },
   {
@@ -5510,7 +5508,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     content: `
 <p><a href="/blog/what-is-an-ai-chatbot-for-business">AI chatbots for</a> small businesses in 2026 are nothing like the clunky, script-following bots of five years ago. They're trained on your specific business — your services, your prices, your hours, your FAQs — and they respond the way a knowledgeable employee would, around the clock, without a salary. For small businesses that lose leads after hours, they've become a serious competitive advantage.</p>
 
-<img src="/blog/ai-chatbots-customer-service-small-business-thumb.png" alt="AI chatbot interface on small business website providing customer service" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/ai-chatbots-customer-service-small-business-1.png" alt="AI chatbot interface on small business website providing customer service" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How Modern AI Chatbots Actually Work</h2>
 
@@ -5531,7 +5529,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>This is probably the clearest single ROI case for AI chatbots. If you're losing 5 leads per week to after-hours inquiries that go unanswered, and your average job is worth $400, that's $2,000 per week — $8,000+ per month — potentially being left on the table. A chatbot that captures even 60% of those converts $4,800/month in leads from nothing.</p>
 
-<img src="/blog/ai-chatbots-customer-service-small-business-1.png" alt="Customer using mobile phone for after-hours business inquiry" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/ai-chatbots-customer-service-small-business-2.png" alt="Customer using mobile phone for after-hours business inquiry" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>FAQ Automation</h3>
 <p>Most service businesses field the same 15–20 questions repeatedly. What are your hours? Do you serve my neighborhood? How much does X cost? Do you require a deposit? What's your warranty? These questions are necessary for customers to feel comfortable booking, but they consume staff time that could be spent on higher-value work.</p>
@@ -5551,7 +5549,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>A properly trained business chatbot has been given a structured knowledge base: your exact service menu with descriptions and price ranges, your complete service area down to the neighborhoods and zip codes you cover, your specific policies (deposits, cancellations, warranties), your team information if relevant, your FAQs with your specific answers, and your calendar integration for availability. When a customer asks a detailed question, it answers with your information, not a guess.</p>
 
-<img src="/blog/ai-chatbots-customer-service-small-business-2.png" alt="AI chatbot configuration and training interface for small business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/ai-chatbots-customer-service-small-business-3.png" alt="AI chatbot configuration and training interface for small business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <p>The quality of the training directly determines the quality of the chatbot experience. A chatbot trained on a shallow knowledge base will frustrate customers. A chatbot trained on a comprehensive, accurate knowledge base will impress them. The difference is in the setup work — which is why low-cost, self-serve chatbot tools often underperform. The tool is only as good as what you put into it.</p>
 
@@ -5579,7 +5577,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>Businesses with limited staff</strong> — Solo operators and small teams who physically cannot be available to respond to every inquiry in real time. The chatbot acts as the always-available front line while the human handles the high-value follow-up.</p>
 
-<img src="/blog/ai-chatbots-customer-service-small-business-3.png" alt="Small business owner receiving chatbot lead notification on smartphone" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/ai-chatbots-customer-service-small-business-4.png" alt="Small business owner receiving chatbot lead notification on smartphone" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What to Look for in a Chatbot Solution</h2>
 
@@ -5617,7 +5615,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   <p style="margin:12px 0 0;">Every Caliber Web Studio website includes an AI chatbot trained on your specific business — your services, prices, hours, and service area. It captures leads while you sleep. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
 
-<img src="/blog/ai-chatbots-customer-service-small-business-4.png" alt="Satisfied customer getting fast response from business chatbot" style="width:100%;border-radius:12px;margin:32px 0;" />
 `
   },
   {
@@ -5631,7 +5628,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     content: `
 <p>Most service business websites don't convert because they're designed to impress, not to convert. There's a difference. A beautiful website that doesn't generate calls is a liability. Here are the specific elements — placement, copy, structure — that actually turn visitors into leads for service businesses.</p>
 
-<img src="/blog/website-design-service-businesses-what-converts-thumb.png" alt="Service business website displayed on laptop and mobile showing conversion elements" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/website-design-service-businesses-what-converts-1.png" alt="Service business website displayed on laptop and mobile showing conversion elements" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What "Conversion" Actually Means for a Service Business</h2>
 
@@ -5668,7 +5665,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>5. Hero Image That Shows Your Work</h3>
 <p>A real photo — of your team, your work, your business — outperforms stock photography for service businesses. Visitors respond to evidence of real people doing real work. A plumber's hero photo of an actual job (clean work, professional appearance) signals competence more than any copy. If you have real photos, use them. If you don't, getting professional photos taken is worth the investment before launch.</p>
 
-<img src="/blog/website-design-service-businesses-what-converts-1.png" alt="Mobile website for service business showing optimized layout for conversions" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/website-design-service-businesses-what-converts-2.png" alt="Mobile website for service business showing optimized layout for conversions" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Mobile Is Non-Negotiable</h2>
 
@@ -5714,7 +5711,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>The color and contrast of CTAs also matter more than most business owners realize. Your primary CTA button should have high contrast against its background, be large enough to see immediately, and use a color that differs from your general palette to draw the eye. A navy-on-white CTA that blends into the design is invisible. A bright accent-colored button on a dark background is unmissable.</p>
 
-<img src="/blog/website-design-service-businesses-what-converts-2.png" alt="Website conversion optimization showing trust signals and CTA elements" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/website-design-service-businesses-what-converts-3.png" alt="Website conversion optimization showing trust signals and CTA elements" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Trust Signals and Where They Go</h2>
 
@@ -5752,7 +5749,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>General Contractor:</strong> Project gallery and testimonials with specific scope descriptions ("They renovated our entire kitchen — on time, on budget, no surprises") are primary trust signals. A consultation CTA ("Schedule Your Free Consultation") positions the next step as low-risk and high-value.</p>
 
-<img src="/blog/website-design-service-businesses-what-converts-3.png" alt="Detroit service business owner reviewing high-converting website analytics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/website-design-service-businesses-what-converts-4.png" alt="Detroit service business owner reviewing high-converting website analytics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Frequently Asked Questions About Service Business Websites</h2>
 
@@ -5776,7 +5773,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   <p style="margin:12px 0 0;">Caliber Web Studio builds service business websites with conversion as the primary design goal — click-to-call, mobile-optimized, trust signals in the right places, and CTAs that actually work. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
 
-<img src="/blog/website-design-service-businesses-what-converts-4.png" alt="Service business website design showing conversion-focused layout elements" style="width:100%;border-radius:12px;margin:32px 0;" />
 `
   },
   {
@@ -5790,7 +5786,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     content: `
 <p>Your <a href="/blog/google-business-profile-optimization">Google Business Profile</a> (GBP) is the single most important local SEO asset you own in 2026. It drives map pack rankings, powers Google AI Overviews for local queries, and is the first thing most people see when they search for your business. A fully optimized GBP is worth more than most businesses realize — and most businesses haven't finished setting it up.</p>
 
-<img src="/blog/google-business-profile-2026-complete-guide-thumb.png" alt="Google Business Profile dashboard showing optimized local business listing" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/google-business-profile-2026-complete-guide-1.png" alt="Google Business Profile dashboard showing optimized local business listing" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why GBP Matters More in 2026</h2>
 
@@ -5820,7 +5816,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>7. Special hours</strong> — update these for every holiday. Google reminds you, but most businesses ignore it. A profile showing "Open" on Thanksgiving or Christmas when you're actually closed gets flagged in reviews and damages your reputation.</p>
 
-<img src="/blog/google-business-profile-2026-complete-guide-1.png" alt="Small business owner setting up Google Business Profile on computer" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/google-business-profile-2026-complete-guide-2.png" alt="Small business owner setting up Google Business Profile on computer" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Categories</h3>
 
@@ -5852,7 +5848,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>16. Photo naming</strong> — rename your photos with descriptive file names before uploading. "detroit-plumber-water-heater-installation.jpg" is more informative to Google's crawlers than "IMG_4532.jpg." This is a minor signal, but minor signals add up.</p>
 
-<img src="/blog/google-business-profile-2026-complete-guide-2.png" alt="Google Maps listing for local business showing optimized profile with photos" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/google-business-profile-2026-complete-guide-3.png" alt="Google Maps listing for local business showing optimized profile with photos" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Posts and Offers</h3>
 
@@ -5886,7 +5882,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Attributes and Accessibility</h3>
 <p>GBP offers industry-specific attributes — identifiers like "Women-owned," "Veteran-owned," "LGBTQ-friendly," "Wheelchair accessible," "Free Wi-Fi," "Online appointments." Complete all relevant attributes. These appear in your profile and in some filtered search results. Customers searching for women-owned businesses, for example, can filter results — and only profiles with that attribute set will appear.</p>
 
-<img src="/blog/google-business-profile-2026-complete-guide-3.png" alt="Analytics dashboard showing Google Business Profile performance insights" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/google-business-profile-2026-complete-guide-4.png" alt="Analytics dashboard showing Google Business Profile performance insights" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Tracking GBP Insights</h3>
 
@@ -5934,7 +5930,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   <p style="margin:12px 0 0;">Caliber Web Studio sets up and optimizes your Google Business Profile as part of every website plan — complete profile setup, photo strategy, review generation system, and ongoing updates included. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
 
-<img src="/blog/google-business-profile-2026-complete-guide-4.png" alt="Detroit small business with strong local search presence and Google reviews" style="width:100%;border-radius:12px;margin:32px 0;" />
 `
   }
 ];

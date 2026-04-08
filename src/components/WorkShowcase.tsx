@@ -2,216 +2,428 @@
 
 import { useEffect, useRef } from 'react';
 
-/* ─── Mock 1: Plumbing — blue/orange, emergency feel ───────────────── */
-function PlumbingMock() {
+/* ═══════════════════════════════════════════════════════════════════
+   MOCK 1: Prestige Landscape Design — Editorial luxury, split hero
+   Elegant serif-style type, gold foil accents, editorial photography
+   layout with thin hairline dividers and refined whitespace
+   ═══════════════════════════════════════════════════════════════════ */
+function LandscapingMock() {
   return (
-    <div style={{ fontFamily: "'Inter', sans-serif", fontSize: '10px', lineHeight: 1.3, background: '#fff', height: '100%' }}>
-      {/* Emergency banner */}
-      <div style={{ background: '#ea580c', padding: '4px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ fontSize: '6.5px', color: '#fff', fontWeight: 700, letterSpacing: '0.06em' }}>⚡ 24/7 EMERGENCY SERVICE AVAILABLE</div>
-        <div style={{ fontSize: '6.5px', color: '#ffedd5', fontWeight: 600 }}>(313) 555-0192</div>
-      </div>
-      {/* Nav */}
-      <div style={{ background: '#1e3a5f', padding: '7px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <div style={{ width: '18px', height: '18px', borderRadius: '50%', background: '#ea580c', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px' }}>🔧</div>
-          <div style={{ fontWeight: 800, fontSize: '9px', color: '#fff', letterSpacing: '0.04em' }}>METRO PLUMBING</div>
-        </div>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          {['Services', 'Reviews', 'Contact'].map(t => <div key={t} style={{ fontSize: '6.5px', color: 'rgba(255,255,255,0.6)' }}>{t}</div>)}
-        </div>
-      </div>
-      {/* Hero */}
-      <div style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #1e4d8c 100%)', padding: '16px 14px 14px' }}>
-        <div style={{ fontSize: '12px', fontWeight: 800, color: '#fff', lineHeight: 1.2, marginBottom: '5px' }}>Detroit's Trusted Plumber — Fast, Reliable, Affordable</div>
-        <div style={{ fontSize: '7px', color: 'rgba(255,255,255,0.65)', marginBottom: '10px' }}>Drain cleaning · Water heaters · Leak repair · Same-day service</div>
-        <div style={{ display: 'flex', gap: '6px' }}>
-          <div style={{ background: '#ea580c', color: '#fff', fontSize: '7px', fontWeight: 800, padding: '5px 11px', borderRadius: '4px', cursor: 'default' }}>Get Free Estimate</div>
-          <div style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: '7px', padding: '5px 11px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.25)', cursor: 'default' }}>Our Services</div>
-        </div>
-      </div>
-      {/* Services grid */}
-      <div style={{ padding: '10px 14px', background: '#f8fafc' }}>
-        <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#1e3a5f', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '7px' }}>What We Fix</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '5px' }}>
-          {[{ icon: '🚿', n: 'Drain Cleaning' }, { icon: '🔥', n: 'Water Heaters' }, { icon: '💧', n: 'Leak Repair' }, { icon: '🚽', n: 'Toilet Repair' }, { icon: '🏠', n: 'Repiping' }, { icon: '❄️', n: 'Frozen Pipes' }].map(s => (
-            <div key={s.n} style={{ background: '#fff', padding: '6px 5px', borderRadius: '4px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
-              <div style={{ fontSize: '12px', marginBottom: '2px' }}>{s.icon}</div>
-              <div style={{ fontSize: '6px', color: '#374151', fontWeight: 600, lineHeight: 1.2 }}>{s.n}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Trust bar */}
-      <div style={{ background: '#1e3a5f', padding: '7px 14px', display: 'flex', justifyContent: 'space-around' }}>
-        {['Licensed & Insured', '4.9★ on Google', 'Free Estimates'].map(s => (
-          <div key={s} style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '6px', color: 'rgba(255,255,255,0.85)', fontWeight: 600 }}>{s}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ─── Mock 2: Hair Shop — warm/glam, dark gold theme ───────────────── */
-function HairShopMock() {
-  return (
-    <div style={{ fontFamily: "'Inter', sans-serif", fontSize: '10px', lineHeight: 1.3, background: '#1a1008', height: '100%' }}>
-      {/* Nav */}
-      <div style={{ background: '#120c04', padding: '8px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(212,163,85,0.2)' }}>
-        <div>
-          <div style={{ fontWeight: 900, fontSize: '10px', color: '#d4a355', letterSpacing: '0.12em' }}>LUXE HAIR STUDIO</div>
-          <div style={{ fontSize: '5.5px', color: 'rgba(212,163,85,0.5)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Detroit · Est. 2016</div>
-        </div>
-        <div style={{ background: '#d4a355', color: '#120c04', fontSize: '6.5px', fontWeight: 800, padding: '4px 9px', borderRadius: '2px', letterSpacing: '0.06em', cursor: 'default' }}>BOOK NOW</div>
-      </div>
-      {/* Hero */}
-      <div style={{ background: 'linear-gradient(160deg, #2a1a08 0%, #1a1008 100%)', padding: '16px 14px', borderBottom: '1px solid rgba(212,163,85,0.12)', position: 'relative' }}>
-        <div style={{ fontSize: '6.5px', color: '#d4a355', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '6px' }}>Premium Salon Experience</div>
-        <div style={{ fontSize: '13px', fontWeight: 800, color: '#f5e6c8', lineHeight: 1.15, marginBottom: '5px' }}>Where Detroit Women Glow Up</div>
-        <div style={{ fontSize: '7px', color: 'rgba(245,230,200,0.55)', marginBottom: '10px' }}>Color · Cuts · Braids · Extensions · Natural styles</div>
-        <div style={{ display: 'inline-block', background: 'rgba(212,163,85,0.15)', border: '1px solid rgba(212,163,85,0.4)', borderRadius: '20px', padding: '3px 10px' }}>
-          <span style={{ fontSize: '6.5px', color: '#d4a355', fontWeight: 600 }}>✨ New clients get 20% off first visit</span>
-        </div>
-      </div>
-      {/* Services */}
-      <div style={{ padding: '10px 14px' }}>
-        <div style={{ fontSize: '6.5px', color: 'rgba(212,163,85,0.6)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '8px' }}>Services & Pricing</div>
-        {[{ name: 'Silk Press', price: '$75+' }, { name: 'Color & Highlights', price: '$120+' }, { name: 'Knotless Braids', price: '$200+' }, { name: 'Cut & Style', price: '$55+' }].map(s => (
-          <div key={s.name} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-            <div style={{ fontSize: '7.5px', color: 'rgba(245,230,200,0.8)', fontWeight: 500 }}>{s.name}</div>
-            <div style={{ fontSize: '7.5px', color: '#d4a355', fontWeight: 700 }}>{s.price}</div>
-          </div>
-        ))}
-      </div>
-      {/* Review */}
-      <div style={{ background: 'rgba(212,163,85,0.07)', margin: '0 14px 10px', borderRadius: '4px', padding: '7px 9px', border: '1px solid rgba(212,163,85,0.15)' }}>
-        <div style={{ fontSize: '6.5px', color: 'rgba(245,230,200,0.7)', fontStyle: 'italic', lineHeight: 1.5 }}>"My hair has never looked better. She's the only stylist I trust!"</div>
-        <div style={{ fontSize: '5.5px', color: '#d4a355', fontWeight: 700, marginTop: '3px' }}>— Keisha T. · ⭐⭐⭐⭐⭐ Google</div>
-      </div>
-    </div>
-  );
-}
-
-/* ─── Mock 3: Car Repair — dark/industrial, red accents ────────────── */
-function CarRepairMock() {
-  return (
-    <div style={{ fontFamily: "'Inter', sans-serif", fontSize: '10px', lineHeight: 1.3, background: '#111', height: '100%' }}>
-      {/* Nav */}
-      <div style={{ background: '#0d0d0d', padding: '8px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '2px solid #dc2626' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <div style={{ fontSize: '14px' }}>🔩</div>
-          <div>
-            <div style={{ fontWeight: 900, fontSize: '9px', color: '#fff', letterSpacing: '0.06em' }}>MOTOR CITY AUTO REPAIR</div>
-            <div style={{ fontSize: '5.5px', color: '#dc2626', letterSpacing: '0.1em' }}>ASE CERTIFIED · DETROIT, MI</div>
-          </div>
-        </div>
-        <div style={{ background: '#dc2626', color: '#fff', fontSize: '6.5px', fontWeight: 800, padding: '4px 9px', borderRadius: '3px', cursor: 'default' }}>CALL NOW</div>
-      </div>
-      {/* Hero */}
-      <div style={{ background: 'linear-gradient(170deg, #1a0a0a 0%, #0d0d0d 100%)', padding: '16px 14px 14px' }}>
-        <div style={{ display: 'inline-block', background: 'rgba(220,38,38,0.15)', border: '1px solid rgba(220,38,38,0.4)', borderRadius: '3px', padding: '2px 7px', marginBottom: '7px' }}>
-          <span style={{ fontSize: '6px', color: '#f87171', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Family Owned Since 1998</span>
-        </div>
-        <div style={{ fontSize: '13px', fontWeight: 900, color: '#fff', lineHeight: 1.15, marginBottom: '5px' }}>Detroit's Honest Auto Shop</div>
-        <div style={{ fontSize: '7px', color: 'rgba(255,255,255,0.5)', marginBottom: '11px' }}>Brakes · Engine · Transmission · Oil change · Diagnostics</div>
-        <div style={{ display: 'flex', gap: '6px' }}>
-          <div style={{ background: '#dc2626', color: '#fff', fontSize: '7px', fontWeight: 800, padding: '5px 12px', borderRadius: '3px', cursor: 'default' }}>Free Diagnosis</div>
-          <div style={{ background: 'transparent', color: '#dc2626', fontSize: '7px', fontWeight: 700, padding: '5px 12px', borderRadius: '3px', border: '1px solid #dc2626', cursor: 'default' }}>Our Services</div>
-        </div>
-      </div>
-      {/* Services list */}
-      <div style={{ padding: '10px 14px' }}>
-        <div style={{ fontSize: '6px', color: '#9ca3af', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '7px' }}>Common Repairs</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px' }}>
-          {[{ s: 'Brake Service', p: 'From $89' }, { s: 'Oil Change', p: 'From $39' }, { s: 'Engine Repair', p: 'Free quote' }, { s: 'Tire Rotation', p: 'From $25' }, { s: 'Transmission', p: 'Free quote' }, { s: 'AC Service', p: 'From $79' }].map(i => (
-            <div key={i.s} style={{ background: '#1a1a1a', borderRadius: '3px', padding: '5px 7px', borderLeft: '2px solid #dc2626' }}>
-              <div style={{ fontSize: '6.5px', color: '#e5e7eb', fontWeight: 600 }}>{i.s}</div>
-              <div style={{ fontSize: '6px', color: '#9ca3af' }}>{i.p}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Trust */}
-      <div style={{ background: '#dc2626', padding: '6px 14px', display: 'flex', justifyContent: 'space-around' }}>
-        {['4.8★ Google', 'Free Towing', 'Warranty on Work'].map(s => (
-          <div key={s} style={{ fontSize: '6px', color: '#fff', fontWeight: 700, textAlign: 'center' }}>{s}</div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ─── Mock 4: Lawn Service — fresh green, clean outdoor feel ────────── */
-function LawnMock() {
-  return (
-    <div style={{ fontFamily: "'Inter', sans-serif", fontSize: '10px', lineHeight: 1.3, background: '#f0fdf4', height: '100%' }}>
-      {/* Nav */}
-      <div style={{ background: '#fff', padding: '8px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #dcfce7', boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
+    <div className="mock-site mk-land">
+      {/* Ultra-slim nav with hairline border */}
+      <div className="mk-land-nav">
         <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-          <div style={{ fontSize: '14px' }}>🌿</div>
-          <div style={{ fontWeight: 800, fontSize: '9px', color: '#15803d', letterSpacing: '0.03em' }}>GREENLINE LAWN CO.</div>
+          <div className="mk-land-monogram" style={{ width: '16px', height: '16px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '7px', fontWeight: 700, letterSpacing: '0.05em' }}>PL</div>
+          <div style={{ fontWeight: 300, fontSize: '8px', letterSpacing: '0.25em', textTransform: 'uppercase' }} className="mk-land-brand">Prestige Landscapes</div>
         </div>
-        <div style={{ background: '#16a34a', color: '#fff', fontSize: '6.5px', fontWeight: 700, padding: '3px 9px', borderRadius: '12px', cursor: 'default' }}>Free Quote</div>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          {['Portfolio', 'Services', 'About'].map(t => <span key={t} style={{ fontSize: '5.5px', letterSpacing: '0.12em', textTransform: 'uppercase' }} className="mk-land-link">{t}</span>)}
+          <span className="mk-land-nav-cta" style={{ fontSize: '5.5px', fontWeight: 600, padding: '3px 8px', borderRadius: '0', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Consult</span>
+        </div>
+      </div>
+      {/* Split editorial hero */}
+      <div className="mk-land-hero">
+        {/* Left editorial content */}
+        <div style={{ flex: '1 1 52%', padding: '16px 14px 12px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="mk-land-eyebrow" style={{ fontSize: '5px', fontWeight: 500, letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '8px' }}>Dearborn, Michigan · Est. 2011</div>
+          <div style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.08, marginBottom: '8px', letterSpacing: '-0.01em' }} className="mk-land-heading">Crafting Outdoor<br/><span style={{ fontStyle: 'italic', fontWeight: 600 }}>Masterpieces</span></div>
+          <div className="mk-land-divider" style={{ width: '32px', height: '1px', marginBottom: '8px' }} />
+          <div style={{ fontSize: '6.5px', lineHeight: 1.6, marginBottom: '12px', maxWidth: '160px' }} className="mk-land-sub">Bespoke landscape architecture for distinguished Metro Detroit residences.</div>
+          <span className="mk-land-cta" style={{ fontSize: '6px', fontWeight: 600, padding: '5px 14px', letterSpacing: '0.15em', textTransform: 'uppercase', cursor: 'default', alignSelf: 'flex-start' }}>Schedule a Visit</span>
+        </div>
+        {/* Right — luxury image area */}
+        <div style={{ flex: '1 1 48%', position: 'relative', overflow: 'hidden' }} className="mk-land-img">
+          <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
+            <div className="mk-land-img-frame" style={{ width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: '22px' }}>🌿</span>
+            </div>
+            <span style={{ fontSize: '5px', fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase' }} className="mk-land-img-caption">Featured Estate</span>
+          </div>
+        </div>
+      </div>
+      {/* Stats with thin dividers */}
+      <div className="mk-land-stats">
+        {[{ n: '500+', l: 'Estates Transformed' }, { n: '15', l: 'Years of Excellence' }, { n: '4.9', l: 'Client Rating' }].map((s, i) => (
+          <div key={s.l} style={{ textAlign: 'center', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            {i > 0 && <div className="mk-land-stat-div" style={{ width: '1px', height: '18px' }} />}
+            <div>
+              <div style={{ fontSize: '11px', fontWeight: 300, lineHeight: 1, letterSpacing: '-0.02em' }} className="mk-land-stat-num">{s.n}</div>
+              <div style={{ fontSize: '4.5px', letterSpacing: '0.15em', textTransform: 'uppercase', marginTop: '2px', fontWeight: 500 }} className="mk-land-stat-label">{s.l}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <style>{`
+        .mk-land { font-family: 'Inter', sans-serif; font-size: 10px; line-height: 1.3; height: 100%; display: flex; flex-direction: column; }
+        .mk-land { background: #0c0b09; color: #e8e2d8; }
+        .mk-land-nav { padding: 7px 14px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(200,175,120,0.1); background: rgba(12,11,9,0.95); }
+        .mk-land-monogram { border: 1px solid rgba(200,175,120,0.4); color: #c8a44e; background: transparent; }
+        .mk-land-brand { color: rgba(232,226,216,0.7); }
+        .mk-land-link { color: rgba(232,226,216,0.35); }
+        .mk-land-nav-cta { background: transparent; color: #c8a44e; border: 1px solid rgba(200,164,78,0.35); }
+        .mk-land-hero { display: flex; flex: 1; min-height: 0; }
+        .mk-land-eyebrow { color: #c8a44e; }
+        .mk-land-heading { color: #f5f0e6; }
+        .mk-land-divider { background: linear-gradient(90deg, #c8a44e, transparent); }
+        .mk-land-sub { color: rgba(232,226,216,0.45); }
+        .mk-land-cta { background: transparent; color: #c8a44e; border: 1px solid rgba(200,164,78,0.4); transition: all 0.2s; }
+        .mk-land-img { background: linear-gradient(145deg, #1a1608 0%, #0f0d08 50%, #1a1608 100%); }
+        .mk-land-img-frame { border: 1px solid rgba(200,175,120,0.2); background: rgba(200,175,120,0.05); }
+        .mk-land-img-caption { color: rgba(200,164,78,0.4); }
+        .mk-land-stats { display: flex; justify-content: center; gap: 0; padding: 10px 14px; border-top: 1px solid rgba(200,175,120,0.08); background: #0c0b09; flex-shrink: 0; }
+        .mk-land-stat-num { color: #c8a44e; }
+        .mk-land-stat-label { color: rgba(232,226,216,0.3); }
+        .mk-land-stat-div { background: rgba(200,175,120,0.15); }
+        /* LIGHT */
+        [data-theme="light"] .mk-land { background: #faf9f6; color: #2c2208; }
+        [data-theme="light"] .mk-land-nav { background: rgba(250,249,246,0.97); border-bottom-color: rgba(200,175,120,0.15); }
+        [data-theme="light"] .mk-land-monogram { border-color: #8B6914; color: #6b4f0e; }
+        [data-theme="light"] .mk-land-brand { color: #4a3d20; }
+        [data-theme="light"] .mk-land-link { color: #a09480; }
+        [data-theme="light"] .mk-land-nav-cta { color: #6b4f0e; border-color: rgba(107,79,14,0.3); }
+        [data-theme="light"] .mk-land-eyebrow { color: #8B6914; }
+        [data-theme="light"] .mk-land-heading { color: #1a1608; }
+        [data-theme="light"] .mk-land-divider { background: linear-gradient(90deg, #8B6914, transparent); }
+        [data-theme="light"] .mk-land-sub { color: #7a6e58; }
+        [data-theme="light"] .mk-land-cta { color: #6b4f0e; border-color: rgba(107,79,14,0.3); }
+        [data-theme="light"] .mk-land-img { background: linear-gradient(145deg, #f0ebe0 0%, #e8e0d0 50%, #f0ebe0 100%); }
+        [data-theme="light"] .mk-land-img-frame { border-color: rgba(139,105,20,0.2); background: rgba(139,105,20,0.05); }
+        [data-theme="light"] .mk-land-img-caption { color: #8B6914; }
+        [data-theme="light"] .mk-land-stats { background: #faf9f6; border-top-color: rgba(200,175,120,0.12); }
+        [data-theme="light"] .mk-land-stat-num { color: #6b4f0e; }
+        [data-theme="light"] .mk-land-stat-label { color: #a09480; }
+        [data-theme="light"] .mk-land-stat-div { background: rgba(200,175,120,0.2); }
+      `}</style>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOCK 2: Apex Automotive — Premium dark dashboard, glass cards
+   Distinctive: Glassmorphism service cards, subtle glow effects,
+   sleek monochrome + red accent, status-indicator styling
+   ═══════════════════════════════════════════════════════════════════ */
+function AutoRepairMock() {
+  return (
+    <div className="mock-site mk-auto">
+      {/* Slim header with glow accent line */}
+      <div className="mk-auto-accent-line" style={{ height: '2px' }} />
+      <div className="mk-auto-nav">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div className="mk-auto-logo" style={{ fontSize: '8px', fontWeight: 900, letterSpacing: '0.08em', padding: '3px 6px' }}>APEX</div>
+          <div>
+            <div style={{ fontWeight: 700, fontSize: '7.5px', letterSpacing: '0.06em' }} className="mk-auto-brand">AUTOMOTIVE</div>
+            <div style={{ fontSize: '4.5px', letterSpacing: '0.2em' }} className="mk-auto-sub">SOUTHFIELD, MI</div>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+          <span style={{ fontSize: '5.5px', letterSpacing: '0.1em' }} className="mk-auto-phone">313.555.8843</span>
+          <span className="mk-auto-book" style={{ fontSize: '5.5px', fontWeight: 700, padding: '3px 8px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Reserve</span>
+        </div>
+      </div>
+      {/* Hero with cinematic gradient */}
+      <div className="mk-auto-hero" style={{ padding: '14px 14px 12px', position: 'relative' }}>
+        <div style={{ fontSize: '5px', fontWeight: 600, letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '6px' }} className="mk-auto-eyebrow">Family Owned · Since 1998 · ASE Master Certified</div>
+        <div style={{ fontSize: '16px', fontWeight: 200, lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '5px' }} className="mk-auto-heading">Precision<br/><span style={{ fontWeight: 800 }}>Automotive Care</span></div>
+        <div style={{ fontSize: '6.5px', lineHeight: 1.6, marginBottom: '10px' }} className="mk-auto-sub">Expert diagnostics and repair with transparent pricing. No surprises.</div>
+        <div style={{ display: 'flex', gap: '5px' }}>
+          <span className="mk-auto-cta" style={{ fontSize: '6px', fontWeight: 700, padding: '4px 12px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Book Service</span>
+          <span className="mk-auto-cta2" style={{ fontSize: '6px', fontWeight: 500, padding: '4px 12px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Our Process</span>
+        </div>
+      </div>
+      {/* Glass service cards */}
+      <div style={{ padding: '6px 14px 8px', flex: 1 }} className="mk-auto-cards-wrap">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px' }}>
+          {[
+            { s: 'Full Diagnostic', p: '$49', icon: '◎' },
+            { s: 'Brake System', p: '$99+', icon: '◉' },
+            { s: 'Engine Service', p: 'Quote', icon: '⬡' },
+            { s: 'Performance', p: '$129+', icon: '△' },
+          ].map(i => (
+            <div key={i.s} className="mk-auto-glass-card" style={{ borderRadius: '6px', padding: '6px 7px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                <div>
+                  <div style={{ fontSize: '6.5px', fontWeight: 600, marginBottom: '1px' }} className="mk-auto-card-name">{i.s}</div>
+                  <div style={{ fontSize: '8px', fontWeight: 800, letterSpacing: '-0.02em' }} className="mk-auto-card-price">{i.p}</div>
+                </div>
+                <span style={{ fontSize: '9px', lineHeight: 1, opacity: 0.3 }} className="mk-auto-card-icon">{i.icon}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Bottom bar */}
+      <div className="mk-auto-bottom">
+        {['4.9★ Rating', 'Same-Day Available', 'Lifetime Warranty'].map(s => (
+          <span key={s} style={{ fontSize: '5px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{s}</span>
+        ))}
+      </div>
+
+      <style>{`
+        .mk-auto { font-family: 'Inter', sans-serif; font-size: 10px; line-height: 1.3; height: 100%; display: flex; flex-direction: column; }
+        .mk-auto { background: #0a0a0a; color: #e5e5e5; }
+        .mk-auto-accent-line { background: linear-gradient(90deg, #dc2626, #ff4444, #dc2626); flex-shrink: 0; }
+        .mk-auto-nav { padding: 7px 14px; display: flex; justify-content: space-between; align-items: center; background: #0a0a0a; border-bottom: 1px solid rgba(255,255,255,0.05); flex-shrink: 0; }
+        .mk-auto-logo { background: #dc2626; color: #fff; border-radius: 2px; }
+        .mk-auto-brand { color: #fff; }
+        .mk-auto-sub { color: rgba(255,255,255,0.3); }
+        .mk-auto-phone { color: rgba(255,255,255,0.35); }
+        .mk-auto-book { background: transparent; color: #dc2626; border: 1px solid rgba(220,38,38,0.4); border-radius: 2px; }
+        .mk-auto-hero { background: radial-gradient(ellipse at 30% 20%, rgba(220,38,38,0.06) 0%, transparent 60%); flex-shrink: 0; }
+        .mk-auto-eyebrow { color: #dc2626; }
+        .mk-auto-heading { color: #fff; }
+        .mk-auto-sub { color: rgba(255,255,255,0.4); }
+        .mk-auto-cta { background: #dc2626; color: #fff; border-radius: 3px; }
+        .mk-auto-cta2 { background: transparent; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; }
+        .mk-auto-glass-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(4px); }
+        .mk-auto-card-name { color: rgba(255,255,255,0.6); }
+        .mk-auto-card-price { color: #dc2626; }
+        .mk-auto-card-icon { color: #dc2626; }
+        .mk-auto-bottom { padding: 6px 14px; display: flex; justify-content: space-around; border-top: 1px solid rgba(255,255,255,0.05); background: #0a0a0a; color: rgba(255,255,255,0.35); flex-shrink: 0; }
+        /* LIGHT */
+        [data-theme="light"] .mk-auto { background: #fafafa; color: #1a1a1a; }
+        [data-theme="light"] .mk-auto-accent-line { background: linear-gradient(90deg, #b91c1c, #dc2626, #b91c1c); }
+        [data-theme="light"] .mk-auto-nav { background: #fff; border-bottom-color: #f0f0f0; }
+        [data-theme="light"] .mk-auto-logo { background: #b91c1c; }
+        [data-theme="light"] .mk-auto-brand { color: #111; }
+        [data-theme="light"] .mk-auto-sub { color: #b91c1c; }
+        [data-theme="light"] .mk-auto-phone { color: #9ca3af; }
+        [data-theme="light"] .mk-auto-book { color: #b91c1c; border-color: rgba(185,28,28,0.3); }
+        [data-theme="light"] .mk-auto-hero { background: radial-gradient(ellipse at 30% 20%, rgba(185,28,28,0.04) 0%, transparent 60%); }
+        [data-theme="light"] .mk-auto-eyebrow { color: #b91c1c; }
+        [data-theme="light"] .mk-auto-heading { color: #111; }
+        [data-theme="light"] .mk-auto-sub { color: #6b7280; }
+        [data-theme="light"] .mk-auto-cta { background: #b91c1c; }
+        [data-theme="light"] .mk-auto-cta2 { color: #6b7280; border-color: #e5e7eb; }
+        [data-theme="light"] .mk-auto-glass-card { background: #fff; border-color: #f0f0f0; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        [data-theme="light"] .mk-auto-card-name { color: #4b5563; }
+        [data-theme="light"] .mk-auto-card-price { color: #b91c1c; }
+        [data-theme="light"] .mk-auto-card-icon { color: #b91c1c; }
+        [data-theme="light"] .mk-auto-bottom { background: #fff; border-top-color: #f0f0f0; color: #9ca3af; }
+      `}</style>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOCK 3: Verde Lawn Atelier — Minimalist luxury, oversized type
+   Distinctive: Huge elegant typography, centered layout, thin
+   horizontal plan cards, organic green with champagne accents
+   ═══════════════════════════════════════════════════════════════════ */
+function LawnCareMock() {
+  return (
+    <div className="mock-site mk-lawn">
+      {/* Minimal floating nav */}
+      <div className="mk-lawn-nav">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <div className="mk-lawn-mark" style={{ width: '6px', height: '6px', borderRadius: '50%' }} />
+          <span style={{ fontWeight: 300, fontSize: '8px', letterSpacing: '0.2em', textTransform: 'uppercase' }} className="mk-lawn-brand">Verde</span>
+        </div>
+        <div style={{ display: 'flex', gap: '7px', alignItems: 'center' }}>
+          {['Plans', 'Process', 'Reviews'].map(t => <span key={t} style={{ fontSize: '5.5px', letterSpacing: '0.12em', textTransform: 'uppercase' }} className="mk-lawn-link">{t}</span>)}
+        </div>
+      </div>
+      {/* Grand hero — oversized type */}
+      <div className="mk-lawn-hero" style={{ padding: '14px 14px 10px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ fontSize: '5px', fontWeight: 500, letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '6px' }} className="mk-lawn-eyebrow">Metro Detroit Lawn Atelier</div>
+        <div style={{ fontSize: '20px', fontWeight: 200, lineHeight: 0.9, letterSpacing: '-0.03em', marginBottom: '3px' }} className="mk-lawn-heading">your lawn,</div>
+        <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 0.9, letterSpacing: '-0.03em', fontStyle: 'italic', marginBottom: '8px' }} className="mk-lawn-heading">elevated.</div>
+        <div className="mk-lawn-line" style={{ width: '24px', height: '1px', marginBottom: '8px' }} />
+        <div style={{ fontSize: '6.5px', lineHeight: 1.6, maxWidth: '180px', marginBottom: '10px' }} className="mk-lawn-sub">Curated lawn care plans for homes that demand perfection. Cancel anytime.</div>
+        <span className="mk-lawn-cta" style={{ fontSize: '5.5px', fontWeight: 600, padding: '4px 16px', letterSpacing: '0.18em', textTransform: 'uppercase', cursor: 'default' }}>Begin Your Plan</span>
+      </div>
+      {/* Elegant pricing row */}
+      <div style={{ padding: '8px 14px', flex: 1 }} className="mk-lawn-plans">
+        <div style={{ display: 'flex', gap: '4px' }}>
+          {[
+            { n: 'Essential', p: '$35', f: '/wk', pop: false },
+            { n: 'Signature', p: '$55', f: '/wk', pop: true },
+            { n: 'Estate', p: '$85', f: '/wk', pop: false },
+          ].map(s => (
+            <div key={s.n} className={`mk-lawn-plan ${s.pop ? 'mk-lawn-featured' : ''}`} style={{ flex: 1, padding: '7px 5px', borderRadius: '6px', textAlign: 'center', position: 'relative' }}>
+              {s.pop && <div className="mk-lawn-pop-tag" style={{ position: 'absolute', top: '0', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '4px', fontWeight: 700, padding: '1px 6px', borderRadius: '8px', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Recommended</div>}
+              <div style={{ fontSize: '5px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '3px' }} className="mk-lawn-plan-name">{s.n}</div>
+              <div style={{ fontSize: '14px', fontWeight: 200, lineHeight: 1 }} className="mk-lawn-plan-price">{s.p}<span style={{ fontSize: '5.5px', fontWeight: 500, letterSpacing: '0.05em' }}>{s.f}</span></div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Bottom */}
+      <div className="mk-lawn-bottom" style={{ padding: '7px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <span style={{ fontSize: '5.5px', fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase' }} className="mk-lawn-bottom-txt">First service complimentary</span>
+        <span style={{ fontSize: '5px', letterSpacing: '0.08em' }} className="mk-lawn-bottom-areas">Oak Park · Southfield · Royal Oak</span>
+      </div>
+
+      <style>{`
+        .mk-lawn { font-family: 'Inter', sans-serif; font-size: 10px; line-height: 1.3; height: 100%; display: flex; flex-direction: column; }
+        .mk-lawn { background: #080f0a; color: #d4eed4; }
+        .mk-lawn-nav { padding: 7px 14px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(34,197,94,0.08); background: rgba(8,15,10,0.95); }
+        .mk-lawn-mark { background: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.4); }
+        .mk-lawn-brand { color: rgba(212,238,212,0.7); }
+        .mk-lawn-link { color: rgba(212,238,212,0.3); }
+        .mk-lawn-hero { flex: 0 0 auto; }
+        .mk-lawn-eyebrow { color: #22c55e; }
+        .mk-lawn-heading { color: #fff; }
+        .mk-lawn-line { background: linear-gradient(90deg, transparent, #22c55e, transparent); }
+        .mk-lawn-sub { color: rgba(212,238,212,0.4); }
+        .mk-lawn-cta { background: transparent; color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+        .mk-lawn-plan { background: rgba(255,255,255,0.02); border: 1px solid rgba(34,197,94,0.08); }
+        .mk-lawn-featured { background: rgba(34,197,94,0.06); border-color: rgba(34,197,94,0.25); }
+        .mk-lawn-pop-tag { background: #22c55e; color: #052e16; }
+        .mk-lawn-plan-name { color: rgba(134,239,172,0.5); }
+        .mk-lawn-plan-price { color: #fff; }
+        .mk-lawn-bottom { border-top: 1px solid rgba(34,197,94,0.08); background: rgba(8,15,10,0.95); flex-shrink: 0; }
+        .mk-lawn-bottom-txt { color: #4ade80; }
+        .mk-lawn-bottom-areas { color: rgba(212,238,212,0.2); }
+        /* LIGHT */
+        [data-theme="light"] .mk-lawn { background: #f8fcf9; color: #14532d; }
+        [data-theme="light"] .mk-lawn-nav { background: rgba(248,252,249,0.97); border-bottom-color: #e0f2e0; }
+        [data-theme="light"] .mk-lawn-mark { background: #16a34a; box-shadow: none; }
+        [data-theme="light"] .mk-lawn-brand { color: #15803d; }
+        [data-theme="light"] .mk-lawn-link { color: #9ca3af; }
+        [data-theme="light"] .mk-lawn-eyebrow { color: #16a34a; }
+        [data-theme="light"] .mk-lawn-heading { color: #052e16; }
+        [data-theme="light"] .mk-lawn-line { background: linear-gradient(90deg, transparent, #16a34a, transparent); }
+        [data-theme="light"] .mk-lawn-sub { color: #6b7280; }
+        [data-theme="light"] .mk-lawn-cta { color: #15803d; border-color: rgba(21,128,61,0.3); }
+        [data-theme="light"] .mk-lawn-plan { background: #fff; border-color: #e0f2e0; }
+        [data-theme="light"] .mk-lawn-featured { background: #f0fdf4; border-color: #86efac; }
+        [data-theme="light"] .mk-lawn-pop-tag { background: #16a34a; color: #fff; }
+        [data-theme="light"] .mk-lawn-plan-name { color: #15803d; }
+        [data-theme="light"] .mk-lawn-plan-price { color: #052e16; }
+        [data-theme="light"] .mk-lawn-bottom { background: rgba(248,252,249,0.97); border-top-color: #e0f2e0; }
+        [data-theme="light"] .mk-lawn-bottom-txt { color: #15803d; }
+        [data-theme="light"] .mk-lawn-bottom-areas { color: #9ca3af; }
+      `}</style>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOCK 4: Crown'd — Luxury e-commerce boutique, centered brand
+   Distinctive: Full-width promo, centered logo, 4-col product grid
+   with hover-style cards, rose gold / champagne pink palette
+   ═══════════════════════════════════════════════════════════════════ */
+function HairExtensionsMock() {
+  return (
+    <div className="mock-site mk-hair">
+      {/* Luxury promo ticker */}
+      <div className="mk-hair-ticker" style={{ padding: '3px 12px', textAlign: 'center' }}>
+        <span style={{ fontSize: '5px', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase' }}>Complimentary Install with 3+ Bundle Purchase · Code: CROWND</span>
+      </div>
+      {/* Centered luxury nav */}
+      <div className="mk-hair-nav">
+        <div style={{ display: 'flex', gap: '8px' }}>
+          {['Bundles', 'Closures', 'Wigs'].map(t => <span key={t} style={{ fontSize: '5.5px', letterSpacing: '0.12em', textTransform: 'uppercase' }} className="mk-hair-link">{t}</span>)}
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ fontWeight: 200, fontSize: '13px', letterSpacing: '0.22em' }} className="mk-hair-brand">CROWN'D</div>
+          <div style={{ fontSize: '4px', letterSpacing: '0.35em', textTransform: 'uppercase', fontWeight: 500 }} className="mk-hair-sub-brand">Detroit Hair Atelier</div>
+        </div>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', justifyContent: 'flex-end' }}>
+          <span style={{ fontSize: '5.5px', letterSpacing: '0.12em', textTransform: 'uppercase' }} className="mk-hair-link">Account</span>
+          <span className="mk-hair-cart" style={{ fontSize: '5.5px', fontWeight: 600, letterSpacing: '0.08em', cursor: 'default' }}>Bag (0)</span>
+        </div>
       </div>
       {/* Hero */}
-      <div style={{ background: 'linear-gradient(135deg, #14532d 0%, #166534 100%)', padding: '16px 14px 14px' }}>
-        <div style={{ display: 'inline-block', background: 'rgba(134,239,172,0.15)', border: '1px solid rgba(134,239,172,0.35)', borderRadius: '20px', padding: '2px 9px', marginBottom: '7px' }}>
-          <span style={{ fontSize: '6.5px', color: '#86efac', fontWeight: 600 }}>🌱 Serving Metro Detroit</span>
-        </div>
-        <div style={{ fontSize: '13px', fontWeight: 800, color: '#fff', lineHeight: 1.2, marginBottom: '5px' }}>A Lawn Your Neighbors Will Envy</div>
-        <div style={{ fontSize: '7px', color: 'rgba(255,255,255,0.65)', marginBottom: '10px' }}>Mowing · Fertilizing · Landscaping · Snow removal</div>
-        <div style={{ display: 'flex', gap: '6px' }}>
-          <div style={{ background: '#22c55e', color: '#fff', fontSize: '7px', fontWeight: 800, padding: '5px 11px', borderRadius: '4px', cursor: 'default' }}>Get Free Quote</div>
-          <div style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: '7px', padding: '5px 11px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.25)', cursor: 'default' }}>Our Work</div>
-        </div>
+      <div className="mk-hair-hero" style={{ padding: '14px 14px 10px', textAlign: 'center' }}>
+        <div style={{ fontSize: '5px', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '5px', fontWeight: 500 }} className="mk-hair-eyebrow">Premium Vietnamese Hair</div>
+        <div style={{ fontSize: '15px', fontWeight: 200, lineHeight: 1.05, marginBottom: '3px' }} className="mk-hair-heading">Your Crown,</div>
+        <div style={{ fontSize: '15px', fontWeight: 700, lineHeight: 1.05, fontStyle: 'italic', marginBottom: '8px' }} className="mk-hair-heading">Your Rules</div>
+        <span className="mk-hair-shop" style={{ fontSize: '5.5px', fontWeight: 600, padding: '4px 16px', letterSpacing: '0.18em', textTransform: 'uppercase', cursor: 'default', display: 'inline-block' }}>Shop Collection</span>
       </div>
-      {/* Services */}
-      <div style={{ padding: '10px 14px', background: '#f0fdf4' }}>
-        <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#15803d', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '7px' }}>Services</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '5px' }}>
-          {[{ icon: '✂️', n: 'Weekly Mowing', p: 'From $35' }, { icon: '🌸', n: 'Landscaping', p: 'Custom quote' }, { icon: '💧', n: 'Irrigation', p: 'From $150' }, { icon: '❄️', n: 'Snow Removal', p: 'Seasonal' }].map(s => (
-            <div key={s.n} style={{ background: '#fff', padding: '7px 8px', borderRadius: '6px', border: '1px solid #bbf7d0', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <div style={{ fontSize: '12px' }}>{s.icon}</div>
-              <div>
-                <div style={{ fontSize: '6.5px', color: '#166534', fontWeight: 700 }}>{s.n}</div>
-                <div style={{ fontSize: '5.5px', color: '#6b7280' }}>{s.p}</div>
+      {/* Product grid */}
+      <div style={{ padding: '6px 12px 6px', flex: 1 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '4px' }}>
+          {[
+            { n: 'Body Wave', p: '$85+', tag: 'Bestseller' },
+            { n: 'HD Frontal', p: '$120+', tag: '' },
+            { n: 'Deep Wave', p: '$90+', tag: 'New In' },
+            { n: 'Straight', p: '$75+', tag: '' },
+          ].map(s => (
+            <div key={s.n} className="mk-hair-product" style={{ borderRadius: '4px', overflow: 'hidden', textAlign: 'center' }}>
+              <div className="mk-hair-prod-img" style={{ height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+                <span style={{ fontSize: '14px', opacity: 0.7 }}>✨</span>
+                {s.tag && <span className="mk-hair-tag" style={{ position: 'absolute', top: '2px', left: '2px', fontSize: '3.5px', fontWeight: 700, padding: '1px 4px', borderRadius: '1px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{s.tag}</span>}
+              </div>
+              <div style={{ padding: '3px 2px 4px' }}>
+                <div style={{ fontSize: '5.5px', fontWeight: 500, letterSpacing: '0.04em' }} className="mk-hair-prod-name">{s.n}</div>
+                <div style={{ fontSize: '7px', fontWeight: 300, marginTop: '1px' }} className="mk-hair-prod-price">{s.p}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
       {/* Review */}
-      <div style={{ background: '#dcfce7', margin: '0 14px 10px', borderRadius: '6px', padding: '7px 9px', border: '1px solid #bbf7d0' }}>
-        <div style={{ fontSize: '6.5px', color: '#166534', lineHeight: 1.5, fontStyle: 'italic' }}>"Best lawn on the block since we hired them. Show up every week, no excuses."</div>
-        <div style={{ fontSize: '5.5px', color: '#15803d', fontWeight: 700, marginTop: '3px' }}>— Marcus D. · ⭐⭐⭐⭐⭐ Google</div>
+      <div className="mk-hair-review" style={{ margin: '0 12px 8px', borderRadius: '4px', padding: '6px 8px', textAlign: 'center' }}>
+        <div style={{ fontSize: '6px', fontStyle: 'italic', lineHeight: 1.6, fontWeight: 300 }}>"The only hair I trust. Zero shedding, perfect curl pattern every time."</div>
+        <div style={{ fontSize: '4.5px', fontWeight: 600, marginTop: '2px', letterSpacing: '0.1em', textTransform: 'uppercase' }} className="mk-hair-reviewer">Tasha M. · ★★★★★</div>
       </div>
+
+      <style>{`
+        .mk-hair { font-family: 'Inter', sans-serif; font-size: 10px; line-height: 1.3; height: 100%; display: flex; flex-direction: column; }
+        .mk-hair { background: #140e14; color: #f0e4f0; }
+        .mk-hair-ticker { background: linear-gradient(90deg, #9d174d, #be185d, #9d174d); color: #fce7f3; flex-shrink: 0; }
+        .mk-hair-nav { padding: 6px 12px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid rgba(200,120,170,0.1); background: rgba(20,14,20,0.95); flex-shrink: 0; }
+        .mk-hair-brand { color: #e8a0c8; }
+        .mk-hair-sub-brand { color: rgba(232,160,200,0.35); }
+        .mk-hair-link { color: rgba(240,228,240,0.3); }
+        .mk-hair-cart { color: #c878aa; }
+        .mk-hair-hero { flex: 0 0 auto; background: radial-gradient(ellipse at 50% 30%, rgba(200,120,170,0.06) 0%, transparent 70%); }
+        .mk-hair-eyebrow { color: #c878aa; }
+        .mk-hair-heading { color: #f5e8f0; }
+        .mk-hair-shop { background: transparent; color: #e8a0c8; border: 1px solid rgba(200,120,170,0.3); }
+        .mk-hair-product { background: rgba(255,255,255,0.02); border: 1px solid rgba(200,120,170,0.08); }
+        .mk-hair-prod-img { background: rgba(200,120,170,0.04); }
+        .mk-hair-tag { background: #c878aa; color: #140e14; }
+        .mk-hair-prod-name { color: rgba(240,228,240,0.65); }
+        .mk-hair-prod-price { color: #e8a0c8; }
+        .mk-hair-review { background: rgba(200,120,170,0.04); border: 1px solid rgba(200,120,170,0.08); color: rgba(240,228,240,0.55); }
+        .mk-hair-reviewer { color: #c878aa; }
+        /* LIGHT */
+        [data-theme="light"] .mk-hair { background: #fdf8fb; color: #4a1942; }
+        [data-theme="light"] .mk-hair-ticker { background: linear-gradient(90deg, #be185d, #db2777, #be185d); color: #fff; }
+        [data-theme="light"] .mk-hair-nav { background: rgba(253,248,251,0.97); border-bottom-color: #fce7f3; }
+        [data-theme="light"] .mk-hair-brand { color: #9d174d; }
+        [data-theme="light"] .mk-hair-sub-brand { color: #be185d; }
+        [data-theme="light"] .mk-hair-link { color: #9ca3af; }
+        [data-theme="light"] .mk-hair-cart { color: #9d174d; }
+        [data-theme="light"] .mk-hair-hero { background: radial-gradient(ellipse at 50% 30%, rgba(190,24,93,0.03) 0%, transparent 70%); }
+        [data-theme="light"] .mk-hair-eyebrow { color: #be185d; }
+        [data-theme="light"] .mk-hair-heading { color: #4a1942; }
+        [data-theme="light"] .mk-hair-shop { color: #9d174d; border-color: rgba(157,23,77,0.25); }
+        [data-theme="light"] .mk-hair-product { background: #fff; border-color: #fce7f3; }
+        [data-theme="light"] .mk-hair-prod-img { background: #fdf2f8; }
+        [data-theme="light"] .mk-hair-tag { background: #be185d; color: #fff; }
+        [data-theme="light"] .mk-hair-prod-name { color: #4a1942; }
+        [data-theme="light"] .mk-hair-prod-price { color: #be185d; }
+        [data-theme="light"] .mk-hair-review { background: #fdf2f8; border-color: #fce7f3; color: #831843; }
+        [data-theme="light"] .mk-hair-reviewer { color: #9d174d; }
+      `}</style>
     </div>
   );
 }
 
-/* ─── Browser chrome wrapper ─────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════
+   Browser chrome wrapper — theme-aware luxury frame
+   ═══════════════════════════════════════════════════════════════════ */
 
 interface BrowserMockProps {
   url: string;
-  chromeColor?: string;
   children: React.ReactNode;
   result: string;
   industry: string;
   name: string;
 }
 
-function BrowserMock({ url, chromeColor = '#1e1e1e', children, result, industry, name }: BrowserMockProps) {
+function BrowserMock({ url, children, result, industry, name }: BrowserMockProps) {
   return (
     <div
       className="work-card"
       style={{
         borderRadius: '12px',
         overflow: 'hidden',
-        boxShadow: '0 8px 40px rgba(0,0,0,0.35)',
-        border: '1px solid rgba(255,255,255,0.07)',
-        background: '#0a0a0a',
         display: 'flex',
         flexDirection: 'column',
         transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease',
@@ -219,69 +431,37 @@ function BrowserMock({ url, chromeColor = '#1e1e1e', children, result, industry,
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
         el.style.transform = 'translateY(-8px) scale(1.015)';
-        el.style.boxShadow = '0 24px 64px rgba(0,0,0,0.55)';
       }}
       onMouseLeave={(e) => {
         const el = e.currentTarget as HTMLElement;
         el.style.transform = 'translateY(0) scale(1)';
-        el.style.boxShadow = '0 8px 40px rgba(0,0,0,0.35)';
       }}
     >
       {/* Browser chrome */}
-      <div style={{
-        background: chromeColor,
-        padding: '7px 10px 6px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '6px',
-        flexShrink: 0,
-      }}>
+      <div className="work-card-chrome">
         <div style={{ display: 'flex', gap: '4px', flexShrink: 0 }}>
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ff5f57' }} />
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#febc2e' }} />
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#28c840' }} />
+          <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#ff5f57' }} />
+          <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#febc2e' }} />
+          <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#28c840' }} />
         </div>
-        <div style={{
-          flex: 1,
-          background: 'rgba(255,255,255,0.08)',
-          borderRadius: '4px',
-          padding: '3px 8px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '4px',
-        }}>
-          <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'rgba(74,222,128,0.7)', flexShrink: 0 }} />
-          <span style={{ fontFamily: 'monospace', fontSize: '7px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0' }}>{url}</span>
+        <div className="work-card-url-bar">
+          <div style={{ width: '5px', height: '5px', borderRadius: '50%', flexShrink: 0 }} className="work-card-ssl" />
+          <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '6.5px', letterSpacing: '0.02em' }} className="work-card-url">{url}</span>
         </div>
       </div>
 
-      {/* Fake website content */}
+      {/* Website content */}
       <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
         {children}
       </div>
 
-      {/* Result overlay bar */}
-      <div style={{
-        background: '#0a0a0a',
-        padding: '10px 14px',
-        borderTop: '1px solid rgba(255,255,255,0.07)',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexShrink: 0,
-      }}>
+      {/* Result bar */}
+      <div className="work-card-result">
         <div>
-          <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '12px', color: '#fff', marginBottom: '2px' }}>{name}</div>
-          <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', color: 'rgba(208,216,224,0.45)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{industry}</div>
+          <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '12px', marginBottom: '2px', letterSpacing: '-0.01em' }} className="work-card-name">{name}</div>
+          <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '8px', letterSpacing: '0.08em', textTransform: 'uppercase' }} className="work-card-industry">{industry}</div>
         </div>
-        <div style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '10px',
-          fontWeight: 700,
-          color: '#4ade80',
-          letterSpacing: '0.04em',
-          textAlign: 'right',
-        }}>
+        <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '10px', fontWeight: 700, letterSpacing: '0.04em', textAlign: 'right', fontStyle: 'italic' }} className="work-card-result-text">
           {result}
         </div>
       </div>
@@ -289,40 +469,38 @@ function BrowserMock({ url, chromeColor = '#1e1e1e', children, result, industry,
   );
 }
 
-/* ─── Main component ─────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════
+   Main component
+   ═══════════════════════════════════════════════════════════════════ */
 
 const projects = [
   {
-    name: 'Metro Plumbing Detroit',
-    industry: 'Home Services',
-    result: '+310% calls in 90 days',
-    url: 'metroplumbingdetroit.com',
-    chrome: '#1a2a3a',
-    Mock: PlumbingMock,
+    name: 'Prestige Landscapes',
+    industry: 'Landscape Architecture',
+    result: '3x leads in 60 days',
+    url: 'prestigelandscapes.com',
+    Mock: LandscapingMock,
   },
   {
-    name: 'Luxe Hair Studio',
-    industry: 'Beauty & Salon',
-    result: 'Fully booked in 45 days',
-    url: 'luxehairstudiodetroit.com',
-    chrome: '#120c04',
-    Mock: HairShopMock,
+    name: 'Crown\'d Hair Atelier',
+    industry: 'Luxury Hair & Extensions',
+    result: 'Sold out launch weekend',
+    url: 'crownddetroit.com',
+    Mock: HairExtensionsMock,
   },
   {
-    name: 'Motor City Auto Repair',
-    industry: 'Automotive',
-    result: '+190% website leads',
-    url: 'motorcityautorepair.com',
-    chrome: '#1a0a0a',
-    Mock: CarRepairMock,
+    name: 'Apex Automotive',
+    industry: 'Premium Auto Care',
+    result: '+210% online bookings',
+    url: 'apexautomotivedetroit.com',
+    Mock: AutoRepairMock,
   },
   {
-    name: 'Greenline Lawn Co.',
-    industry: 'Lawn & Landscaping',
-    result: '80 new clients in first season',
-    url: 'greenlinelawn.com',
-    chrome: '#0d1a0f',
-    Mock: LawnMock,
+    name: 'Verde Lawn Atelier',
+    industry: 'Curated Lawn Care',
+    result: '95 new clients, season 1',
+    url: 'verdelawn.com',
+    Mock: LawnCareMock,
   },
 ];
 
@@ -360,7 +538,7 @@ export default function WorkShowcase() {
     <div ref={containerRef} className="work-grid">
       {projects.map((p) => (
         <div key={p.name} className="work-card-wrapper">
-          <BrowserMock url={p.url} chromeColor={p.chrome} result={p.result} industry={p.industry} name={p.name}>
+          <BrowserMock url={p.url} result={p.result} industry={p.industry} name={p.name}>
             <p.Mock />
           </BrowserMock>
         </div>
@@ -375,7 +553,57 @@ export default function WorkShowcase() {
         @media (max-width: 768px) {
           .work-grid { grid-template-columns: 1fr; }
         }
-        .work-card { cursor: default; }
+        .work-card {
+          cursor: default;
+          background: var(--work-card-bg, #0a0a0a);
+          box-shadow: var(--work-card-shadow, 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04));
+          border: 1px solid var(--work-card-border, rgba(255,255,255,0.06));
+        }
+        .work-card-chrome {
+          background: var(--work-chrome-bg, #161616);
+          padding: 7px 10px 6px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          flex-shrink: 0;
+        }
+        .work-card-url-bar {
+          flex: 1;
+          background: var(--work-url-bg, rgba(255,255,255,0.06));
+          border-radius: 4px;
+          padding: 3px 8px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .work-card-ssl { background: rgba(74,222,128,0.6); }
+        .work-card-url { color: var(--work-url-color, rgba(255,255,255,0.35)); }
+        .work-card-result {
+          background: var(--work-card-bg, #0a0a0a);
+          padding: 10px 14px;
+          border-top: 1px solid var(--work-card-border, rgba(255,255,255,0.06));
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-shrink: 0;
+        }
+        .work-card-name { color: var(--work-name-color, #fff); }
+        .work-card-industry { color: var(--work-industry-color, rgba(208,216,224,0.35)); }
+        .work-card-result-text { color: #4ade80; }
+
+        /* ─── LIGHT MODE ─── */
+        [data-theme="light"] .work-card {
+          --work-card-bg: #ffffff;
+          --work-card-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.03);
+          --work-card-border: rgba(0,0,0,0.06);
+          --work-chrome-bg: #f0f0f0;
+          --work-url-bg: rgba(0,0,0,0.05);
+          --work-url-color: rgba(0,0,0,0.4);
+          --work-name-color: #111;
+          --work-industry-color: #9ca3af;
+        }
+        [data-theme="light"] .work-card-ssl { background: rgba(22,163,74,0.6); }
+        [data-theme="light"] .work-card-result-text { color: #16a34a; }
       `}</style>
     </div>
   );

@@ -291,11 +291,12 @@ export default function Home() {
       {/* ══ 6. WORK SHOWCASE ════════════════════════════════════ */}
       <section
         id="work"
-        data-dark-section
+        className="work-section"
         style={{
-          background: '#0d0d0d',
+          background: 'var(--bg)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
+          borderTop: '1px solid var(--border)',
+          transition: 'background 0.4s ease',
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -311,7 +312,7 @@ export default function Home() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.025em',
-              color: '#ffffff',
+              color: 'var(--text-primary)',
               marginBottom: '16px',
               maxWidth: '640px',
             }}
@@ -319,7 +320,7 @@ export default function Home() {
             Our Work Speaks for Itself
           </h2>
 
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '17px', lineHeight: 1.7, color: 'rgba(208,216,224,0.55)', marginBottom: 'clamp(40px, 5vw, 56px)', maxWidth: '520px' }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '17px', lineHeight: 1.7, color: 'var(--dim)', marginBottom: 'clamp(40px, 5vw, 56px)', maxWidth: '520px' }}>
             Real businesses. Real results. Every project is built to rank, convert, and grow.
           </p>
 

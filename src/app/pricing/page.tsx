@@ -69,11 +69,11 @@ export default function PricingPage() {
   return (
     <>
       <Nav />
-      <main style={{ minHeight: "100vh", paddingTop: "80px", paddingBottom: "80px", background: "var(--bg, #0a0a0e)" }}>
+      <main style={{ minHeight: "100vh", paddingTop: "0", paddingBottom: "0", background: "var(--bg, #0a0a0e)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 clamp(20px, 5vw, 48px)" }}>
 
           {/* Hero */}
-          <div style={{ textAlign: "center", marginBottom: "clamp(56px, 8vw, 96px)", paddingTop: "clamp(48px, 6vw, 80px)" }}>
+          <div style={{ textAlign: "center", marginBottom: "clamp(56px, 8vw, 96px)", paddingTop: "clamp(120px, 14vw, 160px)" }}>
             <p className="sec-label fu" style={{ justifyContent: "center" }}>
               Transparent Pricing
             </p>
@@ -212,8 +212,8 @@ export default function PricingPage() {
             <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "14px", letterSpacing: "-0.01em" }}>We&apos;ve answered the most common ones.</h2>
             <p style={{ color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "28px", fontSize: "1rem", lineHeight: 1.7, maxWidth: "460px", margin: "0 auto 28px" }}>Pricing, timelines, ownership, cancellation, and more — all in one place.</p>
             <div style={{ display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/faq" style={{ display: "inline-block", padding: "13px 32px", background: "var(--accent, #0070f3)", color: "#fff", borderRadius: "9px", fontWeight: 700, textDecoration: "none", fontSize: "0.9rem", letterSpacing: "0.02em" }}>Browse the Full FAQ</Link>
-              <Link href="/contact" style={{ display: "inline-block", padding: "13px 32px", background: "transparent", color: "var(--text-secondary, rgba(255,255,255,0.7))", borderRadius: "9px", fontWeight: 600, textDecoration: "none", fontSize: "0.9rem", border: "1px solid rgba(255,255,255,0.12)" }}>Talk to a Human</Link>
+              <Link href="/faq" className="btn-chrome" style={{ textDecoration: "none" }}>Browse the Full FAQ</Link>
+              <Link href="/contact" className="btn-line" style={{ textDecoration: "none" }}>Talk to a Human</Link>
             </div>
           </div>
 
@@ -333,13 +333,13 @@ export default function PricingPage() {
         .compare-table {
           width: 100%;
           border-collapse: collapse;
-          background: #0a0e1a;
+          background: var(--bg);
           font-size: 0.9rem;
           color: rgba(255,255,255,0.8);
           min-width: 480px;
         }
         .compare-table th {
-          background: #0d1221;
+          background: var(--bg2);
           padding: 14px 20px;
           font-family: 'Space Mono', monospace;
           font-size: 0.7rem;

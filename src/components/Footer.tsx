@@ -29,14 +29,12 @@ export default function Footer() {
     >
       {/* Top gradient line */}
       <div
+        className="section-divider-glow"
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
-          height: '1px',
-          background: 'linear-gradient(90deg, transparent, var(--navy), transparent)',
-          opacity: 0.6,
         }}
       />
 
@@ -135,9 +133,9 @@ export default function Footer() {
           <div style={{ display: 'flex', gap: '16px', marginTop: '4px' }}>
             <a
               href="https://www.linkedin.com/company/caliber-web-studio"
-              style={{ color: 'var(--dim)', transition: 'color 0.2s ease', display: 'flex' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}
+              style={{ color: 'var(--dim)', transition: 'color 0.2s ease, transform 0.2s ease', display: 'flex' }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--silver)'; e.currentTarget.style.transform = 'scale(1.15)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--dim)'; e.currentTarget.style.transform = 'scale(1)'; }}
               title="LinkedIn"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -148,9 +146,9 @@ export default function Footer() {
             </a>
             <a
               href="https://twitter.com/caliberwebstudio"
-              style={{ color: 'var(--dim)', transition: 'color 0.2s ease', display: 'flex' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}
+              style={{ color: 'var(--dim)', transition: 'color 0.2s ease, transform 0.2s ease', display: 'flex' }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--silver)'; e.currentTarget.style.transform = 'scale(1.15)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--dim)'; e.currentTarget.style.transform = 'scale(1)'; }}
               title="Twitter/X"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -159,9 +157,9 @@ export default function Footer() {
             </a>
             <a
               href="https://www.instagram.com/caliberwebstudio"
-              style={{ color: 'var(--dim)', transition: 'color 0.2s ease', display: 'flex' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}
+              style={{ color: 'var(--dim)', transition: 'color 0.2s ease, transform 0.2s ease', display: 'flex' }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--silver)'; e.currentTarget.style.transform = 'scale(1.15)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--dim)'; e.currentTarget.style.transform = 'scale(1)'; }}
               title="Instagram"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -191,6 +189,7 @@ export default function Footer() {
             <Link
               key={link.href}
               href={link.href}
+              className="text-hover-line"
               style={{
                 fontFamily: "'Space Mono', monospace",
                 fontSize: '11px',
@@ -232,6 +231,7 @@ export default function Footer() {
             <Link
               key={item.label}
               href={item.href}
+              className="text-hover-line"
               style={{
                 fontFamily: "'Space Mono', monospace",
                 fontSize: '11px',

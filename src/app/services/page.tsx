@@ -113,7 +113,7 @@ export default function ServicesPage() {
             <p className="sec-label fu" style={{ justifyContent: 'center' }}>What We Build</p>
           </ScrollReveal>
           <ScrollReveal delay={80}>
-            <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px,7vw,88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: '#fff', margin: '20px 0 24px' }}>
+            <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px,7vw,88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: 'var(--text-primary)', margin: '20px 0 24px' }}>
               Our Services —<br />
               <span style={{ background: 'linear-gradient(135deg, #1E3D8F, #0891b2)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Built to Get You Found.</span>
             </h1>
@@ -138,7 +138,7 @@ export default function ServicesPage() {
               <p className="sec-label">Included in Every Plan</p>
             </ScrollReveal>
             <ScrollReveal delay={80}>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#fff', marginBottom: '12px', letterSpacing: '-0.025em' }}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: 'var(--text-primary)', marginBottom: '12px', letterSpacing: '-0.025em' }}>
                 The Foundation Is Never Negotiated
               </h2>
               <p style={{ fontSize: '17px', color: 'var(--chrome)', maxWidth: '540px', marginBottom: 'clamp(36px,5vw,56px)', lineHeight: 1.7 }}>
@@ -149,7 +149,7 @@ export default function ServicesPage() {
               <div className="foundation-grid">
                 {foundation.map(item => (
                   <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '16px 18px', background: 'rgba(30,61,143,0.07)', border: '1px solid rgba(30,61,143,0.18)', borderRadius: '12px' }}>
-                    <span style={{ color: '#1E3D8F', fontWeight: 700, fontSize: '16px', lineHeight: 1.4, flexShrink: 0 }}>✓</span>
+                    <span style={{ color: 'var(--navy)', fontWeight: 700, fontSize: '16px', lineHeight: 1.4, flexShrink: 0 }}>✓</span>
                     <span style={{ fontSize: '14px', color: 'var(--silver)', lineHeight: 1.5 }}>{item}</span>
                   </div>
                 ))}
@@ -165,7 +165,7 @@ export default function ServicesPage() {
               <p className="sec-label">The Full Stack</p>
             </ScrollReveal>
             <ScrollReveal delay={80}>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#fff', marginBottom: 'clamp(40px,5vw,64px)', letterSpacing: '-0.025em' }}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: 'var(--text-primary)', marginBottom: 'clamp(40px,5vw,64px)', letterSpacing: '-0.025em' }}>
                 Six Systems. One Mission.
               </h2>
             </ScrollReveal>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px', flexWrap: 'wrap' }}>
                         <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: svc.color, background: svc.bg, border: `1px solid ${svc.color}40`, borderRadius: '100px', padding: '4px 12px', fontWeight: 700 }}>{svc.tag}</span>
-                        <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(18px,2.2vw,24px)', color: '#fff', margin: 0, letterSpacing: '-0.015em' }}>{svc.title}</h3>
+                        <h3 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(18px,2.2vw,24px)', color: 'var(--text-primary)', margin: 0, letterSpacing: '-0.015em' }}>{svc.title}</h3>
                       </div>
                       <p style={{ fontSize: '15px', color: 'var(--chrome)', lineHeight: 1.75, margin: 0, maxWidth: '580px' }}>{svc.body}</p>
                     </div>
@@ -199,7 +199,7 @@ export default function ServicesPage() {
               <p className="sec-label">Power-Ups</p>
             </ScrollReveal>
             <ScrollReveal delay={80}>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: '12px', letterSpacing: '-0.025em' }}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: 'var(--text-primary)', marginBottom: '12px', letterSpacing: '-0.025em' }}>
                 Add On What You Need
               </h2>
               <p style={{ fontSize: '17px', color: 'var(--chrome)', marginBottom: 'clamp(36px,5vw,52px)', lineHeight: 1.7, maxWidth: '480px' }}>
@@ -224,7 +224,7 @@ export default function ServicesPage() {
             <p className="sec-label" style={{ justifyContent: 'center' }}>Ready to Pick Your Plan?</p>
           </ScrollReveal>
           <ScrollReveal delay={80}>
-            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,60px)', color: '#fff', marginBottom: '20px', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+            <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,60px)', color: 'var(--text-primary)', marginBottom: '20px', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
               Every Service.<br />One Monthly Rate.
             </h2>
           </ScrollReveal>

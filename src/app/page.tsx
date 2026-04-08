@@ -7,8 +7,8 @@ import PhoneMockupScroll from '@/components/PhoneMockupScroll';
 import { HeroScene, ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
 
 /* ─── Shared style tokens ─────────────────────────────────────── */
-const NAVY = '#1e3d8f';
-const BLUE = '#2563eb';
+const NAVY = 'var(--navy)';
+const BLUE = 'var(--accent)';
 const SEC_LABEL: React.CSSProperties = {
   fontFamily: "'Space Mono', monospace",
   fontSize: '10px',
@@ -42,7 +42,7 @@ export default function Home() {
       <section
         data-dark-section
         style={{
-          background: '#111827',
+          background: 'var(--bg2)',
           borderTop: '1px solid rgba(255,255,255,0.06)',
           borderBottom: '1px solid rgba(255,255,255,0.06)',
           padding: 'clamp(40px, 5vw, 64px) clamp(20px, 6vw, 60px)',
@@ -176,7 +176,7 @@ export default function Home() {
       <section
         data-dark-section
         style={{
-          background: '#0a0a0a',
+          background: 'var(--bg)',
           padding: 'clamp(40px, 5vw, 64px) clamp(20px, 6vw, 60px)',
           borderTop: '1px solid rgba(255,255,255,0.05)',
           borderBottom: '1px solid rgba(255,255,255,0.05)',
@@ -293,7 +293,7 @@ export default function Home() {
         id="work"
         data-dark-section
         style={{
-          background: '#0d0d0d',
+          background: 'var(--bg)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
           borderTop: '1px solid rgba(255,255,255,0.05)',
         }}
@@ -311,7 +311,7 @@ export default function Home() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.025em',
-              color: '#ffffff',
+              color: 'var(--text-primary)',
               marginBottom: '16px',
               maxWidth: '640px',
             }}
@@ -388,7 +388,7 @@ export default function Home() {
                 }}
               >
                 {/* Blue top accent */}
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${BLUE}, transparent)` }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #2563eb, transparent)' }} />
 
                 {/* Quote mark */}
                 <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(60px, 7vw, 84px)', color: 'rgba(37,99,235,0.18)', lineHeight: 0.7, marginBottom: '24px', fontWeight: 800, userSelect: 'none' }}>
@@ -404,7 +404,7 @@ export default function Home() {
                 <div style={{ marginTop: '28px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
                   <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '15px', color: 'var(--silver)', marginBottom: '3px' }}>{t.name}</div>
                   <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '10px' }}>{t.role}</div>
-                  <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.08em', textTransform: 'uppercase', color: BLUE, padding: '3px 8px', background: 'rgba(37,99,235,0.08)', border: `1px solid rgba(37,99,235,0.2)`, borderRadius: '2px' }}>
+                  <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2563eb', padding: '3px 8px', background: 'rgba(37,99,235,0.08)', border: '1px solid rgba(37,99,235,0.2)', borderRadius: '2px' }}>
                     {t.industry}
                   </span>
                 </div>

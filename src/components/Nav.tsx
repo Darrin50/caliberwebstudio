@@ -201,7 +201,7 @@ export default function Nav() {
         <ul className="nav-desktop" style={{ display: 'flex', gap: '36px', listStyle: 'none', alignItems: 'center' }}>
           {navItems.map((item) => (
             <li key={item.label}>
-              <Link href={item.href} style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}>{item.label}</Link>
+              <Link href={item.href} className="text-hover-line" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}>{item.label}</Link>
             </li>
           ))}
         </ul>
@@ -211,7 +211,7 @@ export default function Nav() {
             <span className="toggle-icon" style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'linear-gradient(135deg, #ffcc40, #ff6600)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', transition: 'transform 0.3s', transform: 'translateX(0)' }}>{'☀️'}</span>
           </button>
 
-          <Link href="/contact" className="nav-btn nav-cta-desktop" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--bg)', background: 'var(--chrome)', padding: '11px 26px', border: 'none', textDecoration: 'none', fontWeight: 700, transition: 'transform 0.15s ease-out', display: 'inline-block' }}>Get Your Free Mockup</Link>
+          <Link href="/contact" className="nav-btn nav-cta-desktop btn-chrome" style={{ textDecoration: 'none', padding: '10px 22px', fontSize: '10px' }}>Get Your Free Mockup</Link>
 
           <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation menu" style={{ display: 'none', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '5px', width: '40px', height: '40px', background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }}>
             <span style={{ display: 'block', width: '22px', height: '2px', background: 'var(--hamburger-color)', transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />

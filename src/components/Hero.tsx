@@ -29,6 +29,19 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         zIndex: 1,
       }} />
 
+      {/* Secondary ambient orb */}
+      <div style={{
+        position: 'absolute',
+        bottom: '-20%',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '80%',
+        height: '40%',
+        background: 'radial-gradient(ellipse at center, rgba(0,118,182,0.08) 0%, transparent 70%)',
+        pointerEvents: 'none',
+        zIndex: 1,
+      }} />
+
       {/* Content — always in front of canvas */}
       <div
         style={{
@@ -41,27 +54,40 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         }}
       >
         {/* Label */}
-        <div className="sec-label" style={{ justifyContent: 'center', color: '#1e3d8f' }}>
+        <div className="sec-label" style={{ justifyContent: 'center', color: '#3b82f6', fontWeight: 600 }}>
           Detroit&apos;s Premier AI Web Agency
         </div>
+
+        {/* Decorative gradient line */}
+        <div style={{
+          width: '48px',
+          height: '2px',
+          background: 'linear-gradient(90deg, #0076B6, #3b82f6)',
+          margin: '0 auto 8px',
+          borderRadius: '1px',
+          opacity: 0.7,
+        }} />
 
         {/* Main Heading */}
         <h1
           style={{
             fontFamily: "'Syne', sans-serif",
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            fontSize: 'clamp(2.8rem, 6vw, 5rem)',
             fontWeight: 800,
             lineHeight: 1.05,
             letterSpacing: '-0.03em',
             color: '#ffffff',
             margin: '24px 0 0',
+            maxWidth: '900px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
           }}
         >
           <span style={{ display: 'block', color: '#ffffff' }}>Detroit Websites That</span>
           <span
             style={{
               display: 'block',
-              background: 'linear-gradient(90deg, #a8b8c8, #fff, #a8b8c8)',
+              background: 'linear-gradient(90deg, #4d9de0, #ffffff, #93c5fd, #ffffff, #4d9de0)',
               backgroundSize: '200% 100%',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -80,9 +106,9 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             fontSize: 'clamp(1rem, 1.8vw, 1.2rem)',
             fontWeight: 400,
             lineHeight: 1.7,
-            color: 'rgba(208,216,224,0.65)',
+            color: 'rgba(208,216,224,0.72)',
             margin: '24px auto 36px',
-            maxWidth: '540px',
+            maxWidth: '580px',
           }}
         >
           We build high-performance websites that rank, convert, and grow your

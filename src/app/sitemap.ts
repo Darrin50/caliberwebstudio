@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { posts } from "@/app/blog/posts";
+import { industries } from "@/app/industries/data";
+import { cities } from "@/app/areas/cities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://caliberwebstudio.com";
@@ -9,6 +11,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.date),
     changeFrequency: "monthly",
     priority: 0.7,
+  }));
+
+  const industryEntries: MetadataRoute.Sitemap = industries.map((ind) => ({
+    url: `${baseUrl}/industries/${ind.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const areaEntries: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/areas/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
   }));
 
   return [
@@ -120,6 +136,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    ...industryEntries,
+    ...areaEntries,
     ...blogEntries,
   ];
 }

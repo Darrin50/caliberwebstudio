@@ -786,8 +786,8 @@ html[data-theme="light"] .pricing-cta:hover {
 }
 
 html[data-theme="light"] .startup-card {
-  background: rgba(254,243,199,0.6);
-  border-color: rgba(217,119,6,0.4);
+  background: rgba(0,118,182,0.08);
+  border-color: rgba(0,118,182,0.35);
 }
 html[data-theme="light"] .startup-card p,
 html[data-theme="light"] .startup-card li { color: #1a1a1a !important; }

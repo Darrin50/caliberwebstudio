@@ -181,7 +181,7 @@ export default function PricingPage() {
           <div style={{ marginTop: "72px" }}>
             <ScrollReveal>
               <div style={{ textAlign: "center", marginBottom: "36px" }}>
-                <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#f59e0b", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>One-Time Investment</p>
+                <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--navy)", marginBottom: "12px", fontFamily: "'Space Mono', monospace" }}>One-Time Investment</p>
                 <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "12px", letterSpacing: "-0.01em" }}>Launch Your Entire Business</h2>
                 <p style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.1rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>Everything you need to go from idea to fully operational — website, brand, AI systems, and legal setup — delivered in 48 hours.</p>
               </div>
@@ -191,7 +191,7 @@ export default function PricingPage() {
               <div className="startup-badge">48-Hour Delivery</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }}>
                 <div>
-                  <p style={{ fontSize: "0.75rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "#f59e0b", marginBottom: "10px", fontFamily: "'Space Mono', monospace" }}>Startup Complete</p>
+                  <p style={{ fontSize: "0.75rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--navy)", marginBottom: "10px", fontFamily: "'Space Mono', monospace" }}>Startup Complete</p>
                   <span style={{ fontSize: "clamp(2.6rem, 5vw, 3.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", lineHeight: 1, display: "block", marginBottom: "6px" }}>$5,000</span>
                   <p style={{ fontSize: "0.8rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "8px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>starting price · one-time</p>
                   <p style={{ fontSize: "0.85rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "32px", lineHeight: 1.6 }}>Custom scope up to $15,000 depending on brand complexity and business needs.</p>
@@ -211,7 +211,7 @@ export default function PricingPage() {
                     "Everything delivered in 48 hours",
                   ].map((feat) => (
                     <li key={feat} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-primary, rgba(255,255,255,0.9))", lineHeight: 1.5 }}>
-                      <span style={{ color: "#f59e0b", fontSize: "1rem", lineHeight: 1.5, flexShrink: 0 }}>✓</span>
+                      <span style={{ color: "var(--navy)", fontSize: "1rem", lineHeight: 1.5, flexShrink: 0 }}>✓</span>
                       {feat}
                     </li>
                   ))}
@@ -325,12 +325,12 @@ export default function PricingPage() {
           border-color: transparent;
           box-shadow: 0 4px 20px rgba(0,112,243,0.4);
         }
-        .startup-card { position: relative; z-index: 2; background: linear-gradient(145deg, rgba(245,158,11,0.1) 0%, rgba(245,158,11,0.04) 60%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(245,158,11,0.35); border-radius: 24px; padding: 52px 48px 48px; box-shadow: 0 0 0 1px rgba(245,158,11,0.12), 0 12px 60px rgba(245,158,11,0.12); transition: box-shadow 0.3s ease, border-color 0.3s ease; }
-        .startup-card:hover { border-color: rgba(245,158,11,0.55); box-shadow: 0 0 0 1px rgba(245,158,11,0.2), 0 20px 80px rgba(245,158,11,0.2); }
-        .startup-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, #d97706, #f59e0b); color: #000; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 18px; border-radius: 20px; white-space: nowrap; font-family: 'Space Mono', monospace; box-shadow: 0 4px 20px rgba(245,158,11,0.45); }
-        .startup-cta { display: inline-block; padding: 14px 32px; background: linear-gradient(90deg, #d97706, #f59e0b); color: #000; border-radius: 9px; font-weight: 700; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 24px rgba(245,158,11,0.35); }
+        .startup-card { position: relative; z-index: 2; background: linear-gradient(145deg, rgba(0,118,182,0.1) 0%, rgba(0,118,182,0.04) 60%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(0,118,182,0.35); border-radius: 24px; padding: 52px 48px 48px; box-shadow: 0 0 0 1px rgba(0,118,182,0.12), 0 12px 60px rgba(0,118,182,0.12); transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+        .startup-card:hover { border-color: rgba(0,118,182,0.55); box-shadow: 0 0 0 1px rgba(0,118,182,0.2), 0 20px 80px rgba(0,118,182,0.2); }
+        .startup-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--navy); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 18px; border-radius: 20px; white-space: nowrap; font-family: 'Space Mono', monospace; box-shadow: 0 4px 20px rgba(0,118,182,0.45); }
+        .startup-cta { display: inline-block; padding: 14px 32px; background: var(--navy); color: #fff; border-radius: 9px; font-weight: 700; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 24px rgba(0,118,182,0.35); }
         .startup-cta:hover { opacity: 0.9; transform: translateY(-2px); }
-        [data-theme="light"] .startup-card { background: linear-gradient(145deg, rgba(245,158,11,0.07) 0%, rgba(245,158,11,0.03) 100%); border-color: rgba(245,158,11,0.45); }
+        [data-theme="light"] .startup-card { background: linear-gradient(145deg, rgba(0,118,182,0.07) 0%, rgba(0,118,182,0.03) 100%); border-color: rgba(0,118,182,0.35); }
         [data-theme="light"] .startup-card p,
         [data-theme="light"] .startup-card li { color: #1a1a1a !important; }
         @media (max-width: 900px) {

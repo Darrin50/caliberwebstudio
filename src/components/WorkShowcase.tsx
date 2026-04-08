@@ -553,8 +553,12 @@ export default function WorkShowcase() {
         @media (max-width: 768px) {
           .work-grid { grid-template-columns: 1fr; }
         }
+        .work-card-wrapper {
+          height: 300px;
+        }
         .work-card {
           cursor: default;
+          height: 100%;
           background: var(--work-card-bg, #0a0a0a);
           box-shadow: var(--work-card-shadow, 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04));
           border: 1px solid var(--work-card-border, rgba(255,255,255,0.06));

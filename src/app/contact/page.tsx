@@ -108,19 +108,19 @@ export default function ContactPage() {
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                   <a href="mailto:darrin@caliberwebstudio.com" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>✉️</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     darrin@caliberwebstudio.com
                   </a>
                   <a href="tel:+13137992315" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>📞</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     (313) 799-2315
                   </a>
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>📍</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     Detroit, Michigan
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>⏱️</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     Response within 1 business day
                   </div>
                 </div>

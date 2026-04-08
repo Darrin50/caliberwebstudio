@@ -365,26 +365,28 @@ function Phone({ b, category }: { b: Biz; category: Category }) {
       </div>
       {/* ── Frame ── */}
       <div style={{
-        width: '216px', height: '444px',
+        width: `${PHONE_W}px`, height: `${PHONE_H}px`,
         background: '#0e0e0e',
-        borderRadius: '40px',
+        borderRadius: `${40 * PHONE_SCALE}px`,
         border: '2.5px solid #252525',
         overflow: 'hidden',
-        boxShadow: '0 0 0 1px rgba(255,255,255,0.04), inset 0 0 0 1px rgba(255,255,255,0.04), 0 36px 80px rgba(0,0,0,0.55), 0 12px 28px rgba(0,0,0,0.4)',
+        boxShadow: '0 0 0 1px rgba(255,255,255,0.04), inset 0 0 0 1px rgba(255,255,255,0.04), 0 48px 100px rgba(0,0,0,0.55), 0 16px 36px rgba(0,0,0,0.4)',
         position: 'relative',
         flexShrink: 0,
       }}>
-        {/* dynamic island */}
-        <div style={{ position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)', width: '62px', height: '16px', background: '#000', borderRadius: '12px', zIndex: 10 }} />
-        {/* screen */}
-        <div style={{ height: '100%', paddingTop: '2px' }}>
-          {category === 'home'     && <HomeScreen     b={b} />}
-          {category === 'services' && <ServicesScreen b={b} />}
-          {category === 'about'    && <AboutScreen    b={b} />}
-          {category === 'contact'  && <ContactScreen  b={b} />}
+        {/* dynamic island — scaled position */}
+        <div style={{ position: 'absolute', top: `${10 * PHONE_SCALE}px`, left: '50%', transform: 'translateX(-50%)', width: `${62 * PHONE_SCALE}px`, height: `${16 * PHONE_SCALE}px`, background: '#000', borderRadius: `${12 * PHONE_SCALE}px`, zIndex: 10 }} />
+        {/* screen — scale all inner content proportionally */}
+        <div style={{ height: '100%', paddingTop: '2px', overflow: 'hidden' }}>
+          <div style={{ width: '216px', height: '444px', transform: `scale(${PHONE_SCALE})`, transformOrigin: 'top left' }}>
+            {category === 'home'     && <HomeScreen     b={b} />}
+            {category === 'services' && <ServicesScreen b={b} />}
+            {category === 'about'    && <AboutScreen    b={b} />}
+            {category === 'contact'  && <ContactScreen  b={b} />}
+          </div>
         </div>
         {/* specular sheen */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)', borderRadius: '38px', pointerEvents: 'none', zIndex: 6 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)', borderRadius: `${38 * PHONE_SCALE}px`, pointerEvents: 'none', zIndex: 6 }} />
       </div>
     </div>
   );
@@ -399,7 +401,10 @@ const TABS: { id: Category; label: string }[] = [
   { id: 'contact',  label: 'Contact'    },
 ];
 
-const LOOP_PX = BIZ.length * 240; // 8 × 240px = 1920px
+const PHONE_W  = 290;
+const PHONE_H  = 596;
+const PHONE_SCALE = PHONE_W / 216; // scale inner content proportionally
+const LOOP_PX  = BIZ.length * (PHONE_W + 28); // 8 × 318px = 2544px
 
 export default function PhoneMockupScroll() {
   const [active, setActive] = useState<Category>('home');
@@ -469,7 +474,7 @@ export default function PhoneMockupScroll() {
         <div
           className="pms-track"
           style={{
-            display: 'flex', gap: '24px', padding: '8px 0 32px',
+            display: 'flex', gap: '28px', padding: '8px 0 40px',
             opacity: fading ? 0 : 1, transition: 'opacity 0.2s ease',
             animation: 'pmsScroll 46s linear infinite',
             willChange: 'transform',

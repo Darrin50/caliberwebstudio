@@ -23,7 +23,7 @@ export const posts: BlogPost[] = [
 
 <p>Searching for the best web designer in Detroit is one of those decisions that looks simple until you're three months in, $4,000 lighter, and staring at a website that doesn't rank, doesn't convert, and looks like it was built in 2014. This guide is for Detroit business owners who want to get it right the first time.</p>
 
-<p>Detroit's business landscape is unlike anywhere else. A plumber in Lincoln Park competes differently than a salon in Midtown. A restaurant on Corktown's Michigan Avenue has different needs than a law firm in Grosse Pointe. The best web designer for your business isn't the cheapest one you found on Thumbtack — it's the one who understands your market, your customers, and how to turn a website into a revenue machine.</p>
+<p>Detroit's business landscape is unlike anywhere else. A <a href="/industries/plumbers">plumber in</a> Lincoln Park competes differently than a salon in Midtown. A restaurant on Corktown's Michigan Avenue has different needs than a law firm in Grosse Pointe. The best web designer for your business isn't the cheapest one you found on Thumbtack — it's the one who understands your market, your customers, and how to turn a website into a revenue machine.</p>
 
 <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80" alt="Designer reviewing website analytics and performance metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -38,7 +38,7 @@ export const posts: BlogPost[] = [
 <p>Google uses page speed and mobile experience as ranking factors. If your site takes four seconds to load on a phone, you're invisible to most of your potential customers. The best Detroit web designers build on modern stacks — Next.js, React, or similar frameworks — that deliver sub-two-second load times. WordPress with ten plugins and a generic theme doesn't cut it anymore.</p>
 
 <h3>Local SEO Built In, Not Bolted On</h3>
-<p>Your website should be structured so Google understands exactly who you are, where you are, and what you do. That means proper schema markup, location-specific landing pages, Google Business Profile integration, and content that signals local relevance. If a web designer can't explain their local SEO approach in plain language, keep looking. Read our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide for small businesses</a> to understand what this actually requires.</p>
+<p>Your website should be structured so Google understands exactly who you are, where you are, and what you do. That means proper <a href="/blog/what-is-schema-markup">schema markup</a>, location-specific landing pages, <a href="/blog/google-business-profile-optimization">Google Business Profile</a> integration, and content that signals local relevance. If a web designer can't explain their local SEO approach in plain language, keep looking. Read our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide for small businesses</a> to understand what this actually requires.</p>
 
 <h2>Red Flags to Watch Out For</h2>
 
@@ -65,14 +65,14 @@ export const posts: BlogPost[] = [
 
 <p>Abstract promises are cheap. Here's what working with a capable web designer actually looks like for Detroit businesses.</p>
 
-<h3>The Corktown Bar That Doubled Walk-In Traffic</h3>
+<h3>The <a href="/areas/corktown">Corktown</a> Bar That Doubled Walk-In Traffic</h3>
 <p>A bar on Michigan Avenue in Corktown had a three-year-old WordPress site that ranked for nothing and hadn't been updated since their menu changed. After a rebuild with proper local SEO — schema markup, Google Business Profile optimization, location-specific landing pages — they started ranking for "bars in Corktown Detroit" and "best cocktail bars Detroit." Walk-in traffic from Google searches doubled within five months. The site paid for itself in the first ninety days.</p>
 
-<h3>The Warren Auto Shop That Stopped Bleeding Customers</h3>
+<h3>The <a href="/areas/warren">Warren Auto</a> Shop That Stopped Bleeding Customers</h3>
 <p>An independent auto repair shop in Warren was losing business to franchise shops not because of quality — they had better reviews — but because they were invisible online. A new site with properly structured service pages, fast load times, and integrated customer reviews moved them to the first page for "auto repair Warren MI." They went from twelve new customers per month from online searches to over forty.</p>
 
-<h3>The Dearborn Plumber Who Stopped Relying on Word of Mouth</h3>
-<p>A plumbing contractor in Dearborn had built his business entirely on referrals. When referral volume slowed, he had no pipeline. A focused local SEO strategy and redesigned website gave him a steady stream of inbound leads. Within six months, 60% of new jobs were coming from Google. He stopped worrying about where the next call was coming from.</p>
+<h3>The <a href="/areas/dearborn">Dearborn Plumber</a> Who Stopped Relying on Word of Mouth</h3>
+<p>A plumbing <a href="/industries/contractors">contractor in</a> Dearborn had built his business entirely on referrals. When referral volume slowed, he had no pipeline. A focused local SEO strategy and redesigned website gave him a steady stream of inbound leads. Within six months, 60% of new jobs were coming from Google. He stopped worrying about where the next call was coming from.</p>
 
 <h2>Questions to Ask Before You Hire</h2>
 
@@ -175,7 +175,7 @@ export const posts: BlogPost[] = [
 <p>Lincoln Park, Wyandotte, Trenton — Downriver markets are value-driven. Customers here respond to clear pricing, genuine reviews, and direct communication. Your website shouldn't feel like a Tribeca boutique; it should feel like a local business that's been around for thirty years and knows what it's doing. Prominent phone numbers, Google Maps integration, and displayed reviews are more important than elaborate animations. Local SEO targeting "Lincoln Park plumber" or "Wyandotte auto repair" will drive more leads than a polished national-looking brand.</p>
 
 <h3>Dearborn and Hamtramck: Multilingual and Community-First</h3>
-<p>If your customer base includes Arabic, Polish, or Bengali-speaking communities, your website strategy needs to reflect that. At minimum, your Google Business Profile should be optimized for how local customers actually search. Depending on your business, a bilingual landing page or at least bilingual contact information can meaningfully increase conversions. This is specialized knowledge that generic web designers don't bring to the table.</p>
+<p>If your customer base includes Arabic, Polish, or Bengali-speaking communities, your website strategy needs to reflect that. At minimum, your <a href="/blog/google-business-profile-optimization">Google Business Profile</a> should be optimized for how local customers actually search. Depending on your business, a bilingual landing page or at least bilingual contact information can meaningfully increase conversions. This is specialized knowledge that generic web designers don't bring to the table.</p>
 
 <h3>Grosse Pointe and Affluent Suburbs: Premium Positioning</h3>
 <p>Salons, medical aesthetics, financial advisors, and specialty retailers in Grosse Pointe and Birmingham compete on perceived quality. A cheap-looking website actively costs you business here — customers in these markets make quality judgments in the first three seconds of landing on your page. Investment in custom design, professional photography, and polished copy pays back directly in conversion rates.</p>
@@ -189,7 +189,7 @@ export const posts: BlogPost[] = [
 
 <p>The question isn't "is $197/month affordable?" The question is "what does $197/month return?"</p>
 
-<p>A plumber in Dearborn who gets two additional jobs per month from his website earns back his $197 in the first call. A salon in Midtown that books three additional clients per month from organic search has a 10x return on investment. A restaurant in Corktown that converts ten more reservations per month from their revamped site makes back its monthly fee on a Tuesday.</p>
+<p>A <a href="/industries/plumbers">plumber in</a> Dearborn who gets two additional jobs per month from his website earns back his $197 in the first call. A salon in Midtown that books three additional clients per month from organic search has a 10x return on investment. A <a href="/industries/restaurants">restaurant in</a> Corktown that converts ten more reservations per month from their revamped site makes back its monthly fee on a Tuesday.</p>
 
 <p>Affordability is a function of ROI, not sticker price. A $5,000 one-time build that generates nothing is infinitely more expensive than a $197/month plan that reliably delivers leads. We break this down in detail in our <a href="/blog/roi-of-a-professional-website">complete ROI of a professional website guide</a>.</p>
 
@@ -203,7 +203,7 @@ export const posts: BlogPost[] = [
   <li><strong>Mobile-first design:</strong> Over 70% of local searches happen on phones. Your site must work perfectly on a 375px screen.</li>
   <li><strong>Sub-2-second load time:</strong> Google's Core Web Vitals penalize slow sites. Performance is a ranking factor, not a nice-to-have.</li>
   <li><strong>On-page SEO structure:</strong> Proper H1/H2 hierarchy, meta titles, meta descriptions, image alt tags, and internal linking.</li>
-  <li><strong>Schema markup:</strong> Structured data that tells Google exactly what your business is and where it's located.</li>
+  <li><strong><a href="/blog/what-is-schema-markup">Schema markup</a>:</strong> Structured data that tells Google exactly what your business is and where it's located.</li>
   <li><strong>SSL certificate:</strong> Mandatory for trust and Google ranking. Should be included in any hosting plan.</li>
   <li><strong>Google Analytics integration:</strong> You should know where your visitors come from and what they do on your site.</li>
 </ul>
@@ -287,7 +287,7 @@ export const posts: BlogPost[] = [
 <p>Very few freelancers and surprisingly few agencies deliver this in practice. It's not that they don't care — it's that their business model doesn't incentivize it. A freelancer gets paid once and moves to the next project. An agency gets paid a large retainer whether your traffic is up or down.</p>
 
 <h3>The Monthly Retainer Model Solves Accountability</h3>
-<p>When you're paying $197/month, your web partner has every incentive to keep you happy — because you can leave. The model creates natural accountability that one-time builds and traditional retainers don't. If your site isn't performing, you cancel. This keeps us focused on your results, not on closing the next big project.</p>
+<p>When you're paying <a href="/pricing">$197/month</a>, your web partner has every incentive to keep you happy — because you can leave. The model creates natural accountability that one-time builds and traditional retainers don't. If your site isn't performing, you cancel. This keeps us focused on your results, not on closing the next big project.</p>
 
 <h3>The Questions That Reveal Accountability</h3>
 <ul>
@@ -320,7 +320,7 @@ export const posts: BlogPost[] = [
 <p>For most Detroit small businesses trying to use their website as a genuine lead generation tool, the studio model wins on every dimension that matters.</p>
 
 <h3>You Need to Rank in Local Search</h3>
-<p>Local SEO isn't a one-time task. It requires ongoing content, citation building, Google Business Profile management, and technical optimization. This is an ongoing service, not a build feature. Freelancers generally aren't set up to deliver this continuously. See our <a href="/blog/affordable-website-design-detroit">guide to affordable website design in Detroit</a> for how this factors into pricing decisions.</p>
+<p>Local SEO isn't a one-time task. It requires ongoing content, citation building, <a href="/blog/google-business-profile-optimization">Google Business Profile</a> management, and technical optimization. This is an ongoing service, not a build feature. Freelancers generally aren't set up to deliver this continuously. See our <a href="/blog/affordable-website-design-detroit">guide to affordable website design in Detroit</a> for how this factors into pricing decisions.</p>
 
 <h3>You Don't Have Time to Manage It Yourself</h3>
 <p>Detroit business owners are running their businesses. They don't have time to monitor Google Search Console, check Core Web Vitals reports, or update their site when they change their hours. A studio handles all of this as part of the engagement.</p>
@@ -330,7 +330,7 @@ export const posts: BlogPost[] = [
 
 <h2>The Detroit-Specific Reality</h2>
 
-<p>Metro Detroit's business landscape is fragmented by neighborhood, by industry, and by customer demographic. The best web partner for a Corktown restaurant is different from the best partner for a Warren auto shop or a Grosse Pointe law firm. What they share is a need for a website that works — that ranks locally, loads fast, and converts visitors into customers.</p>
+<p>Metro Detroit's business landscape is fragmented by neighborhood, by industry, and by customer demographic. The best web partner for a <a href="/areas/corktown">Corktown</a> restaurant is different from the best partner for a <a href="/areas/warren">Warren auto</a> shop or a Grosse Pointe law firm. What they share is a need for a website that works — that ranks locally, loads fast, and converts visitors into customers.</p>
 
 <p>Generic freelancers rarely have this local market depth. Large agencies treat Detroit as one of fifty markets they serve nationally. A Detroit-focused studio that lives in this market, knows the neighborhoods, and understands how local customers search — that's the combination that produces results.</p>
 
@@ -373,7 +373,7 @@ export const posts: BlogPost[] = [
     "content": `
 <h1>Why Detroit Small Businesses Need a Website in 2025 (And What Happens If You Don't)</h1>
 
-<p>Every week, Detroit customers search Google for exactly what you offer. "Plumber near me." "Barber in Hamtramck." "Best restaurant in Corktown." "Auto repair Sterling Heights." They pull out their phones, they search, they look at the top three results, and they call. If your business isn't on that first page — ideally with a real website, not just a Google Business Profile — you're not in the running.</p>
+<p>Every week, Detroit customers search Google for exactly what you offer. "<a href="/industries/plumbers">Plumber near</a> me." "Barber in Hamtramck." "Best <a href="/industries/restaurants">restaurant in</a> Corktown." "Auto repair Sterling Heights." They pull out their phones, they search, they look at the top three results, and they call. If your business isn't on that first page — ideally with a real website, not just a <a href="/blog/google-business-profile-optimization">Google Business Profile</a> — you're not in the running.</p>
 
 <p>This isn't theory. This is how your customers are finding your competitors right now.</p>
 
@@ -392,13 +392,13 @@ export const posts: BlogPost[] = [
 
 <p>Abstract statistics don't move the needle. Here's what a professional website actually means for specific Detroit businesses in specific neighborhoods.</p>
 
-<h3>The Corktown Restaurant Without a Website</h3>
+<h3>The <a href="/areas/corktown">Corktown</a> Restaurant Without a Website</h3>
 <p>Imagine a new restaurant on Michigan Avenue in Corktown. The food is excellent. The atmosphere is exactly right for the neighborhood. The owners have an Instagram account with 800 followers and a Google Business Profile with their hours and a few photos. They're busy on weekends. But their weekday covers are inconsistent, and they can't figure out why they're not showing up when people search "dinner in Corktown."</p>
 
 <p>The answer is that Instagram doesn't rank on Google, and a Business Profile alone isn't enough to compete with the restaurants in their category that have proper websites with menu pages, about sections, and location-optimized content. A professional website with structured data and proper SEO would move them into the top three results and fill their Wednesday-Thursday covers. That's the difference between surviving and thriving.</p>
 
-<h3>The Dearborn Plumber Relying on Word of Mouth</h3>
-<p>A plumbing contractor in Dearborn has been in business for twelve years on referrals. He's good. His customers love him. But referral volume is unpredictable, and he has no control over his lead pipeline. When a homeowner in Dearborn has a burst pipe at 7pm, they don't call their neighbor to ask for a recommendation — they Google "emergency plumber Dearborn" and call whoever shows up first.</p>
+<h3>The <a href="/areas/dearborn">Dearborn Plumber</a> Relying on Word of Mouth</h3>
+<p>A plumbing <a href="/industries/contractors">contractor in</a> Dearborn has been in business for twelve years on referrals. He's good. His customers love him. But referral volume is unpredictable, and he has no control over his lead pipeline. When a homeowner in Dearborn has a burst pipe at 7pm, they don't call their neighbor to ask for a recommendation — they Google "emergency plumber Dearborn" and call whoever shows up first.</p>
 
 <p>Without a website, that contractor doesn't exist to that customer. With a properly built and optimized site — service pages, location data, emergency service call-to-action, customer reviews — he'd capture those high-value emergency calls. Two or three additional emergency jobs per month, at $400–$800 per job, more than justifies any website investment. That's what <a href="/blog/roi-of-a-professional-website">the ROI of a professional website</a> looks like in practice.</p>
 
@@ -448,7 +448,7 @@ export const posts: BlogPost[] = [
 
 <p>The objection "I can't afford a professional website" is understandable but increasingly outdated. The monthly retainer model has made professional web design accessible to any serious small business.</p>
 
-<p>Caliber Web Studio builds custom websites for Detroit small businesses starting at $197/month with $0 down. That includes the build, hosting, maintenance, and ongoing SEO. No upfront investment. No disappearing after launch. A real partner who stays accountable for your results.</p>
+<p>Caliber Web Studio builds custom websites for Detroit small businesses starting at <a href="/pricing">$197/month</a> with $0 down. That includes the build, hosting, maintenance, and ongoing SEO. No upfront investment. No disappearing after launch. A real partner who stays accountable for your results.</p>
 
 <p>If you're ready to stop being invisible to your next customer, start with our <a href="/blog/local-seo-guide-for-small-businesses">local SEO guide for small businesses</a> to understand the full picture. And if cost is the main concern, our guide to <a href="/blog/affordable-website-design-detroit">affordable website design in Detroit</a> walks through every option at every price point.</p>
 
@@ -485,22 +485,22 @@ export const posts: BlogPost[] = [
 <p>Google's Core Web Vitals algorithm uses page speed, visual stability, and interactivity as ranking factors. A slow website doesn't just frustrate visitors — it actively hurts your search position. Our Next.js builds consistently achieve sub-two-second load times and near-perfect Lighthouse scores. That's a competitive advantage over the competitors still running on slow WordPress installs with five plugins and a generic theme.</p>
 
 <h3>Custom Design, Not Templates</h3>
-<p>Every site we build is designed from scratch for the specific business, neighborhood, and customer base we're serving. A Corktown restaurant and a Dearborn auto shop have fundamentally different customer journeys. They need different layouts, different trust signals, different calls-to-action. Template-based design treats every business identically. We don't.</p>
+<p>Every site we build is designed from scratch for the specific business, neighborhood, and customer base we're serving. A <a href="/areas/corktown">Corktown</a> restaurant and a Dearborn auto shop have fundamentally different customer journeys. They need different layouts, different trust signals, different calls-to-action. Template-based design treats every business identically. We don't.</p>
 
 <h2>Local SEO That Actually Moves the Needle</h2>
 
 <p>Building a beautiful site and hoping people find it is not a strategy. Real local SEO is a technical and content discipline that requires consistent effort. It's also the single highest-ROI investment most Detroit small businesses can make.</p>
 
 <h3>Technical SEO Built Into Every Build</h3>
-<p>We implement proper schema markup (LocalBusiness, Service, Review schemas), location-specific meta tags, structured URL architecture, and internal linking patterns that help Google understand exactly what your business does and where it operates. This isn't optional — it's the foundation every site gets before launch.</p>
+<p>We implement proper <a href="/blog/what-is-schema-markup">schema markup</a> (LocalBusiness, Service, Review schemas), location-specific meta tags, structured URL architecture, and internal linking patterns that help Google understand exactly what your business does and where it operates. This isn't optional — it's the foundation every site gets before launch.</p>
 
-<h3>Google Business Profile Management</h3>
+<h3><a href="/blog/google-business-profile-optimization">Google Business Profile</a> Management</h3>
 <p>Your Google Business Profile is often the first thing a local customer sees. We optimize it completely — categories, service descriptions, Q&A, photo strategy, and review response protocols. Combined with your website, this creates a dominant local search presence that compounds over time. For a detailed breakdown of everything that goes into this, see our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide for small businesses</a>.</p>
 
 <h3>Content That Ranks and Converts</h3>
-<p>We create service pages, location pages, and blog content targeted at the specific searches your customers are making. A plumber in Dearborn needs content that ranks for "plumber Dearborn MI," "emergency plumber Dearborn," and "water heater installation Dearborn" — not generic plumbing content that competes nationally. Hyper-local content strategy is where most web design agencies fail Detroit businesses.</p>
+<p>We create service pages, location pages, and blog content targeted at the specific searches your customers are making. A <a href="/industries/plumbers">plumber in</a> Dearborn needs content that ranks for "plumber Dearborn MI," "emergency plumber Dearborn," and "water heater installation Dearborn" — not generic plumbing content that competes nationally. Hyper-local content strategy is where most web design agencies fail Detroit businesses.</p>
 
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Analytics dashboard showing traffic growth, leads, and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Analytics dashboard showing traffic growth, leads, and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>AI Tools: The New Edge in Detroit Digital Marketing</h2>
 
@@ -509,7 +509,7 @@ export const posts: BlogPost[] = [
 <h3>AI-Driven Content Optimization</h3>
 <p>We use AI tools to analyze top-ranking content for your target keywords, identify gaps in your existing content, and generate optimization recommendations. This means your service pages are consistently optimized against what's actually ranking — not just what was working twelve months ago. Search is dynamic; your content strategy has to be too.</p>
 
-<h3>Answer Engine Optimization</h3>
+<h3><a href="/blog/what-is-aeo-answer-engine-optimization">Answer Engine Optimization</a></h3>
 <p>As AI search tools like Google's AI Overviews, ChatGPT, and Perplexity become primary research tools, being cited in those answers is the new "first page." We structure content using FAQ sections, clear answer formatting, and schema markup specifically designed to be cited by AI search tools. Detroit businesses that show up in ChatGPT answers for local queries have a significant advantage over competitors who don't. This is an emerging area — and getting in early matters.</p>
 
 <h3>Automated Lead Qualification</h3>
@@ -524,7 +524,7 @@ export const posts: BlogPost[] = [
 
 <h3>Three Plans, Clear Value</h3>
 <ul>
-  <li><strong>Launch — $197/month:</strong> Custom-built website on Next.js, hosting, SSL, maintenance, basic on-page SEO, monthly performance report. No build fee. No template fees. Built for businesses starting from zero or replacing an underperforming site.</li>
+  <li><strong>Launch — <a href="/pricing">$197/month</a>:</strong> Custom-built website on Next.js, hosting, SSL, maintenance, basic on-page SEO, monthly performance report. No build fee. No template fees. Built for businesses starting from zero or replacing an underperforming site.</li>
   <li><strong>Growth — $397/month:</strong> Everything in Launch plus advanced SEO, content optimization, Google Business Profile management, quarterly content pieces, and priority support. For businesses ready to actively compete in local search.</li>
   <li><strong>Scale — $697/month:</strong> Full-service digital presence management. Monthly content, full SEO campaign, conversion optimization, and strategic account management. For businesses ready to dominate their local market.</li>
 </ul>
@@ -538,7 +538,7 @@ export const posts: BlogPost[] = [
 
 <h2>Who We Work Best With</h2>
 
-<p>Caliber is built for Detroit small businesses across the trades, services, food and beverage, health and beauty, and professional services categories. We understand the Corktown restaurant owner trying to fill weekday covers. We know the Downriver plumber who needs to stop relying on referrals. We work with barbers in Hamtramck, salons in Grosse Pointe, auto shops in Warren, and contractors across the metro.</p>
+<p>Caliber is built for Detroit small businesses across the trades, services, food and beverage, health and beauty, and professional services categories. We understand the Corktown restaurant owner trying to fill weekday covers. We know the Downriver plumber who needs to stop relying on referrals. We work with barbers in Hamtramck, salons in Grosse Pointe, auto shops in Warren, and <a href="/industries/contractors">contractors across</a> the metro.</p>
 
 <p>What our best clients share: they're serious about their business, they understand that their website is a business investment (not a cost to minimize), and they want a partner who stays accountable — not a vendor who disappears.</p>
 
@@ -690,7 +690,7 @@ export const posts: BlogPost[] = [
 
 <p>If your website is meant to generate new customers (as opposed to just existing for people who already know about you), then the cheapest option is almost never the best option. Read our full guide to <a href="/blog/affordable-website-design-detroit">affordable website design in Detroit</a> for a framework that matches cost to your actual business needs.</p>
 
-<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Stack of money next to a professional website on laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1504868584851-f523c0f8b880?w=1200&q=80" alt="Stack of money next to a professional website on laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The ROI Frame: What Your Website Should Return</h2>
 
@@ -731,9 +731,9 @@ export const posts: BlogPost[] = [
 
 <p>You got a quote for $800 from a developer on Fiverr. Or $1,200 from the nephew of a guy your employee knows. Or $49/month from Wix with a "professional" template. Any of those options seem fine until you run the numbers eighteen months later and realize the cheap site has cost you far more than a professional one would have.</p>
 
-<p>This is the pattern we see repeatedly with Detroit small businesses. It doesn't matter if you're a plumber in Lincoln Park, a restaurant in Eastern Market, or a salon in Midtown — the cheap website lifecycle is almost always the same.</p>
+<p>This is the pattern we see repeatedly with Detroit small businesses. It doesn't matter if you're a <a href="/industries/plumbers">plumber in</a> Lincoln Park, a <a href="/industries/restaurants">restaurant in</a> Eastern Market, or a salon in Midtown — the cheap website lifecycle is almost always the same.</p>
 
-<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="Frustrated business owner reviewing slow website performance and lack of traffic" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1434494491341-1a7d6dfcc6a1?w=1200&q=80" alt="Frustrated business owner reviewing slow website performance and lack of traffic" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The 18-Month Pattern: Why Cheap Sites Always End Up Here</h2>
 
@@ -758,7 +758,7 @@ export const posts: BlogPost[] = [
 <p>Cheap websites don't fail because the designer was lazy. They fail because cheap pricing forces structural compromises that undermine the site's ability to perform.</p>
 
 <h3>No SEO Foundation</h3>
-<p>Proper on-page SEO requires research, structure, and implementation. Keyword research, schema markup, meta tag optimization, internal linking architecture, location page structure — these take time and expertise. A designer charging $800 for a complete build cannot afford to do this properly. The result is a site that looks fine but is effectively invisible to search engines.</p>
+<p>Proper on-page SEO requires research, structure, and implementation. Keyword research, <a href="/blog/what-is-schema-markup">schema markup</a>, meta tag optimization, internal linking architecture, location page structure — these take time and expertise. A designer charging $800 for a complete build cannot afford to do this properly. The result is a site that looks fine but is effectively invisible to search engines.</p>
 
 <h3>Slow Performance</h3>
 <p>Speed is a Google ranking factor. Cheap sites are usually built on WordPress with too many plugins, or on site builders with bloated code. The result is a site that loads in 5–8 seconds on mobile — which Google penalizes and which causes 70% of mobile users to abandon before the page loads. A slow site isn't just frustrating; it's actively losing you customers every single day.</p>
@@ -769,7 +769,7 @@ export const posts: BlogPost[] = [
 <h3>Generic Design That Doesn't Convert</h3>
 <p>Template-based design is designed for the average visitor, which means it's optimized for nobody in particular. A salon in Grosse Pointe needs to convey a different brand promise than a plumber in Downriver. Generic templates can't do this. The conversion rate of a generic template site is typically half that of a custom-designed site built for a specific customer journey.</p>
 
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Professional website performance analytics showing strong traffic and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1488229297969-766b5b97b780?w=1200&q=80" alt="Professional website performance analytics showing strong traffic and conversion metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Compounding Cost: Lost Leads Are the Real Expense</h2>
 
@@ -778,7 +778,7 @@ export const posts: BlogPost[] = [
 <h3>Calculating Your Lost Revenue</h3>
 <p>Here's a simple framework. Estimate how many new customers per month a properly optimized website should generate for your business (industry averages: plumbing 15–30, salon 10–25, restaurant 20–50, auto shop 10–20). Multiply by your average customer value. That's what you should be generating. Subtract what your current site is actually generating. The difference is your monthly cost of underperformance.</p>
 
-<p>For a Corktown restaurant with an average check of $45 and 40 potential online-sourced customers per month, the gap between a performing site and an underperforming site is $1,800/month. Over 18 months, that's $32,400 — from a decision that felt like it saved $3,000 on a build.</p>
+<p>For a <a href="/areas/corktown">Corktown</a> restaurant with an average check of $45 and 40 potential online-sourced customers per month, the gap between a performing site and an underperforming site is $1,800/month. Over 18 months, that's $32,400 — from a decision that felt like it saved $3,000 on a build.</p>
 
 <h3>The Competitor Advantage Problem</h3>
 <p>While your cheap site underperforms, your competitors' professional sites are building domain authority, accumulating backlinks, and compounding their search position advantage. This is not a gap you can close overnight. The business that invested in a professional site 18 months ago has an SEO advantage that takes 12+ months of work to overcome. Every month of delay widens that gap. This is why <a href="/blog/how-much-does-a-small-business-website-cost">understanding what a website actually costs</a> requires looking at the compounding effects, not just the initial price.</p>
@@ -796,7 +796,7 @@ export const posts: BlogPost[] = [
 
 <p>None of these numbers are speculative — they're based on what properly optimized local business sites actually deliver. For the full analysis, see our guide to <a href="/blog/affordable-website-design-detroit">affordable website design that actually produces ROI</a>.</p>
 
-<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Business owner paying unexpected fees after a cheap website fails" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80" alt="Business owner paying unexpected fees after a cheap website fails" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Tell If Your Current Site Is a Cheap Site in Disguise</h2>
 
@@ -838,7 +838,7 @@ export const posts: BlogPost[] = [
 
 <p>When people see $197/month for a professional website, the first reaction is usually skepticism: "What's the catch?" Fair question. Here's the complete, transparent answer — including exactly what you'd pay if you bought each service separately, and what happens month by month after you sign up.</p>
 
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&q=80" alt="Web designer creating responsive website design on multiple devices" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80" alt="Web designer creating responsive website design on multiple devices" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Full List: Everything in the $197/Month Launch Plan</h2>
 
@@ -870,7 +870,7 @@ export const posts: BlogPost[] = [
 <h3>Ongoing SEO Foundation</h3>
 <ul>
   <li>On-page SEO for all pages (meta titles, descriptions, H1/H2 structure, image alt tags)</li>
-  <li>Schema markup (LocalBusiness, Service schemas)</li>
+  <li><a href="/blog/what-is-schema-markup">Schema markup</a> (LocalBusiness, Service schemas)</li>
   <li>XML sitemap, robots.txt, and Google Search Console setup</li>
   <li>Google Analytics 4 integration</li>
   <li>Core Web Vitals monitoring</li>
@@ -957,7 +957,7 @@ export const posts: BlogPost[] = [
 <p>Custom design mockups are reviewed and approved. We build the full site on Next.js, implement all SEO foundations, integrate analytics, and set up monitoring. You review the complete site before launch.</p>
 
 <h3>Launch Week</h3>
-<p>Site goes live. We submit to Google Search Console, configure all redirects (if applicable), verify Google Business Profile integration, and run a final technical SEO audit. You receive a welcome packet explaining how to request updates and read your monthly report.</p>
+<p>Site goes live. We submit to Google Search Console, configure all redirects (if applicable), verify <a href="/blog/google-business-profile-optimization">Google Business Profile</a> integration, and run a final technical SEO audit. You receive a welcome packet explaining how to request updates and read your monthly report.</p>
 
 <h3>Month 2: Indexing and Early Monitoring</h3>
 <p>Google begins indexing your new site. We monitor Core Web Vitals, fix any issues that surface, and begin tracking your keyword rankings. Most sites start showing organic traffic improvement within 30–60 days of launch.</p>
@@ -989,7 +989,7 @@ export const posts: BlogPost[] = [
 
 <p>Month-to-month terms exist because we're confident enough in our results not to need a contract to keep clients. That confidence should tell you something. If you're weighing whether the monthly model makes sense economically, our post on <a href="/blog/is-paying-monthly-for-a-website-worth-it">whether paying monthly is worth it</a> runs the complete analysis. And if you're comparing this to a cheap one-time build, see why <a href="/blog/why-cheap-websites-cost-more">cheap websites always cost more in the long run</a>.</p>
 
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Business owner reviewing monthly website performance report" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1521737604082-e82cd3f5de7b?w=1200&q=80" alt="Business owner reviewing monthly website performance report" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Bottom Line</h2>
 
@@ -1016,7 +1016,7 @@ export const posts: BlogPost[] = [
 
 <p>Is paying monthly for a website worth it? Let's skip the preamble and run the numbers. By the end of this post, you'll have a clear, math-based answer for your specific situation — not a vague "it depends" from someone trying to sell you something.</p>
 
-<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Business owner checking cash flow and financial metrics on dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1591115765373-5207764f0609?w=1200&q=80" alt="Business owner checking cash flow and financial metrics on dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Two Models Side by Side</h2>
 
@@ -1084,7 +1084,7 @@ export const posts: BlogPost[] = [
 
 <p>Abstract comparisons only go so far. Here's what the math looks like for three specific Detroit business types.</p>
 
-<h3>Scenario 1: Plumber in Dearborn</h3>
+<h3>Scenario 1: <a href="/industries/plumbers">Plumber in</a> Dearborn</h3>
 <p>Average job value: $450. Current leads from website: 0/month. Projected leads from optimized site (6-month mark): 8/month. Monthly revenue from website: $3,600. Monthly cost: $197. Net monthly benefit: $3,403. Payback period: immediate — first month generates positive return. Annual value: $40,800 from a $2,364/year investment.</p>
 
 <h3>Scenario 2: Salon in Midtown Detroit</h3>
@@ -1095,7 +1095,7 @@ export const posts: BlogPost[] = [
 
 <p>These projections are based on documented outcomes from professionally optimized local business websites. They assume proper SEO implementation, which is included in all Caliber plans. For the full analysis of why professional sites generate this level of ROI, see our <a href="/blog/roi-of-a-professional-website">complete ROI guide</a>.</p>
 
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Business owner celebrating customer acquisition and revenue growth from website" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1444961490316-5e1e8b66a1c0?w=1200&q=80" alt="Business owner celebrating customer acquisition and revenue growth from website" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>When Monthly Doesn't Make Sense</h2>
 
@@ -1118,7 +1118,7 @@ export const posts: BlogPost[] = [
 
 <p>The business that starts a monthly retainer today will have a 12-month SEO advantage over the competitor who starts in a year. That's not just next year's leads — it's a sustainable structural advantage. And that advantage is entirely lost if you cut costs now by going cheap. This is the core argument we make in our post on <a href="/blog/why-cheap-websites-cost-more">why cheap websites always cost more</a>.</p>
 
-<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80" alt="Investment growth graph showing monthly website returns" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1562577309-4f401d5dac93?w=1200&q=80" alt="Investment growth graph showing monthly website returns" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Bottom Line</h2>
 
@@ -1147,7 +1147,7 @@ export const posts: BlogPost[] = [
 
 <p>Short answer: for most local small businesses, the ROI is between 3x and 15x annually. The range depends on your industry, your local competition, and the quality of the site and SEO work behind it.</p>
 
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Successful business owner reviewing revenue growth chart from website leads" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1616469829935-d9b7a4a59b89?w=1200&q=80" alt="Successful business owner reviewing revenue growth chart from website leads" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Think About Website ROI</h2>
 
@@ -1241,15 +1241,15 @@ export const posts: BlogPost[] = [
 <h2>The Variables That Make or Break ROI</h2>
 
 <h3>Local Search Competition</h3>
-<p>A plumber in a high-competition suburban market (Sterling Heights, Warren) faces more competition than a plumber in a smaller suburb. Higher competition means longer time-to-rank but doesn't change the ceiling — it just changes how quickly you get there. Understanding your competitive landscape is step one. Our <a href="/blog/how-to-get-on-first-page-of-google">guide to getting on the first page of Google</a> walks through exactly what determines how quickly you can rank in competitive local markets.</p>
+<p>A <a href="/industries/plumbers">plumber in</a> a high-competition suburban market (Sterling Heights, Warren) faces more competition than a plumber in a smaller suburb. Higher competition means longer time-to-rank but doesn't change the ceiling — it just changes how quickly you get there. Understanding your competitive landscape is step one. Our <a href="/blog/how-to-get-on-first-page-of-google">guide to getting on the first page of Google</a> walks through exactly what determines how quickly you can rank in competitive local markets.</p>
 
 <h3>Site Quality and Technical Performance</h3>
 <p>A slow site converts at 40–60% of the rate of a fast site. A site with poor mobile experience loses 70%+ of potential leads before they ever read your content. Site quality isn't aesthetic — it's a direct multiplier on your revenue. This is why building on Next.js matters: performance is built into the architecture, not bolted on later.</p>
 
 <h3>Ongoing SEO Investment</h3>
-<p>A website built once and left alone has declining ROI as competitors continue optimizing. Ongoing SEO — content, technical optimization, backlink building, Google Business Profile management — is what maintains and grows your position over time. The difference between a Launch plan ($197/month, basic SEO) and a Growth plan ($397/month, active SEO campaign) is typically 2–3x more organic traffic within 6 months.</p>
+<p>A website built once and left alone has declining ROI as competitors continue optimizing. Ongoing SEO — content, technical optimization, backlink building, <a href="/blog/google-business-profile-optimization">Google Business Profile</a> management — is what maintains and grows your position over time. The difference between a Launch plan (<a href="/pricing">$197/month</a>, basic SEO) and a Growth plan ($397/month, active SEO campaign) is typically 2–3x more organic traffic within 6 months.</p>
 
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Business dashboard showing website ROI and customer acquisition metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1571019614242-c5c5dee81559?w=1200&q=80" alt="Business dashboard showing website ROI and customer acquisition metrics" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Compounding Effect: Why ROI Grows Over Time</h2>
 
@@ -1288,7 +1288,7 @@ export const posts: BlogPost[] = [
 <h3>Form Submission Tracking</h3>
 <p>Every contact form submission should trigger a goal conversion in Google Analytics. This lets you see not just that forms were submitted, but which pages and which traffic sources drove those submissions.</p>
 
-<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Detroit business owner reviewing website ROI with accountant" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=1200&q=80" alt="Detroit business owner reviewing website ROI with accountant" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Alternative: What You're Paying by Not Investing</h2>
 
@@ -1336,7 +1336,7 @@ export const posts: BlogPost[] = [
   <li><strong>Qualifies leads instantly:</strong> "What service do you need? Where are you located? What's your timeline?" The chatbot asks your most important questions and routes hot leads directly to you.</li>
   <li><strong>Answers FAQs without you:</strong> Hours, service areas, pricing ranges, what to expect — your chatbot handles 70-80% of common questions automatically.</li>
   <li><strong>Books appointments directly:</strong> Connects to your calendar (Google Calendar, Acuity, Calendly) and schedules jobs without phone tag.</li>
-  <li><strong>Captures leads after hours:</strong> A Corktown restaurant gets a reservation inquiry at 10 PM. A Ferndale salon gets a booking request on Sunday. The chatbot captures every one.</li>
+  <li><strong>Captures leads after hours:</strong> A <a href="/areas/corktown">Corktown</a> restaurant gets a reservation inquiry at 10 PM. A Ferndale salon gets a booking request on Sunday. The chatbot captures every one.</li>
   <li><strong>Collects contact info:</strong> Even when visitors don't convert immediately, you get their name, email, phone, and what they need for follow-up.</li>
   <li><strong>Handles multiple conversations simultaneously:</strong> Your chatbot can talk to 50 people at once. Your staff can't.</li>
 </ul>
@@ -1356,7 +1356,7 @@ export const posts: BlogPost[] = [
 
 <p><strong>Restaurants:</strong> Reservation requests, private event inquiries, menu questions — chatbots handle them all and reduce phone volume by 20-30%, freeing your staff for in-restaurant service.</p>
 
-<p><strong>Auto Repair:</strong> A Warren auto shop's chatbot can qualify whether a customer needs a simple oil change (book online) vs. a complex repair (schedule a diagnostic call). Better triage means better shop efficiency.</p>
+<p><strong>Auto Repair:</strong> A <a href="/areas/warren">Warren auto</a> shop's chatbot can qualify whether a customer needs a simple oil change (book online) vs. a complex repair (schedule a diagnostic call). Better triage means better shop efficiency.</p>
 
 <h3>When You Probably Don't Need One Yet</h3>
 <p>If you get fewer than 500 website visitors per month, a chatbot won't move the needle much. Fix your traffic first — optimize your Google Business Profile, build out your local SEO, and make sure your site ranks for the right keywords. Once you have traffic, a chatbot amplifies it. Without traffic, it's a solution in search of a problem.</p>
@@ -1421,7 +1421,7 @@ export const posts: BlogPost[] = [
 
 <p><strong>"Isn't it expensive?"</strong> A part-time receptionist in Detroit costs $25,000-$35,000/year. A chatbot costs $600-$1,800/year — and handles after-hours coverage that no human receptionist provides. The math is straightforward.</p>
 
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Detroit small business owner getting instant chatbot lead notifications on phone" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80" alt="Detroit small business owner getting instant chatbot lead notifications on phone" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How Chatbots Fit Into Your Broader Digital Strategy</h2>
 
@@ -1491,7 +1491,7 @@ export const posts: BlogPost[] = [
 <h3>1. AI Search Rewards Authority, Not Just Keywords</h3>
 <p>Traditional SEO rewarded websites that had the right keywords on the right pages. AI search rewards businesses that are recognized authorities — validated by multiple platforms, consistently over time, with real social proof.</p>
 
-<p>When ChatGPT recommends "the best plumber in Sterling Heights," it's not looking at who has "plumber Sterling Heights" in their H1 tag. It's synthesizing signals from Google reviews, Yelp ratings, local news mentions, and industry directory listings. The plumber with 200 consistent 5-star reviews mentioning "fast response" and "fair pricing" beats the plumber with keyword-stuffed pages every time.</p>
+<p>When ChatGPT recommends "the best <a href="/industries/plumbers">plumber in</a> Sterling Heights," it's not looking at who has "plumber Sterling Heights" in their H1 tag. It's synthesizing signals from Google reviews, Yelp ratings, local news mentions, and industry directory listings. The plumber with 200 consistent 5-star reviews mentioning "fast response" and "fair pricing" beats the plumber with keyword-stuffed pages every time.</p>
 
 <p>Your reputation is now your ranking signal. Reviews aren't just nice to have — they're the algorithm.</p>
 
@@ -1518,7 +1518,7 @@ export const posts: BlogPost[] = [
 <h2>What This Means for Your Marketing Strategy Right Now</h2>
 
 <h3>Stop Optimizing for Keywords — Start Optimizing for Questions</h3>
-<p>AI search engines answer questions, not keyword queries. "What's the best way to find a reliable plumber in Dearborn?" "How much does a kitchen remodel cost in Detroit?" "Which dentists in Ann Arbor accept Blue Cross?" Your content strategy needs to match this reality.</p>
+<p>AI search engines answer questions, not keyword queries. "What's the best way to find a reliable plumber in Dearborn?" "How much does a kitchen remodel cost in Detroit?" "Which <a href="/industries/dentists">dentists in</a> Ann Arbor accept Blue Cross?" Your content strategy needs to match this reality.</p>
 
 <p>Every blog post, FAQ page, and service page should directly answer the questions your customers are asking AI. This is the premise of <a href="/blog/what-is-geo-generative-engine-optimization">generative engine optimization (GEO)</a> — building content specifically designed to be cited by AI models when they construct their answers.</p>
 
@@ -1542,7 +1542,7 @@ export const posts: BlogPost[] = [
   <li>Active Google Business Profile updated weekly with fresh photos and posts</li>
   <li>50+ recent Google reviews (within 12 months) with keyword-rich, specific content</li>
   <li>Blog content that directly answers common customer questions</li>
-  <li>Schema markup on their website so AI can parse services and location clearly</li>
+  <li><a href="/blog/what-is-schema-markup">Schema markup</a> on their website so AI can parse services and location clearly</li>
   <li>AI chatbot for after-hours lead capture</li>
   <li>Consistent listings in 10+ local directories (Yelp, BBB, Chamber, industry sites)</li>
 </ul>
@@ -1628,7 +1628,7 @@ export const posts: BlogPost[] = [
 
 <p>The funnel compressed from five steps to two. Either your business is part of the answer, or it isn't. There's no "page 2" in AI search. There's just in or out.</p>
 
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI search results showing answer engine optimization in action" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1524508762098-b7714e2d4e6c?w=1200&q=80" alt="AI search results showing answer engine optimization in action" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Three Answer Engines That Matter Most for Detroit Businesses</h2>
 
@@ -1642,7 +1642,7 @@ export const posts: BlogPost[] = [
 <h3>2. ChatGPT</h3>
 <p>Over 100 million people use ChatGPT monthly. When they ask "who's the best HVAC company in Metro Detroit" or "what should I look for when hiring a web designer in Michigan," ChatGPT synthesizes answers from indexed web content, reviews, and business directories.</p>
 
-<p>Getting mentioned in ChatGPT recommendations requires the same authority signals that dominate all AI search: extensive reviews, consistent business citations across directories, quality content, and a strong Google Business Profile. ChatGPT tends to surface businesses that have strong digital footprints across multiple platforms — not just on their own website.</p>
+<p>Getting mentioned in ChatGPT recommendations requires the same authority signals that dominate all AI search: extensive reviews, consistent business citations across directories, quality content, and a strong <a href="/blog/google-business-profile-optimization">Google Business Profile</a>. ChatGPT tends to surface businesses that have strong digital footprints across multiple platforms — not just on their own website.</p>
 
 <h3>3. Perplexity AI</h3>
 <p>Perplexity has become the preferred research tool for a sophisticated user segment — tech professionals, researchers, and decision-makers. For B2B services and higher-ticket consumer purchases, Perplexity users tend to be higher-value prospects. Perplexity explicitly cites its sources and shows users which websites contributed to each answer, making citation in Perplexity a direct traffic driver.</p>
@@ -1665,7 +1665,7 @@ export const posts: BlogPost[] = [
 
 <p>When a customer asks ChatGPT "how much does it cost to replace a water heater in Dearborn" — the AEO-optimized site has a page that answers that question directly and specifically. That's the site ChatGPT cites. That's the business the customer calls.</p>
 
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80" alt="Schema markup structure that helps websites appear in AI answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80" alt="Schema markup structure that helps websites appear in AI answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Five Pillars of AEO for Local Business</h2>
 
@@ -1707,16 +1707,16 @@ export const posts: BlogPost[] = [
 <p>A blog post authored by a named expert ("Written by Marcus Johnson, Master Electrician, licensed in Michigan since 2008") ranks higher in AI search than anonymous generic content. Your credentials and expertise are ranking signals, not just credibility badges.</p>
 
 <h3>Pillar 5: Conversational Content That Mirrors How People Ask AI</h3>
-<p>People talk to AI differently than they used to type into Google. Google queries were terse: "Detroit plumber cost." AI queries are conversational: "How much should I expect to pay for a plumber in Detroit for a basic pipe repair?" Your content needs to match the conversational register of how customers actually talk to AI.</p>
+<p>People talk to AI differently than they used to type into Google. Google queries were terse: "Detroit plumber cost." AI queries are conversational: "How much should I expect to pay for a <a href="/industries/plumbers">plumber in</a> Detroit for a basic pipe repair?" Your content needs to match the conversational register of how customers actually talk to AI.</p>
 
 <p>This means writing content that sounds like a knowledgeable friend answering a question — specific, detailed, empathetic to the uncertainty the customer feels, and free of marketing-speak. AI systems are sophisticated at identifying content that's genuinely helpful vs. content that's keyword-stuffed or promotional. Helpful content wins every time.</p>
 
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Detroit business owner checking AI visibility across multiple answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="Detroit business owner checking AI visibility across multiple answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Detroit Businesses That Win With AEO: Three Real Examples</h2>
 
-<h3>The Corktown Restaurant</h3>
-<p>A restaurant in Corktown with a well-optimized menu page (using Restaurant and Menu schema), an FAQ section answering "do you have vegetarian options," "do you take walk-ins," and "is there parking," and 180 recent Google reviews mentioning specific dishes — that restaurant consistently appears when someone asks ChatGPT "best restaurants in Corktown Detroit" or Perplexity "where to eat near Corktown." Their competitors with no FAQ, no schema, and 40 reviews are invisible to the same queries.</p>
+<h3>The <a href="/areas/corktown">Corktown</a> Restaurant</h3>
+<p>A <a href="/industries/restaurants">restaurant in</a> Corktown with a well-optimized menu page (using Restaurant and Menu schema), an FAQ section answering "do you have vegetarian options," "do you take walk-ins," and "is there parking," and 180 recent Google reviews mentioning specific dishes — that restaurant consistently appears when someone asks ChatGPT "best restaurants in Corktown Detroit" or Perplexity "where to eat near Corktown." Their competitors with no FAQ, no schema, and 40 reviews are invisible to the same queries.</p>
 
 <h3>The Midtown Law Office</h3>
 <p>A Detroit family law firm that publishes detailed FAQ content about divorce proceedings in Michigan, child custody law in Wayne County, and what to expect from a consultation — structured with FAQPage schema — gets cited in AI answers to "how does divorce work in Michigan" and "what are my rights in a custody dispute in Detroit." That's organic visibility to high-value prospects at exactly the moment they need legal help.</p>
@@ -1844,7 +1844,7 @@ export const posts: BlogPost[] = [
 <p>GEO entity optimization means ensuring your business is clearly identified as an entity across the web:</p>
 <ul>
   <li>Your business name, address, and phone number (NAP) must be identical across every mention — not variations, abbreviations, or slight differences</li>
-  <li>Your Google Business Profile, your website, your Yelp page, your LinkedIn, and your industry directories all need to reference the same entity consistently</li>
+  <li>Your <a href="/blog/google-business-profile-optimization">Google Business Profile</a>, your website, your Yelp page, your LinkedIn, and your industry directories all need to reference the same entity consistently</li>
   <li>Schema markup explicitly identifies your business as a LocalBusiness entity with specific service areas, categories, and attributes</li>
   <li>A Wikipedia or Wikidata entry (if your business is notable enough) significantly strengthens entity recognition</li>
 </ul>
@@ -1930,11 +1930,11 @@ export const posts: BlogPost[] = [
 
 <h2>GEO in Practice: Detroit Business Examples</h2>
 
-<h3>The Midtown Dental Practice</h3>
+<h3>The Midtown <a href="/industries/dentists">Dental Practice</a></h3>
 <p>A Midtown Detroit dental practice implementing GEO would have: a complete entity profile across Google, Yelp, Zocdoc, Healthgrades, and Vitals (all linking to the same entity). A website with semantic-rich content about each service — not just "teeth whitening" but "in-office Zoom whitening vs. take-home trays, typical results for Detroit patients, what staining causes respond best, and the difference between professional and over-the-counter products." FAQPage schema with the top 10 questions patients ask. Blog posts answering "how often should I get my teeth cleaned" and "what causes tooth sensitivity in Michigan winters." Citation from the Michigan Dental Association member directory. All of this creates a dense signal that when someone asks ChatGPT "best dentist in Midtown Detroit who does teeth whitening," this practice appears.</p>
 
 <h3>The Dearborn Accounting Firm</h3>
-<p>A Dearborn CPA firm optimized for GEO would have: pages specifically about tax services for Dearborn's Arab-American business community (a specific, local entity relationship that no national firm can claim), Michigan-specific tax guidance (small business deductions under Michigan tax law, city of Dearborn business taxes), semantic-rich content about QuickBooks integration, payroll services, and entity formation. Cited by the Arab American Chamber of Commerce and Dearborn Federal Credit Union. When someone asks Perplexity "CPA for Arab American small business in Dearborn Michigan," this firm is the only entity with all the right signals.</p>
+<p>A Dearborn CPA firm optimized for GEO would have: pages specifically about tax services for Dearborn's Arab-American business community (a specific, local entity relationship that no national firm can claim), Michigan-specific tax guidance (small business deductions under Michigan tax law, city of <a href="/areas/dearborn">Dearborn business</a> taxes), semantic-rich content about QuickBooks integration, payroll services, and entity formation. Cited by the Arab American Chamber of Commerce and Dearborn Federal Credit Union. When someone asks Perplexity "CPA for Arab American small business in Dearborn Michigan," this firm is the only entity with all the right signals.</p>
 
 <h2>Measuring GEO Performance</h2>
 
@@ -1948,7 +1948,7 @@ export const posts: BlogPost[] = [
   <li><strong>Featured snippet ownership:</strong> Pages that earn featured snippets are the same pages AI Overviews tend to cite — track snippet ownership for your key questions</li>
 </ul>
 
-<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Analytics dashboard showing AI-driven traffic and brand mention tracking" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="Analytics dashboard showing AI-driven traffic and brand mention tracking" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The GEO Roadmap: 6 Months to Generative AI Visibility</h2>
 
@@ -2078,7 +2078,7 @@ export const posts: BlogPost[] = [
   <li>Case studies from actual local customers (with permission) that mention the specific city or neighborhood</li>
 </ul>
 
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI assistant displaying local Detroit business recommendations with source citations" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80" alt="AI assistant displaying local Detroit business recommendations with source citations" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Schema Markup: Speaking AI's Native Language</h2>
 
@@ -2116,7 +2116,7 @@ export const posts: BlogPost[] = [
 
 <p>AI models that encounter inconsistent NAP across sources will reduce their confidence that all these mentions refer to the same business — which means reduced recommendations. Audit your NAP consistency across your top 20 citations annually and correct any variations immediately.</p>
 
-<img src="https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80" alt="Business directory listings showing consistent NAP information across platforms" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1200&q=80" alt="Business directory listings showing consistent NAP information across platforms" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Advanced: Getting Mentioned in Third-Party AI-Retrieved Content</h2>
 
@@ -2163,7 +2163,7 @@ export const posts: BlogPost[] = [
 
 <p>For the full SEO foundation that AI visibility is built on, read our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide</a>. And for the deeper strategic framework behind why all of this works, our guides on <a href="/blog/what-is-aeo-answer-engine-optimization">answer engine optimization</a> and <a href="/blog/what-is-geo-generative-engine-optimization">generative engine optimization</a> explain the principles behind the tactics.</p>
 
-<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80" alt="Detroit business owner tracking AI visibility metrics and search performance" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?w=1200&q=80" alt="Detroit business owner tracking AI visibility metrics and search performance" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Your 30-Day AI Visibility Sprint</h2>
 <p>If you want to start showing up in ChatGPT and Perplexity within 30 days, here's the highest-impact sequence:</p>
@@ -2193,14 +2193,14 @@ export const posts: BlogPost[] = [
     "date": "2025-02-27",
     "category": "SEO",
     "relatedSlugs": ["how-to-get-on-first-page-of-google", "google-business-profile-optimization", "what-is-schema-markup", "why-small-business-websites-dont-rank"],
-    "content": `<p>If your small business isn't showing up on the first page of Google when someone searches for your service in your city, you're losing customers every single day to competitors who've done the work you haven't done yet. Local SEO isn't mysterious. It's not reserved for businesses with big budgets. It's a system — and systems can be learned, implemented, and maintained by any business owner willing to put in the work.</p>
+    "content": `<p>If your small business isn't showing up on the <a href="/blog/how-to-get-on-first-page-of-google">first page of Google</a> when someone searches for your service in your city, you're losing customers every single day to competitors who've done the work you haven't done yet. Local SEO isn't mysterious. It's not reserved for businesses with big budgets. It's a system — and systems can be learned, implemented, and maintained by any business owner willing to put in the work.</p>
 
 <p>This is the complete guide. Not a summary, not a teaser — the actual framework covering every element of local SEO from Google Business Profile optimization to schema markup to content strategy to link building. Implement what's here and your business will rank. Period.</p>
 
 <h2>What Is Local SEO and Why Does It Matter?</h2>
 
 <h3>Local SEO vs. Traditional SEO</h3>
-<p>Traditional SEO is about ranking for keywords on a national or global level. A company selling shoes online competes nationally. Local SEO is about ranking for searches with geographic intent — people looking for a service "near me" or in a specific city. Local SEO determines who shows up when someone in Detroit searches "plumber near me," "best hair salon in Royal Oak," or "HVAC repair Dearborn."</p>
+<p>Traditional SEO is about ranking for keywords on a national or global level. A company selling shoes online competes nationally. Local SEO is about ranking for searches with geographic intent — people looking for a service "near me" or in a specific city. Local SEO determines who shows up when someone in Detroit searches "<a href="/industries/plumbers">plumber near</a> me," "best <a href="/industries/salons">hair salon in</a> Royal Oak," or "HVAC repair Dearborn."</p>
 
 <p>The numbers are stark: 46% of all Google searches have local intent. 88% of local mobile searches result in a store visit or call within 24 hours. 78% of location-based searches result in an offline purchase. If your business serves a local market and you're not optimizing for local search, you're invisible to your most ready-to-buy customers.</p>
 
@@ -2236,7 +2236,7 @@ export const posts: BlogPost[] = [
 
 <p>See our full <a href="/blog/google-business-profile-optimization">Google Business Profile optimization guide</a> for the complete step-by-step checklist.</p>
 
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Google Business Profile optimization for Detroit local business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&q=80" alt="Google Business Profile optimization for Detroit local business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Google Reviews: The Currency of Local SEO</h2>
 
@@ -2284,7 +2284,7 @@ export const posts: BlogPost[] = [
 
 <p>Make each location page genuinely unique — different content, different photos, different testimonials. Duplicate location pages (copy-paste with city name swapped) get penalized by Google as thin content.</p>
 
-<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Local SEO keyword strategy for Detroit small business service pages" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80" alt="Local SEO keyword strategy for Detroit small business service pages" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Local Citations: The NAP Consistency System</h2>
 
@@ -2335,7 +2335,7 @@ export const posts: BlogPost[] = [
   <li><strong>FAQ compilations:</strong> "10 questions Detroit homeowners ask about [service]" — captures multiple long-tail keywords in one post</li>
 </ul>
 
-<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Content calendar and blog strategy for Detroit small business local SEO" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1200&q=80" alt="Content calendar and blog strategy for Detroit small business local SEO" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Link Building for Local Businesses</h2>
 
@@ -2419,7 +2419,7 @@ export const posts: BlogPost[] = [
 <p>For most Detroit small businesses, the goal is to be in both the map pack AND the organic results for your primary keywords — essentially occupying two slots on page one for the same search.</p>
 
 <h3>The Competitive Reality: Who You're Actually Fighting</h3>
-<p>Before building your strategy, know your competition. For "plumber in Detroit," you might be competing against dozens of local plumbers plus national brands like Roto-Rooter. For "HVAC repair Dearborn," the competition might be narrower. Run your target keyword in Google and look at who's in the map pack and the first three organic results. Those are your specific competitors. Study their GBPs, their review counts, their website structure, and their content depth — then build a plan to beat each of those specific signals.</p>
+<p>Before building your strategy, know your competition. For "<a href="/industries/plumbers">plumber in</a> Detroit," you might be competing against dozens of local plumbers plus national brands like Roto-Rooter. For "HVAC repair Dearborn," the competition might be narrower. Run your target keyword in Google and look at who's in the map pack and the first three organic results. Those are your specific competitors. Study their GBPs, their review counts, their website structure, and their content depth — then build a plan to beat each of those specific signals.</p>
 
 <h2>The Google Business Profile: Your Fastest Path to Map Pack Rankings</h2>
 
@@ -2446,7 +2446,7 @@ export const posts: BlogPost[] = [
 
 <p>For the complete GBP optimization system, read our dedicated <a href="/blog/google-business-profile-optimization">Google Business Profile guide</a>.</p>
 
-<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Google search results showing local map pack and organic rankings for Detroit business" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80" alt="Google search results showing local map pack and organic rankings for Detroit business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>On-Page SEO: The Website Signals That Drive Organic Rankings</h2>
 
@@ -2507,7 +2507,7 @@ export const posts: BlogPost[] = [
   <li>General business directories (Yellow Pages, Manta, Hotfrog, Foursquare)</li>
 </ol>
 
-<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80" alt="Local citation strategy showing consistent NAP information across business directories" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1531206715517-5f25285dd3e2?w=1200&q=80" alt="Local citation strategy showing consistent NAP information across business directories" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Link Building: The Organic Rankings Accelerator</h2>
 
@@ -2549,7 +2549,7 @@ export const posts: BlogPost[] = [
 
 <p>Also relevant to this discussion: our guide on <a href="/blog/why-small-business-websites-dont-rank">why small business websites don't rank</a> covers the technical and content gaps that keep most sites off page one, with specific fixes for each.</p>
 
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="First page Google rankings for Detroit small business keywords" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=1200&q=80" alt="First page Google rankings for Detroit small business keywords" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Page One Timeline: Realistic Expectations</h2>
 
@@ -2589,7 +2589,7 @@ export const posts: BlogPost[] = [
 <h2>Why Your Google Business Profile Matters More Than Ever</h2>
 
 <h3>GBP Is the Foundation of Local Search</h3>
-<p>When someone in Dearborn searches "plumber near me," the first thing they see is the local map pack — three businesses with their GBP data displayed directly in Google's interface. 44% of local searchers click something in the map pack before ever scrolling to organic website results. If your GBP isn't in those top three spots, you're invisible to nearly half your potential customers before they even reach your website.</p>
+<p>When someone in Dearborn searches "<a href="/industries/plumbers">plumber near</a> me," the first thing they see is the local map pack — three businesses with their GBP data displayed directly in Google's interface. 44% of local searchers click something in the map pack before ever scrolling to organic website results. If your GBP isn't in those top three spots, you're invisible to nearly half your potential customers before they even reach your website.</p>
 
 <p>But GBP's importance extends beyond traditional search. Google's AI Overviews pull heavily from GBP data. Voice searches ("Hey Google, best electrician near me") primarily surface businesses with complete, optimized GBPs. ChatGPT and Perplexity incorporate GBP data into their local recommendations. Your GBP isn't just a local search tool — it's a feed that powers AI search visibility across multiple platforms simultaneously.</p>
 
@@ -2598,7 +2598,7 @@ export const posts: BlogPost[] = [
 
 <h2>The Complete GBP Optimization Checklist</h2>
 
-<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Optimized Google Business Profile with photos and reviews" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80" alt="Optimized Google Business Profile with photos and reviews" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Business Information: Getting the Foundation Right</h3>
 <p>Every field in your GBP contributes to ranking signals. Work through each one completely:</p>
@@ -2609,7 +2609,7 @@ export const posts: BlogPost[] = [
 
 <p><strong>Business Description:</strong> You have 750 characters — use all of them. Open with your most important keyword and service area naturally: "Metro Detroit's reliable residential plumber serving Wayne, Oakland, and Macomb counties since 2008." Then cover your key services, your differentiators, your credentials, and a soft call to action. This is prime keyword real estate — write it like copy, not like a legal disclaimer.</p>
 
-<p><strong>Service Area:</strong> Define the geographic areas you serve. Be specific — list cities, not just "Metro Detroit." Each city you add to your service area is a location Google considers when determining whether to show you for that city's searches. A Dearborn plumber who adds Warren, Sterling Heights, and Southfield to their service area can rank in those cities' map packs without having a physical address there.</p>
+<p><strong>Service Area:</strong> Define the geographic areas you serve. Be specific — list cities, not just "Metro Detroit." Each city you add to your service area is a location Google considers when determining whether to show you for that city's searches. A <a href="/areas/dearborn">Dearborn plumber</a> who adds Warren, Sterling Heights, and Southfield to their service area can rank in those cities' map packs without having a physical address there.</p>
 
 <h3>Hours and Attributes</h3>
 <p>Accurate hours are critical for both customer experience and rankings. Update hours for every holiday. If you offer 24/7 emergency service, mark that in your hours settings — it's a separate option Google provides and it appears visually in your listing.</p>
@@ -2635,7 +2635,7 @@ export const posts: BlogPost[] = [
 <h3>Photo Upload Cadence</h3>
 <p>Add minimum 3 new photos per month. Google's algorithm weights photo recency — a profile with 50 photos all uploaded 3 years ago ranks lower than a profile with 60 photos where the last 20 were added in the last 6 months. Set a recurring monthly calendar reminder: upload 3+ new photos on the first of every month.</p>
 
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="Google Business Profile photos showing team members and completed work" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&q=80" alt="Google Business Profile photos showing team members and completed work" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Google Reviews: The Ranking Signal You Can Actually Control</h2>
 
@@ -2680,7 +2680,7 @@ export const posts: BlogPost[] = [
 
 <p>Post weekly. Each post should include: a keyword-rich description mentioning your service and location, a photo (posts with photos get more engagement), and a clear call-to-action button (Book, Call, Order, Get Offer, or Learn More).</p>
 
-<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Google Business Profile posts showing local business activity and updates" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=1200&q=80" alt="Google Business Profile posts showing local business activity and updates" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Services, Products, and Menu</h2>
 
@@ -2801,7 +2801,7 @@ export const posts: BlogPost[] = [
 
 <p>Equally important: Google's AI Overviews pull heavily from pages with FAQPage schema markup. If you want your business to be cited in AI-generated answers to questions about your service category, FAQ schema is your most direct technical lever. This is why schema markup is foundational to the <a href="/blog/what-is-aeo-answer-engine-optimization">answer engine optimization strategy</a> we build into every Caliber website.</p>
 
-<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="Rich search results showing schema markup star ratings and FAQ accordions" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1556742205-e10c9486e506?w=1200&q=80" alt="Rich search results showing schema markup star ratings and FAQ accordions" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Essential Schema Types for Detroit Small Businesses</h2>
 
@@ -2943,7 +2943,7 @@ export const posts: BlogPost[] = [
 <h3>5. Review Schema</h3>
 <p>Review and AggregateRating schema makes your business's review data explicit to search engines. When your aggregate rating is marked up with schema, Google can display star ratings directly in your search results — a visual differentiator that significantly increases click-through rates compared to results without ratings displayed.</p>
 
-<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80" alt="Schema markup implementation showing LocalBusiness and FAQPage structured data" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1555099962-4182625e97c0?w=1200&q=80" alt="Schema markup implementation showing LocalBusiness and FAQPage structured data" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How to Implement Schema Markup</h2>
 
@@ -2991,7 +2991,7 @@ export const posts: BlogPost[] = [
 
 <p>Understanding how schema fits into the complete picture means looking at how it connects to <a href="/blog/google-business-profile-optimization">GBP optimization</a>, <a href="/blog/how-to-get-on-first-page-of-google">organic page one rankings</a>, and the question of <a href="/blog/why-small-business-websites-dont-rank">why small business websites fail to rank</a> in the first place — often because schema is missing entirely.</p>
 
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="Detroit business website with complete schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80" alt="Detroit business website with complete schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Common Schema Markup Mistakes to Avoid</h2>
 
@@ -3042,10 +3042,10 @@ export const posts: BlogPost[] = [
 
 <h2>Reason 1: No Local Signals (Your Website Doesn't Tell Google Where You Are)</h2>
 
-<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80" alt="Geographic location map and local business signals" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&q=80" alt="Geographic location map and local business signals" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>How Google's Local Algorithm Works</h3>
-<p>Google's local search algorithm says: "This person searched 'plumber near me' in Dearborn. Show them plumbers in Dearborn and nearby areas." To make that match, Google needs to be confident that your business is located in Dearborn and serves Dearborn customers. If your website has no geographic signals, Google doesn't know where you are — and can't recommend you to local searchers.</p>
+<p>Google's local search algorithm says: "This person searched '<a href="/industries/plumbers">plumber near</a> me' in Dearborn. Show them plumbers in Dearborn and nearby areas." To make that match, Google needs to be confident that your business is located in Dearborn and serves Dearborn customers. If your website has no geographic signals, Google doesn't know where you are — and can't recommend you to local searchers.</p>
 
 <p>Many Detroit business owners assume Google "just knows" their location because they registered a Google Business Profile. They're wrong. Your GBP is a separate signal from your website. For competitive local keywords, Google needs geographic signals from both — and most websites are providing none.</p>
 
@@ -3139,7 +3139,7 @@ export const posts: BlogPost[] = [
 
 <p>Repeat for each major service. Publish one solid service page per week for a month and you'll have the content foundation to rank for 4-5 specific service keywords in your market. This is the core of what separates ranking businesses from invisible ones — read the full breakdown in our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide</a>.</p>
 
-<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80" alt="Analytics dashboard showing traffic increase after SEO and content fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&q=80" alt="Analytics dashboard showing traffic increase after SEO and content fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reason 4: No Backlinks (Nobody Links to You)</h2>
 
@@ -3212,7 +3212,7 @@ export const posts: BlogPost[] = [
   <li>Monitor Google Search Console for ranking improvements</li>
 </ul>
 
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="High-ranking website on Google first page after implementing SEO fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="High-ranking website on Google first page after implementing SEO fixes" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Caliber Sites Rank</h2>
 
@@ -3246,7 +3246,7 @@ export const posts: BlogPost[] = [
     "relatedSlugs": ["website-design-for-salons", "local-seo-guide-for-small-businesses", "google-business-profile-optimization", "why-detroit-small-businesses-need-a-website"],
     "content": `<p>A Detroit barbershop isn't just a place to get a cut. It's where neighborhoods hold council. It's the East Side spot your uncle went to for thirty years and where you started taking your son. It's the West Side shop where the barber knows your name, your line, and your story before you sit down. That relationship is built in the chair — but it's found on Google first.</p>
 
-<p>More Detroit men than ever are searching "barbershop near me," "fade near Gratiot," or "lineup Detroit" before they ever walk through a door. If your shop doesn't have a website that shows up in those searches and makes booking frictionless, you're invisible to the customer who doesn't already know you. And in a city where every neighborhood has three shops competing for the same block, invisible is the same as closed.</p>
+<p>More Detroit men than ever are searching "<a href="/industries/barbershops">barbershop near</a> me," "fade near Gratiot," or "lineup Detroit" before they ever walk through a door. If your shop doesn't have a website that shows up in those searches and makes booking frictionless, you're invisible to the customer who doesn't already know you. And in a city where every neighborhood has three shops competing for the same block, invisible is the same as closed.</p>
 
 <h2>The Detroit Barbershop Runs on Loyalty — and Discovery</h2>
 
@@ -3304,7 +3304,7 @@ export const posts: BlogPost[] = [
 <li><strong>Google Business Profile claimed and fully optimized</strong> — Hours, phone, photos, services, and a description that includes your neighborhood and specialties</li>
 <li><strong>Location keywords in your website content</strong> — "East Side Detroit fade specialist" or "West Vernor barbershop" used naturally, not stuffed awkwardly</li>
 <li><strong>Reviews, consistently</strong> — Google rewards recency. Ten new reviews this month matters more than forty old ones from two years ago</li>
-<li><strong>Schema markup</strong> — Structured data that tells Google you're a barbershop, your address, your hours, and your services</li>
+<li><strong><a href="/blog/what-is-schema-markup">Schema markup</a></strong> — Structured data that tells Google you're a barbershop, your address, your hours, and your services</li>
 </ul>
 
 <p>The full local SEO picture is worth understanding in depth. Read our <a href="/blog/local-seo-guide-for-small-businesses">local SEO guide for small businesses</a> and the <a href="/blog/google-business-profile-optimization">Google Business Profile optimization guide</a> — both apply directly to barbershops competing in Detroit's dense neighborhood markets.</p>
@@ -3317,7 +3317,7 @@ export const posts: BlogPost[] = [
 
 <p>Our guide on <a href="/blog/how-to-get-more-google-reviews">how to get more Google reviews</a> covers the exact system that works for service businesses like barbershops.</p>
 
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&q=80" alt="Barbershop website displayed on mobile showing booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80" alt="Barbershop website displayed on mobile showing booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Tech That Works While You're Behind the Chair</h2>
 
@@ -3396,7 +3396,7 @@ export const posts: BlogPost[] = [
 
 <h3>Downriver Flooding Is Its Own Market</h3>
 
-<p>Flooding in communities like Wyandotte, Lincoln Park, Allen Park, and Riverview is cyclical and predictable. Homeowners who flooded last spring are actively looking for sump pump upgrades, backup battery systems, and drain tile solutions before the next spring. A contractor with a dedicated "Basement Waterproofing and Sump Pump Service — Downriver Detroit" page that speaks directly to those customers — mentioning the River Rouge flooding, the high water table, the 1950s drainage infrastructure — will rank above a generic "plumber in Michigan" page every time.</p>
+<p>Flooding in communities like Wyandotte, Lincoln Park, Allen Park, and Riverview is cyclical and predictable. Homeowners who flooded last spring are actively looking for sump pump upgrades, backup battery systems, and drain tile solutions before the next spring. A contractor with a dedicated "Basement Waterproofing and Sump Pump Service — Downriver Detroit" page that speaks directly to those customers — mentioning the River Rouge flooding, the high water table, the 1950s drainage infrastructure — will rank above a generic "<a href="/industries/plumbers">plumber in</a> Michigan" page every time.</p>
 
 <h2>Trust Signals for Homeowners Who Don't Know You</h2>
 
@@ -3420,7 +3420,7 @@ export const posts: BlogPost[] = [
 
 <p>Build these pages with 400-600 words of real, specific content. Include local landmarks, mention the age of the housing stock, describe the problems homeowners in that area actually face. That's what ranks — and that's what converts readers into callers.</p>
 
-<p>The technical side of local SEO — schema markup, citation consistency, Google Business Profile optimization — is covered in detail in our <a href="/blog/local-seo-guide-for-small-businesses">local SEO guide for small businesses</a> and the <a href="/blog/what-is-schema-markup">schema markup guide</a>.</p>
+<p>The technical side of local SEO — schema markup, citation consistency, <a href="/blog/google-business-profile-optimization">Google Business Profile</a> optimization — is covered in detail in our <a href="/blog/local-seo-guide-for-small-businesses">local SEO guide for small businesses</a> and the <a href="/blog/what-is-schema-markup">schema markup guide</a>.</p>
 
 <h2>The Lead Capture System That Never Sleeps</h2>
 
@@ -3430,7 +3430,7 @@ export const posts: BlogPost[] = [
 
 <p>That's a lead captured at 10pm that you call at 8am — before they've called anyone else.</p>
 
-<img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80" alt="Homeowner using phone to find a local plumber in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reviews: The Referral Network That Scales</h2>
 
@@ -3480,7 +3480,7 @@ export const posts: BlogPost[] = [
 
 <h2>Hair Culture in Detroit Is Specific — Your Website Should Be Too</h2>
 
-<p>Detroit's salon market is not monolithic. The natural hair salon in Grandmont-Rosedale serves clients navigating the transition from relaxed to natural. The braider in Brightmoor has a client list built on word-of-mouth that goes back twenty years. The blowout bar in Midtown serves the professional who needs to look sharp for a board meeting on Monday. The locs specialist in East English Village has clients who've been with her through every inch of growth.</p>
+<p>Detroit's salon market is not monolithic. The natural <a href="/industries/salons">hair salon in</a> Grandmont-Rosedale serves clients navigating the transition from relaxed to natural. The braider in Brightmoor has a client list built on word-of-mouth that goes back twenty years. The blowout bar in Midtown serves the professional who needs to look sharp for a board meeting on Monday. The locs specialist in East English Village has clients who've been with her through every inch of growth.</p>
 
 <p>Generic salon website content — "We offer cuts, color, and styling services" — could apply to anyone in any city. That's not how trust is built. Your website should reflect your specialties, your community, and the specific expertise that makes your salon irreplaceable to the clients who need exactly what you do.</p>
 
@@ -3551,7 +3551,7 @@ export const posts: BlogPost[] = [
 
 <p>For the broader picture of how local search works and why some salons rank above others, the <a href="/blog/local-seo-guide-for-small-businesses">local SEO guide for small businesses</a> gives you the full framework.</p>
 
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&q=80" alt="Salon website displayed on a phone with booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=1200&q=80" alt="Salon website displayed on a phone with booking interface" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Stylist Profiles That Build Individual Loyalty</h2>
 
@@ -3592,13 +3592,13 @@ export const posts: BlogPost[] = [
     "date": "2025-05-25",
     "category": "Industry Guides",
     "relatedSlugs": ["local-seo-guide-for-small-businesses", "google-business-profile-optimization", "why-detroit-small-businesses-need-a-website", "what-is-schema-markup"],
-    "content": `<p>Detroit's food scene is not aspirational. It's arrived. Eastern Market vendors who've been there for four generations. Corktown restaurants that turned a shrinking neighborhood into a dining destination. Dearborn's Middle Eastern corridors on Michigan Avenue and Warren, where the shawarma and fattoush are as good as anything in Beirut. The soul food institutions on the East Side that have fed Detroit since before integration. This is a city with real food culture — and restaurants that compete in it need websites built for how Detroit diners actually make decisions.</p>
+    "content": `<p>Detroit's food scene is not aspirational. It's arrived. Eastern Market vendors who've been there for four generations. <a href="/areas/corktown">Corktown</a> restaurants that turned a shrinking neighborhood into a dining destination. Dearborn's Middle Eastern corridors on Michigan Avenue and Warren, where the shawarma and fattoush are as good as anything in Beirut. The soul food institutions on the East Side that have fed Detroit since before integration. This is a city with real food culture — and restaurants that compete in it need websites built for how Detroit diners actually make decisions.</p>
 
 <p>The decision usually takes about twenty seconds. A diner finds you in a search result or a Google Maps listing, clicks through to your website, and decides in less time than it takes to read this paragraph whether they're coming in or clicking back. Menu. Vibe. Can I get a table. Those three questions, answered immediately, are what converts a browser into a reservation.</p>
 
 <h2>Detroit's Food Scene Is Earned, Not Given</h2>
 
-<p>Competing in Detroit's restaurant market means competing against deep institutional loyalty. Floods of Mexicantown regulars who've been going to the same spot for tamales since childhood. Eastern Market shoppers who stop at the same lunch counter after buying produce every Saturday. The Dearborn family that has a standing Sunday reservation at their favorite Lebanese restaurant. That loyalty took years to build — but every restaurant in Detroit started somewhere, and new customers find their way to you through search, through friends, and through your website.</p>
+<p>Competing in Detroit's restaurant market means competing against deep institutional loyalty. Floods of Mexicantown regulars who've been going to the same spot for tamales since childhood. Eastern Market shoppers who stop at the same lunch counter after buying produce every Saturday. The Dearborn family that has a standing Sunday reservation at their favorite Lebanese restaurant. That loyalty took years to build — but every <a href="/industries/restaurants">restaurant in</a> Detroit started somewhere, and new customers find their way to you through search, through friends, and through your website.</p>
 
 <p>A first-time visitor who finds you through Google is making a cold decision based entirely on what your website shows them. Your incumbents — the places with twenty years of regulars — have an advantage you can't replicate overnight. But you can build a website that earns the first visit. The loyalty comes after that.</p>
 
@@ -3645,7 +3645,7 @@ export const posts: BlogPost[] = [
 
 <p>You cannot replace good food photography. A plate of biryani shot on a phone under fluorescent lighting is not the same as a plate shot with proper lighting, a real camera, and a food stylist's eye. In Detroit's competitive restaurant market — where Instagram-ready food photos have trained diners to evaluate restaurants visually before visiting — photography that doesn't do your food justice actively hurts your business.</p>
 
-<p>Budget for a two-to-three hour food photography session. A professional food photographer in Detroit costs $300–$600 for a session and will give you 30–50 usable images that you'll use across your website, Google Business Profile, Instagram, and press materials for years. That's one of the best per-dollar investments a restaurant makes in its visual presence.</p>
+<p>Budget for a two-to-three hour food photography session. A professional food <a href="/industries/photography-studios">photographer in</a> Detroit costs $300–$600 for a session and will give you 30–50 usable images that you'll use across your website, Google Business Profile, Instagram, and press materials for years. That's one of the best per-dollar investments a restaurant makes in its visual presence.</p>
 
 <p>Priority shots: your signature dishes, your dining room during service, your kitchen if it's open-concept, your staff in action. What you're building is a visual story that makes a stranger want to come in.</p>
 
@@ -3657,7 +3657,7 @@ export const posts: BlogPost[] = [
 
 <p>Pair your review strategy with a fully optimized Google Business Profile. For restaurants, this means listing your cuisine type, price range, dine-in/takeout/delivery options, parking situation, and uploading new photos regularly. The <a href="/blog/google-business-profile-optimization">GBP optimization guide</a> covers the full checklist.</p>
 
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="Restaurant website on laptop showing menu and online reservation system" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80" alt="Restaurant website on laptop showing menu and online reservation system" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Restaurant Website Checklist</h2>
 
@@ -3671,7 +3671,7 @@ export const posts: BlogPost[] = [
 <li>Google reviews widget showing star rating and recent reviews</li>
 <li>Social media links (Instagram especially — food content drives traffic)</li>
 <li>Mobile-first design — most reservation decisions are made on phones</li>
-<li>Schema markup for restaurant search results</li>
+<li><a href="/blog/what-is-schema-markup">Schema markup</a> for restaurant search results</li>
 </ul>
 
 <h2>The Local SEO Foundation for Restaurant Discovery</h2>
@@ -3718,7 +3718,7 @@ export const posts: BlogPost[] = [
 <li><strong>License and insurance displayed</strong> — Michigan dealer/repair license numbers visible on the page. Not hidden in fine print.</li>
 </ul>
 
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80" alt="ASE-certified mechanic working on an engine at a Detroit auto repair shop" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80" alt="ASE-certified mechanic working on an engine at a Detroit auto repair shop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Transparency Wins Jobs — Show Prices, Show Process</h2>
 
@@ -3742,7 +3742,7 @@ export const posts: BlogPost[] = [
 
 <p>Our guide on <a href="/blog/how-to-get-more-google-reviews">how to get more Google reviews</a> covers the specific mechanics of building a review system that works for auto repair shops — including how to ask, when to ask, and how to respond to negative reviews when they happen.</p>
 
-<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="Clean, professional auto repair shop floor with organized equipment" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=1200&q=80" alt="Clean, professional auto repair shop floor with organized equipment" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Local SEO: Being Found When Detroit Drivers Search</h2>
 
@@ -3750,7 +3750,7 @@ export const posts: BlogPost[] = [
 
 <p>For Metro Detroit specifically:</p>
 <ul>
-<li><strong>Google Business Profile with complete service categories</strong> — Not just "auto repair shop" but "transmission repair," "brake service," "oil change service," "tire shop." Each additional category is another search where you can appear.</li>
+<li><strong><a href="/blog/google-business-profile-optimization">Google Business Profile</a> with complete service categories</strong> — Not just "auto repair shop" but "transmission repair," "brake service," "oil change service," "tire shop." Each additional category is another search where you can appear.</li>
 <li><strong>Service area pages for each city you serve</strong> — If you serve Detroit, Dearborn, Hamtramck, and Highland Park, each of those communities gets a page that speaks to local drivers specifically</li>
 <li><strong>Schema markup for auto repair</strong> — Structured data that tells Google exactly what services you offer, your hours, your certifications, and your location</li>
 <li><strong>NAP consistency</strong> — Your name, address, and phone number must be identical across Google, Yelp, your website, and any directories where you're listed</li>
@@ -3766,7 +3766,7 @@ export const posts: BlogPost[] = [
 
 <p>An AI chatbot on your website can go further — answering common questions at any hour: "Do you work on diesels?" "What does a brake inspection cost?" "Are you open Saturdays?" Without requiring anyone on your staff to be available at midnight. Read more about <a href="/blog/what-is-an-ai-chatbot-for-business">what an AI chatbot can do for service businesses</a>.</p>
 
-<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="Detroit driver finding an auto repair shop on their phone" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="https://images.unsplash.com/photo-1565372197970-cd1dc0b37f46?w=1200&q=80" alt="Detroit driver finding an auto repair shop on their phone" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Photos That Build Confidence</h2>
 
@@ -3984,7 +3984,7 @@ export const posts: BlogPost[] = [
     "date": "2025-06-10",
     "category": "Industry Guides",
     "relatedSlugs": ["local-seo-guide-for-small-businesses", "google-business-profile-optimization", "what-is-schema-markup", "why-detroit-small-businesses-need-a-website"],
-    "content": `<p>A new patient searches "dentist near me" or "family dentist in Troy Michigan." They land on your website. In the next 30 seconds they decide whether to book or keep scrolling. But here is the challenge most dental practices do not talk about openly: getting patients to your site is only half the battle. The other half is getting booked patients to actually show up.</p>
+    "content": `<p>A new patient searches "<a href="/industries/dentists">dentist near</a> me" or "family dentist in Troy Michigan." They land on your website. In the next 30 seconds they decide whether to book or keep scrolling. But here is the challenge most dental practices do not talk about openly: getting patients to your site is only half the battle. The other half is getting booked patients to actually show up.</p>
 
 <p>No-shows and last-minute cancellations are one of the biggest operational drains in dentistry. The average dental practice loses <strong>$50,000 to $100,000 in annual revenue</strong> to unfilled appointment slots. The right website — built with the right booking and communication systems — can significantly reduce that number while simultaneously attracting more new patients.</p>
 
@@ -4477,7 +4477,7 @@ export const posts: BlogPost[] = [
 
 <h3>Email Sequences for Service-Based Businesses</h3>
 
-<p>For businesses with email capture built into their workflow — contractors who send invoices via email, dental practices with patient portals, agencies with client management software — an email review request sent 24-48 hours after service completion is highly effective.</p>
+<p>For businesses with email capture built into their workflow — contractors who send invoices via email, <a href="/industries/dentists">dental practices</a> with patient portals, agencies with client management software — an email review request sent 24-48 hours after service completion is highly effective.</p>
 
 <p>Keep the email short: three sentences maximum, direct link, no design complexity. "We hope you're happy with [service]. If you have a moment, your Google review would mean a lot to us — most of our new clients find us through reviews from people like you." That is all it needs to be.</p>
 
@@ -4565,7 +4565,7 @@ export const posts: BlogPost[] = [
 
 <p>A business with 100+ Google reviews averaging 4.7 stars or higher has achieved something that is genuinely difficult to replicate quickly. It signals longevity, quality, and active customer engagement. It ranks higher in the local pack for competitive searches. It converts at a higher rate because social proof is the most powerful conversion element in local commerce.</p>
 
-<p>Caliber Web Studio builds review collection systems into every website we deliver — because a great website that no one trusts is only half the solution. We work with Metro Detroit businesses to integrate review automation, display social proof effectively, and connect your digital presence to the reputation you have earned on the ground.</p>
+<p>Caliber Web Studio builds review collection systems into every website we deliver — because a great website that no one trusts is only half the solution. We work with Metro Detroit businesses to integrate <a href="/services/review-automation">review automation</a>, display social proof effectively, and connect your digital presence to the reputation you have earned on the ground.</p>
 
 <p><a href="/blog/best-web-designer-detroit">See what Detroit businesses say about working with us</a> — and <a href="/blog/local-seo-guide-for-small-businesses">read our local SEO guide</a> to understand the full picture of what it takes to rank and convert in a competitive local market.`
   },
@@ -4580,15 +4580,15 @@ export const posts: BlogPost[] = [
     "content": `
 <h1>The Complete Guide to Local SEO for Detroit Small Businesses (2026)</h1>
 
-<p>Local SEO for Detroit small businesses means showing up when someone in your neighborhood types "plumber near me" or "best barber in Hamtramck." Done right, it consistently puts your business in front of high-intent buyers at the exact moment they're ready to spend money — without paying for ads.</p>
+<p>Local SEO for Detroit small businesses means showing up when someone in your neighborhood types "<a href="/industries/plumbers">plumber near</a> me" or "best barber in Hamtramck." Done right, it consistently puts your business in front of high-intent buyers at the exact moment they're ready to spend money — without paying for ads.</p>
 
 <img src="/blog/local-seo-detroit-small-businesses-2026-thumb.png" alt="Detroit skyline representing local business market" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Detroit Has Unique Local SEO Dynamics</h2>
 
-<p>Detroit isn't a monolith. The competitive landscape for a restaurant in Corktown is completely different from a salon in Grosse Pointe or a contractor in Warren. Metro Detroit sprawls across Wayne, Oakland, and Macomb counties — dozens of distinct communities, each with its own search patterns and competitive intensity.</p>
+<p>Detroit isn't a monolith. The competitive landscape for a <a href="/industries/restaurants">restaurant in</a> Corktown is completely different from a salon in Grosse Pointe or a <a href="/industries/contractors">contractor in</a> Warren. Metro Detroit sprawls across Wayne, Oakland, and Macomb counties — dozens of distinct communities, each with its own search patterns and competitive intensity.</p>
 
-<p>A few dynamics specific to Detroit that affect your local SEO strategy:</p>
+<p>A few dynamics specific to Detroit that affect your <a href="/blog/local-seo-guide-for-small-businesses">local SEO strategy</a>:</p>
 
 <ul>
   <li><strong>Neighborhood identity matters.</strong> Detroiters are fiercely local. Searches like "Mexican restaurant Mexicantown Detroit" or "barber Dearborn" are hyperspecific. Your digital presence needs to reflect that granularity.</li>
@@ -4597,7 +4597,7 @@ export const posts: BlogPost[] = [
   <li><strong>Mobile dominates.</strong> Over 70% of local searches in Detroit happen on a phone. If your site isn't fast and mobile-optimized, you're invisible to most of your potential customers.</li>
 </ul>
 
-<p>Local SEO is the discipline of optimizing your entire online presence — website, Google Business Profile, citations, reviews — so that Google confidently recommends your business to nearby searchers. Let's break down each component.</p>
+<p>Local SEO is the discipline of optimizing your entire online presence — website, <a href="/blog/google-business-profile-optimization">Google Business Profile</a>, citations, reviews — so that Google confidently recommends your business to nearby searchers. Let's break down each component.</p>
 
 <h2>Google Business Profile: Your Local SEO Foundation</h2>
 
@@ -4726,7 +4726,7 @@ export const posts: BlogPost[] = [
     "content": `
 <h1>Schema Markup Explained: How to Help Google Understand Your Business</h1>
 
-<p>Schema markup is code you add to your website that tells Google — in plain, machine-readable language — exactly what your business is, what it offers, where it's located, and how customers have rated it. It doesn't change how your site looks. It changes how intelligently Google and AI engines understand it.</p>
+<p><a href="/blog/what-is-schema-markup">Schema markup</a> is code you add to your website that tells Google — in plain, machine-readable language — exactly what your business is, what it offers, where it's located, and how customers have rated it. It doesn't change how your site looks. It changes how intelligently Google and AI engines understand it.</p>
 
 <img src="/blog/schema-markup-explained-local-businesses-thumb.png" alt="Code editor showing structured data and schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -4753,7 +4753,7 @@ export const posts: BlogPost[] = [
 <p>A complete LocalBusiness schema for a Detroit small business should include:</p>
 <ul>
   <li><strong>@type:</strong> Be specific. Use "Plumber," "HairSalon," "AutoRepair," "Restaurant" — not the generic "LocalBusiness" if a more specific type exists. Schema.org has hundreds of business subtypes. The right subtype sends a stronger relevance signal.</li>
-  <li><strong>name:</strong> Your business name exactly as it appears on your Google Business Profile and everywhere else. Consistency matters.</li>
+  <li><strong>name:</strong> Your business name exactly as it appears on your <a href="/blog/google-business-profile-optimization">Google Business Profile</a> and everywhere else. Consistency matters.</li>
   <li><strong>address:</strong> Full PostalAddress with streetAddress, addressLocality (city), addressRegion (state), postalCode, and addressCountry.</li>
   <li><strong>telephone:</strong> In E.164 format (+13135551234) for machine readability.</li>
   <li><strong>url:</strong> Your website's canonical URL.</li>
@@ -4775,7 +4775,7 @@ export const posts: BlogPost[] = [
 <p>Each service you offer should have its own Service schema object with: name, description, provider (your LocalBusiness), areaServed (the geographies you cover), and serviceType. Optionally add offers with price information if your services have standard pricing.</p>
 
 <h3>Why Service Schema Affects Rankings</h3>
-<p>When someone searches "water heater installation Detroit," Google needs to connect that query to businesses that explicitly offer water heater installation — not just plumbers in general. Service schema makes that connection explicit and machine-readable. Businesses with complete Service schema for each offering are more likely to appear in service-specific queries, not just brand-name or generic category searches.</p>
+<p>When someone searches "water heater installation Detroit," Google needs to connect that query to businesses that explicitly offer water heater installation — not just <a href="/industries/plumbers">plumbers in</a> general. Service schema makes that connection explicit and machine-readable. Businesses with complete Service schema for each offering are more likely to appear in service-specific queries, not just brand-name or generic category searches.</p>
 
 <h3>Service Area Schema</h3>
 <p>The areaServed property is critical for service-area businesses that don't work from a single location. Define your service area using AdministrativeArea objects listing each city, county, or ZIP code you serve. This explicitly tells Google your geographic coverage and prevents you from ranking irrelevantly in searches far outside your actual service area.</p>
@@ -4902,20 +4902,20 @@ export const posts: BlogPost[] = [
 
 <h3>Example 2: Detroit Hair Salon</h3>
 <p><strong>Business profile:</strong> Full-service salon, Midtown Detroit. Average new client first visit: $95. Average annual value of a retained client (visits every 6 weeks): $820.</p>
-<p><strong>Website investment:</strong> $197/month ($2,364/year) for a custom site with online booking, local SEO, and Google Business Profile optimization.</p>
+<p><strong>Website investment:</strong> <a href="/pricing">$197/month</a> ($2,364/year) for a custom site with online booking, local SEO, and <a href="/blog/google-business-profile-optimization">Google Business Profile</a> optimization.</p>
 <p><strong>Realistic outcome after 4 months:</strong> Ranking for "hair salon Midtown Detroit" and 6–8 related terms. Monthly organic visitors: 290. Monthly new booking inquiries from website: 18. New clients who become regulars: 8/month (45% conversion, accounting for no-shows and one-time visitors).</p>
 <p><strong>Annual client value:</strong> 8 new regular clients/month × $820 annual value = $6,560/month in recurring client revenue added each month (compounding as those clients return).</p>
 <p><strong>After 12 months:</strong> Even conservatively assuming half those clients stay the full year, you've added $39,360 in annual recurring revenue from website-generated clients. Against a $2,364 annual investment, that's an ROI of over 1,500%.</p>
 
 <h3>Example 3: Detroit Restaurant</h3>
-<p><strong>Business profile:</strong> Casual-dining restaurant in Corktown. Average table of 2: $65. Average visit frequency for a regular: twice per month. Average annual value of a regular customer: $1,560.</p>
+<p><strong>Business profile:</strong> Casual-dining <a href="/industries/restaurants">restaurant in</a> Corktown. Average table of 2: $65. Average visit frequency for a regular: twice per month. Average annual value of a regular customer: $1,560.</p>
 <p><strong>Website investment:</strong> $247/month ($2,964/year) with a site optimized for "restaurant Corktown Detroit," online reservations, and Google Business Profile.</p>
 <p><strong>Realistic outcome:</strong> The restaurant model is different — websites drive direction requests, OpenTable/Resy clicks, and direct reservations. A well-optimized restaurant site in a competitive neighborhood like Corktown can realistically generate 200–400 direction requests per month from Google. Converting even 15% of those into actual visits, at $65 per table, generates $1,950–$3,900/month in direct revenue attribution.</p>
 <p><strong>Annual return:</strong> At the conservative end ($1,950/month), $23,400 annual revenue against $2,964 investment = 690% ROI. And that's excluding the repeat visit multiplier.</p>
 
 <h2>The Cost of Inaction: Leads Going to Competitors</h2>
 
-<p>The ROI of a professional website isn't just what you gain — it's also what you stop losing. Every month your business operates without a competitive online presence, customers who are actively searching for what you offer are finding your competitors instead.</p>
+<p>The <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> isn't just what you gain — it's also what you stop losing. Every month your business operates without a competitive online presence, customers who are actively searching for what you offer are finding your competitors instead.</p>
 
 <img src="/blog/roi-professional-web-design-numbers-2.png" alt="Missed opportunity cost when competitors rank higher in local search" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -4930,7 +4930,7 @@ export const posts: BlogPost[] = [
 <p>The web design industry offers two primary pricing models: ongoing monthly retainers and one-time project builds. The ROI math is different for each, and the "cheapest" option isn't always obvious.</p>
 
 <h3>The $5,000 One-Time Build</h3>
-<p>A $5,000 custom website build is a legitimate investment — if it includes everything you need: design, development, SEO setup, schema markup, speed optimization, and post-launch support. In practice, many one-time builds don't include ongoing maintenance, hosting quality SEO monitoring, or updates. A year after launch, the site may be outdated, insecure, and stagnating in search rankings without someone actively managing it.</p>
+<p>A $5,000 custom website build is a legitimate investment — if it includes everything you need: design, development, SEO setup, <a href="/blog/what-is-schema-markup">schema markup</a>, speed optimization, and post-launch support. In practice, many one-time builds don't include ongoing maintenance, hosting quality SEO monitoring, or updates. A year after launch, the site may be outdated, insecure, and stagnating in search rankings without someone actively managing it.</p>
 <p><strong>Year 1 all-in cost:</strong> $5,000 build + $300/year hosting + $600/year for basic maintenance = $5,900. That's $492/month effective cost in year one. If it generates the same leads as a $247/month managed site, the math works out roughly equivalent over a 24-month period — but only if you maintain it.</p>
 
 <h3>The $197–$247/Month Managed Model</h3>
@@ -4987,7 +4987,7 @@ export const posts: BlogPost[] = [
     "category": "Reputation Management",
     "relatedSlugs": ["how-to-get-more-google-reviews", "google-business-profile-optimization", "local-seo-detroit-small-businesses-2026", "best-web-designer-detroit"],
     "content": `
-<h1>How to Get More Google Reviews (Without Being Annoying)</h1>
+<h1><a href="/blog/how-to-get-more-google-reviews">How to Get More Google Reviews</a> (Without Being Annoying)</h1>
 
 <p>The businesses with the most Google reviews didn't beg. They built a simple, consistent system: ask at the right moment, through the right channel, with a frictionless link. Do that well, and the reviews accumulate without anyone feeling pressured.</p>
 
@@ -5013,7 +5013,7 @@ export const posts: BlogPost[] = [
 <img src="/blog/get-google-reviews-without-being-annoying-1.png" alt="Mobile phone displaying text message review request to customer" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Text Messages</h3>
-<p>A text message with a direct link to your Google review page is the single highest-converting review channel for most local businesses. Short, direct, no friction. Customers can tap the link, leave a review, and be done in 90 seconds. The key is the link — don't ask someone to "search for us on Google and leave a review." Give them the exact URL. Your Google Business Profile review link is available in your GBP dashboard under "Get more reviews."</p>
+<p>A text message with a direct link to your Google review page is the single highest-converting review channel for most local businesses. Short, direct, no friction. Customers can tap the link, leave a review, and be done in 90 seconds. The key is the link — don't ask someone to "search for us on Google and leave a review." Give them the exact URL. Your <a href="/blog/google-business-profile-optimization">Google Business Profile</a> review link is available in your GBP dashboard under "Get more reviews."</p>
 
 <h3>Email</h3>
 <p>Email works well for service businesses that have customers' email addresses and longer service relationships — contractors, accountants, agencies, medical practices. A short plain-text email performs better than a designed template for review requests. It feels personal rather than automated. Include one link, one sentence of context, and a clear ask. No more.</p>
@@ -5138,7 +5138,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     "category": "AEO & AI Search",
     "relatedSlugs": ["how-to-show-up-in-chatgpt-and-perplexity", "aeo-2026-detroit-businesses-guide", "what-is-aeo-answer-engine-optimization", "schema-markup-explained-local-businesses"],
     "content": `
-<h1>How to Show Up in ChatGPT and Perplexity as a Local Business</h1>
+<h1>How to <a href="/blog/how-to-show-up-in-chatgpt-and-perplexity">Show Up in ChatGPT and Perplexity</a> as a Local Business</h1>
 
 <p>ChatGPT and Perplexity are now answering local business queries — "best HVAC company in Dearborn," "top-rated electrician Detroit" — and citing specific businesses by name. To be one of those businesses, you need structured content, consistent data, and a digital footprint that AI systems can confidently parse and recommend.</p>
 
@@ -5149,13 +5149,13 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>Understanding why some businesses get cited and others don't starts with understanding how these AI systems actually gather information. They don't have a local business database the way Google Maps does. They pull from what they've indexed, what they can crawl, and what's structured enough for them to cite confidently.</p>
 
 <h3>ChatGPT: Training Data Plus Real-Time Web Search</h3>
-<p>ChatGPT (especially with its web browsing capability enabled) pulls from two sources: its training data (a massive snapshot of the web) and, for current queries, real-time web search results. When a user asks "Who's the best HVAC contractor in Detroit?", ChatGPT may search the web in real time, parse review sites, directories, and business websites, and synthesize citations from what it finds. Businesses with strong review profiles on Yelp and Google, consistent directory citations, and structured website content are far more likely to appear in those synthesized results.</p>
+<p>ChatGPT (especially with its web browsing capability enabled) pulls from two sources: its training data (a massive snapshot of the web) and, for current queries, real-time web search results. When a user asks "Who's the best HVAC <a href="/industries/contractors">contractor in</a> Detroit?", ChatGPT may search the web in real time, parse review sites, directories, and business websites, and synthesize citations from what it finds. Businesses with strong review profiles on Yelp and Google, consistent directory citations, and structured website content are far more likely to appear in those synthesized results.</p>
 
 <h3>Perplexity: Real-Time Web Citations</h3>
 <p>Perplexity is a real-time search engine that always cites its sources. When it answers a local business query, it shows you exactly which URLs it pulled from. Perplexity heavily favors: pages with clear, structured answers, FAQ content that directly addresses the query, and high-authority directory listings (Yelp, Google, industry-specific directories). A business with a well-structured website and active directory presence is far more "citation-worthy" to Perplexity than one with a generic site and no structured content.</p>
 
 <h3>What Both Systems Value</h3>
-<p>Both ChatGPT and Perplexity favor sources that are: authoritative (linked to from other credible sources), structured (clear headings, FAQ format, schema markup), consistent (same business data across all platforms), and specific (detailed answers to specific queries rather than vague marketing copy). The businesses that show up in AI search are the ones that have already done the work of building a credible, structured, well-cited digital presence.</p>
+<p>Both ChatGPT and Perplexity favor sources that are: authoritative (linked to from other credible sources), structured (clear headings, FAQ format, <a href="/blog/what-is-schema-markup">schema markup</a>), consistent (same business data across all platforms), and specific (detailed answers to specific queries rather than vague marketing copy). The businesses that show up in AI search are the ones that have already done the work of building a credible, structured, well-cited digital presence.</p>
 
 <h2>What Makes a Business "Citation-Worthy" to AI Systems</h2>
 
@@ -5164,7 +5164,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <img src="/blog/chatgpt-perplexity-local-business-visibility-1.png" alt="Digital authority signals that make a business citation-worthy to AI systems" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Consistent NAP Across All Platforms</h3>
-<p>Name, Address, Phone — these must be identical everywhere your business appears online. Your Google Business Profile, website, Yelp, Facebook, Bing Places, industry directories, and any press mentions should all list the same business name, address format, and phone number. When AI systems crawl multiple sources about a business and find conflicting data — different phone numbers, inconsistent address formats, a name that appears differently on different platforms — they lose confidence. Conflicted data means fewer or no citations. Consistent data is the foundation of AI visibility.</p>
+<p>Name, Address, Phone — these must be identical everywhere your business appears online. Your <a href="/blog/google-business-profile-optimization">Google Business Profile</a>, website, Yelp, Facebook, Bing Places, industry directories, and any press mentions should all list the same business name, address format, and phone number. When AI systems crawl multiple sources about a business and find conflicting data — different phone numbers, inconsistent address formats, a name that appears differently on different platforms — they lose confidence. Conflicted data means fewer or no citations. Consistent data is the foundation of AI visibility.</p>
 
 <h3>Authority Signals: Reviews, Links, and Mentions</h3>
 <p>AI systems weigh authority just like traditional search engines do. A business with 100 Google reviews, 40 Yelp reviews, a BBB A+ rating, links from local press, and mentions in industry publications is far more citation-worthy than a business with a good website and no external validation. Build your authority footprint deliberately: collect reviews, earn press mentions, participate in community organizations that link to you, and maintain active profiles on every relevant directory.</p>
@@ -5198,7 +5198,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>There are approaches that seem like they should work for AI visibility but don't — or actively harm your chances.</p>
 
 <h3>Don't Keyword-Stuff for AI</h3>
-<p>Stuffing your pages with phrases like "best plumber in Detroit ChatGPT" or artificially forcing AI-targeted language into your content doesn't work. AI systems parse for genuinely useful, clear content — not for content that looks like it was written to game an algorithm. The tactics that work are the same ones that make your content genuinely more useful to human readers.</p>
+<p>Stuffing your pages with phrases like "best <a href="/industries/plumbers">plumber in</a> Detroit ChatGPT" or artificially forcing AI-targeted language into your content doesn't work. AI systems parse for genuinely useful, clear content — not for content that looks like it was written to game an algorithm. The tactics that work are the same ones that make your content genuinely more useful to human readers.</p>
 
 <h3>Don't Create AI-Generated Mass Content</h3>
 <p>Publishing dozens of thin, AI-generated location pages ("Plumber in [City X]", "Plumber in [City Y]") with no unique value may generate indexing for traditional search but creates noise for AI systems. AI citation rewards depth and specificity, not volume. One excellent service page that genuinely answers customer questions will earn more AI citations than ten thin pages that say the same thing with a different city name.</p>
@@ -5272,7 +5272,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     thumbnail: "/blog/aeo-2026-detroit-businesses-guide-thumb.png",
     relatedSlugs: ["what-is-aeo-answer-engine-optimization", "how-to-show-up-in-chatgpt-and-perplexity", "local-seo-detroit-small-businesses-2026", "chatgpt-perplexity-local-business-visibility"],
     content: `
-<p>Answer Engine Optimization (AEO) is the practice of structuring your website's content so that AI tools — ChatGPT, Perplexity, Google AI Overviews, and others — pull from your business when answering user questions. For Detroit businesses, AEO in 2026 isn't optional; it's where your next customer finds you before they ever click a link.</p>
+<p><a href="/blog/what-is-aeo-answer-engine-optimization">Answer Engine Optimization</a> (AEO) is the practice of structuring your website's content so that AI tools — ChatGPT, Perplexity, Google AI Overviews, and others — pull from your business when answering user questions. For Detroit businesses, AEO in 2026 isn't optional; it's where your next customer finds you before they ever click a link.</p>
 
 <img src="/blog/aeo-2026-detroit-businesses-guide-thumb.png" alt="AI search interface showing answer engine results" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -5282,7 +5282,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>AEO operates on a different logic. AI search tools don't return ten links and let you pick. They synthesize an answer and attribute it to a source — sometimes citing you by name, sometimes pulling your exact language, sometimes just incorporating your data without a visible link. The question shifts from "are you ranked #1?" to "are you trusted enough to be quoted?"</p>
 
-<p>The practical difference: SEO optimization gets you traffic when someone clicks. AEO optimization gets you cited when someone asks. In 2026, more people are asking than clicking. Google's own data shows that AI Overview adoption has accelerated significantly — and in markets like Detroit, where mobile search dominates, the person driving between Ferndale and Dearborn asking their phone "who's a good plumber near me" is getting an AI answer, not a list of blue links.</p>
+<p>The practical difference: SEO optimization gets you traffic when someone clicks. AEO optimization gets you cited when someone asks. In 2026, more people are asking than clicking. Google's own data shows that AI Overview adoption has accelerated significantly — and in markets like Detroit, where mobile search dominates, the person driving between Ferndale and Dearborn asking their phone "who's a good <a href="/industries/plumbers">plumber near</a> me" is getting an AI answer, not a list of blue links.</p>
 
 <p>You need both. But if you've been ignoring AEO entirely, you're already losing ground.</p>
 
@@ -5293,7 +5293,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>There's no published algorithm from OpenAI or Perplexity. But the pattern across thousands of AI citations is consistent enough to draw clear conclusions. AI engines cite local businesses based on three factors: authority, structure, and specificity.</p>
 
 <h3>Authority</h3>
-<p>AI systems pull from sources they've been trained on and from live web searches. Sources that are well-linked, well-reviewed, and consistent across directories carry more weight. For a Detroit HVAC contractor, this means your Google Business Profile, Yelp page, BBB listing, and HomeAdvisor profile all need to agree on your name, address, phone, and service area. Inconsistency across these sources lowers your citation probability — the AI treats consistency as a signal of legitimacy.</p>
+<p>AI systems pull from sources they've been trained on and from live web searches. Sources that are well-linked, well-reviewed, and consistent across directories carry more weight. For a Detroit HVAC contractor, this means your <a href="/blog/google-business-profile-optimization">Google Business Profile</a>, Yelp page, BBB listing, and HomeAdvisor profile all need to agree on your name, address, phone, and service area. Inconsistency across these sources lowers your citation probability — the AI treats consistency as a signal of legitimacy.</p>
 
 <h3>Structure</h3>
 <p>AI systems are trained to read structured content. FAQ sections, numbered lists, definition paragraphs, and header-organized content are easier for AI to parse and reproduce than walls of promotional text. A plumber in Detroit whose website has a page titled "How Much Does a Water Heater Replacement Cost in Detroit?" with a clear, direct answer is more likely to be cited than a plumber whose homepage says "We offer top-quality plumbing services at competitive prices."</p>
@@ -5309,10 +5309,10 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>A plumber in Detroit who wants AI citation needs to publish content answering specific local questions: "How much does it cost to replace a water heater in Detroit?" "What are the most common plumbing problems in older Detroit homes?" "Do I need a permit for plumbing work in Detroit?" These aren't just blog topics — they're the exact queries people ask ChatGPT and Perplexity. If your website has a clear, authoritative answer to each, and that answer is marked up with FAQ schema, you're in the pool of sources AI systems draw from.</p>
 
 <h3>Detroit Salon</h3>
-<p>A hair salon in Detroit's Midtown neighborhood benefits from AEO differently. People ask: "What salons in Detroit specialize in natural hair?" "How much does a balayage cost in Detroit?" "Where can I get a blowout near Wayne State?" The salon that publishes a service menu with prices, a clear specialty description, and a neighborhood-specific page (not just "Detroit") will earn AI citations over the salon with a beautiful Instagram feed and a contact form.</p>
+<p>A <a href="/industries/salons">hair salon in</a> Detroit's Midtown neighborhood benefits from AEO differently. People ask: "What salons in Detroit specialize in natural hair?" "How much does a balayage cost in Detroit?" "Where can I get a blowout near Wayne State?" The salon that publishes a service menu with prices, a clear specialty description, and a neighborhood-specific page (not just "Detroit") will earn AI citations over the salon with a beautiful Instagram feed and a contact form.</p>
 
 <h3>Detroit Restaurant</h3>
-<p>Restaurants benefit enormously from AEO because people constantly ask AI tools for dining recommendations. "Best Coney Island in Detroit" and "good restaurants near Little Caesars Arena" are AI queries that pull from Google Business Profile data, review aggregators, and structured website content. A restaurant with 200 Google reviews, a complete GBP profile with photos and hours, and a website that clearly names its cuisine type and neighborhood is going to get cited. The restaurant that hasn't touched its website since 2019 is invisible.</p>
+<p>Restaurants benefit enormously from AEO because people constantly ask AI tools for dining recommendations. "Best Coney Island in Detroit" and "good <a href="/industries/restaurants">restaurants near</a> Little Caesars Arena" are AI queries that pull from Google Business Profile data, review aggregators, and structured website content. A restaurant with 200 Google reviews, a complete GBP profile with photos and hours, and a website that clearly names its cuisine type and neighborhood is going to get cited. The restaurant that hasn't touched its website since 2019 is invisible.</p>
 
 <img src="/blog/aeo-2026-detroit-businesses-guide-2.png" alt="Business owner reviewing website content strategy on laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -5323,7 +5323,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>1. Add a Real FAQ Section</h3>
 <p>Not five generic questions about your business. Real questions your customers ask — including price questions, comparison questions, and how-to questions. A Detroit electrician should have questions like "How much does an electrical panel upgrade cost in Detroit?" and "Do I need permits for electrical work in Michigan?" These are the questions people ask AI. Answer them directly and completely on your site.</p>
 
-<h3>2. Implement FAQ Schema Markup</h3>
+<h3>2. Implement FAQ <a href="/blog/what-is-schema-markup">Schema Markup</a></h3>
 <p>Schema markup is structured data code that tells search engines and AI crawlers exactly what your content contains. FAQ schema wraps each question and answer pair in a format that machines can read without inferring. Without schema, an AI system has to guess that your paragraph is answering a question. With schema, it knows. This is one of the highest-ROI technical SEO changes a Detroit small business can make.</p>
 
 <h3>3. Create Specific Service Pages</h3>
@@ -5333,7 +5333,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>Your business name, address, phone number, and website URL need to be identical across your Google Business Profile, Yelp, Facebook, BBB, and every directory where you're listed. AI systems cross-reference multiple sources when determining authority. Inconsistency creates doubt. Consistency creates citation confidence.</p>
 
 <h3>5. Build Local Context Into Your Content</h3>
-<p>Every page should mention Detroit (or your specific neighborhood), your service area, and local context where it's natural. Not keyword stuffing — actual local relevance. A roofing contractor in Warren, Michigan should mention Warren, the surrounding communities they serve, local weather context (Michigan winters, ice dams, freeze-thaw cycles), and local permit considerations. This geographic specificity is what AI systems use to match your business to location-based queries.</p>
+<p>Every page should mention Detroit (or your specific neighborhood), your service area, and local context where it's natural. Not keyword stuffing — actual local relevance. A roofing <a href="/industries/contractors">contractor in</a> Warren, Michigan should mention Warren, the surrounding communities they serve, local weather context (Michigan winters, ice dams, freeze-thaw cycles), and local permit considerations. This geographic specificity is what AI systems use to match your business to location-based queries.</p>
 
 <img src="/blog/aeo-2026-detroit-businesses-guide-3.png" alt="Analytics dashboard showing search visibility data" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -5415,7 +5415,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <h2>The Revenue Math: A Detroit Plumber Example</h2>
 
-<p>Let's use a specific example to make this concrete. Consider a residential plumber in Detroit — let's call him Marcus — running a solo operation with one helper. Marcus has a cheap website that technically exists: it has his name, his phone number, and a services page that lists what he does. It was built for $600 two years ago.</p>
+<p>Let's use a specific example to make this concrete. Consider a residential <a href="/industries/plumbers">plumber in</a> Detroit — let's call him Marcus — running a solo operation with one helper. Marcus has a cheap website that technically exists: it has his name, his phone number, and a services page that lists what he does. It was built for $600 two years ago.</p>
 
 <p>Marcus's website gets roughly 300 visitors per month. That's not a lot, but it's enough to generate business — if the site converts. Here's the problem: his site loads in 5.8 seconds on mobile. Google recommends under 2.5 seconds. His phone number isn't clickable on mobile (it's in an image, not text). His "request a quote" form goes to an email address he checks once a day. He has no Google reviews displayed, no trust signals, and no FAQ content that might rank for voice or AI search.</p>
 
@@ -5446,7 +5446,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <img src="/blog/500-dollar-website-lost-revenue-2.png" alt="Page speed comparison showing performance difference between website types" style="width:100%;border-radius:12px;margin:32px 0;" />
 
-<p>The ranking difference isn't just a number on a dashboard. In the Detroit market, for local searches like "emergency plumber Detroit" or "hair salon near me Detroit," ranking positions 1–3 capture roughly 55–60% of clicks. Positions 4–10 share the remaining 15–20%. Position 11+ might as well not exist for most users.</p>
+<p>The ranking difference isn't just a number on a dashboard. In the Detroit market, for local searches like "emergency plumber Detroit" or "<a href="/industries/salons">hair salon near</a> me Detroit," ranking positions 1–3 capture roughly 55–60% of clicks. Positions 4–10 share the remaining 15–20%. Position 11+ might as well not exist for most users.</p>
 
 <p>A slow site that ranks on page 2 or 3 for your most valuable keywords is essentially invisible. The $500 website isn't just underperforming on conversion — it's undermining your ability to rank in the first place, which means fewer people ever arrive to potentially convert.</p>
 
@@ -5462,7 +5462,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>Image optimization</strong> — Stock photo sites and cheap builds often use full-resolution images without compression or modern formats (WebP, AVIF). A single unoptimized hero image can add 2–3 seconds to load time, which correlates directly with bounce rate increases.</p>
 
-<p><strong>Technical SEO</strong> — Schema markup, canonical URLs, proper heading structure, and meta tags are the technical foundation of searchability. Template sites rarely have these configured correctly out of the box. Without them, your site is ranking with one hand tied behind its back.</p>
+<p><strong>Technical SEO</strong> — <a href="/blog/what-is-schema-markup">Schema markup</a>, canonical URLs, proper heading structure, and meta tags are the technical foundation of searchability. Template sites rarely have these configured correctly out of the box. Without them, your site is ranking with one hand tied behind its back.</p>
 
 <img src="/blog/500-dollar-website-lost-revenue-3.png" alt="Professional web design consultation showing quality investment" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -5489,7 +5489,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>A clear, mobile-optimized path from landing to contacting you. That means: your phone number visible and clickable at the top of the page on mobile, a prominent CTA button above the fold, social proof (reviews) near that CTA, fast load times so visitors don't leave before the page finishes loading, and a form or chat option for people who won't call. Everything else — design, copy, images — supports this path. Without it, nothing else matters.</p>
 
 <h3>How long does it take a new professional website to start generating more leads?</h3>
-<p>For existing businesses with established Google Business Profiles and some organic search presence, improvements often show within 30–60 days of launch. Technical improvements (speed, schema, mobile optimization) benefit you immediately after indexing. Content-driven improvements (new service pages, FAQ content, local landing pages) take longer — typically 60–90 days to accumulate ranking signals. The full effect of a professional website is usually visible by month three to six.</p>
+<p>For existing businesses with established <a href="/blog/google-business-profile-optimization">Google Business Profile</a>s and some organic search presence, improvements often show within 30–60 days of launch. Technical improvements (speed, schema, mobile optimization) benefit you immediately after indexing. Content-driven improvements (new service pages, FAQ content, local landing pages) take longer — typically 60–90 days to accumulate ranking signals. The full effect of a professional website is usually visible by month three to six.</p>
 
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Stop Paying for a Website That Isn't Working</strong>
@@ -5508,7 +5508,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     thumbnail: "/blog/ai-chatbots-customer-service-small-business-thumb.png",
     relatedSlugs: ["what-is-an-ai-chatbot-for-business", "how-ai-is-changing-local-business-marketing", "aeo-2026-detroit-businesses-guide", "website-design-service-businesses-what-converts"],
     content: `
-<p>AI chatbots for small businesses in 2026 are nothing like the clunky, script-following bots of five years ago. They're trained on your specific business — your services, your prices, your hours, your FAQs — and they respond the way a knowledgeable employee would, around the clock, without a salary. For small businesses that lose leads after hours, they've become a serious competitive advantage.</p>
+<p><a href="/blog/what-is-an-ai-chatbot-for-business">AI chatbots for</a> small businesses in 2026 are nothing like the clunky, script-following bots of five years ago. They're trained on your specific business — your services, your prices, your hours, your FAQs — and they respond the way a knowledgeable employee would, around the clock, without a salary. For small businesses that lose leads after hours, they've become a serious competitive advantage.</p>
 
 <img src="/blog/ai-chatbots-customer-service-small-business-thumb.png" alt="AI chatbot interface on small business website providing customer service" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -5573,7 +5573,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p><strong>Service businesses with high after-hours inquiry rates</strong> — HVAC, plumbing, electrical, appliance repair, locksmith. These industries have emergency demand that doesn't respect business hours. An after-hours lead capture tool is a direct revenue driver.</p>
 
-<p><strong>Appointment-based businesses</strong> — Salons, med spas, auto shops, dental practices, contractors who schedule project consultations. The appointment booking automation is the primary value driver here.</p>
+<p><strong>Appointment-based businesses</strong> — Salons, med spas, auto shops, <a href="/industries/dentists">dental practices</a>, contractors who schedule project consultations. The appointment booking automation is the primary value driver here.</p>
 
 <p><strong>Businesses with high FAQ volume</strong> — Any business where customers ask the same questions repeatedly and a staff member handles those repetitive inquiries. Legal offices, real estate agencies, service businesses with complex pricing structures.</p>
 
@@ -5672,7 +5672,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <h2>Why Mobile Is Non-Negotiable</h2>
 
-<p>More than 60% of local service searches happen on mobile devices. For specific query types — "plumber near me," "emergency HVAC," "open hair salon" — mobile share is even higher, often 75–80%. Your website's mobile experience isn't a secondary consideration; it is the primary experience for most of your visitors.</p>
+<p>More than 60% of local service searches happen on mobile devices. For specific query types — "<a href="/industries/plumbers">plumber near</a> me," "emergency HVAC," "open hair salon" — mobile share is even higher, often 75–80%. Your website's mobile experience isn't a secondary consideration; it is the primary experience for most of your visitors.</p>
 
 <p>Common mobile failures on service business websites:</p>
 
@@ -5788,15 +5788,15 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     thumbnail: "/blog/google-business-profile-2026-complete-guide-thumb.png",
     relatedSlugs: ["google-business-profile-optimization", "how-to-get-more-google-reviews", "local-seo-detroit-small-businesses-2026", "what-is-schema-markup"],
     content: `
-<p>Your Google Business Profile (GBP) is the single most important local SEO asset you own in 2026. It drives map pack rankings, powers Google AI Overviews for local queries, and is the first thing most people see when they search for your business. A fully optimized GBP is worth more than most businesses realize — and most businesses haven't finished setting it up.</p>
+<p>Your <a href="/blog/google-business-profile-optimization">Google Business Profile</a> (GBP) is the single most important local SEO asset you own in 2026. It drives map pack rankings, powers Google AI Overviews for local queries, and is the first thing most people see when they search for your business. A fully optimized GBP is worth more than most businesses realize — and most businesses haven't finished setting it up.</p>
 
 <img src="/blog/google-business-profile-2026-complete-guide-thumb.png" alt="Google Business Profile dashboard showing optimized local business listing" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why GBP Matters More in 2026</h2>
 
-<p>Google Business Profile has always been important for local search. In 2026, it's become even more critical for a specific reason: Google's AI Overviews pull heavily from GBP data. When someone asks Google "best plumber in Southfield" or "hair salons open now near Detroit," Google's AI-generated answer draws from GBP information — your category, your hours, your rating, your photos, and the keywords in your business description.</p>
+<p>Google Business Profile has always been important for local search. In 2026, it's become even more critical for a specific reason: Google's AI Overviews pull heavily from GBP data. When someone asks Google "best <a href="/industries/plumbers">plumber in</a> Southfield" or "hair salons open now near Detroit," Google's AI-generated answer draws from GBP information — your category, your hours, your rating, your photos, and the keywords in your business description.</p>
 
-<p>A business with a complete, accurate, regularly updated GBP profile is dramatically more likely to appear in AI Overviews than one with an incomplete or stale profile. This isn't speculation — it's the consistent pattern across local SEO analysis in 2025 and early 2026. AI Overviews for local queries use GBP as a primary data source, which means GBP optimization is now simultaneously local SEO optimization and AEO.</p>
+<p>A business with a complete, accurate, regularly updated GBP profile is dramatically more likely to appear in AI Overviews than one with an incomplete or stale profile. This isn't speculation — it's the consistent pattern across local SEO analysis in 2025 and early 2026. AI Overviews for local queries use GBP as a primary data source, which means GBP optimization is now simultaneously local SEO optimization and <a href="/blog/what-is-aeo-answer-engine-optimization">AEO</a>.</p>
 
 <p>Beyond AI Overviews, GBP drives the map pack — the three business listings that appear above the organic results for local searches. Studies consistently show that map pack listings receive 40–60% of the clicks for local queries. If you're not in the map pack, you're competing for the remaining 40–60% with every other business in your city. If you are in the map pack, you have a significant traffic advantage.</p>
 

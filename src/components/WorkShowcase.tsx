@@ -33,7 +33,7 @@ function LandscapingMock() {
         </div>
         {/* Right — luxury image area */}
         <div style={{ flex: '1 1 48%', position: 'relative', overflow: 'hidden' }} className="mk-land-img">
-          <img src="/images/prestige-landscapes.png" alt="Prestige Landscapes" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+          <img src="/images/prestige-landscapes.png" alt="Prestige Landscapes" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '60% 40%' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(12,11,9,0.3) 0%, transparent 50%)' }} />
         </div>
       </div>
@@ -118,19 +118,17 @@ function AutoRepairMock() {
           <span className="mk-auto-book" style={{ fontSize: '5.5px', fontWeight: 700, padding: '3px 8px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Reserve</span>
         </div>
       </div>
-      {/* Hero photo strip */}
-      <div style={{ height: '52px', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
-        <img src="/images/apex-automotive.png" alt="Apex Automotive" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.6) 100%)' }} />
-      </div>
-      {/* Hero with cinematic gradient */}
-      <div className="mk-auto-hero" style={{ padding: '10px 14px 10px', position: 'relative' }}>
-        <div style={{ fontSize: '5px', fontWeight: 600, letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '6px' }} className="mk-auto-eyebrow">Family Owned · Since 1998 · ASE Master Certified</div>
-        <div style={{ fontSize: '16px', fontWeight: 200, lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '5px' }} className="mk-auto-heading">Precision<br/><span style={{ fontWeight: 800 }}>Automotive Care</span></div>
-        <div style={{ fontSize: '6.5px', lineHeight: 1.6, marginBottom: '10px' }} className="mk-auto-sub">Expert diagnostics and repair with transparent pricing. No surprises.</div>
-        <div style={{ display: 'flex', gap: '5px' }}>
-          <span className="mk-auto-cta" style={{ fontSize: '6px', fontWeight: 700, padding: '4px 12px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Book Service</span>
-          <span className="mk-auto-cta2" style={{ fontSize: '6px', fontWeight: 500, padding: '4px 12px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Our Process</span>
+      {/* Full-bleed hero with photo background */}
+      <div className="mk-auto-hero" style={{ position: 'relative', overflow: 'hidden', padding: '0', flexShrink: 0, height: '110px' }}>
+        <img src="/images/apex-automotive.png" alt="Apex Automotive" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 40%' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,10,10,0.45) 0%, rgba(10,10,10,0.82) 100%)' }} />
+        <div style={{ position: 'relative', zIndex: 1, padding: '12px 14px 12px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+          <div style={{ fontSize: '5px', fontWeight: 600, letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '4px' }} className="mk-auto-eyebrow">Family Owned · Since 1998 · ASE Master Certified</div>
+          <div style={{ fontSize: '16px', fontWeight: 200, lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '5px' }} className="mk-auto-heading">Precision<br/><span style={{ fontWeight: 800 }}>Automotive Care</span></div>
+          <div style={{ display: 'flex', gap: '5px' }}>
+            <span className="mk-auto-cta" style={{ fontSize: '6px', fontWeight: 700, padding: '4px 12px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Book Service</span>
+            <span className="mk-auto-cta2" style={{ fontSize: '6px', fontWeight: 500, padding: '4px 12px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Our Process</span>
+          </div>
         </div>
       </div>
       {/* Glass service cards */}
@@ -225,19 +223,18 @@ function LawnCareMock() {
           {['Plans', 'Process', 'Reviews'].map(t => <span key={t} style={{ fontSize: '5.5px', letterSpacing: '0.12em', textTransform: 'uppercase' }} className="mk-lawn-link">{t}</span>)}
         </div>
       </div>
-      {/* Photo strip */}
-      <div style={{ height: '50px', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
-        <img src="/images/verde-lawn.png" alt="Verde Lawn" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(8,20,8,0.1) 0%, rgba(8,20,8,0.5) 100%)' }} />
-      </div>
-      {/* Grand hero — oversized type */}
-      <div className="mk-lawn-hero" style={{ padding: '10px 14px 8px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      {/* Full-bleed hero with lawn photo background */}
+      <div className="mk-lawn-hero" style={{ position: 'relative', overflow: 'hidden', padding: '0', flexShrink: 0, height: '118px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <img src="/images/verde-lawn.png" alt="Verde Lawn" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 55%' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(8,20,8,0.3) 0%, rgba(8,20,8,0.75) 100%)' }} />
+        <div style={{ position: 'relative', zIndex: 1, padding: '14px 14px 12px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
         <div style={{ fontSize: '5px', fontWeight: 500, letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '6px' }} className="mk-lawn-eyebrow">Metro Detroit Lawn Atelier</div>
         <div style={{ fontSize: '20px', fontWeight: 200, lineHeight: 0.9, letterSpacing: '-0.03em', marginBottom: '3px' }} className="mk-lawn-heading">your lawn,</div>
         <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 0.9, letterSpacing: '-0.03em', fontStyle: 'italic', marginBottom: '8px' }} className="mk-lawn-heading">elevated.</div>
         <div className="mk-lawn-line" style={{ width: '24px', height: '1px', marginBottom: '8px' }} />
         <div style={{ fontSize: '6.5px', lineHeight: 1.6, maxWidth: '180px', marginBottom: '10px' }} className="mk-lawn-sub">Curated lawn care plans for homes that demand perfection. Cancel anytime.</div>
         <span className="mk-lawn-cta" style={{ fontSize: '5.5px', fontWeight: 600, padding: '4px 16px', letterSpacing: '0.18em', textTransform: 'uppercase', cursor: 'default' }}>Begin Your Plan</span>
+        </div>
       </div>
       {/* Elegant pricing row */}
       <div style={{ padding: '8px 14px', flex: 1 }} className="mk-lawn-plans">
@@ -332,12 +329,16 @@ function HairExtensionsMock() {
           <span className="mk-hair-cart" style={{ fontSize: '5.5px', fontWeight: 600, letterSpacing: '0.08em', cursor: 'default' }}>Bag (0)</span>
         </div>
       </div>
-      {/* Hero */}
-      <div className="mk-hair-hero" style={{ padding: '14px 14px 10px', textAlign: 'center' }}>
+      {/* Hero with photo backdrop */}
+      <div className="mk-hair-hero" style={{ padding: '0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <img src="/images/crownd-hair.png" alt="Crown'd Hair" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(20,14,20,0.25) 0%, rgba(20,14,20,0.7) 100%)' }} />
+        <div style={{ position: 'relative', zIndex: 1, padding: '14px 14px 10px' }}>
         <div style={{ fontSize: '5px', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '5px', fontWeight: 500 }} className="mk-hair-eyebrow">Premium Vietnamese Hair</div>
         <div style={{ fontSize: '15px', fontWeight: 200, lineHeight: 1.05, marginBottom: '3px' }} className="mk-hair-heading">Your Crown,</div>
         <div style={{ fontSize: '15px', fontWeight: 700, lineHeight: 1.05, fontStyle: 'italic', marginBottom: '8px' }} className="mk-hair-heading">Your Rules</div>
         <span className="mk-hair-shop" style={{ fontSize: '5.5px', fontWeight: 600, padding: '4px 16px', letterSpacing: '0.18em', textTransform: 'uppercase', cursor: 'default', display: 'inline-block' }}>Shop Collection</span>
+        </div>
       </div>
       {/* Product grid */}
       <div style={{ padding: '6px 12px 6px', flex: 1 }}>
@@ -350,8 +351,9 @@ function HairExtensionsMock() {
           ].map(s => (
             <div key={s.n} className="mk-hair-product" style={{ borderRadius: '4px', overflow: 'hidden', textAlign: 'center' }}>
               <div className="mk-hair-prod-img" style={{ height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
-                <img src="/images/crownd-hair.png" alt="Crown'd Hair" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', opacity: 0.85 }} />
-                {s.tag && <span className="mk-hair-tag" style={{ position: 'absolute', top: '2px', left: '2px', fontSize: '3.5px', fontWeight: 700, padding: '1px 4px', borderRadius: '1px', letterSpacing: '0.08em', textTransform: 'uppercase', zIndex: 1 }}>{s.tag}</span>}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(200,120,170,0.12) 0%, rgba(140,60,120,0.18) 100%)' }} />
+                <span style={{ fontSize: '9px', opacity: 0.4, position: 'relative', zIndex: 1 }}>✦</span>
+                {s.tag && <span className="mk-hair-tag" style={{ position: 'absolute', top: '2px', left: '2px', fontSize: '3.5px', fontWeight: 700, padding: '1px 4px', borderRadius: '1px', letterSpacing: '0.08em', textTransform: 'uppercase', zIndex: 2 }}>{s.tag}</span>}
               </div>
               <div style={{ padding: '3px 2px 4px' }}>
                 <div style={{ fontSize: '5.5px', fontWeight: 500, letterSpacing: '0.04em' }} className="mk-hair-prod-name">{s.n}</div>

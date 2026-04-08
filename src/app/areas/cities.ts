@@ -329,6 +329,139 @@ export const cities: CityData[] = [
     ],
     nearby: ['plymouth', 'canton', 'northville'],
   },
+  {
+    name: 'Downtown Detroit',
+    slug: 'downtown-detroit',
+    businessCount: 1800,
+    paragraphs: [
+      "Downtown Detroit is the heart of a city in full revival — a dense concentration of restaurants, bars, boutiques, professional services, and tech companies anchored by Campus Martius, Bedrock developments, and the revitalized riverfront. Foot traffic is surging, but discovery still happens on Google before customers ever leave home.",
+      "In a market as competitive and visible as Downtown Detroit, your digital presence has to match the ambition of the city itself. Caliber Web Studio builds Downtown businesses websites that rank for high-intent local searches, load instantly on mobile, and convert curious visitors into paying customers.",
+      "Whether you're in the Bedrock portfolio, along Woodward, or tucked into a restored building off Monroe Street, we'll make sure customers find you online before they find your competitor.",
+    ],
+    nearby: ['midtown-detroit', 'corktown', 'eastern-market', 'new-center'],
+  },
+  {
+    name: 'Midtown Detroit',
+    slug: 'midtown-detroit',
+    businessCount: 900,
+    paragraphs: [
+      "Midtown Detroit is the city's cultural and creative engine — home to Wayne State University, the Detroit Institute of Arts, the Detroit Medical Center, and a thriving strip of independent restaurants, galleries, and boutiques along Woodward and Second Avenue. The customer here is younger, more digitally native, and deeply brand-conscious.",
+      "Caliber Web Studio builds Midtown businesses digital presences that match the neighborhood's energy — fast, visually compelling websites that rank on Google and feel as intentional as the spaces they represent. From New Center to the Cultural Center corridor, we know this market and we build for it.",
+    ],
+    nearby: ['downtown-detroit', 'new-center', 'corktown', 'detroit'],
+  },
+  {
+    name: 'Corktown',
+    slug: 'corktown',
+    businessCount: 400,
+    paragraphs: [
+      "Corktown is Detroit's oldest and most storied neighborhood — a tight stretch of Michigan Avenue packed with acclaimed restaurants, bars, boutiques, and creative businesses that draw visitors from across the region and beyond. Ford Motor Company's investment in the Michigan Central Station has accelerated the neighborhood's transformation into a destination.",
+      "Businesses in Corktown compete on identity, experience, and reputation. Your website isn't just a directory listing — it's your first impression for every customer who discovers you through Google, Instagram, or a friend's recommendation. Caliber Web Studio builds Corktown businesses the digital foundation that matches their real-world quality.",
+    ],
+    nearby: ['downtown-detroit', 'mexicantown', 'southwest-detroit', 'midtown-detroit'],
+  },
+  {
+    name: 'Mexicantown',
+    slug: 'mexicantown',
+    businessCount: 350,
+    paragraphs: [
+      "Mexicantown is one of Detroit's most culturally rich neighborhoods — a vibrant community along Vernor Highway and Southwest Detroit that's home to authentic Mexican restaurants, bakeries, quinceañera shops, and a growing number of Latino-owned service businesses. The neighborhood draws visitors from across Metro Detroit who know quality when they find it.",
+      "Caliber Web Studio builds Mexicantown businesses websites that reach both local regulars and the thousands of new customers discovering the neighborhood through Google searches. We build in English and structure for local SEO — making sure your business is the first result when someone searches for what you offer near Southwest Detroit.",
+    ],
+    nearby: ['southwest-detroit', 'corktown', 'detroit', 'dearborn'],
+  },
+  {
+    name: 'Southwest Detroit',
+    slug: 'southwest-detroit',
+    businessCount: 600,
+    paragraphs: [
+      "Southwest Detroit is a dense, working-class community with deep roots and a growing entrepreneurial energy. From the Vernor Highway corridor to the industrial areas near the Ambassador Bridge, this neighborhood is home to restaurants, auto services, contractors, and small retailers serving a loyal local customer base.",
+      "In a neighborhood where word of mouth has historically driven business, digital visibility is the next frontier. Caliber Web Studio helps Southwest Detroit businesses get found on Google, build their online reputation, and capture new customers who are searching for exactly what they offer — but don't know you exist yet.",
+    ],
+    nearby: ['mexicantown', 'corktown', 'dearborn', 'detroit'],
+  },
+  {
+    name: 'Eastern Market',
+    slug: 'eastern-market',
+    businessCount: 500,
+    paragraphs: [
+      "Eastern Market is one of America's largest historic public markets and one of Detroit's most dynamic business districts — a hub for food businesses, wholesale suppliers, artists, breweries, restaurants, and specialty retailers that draws over 45,000 visitors on Saturday market days. The exposure is enormous, but online visibility is what drives customers the other six days of the week.",
+      "Caliber Web Studio builds Eastern Market businesses the digital infrastructure to capture customers year-round — not just on market Saturdays. Professional websites, Google ranking, and AI-powered lead capture that turns foot-traffic visitors into loyal online customers who keep coming back.",
+    ],
+    nearby: ['downtown-detroit', 'midtown-detroit', 'detroit', 'new-center'],
+  },
+  {
+    name: 'New Center',
+    slug: 'new-center',
+    businessCount: 450,
+    paragraphs: [
+      "New Center is Detroit's historic second downtown — an architecturally significant district anchored by the Fisher Building, Henry Ford Health, and a growing corridor of restaurants, professional services, and creative businesses along West Grand Boulevard. It sits at the crossroads of Midtown, Highland Park, and North End, serving a diverse mix of healthcare workers, residents, and visitors.",
+      "Caliber Web Studio builds New Center businesses professional websites that rank for local searches and reflect the district's distinct character — historic gravitas with a modern edge. If you're competing for attention in this corridor, your digital presence needs to be as strong as your physical one.",
+    ],
+    nearby: ['midtown-detroit', 'downtown-detroit', 'detroit', 'eastern-market'],
+  },
+  {
+    name: 'Palmer Park',
+    slug: 'palmer-park',
+    businessCount: 280,
+    paragraphs: [
+      "Palmer Park is a beautiful northwest Detroit neighborhood anchored by its namesake park and characterized by striking 1920s-era apartment buildings, tree-lined streets, and a tight-knit community of residents and small business owners. The neighborhood's business base spans restaurants, personal services, and professional practices serving a loyal and growing residential population.",
+      "Caliber Web Studio helps Palmer Park businesses get found by the thousands of nearby residents who search Google before spending locally — turning neighborhood loyalty into trackable, consistent revenue through professional websites and local SEO.",
+    ],
+    nearby: ['detroit', 'new-center', 'midtown-detroit', 'farmington-hills'],
+  },
+  {
+    name: 'Indian Village',
+    slug: 'indian-village',
+    businessCount: 180,
+    paragraphs: [
+      "Indian Village is one of Detroit's most prestigious historic neighborhoods — a district of stunning early 20th-century mansions along Seminole, Iroquois, and Burns Streets that attracts affluent residents and visitors who appreciate historic architecture and neighborhood character. Service businesses and professionals operating in this area serve some of Detroit's most discerning clients.",
+      "Caliber Web Studio builds websites for Indian Village-area businesses that match the neighborhood's premium character — polished, fast, and engineered to rank for the high-value searches that matter most in this part of the city.",
+    ],
+    nearby: ['detroit', 'grosse-pointe', 'eastern-market', 'downtown-detroit'],
+  },
+  {
+    name: 'Grosse Pointe',
+    slug: 'grosse-pointe',
+    businessCount: 800,
+    paragraphs: [
+      "Grosse Pointe — encompassing Grosse Pointe Park, City, Farms, Woods, and Shores — is one of Michigan's most affluent communities, a string of lakefront cities bordering Detroit where expectations for quality are uniformly high. Residents here have the means to pay for premium services and the sophistication to research them thoroughly before picking up the phone.",
+      "In Grosse Pointe, a subpar website is a direct credibility hit. Caliber Web Studio builds Grosse Pointe businesses websites that command the trust their clientele demands — custom-designed, blazing fast, and built to rank for the premium searches that drive high-value customers in this market.",
+      "From Kercheval Avenue boutiques to medical practices on Mack Avenue, we build digital presences that reflect Grosse Pointe's standard of excellence.",
+    ],
+    nearby: ['detroit', 'indian-village', 'eastpointe', 'harper-woods'],
+  },
+  {
+    name: 'Flint',
+    slug: 'flint',
+    businessCount: 1100,
+    paragraphs: [
+      "Flint is Michigan's fourth-largest city and a community with deep resilience — a city rebuilding its economy through small business investment, healthcare, manufacturing, and a growing entrepreneurial ecosystem. From the Flint Farmers' Market corridor to neighborhoods across Genesee County, local businesses here are competing for customers who increasingly rely on Google to decide who to call.",
+      "Caliber Web Studio extends its Michigan expertise to Flint — building professional websites, local SEO systems, and AI-powered growth tools for businesses competing in this market. Fast, modern, and built to rank for Flint-specific searches that drive real local customers.",
+      "Whether you're on Saginaw Street, serving the University of Michigan-Flint community, or operating across Genesee County, we'll make sure customers can find you — and choose you.",
+    ],
+    nearby: ['grand-rapids', 'detroit', 'ann-arbor'],
+  },
+  {
+    name: 'Toledo',
+    slug: 'toledo',
+    businessCount: 2200,
+    paragraphs: [
+      "Toledo, Ohio — just 60 miles south of Detroit — is a major commercial hub with a diverse economy spanning manufacturing, healthcare, retail, and professional services. The Glass City's business community is competitive, and customers here are as likely to discover a business through Google as through any other channel.",
+      "Caliber Web Studio serves Toledo-area businesses with the same AI-powered website and local SEO systems that dominate the Metro Detroit market. Professional websites built on Next.js, local SEO built for Ohio search dynamics, and AI chatbots and review automation that work as hard as you do.",
+    ],
+    nearby: ['detroit', 'ann-arbor', 'flint'],
+  },
+  {
+    name: 'Grand Rapids',
+    slug: 'grand-rapids',
+    businessCount: 2800,
+    paragraphs: [
+      "Grand Rapids is Michigan's second-largest city and one of the Midwest's most dynamic business environments — a diverse economy anchored by furniture manufacturing, healthcare, higher education, and a thriving craft beverage and food scene. The city has been named one of America's best cities for small business multiple times, and competition for local customers is fierce.",
+      "Caliber Web Studio brings its Metro Detroit expertise west to Grand Rapids — building professional websites, local SEO infrastructure, and AI-powered growth systems for businesses competing in this market. Whether you're in the downtown arts district, on 28th Street, or serving the broader Kent County area, we build digital presences that rank and convert.",
+    ],
+    nearby: ['detroit', 'ann-arbor', 'flint'],
+  },
 ];
 
 export function getCityBySlug(slug: string): CityData | undefined {

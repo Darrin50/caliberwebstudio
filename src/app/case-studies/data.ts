@@ -195,9 +195,9 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Plumbing / Home Services',
     tagline: 'Zero web presence to page-one Google rankings.',
     accentColor: '#E8631A',
-    heroImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80',
-    heroAlt: 'Metro Plumbing demo site preview',
-    cardImg: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop&q=80',
+    heroImg: '/images/metro-plumbing-hero.png',
+    heroAlt: 'Professional plumber ready to serve Detroit homeowners',
+    cardImg: '/images/metro-plumbing-hero.png',
     cardDesc:
       'Zero web presence to page-one Google rankings. 15+ new service calls per week from the website alone.',
     resultStat: '15+',

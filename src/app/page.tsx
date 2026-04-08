@@ -135,17 +135,25 @@ export default function Home() {
                     key={pain}
                     style={{ padding: '20px 24px', background: 'var(--bg2)', display: 'flex', alignItems: 'center', gap: '14px' }}
                   >
-                    <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: '#ef4444', flexShrink: 0 }}>✕</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}>
+                      <path d="M4 4 L16 16" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round" style={{ filter: 'url(#brush-x)' }} />
+                      <path d="M16 4 L4 16" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round" style={{ filter: 'url(#brush-x)' }} />
+                      <defs><filter id="brush-x"><feTurbulence type="turbulence" baseFrequency="0.35" numOctaves="3" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" /></filter></defs>
+                    </svg>
                     <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: 'var(--chrome)', lineHeight: 1.4 }}>{pain}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Arrow */}
-            <div className="ps-arrow" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center', paddingTop: '38px' }}>
+            {/* Arrows — one per row, vertically aligned to each row */}
+            <div className="ps-arrow" style={{ display: 'flex', flexDirection: 'column', gap: '1px', paddingTop: '28px' }}>
               {[0, 1, 2].map((i) => (
-                <div key={i} style={{ color: BLUE, fontSize: '18px', opacity: 0.5 }}>→</div>
+                <div key={i} style={{ height: '61px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <svg width="24" height="14" viewBox="0 0 24 14" fill="none" style={{ opacity: 0.45 }}>
+                    <path d="M0 7h20m0 0l-5-5m5 5l-5 5" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
               ))}
             </div>
 
@@ -162,7 +170,10 @@ export default function Home() {
                     key={fix}
                     style={{ padding: '20px 24px', background: 'rgba(37,99,235,0.1)', display: 'flex', alignItems: 'center', gap: '14px' }}
                   >
-                    <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(37,99,235,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: BLUE, flexShrink: 0 }}>✓</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}>
+                      <path d="M4 10.5 L8.5 15 L16 5" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#brush-ck)' }} />
+                      <defs><filter id="brush-ck"><feTurbulence type="turbulence" baseFrequency="0.35" numOctaves="3" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" /></filter></defs>
+                    </svg>
                     <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: 'var(--silver)', fontWeight: 500, lineHeight: 1.4 }}>{fix}</span>
                   </div>
                 ))}
@@ -173,7 +184,7 @@ export default function Home() {
         </div>
 
         <style>{`
-          .ps-grid { display: grid; grid-template-columns: 1fr 48px 1fr; gap: 0; align-items: start; }
+          .ps-grid { display: grid; grid-template-columns: 1fr 48px 1fr; gap: 0; align-items: stretch; }
           @media (max-width: 700px) {
             .ps-grid { grid-template-columns: 1fr; gap: clamp(28px,5vw,40px); }
             .ps-arrow { display: none !important; }

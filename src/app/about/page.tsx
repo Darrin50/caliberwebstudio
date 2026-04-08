@@ -84,7 +84,9 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story */}
-        <section style={{
+        <section
+          data-dark-section
+          style={{
           padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 80px)',
           borderBottom: '1px solid var(--border)',
           background: '#111827',
@@ -134,7 +136,7 @@ export default function AboutPage() {
             <div className="values-grid">
               {values.map((v, i) => (
                 <ScrollReveal key={v.label} delay={i * 80}>
-                  <div style={{
+                  <div className="values-card" style={{
                     background: '#111827',
                     border: '1px solid var(--border)',
                     borderRadius: '4px',
@@ -179,7 +181,7 @@ export default function AboutPage() {
         </section>
 
         {/* The Numbers */}
-        <section style={{ borderBottom: '1px solid var(--border)', background: '#0a0a0a' }}>
+        <section data-dark-section style={{ borderBottom: '1px solid var(--border)', background: '#0a0a0a' }}>
           <SocialProof />
         </section>
 

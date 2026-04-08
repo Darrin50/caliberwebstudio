@@ -527,13 +527,13 @@ input:focus, textarea:focus {
 [data-theme="light"] main h5,
 [data-theme="light"] main h6 { color: #0e1020 !important; }
 
-/* Dark sections always keep white headings — overrides light mode rule above */
-[data-theme="light"] main [data-dark-section] h1,
-[data-theme="light"] main [data-dark-section] h2,
-[data-theme="light"] main [data-dark-section] h3,
-[data-theme="light"] main [data-dark-section] h4,
-[data-theme="light"] main [data-dark-section] h5,
-[data-theme="light"] main [data-dark-section] h6 { color: #ffffff !important; }
+/* Hero keeps white headings in light mode; other dark sections get dark headings */
+[data-theme="light"] main #hero h1,
+[data-theme="light"] main #hero h2,
+[data-theme="light"] main #hero h3,
+[data-theme="light"] main #hero h4,
+[data-theme="light"] main #hero h5,
+[data-theme="light"] main #hero h6 { color: #ffffff !important; }
 [data-theme="light"] [data-dark-section] .sec-label { color: #1e3d8f !important; }
 [data-theme="light"] [data-dark-section] .sec-label::before { background: #1e3d8f !important; }
 
@@ -910,5 +910,71 @@ html[data-theme="light"] .addon-card:hover {
 
 /* Section border-top separators — subtle */
 [data-theme="light"] main section {
+  border-color: rgba(0,0,0,0.05) !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   LIGHT MODE — gray-only: no black section backgrounds
+   ═══════════════════════════════════════════════════════ */
+
+/* All [data-dark-section] except #hero → light gray in light mode */
+[data-theme="light"] [data-dark-section]:not(#hero) {
+  background: var(--bg3) !important;
+  border-top-color: rgba(0,0,0,0.06) !important;
+  border-bottom-color: rgba(0,0,0,0.06) !important;
+}
+
+/* Headings in non-hero dark sections → dark in light mode (overrides existing white-heading rule) */
+[data-theme="light"] [data-dark-section]:not(#hero) h1,
+[data-theme="light"] [data-dark-section]:not(#hero) h2,
+[data-theme="light"] [data-dark-section]:not(#hero) h3,
+[data-theme="light"] [data-dark-section]:not(#hero) h4,
+[data-theme="light"] [data-dark-section]:not(#hero) h5,
+[data-theme="light"] [data-dark-section]:not(#hero) h6 {
+  color: var(--text-primary) !important;
+}
+
+/* Blockquote text (Founder Quote) → readable dark in light mode */
+[data-theme="light"] [data-dark-section]:not(#hero) blockquote {
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] [data-dark-section]:not(#hero) footer {
+  color: var(--text-secondary) !important;
+}
+
+/* Stats bar: values → navy accent, labels → muted */
+[data-theme="light"] .stats-bar > div > div:first-child {
+  color: var(--navy) !important;
+}
+[data-theme="light"] .stats-bar > div > div:last-child {
+  color: var(--dim) !important;
+}
+[data-theme="light"] .stats-bar > div {
+  border-right-color: rgba(0,0,0,0.08) !important;
+  border-bottom-color: rgba(0,0,0,0.08) !important;
+}
+
+/* About page: values cards (dark cards in a light section) → white/elevated in light mode */
+[data-theme="light"] .values-card {
+  background: #ffffff !important;
+  border-color: rgba(30,61,143,0.12) !important;
+  box-shadow: 0 2px 16px rgba(30,61,143,0.07) !important;
+}
+[data-theme="light"] .values-card h3 {
+  color: var(--text-primary) !important;
+}
+
+/* Pricing: comparison table → light in light mode */
+[data-theme="light"] .compare-table {
+  background: var(--bg2) !important;
+  border-color: rgba(0,0,0,0.07) !important;
+}
+[data-theme="light"] .compare-table th {
+  background: var(--bg3) !important;
+  color: var(--text-primary) !important;
+  border-color: rgba(0,0,0,0.07) !important;
+}
+[data-theme="light"] .compare-table td {
+  color: var(--text-secondary) !important;
   border-color: rgba(0,0,0,0.05) !important;
 }

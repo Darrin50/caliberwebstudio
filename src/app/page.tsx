@@ -5,10 +5,11 @@ import CTA from '@/components/CTA';
 import WorkShowcase from '@/components/WorkShowcase';
 import PhoneMockupScroll from '@/components/PhoneMockupScroll';
 import { HeroScene, ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
+import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 
 /* ─── Shared style tokens ─────────────────────────────────────── */
-const NAVY = '#1e3d8f';
-const BLUE = '#2563eb';
+const NAVY = 'var(--navy)';
+const BLUE = 'var(--accent)';
 const SEC_LABEL: React.CSSProperties = {
   fontFamily: "'Space Mono', monospace",
   fontSize: '10px',
@@ -42,14 +43,15 @@ export default function Home() {
       <section
         data-dark-section
         style={{
-          background: '#111827',
+          background: 'var(--bg2)',
           borderTop: '1px solid rgba(255,255,255,0.06)',
           borderBottom: '1px solid rgba(255,255,255,0.06)',
           padding: 'clamp(40px, 5vw, 64px) clamp(20px, 6vw, 60px)',
           textAlign: 'center',
         }}
       >
-        <blockquote
+        <ScrollReveal>
+          <blockquote
           style={{
             maxWidth: '760px',
             margin: '0 auto',
@@ -82,6 +84,7 @@ export default function Home() {
             — Darrin Singer, Founder · Caliber Web Studio
           </footer>
         </blockquote>
+        </ScrollReveal>
       </section>
 
       {/* ══ 3. PROBLEM → SOLUTION ════════════════════════════════ */}
@@ -92,28 +95,33 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL, color: NAVY }}>
-            <span style={SEC_LABEL_LINE} />
-            The Problem
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL, color: NAVY }}>
+              <span style={SEC_LABEL_LINE} />
+              The Problem
+            </div>
+          </ScrollReveal>
 
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
-              color: 'var(--silver)',
-              marginBottom: 'clamp(40px, 5vw, 64px)',
-              maxWidth: '700px',
-            }}
-          >
-            Most Detroit businesses are invisible online.{' '}
-            <span style={{ color: BLUE }}>We fix that.</span>
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: 'var(--silver)',
+                marginBottom: 'clamp(40px, 5vw, 64px)',
+                maxWidth: '700px',
+              }}
+            >
+              Most Detroit businesses are invisible online.{' '}
+              <span style={{ color: BLUE }}>We fix that.</span>
+            </h2>
+          </ScrollReveal>
 
-          <div className="ps-grid">
+          <ScrollReveal delay={160}>
+            <div className="ps-grid">
             {/* Problems */}
             <div>
               <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Problem</p>
@@ -127,17 +135,25 @@ export default function Home() {
                     key={pain}
                     style={{ padding: '20px 24px', background: 'var(--bg2)', display: 'flex', alignItems: 'center', gap: '14px' }}
                   >
-                    <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: '#ef4444', flexShrink: 0 }}>✕</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}>
+                      <path d="M4 4 L16 16" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round" style={{ filter: 'url(#brush-x)' }} />
+                      <path d="M16 4 L4 16" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round" style={{ filter: 'url(#brush-x)' }} />
+                      <defs><filter id="brush-x"><feTurbulence type="turbulence" baseFrequency="0.35" numOctaves="3" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" /></filter></defs>
+                    </svg>
                     <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: 'var(--chrome)', lineHeight: 1.4 }}>{pain}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Arrow */}
-            <div className="ps-arrow" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center', paddingTop: '38px' }}>
+            {/* Arrows — one per row, vertically aligned to each row */}
+            <div className="ps-arrow" style={{ display: 'flex', flexDirection: 'column', gap: '1px', paddingTop: '28px' }}>
               {[0, 1, 2].map((i) => (
-                <div key={i} style={{ color: BLUE, fontSize: '18px', opacity: 0.5 }}>→</div>
+                <div key={i} style={{ height: '61px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <svg width="24" height="14" viewBox="0 0 24 14" fill="none" style={{ opacity: 0.45 }}>
+                    <path d="M0 7h20m0 0l-5-5m5 5l-5 5" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
               ))}
             </div>
 
@@ -154,17 +170,21 @@ export default function Home() {
                     key={fix}
                     style={{ padding: '20px 24px', background: 'rgba(37,99,235,0.1)', display: 'flex', alignItems: 'center', gap: '14px' }}
                   >
-                    <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(37,99,235,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: BLUE, flexShrink: 0 }}>✓</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}>
+                      <path d="M4 10.5 L8.5 15 L16 5" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'url(#brush-ck)' }} />
+                      <defs><filter id="brush-ck"><feTurbulence type="turbulence" baseFrequency="0.35" numOctaves="3" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" /></filter></defs>
+                    </svg>
                     <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(13px, 1.4vw, 15px)', color: 'var(--silver)', fontWeight: 500, lineHeight: 1.4 }}>{fix}</span>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
 
         <style>{`
-          .ps-grid { display: grid; grid-template-columns: 1fr 48px 1fr; gap: 0; align-items: start; }
+          .ps-grid { display: grid; grid-template-columns: 1fr 48px 1fr; gap: 0; align-items: stretch; }
           @media (max-width: 700px) {
             .ps-grid { grid-template-columns: 1fr; gap: clamp(28px,5vw,40px); }
             .ps-arrow { display: none !important; }
@@ -176,13 +196,14 @@ export default function Home() {
       <section
         data-dark-section
         style={{
-          background: '#0a0a0a',
+          background: 'var(--bg)',
           padding: 'clamp(40px, 5vw, 64px) clamp(20px, 6vw, 60px)',
           borderTop: '1px solid rgba(255,255,255,0.05)',
           borderBottom: '1px solid rgba(255,255,255,0.05)',
         }}
       >
-        <div className="stats-bar" style={{ maxWidth: '960px', margin: '0 auto' }}>
+        <ScrollReveal>
+          <div className="stats-bar" style={{ maxWidth: '960px', margin: '0 auto' }}>
           {[
             { value: '48hr', label: 'Average Delivery' },
             { value: '$0 Down', label: 'To Start' },
@@ -205,7 +226,8 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        </ScrollReveal>
         <style>{`
           .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); }
           @media (max-width: 600px) {
@@ -226,12 +248,15 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL }}>
-            <span style={SEC_LABEL_LINE} />
-            How It Works
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL }}>
+              <span style={SEC_LABEL_LINE} />
+              How It Works
+            </div>
+          </ScrollReveal>
 
-          <h2
+          <ScrollReveal delay={80}>
+            <h2
             style={{
               fontFamily: "'Syne', sans-serif",
               fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
@@ -245,9 +270,10 @@ export default function Home() {
           >
             Simple process.<br />
             <span style={{ color: 'var(--dim)' }}>Serious results.</span>
-          </h2>
+            </h2>
+          </ScrollReveal>
 
-          <div className="hiw-grid">
+          <ScrollRevealGroup className="hiw-grid" stagger={150}>
             {[
               {
                 n: '01',
@@ -278,7 +304,7 @@ export default function Home() {
                 </p>
               </div>
             ))}
-          </div>
+          </ScrollRevealGroup>
         </div>
         <style>{`
           .hiw-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(40px,6vw,72px); }
@@ -300,29 +326,35 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL }}>
-            <span style={{ ...SEC_LABEL_LINE }} />
-            Our Work
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL }}>
+              <span style={{ ...SEC_LABEL_LINE }} />
+              Our Work
+            </div>
+          </ScrollReveal>
 
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--text-primary)',
-              marginBottom: '16px',
-              maxWidth: '640px',
-            }}
-          >
-            Our Work Speaks for Itself
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.025em',
+                color: 'var(--text-primary)',
+                marginBottom: '16px',
+                maxWidth: '640px',
+              }}
+            >
+              Our Work Speaks for Itself
+            </h2>
+          </ScrollReveal>
 
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '17px', lineHeight: 1.7, color: 'var(--dim)', marginBottom: 'clamp(40px, 5vw, 56px)', maxWidth: '520px' }}>
+          <ScrollReveal delay={120}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '17px', lineHeight: 1.7, color: 'var(--dim)', marginBottom: 'clamp(40px, 5vw, 56px)', maxWidth: '520px' }}>
             Real businesses. Real results. Every project is built to rank, convert, and grow.
-          </p>
+            </p>
+          </ScrollReveal>
 
           <WorkShowcase />
         </div>
@@ -340,27 +372,31 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ ...SEC_LABEL }}>
-            <span style={SEC_LABEL_LINE} />
-            Client Testimonials
-          </div>
+          <ScrollReveal>
+            <div style={{ ...SEC_LABEL }}>
+              <span style={SEC_LABEL_LINE} />
+              Client Testimonials
+            </div>
+          </ScrollReveal>
 
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--silver)',
-              marginBottom: 'clamp(40px, 5vw, 64px)',
-              maxWidth: '520px',
-            }}
-          >
-            Don&apos;t take our word for it.
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.025em',
+                color: 'var(--silver)',
+                marginBottom: 'clamp(40px, 5vw, 64px)',
+                maxWidth: '520px',
+              }}
+            >
+              Don&apos;t take our word for it.
+            </h2>
+          </ScrollReveal>
 
-          <div className="testi-grid">
+          <ScrollRevealGroup className="testi-grid" stagger={150}>
             {[
               {
                 quote: "Caliber built us a site in 48 hours that I'm genuinely proud to hand to customers. We went from invisible on Google to ranking for 'auto glass Detroit' in two months. The phone hasn't stopped.",
@@ -389,7 +425,7 @@ export default function Home() {
                 }}
               >
                 {/* Blue top accent */}
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${BLUE}, transparent)` }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #2563eb, transparent)' }} />
 
                 {/* Quote mark */}
                 <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(60px, 7vw, 84px)', color: 'rgba(37,99,235,0.18)', lineHeight: 0.7, marginBottom: '24px', fontWeight: 800, userSelect: 'none' }}>
@@ -405,13 +441,13 @@ export default function Home() {
                 <div style={{ marginTop: '28px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
                   <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '15px', color: 'var(--silver)', marginBottom: '3px' }}>{t.name}</div>
                   <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '10px' }}>{t.role}</div>
-                  <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.08em', textTransform: 'uppercase', color: BLUE, padding: '3px 8px', background: 'rgba(37,99,235,0.08)', border: `1px solid rgba(37,99,235,0.2)`, borderRadius: '2px' }}>
+                  <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2563eb', padding: '3px 8px', background: 'rgba(37,99,235,0.08)', border: '1px solid rgba(37,99,235,0.2)', borderRadius: '2px' }}>
                     {t.industry}
                   </span>
                 </div>
               </div>
             ))}
-          </div>
+          </ScrollRevealGroup>
         </div>
         <style>{`
           .testi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: clamp(16px,2.5vw,28px); }

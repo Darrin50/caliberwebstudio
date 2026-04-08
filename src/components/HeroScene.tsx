@@ -155,7 +155,7 @@ export default function HeroScene() {
         const glowMat = new THREE.MeshBasicMaterial({
           color: cfg.glowColor,
           transparent: true,
-          opacity: 0.30,
+          opacity: 0.12,
           blending: THREE.AdditiveBlending,
           depthWrite: false,
         });
@@ -166,18 +166,18 @@ export default function HeroScene() {
         const midMat = new THREE.MeshBasicMaterial({
           color: cfg.glowColor,
           transparent: true,
-          opacity: 0.45,
+          opacity: 0.18,
           blending: THREE.AdditiveBlending,
           depthWrite: false,
         });
         const midMesh = new THREE.Mesh(midGeo, midMat);
 
-        // Inner solid sphere — bright core
+        // Inner solid sphere — soft core
         const innerGeo = new THREE.SphereGeometry(cfg.r, 20, 20);
         const innerMat = new THREE.MeshBasicMaterial({
           color: cfg.color,
           transparent: true,
-          opacity: 0.85,
+          opacity: 0.35,
           blending: THREE.AdditiveBlending,
           depthWrite: false,
         });
@@ -472,9 +472,9 @@ export default function HeroScene() {
           s.group.position.z = s.originZ + Math.sin(t * 0.5) * s.driftRadius * 0.5;
           const pulse = 0.88 + Math.sin(t * 1.8) * 0.12;
           s.group.scale.setScalar(pulse);
-          s.glowMat.opacity  = 0.22 + Math.sin(t * 1.4) * 0.08;
-          s.midMat.opacity   = 0.38 + Math.sin(t * 1.2) * 0.10;
-          s.innerMat.opacity = 0.78 + Math.sin(t * 1.2) * 0.12;
+          s.glowMat.opacity  = 0.08 + Math.sin(t * 1.4) * 0.04;
+          s.midMat.opacity   = 0.14 + Math.sin(t * 1.2) * 0.04;
+          s.innerMat.opacity = 0.28 + Math.sin(t * 1.2) * 0.07;
         });
 
         // ── Particles gentle drift ──

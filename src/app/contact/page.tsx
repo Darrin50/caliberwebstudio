@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: { absolute: "Contact | Caliber Web Studio – Book Your Free Strategy Call" },
@@ -24,20 +25,27 @@ export default function ContactPage() {
 
           {/* Hero */}
           <div style={{ textAlign: "center", marginBottom: "64px", paddingTop: "40px" }}>
-            <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "16px", fontFamily: "'Space Mono', monospace" }}>
-              Free Strategy Call
-            </p>
-            <h1 style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)", fontWeight: 800, lineHeight: 1.1, color: "var(--text-primary)", marginBottom: "20px", letterSpacing: "-0.02em", position: "relative", zIndex: 10 }}>
-              Contact Us — Let&apos;s Build Something
-            </h1>
-            <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "560px", margin: "0 auto", lineHeight: 1.7 }}>
-              Tell us about your business and we&apos;ll put together a custom plan to get you more clients.
-            </p>
+            <ScrollReveal>
+              <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent, #0070f3)", marginBottom: "16px", fontFamily: "'Space Mono', monospace" }}>
+                Free Strategy Call
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <h1 style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)", fontWeight: 800, lineHeight: 1.1, color: "var(--text-primary)", marginBottom: "20px", letterSpacing: "-0.02em", position: "relative", zIndex: 10 }}>
+                Contact Us — Let&apos;s Build Something
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={160}>
+              <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "var(--text-secondary, rgba(255,255,255,0.65))", maxWidth: "560px", margin: "0 auto", lineHeight: 1.7 }}>
+                Tell us about your business and we&apos;ll put together a custom plan to get you more clients.
+              </p>
+            </ScrollReveal>
           </div>
 
           <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
             {/* Contact Form */}
-            <div style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "20px", padding: "40px 36px" }}>
+            <ScrollReveal delay={80}>
+              <div style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "20px", padding: "40px 36px" }}>
               <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "28px", letterSpacing: "-0.01em" }}>
                 Book Your Free Strategy Call
               </h2>
@@ -75,10 +83,12 @@ export default function ContactPage() {
                   Send Your Details →
                 </button>
               </form>
-            </div>
+              </div>
+            </ScrollReveal>
 
             {/* Right Side */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+            <ScrollReveal delay={160}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
               <div>
                 <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px", letterSpacing: "-0.01em" }}>
                   What Happens Next?
@@ -102,34 +112,38 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "16px", padding: "28px" }}>
+              <ScrollReveal delay={240}>
+                <div style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "16px", padding: "28px" }}>
                 <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "20px" }}>
                   Prefer to reach out directly?
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                   <a href="mailto:darrin@caliberwebstudio.com" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>✉️</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     darrin@caliberwebstudio.com
                   </a>
                   <a href="tel:+13137992315" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>📞</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     (313) 799-2315
                   </a>
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>📍</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     Detroit, Michigan
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
-                    <span style={{ fontSize: "1.1rem" }}>⏱️</span>
+                    <span style={{ width: "6px", height: "6px", background: "var(--navy)", flexShrink: 0 }} />
                     Response within 1 business day
                   </div>
                 </div>
+                </div>
+              </ScrollReveal>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* Bottom CTA */}
-          <div style={{ textAlign: "center", marginTop: "80px", padding: "52px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
+          <ScrollReveal delay={80}>
+            <div style={{ textAlign: "center", marginTop: "80px", padding: "52px 32px", background: "var(--card-bg, rgba(255,255,255,0.04))", borderRadius: "20px", border: "1px solid var(--border-color, rgba(255,255,255,0.08))" }}>
             <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "14px", letterSpacing: "-0.01em" }}>
               Ready to see the pricing?
             </h2>
@@ -139,7 +153,8 @@ export default function ContactPage() {
             <Link href="/pricing" style={{ display: "inline-block", padding: "14px 36px", background: "var(--accent, #0070f3)", color: "#fff", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", letterSpacing: "0.02em" }}>
               View Pricing Plans
             </Link>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </main>
       <Footer />

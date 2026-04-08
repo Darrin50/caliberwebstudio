@@ -30,7 +30,7 @@ const projects = [
   },
   {
     slug: 'metro-plumbing',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&auto=format&fit=crop',
+    image: '/images/metro-plumbing-hero.png',
     category: 'Plumbing',
     title: 'Metro Plumbing',
     headline: 'Emergency-Ready Lead Capture — Click Through',

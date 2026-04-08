@@ -71,7 +71,7 @@ export default function AboutPage() {
             <p className="sec-label fu" style={{ justifyContent: 'center' }}>About Us</p>
           </ScrollReveal>
           <ScrollReveal delay={80}>
-            <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px, 7vw, 88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: '#fff', margin: '24px 0 28px', position: 'relative' }}>
+            <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px, 7vw, 88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: 'var(--text-primary)', margin: '24px 0 28px', position: 'relative' }}>
               Built in Detroit.<br />
               <span style={{ background: 'linear-gradient(135deg, #2563eb, #93c5fd)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Obsessed with Results.</span>
             </h1>
@@ -89,14 +89,14 @@ export default function AboutPage() {
           style={{
           padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 80px)',
           borderBottom: '1px solid var(--border)',
-          background: '#111827',
+          background: 'var(--bg2)',
         }}>
           <div style={{ maxWidth: '820px', margin: '0 auto' }}>
             <ScrollReveal>
               <p className="sec-label">Our Story</p>
             </ScrollReveal>
             <ScrollReveal delay={80}>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px, 5vw, 52px)', color: '#fff', marginBottom: '40px', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px, 5vw, 52px)', color: 'var(--text-primary)', marginBottom: '40px', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
                 The Gap Nobody Was Filling
               </h2>
             </ScrollReveal>
@@ -129,7 +129,7 @@ export default function AboutPage() {
               <p className="sec-label">What We Stand For</p>
             </ScrollReveal>
             <ScrollReveal delay={80}>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px, 5vw, 52px)', color: '#fff', marginBottom: 'clamp(40px, 5vw, 64px)', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(32px, 5vw, 52px)', color: 'var(--text-primary)', marginBottom: 'clamp(40px, 5vw, 64px)', lineHeight: 1.1, letterSpacing: '-0.025em' }}>
                 Three Things We Don&apos;t Compromise On
               </h2>
             </ScrollReveal>
@@ -137,7 +137,7 @@ export default function AboutPage() {
               {values.map((v, i) => (
                 <ScrollReveal key={v.label} delay={i * 80}>
                   <div className="values-card" style={{
-                    background: '#111827',
+                    background: 'var(--bg2)',
                     border: '1px solid var(--border)',
                     borderRadius: '4px',
                     padding: 'clamp(32px, 4vw, 48px)',
@@ -147,14 +147,14 @@ export default function AboutPage() {
                   }}>
                     <div style={{
                       position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
-                      background: 'linear-gradient(to right, #2563eb, transparent)',
+                      background: 'linear-gradient(to right, var(--accent), transparent)',
                     }} />
                     <div style={{
                       fontFamily: 'Space Mono, monospace',
                       fontSize: '10px',
                       letterSpacing: '0.12em',
                       textTransform: 'uppercase',
-                      color: '#2563eb',
+                      color: 'var(--accent)',
                       marginBottom: '16px',
                     }}>
                       0{i + 1}
@@ -163,7 +163,7 @@ export default function AboutPage() {
                       fontFamily: 'Syne, sans-serif',
                       fontWeight: 800,
                       fontSize: 'clamp(20px, 2.2vw, 26px)',
-                      color: '#fff',
+                      color: 'var(--text-primary)',
                       marginBottom: '16px',
                       lineHeight: 1.2,
                       letterSpacing: '-0.02em',
@@ -181,7 +181,7 @@ export default function AboutPage() {
         </section>
 
         {/* The Numbers */}
-        <section data-dark-section style={{ borderBottom: '1px solid var(--border)', background: '#0a0a0a' }}>
+        <section data-dark-section style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg)' }}>
           <SocialProof />
         </section>
 
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 fontFamily: 'Syne, sans-serif',
                 fontWeight: 800,
                 fontSize: 'clamp(24px, 3vw, 32px)',
-                color: '#fff',
+                color: 'var(--text-primary)',
                 marginBottom: '6px',
                 letterSpacing: '-0.02em',
               }}>

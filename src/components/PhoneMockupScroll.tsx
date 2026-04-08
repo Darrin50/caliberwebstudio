@@ -29,8 +29,8 @@ const BIZ: Biz[] = [
     id: 'glass', label: 'Auto Glass', name: 'Meridian Glass', tagline: 'Same-Day · Guaranteed',
     city: 'Detroit', est: 'Since 2009', accent: '#2563eb', theme: 'light',
     bg: '#ffffff', heroGrad: 'linear-gradient(160deg, #1a2d4a 0%, #0d1b30 100%)',
-    heroPhoto: 'https://picsum.photos/seed/autoglass24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/autoglass24team/216/160',
+    heroPhoto: '/images/phone-auto-glass.png',
+    aboutPhoto: '/images/phone-auto-glass.png',
     services: ['Windshield Replacement', 'Chip & Crack Repair', 'Side Glass', 'ADAS Recalibration'],
     price: 'From $99', tagline2: 'Trusted by 3,400+ Metro Detroit drivers',
     heroTitle: ['Same-Day Glass', 'Replacement'],
@@ -41,8 +41,8 @@ const BIZ: Biz[] = [
     id: 'barber', label: 'Barbershop', name: 'Studio 1908', tagline: 'Precision Grooming',
     city: 'Midtown Detroit', est: 'Since 2014', accent: '#b8860b', theme: 'dark',
     bg: '#0d0b08', heroGrad: 'linear-gradient(160deg, #3a2010 0%, #150d05 100%)',
-    heroPhoto: 'https://picsum.photos/seed/barbershop24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/barbershop24team/216/160',
+    heroPhoto: '/images/phone-barbershop.png',
+    aboutPhoto: '/images/phone-barbershop.png',
     services: ['Signature Haircut', 'Hot Towel Shave', 'Beard Sculpting', 'Scalp Treatment'],
     price: 'From $45', tagline2: "Detroit's premium grooming studio",
     heroTitle: ['Precision Cuts,', 'Classic Craft'],
@@ -53,8 +53,8 @@ const BIZ: Biz[] = [
     id: 'land', label: 'Landscaping', name: 'Terrain', tagline: 'Landscape Architecture',
     city: 'Bloomfield Hills', est: 'Since 2011', accent: '#3d7a52', theme: 'light',
     bg: '#ffffff', heroGrad: 'linear-gradient(160deg, #0c2a14 0%, #061008 100%)',
-    heroPhoto: 'https://picsum.photos/seed/landscaping24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/landscaping24team/216/160',
+    heroPhoto: '/images/phone-landscaping.png',
+    aboutPhoto: '/images/phone-landscaping.png',
     services: ['Landscape Design', 'Premium Lawn Care', 'Hardscaping', 'Seasonal Programs'],
     price: 'Custom Quote', tagline2: 'Luxury outdoor environments for Metro Detroit',
     heroTitle: ['Elevated Outdoor', 'Living'],
@@ -65,8 +65,8 @@ const BIZ: Biz[] = [
     id: 'salon', label: 'Luxury Salon', name: 'Maison', tagline: 'Beauty & Wellness',
     city: 'Royal Oak', est: 'Since 2017', accent: '#c9a98a', theme: 'dark',
     bg: '#100c0a', heroGrad: 'linear-gradient(160deg, #2e1a12 0%, #0e0a08 100%)',
-    heroPhoto: 'https://picsum.photos/seed/luxsalon24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/luxsalon24team/216/160',
+    heroPhoto: '/images/phone-luxury-salon.png',
+    aboutPhoto: '/images/phone-luxury-salon.png',
     services: ['Color & Highlights', 'Keratin Treatment', 'Signature Blowout', 'Extensions'],
     price: 'From $120', tagline2: "Royal Oak's premier luxury salon experience",
     heroTitle: ['The Art of', 'Beauty'],
@@ -77,8 +77,8 @@ const BIZ: Biz[] = [
     id: 'fitness', label: 'Fitness Studio', name: 'Apex Athletics', tagline: 'Performance Training',
     city: 'Southfield', est: 'Since 2016', accent: '#dc2626', theme: 'dark',
     bg: '#050505', heroGrad: 'linear-gradient(160deg, #200808 0%, #030303 100%)',
-    heroPhoto: 'https://picsum.photos/seed/gymfit24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/gymfit24team/216/160',
+    heroPhoto: '/images/phone-fitness-studio.png',
+    aboutPhoto: '/images/phone-fitness-studio.png',
     services: ['Personal Training', 'Athletic Performance', 'Nutrition Coaching', 'Recovery Programs'],
     price: 'From $79/mo', tagline2: "Southfield's elite performance facility",
     heroTitle: ['Train Without', 'Limits'],
@@ -89,8 +89,8 @@ const BIZ: Biz[] = [
     id: 'resto', label: 'Fine Dining', name: 'Ardor', tagline: 'Modern American Kitchen',
     city: 'Corktown, Detroit', est: 'Since 2019', accent: '#d4a853', theme: 'dark',
     bg: '#0c0806', heroGrad: 'linear-gradient(160deg, #2c1c08 0%, #080503 100%)',
-    heroPhoto: 'https://picsum.photos/seed/finedine24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/finedine24team/216/160',
+    heroPhoto: '/images/phone-fine-dining.png',
+    aboutPhoto: '/images/phone-fine-dining.png',
     services: ['Chef\'s Tasting Menu', 'À La Carte Dining', 'Private Events', 'Wine Pairings'],
     price: 'From $85/pp', tagline2: 'Farm-to-table in the heart of Detroit',
     heroTitle: ['Modern American', 'Dining'],
@@ -101,8 +101,8 @@ const BIZ: Biz[] = [
     id: 'plumb', label: 'Home Services', name: 'Prime Home', tagline: 'Residential · Commercial',
     city: 'Detroit Metro', est: 'Since 2008', accent: '#0ea5e9', theme: 'light',
     bg: '#ffffff', heroGrad: 'linear-gradient(160deg, #0c1e32 0%, #060e18 100%)',
-    heroPhoto: 'https://picsum.photos/seed/homepro24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/homepro24team/216/160',
+    heroPhoto: '/images/phone-home-services.png',
+    aboutPhoto: '/images/phone-home-services.png',
     services: ['Emergency Repairs', 'Pipe & Drain', 'Water Heater', 'Remodel Plumbing'],
     price: 'Free Estimate', tagline2: 'Licensed, bonded & trusted across Metro Detroit',
     heroTitle: ['24/7 Emergency', 'Home Service'],
@@ -113,8 +113,8 @@ const BIZ: Biz[] = [
     id: 'dental', label: 'Cosmetic Dentistry', name: 'Luminary Dental', tagline: 'Smile Aesthetics',
     city: 'Birmingham', est: 'Since 2013', accent: '#10b981', theme: 'light',
     bg: '#ffffff', heroGrad: 'linear-gradient(160deg, #052a20 0%, #020e0a 100%)',
-    heroPhoto: 'https://picsum.photos/seed/smilestudio24/432/340',
-    aboutPhoto: 'https://picsum.photos/seed/smilestudio24team/216/160',
+    heroPhoto: '/images/phone-cosmetic-dentistry.png',
+    aboutPhoto: '/images/phone-cosmetic-dentistry.png',
     services: ['Smile Makeover', 'Teeth Whitening', 'Porcelain Veneers', 'Invisalign'],
     price: 'Free Consult', tagline2: "Birmingham's premier cosmetic dental studio",
     heroTitle: ['Your Smile,', 'Perfected'],
@@ -191,45 +191,390 @@ function HeroPhoto({ b, height = 170 }: { b: Biz; height?: number }) {
   );
 }
 
-// ══ HOME SCREEN ══════════════════════════════════════════════════════════════
+// ══ HOME SCREENS — unique layout per business, photo fills full phone ══════════
 
-function HomeScreen({ b }: { b: Biz }) {
-  const lm = b.theme === 'light';
-  const textH = lm ? '#0f0f0f' : '#ffffff';
-  const textB = lm ? '#6b7280' : 'rgba(255,255,255,0.45)';
-  const border = lm ? 'rgba(0,0,0,0.07)' : 'rgba(255,255,255,0.06)';
+// AUTO GLASS — photo bg, frosted-glass cards overlaid
+function GlassHome({ b }: { b: Biz }) {
   return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light={lm} />
-      <NavBar b={b} light={lm} />
-      <HeroPhoto b={b} height={170} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-        {/* sub + CTA strip */}
-        <div style={{ padding: '9px 12px 8px', borderBottom: `1px solid ${border}` }}>
-          <div style={{ fontSize: '5.5px', color: textB, lineHeight: 1.5, marginBottom: '6px' }}>{b.tagline2}</div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ display: 'inline-flex', padding: '5px 12px', background: b.accent, borderRadius: '2px', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.07em', textTransform: 'uppercase', gap: '5px', alignItems: 'center' }}>
-              {b.cta} <span style={{ fontSize: '8px' }}>→</span>
-            </div>
-            <div style={{ fontSize: '5px', color: textB, textAlign: 'right' }}>
-              <div style={{ color: '#f59e0b', letterSpacing: '1px', lineHeight: 1 }}>★★★★★</div>
-              <div style={{ marginTop: '1px', opacity: 0.7 }}>200+ reviews</div>
-            </div>
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* navy gradient scrim — darker at top and bottom */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,20,40,0.82) 0%, rgba(10,20,40,0.35) 40%, rgba(10,20,40,0.75) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand header */}
+        <div style={{ padding: '6px 12px 4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: '1.5px' }}>Same-Day · Guaranteed</div>
+          </div>
+          <div style={{ background: 'rgba(255,255,255,0.12)', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', border: '1px solid rgba(255,255,255,0.2)' }}>☰</div>
+        </div>
+        {/* Hero headline floats in middle */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 12px' }}>
+          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.6)', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+            <span style={{ width: '10px', height: '0.5px', background: b.accent, display: 'inline-block' }} />Detroit Metro
+          </div>
+          <div style={{ fontSize: '22px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.03em', textShadow: '0 2px 16px rgba(0,0,0,0.5)', marginBottom: '8px' }}>
+            Same-Day<br />Glass Repair
+          </div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', padding: '2.5px 8px', background: 'rgba(255,255,255,0.12)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.2)', width: 'fit-content', marginBottom: '14px' }}>
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e' }} />
+            <span style={{ fontSize: '4.5px', color: '#fff', fontWeight: 600 }}>⚡ 1-Hour Response</span>
+          </div>
+          {/* Repair type selector */}
+          <div style={{ display: 'flex', gap: '5px', marginBottom: '8px' }}>
+            {['Windshield', 'Chip Fix', 'Side Glass'].map((t, i) => (
+              <div key={t} style={{ flex: 1, padding: '6px 4px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.1)', borderRadius: '4px', textAlign: 'center', fontSize: '5px', fontWeight: 700, color: '#fff', border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)' }}>{t}</div>
+            ))}
           </div>
         </div>
-        {/* services mini-list */}
-        {b.services.slice(0, 3).map((s, i) => (
-          <div key={s} style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: i < 2 ? `1px solid ${border}` : 'none' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: b.accent, flexShrink: 0 }} />
-              <span style={{ fontSize: '6.5px', fontWeight: 500, color: textH }}>{s}</span>
-            </div>
-            <span style={{ fontSize: '7px', color: b.accent, opacity: 0.7 }}>›</span>
+        {/* Emergency call strip pinned to bottom */}
+        <div style={{ background: b.accent, padding: '9px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+          <div>
+            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.8)', letterSpacing: '0.14em', textTransform: 'uppercase' }}>Emergency Line · 24/7</div>
+            <div style={{ fontSize: '11px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.1 }}>{b.phone}</div>
           </div>
-        ))}
+          <div style={{ background: '#fff', borderRadius: '50%', width: '26px', height: '26px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>📞</div>
+        </div>
       </div>
     </div>
   );
+}
+
+// BARBERSHOP — full bleed photo, booking card + barber chips overlaid
+function BarberHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Deep dark gradient — clear top, heavy bottom */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(13,11,8,0.65) 0%, rgba(13,11,8,0.2) 30%, rgba(13,11,8,0.88) 70%, rgba(13,11,8,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand top */}
+        <div style={{ padding: '6px 12px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '9px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Midtown Detroit</div>
+          </div>
+          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.08em' }}>TUE–SAT</div>
+        </div>
+        {/* Spacer pushes content to bottom */}
+        <div style={{ flex: 1 }} />
+        {/* Next available slot */}
+        <div style={{ margin: '0 12px 8px', background: 'rgba(255,255,255,0.06)', border: `1px solid ${b.accent}55`, borderLeft: `3px solid ${b.accent}`, borderRadius: '5px', padding: '8px 10px', backdropFilter: 'blur(8px)' }}>
+          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.16em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '3px' }}>Next Available</div>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '6px' }}>
+            <span style={{ fontSize: '18px', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1 }}>2:30</span>
+            <span style={{ fontSize: '7px', fontWeight: 600, color: 'rgba(255,255,255,0.5)' }}>PM · Today</span>
+          </div>
+          <div style={{ padding: '5px 0', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '5.5px', fontWeight: 700, color: '#000', letterSpacing: '0.1em' }}>BOOK THIS SLOT →</div>
+        </div>
+        {/* Barber avatars */}
+        <div style={{ padding: '0 12px 8px' }}>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            {[['M','Marcus','Cuts'],['D','DeShawn','Shave'],['R','Rico','Beard']].map(([i, n, s]) => (
+              <div key={n} style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '6px 4px', textAlign: 'center', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(6px)' }}>
+                <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: b.accent, margin: '0 auto 3px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '8px', fontWeight: 700, color: '#000' }}>{i}</div>
+                <div style={{ fontSize: '5px', fontWeight: 700, color: '#fff' }}>{n}</div>
+                <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.45)' }}>{s}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Service chips */}
+        <div style={{ padding: '0 12px 10px', display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+          {b.services.map(s => (
+            <div key={s} style={{ padding: '3px 7px', background: 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '4.5px', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.1)' }}>{s}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// LANDSCAPING — full bleed photo, quote CTA + project labels overlaid
+function LandHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Light scrim at top, strong dark at bottom */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(12,42,20,0.7) 0%, rgba(12,42,20,0.15) 35%, rgba(12,42,20,0.8) 70%, rgba(12,42,20,0.95) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand header */}
+        <div style={{ padding: '6px 12px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Landscape Architecture</div>
+          </div>
+          <div style={{ padding: '4px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Get Quote</div>
+        </div>
+        {/* Spacer */}
+        <div style={{ flex: 1 }} />
+        {/* Season badge + headline */}
+        <div style={{ padding: '0 12px 8px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', padding: '2.5px 7px', background: 'rgba(255,255,255,0.12)', border: `1px solid ${b.accent}66`, borderRadius: '20px', marginBottom: '6px', backdropFilter: 'blur(4px)' }}>
+            <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: b.accent }} />
+            <span style={{ fontSize: '4.5px', color: '#fff', fontWeight: 600 }}>Spring bookings open</span>
+          </div>
+          <div style={{ fontSize: '20px', fontWeight: 900, color: '#fff', letterSpacing: '-0.025em', lineHeight: 1.05, marginBottom: '10px', textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>Elevated<br />Outdoor Living</div>
+          {/* Project labels row */}
+          <div style={{ display: 'flex', gap: '4px', marginBottom: '8px' }}>
+            {['Design','Lawn Care','Hardscape','Seasonal'].map((cat) => (
+              <div key={cat} style={{ flex: 1, padding: '4px 3px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', textAlign: 'center', fontSize: '4px', fontWeight: 600, color: '#fff', border: '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)' }}>{cat}</div>
+            ))}
+          </div>
+          {/* CTA */}
+          <div style={{ padding: '7px 12px', background: b.accent, borderRadius: '5px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div>
+              <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.8)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Free Consultation</div>
+              <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff' }}>Request Your Custom Quote</div>
+            </div>
+            <div style={{ fontSize: '12px', color: '#fff' }}>›</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// LUXURY SALON — full bleed photo, editorial overlay
+function SalonHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Diagonal editorial gradient */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgba(16,12,10,0.85) 0%, rgba(16,12,10,0.3) 45%, rgba(16,12,10,0.9) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        <div style={{ padding: '6px 12px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff', letterSpacing: '0.1em' }}>{b.name.toUpperCase()}</div>
+          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Royal Oak · Est 2017</div>
+        </div>
+        {/* Big headline in the middle */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 12px' }}>
+          <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px' }}>Featured Experience</div>
+          <div style={{ fontSize: '24px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.03em', textShadow: '0 2px 20px rgba(0,0,0,0.5)', marginBottom: '5px' }}>The Art<br />of Beauty</div>
+          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.6)', marginBottom: '10px', lineHeight: 1.6 }}>Luxury color · Keratin · Signature Blowout</div>
+          <div style={{ padding: '5px 10px', background: b.accent, borderRadius: '3px', fontSize: '5px', fontWeight: 700, color: '#000', display: 'inline-block', width: 'fit-content' }}>Reserve a Session →</div>
+        </div>
+        {/* Services + rating at bottom */}
+        <div style={{ padding: '0 12px 8px' }}>
+          <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+            {b.services.map((s, i) => (
+              <div key={s} style={{ padding: '3.5px 6px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '4.5px', fontWeight: 600, color: i === 0 ? '#000' : 'rgba(255,255,255,0.7)', whiteSpace: 'nowrap', border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(4px)' }}>{s}</div>
+            ))}
+          </div>
+          <div style={{ padding: '6px 10px', background: 'rgba(255,255,255,0.07)', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backdropFilter: 'blur(6px)' }}>
+            <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.6)' }}>Royal Oak's #1 Salon</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+              <span style={{ color: '#f59e0b', fontSize: '7px' }}>★★★★★</span>
+              <span style={{ fontSize: '5px', color: 'rgba(255,255,255,0.5)' }}>4.9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// FITNESS STUDIO — full bleed photo, stats + schedule overlaid
+function FitnessHome({ b }: { b: Biz }) {
+  const classes = [['6:00 AM','HIIT Circuit','High'],['8:30 AM','Power Yoga','Med'],['12:00 PM','Strength & Lift','High']];
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Heavy dark overlay, lighter in middle so photo shows through */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(5,5,5,0.8) 0%, rgba(5,5,5,0.25) 35%, rgba(5,5,5,0.85) 65%, rgba(5,5,5,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand + join button */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div>
+            <div style={{ fontSize: '8px', fontWeight: 800, color: '#fff', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Southfield, MI</div>
+          </div>
+          <div style={{ padding: '3.5px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Join Today</div>
+        </div>
+        {/* Stats — float in the clear window */}
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', padding: '0 14px' }}>
+          <div style={{ display: 'flex', gap: '16px' }}>
+            {[['240+','Members'],['18','Classes/Wk'],['6','Trainers']].map(([v, l]) => (
+              <div key={l}>
+                <div style={{ fontSize: '16px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
+                <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: '2px' }}>{l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Today's classes */}
+        <div style={{ padding: '0 12px 10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5px' }}>
+            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Today's Classes</div>
+            <div style={{ fontSize: '4.5px', color: b.accent }}>View All →</div>
+          </div>
+          {classes.map(([time, name, intensity]) => (
+            <div key={name} style={{ padding: '5px 8px', background: 'rgba(255,255,255,0.06)', borderRadius: '4px', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid rgba(255,255,255,0.07)', backdropFilter: 'blur(6px)' }}>
+              <div style={{ fontSize: '5.5px', fontWeight: 700, color: b.accent, width: '30px', flexShrink: 0 }}>{time}</div>
+              <div style={{ flex: 1, fontSize: '6px', fontWeight: 700, color: '#fff' }}>{name}</div>
+              <div style={{ padding: '1.5px 4px', background: intensity === 'High' ? `${b.accent}40` : 'rgba(255,255,255,0.08)', borderRadius: '3px', fontSize: '3.5px', fontWeight: 700, color: intensity === 'High' ? b.accent : 'rgba(255,255,255,0.5)', letterSpacing: '0.06em' }}>{intensity}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// FINE DINING — full bleed photo, reservation picker at bottom
+function RestoHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Warm dark gradient */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(12,8,3,0.75) 0%, rgba(12,8,3,0.1) 35%, rgba(12,8,3,0.85) 65%, rgba(12,8,3,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Brand + menu link */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div>
+            <div style={{ fontSize: '10px', fontWeight: 800, color: '#fff', letterSpacing: '0.08em', fontStyle: 'italic' }}>{b.name}</div>
+            <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: '1px' }}>Corktown · Detroit</div>
+          </div>
+          <div style={{ padding: '3px 7px', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '4.5px', color: '#fff', border: '1px solid rgba(255,255,255,0.18)' }}>Menu ↗</div>
+        </div>
+        {/* Spacer */}
+        <div style={{ flex: 1 }} />
+        {/* Info badges floating above lower panel */}
+        <div style={{ padding: '0 12px 6px', display: 'flex', gap: '3px' }}>
+          {['Tue–Sun','5PM–11PM','Reservations'].map(t => (
+            <div key={t} style={{ padding: '2px 5px', background: 'rgba(0,0,0,0.45)', borderRadius: '2px', fontSize: '4px', color: 'rgba(255,255,255,0.75)', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(4px)' }}>{t}</div>
+          ))}
+        </div>
+        {/* Reservation picker */}
+        <div style={{ padding: '8px 12px', background: 'rgba(12,8,3,0.8)', backdropFilter: 'blur(12px)', borderTop: `1px solid ${b.accent}44` }}>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '5px' }}>Tonight's Reservations</div>
+          <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+            {['7:00','7:30','8:00','8:30'].map((t, i) => (
+              <div key={t} style={{ flex: 1, padding: '5px 2px', background: i === 1 ? b.accent : 'rgba(255,255,255,0.07)', borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: i === 1 ? '#000' : 'rgba(255,255,255,0.7)', border: i === 1 ? 'none' : '1px solid rgba(255,255,255,0.1)' }}>{t}</div>
+            ))}
+          </div>
+          <div style={{ padding: '6px 10px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#000', letterSpacing: '0.06em' }}>Reserve Table for 2 →</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// HOME SERVICES — full bleed photo, emergency CTA + service grid overlaid
+function PlumbHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Navy gradient scrim */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(12,30,50,0.88) 0%, rgba(12,30,50,0.3) 35%, rgba(12,30,50,0.88) 65%, rgba(12,30,50,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Top bar */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '7.5px', fontWeight: 800, color: '#fff', letterSpacing: '0.04em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Licensed & Bonded · Detroit Metro</div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e' }} />
+            <span style={{ fontSize: '4.5px', color: '#22c55e', fontWeight: 600 }}>Available Now</span>
+          </div>
+        </div>
+        {/* Spacer */}
+        <div style={{ flex: 1 }} />
+        {/* Emergency call banner */}
+        <div style={{ margin: '0 12px 8px', padding: '11px 12px', background: b.accent, borderRadius: '8px', textAlign: 'center', boxShadow: `0 4px 20px ${b.accent}66`, backdropFilter: 'blur(4px)' }}>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '3px' }}>Emergency Service · 24/7</div>
+          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1 }}>{b.phone}</div>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.75)', marginTop: '3px' }}>Avg response: 47 minutes</div>
+        </div>
+        {/* Service grid */}
+        <div style={{ padding: '0 12px 6px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', marginBottom: '6px' }}>
+            {[['🚿','Emergency Leak'],['🪠','Drain Clog'],['🔧','Pipe Repair'],['🛁','Water Heater']].map(([icon, label]) => (
+              <div key={label} style={{ padding: '6px 7px', background: 'rgba(255,255,255,0.08)', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.12)', display: 'flex', alignItems: 'center', gap: '5px', backdropFilter: 'blur(6px)' }}>
+                <span style={{ fontSize: '9px' }}>{icon}</span>
+                <span style={{ fontSize: '5px', fontWeight: 600, color: '#fff' }}>{label}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            {['⭐ 4.9 Rating','2,100+ Jobs','Free Estimate'].map(t => (
+              <div key={t} style={{ flex: 1, padding: '3.5px 2px', background: 'rgba(255,255,255,0.07)', borderRadius: '3px', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center', fontSize: '4px', fontWeight: 600, color: 'rgba(255,255,255,0.8)', backdropFilter: 'blur(4px)' }}>{t}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// COSMETIC DENTISTRY — full bleed photo, before/after + consult CTA overlaid
+function DentalHome({ b }: { b: Biz }) {
+  return (
+    <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
+      <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Clean teal-tinted gradient */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(5,42,32,0.82) 0%, rgba(5,42,32,0.2) 35%, rgba(5,42,32,0.88) 65%, rgba(5,42,32,0.97) 100%)' }} />
+      <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <StatusBar />
+        {/* Header */}
+        <div style={{ padding: '6px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontSize: '7px', fontWeight: 800, color: '#fff', letterSpacing: '0.06em' }}>{b.name.toUpperCase()}</div>
+            <div style={{ fontSize: '4px', color: b.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '1px' }}>Birmingham, MI · Smile Aesthetics</div>
+          </div>
+          <div style={{ padding: '3px 8px', background: b.accent, borderRadius: '20px', fontSize: '5px', fontWeight: 700, color: '#fff' }}>Free Consult</div>
+        </div>
+        {/* Center headline */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 12px' }}>
+          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '4px' }}>Smile Transformation</div>
+          <div style={{ fontSize: '22px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.03em', textShadow: '0 2px 16px rgba(0,0,0,0.5)', marginBottom: '6px' }}>Your Smile,<br />Perfected</div>
+          {/* Before/After label strip */}
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <div style={{ flex: 1, padding: '4px 6px', background: 'rgba(0,0,0,0.45)', borderRadius: '4px', textAlign: 'center', fontSize: '5px', fontWeight: 700, color: '#fff', border: '1px solid rgba(255,255,255,0.15)' }}>BEFORE ✕</div>
+            <div style={{ flex: 1, padding: '4px 6px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '5px', fontWeight: 700, color: '#fff' }}>AFTER ✓</div>
+          </div>
+        </div>
+        {/* Treatments + CTA */}
+        <div style={{ padding: '0 12px 10px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', marginBottom: '7px' }}>
+            {b.services.map(s => (
+              <div key={s} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 8px', background: 'rgba(255,255,255,0.07)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(4px)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: b.accent, flexShrink: 0 }} />
+                  <span style={{ fontSize: '5.5px', color: '#fff', fontWeight: 500 }}>{s}</span>
+                </div>
+                <span style={{ fontSize: '6px', color: b.accent }}>›</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ padding: '7px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em' }}>
+            Book Your Free Smile Consultation →
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HomeScreen({ b }: { b: Biz }) {
+  if (b.id === 'glass')  return <GlassHome   b={b} />;
+  if (b.id === 'barber') return <BarberHome   b={b} />;
+  if (b.id === 'land')   return <LandHome     b={b} />;
+  if (b.id === 'salon')  return <SalonHome    b={b} />;
+  if (b.id === 'fitness')return <FitnessHome  b={b} />;
+  if (b.id === 'resto')  return <RestoHome    b={b} />;
+  if (b.id === 'plumb')  return <PlumbHome    b={b} />;
+  if (b.id === 'dental') return <DentalHome   b={b} />;
+  return null;
 }
 
 // ══ SERVICES SCREEN ══════════════════════════════════════════════════════════
@@ -365,26 +710,28 @@ function Phone({ b, category }: { b: Biz; category: Category }) {
       </div>
       {/* ── Frame ── */}
       <div style={{
-        width: '216px', height: '444px',
+        width: `${PHONE_W}px`, height: `${PHONE_H}px`,
         background: '#0e0e0e',
-        borderRadius: '40px',
+        borderRadius: `${40 * PHONE_SCALE}px`,
         border: '2.5px solid #252525',
         overflow: 'hidden',
-        boxShadow: '0 0 0 1px rgba(255,255,255,0.04), inset 0 0 0 1px rgba(255,255,255,0.04), 0 36px 80px rgba(0,0,0,0.55), 0 12px 28px rgba(0,0,0,0.4)',
+        boxShadow: '0 0 0 1px rgba(255,255,255,0.04), inset 0 0 0 1px rgba(255,255,255,0.04), 0 48px 100px rgba(0,0,0,0.55), 0 16px 36px rgba(0,0,0,0.4)',
         position: 'relative',
         flexShrink: 0,
       }}>
-        {/* dynamic island */}
-        <div style={{ position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)', width: '62px', height: '16px', background: '#000', borderRadius: '12px', zIndex: 10 }} />
-        {/* screen */}
-        <div style={{ height: '100%', paddingTop: '2px' }}>
-          {category === 'home'     && <HomeScreen     b={b} />}
-          {category === 'services' && <ServicesScreen b={b} />}
-          {category === 'about'    && <AboutScreen    b={b} />}
-          {category === 'contact'  && <ContactScreen  b={b} />}
+        {/* dynamic island — scaled position */}
+        <div style={{ position: 'absolute', top: `${10 * PHONE_SCALE}px`, left: '50%', transform: 'translateX(-50%)', width: `${62 * PHONE_SCALE}px`, height: `${16 * PHONE_SCALE}px`, background: '#000', borderRadius: `${12 * PHONE_SCALE}px`, zIndex: 10 }} />
+        {/* screen — scale all inner content proportionally */}
+        <div style={{ height: '100%', paddingTop: '2px', overflow: 'hidden' }}>
+          <div style={{ width: '216px', height: '444px', transform: `scale(${PHONE_SCALE})`, transformOrigin: 'top left' }}>
+            {category === 'home'     && <HomeScreen     b={b} />}
+            {category === 'services' && <ServicesScreen b={b} />}
+            {category === 'about'    && <AboutScreen    b={b} />}
+            {category === 'contact'  && <ContactScreen  b={b} />}
+          </div>
         </div>
         {/* specular sheen */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)', borderRadius: '38px', pointerEvents: 'none', zIndex: 6 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)', borderRadius: `${38 * PHONE_SCALE}px`, pointerEvents: 'none', zIndex: 6 }} />
       </div>
     </div>
   );
@@ -399,7 +746,10 @@ const TABS: { id: Category; label: string }[] = [
   { id: 'contact',  label: 'Contact'    },
 ];
 
-const LOOP_PX = BIZ.length * 240; // 8 × 240px = 1920px
+const PHONE_W  = 216;
+const PHONE_H  = 444;
+const PHONE_SCALE = 1;
+const LOOP_PX  = BIZ.length * (PHONE_W + 24); // 8 × 240px = 1920px
 
 export default function PhoneMockupScroll() {
   const [active, setActive] = useState<Category>('home');
@@ -469,7 +819,7 @@ export default function PhoneMockupScroll() {
         <div
           className="pms-track"
           style={{
-            display: 'flex', gap: '24px', padding: '8px 0 32px',
+            display: 'flex', gap: '28px', padding: '8px 0 40px',
             opacity: fading ? 0 : 1, transition: 'opacity 0.2s ease',
             animation: 'pmsScroll 46s linear infinite',
             willChange: 'transform',

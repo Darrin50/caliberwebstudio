@@ -81,6 +81,22 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
+/* Premium grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+[data-theme="light"] body::before {
+  opacity: 0.025;
+}
+
 /* ═══════════════════════════════════════════════════════
    TYPOGRAPHY HIERARCHY
    ═══════════════════════════════════════════════════════ */
@@ -234,6 +250,28 @@ a, button {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0,118,182,0.15); }
+  50% { box-shadow: 0 0 40px rgba(0,118,182,0.3), 0 0 80px rgba(0,118,182,0.1); }
+}
+@keyframes border-flow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 /* ═══════════════════════════════════════════════════════
    SCROLL REVEAL — Apple-style
    ═══════════════════════════════════════════════════════ */
@@ -305,6 +343,23 @@ html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
   opacity: 0.3;
 }
 
+/* Premium section divider with glow */
+.section-divider-glow {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--navy) 20%, var(--accent) 50%, var(--navy) 80%, transparent 100%);
+  opacity: 0.4;
+  position: relative;
+}
+.section-divider-glow::after {
+  content: '';
+  position: absolute;
+  inset: -4px 0;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0.5;
+}
+
 /* Dark/light section alternation */
 .section-light { background: var(--bg2); }
 .section-dark  { background: var(--bg); }
@@ -365,6 +420,28 @@ html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
   background-clip: text;
 }
 
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--navy), var(--accent), var(--navy));
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
 /* ═══════════════════════════════════════════════════════
    BUTTONS
    ═══════════════════════════════════════════════════════ */
@@ -393,7 +470,7 @@ html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
   left: -150%;
   transition: left 0.5s ease;
 }
-.btn-chrome:hover { box-shadow: 0 8px 32px rgba(168,184,200,0.25); }
+.btn-chrome:hover { box-shadow: 0 8px 32px rgba(168,184,200,0.25); transform: translateY(-2px); }
 .btn-chrome:hover::before { left: 150%; }
 
 /* Ripple on hover for buttons */
@@ -430,6 +507,25 @@ html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
 [data-theme="light"] .btn-line { color: rgba(20,30,80,0.5); border-color: rgba(30,61,143,0.2); }
 [data-theme="light"] .btn-line:hover { color: var(--navy); }
 
+/* Text hover underline - premium */
+.text-hover-line {
+  position: relative;
+  display: inline-block;
+}
+.text-hover-line::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--navy), var(--accent));
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.text-hover-line:hover::after {
+  width: 100%;
+}
+
 /* ═══════════════════════════════════════════════════════
    CARD HOVER STATES — premium with border glow + lift
    ═══════════════════════════════════════════════════════ */
@@ -462,6 +558,25 @@ html.js-ready .fu:nth-child(5) { transition-delay: 0.4s; }
   transform-style: preserve-3d;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   will-change: transform;
+}
+
+/* Premium card glow on hover */
+.card-glow {
+  position: relative;
+  overflow: hidden;
+}
+.card-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,118,182,0.06), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.card-glow:hover::after {
+  opacity: 1;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -506,6 +621,16 @@ input:focus, textarea:focus {
   animation: count-up 0.3s ease forwards;
 }
 
+/* Page entrance animation */
+@media (prefers-reduced-motion: no-preference) {
+  main > section:first-child {
+    animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  main > section:nth-child(2) {
+    animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════
    MOBILE TYPOGRAPHY
    ═══════════════════════════════════════════════════════ */
@@ -537,9 +662,18 @@ input:focus, textarea:focus {
 [data-theme="light"] [data-dark-section] .sec-label { color: #1e3d8f !important; }
 [data-theme="light"] [data-dark-section] .sec-label::before { background: #1e3d8f !important; }
 
-/* Hero h1 spans — use ID specificity to beat all light-mode overrides */
-[data-theme="light"] #hero h1 { color: #ffffff !important; }
-[data-theme="light"] #hero h1 span { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; background: none !important; }
+/* Hero headline text color CSS vars — used via inline style in Hero.tsx */
+:root { --hero-text: #ffffff; }
+html[data-theme="light"] { --hero-text: #A8B8C8; }
+
+/* Ensure no shine/gradient bleeds onto hero spans */
+#hero h1 span {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: inherit !important;
+  animation: none !important;
+}
 
 [data-theme="light"] h1 { color: #0a0a0a !important; }
 [data-theme="light"] h1 div { color: #0a0a0a !important; -webkit-text-fill-color: #0a0a0a !important; background: none !important; }
@@ -661,8 +795,8 @@ html[data-theme="light"] .pricing-cta:hover {
 }
 
 html[data-theme="light"] .startup-card {
-  background: rgba(254,243,199,0.6);
-  border-color: rgba(217,119,6,0.4);
+  background: rgba(0,118,182,0.08);
+  border-color: rgba(0,118,182,0.35);
 }
 html[data-theme="light"] .startup-card p,
 html[data-theme="light"] .startup-card li { color: #1a1a1a !important; }

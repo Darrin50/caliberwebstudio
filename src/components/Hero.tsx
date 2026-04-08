@@ -13,7 +13,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '80px clamp(20px, 6vw, 60px) 60px',
-        background: '#0b1628',
+        background: 'var(--bg)',
         textAlign: 'center',
       }}
     >
@@ -76,15 +76,15 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             fontWeight: 800,
             lineHeight: 1.05,
             letterSpacing: '-0.03em',
-            color: '#ffffff',
+            color: 'var(--hero-text)',
             margin: '24px 0 0',
             maxWidth: '900px',
             marginLeft: 'auto',
             marginRight: 'auto',
           }}
         >
-          <span className="hero-line-1" style={{ display: 'block' }}>Detroit Websites That</span>
-          <span className="hero-line-2" style={{ display: 'block' }}>
+          <span style={{ display: 'block', color: 'var(--hero-text)', WebkitTextFillColor: 'var(--hero-text)' }}>Detroit Websites That</span>
+          <span style={{ display: 'block', color: 'var(--hero-text)', WebkitTextFillColor: 'var(--hero-text)' }}>
             Get Found and Win Customers.
           </span>
         </h1>

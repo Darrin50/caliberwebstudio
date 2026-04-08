@@ -662,15 +662,18 @@ input:focus, textarea:focus {
 [data-theme="light"] [data-dark-section] .sec-label { color: #1e3d8f !important; }
 [data-theme="light"] [data-dark-section] .sec-label::before { background: #1e3d8f !important; }
 
-/* Hero headline — dark mode: white; light mode: gray */
-.hero-line-1 { color: #ffffff; -webkit-text-fill-color: #ffffff; }
-.hero-line-2 { color: #ffffff; -webkit-text-fill-color: #ffffff; }
-html[data-theme="light"] .hero-line-1 { color: #A8B8C8 !important; -webkit-text-fill-color: #A8B8C8 !important; background: none !important; }
-html[data-theme="light"] .hero-line-2 { color: #A8B8C8 !important; -webkit-text-fill-color: #A8B8C8 !important; background: none !important; }
+/* Hero headline text color CSS vars — used via inline style in Hero.tsx */
+:root { --hero-text: #ffffff; }
+html[data-theme="light"] { --hero-text: #A8B8C8; }
 
-/* Legacy override — keep hero h1 from being clobbered by other light-mode rules */
-[data-theme="light"] #hero h1 { color: #ffffff !important; }
-[data-theme="light"] #hero h1 span { -webkit-text-fill-color: unset !important; background: none !important; }
+/* Ensure no shine/gradient bleeds onto hero spans */
+#hero h1 span {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: inherit !important;
+  animation: none !important;
+}
 
 [data-theme="light"] h1 { color: #0a0a0a !important; }
 [data-theme="light"] h1 div { color: #0a0a0a !important; -webkit-text-fill-color: #0a0a0a !important; background: none !important; }

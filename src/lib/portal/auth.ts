@@ -7,12 +7,14 @@ import { getClientByEmail, getClient } from './clients';
 import type { ClientConfig } from './types';
 
 const secret = process.env.PORTAL_JWT_SECRET;
-if (!secret && process.env.NODE_ENV !== 'production') {
-  throw new Error('PORTAL_JWT_SECRET environment variable is not set');
+if (!secret) {
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('PORTAL_JWT_SECRET environment variable is required in production');
+  }
+  // In development only: warn and use a fixed dev secret so magic links survive restarts
+  console.warn('[Portal Auth] PORTAL_JWT_SECRET not set — using dev-only fallback. Set this env var before deploying.');
 }
-const JWT_SECRET = new TextEncoder().encode(
-  secret || crypto.randomUUID() // production fallback: random per-instance (magic links won't persist across redeploys, but no hardcoded secret)
-);
+const JWT_SECRET = new TextEncoder().encode(secret ?? 'dev-only-secret-do-not-use-in-production');
 
 const COOKIE_NAME = 'caliber-portal-token';
 const TOKEN_EXPIRY = '30d';

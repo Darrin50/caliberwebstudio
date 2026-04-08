@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { getAuthenticatedClient } from '@/lib/portal/auth';
 import { getClient } from '@/lib/portal/clients';
 import { hasFeature } from '@/lib/portal/types';
@@ -155,11 +156,8 @@ export default async function DashboardPage({ params }: PageProps) {
     { name: 'Email', value: trafficSources.find((s) => s.source === 'email')?.sessions || 0 },
   ];
 
-  // Prepare ranking data for chart (mock data if not available)
+  // Prepare ranking data for chart (empty until rankings API provides data)
   const rankingData: RankingOverTime[] = [];
-  if (!hasFeature(client.plan, 'basic_rankings')) {
-    rankingData.push();
-  }
 
   return (
     <div style={{ padding: '32px', maxWidth: '1600px', width: '100%' }}>
@@ -251,9 +249,9 @@ export default async function DashboardPage({ params }: PageProps) {
         }}
       >
         {kpis.length > 0 ? (
-          kpis.map((kpi, idx) => (
+          kpis.map((kpi) => (
             <KPICard
-              key={idx}
+              key={kpi.label}
               label={kpi.label}
               value={kpi.value}
               change={kpi.change}
@@ -388,17 +386,19 @@ export default async function DashboardPage({ params }: PageProps) {
                 </div>
               ))}
               {recentLeads.length > 5 && (
-                <p
+                <Link
+                  href={`/client/${slug}/leads`}
                   style={{
+                    display: 'block',
                     margin: '8px 0 0 0',
                     fontSize: '12px',
                     color: '#3B82F6',
-                    cursor: 'pointer',
                     fontWeight: 500,
+                    textDecoration: 'none',
                   }}
                 >
                   View all {recentLeads.length} leads →
-                </p>
+                </Link>
               )}
             </div>
           ) : (
@@ -436,8 +436,10 @@ export default async function DashboardPage({ params }: PageProps) {
           </h3>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <button
+            <Link
+              href={`/client/${slug}/traffic`}
               style={{
+                display: 'block',
                 padding: '12px 16px',
                 backgroundColor: '#2563eb',
                 color: '#FFFFFF',
@@ -445,22 +447,18 @@ export default async function DashboardPage({ params }: PageProps) {
                 borderRadius: '8px',
                 fontSize: '13px',
                 fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLButtonElement).style.backgroundColor = '#1d4ed8';
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLButtonElement).style.backgroundColor = '#2563eb';
+                textDecoration: 'none',
+                textAlign: 'center',
               }}
             >
               View Full Traffic Report
-            </button>
+            </Link>
 
-            {hasFeature(client.plan, 'review_management') && (
-              <button
+            {hasFeature(client.plan, 'review_management') ? (
+              <Link
+                href={`/client/${slug}/reviews`}
                 style={{
+                  display: 'block',
                   padding: '12px 16px',
                   backgroundColor: 'transparent',
                   color: '#3B82F6',
@@ -468,28 +466,21 @@ export default async function DashboardPage({ params }: PageProps) {
                   borderRadius: '8px',
                   fontSize: '13px',
                   fontWeight: 600,
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLButtonElement).style.backgroundColor =
-                    'rgba(37, 99, 235, 0.08)';
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLButtonElement).style.backgroundColor = 'transparent';
+                  textDecoration: 'none',
+                  textAlign: 'center',
                 }}
               >
                 Manage Reviews
-              </button>
-            )}
-
-            {!hasFeature(client.plan, 'review_management') && (
+              </Link>
+            ) : (
               <UpgradePrompt feature="review_management" plan={client.plan} />
             )}
 
-            {hasFeature(client.plan, 'basic_rankings') && (
-              <button
+            {hasFeature(client.plan, 'basic_rankings') ? (
+              <Link
+                href={`/client/${slug}/rankings`}
                 style={{
+                  display: 'block',
                   padding: '12px 16px',
                   backgroundColor: 'transparent',
                   color: '#3B82F6',
@@ -497,27 +488,20 @@ export default async function DashboardPage({ params }: PageProps) {
                   borderRadius: '8px',
                   fontSize: '13px',
                   fontWeight: 600,
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLButtonElement).style.backgroundColor =
-                    'rgba(37, 99, 235, 0.08)';
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLButtonElement).style.backgroundColor = 'transparent';
+                  textDecoration: 'none',
+                  textAlign: 'center',
                 }}
               >
                 View All Keywords
-              </button>
-            )}
-
-            {!hasFeature(client.plan, 'basic_rankings') && (
+              </Link>
+            ) : (
               <UpgradePrompt feature="basic_rankings" plan={client.plan} />
             )}
 
-            <button
+            <Link
+              href={`/client/${slug}/leads`}
               style={{
+                display: 'block',
                 padding: '12px 16px',
                 backgroundColor: 'transparent',
                 color: '#3B82F6',
@@ -525,19 +509,12 @@ export default async function DashboardPage({ params }: PageProps) {
                 borderRadius: '8px',
                 fontSize: '13px',
                 fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLButtonElement).style.backgroundColor =
-                  'rgba(37, 99, 235, 0.08)';
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLButtonElement).style.backgroundColor = 'transparent';
+                textDecoration: 'none',
+                textAlign: 'center',
               }}
             >
-              Download Monthly Report
-            </button>
+              View All Leads
+            </Link>
           </div>
         </div>
       </div>

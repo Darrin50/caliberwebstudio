@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import type { PlanTier } from '@/lib/portal/types';
 
@@ -49,11 +49,24 @@ export default function SettingsClient({
 }: SettingsClientProps) {
   const router = useRouter();
   const [isSigningOut, setIsSigningOut] = useState(false);
-  const [notificationPreferences, setNotificationPreferences] = useState({
-    weeklyReport: true,
-    newLeadAlerts: true,
-    newReviewAlerts: true,
-    rankingChangeAlerts: false,
+  const [notifSaved, setNotifSaved] = useState(false);
+
+  const NOTIF_KEY = `caliber-notif-prefs-${slug}`;
+
+  const [notificationPreferences, setNotificationPreferences] = useState(() => {
+    const defaults = {
+      weeklyReport: true,
+      newLeadAlerts: true,
+      newReviewAlerts: true,
+      rankingChangeAlerts: false,
+    };
+    if (typeof window === 'undefined') return defaults;
+    try {
+      const saved = localStorage.getItem(NOTIF_KEY);
+      return saved ? { ...defaults, ...JSON.parse(saved) } : defaults;
+    } catch {
+      return defaults;
+    }
   });
 
   const handleSignOut = async () => {
@@ -77,6 +90,17 @@ export default function SettingsClient({
       ...prev,
       [key]: !prev[key],
     }));
+    setNotifSaved(false);
+  };
+
+  const saveNotificationPreferences = () => {
+    try {
+      localStorage.setItem(NOTIF_KEY, JSON.stringify(notificationPreferences));
+      setNotifSaved(true);
+      setTimeout(() => setNotifSaved(false), 3000);
+    } catch {
+      // localStorage unavailable
+    }
   };
 
   const isPremiumPlan = plan !== 'starter';
@@ -763,6 +787,32 @@ export default function SettingsClient({
               </button>
             </div>
           ))}
+        </div>
+
+        {/* Save notification preferences */}
+        <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button
+            onClick={saveNotificationPreferences}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: colors.blue,
+              color: '#fff',
+              border: 'none',
+              borderRadius: '8px',
+              fontSize: '13px',
+              fontWeight: 600,
+              cursor: 'pointer',
+              fontFamily: fontFamilies.body,
+              transition: 'background 0.2s',
+            }}
+          >
+            Save Preferences
+          </button>
+          {notifSaved && (
+            <span style={{ fontSize: '13px', color: colors.success, fontFamily: fontFamilies.body }}>
+              ✓ Preferences saved
+            </span>
+          )}
         </div>
       </div>
 

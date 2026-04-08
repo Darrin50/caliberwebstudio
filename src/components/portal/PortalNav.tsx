@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -9,7 +9,6 @@ interface PortalNavProps {
   slug: string;
   businessName: string;
   plan: 'starter' | 'growth' | 'domination';
-  currentPath: string;
 }
 
 const navItems = [
@@ -75,8 +74,10 @@ function ChartIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <line x1="12" y1="2" x2="12" y2="22" />
-      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      <line x1="18" y1="20" x2="18" y2="10" />
+      <line x1="12" y1="20" x2="12" y2="4" />
+      <line x1="6" y1="20" x2="6" y2="14" />
+      <line x1="2" y1="20" x2="22" y2="20" />
     </svg>
   );
 }
@@ -196,11 +197,9 @@ export default function PortalNav({
   slug,
   businessName,
   plan,
-  currentPath,
 }: PortalNavProps) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
 
   const planColor = planColors[plan] || planColors.starter;
 

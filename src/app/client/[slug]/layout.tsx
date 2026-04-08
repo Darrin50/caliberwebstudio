@@ -54,7 +54,6 @@ export default async function ClientLayout({
           slug={client.slug}
           businessName={client.businessName}
           plan={client.plan}
-          currentPath=""
         />
 
         {/* Main Content Area */}

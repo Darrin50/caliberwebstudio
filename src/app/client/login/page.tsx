@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 /* ─── Style tokens ─── */
 const NAVY = '#1E3D8F';
@@ -193,9 +194,9 @@ function LoginForm() {
         fontFamily: "'Inter', sans-serif", fontSize: '13px', color: 'rgba(255,255,255,0.3)',
       }}>
         Not a client yet?{' '}
-        <a href="/pricing" style={{ color: BLUE, textDecoration: 'none' }}>
+        <Link href="/pricing" style={{ color: BLUE, textDecoration: 'none' }}>
           View our plans
-        </a>
+        </Link>
       </p>
     </form>
   );

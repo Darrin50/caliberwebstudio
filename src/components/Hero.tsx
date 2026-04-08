@@ -13,7 +13,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '80px clamp(20px, 6vw, 60px) 60px',
-        background: '#0a0a0a',
+        background: '#0b1628',
         textAlign: 'center',
       }}
     >

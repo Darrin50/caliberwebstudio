@@ -4728,7 +4728,7 @@ export const posts: BlogPost[] = [
 
 <p><a href="/blog/what-is-schema-markup">Schema markup</a> is code you add to your website that tells Google — in plain, machine-readable language — exactly what your business is, what it offers, where it's located, and how customers have rated it. It doesn't change how your site looks. It changes how intelligently Google and AI engines understand it.</p>
 
-<img src="/blog/schema-markup-explained-local-businesses-1.png" alt="Code editor showing structured data and schema markup implementation" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-1.png" alt="Code editor displaying LocalBusiness JSON-LD schema markup implementation for Detroit business website" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Why Schema Matters More in 2026 Than Ever Before</h2>
 
@@ -4747,7 +4747,7 @@ export const posts: BlogPost[] = [
 
 <p>For any local business, LocalBusiness schema is the most important structured data you can implement. It tells Google everything it needs to know about your physical business: who you are, where you are, how to reach you, and when you're open.</p>
 
-<img src="/blog/schema-markup-explained-local-businesses-2.png" alt="Business information structured data fields for local business schema" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-2.png" alt="LocalBusiness schema fields including address, phone, hours, and service area for Detroit SEO" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>Core Fields You Must Include</h3>
 <p>A complete LocalBusiness schema for a Detroit small business should include:</p>
@@ -4784,7 +4784,7 @@ export const posts: BlogPost[] = [
 
 <p>FAQ schema is the highest-ROI structured data for most local businesses because it enables FAQ rich results — the accordion dropdowns that expand directly in Google search results, showing your questions and answers without the user ever visiting your site. These rich results capture enormous SERP real estate and drive significantly higher click-through rates.</p>
 
-<img src="/blog/schema-markup-explained-local-businesses-3.png" alt="FAQ schema appearing as rich results in Google search" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-3.png" alt="FAQ schema markup generating rich result snippets in Google search for Detroit service business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h3>How to Write FAQs That Get Displayed</h3>
 <p>Google doesn't display every FAQ schema — it evaluates quality, relevance, and whether your FAQs genuinely answer common queries. Write FAQs that address the specific questions your customers actually ask: "How much does a furnace tune-up cost?" "Do you offer emergency plumbing service in Dearborn?" "What's included in your roof inspection?" The more specific and genuinely useful your FAQs, the more likely Google displays them.</p>
@@ -4848,7 +4848,7 @@ export const posts: BlogPost[] = [
 <p>LocalBusiness schema should appear on every page — it establishes business identity site-wide. FAQ schema only goes on pages that actually contain FAQs. Service schema belongs on service pages. Review/AggregateRating schema goes where you display reviews. The goal is relevant schema on every page, not the same schema copy-pasted everywhere.</p>
 
 
-<img src="/blog/schema-markup-explained-local-businesses-4.png" alt="Supporting visual for schema markup explained local businesses" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/schema-markup-explained-local-businesses-4.png" alt="Detroit local business website gaining Google rich results through structured data schema markup" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Schema Markup Built Into Every Caliber Website</strong>
   <p style="margin:12px 0 0;">Every website Caliber Web Studio builds includes complete LocalBusiness, Service, FAQ, and Review schema — properly structured, validated, and maintained. You don't have to figure out the code. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Talk to us about your website today.</a></p>
@@ -4971,7 +4971,7 @@ export const posts: BlogPost[] = [
 <p>Restaurants have a different ROI model than service businesses — success is measured in covers driven and reservations booked, not phone calls. A well-optimized restaurant website in Detroit can realistically add 60–120 reservations per month from organic search and direction requests. At $65 average per table, that's $3,900–$7,800 monthly in attributable revenue — against a website investment of $200–$300/month.</p>
 
 
-<img src="/blog/roi-professional-web-design-numbers-4.png" alt="Supporting visual for roi professional web design numbers" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/roi-professional-web-design-numbers-4.png" alt="Professional website delivering measurable ROI and revenue growth for Detroit small business owner" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">See What a Professional Website Is Worth for Your Business</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds websites for Metro Detroit small businesses that are designed to generate measurable returns — not just look good. Let us run the ROI math for your specific business and market. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free revenue projection today.</a></p>
@@ -5122,7 +5122,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>Yes, significantly. Review count and average rating are two of the three primary factors in Google's local pack ranking algorithm (alongside proximity and relevance). A business with 80 reviews averaging 4.8 stars will consistently outrank a comparable business with 8 reviews averaging 4.5 stars in the same geography, all else being equal.</p>
 
 
-<img src="/blog/get-google-reviews-without-being-annoying-4.png" alt="Supporting visual for get google reviews without being annoying" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/get-google-reviews-without-being-annoying-4.png" alt="Detroit business monitoring Google review growth and online reputation on analytics dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Build Your Review Engine Into Your Website</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds review collection systems directly into the websites we design — review request integrations, response templates, and GBP optimization that turns satisfied customers into a compounding ranking advantage. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Let's build yours today.</a></p>
@@ -5256,7 +5256,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>Build a comprehensive, specific FAQ page on your website and implement FAQ schema markup. It's the highest-ROI single action for AI visibility because it directly creates the structured Q&A content that AI systems are designed to surface. A page with 10–15 genuine, detailed answers to the questions your customers ask is more citation-worthy than a beautifully designed homepage with no structured content.</p>
 
 
-<img src="/blog/chatgpt-perplexity-local-business-visibility-4.png" alt="Supporting visual for chatgpt perplexity local business visibility" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/chatgpt-perplexity-local-business-visibility-4.png" alt="Detroit local business cited as a trusted source in ChatGPT and Perplexity AI search answers" style="width:100%;border-radius:12px;margin:32px 0;" />
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Built to Be Found — by Google and AI</strong>
   <p style="margin:12px 0 0;">Every Caliber Web Studio website is built with schema markup, FAQ content, and structured service pages designed to earn citations in AI search engines — not just rank in Google. If your business isn't showing up where your customers are searching, <a href="/contact" style="color:#1E3D8F;font-weight:600;">let's fix that today.</a></p>
@@ -5274,7 +5274,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     content: `
 <p><a href="/blog/what-is-aeo-answer-engine-optimization">Answer Engine Optimization</a> (AEO) is the practice of structuring your website's content so that AI tools — ChatGPT, Perplexity, Google AI Overviews, and others — pull from your business when answering user questions. For Detroit businesses, AEO in 2026 isn't optional; it's where your next customer finds you before they ever click a link.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-1.png" alt="AI search interface showing answer engine results" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/aeo-2026-detroit-businesses-guide-1.png" alt="Answer engine optimization results showing Detroit business featured in ChatGPT and Google AI Overviews" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>AEO vs. SEO: What's the Actual Difference?</h2>
 
@@ -5286,7 +5286,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>You need both. But if you've been ignoring AEO entirely, you're already losing ground.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-2.png" alt="Code and data structures representing structured content markup" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/aeo-2026-detroit-businesses-guide-2.png" alt="Structured content and schema markup code helping Detroit businesses rank in AI-powered answer engines" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How AI Engines Decide Who to Cite for Local Businesses</h2>
 
@@ -5335,7 +5335,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>5. Build Local Context Into Your Content</h3>
 <p>Every page should mention Detroit (or your specific neighborhood), your service area, and local context where it's natural. Not keyword stuffing — actual local relevance. A roofing <a href="/industries/contractors">contractor in</a> Warren, Michigan should mention Warren, the surrounding communities they serve, local weather context (Michigan winters, ice dams, freeze-thaw cycles), and local permit considerations. This geographic specificity is what AI systems use to match your business to location-based queries.</p>
 
-<img src="/blog/aeo-2026-detroit-businesses-guide-4.png" alt="Analytics dashboard showing search visibility data" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/aeo-2026-detroit-businesses-guide-4.png" alt="Search visibility analytics dashboard showing AEO performance gains for Detroit local business" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>FAQ Schema: The Technical Foundation</h2>
 

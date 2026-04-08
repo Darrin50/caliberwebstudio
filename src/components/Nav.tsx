@@ -26,13 +26,26 @@ export default function Nav() {
       document.documentElement.setAttribute('data-theme', theme);
       currentTheme = theme;
       try { localStorage.setItem('caliber-theme-v2', theme); } catch(e) {}
-      const icon = toggle.querySelector('.toggle-icon') as HTMLSpanElement;
-      if (icon) {
-        icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-        icon.style.transform = theme === 'dark' ? 'translateX(24px)' : 'translateX(0)';
-        icon.style.background = theme === 'dark' ? 'linear-gradient(135deg, #ffcc40, #ff8800)' : 'linear-gradient(135deg, #ffcc40, #ff6600)';
+
+      const knob    = toggle.querySelector('.toggle-icon')    as HTMLElement;
+      const bgDark  = toggle.querySelector('.toggle-bg-dark') as HTMLElement;
+      const bgLight = toggle.querySelector('.toggle-bg-light') as HTMLElement;
+      const sun     = toggle.querySelector('.icon-sun')        as HTMLElement;
+      const moon    = toggle.querySelector('.icon-moon')       as HTMLElement;
+
+      if (theme === 'dark') {
+        if (knob)    knob.style.transform   = 'translateX(38px)';
+        if (bgDark)  bgDark.style.opacity   = '1';
+        if (bgLight) bgLight.style.opacity  = '0';
+        if (sun)     sun.style.opacity      = '0';
+        if (moon)    moon.style.opacity     = '1';
+      } else {
+        if (knob)    knob.style.transform   = 'translateX(0)';
+        if (bgDark)  bgDark.style.opacity   = '0';
+        if (bgLight) bgLight.style.opacity  = '1';
+        if (sun)     sun.style.opacity      = '1';
+        if (moon)    moon.style.opacity     = '0';
       }
-      toggle.style.background = theme === 'dark' ? 'rgba(168,184,200,0.15)' : 'rgba(30,61,143,0.18)';
     };
 
     // Sync button state with current theme on mount
@@ -207,8 +220,93 @@ export default function Nav() {
         </ul>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <button ref={toggleRef} id="themeToggle" title="Toggle theme" style={{ width: '52px', height: '28px', borderRadius: '14px', border: 'none', background: 'rgba(168,184,200,0.15)', cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '3px', transition: 'background 0.3s' }}>
-            <span className="toggle-icon" style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'linear-gradient(135deg, #ffcc40, #ff6600)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', transition: 'transform 0.3s', transform: 'translateX(0)' }}>{'☀️'}</span>
+          {/* ── Theme toggle ── */}
+          <button
+            ref={toggleRef} id="themeToggle" title="Toggle theme"
+            style={{
+              position: 'relative', width: '72px', height: '36px',
+              borderRadius: '18px', border: 'none', cursor: 'pointer',
+              padding: 0, overflow: 'hidden', flexShrink: 0,
+              boxShadow: 'inset 0 2px 6px rgba(0,0,0,0.45), inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.06)',
+            }}
+          >
+            {/* ── DARK bg: deep night sky ── */}
+            <span className="toggle-bg toggle-bg-dark" style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(130deg, #0b1628 0%, #0f2044 60%, #162952 100%)',
+              transition: 'opacity 0.35s', opacity: 1,
+            }}>
+              {/* Sparkle stars — left zone (where the moon is NOT) */}
+              <svg width="72" height="36" viewBox="0 0 72 36" fill="none" style={{ position: 'absolute', inset: 0 }}>
+                {/* 4-pointed sparkles */}
+                <path d="M14 8 L15 12 L19 13 L15 14 L14 18 L13 14 L9 13 L13 12 Z" fill="white" opacity="0.95"/>
+                <path d="M22 22 L22.8 25 L26 25.8 L22.8 26.6 L22 30 L21.2 26.6 L18 25.8 L21.2 25 Z" fill="white" opacity="0.7" transform="scale(0.6) translate(18,18)"/>
+                <path d="M8 24 L8.5 26.5 L11 27 L8.5 27.5 L8 30 L7.5 27.5 L5 27 L7.5 26.5 Z" fill="white" opacity="0.8" />
+                {/* tiny dot stars */}
+                <circle cx="26" cy="8"  r="1"   fill="white" opacity="0.6"/>
+                <circle cx="20" cy="28" r="0.7" fill="white" opacity="0.5"/>
+                <circle cx="30" cy="20" r="0.8" fill="white" opacity="0.45"/>
+                <circle cx="10" cy="15" r="0.6" fill="white" opacity="0.55"/>
+              </svg>
+            </span>
+
+            {/* ── LIGHT bg: daytime sky ── */}
+            <span className="toggle-bg toggle-bg-light" style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(130deg, #6ec6f5 0%, #9dd8f8 50%, #c6ecff 100%)',
+              transition: 'opacity 0.35s', opacity: 0,
+            }}>
+              {/* Clouds — right zone (where the sun is NOT) */}
+              <svg width="72" height="36" viewBox="0 0 72 36" fill="none" style={{ position: 'absolute', inset: 0 }}>
+                {/* Main cloud */}
+                <ellipse cx="56" cy="24" rx="11" ry="6"   fill="white" opacity="0.95"/>
+                <ellipse cx="52" cy="21" rx="7"  ry="5.5" fill="white" opacity="0.95"/>
+                <ellipse cx="61" cy="21" rx="6"  ry="5"   fill="white" opacity="0.9"/>
+                <ellipse cx="56" cy="18" rx="5"  ry="4"   fill="white" opacity="0.85"/>
+                {/* Smaller background cloud */}
+                <ellipse cx="44" cy="30" rx="7"  ry="4"   fill="white" opacity="0.6"/>
+                <ellipse cx="40" cy="28" rx="5"  ry="3.5" fill="white" opacity="0.6"/>
+                <ellipse cx="49" cy="28" rx="4"  ry="3"   fill="white" opacity="0.55"/>
+              </svg>
+            </span>
+
+            {/* ── Knob ── */}
+            <span className="toggle-icon" style={{
+              position: 'absolute', top: '4px', left: '4px',
+              width: '28px', height: '28px', borderRadius: '50%',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              transition: 'transform 0.38s cubic-bezier(0.34,1.45,0.64,1)',
+              transform: 'translateX(0)',
+              zIndex: 2,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3)',
+            }}>
+              {/* ── Sun (shown in light mode) ── */}
+              <svg className="icon-sun" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                style={{ position: 'absolute', transition: 'opacity 0.25s', opacity: 1 }}>
+                <circle cx="14" cy="14" r="14" fill="#FFD000"/>
+                <circle cx="14" cy="14" r="9"  fill="#FFE040"/>
+                {/* subtle inner glow ring */}
+                <circle cx="14" cy="14" r="6.5" fill="#FFEE80" opacity="0.6"/>
+              </svg>
+
+              {/* ── Moon (shown in dark mode) ── */}
+              <svg className="icon-moon" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                style={{ position: 'absolute', transition: 'opacity 0.25s', opacity: 0 }}>
+                {/* moon face — off-white circle */}
+                <circle cx="14" cy="14" r="14" fill="#c8cfd8"/>
+                <circle cx="14" cy="14" r="14" fill="url(#moon-grad)"/>
+                {/* craters */}
+                <circle cx="10" cy="10" r="3"   fill="#a8b0bc" opacity="0.8"/>
+                <circle cx="18" cy="18" r="2.2" fill="#a8b0bc" opacity="0.7"/>
+                <circle cx="17" cy="9"  r="1.6" fill="#a8b0bc" opacity="0.6"/>
+                <defs>
+                  <radialGradient id="moon-grad" cx="35%" cy="35%">
+                    <stop offset="0%"   stopColor="#dde3ea"/>
+                    <stop offset="100%" stopColor="#b0b8c4"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </span>
           </button>
 
           <Link href="/contact" className="nav-btn nav-cta-desktop btn-chrome" style={{ textDecoration: 'none', padding: '10px 22px', fontSize: '10px' }}>Get Your Free Mockup</Link>

@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
+import { getAuthenticatedClient } from '@/lib/portal/auth';
+import { getClient } from '@/lib/portal/clients';
 import LeadsClient from './LeadsClient';
 
 interface LeadsPageProps {
@@ -10,8 +12,9 @@ export async function generateMetadata(
   { params }: LeadsPageProps,
 ): Promise<Metadata> {
   const { slug } = await params;
+  const client = getClient(slug);
   return {
-    title: `Leads | Caliber Client Portal`,
+    title: `Leads | ${client?.businessName || 'Client Portal'} — Caliber Web Studio`,
     description: 'Track and manage incoming leads',
   };
 }
@@ -19,17 +22,18 @@ export async function generateMetadata(
 export default async function LeadsPage({ params }: LeadsPageProps) {
   const { slug } = await params;
 
-  // TODO: Add auth check via session
-  // const session = await getSession();
-  // if (!session) redirect('/login');
+  // Auth guard — redirect to login if not authenticated
+  const authenticatedClient = await getAuthenticatedClient();
+  if (!authenticatedClient) {
+    redirect('/client/login');
+  }
 
-  // TODO: Verify client ownership
-  // const client = await getClient(slug);
-  // if (!client || client.userId !== session.user.id) redirect('/');
-
-  const plan = 'growth'; // Mock for now
+  // Verify the authenticated client owns this slug
+  if (authenticatedClient.slug !== slug) {
+    redirect(`/client/${authenticatedClient.slug}/leads`);
+  }
 
   return (
-    <LeadsClient slug={slug} plan={plan} />
+    <LeadsClient slug={slug} plan={authenticatedClient.plan} />
   );
 }

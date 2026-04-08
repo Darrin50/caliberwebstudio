@@ -6,7 +6,8 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
       style={{
         position: 'relative',
         overflow: 'hidden',
-        minHeight: '100vh',
+        height: '100vh',
+        maxHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

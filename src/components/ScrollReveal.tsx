@@ -13,6 +13,14 @@ export function ScrollReveal({ children, className = '', delay = 0 }: ScrollReve
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // If already in viewport on mount, reveal immediately (no observer needed)
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setTimeout(() => el.classList.add('visible'), delay);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,7 +28,7 @@ export function ScrollReveal({ children, className = '', delay = 0 }: ScrollReve
           observer.unobserve(el);
         }
       },
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     );
     observer.observe(el);
     return () => observer.disconnect();

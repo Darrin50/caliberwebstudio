@@ -3,6 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: { absolute: "Contact | Caliber Web Studio – Book Your Free Strategy Call" },
@@ -45,45 +46,7 @@ export default function ContactPage() {
           <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
             {/* Contact Form */}
             <ScrollReveal delay={80}>
-              <div style={{ background: "var(--card-bg, rgba(255,255,255,0.04))", border: "1px solid var(--border-color, rgba(255,255,255,0.08))", borderRadius: "20px", padding: "40px 36px" }}>
-              <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "28px", letterSpacing: "-0.01em" }}>
-                Book Your Free Strategy Call
-              </h2>
-              <form action="https://formsubmit.co/singerdarrin50.ds@gmail.com" method="POST" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                <input type="hidden" name="_subject" value="New Lead from Caliber Web Studio" />
-                <input type="hidden" name="_next" value="https://caliberwebstudio.com/startup-complete" />
-                <input type="hidden" name="_captcha" value="false" />
-
-                <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Name *</label>
-                  <input type="text" name="name" required placeholder="Your full name" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
-                </div>
-
-                <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Business Name *</label>
-                  <input type="text" name="business_name" required placeholder="Your business name" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
-                </div>
-
-                <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Phone</label>
-                  <input type="tel" name="phone" placeholder="(313) 555-0100" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
-                </div>
-
-                <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Email *</label>
-                  <input type="email" name="email" required placeholder="you@yourbusiness.com" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none" }} />
-                </div>
-
-                <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-secondary)", marginBottom: "8px", fontFamily: "'Space Mono', monospace" }}>Tell Us About Your Business</label>
-                  <textarea name="message" rows={4} placeholder="What kind of business do you run? What are your biggest challenges right now?" style={{ width: "100%", padding: "12px 16px", background: "var(--card-bg)", border: "1px solid var(--border-color)", borderRadius: "8px", color: "var(--text-primary)", fontSize: "0.95rem", fontFamily: "'Inter', sans-serif", boxSizing: "border-box", outline: "none", resize: "vertical" }} />
-                </div>
-
-                <button type="submit" style={{ padding: "14px 32px", background: "var(--accent, #0070f3)", color: "#fff", border: "none", borderRadius: "9px", fontWeight: 700, fontSize: "1rem", cursor: "pointer", letterSpacing: "0.02em", marginTop: "4px" }}>
-                  Send Your Details →
-                </button>
-              </form>
-              </div>
+              <ContactForm />
             </ScrollReveal>
 
             {/* Right Side */}

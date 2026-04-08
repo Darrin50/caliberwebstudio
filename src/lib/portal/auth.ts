@@ -6,8 +6,12 @@ import { cookies } from 'next/headers';
 import { getClientByEmail, getClient } from './clients';
 import type { ClientConfig } from './types';
 
+const secret = process.env.PORTAL_JWT_SECRET;
+if (!secret && process.env.NODE_ENV !== 'production') {
+  throw new Error('PORTAL_JWT_SECRET environment variable is not set');
+}
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.PORTAL_JWT_SECRET || 'caliber-portal-secret-change-in-production'
+  secret || crypto.randomUUID() // production fallback: random per-instance (magic links won't persist across redeploys, but no hardcoded secret)
 );
 
 const COOKIE_NAME = 'caliber-portal-token';

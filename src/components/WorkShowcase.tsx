@@ -33,12 +33,8 @@ function LandscapingMock() {
         </div>
         {/* Right — luxury image area */}
         <div style={{ flex: '1 1 48%', position: 'relative', overflow: 'hidden' }} className="mk-land-img">
-          <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
-            <div className="mk-land-img-frame" style={{ width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ fontSize: '22px' }}>🌿</span>
-            </div>
-            <span style={{ fontSize: '5px', fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase' }} className="mk-land-img-caption">Featured Estate</span>
-          </div>
+          <img src="/images/prestige-landscapes.png" alt="Prestige Landscapes" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(12,11,9,0.3) 0%, transparent 50%)' }} />
         </div>
       </div>
       {/* Stats with thin dividers */}
@@ -122,8 +118,13 @@ function AutoRepairMock() {
           <span className="mk-auto-book" style={{ fontSize: '5.5px', fontWeight: 700, padding: '3px 8px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'default' }}>Reserve</span>
         </div>
       </div>
+      {/* Hero photo strip */}
+      <div style={{ height: '52px', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+        <img src="/images/apex-automotive.png" alt="Apex Automotive" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.6) 100%)' }} />
+      </div>
       {/* Hero with cinematic gradient */}
-      <div className="mk-auto-hero" style={{ padding: '14px 14px 12px', position: 'relative' }}>
+      <div className="mk-auto-hero" style={{ padding: '10px 14px 10px', position: 'relative' }}>
         <div style={{ fontSize: '5px', fontWeight: 600, letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '6px' }} className="mk-auto-eyebrow">Family Owned · Since 1998 · ASE Master Certified</div>
         <div style={{ fontSize: '16px', fontWeight: 200, lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '5px' }} className="mk-auto-heading">Precision<br/><span style={{ fontWeight: 800 }}>Automotive Care</span></div>
         <div style={{ fontSize: '6.5px', lineHeight: 1.6, marginBottom: '10px' }} className="mk-auto-sub">Expert diagnostics and repair with transparent pricing. No surprises.</div>
@@ -224,8 +225,13 @@ function LawnCareMock() {
           {['Plans', 'Process', 'Reviews'].map(t => <span key={t} style={{ fontSize: '5.5px', letterSpacing: '0.12em', textTransform: 'uppercase' }} className="mk-lawn-link">{t}</span>)}
         </div>
       </div>
+      {/* Photo strip */}
+      <div style={{ height: '50px', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+        <img src="/images/verde-lawn.png" alt="Verde Lawn" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(8,20,8,0.1) 0%, rgba(8,20,8,0.5) 100%)' }} />
+      </div>
       {/* Grand hero — oversized type */}
-      <div className="mk-lawn-hero" style={{ padding: '14px 14px 10px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="mk-lawn-hero" style={{ padding: '10px 14px 8px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ fontSize: '5px', fontWeight: 500, letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '6px' }} className="mk-lawn-eyebrow">Metro Detroit Lawn Atelier</div>
         <div style={{ fontSize: '20px', fontWeight: 200, lineHeight: 0.9, letterSpacing: '-0.03em', marginBottom: '3px' }} className="mk-lawn-heading">your lawn,</div>
         <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 0.9, letterSpacing: '-0.03em', fontStyle: 'italic', marginBottom: '8px' }} className="mk-lawn-heading">elevated.</div>
@@ -343,9 +349,9 @@ function HairExtensionsMock() {
             { n: 'Straight', p: '$75+', tag: '' },
           ].map(s => (
             <div key={s.n} className="mk-hair-product" style={{ borderRadius: '4px', overflow: 'hidden', textAlign: 'center' }}>
-              <div className="mk-hair-prod-img" style={{ height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                <span style={{ fontSize: '14px', opacity: 0.7 }}>✨</span>
-                {s.tag && <span className="mk-hair-tag" style={{ position: 'absolute', top: '2px', left: '2px', fontSize: '3.5px', fontWeight: 700, padding: '1px 4px', borderRadius: '1px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{s.tag}</span>}
+              <div className="mk-hair-prod-img" style={{ height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
+                <img src="/images/crownd-hair.png" alt="Crown'd Hair" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', opacity: 0.85 }} />
+                {s.tag && <span className="mk-hair-tag" style={{ position: 'absolute', top: '2px', left: '2px', fontSize: '3.5px', fontWeight: 700, padding: '1px 4px', borderRadius: '1px', letterSpacing: '0.08em', textTransform: 'uppercase', zIndex: 1 }}>{s.tag}</span>}
               </div>
               <div style={{ padding: '3px 2px 4px' }}>
                 <div style={{ fontSize: '5.5px', fontWeight: 500, letterSpacing: '0.04em' }} className="mk-hair-prod-name">{s.n}</div>
@@ -555,6 +561,7 @@ export default function WorkShowcase() {
         }
         .work-card {
           cursor: default;
+          height: 340px;
           background: var(--work-card-bg, #0a0a0a);
           box-shadow: var(--work-card-shadow, 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04));
           border: 1px solid var(--work-card-border, rgba(255,255,255,0.06));

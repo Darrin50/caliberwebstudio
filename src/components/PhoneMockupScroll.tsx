@@ -577,832 +577,126 @@ function HomeScreen({ b }: { b: Biz }) {
   return null;
 }
 
-// ══ SERVICES SCREENS — each looks like a real Services page ════════════════════
-
-// AUTO GLASS — service list with icons + descriptions + prices
-function GlassServices({ b }: { b: Biz }) {
-  const descs = ['OEM-grade windshield install, lifetime warranty','Chip & star crack repair while you wait','Door, quarter & vent glass replaced fast','Camera & sensor recalibration post-install'];
-  const prices = ['From $99','From $49','From $149','From $79'];
-  const icons = ['🪟','⚡','🚗','📡'];
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '9px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>What We Do</div>
-          <div style={{ fontSize: '15px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Our Services</div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', padding: '7px 9px', background: i === 0 ? `${b.accent}10` : '#f9fafb', borderRadius: '6px', border: i === 0 ? `1px solid ${b.accent}44` : '1px solid rgba(0,0,0,0.06)' }}>
-              <div style={{ fontSize: '11px', flexShrink: 0, marginTop: '1px' }}>{icons[i]}</div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#0f0f0f', marginBottom: '1.5px' }}>{s}</div>
-                <div style={{ fontSize: '4.5px', color: '#6b7280', lineHeight: 1.5 }}>{descs[i]}</div>
-              </div>
-              <div style={{ flexShrink: 0, fontSize: '6px', fontWeight: 800, color: b.accent }}>{prices[i]}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '8px', padding: '8px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em' }}>Get a Free Quote →</div>
-      </div>
-    </div>
-  );
-}
-
-// BARBERSHOP — luxury price menu with descriptions
-function BarberServices({ b }: { b: Biz }) {
-  const descs = ['Classic taper & fade shaped with precision','Straight-razor shave with hot towel prep','Full beard trim, line-up & conditioning oil','Deep scalp cleanse & follicle treatment'];
-  const prices = ['$45','$60','$35','$55'];
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-          <div style={{ flex: 1, height: '0.5px', background: `${b.accent}55` }} />
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Services & Pricing</div>
-          <div style={{ flex: 1, height: '0.5px', background: `${b.accent}55` }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', padding: '8px 0', gap: '8px' }}>
-                <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: b.accent, flexShrink: 0, marginTop: '4px' }} />
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2px' }}>
-                    <div style={{ fontSize: '7px', fontWeight: 700, color: '#fff', letterSpacing: '-0.01em' }}>{s}</div>
-                    <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, flexShrink: 0, marginLeft: '6px' }}>{prices[i]}</div>
-                  </div>
-                  <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>{descs[i]}</div>
-                </div>
-              </div>
-              {i < b.services.length - 1 && <div style={{ height: '0.5px', background: 'rgba(255,255,255,0.06)' }} />}
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '8px', padding: '8px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#000', letterSpacing: '0.1em' }}>BOOK YOUR CUT →</div>
-      </div>
-    </div>
-  );
-}
-
-// LANDSCAPING — 2-column service cards with descriptions
-function LandServices({ b }: { b: Biz }) {
-  const descs = ['Custom plans from concept to install','Weekly, bi-weekly or monthly programs','Patios, walls, fire pits & walkways','Spring/fall cleanups & winterizing'];
-  const icons = ['🌿','🌱','🪨','🍂'];
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '9px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>What We Offer</div>
-          <div style={{ fontSize: '15px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Our Services</div>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s} style={{ padding: '9px 8px', background: i === 0 ? `${b.accent}15` : '#f9fafb', borderRadius: '7px', border: i === 0 ? `1.5px solid ${b.accent}55` : '1px solid rgba(0,0,0,0.07)', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '14px' }}>{icons[i]}</div>
-              <div style={{ fontSize: '6px', fontWeight: 700, color: '#0f0f0f', lineHeight: 1.25 }}>{s}</div>
-              <div style={{ fontSize: '4px', color: '#6b7280', lineHeight: 1.5 }}>{descs[i]}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '8px', padding: '8px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em' }}>Request a Custom Quote →</div>
-      </div>
-    </div>
-  );
-}
-
-// LUXURY SALON — editorial menu with prices
-function SalonServices({ b }: { b: Biz }) {
-  const descs = ['Balayage, highlights, full color & gloss finish','Brazilian, keratin or Olaplex treatments','Blowout, styling & waves by expert hands','Tape-in, sew-in & tape weft systems'];
-  const prices = ['From $120','From $180','From $85','From $250'];
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '8px 12px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Book a Service</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Our Services</div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s} style={{ padding: '8px 9px', background: i === 0 ? `${b.accent}20` : 'rgba(255,255,255,0.04)', borderRadius: '6px', border: `1px solid ${i === 0 ? b.accent + '55' : 'rgba(255,255,255,0.07)'}` }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2px' }}>
-                <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#fff' }}>{s}</div>
-                <div style={{ fontSize: '6.5px', fontWeight: 800, color: b.accent, flexShrink: 0, marginLeft: '6px' }}>{prices[i]}</div>
-              </div>
-              <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.4)', lineHeight: 1.5 }}>{descs[i]}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '7px', padding: '7px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#000', letterSpacing: '0.08em' }}>Reserve a Session →</div>
-      </div>
-    </div>
-  );
-}
-
-// FITNESS STUDIO — program tiles with duration + price
-function FitnessServices({ b }: { b: Biz }) {
-  const descs = ['1-on-1 coaching tailored to your goals','Speed, agility & sport-specific work','Meal plans, macros & accountability','Mobility, stretching & injury prevention'];
-  const durations = ['60 min','45 min','50 min','30 min'];
-  const prices = ['$79/mo','$89/mo','$49/mo','Included'];
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '8px 12px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>What We Offer</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Our Programs</div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '7px 9px', background: i === 0 ? `${b.accent}18` : 'rgba(255,255,255,0.04)', borderRadius: '5px', border: `1px solid ${i === 0 ? b.accent + '55' : 'rgba(255,255,255,0.07)'}` }}>
-              <div style={{ width: '3px', height: '28px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.12)', borderRadius: '2px', flexShrink: 0 }} />
-              <div style={{ flex: 1 }}>
-                <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#fff', marginBottom: '1.5px' }}>{s}</div>
-                <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>{descs[i]}</div>
-                <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.22)', marginTop: '1px' }}>{durations[i]}</div>
-              </div>
-              <div style={{ fontSize: '6px', fontWeight: 800, color: i === 0 ? b.accent : 'rgba(255,255,255,0.3)', flexShrink: 0 }}>{prices[i]}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '7px', padding: '8px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#fff', letterSpacing: '0.08em' }}>Start Free Trial →</div>
-      </div>
-    </div>
-  );
-}
-
-// FINE DINING — elegant restaurant menu experience list
-function RestoServices({ b }: { b: Biz }) {
-  const descs = ['7-course progressive journey · $185/pp · seasonal','Chef selections nightly · à la carte dining','Exclusive dining for groups up to 40 guests','Curated wine pairings by our sommelier'];
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '8px 12px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '8px' }}>
-          <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.22em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '4px' }}>Dining Experiences</div>
-          <div style={{ height: '0.5px', background: `linear-gradient(to right, transparent, ${b.accent}, transparent)`, marginBottom: '4px' }} />
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', fontStyle: 'italic' }}>Our Menu</div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s}>
-              <div style={{ padding: '8px 0', display: 'flex', alignItems: 'flex-start', gap: '7px' }}>
-                <div style={{ width: '4px', height: '4px', background: b.accent, borderRadius: '50%', flexShrink: 0, marginTop: '4px' }} />
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: '7px', fontWeight: 700, color: '#fff', marginBottom: '2px' }}>{s}</div>
-                  <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.38)', lineHeight: 1.5 }}>{descs[i]}</div>
-                </div>
-              </div>
-              {i < b.services.length - 1 && <div style={{ height: '0.5px', background: `linear-gradient(to right, ${b.accent}44, transparent)` }} />}
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '8px', padding: '7px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#000', letterSpacing: '0.08em' }}>Reserve a Table →</div>
-      </div>
-    </div>
-  );
-}
-
-// HOME SERVICES — service list with emergency flagging
-function PlumbServices({ b }: { b: Biz }) {
-  const descs = ['Water main breaks, burst pipes & flooding','Clogged drains, sewer lines & hydro-jetting','Tank & tankless installation and repair','Full bathroom & kitchen plumbing remodels'];
-  const icons = ['🚨','🪠','🔥','🔧'];
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '9px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Licensed & Bonded</div>
-          <div style={{ fontSize: '15px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Our Services</div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', padding: '7px 9px', background: i === 0 ? '#fef2f2' : '#f9fafb', borderRadius: '6px', border: i === 0 ? '1px solid #fecaca' : `1px solid ${b.accent}22` }}>
-              <div style={{ fontSize: '12px', flexShrink: 0 }}>{icons[i]}</div>
-              <div style={{ flex: 1 }}>
-                <div style={{ fontSize: '6.5px', fontWeight: 700, color: '#0f0f0f', marginBottom: '1.5px' }}>{s}</div>
-                <div style={{ fontSize: '4.5px', color: '#6b7280', lineHeight: 1.5 }}>{descs[i]}</div>
-              </div>
-              {i === 0 && <div style={{ padding: '2px 5px', background: '#dc2626', borderRadius: '3px', fontSize: '3.5px', fontWeight: 700, color: '#fff', flexShrink: 0, alignSelf: 'flex-start' }}>24/7</div>}
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '8px', padding: '8px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em' }}>Call Now — Free Estimate →</div>
-      </div>
-    </div>
-  );
-}
-
-// COSMETIC DENTISTRY — treatment list with icons + prices
-function DentalServices({ b }: { b: Biz }) {
-  const descs = ['Total transformation: veneers, whitening & more','In-office whitening · results in 1 hour','Custom-crafted ultra-thin porcelain shells','Clear aligner therapy · avg 12–18 months'];
-  const prices = ['From $3,500','From $299','From $1,800','From $199/mo'];
-  const icons = ['✨','🦷','💎','😁'];
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '9px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Smile Aesthetics</div>
-          <div style={{ fontSize: '15px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Our Treatments</div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', flex: 1, overflow: 'hidden' }}>
-          {b.services.map((s, i) => (
-            <div key={s} style={{ display: 'flex', alignItems: 'flex-start', gap: '7px', padding: '7px 9px', background: i === 0 ? `${b.accent}10` : '#f9fafb', borderRadius: '6px', border: i === 0 ? `1px solid ${b.accent}44` : '1px solid rgba(0,0,0,0.06)' }}>
-              <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: i === 0 ? b.accent : '#e5f7f0', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px' }}>{icons[i]}</div>
-              <div style={{ flex: 1 }}>
-                <div style={{ fontSize: '6px', fontWeight: 700, color: '#0f0f0f', marginBottom: '1.5px' }}>{s}</div>
-                <div style={{ fontSize: '4.5px', color: '#6b7280', lineHeight: 1.5 }}>{descs[i]}</div>
-              </div>
-              <div style={{ fontSize: '5.5px', fontWeight: 700, color: b.accent, flexShrink: 0, textAlign: 'right', lineHeight: 1.3 }}>{prices[i]}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: '8px', padding: '8px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em' }}>Book Free Consultation →</div>
-      </div>
-    </div>
-  );
-}
+// ══ SERVICES SCREEN ══════════════════════════════════════════════════════════
 
 function ServicesScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassServices   b={b} />;
-  if (b.id === 'barber')  return <BarberServices  b={b} />;
-  if (b.id === 'land')    return <LandServices    b={b} />;
-  if (b.id === 'salon')   return <SalonServices   b={b} />;
-  if (b.id === 'fitness') return <FitnessServices b={b} />;
-  if (b.id === 'resto')   return <RestoServices   b={b} />;
-  if (b.id === 'plumb')   return <PlumbServices   b={b} />;
-  if (b.id === 'dental')  return <DentalServices  b={b} />;
-  return null;
-}
-
-// ══ ABOUT SCREENS — each looks like a real About Us page ════════════════════════
-
-// AUTO GLASS — company story + stats + philosophy
-function GlassAbout({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ height: '95px', flexShrink: 0, position: 'relative', overflow: 'hidden' }}>
-        <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 30%, #fff 100%)' }} />
-      </div>
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '0 12px 8px' }}>
-        <div style={{ marginBottom: '6px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Est. 2009 · Detroit, MI</div>
-          <div style={{ fontSize: '13px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.05, letterSpacing: '-0.02em' }}>About Us</div>
-        </div>
-        <div style={{ fontSize: '5.5px', color: '#4b5563', lineHeight: 1.75, marginBottom: '8px' }}>Meridian Glass has served Metro Detroit drivers for over 15 years. We grew from a single-bay shop into the region's most trusted auto glass provider through honest pricing, same-day service, and lifetime warranties on every install.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '5px', marginBottom: '8px' }}>
-          {[['15+','Years'],['10K+','Installs'],['5★','Rated']].map(([v, l]) => (
-            <div key={l} style={{ textAlign: 'center', padding: '6px 0', background: '#f9fafb', borderRadius: '5px', border: '1px solid rgba(0,0,0,0.06)' }}>
-              <div style={{ fontSize: '10px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
-              <div style={{ fontSize: '4px', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '1.5px' }}>{l}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ padding: '8px 10px', background: `${b.accent}10`, borderRadius: '5px', borderLeft: `3px solid ${b.accent}`, marginBottom: '7px' }}>
-          <div style={{ fontSize: '5px', color: '#4b5563', lineHeight: 1.7, fontStyle: 'italic' }}>{b.philosophy}</div>
-        </div>
-        <div style={{ marginTop: 'auto', padding: '7px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff' }}>Schedule Today →</div>
-      </div>
-    </div>
-  );
-}
-
-// BARBERSHOP — shop story + owner + stats
-function BarberAbout({ b }: { b: Biz }) {
+  const lm = b.theme === 'light';
+  const textH = lm ? '#0f0f0f' : '#ffffff';
+  const textB = lm ? '#6b7280' : 'rgba(255,255,255,0.45)';
+  const border = lm ? 'rgba(0,0,0,0.07)' : 'rgba(255,255,255,0.06)';
+  const cardBg = lm ? '#f9fafb' : 'rgba(255,255,255,0.04)';
   return (
     <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ height: '90px', flexShrink: 0, position: 'relative', overflow: 'hidden' }}>
-        <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to bottom, transparent 20%, ${b.bg} 100%)` }} />
-      </div>
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '0 12px 8px' }}>
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Est. 2014 · Midtown Detroit</div>
-          <div style={{ fontSize: '13px', fontWeight: 900, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.02em' }}>About Us</div>
+      <StatusBar light={lm} />
+      <NavBar b={b} light={lm} />
+      <div style={{ flex: 1, padding: '12px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+          <div style={{ width: '14px', height: '1px', background: b.accent }} />
+          <span style={{ fontSize: '5.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Our Services</span>
         </div>
-        <div style={{ fontSize: '5.5px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: '7px' }}>Studio 1908 was built for men who value the craft. Our barbers combine old-school technique with modern style — every cut is intentional, every visit is an experience. No rush, no shortcuts.</div>
-        <div style={{ padding: '7px 10px', background: `${b.accent}15`, borderLeft: `2.5px solid ${b.accent}`, borderRadius: '0 4px 4px 0', marginBottom: '7px' }}>
-          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, fontStyle: 'italic' }}>{b.philosophy}</div>
+        <div style={{ fontSize: '15px', fontWeight: 900, color: textH, lineHeight: 1.1, letterSpacing: '-0.025em', marginBottom: '10px' }}>
+          What We<br />Offer
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '5px', marginBottom: '7px' }}>
-          {[['3','Barbers'],['12+','Years'],['4.9★','Rated']].map(([v, l]) => (
-            <div key={l} style={{ textAlign: 'center', padding: '5px 0', background: 'rgba(255,255,255,0.04)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.07)' }}>
-              <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
-              <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '1.5px' }}>{l}</div>
+        {/* 2×2 service cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', marginBottom: '10px' }}>
+          {b.services.map(s => (
+            <div key={s} style={{ background: cardBg, border: `1px solid ${border}`, borderRadius: '6px', padding: '8px 7px', borderTop: `2px solid ${b.accent}` }}>
+              <div style={{ fontSize: '6px', fontWeight: 700, color: textH, lineHeight: 1.35 }}>{s}</div>
             </div>
           ))}
         </div>
-        <div style={{ padding: '7px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#000', letterSpacing: '0.1em' }}>BOOK AN APPOINTMENT →</div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
+          <div style={{ fontSize: '7px', fontWeight: 800, color: b.accent }}>{b.price}</div>
+          <div style={{ padding: '5px 12px', background: b.accent, borderRadius: '2px', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.07em' }}>Book Now</div>
+        </div>
       </div>
     </div>
   );
 }
 
-// LANDSCAPING — story + certifications + stats
-function LandAbout({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ height: '85px', flexShrink: 0, position: 'relative', overflow: 'hidden' }}>
-        <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 30%, #fff 100%)' }} />
-      </div>
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '0 12px 8px' }}>
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Est. 2011 · Bloomfield Hills</div>
-          <div style={{ fontSize: '13px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.05, letterSpacing: '-0.02em' }}>About Us</div>
-        </div>
-        <div style={{ fontSize: '5.5px', color: '#4b5563', lineHeight: 1.75, marginBottom: '6px' }}>Terrain transforms outdoor spaces into living environments. We work exclusively with Metro Detroit's finest residential and commercial properties — designing, installing, and maintaining landscapes that set the standard.</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '6px' }}>
-          {[['🏆','Michigan Landscape Assoc. Member'],['🌿','ISA Certified Arborists on Staff'],['⭐','BBB Accredited — A+ Rating']].map(([icon, text]) => (
-            <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '5px 7px', background: '#f9fafb', borderRadius: '4px', border: '1px solid rgba(0,0,0,0.06)' }}>
-              <span style={{ fontSize: '9px' }}>{icon}</span>
-              <span style={{ fontSize: '5px', color: '#374151', fontWeight: 500 }}>{text}</span>
-            </div>
-          ))}
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '5px', marginBottom: '7px' }}>
-          {[['150+','Projects'],['15','Years'],['A+','BBB']].map(([v, l]) => (
-            <div key={l} style={{ textAlign: 'center', padding: '5px 0', background: '#f9fafb', borderRadius: '4px', border: '1px solid rgba(0,0,0,0.06)' }}>
-              <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
-              <div style={{ fontSize: '3.5px', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '1.5px' }}>{l}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ padding: '7px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff' }}>Request a Consultation →</div>
-      </div>
-    </div>
-  );
-}
-
-// LUXURY SALON — salon story + stylist team
-function SalonAbout({ b }: { b: Biz }) {
-  const stylists: [string,string,string][] = [['A','Adria','Color'],['M','Mia','Extensions'],['K','Kezia','Blowouts']];
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '7px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Est. 2017 · Royal Oak</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em' }}>About Us</div>
-        </div>
-        <div style={{ fontSize: '5.5px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: '8px' }}>Maison is Royal Oak's destination for luxury hair care. We believe beauty is personal — every client deserves a stylist who listens, a space that feels like escape, and results that speak for themselves.</div>
-        <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '5px' }}>Meet the Team</div>
-        <div style={{ display: 'flex', gap: '5px', marginBottom: '8px' }}>
-          {stylists.map(([initial, name, specialty], i) => (
-            <div key={name} style={{ flex: 1, background: i === 0 ? `${b.accent}22` : 'rgba(255,255,255,0.04)', border: `1px solid ${i === 0 ? b.accent + '55' : 'rgba(255,255,255,0.08)'}`, borderRadius: '7px', padding: '8px 5px', textAlign: 'center' }}>
-              <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: b.accent, margin: '0 auto 4px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 800, color: '#000' }}>{initial}</div>
-              <div style={{ fontSize: '5.5px', fontWeight: 700, color: '#fff', marginBottom: '1.5px' }}>{name}</div>
-              <div style={{ fontSize: '3.5px', color: 'rgba(255,255,255,0.4)' }}>{specialty}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ padding: '7px 10px', background: `${b.accent}15`, borderLeft: `2.5px solid ${b.accent}`, borderRadius: '0 4px 4px 0', marginBottom: '8px' }}>
-          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, fontStyle: 'italic' }}>{b.philosophy}</div>
-        </div>
-        <div style={{ marginTop: 'auto', padding: '7px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#000' }}>Reserve Your Session →</div>
-      </div>
-    </div>
-  );
-}
-
-// FITNESS STUDIO — mission + coaching team + stats
-function FitnessAbout({ b }: { b: Biz }) {
-  const trainers: [string,string,string][] = [['J','Jordan','Strength'],['T','Tyler','Performance'],['A','Aisha','Nutrition']];
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '7px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Est. 2016 · Southfield</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em' }}>About Us</div>
-        </div>
-        <div style={{ fontSize: '5.5px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: '8px' }}>Apex Athletics is Southfield's elite performance facility. We train athletes, first responders, and everyday people who want real results — with expert coaching, no fads, and no excuses.</div>
-        <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '5px' }}>Our Coaches</div>
-        <div style={{ display: 'flex', gap: '5px', marginBottom: '8px' }}>
-          {trainers.map(([initial, name, specialty], i) => (
-            <div key={name} style={{ flex: 1, background: i === 0 ? `${b.accent}18` : 'rgba(255,255,255,0.04)', border: `1px solid ${i === 0 ? b.accent + '55' : 'rgba(255,255,255,0.07)'}`, borderRadius: '6px', padding: '7px 4px', textAlign: 'center' }}>
-              <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: i === 0 ? b.accent : 'rgba(255,255,255,0.1)', margin: '0 auto 3px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '8px', fontWeight: 800, color: '#fff' }}>{initial}</div>
-              <div style={{ fontSize: '5px', fontWeight: 700, color: '#fff', marginBottom: '1.5px' }}>{name}</div>
-              <div style={{ fontSize: '3.5px', color: 'rgba(255,255,255,0.35)' }}>{specialty}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '5px', marginBottom: '8px' }}>
-          {[['240+','Members'],['6','Coaches'],['4.9★','Rated']].map(([v, l]) => (
-            <div key={l} style={{ textAlign: 'center', padding: '5px 0', background: 'rgba(255,255,255,0.04)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.06)' }}>
-              <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
-              <div style={{ fontSize: '3.5px', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '1.5px' }}>{l}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ padding: '7px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#fff' }}>Start Training →</div>
-      </div>
-    </div>
-  );
-}
-
-// FINE DINING — restaurant story + chef + accolades
-function RestoAbout({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ height: '85px', flexShrink: 0, position: 'relative', overflow: 'hidden' }}>
-        <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to bottom, transparent 20%, ${b.bg} 100%)` }} />
-      </div>
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '0 12px 8px' }}>
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Est. 2019 · Corktown</div>
-          <div style={{ fontSize: '13px', fontWeight: 900, color: '#fff', fontStyle: 'italic', lineHeight: 1.05 }}>About Ardor</div>
-        </div>
-        <div style={{ fontSize: '5.5px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: '7px' }}>Ardor is a modern American kitchen celebrating Michigan's finest ingredients. Executive Chef Daniel Reyes draws from classical French training and a passion for fire-driven cooking to create unforgettable dining.</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '8px' }}>
-          {['James Beard Semifinalist 2023','Food & Wine Best New Chef','Michelin-Recommended'].map(award => (
-            <div key={award} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 8px', background: `${b.accent}12`, borderRadius: '4px', border: `1px solid ${b.accent}33` }}>
-              <span style={{ fontSize: '7px', color: b.accent }}>★</span>
-              <span style={{ fontSize: '5px', color: 'rgba(255,255,255,0.65)', fontWeight: 500 }}>{award}</span>
-            </div>
-          ))}
-        </div>
-        <div style={{ padding: '7px 10px', borderLeft: `2.5px solid ${b.accent}`, background: `${b.accent}10`, borderRadius: '0 4px 4px 0', marginBottom: '8px' }}>
-          <div style={{ fontSize: '5px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, fontStyle: 'italic' }}>{b.philosophy}</div>
-        </div>
-        <div style={{ marginTop: 'auto', padding: '7px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#000' }}>Reserve a Table →</div>
-      </div>
-    </div>
-  );
-}
-
-// HOME SERVICES — company story + credentials
-function PlumbAbout({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '7px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Est. 2008 · Detroit Metro</div>
-          <div style={{ fontSize: '15px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>About Us</div>
-        </div>
-        <div style={{ fontSize: '5.5px', color: '#4b5563', lineHeight: 1.75, marginBottom: '7px' }}>Prime Home has kept Metro Detroit homes and businesses running for over 18 years. We're licensed, bonded, and fully insured — available 24/7 because plumbing problems don't wait for business hours.</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '7px' }}>
-          {[['🏅','Licensed Master Plumber'],['🛡','BBB Accredited — A+ Rating'],['🔒','Fully Bonded & Insured']].map(([icon, text]) => (
-            <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '5px 7px', background: '#f9fafb', borderRadius: '4px', border: '1px solid rgba(0,0,0,0.06)' }}>
-              <span style={{ fontSize: '10px' }}>{icon}</span>
-              <span style={{ fontSize: '5.5px', color: '#374151', fontWeight: 500 }}>{text}</span>
-            </div>
-          ))}
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '5px', marginBottom: '7px' }}>
-          {[['18+','Years'],['2,100+','Jobs'],['24/7','Service']].map(([v, l]) => (
-            <div key={l} style={{ textAlign: 'center', padding: '5px 0', background: '#f0f9ff', borderRadius: '4px', border: `1px solid ${b.accent}33` }}>
-              <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
-              <div style={{ fontSize: '3.5px', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '1.5px' }}>{l}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ padding: '7px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff' }}>Get a Free Estimate →</div>
-      </div>
-    </div>
-  );
-}
-
-// COSMETIC DENTISTRY — doctor profile + practice story
-function DentalAbout({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ height: '85px', flexShrink: 0, position: 'relative', overflow: 'hidden' }}>
-        <img src={b.heroPhoto} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 40%, #fff 100%)' }} />
-      </div>
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '0 12px 8px' }}>
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '11px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.1 }}>Dr. Sarah Luminary, DDS</div>
-          <div style={{ display: 'flex', gap: '4px', marginTop: '3px', flexWrap: 'wrap' }}>
-            {['U of M DDS','AACD Member','Invisalign Pro'].map(badge => (
-              <div key={badge} style={{ padding: '2px 6px', background: `${b.accent}15`, borderRadius: '3px', fontSize: '3.5px', fontWeight: 700, color: b.accent, border: `1px solid ${b.accent}44` }}>{badge}</div>
-            ))}
-          </div>
-        </div>
-        <div style={{ fontSize: '5.5px', color: '#4b5563', lineHeight: 1.75, marginBottom: '7px' }}>Luminary Dental has helped Birmingham families achieve confident smiles for over 18 years. Dr. Luminary combines artistry with science — crafting personalized treatment plans that fit your life and goals.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '5px', marginBottom: '7px' }}>
-          {[['18+','Yrs Exp'],['1,200+','Smiles'],['Free','Consult']].map(([v, l]) => (
-            <div key={l} style={{ textAlign: 'center', padding: '5px 0', background: '#f0fdf4', borderRadius: '4px', border: `1px solid ${b.accent}33` }}>
-              <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
-              <div style={{ fontSize: '3.5px', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '1.5px' }}>{l}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ padding: '7px 10px', background: `${b.accent}10`, borderLeft: `3px solid ${b.accent}`, borderRadius: '0 4px 4px 0', marginBottom: '7px' }}>
-          <div style={{ fontSize: '5px', color: '#4b5563', lineHeight: 1.7, fontStyle: 'italic' }}>{b.philosophy}</div>
-        </div>
-        <div style={{ marginTop: 'auto', padding: '7px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff' }}>Book a Free Consult →</div>
-      </div>
-    </div>
-  );
-}
+// ══ ABOUT SCREEN ═════════════════════════════════════════════════════════════
 
 function AboutScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassAbout   b={b} />;
-  if (b.id === 'barber')  return <BarberAbout  b={b} />;
-  if (b.id === 'land')    return <LandAbout    b={b} />;
-  if (b.id === 'salon')   return <SalonAbout   b={b} />;
-  if (b.id === 'fitness') return <FitnessAbout b={b} />;
-  if (b.id === 'resto')   return <RestoAbout   b={b} />;
-  if (b.id === 'plumb')   return <PlumbAbout   b={b} />;
-  if (b.id === 'dental')  return <DentalAbout  b={b} />;
-  return null;
-}
-
-// ══ CONTACT SCREENS — all look like real contact forms ════════════════════════
-
-// AUTO GLASS — contact form with service selector
-function GlassContact({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Get in Touch</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Contact Us</div>
-        </div>
-        {[['Your Name','John Smith'],['Phone Number','(313) 555-____'],['Email Address','john@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '6px' }}>
-            <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '6px 8px', background: '#f9fafb', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '5px', fontSize: '6px', color: '#d1d5db' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '7px' }}>
-          <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '3px' }}>Service Needed</div>
-          <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-            {b.services.map((s, i) => (
-              <div key={s} style={{ padding: '3px 7px', background: i === 0 ? `${b.accent}18` : '#f9fafb', border: i === 0 ? `1px solid ${b.accent}` : '1px solid rgba(0,0,0,0.08)', borderRadius: '20px', fontSize: '4px', fontWeight: i === 0 ? 700 : 400, color: i === 0 ? b.accent : '#6b7280' }}>{s}</div>
-            ))}
-          </div>
-        </div>
-        <div style={{ marginTop: 'auto' }}>
-          <div style={{ padding: '8px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em', marginBottom: '5px' }}>Send Message →</div>
-          <div style={{ textAlign: 'center', fontSize: '5px', color: '#9ca3af' }}>or call {b.phone}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// BARBERSHOP — appointment contact form
-function BarberContact({ b }: { b: Biz }) {
+  const lm = b.theme === 'light';
+  const textH = lm ? '#0f0f0f' : '#ffffff';
+  const textB = lm ? '#6b7280' : 'rgba(255,255,255,0.45)';
+  const border = lm ? 'rgba(0,0,0,0.07)' : 'rgba(255,255,255,0.06)';
   return (
     <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Book a Chair</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Contact Us</div>
-        </div>
-        {[['Your Name','Marcus Webb'],['Phone Number','(313) 555-____'],['Email Address','you@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '6px' }}>
-            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '6px 8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '5px', fontSize: '6px', color: 'rgba(255,255,255,0.2)' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '7px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '3px' }}>Service</div>
-          <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-            {b.services.map((s, i) => (
-              <div key={s} style={{ padding: '3px 7px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.06)', border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '4px', fontWeight: i === 0 ? 700 : 400, color: i === 0 ? '#000' : 'rgba(255,255,255,0.5)' }}>{s}</div>
-            ))}
-          </div>
-        </div>
-        <div style={{ marginTop: 'auto' }}>
-          <div style={{ padding: '8px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#000', letterSpacing: '0.1em', marginBottom: '5px' }}>SEND MESSAGE →</div>
-          <div style={{ textAlign: 'center', fontSize: '5px', color: 'rgba(255,255,255,0.3)' }}>or call {b.phone}</div>
-        </div>
+      <StatusBar light={lm} />
+      <NavBar b={b} light={lm} />
+      {/* About hero — real photo with scrim */}
+      <div style={{ height: '148px', flexShrink: 0, position: 'relative', overflow: 'hidden', background: b.heroGrad }}>
+        <img
+          src={b.aboutPhoto}
+          alt=""
+          loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to bottom, ${b.accent}44 0%, rgba(0,0,0,0.55) 100%)` }} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '50px', background: `linear-gradient(to bottom, transparent, ${b.bg})` }} />
       </div>
-    </div>
-  );
-}
-
-// LANDSCAPING — project inquiry form with textarea
-function LandContact({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Free Consultation</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Contact Us</div>
-        </div>
-        {[['Your Name','Jane Smith'],['Phone Number','(248) 555-____'],['Email Address','jane@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '5px' }}>
-            <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '6px 8px', background: '#f9fafb', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '5px', fontSize: '6px', color: '#d1d5db' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>Tell Us About Your Project</div>
-          <div style={{ padding: '6px 8px', background: '#f9fafb', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '5px', fontSize: '5.5px', color: '#d1d5db', minHeight: '28px' }}>Describe what you have in mind...</div>
-        </div>
-        <div style={{ marginTop: 'auto' }}>
-          <div style={{ padding: '8px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em', marginBottom: '5px' }}>Request Free Consultation →</div>
-          <div style={{ textAlign: 'center', fontSize: '5px', color: '#9ca3af' }}>or call {b.phone}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// LUXURY SALON — appointment request form
-function SalonContact({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '4.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Reserve a Session</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Contact Us</div>
-        </div>
-        {[['Your Name','Jane Smith'],['Phone Number','(248) 555-____'],['Email Address','jane@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '5px' }}>
-            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '6px 8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '5px', fontSize: '6px', color: 'rgba(255,255,255,0.2)' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '3px' }}>Service Interest</div>
-          <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-            {b.services.map((s, i) => (
-              <div key={s} style={{ padding: '3px 7px', background: i === 0 ? b.accent : 'rgba(255,255,255,0.06)', border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '4px', fontWeight: i === 0 ? 700 : 400, color: i === 0 ? '#000' : 'rgba(255,255,255,0.5)' }}>{s}</div>
-            ))}
-          </div>
-        </div>
-        <div style={{ marginTop: 'auto' }}>
-          <div style={{ padding: '8px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#000', letterSpacing: '0.08em', marginBottom: '5px' }}>Book Appointment →</div>
-          <div style={{ textAlign: 'center', fontSize: '5px', color: 'rgba(255,255,255,0.3)' }}>or call {b.phone}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// FITNESS STUDIO — membership inquiry form with textarea
-function FitnessContact({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Start Free Trial</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Contact Us</div>
-        </div>
-        {[['Your Name','Alex Johnson'],['Phone Number','(248) 555-____'],['Email Address','alex@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '5px' }}>
-            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '6px 8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '5px', fontSize: '6px', color: 'rgba(255,255,255,0.2)' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>Your Fitness Goal</div>
-          <div style={{ padding: '6px 8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '5px', fontSize: '5.5px', color: 'rgba(255,255,255,0.18)', minHeight: '28px' }}>Tell us what you want to achieve...</div>
-        </div>
-        <div style={{ marginTop: 'auto' }}>
-          <div style={{ padding: '8px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#fff', letterSpacing: '0.08em', marginBottom: '5px' }}>Send Message →</div>
-          <div style={{ textAlign: 'center', fontSize: '5px', color: 'rgba(255,255,255,0.25)' }}>or call {b.phone}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// FINE DINING — reservation contact form with special requests
-function RestoContact({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar />
-      <NavBar b={b} />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '8px 12px' }}>
+      <div style={{ flex: 1, padding: '10px 12px', overflow: 'hidden' }}>
         <div style={{ textAlign: 'center', marginBottom: '8px' }}>
-          <div style={{ fontSize: '4px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.22em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '3px' }}>Reservations</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', fontStyle: 'italic' }}>Contact Us</div>
+          <div style={{ fontSize: '12px', fontWeight: 900, color: textH, letterSpacing: '-0.02em' }}>{b.name}</div>
+          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginTop: '2px' }}>{b.est} · {b.city}</div>
         </div>
-        {[['Your Name','Jane Smith'],['Phone Number','(313) 555-____'],['Email Address','jane@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '5px' }}>
-            <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '6px 8px', background: 'rgba(255,255,255,0.05)', border: `1px solid ${b.accent}33`, borderRadius: '4px', fontSize: '6px', color: 'rgba(255,255,255,0.2)' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>Special Requests</div>
-          <div style={{ padding: '6px 8px', background: 'rgba(255,255,255,0.05)', border: `1px solid ${b.accent}33`, borderRadius: '4px', fontSize: '5.5px', color: 'rgba(255,255,255,0.18)', minHeight: '26px' }}>Dietary needs, occasions, preferences...</div>
+        <div style={{ height: '1px', background: border, marginBottom: '8px' }} />
+        <div style={{ fontSize: '7px', color: textB, lineHeight: 1.75, fontStyle: 'italic', textAlign: 'center', padding: '0 4px', marginBottom: '8px' }}>
+          {b.philosophy}
         </div>
-        <div style={{ marginTop: 'auto' }}>
-          <div style={{ padding: '8px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#000', letterSpacing: '0.08em', marginBottom: '5px' }}>Send Message →</div>
-          <div style={{ textAlign: 'center', fontSize: '5px', color: 'rgba(255,255,255,0.3)' }}>or call {b.phone}</div>
+        <div style={{ height: '1px', background: border, marginBottom: '7px' }} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '6px' }}>
+          {[['10+', 'Years'], ['500+', 'Clients'], ['5★', 'Rated']].map(([v, l]) => (
+            <div key={l} style={{ textAlign: 'center', padding: '5px 0', background: lm ? '#f9fafb' : 'rgba(255,255,255,0.04)', borderRadius: '4px', border: `1px solid ${border}` }}>
+              <div style={{ fontSize: '9px', fontWeight: 900, color: b.accent, lineHeight: 1 }}>{v}</div>
+              <div style={{ fontSize: '5px', color: textB, textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>{l}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-// HOME SERVICES — service request form with emergency banner
-function PlumbContact({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '6px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Available 24/7</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Contact Us</div>
-        </div>
-        <div style={{ padding: '7px 10px', background: 'linear-gradient(135deg, #1d4ed8, #1e3a8a)', borderRadius: '6px', marginBottom: '7px' }}>
-          <div style={{ fontSize: '4.5px', color: 'rgba(255,255,255,0.75)', marginBottom: '2px', letterSpacing: '0.1em' }}>EMERGENCY? CALL DIRECTLY</div>
-          <div style={{ fontSize: '13px', fontWeight: 900, color: '#fff', letterSpacing: '-0.02em' }}>{b.phone}</div>
-        </div>
-        {[['Your Name','John Smith'],['Phone Number','(313) 555-____'],['Email Address','john@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '5px' }}>
-            <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '5px 8px', background: '#f9fafb', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '4px', fontSize: '6px', color: '#d1d5db' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>Describe the Issue</div>
-          <div style={{ padding: '5px 8px', background: '#f9fafb', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '4px', fontSize: '5.5px', color: '#d1d5db', minHeight: '24px' }}>What's happening?</div>
-        </div>
-        <div style={{ marginTop: 'auto', padding: '7px', background: b.accent, borderRadius: '4px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff' }}>Send Message →</div>
-      </div>
-    </div>
-  );
-}
-
-// COSMETIC DENTISTRY — appointment request form
-function DentalContact({ b }: { b: Biz }) {
-  return (
-    <div style={{ height: '100%', background: '#fff', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <StatusBar light />
-      <NavBar b={b} light />
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '10px 12px 8px' }}>
-        <div style={{ marginBottom: '8px' }}>
-          <div style={{ fontSize: '5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '2px' }}>Free Consultation</div>
-          <div style={{ fontSize: '14px', fontWeight: 900, color: '#0f0f0f', lineHeight: 1.0, letterSpacing: '-0.02em' }}>Contact Us</div>
-        </div>
-        {[['Your Name','Jane Smith'],['Phone Number','(248) 555-____'],['Email Address','jane@email.com']].map(([label, placeholder]) => (
-          <div key={label} style={{ marginBottom: '5px' }}>
-            <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>{label}</div>
-            <div style={{ padding: '6px 8px', background: '#f9fafb', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '5px', fontSize: '6px', color: '#d1d5db' }}>{placeholder}</div>
-          </div>
-        ))}
-        <div style={{ marginBottom: '5px' }}>
-          <div style={{ fontSize: '4.5px', color: '#6b7280', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2.5px' }}>What Brings You In?</div>
-          <div style={{ padding: '6px 8px', background: '#f9fafb', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '5px', fontSize: '5.5px', color: '#d1d5db', minHeight: '26px' }}>Tell us about your smile goals...</div>
-        </div>
-        <div style={{ marginTop: 'auto' }}>
-          <div style={{ padding: '8px', background: b.accent, borderRadius: '5px', textAlign: 'center', fontSize: '6px', fontWeight: 700, color: '#fff', letterSpacing: '0.06em', marginBottom: '5px' }}>Request Appointment →</div>
-          <div style={{ textAlign: 'center', fontSize: '5px', color: '#9ca3af' }}>Free consult · {b.phone}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
+// ══ CONTACT SCREEN ════════════════════════════════════════════════════════════
 
 function ContactScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassContact   b={b} />;
-  if (b.id === 'barber')  return <BarberContact  b={b} />;
-  if (b.id === 'land')    return <LandContact    b={b} />;
-  if (b.id === 'salon')   return <SalonContact   b={b} />;
-  if (b.id === 'fitness') return <FitnessContact b={b} />;
-  if (b.id === 'resto')   return <RestoContact   b={b} />;
-  if (b.id === 'plumb')   return <PlumbContact   b={b} />;
-  if (b.id === 'dental')  return <DentalContact  b={b} />;
-  return null;
+  const lm = b.theme === 'light';
+  const textH = lm ? '#0f0f0f' : '#ffffff';
+  const textB = lm ? '#6b7280' : 'rgba(255,255,255,0.45)';
+  const border = lm ? 'rgba(0,0,0,0.07)' : 'rgba(255,255,255,0.06)';
+  const fieldBg = lm ? '#f9fafb' : 'rgba(255,255,255,0.04)';
+  return (
+    <div style={{ height: '100%', background: b.bg, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+      <StatusBar light={lm} />
+      <NavBar b={b} light={lm} />
+      <div style={{ flex: 1, padding: '12px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+          <div style={{ width: '14px', height: '1px', background: b.accent }} />
+          <span style={{ fontSize: '5.5px', color: b.accent, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'monospace' }}>Contact Us</span>
+        </div>
+        <div style={{ fontSize: '15px', fontWeight: 900, color: textH, lineHeight: 1.1, letterSpacing: '-0.025em', marginBottom: '9px' }}>Get In<br />Touch</div>
+        <div style={{ marginBottom: '9px' }}>
+          <div style={{ fontSize: '8.5px', fontWeight: 800, color: b.accent, marginBottom: '3px' }}>{b.phone}</div>
+          <div style={{ fontSize: '6px', color: textB, lineHeight: 1.6 }}>{b.address}</div>
+          <div style={{ fontSize: '6px', color: textB }}>{b.hours}</div>
+        </div>
+        <div style={{ height: '1px', background: border, marginBottom: '9px' }} />
+        {['Full Name', 'Email Address', 'Message'].map((label, i) => (
+          <div key={label} style={{ marginBottom: '6px' }}>
+            <div style={{ fontSize: '4.5px', color: textB, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '3px' }}>{label}</div>
+            <div style={{ background: fieldBg, border: `1px solid ${border}`, borderRadius: '4px', padding: i === 2 ? '5px 8px 14px' : '5px 8px', fontSize: '6px', color: `${textB}66` }}>
+              {i === 0 ? 'John Smith' : i === 1 ? 'john@email.com' : ''}
+            </div>
+          </div>
+        ))}
+        <div style={{ marginTop: 'auto', padding: '6px', background: b.accent, borderRadius: '3px', textAlign: 'center', fontSize: '6.5px', fontWeight: 700, color: '#fff', letterSpacing: '0.08em', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
+          Send Message <span style={{ fontSize: '8px' }}>→</span>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // ══ PHONE CHROME ══════════════════════════════════════════════════════════════

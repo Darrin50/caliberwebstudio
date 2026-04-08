@@ -752,10 +752,10 @@ const TABS: { id: Category; label: string }[] = [
   { id: 'contact',  label: 'Contact'    },
 ];
 
-const PHONE_W  = 290;
-const PHONE_H  = 596;
-const PHONE_SCALE = PHONE_W / 216; // scale inner content proportionally
-const LOOP_PX  = BIZ.length * (PHONE_W + 28); // 8 × 318px = 2544px
+const PHONE_W  = 216;
+const PHONE_H  = 444;
+const PHONE_SCALE = 1;
+const LOOP_PX  = BIZ.length * (PHONE_W + 24); // 8 × 240px = 1920px
 
 export default function PhoneMockupScroll() {
   const [active, setActive] = useState<Category>('home');

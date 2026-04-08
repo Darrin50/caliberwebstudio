@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Hero({ children }: { children?: React.ReactNode }) {
   return (
     <section
@@ -6,13 +8,12 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
       style={{
         position: 'relative',
         overflow: 'hidden',
-        height: '100vh',
-        maxHeight: '100vh',
+        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        padding: '80px clamp(20px, 6vw, 60px) 60px',
+        padding: 'clamp(100px, 18vh, 220px) clamp(20px, 6vw, 60px) 80px',
         background: 'var(--bg)',
         textAlign: 'center',
       }}
@@ -115,9 +116,9 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
             pointerEvents: 'auto',
           }}
         >
-          <a href="/contact" className="btn-chrome" style={{ textDecoration: 'none', display: 'inline-block' }}>
+          <Link href="/contact" className="btn-chrome" style={{ textDecoration: 'none', display: 'inline-block' }}>
             Get Your Free Mockup →
-          </a>
+          </Link>
           <a href="#work" className="btn-line" style={{ textDecoration: 'none', display: 'inline-flex' }}>
             See Our Work
           </a>

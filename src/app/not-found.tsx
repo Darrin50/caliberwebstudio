@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
+
+export const metadata: Metadata = {
+  title: '404 — Page Not Found | Caliber Web Studio',
+  description: "The page you're looking for doesn't exist. Head back to Caliber Web Studio to explore our Detroit web design and AI-powered services.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

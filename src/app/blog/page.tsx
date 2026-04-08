@@ -54,9 +54,8 @@ export default function BlogIndex() {
           {/* Posts Grid */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 340px), 1fr))", gap: "28px" }}>
             {posts.map((post) => (
-              <Link href={`/blog/${post.slug}`} style={{textDecoration:'none',color:'inherit',display:'block'}}>
+              <Link key={post.slug} href={`/blog/${post.slug}`} style={{textDecoration:'none',color:'inherit',display:'block'}}>
               <article
-                key={post.slug}
                 className="blog-card"
                 style={{
                   background: "var(--card-bg, rgba(255,255,255,0.04))",

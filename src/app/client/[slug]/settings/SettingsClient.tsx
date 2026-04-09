@@ -53,8 +53,9 @@ export default function SettingsClient({
 
   const NOTIF_KEY = `caliber-notif-prefs-${slug}`;
 
-  const [notificationPreferences, setNotificationPreferences] = useState(() => {
-    const defaults = {
+  type NotifPrefs = { weeklyReport: boolean; newLeadAlerts: boolean; newReviewAlerts: boolean; rankingChangeAlerts: boolean };
+  const [notificationPreferences, setNotificationPreferences] = useState<NotifPrefs>(() => {
+    const defaults: NotifPrefs = {
       weeklyReport: true,
       newLeadAlerts: true,
       newReviewAlerts: true,

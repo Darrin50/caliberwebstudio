@@ -55,8 +55,9 @@ export async function GET(request: NextRequest) {
       // Note: GBP API requires account ID and location ID
       // This implementation assumes client.googleBusinessProfileId contains the full path
       // or you have a mapping to account/location IDs
-      const gbpAccountId = client.googleBusinessProfileId.split('/')[0] || client.googleBusinessProfileId;
-      const gbpLocationId = client.googleBusinessProfileId.split('/')[1] || client.googleBusinessProfileId;
+      const gbpId = client.googleBusinessProfileId!;
+      const gbpAccountId = gbpId.split('/')[0] || gbpId;
+      const gbpLocationId = gbpId.split('/')[1] || gbpId;
 
       const { reviews, summary } = await getGBPReviews(gbpAccountId, gbpLocationId);
 

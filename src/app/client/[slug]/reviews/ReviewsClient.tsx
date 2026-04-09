@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface Review {
   id: string;
@@ -123,7 +123,7 @@ const SummaryCard = ({
   subtext,
 }: {
   label: string;
-  value: string | number;
+  value: string | number | React.ReactNode;
   subtext?: string;
 }) => (
   <div

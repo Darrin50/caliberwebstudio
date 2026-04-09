@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import { getAuthenticatedClient } from '@/lib/portal/auth';
 import { getClient } from '@/lib/portal/clients';
 import PortalNav from '@/components/portal/PortalNav';
-import PortalProvider from '@/components/portal/PortalContext';
+import { PortalProvider } from '@/components/portal/PortalContext';
 
 interface ClientLayoutProps {
   children: ReactNode;

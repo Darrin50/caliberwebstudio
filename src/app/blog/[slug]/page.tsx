@@ -35,6 +35,16 @@ function extractFirstImage(html: string): { src: string; alt: string } | null {
   return { src: match[1], alt: match[2] };
 }
 
+function countWords(html: string): number {
+  return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().split(' ').filter(Boolean).length;
+}
+
+function deriveKeywords(title: string, category: string): string[] {
+  const stopwords = new Set(['and', 'the', 'for', 'in', 'of', 'to', 'a', 'an', 'is', 'are', 'was', 'were', 'that', 'this', 'with', 'what', 'how', 'why', 'does', 'your', 'our', 'not', 'but', 'or', 'on', 'at', 'by', 'as', 'do', 'can']);
+  const titleWords = title.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(w => w.length >= 4 && !stopwords.has(w));
+  return [...new Set([category, 'Detroit', 'web design', 'small business', ...titleWords.slice(0, 6)])];
+}
+
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPost(slug);
@@ -46,6 +56,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     : heroImageFromContent;
   const related = posts.filter((p) => post.relatedSlugs.includes(p.slug)).slice(0, 4);
 
+  const wordCount = countWords(post.content);
+  const keywords = deriveKeywords(post.title, post.category);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -54,6 +67,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     ...(post.thumbnail && { image: { "@type": "ImageObject", url: post.thumbnail, width: 1200, height: 630 } }),
     datePublished: post.date,
     dateModified: post.date,
+    wordCount,
+    keywords: keywords.join(', '),
     author: { "@type": "Organization", name: "Caliber Web Studio", url: "https://caliberwebstudio.com" },
     publisher: {
       "@type": "Organization",

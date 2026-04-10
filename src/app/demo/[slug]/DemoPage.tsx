@@ -23,13 +23,13 @@ const DEMO_DATA: Record<string, {
 }> = {
 
   'detroit-cuts': {
-    heroImg: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=85',
-    heroAlt: 'Black barber giving a fresh fade to a client at Detroit Cuts Barbershop',
+    heroImg: '/images/brand/detroit-cuts-hero-01.jpg',
+    heroAlt: 'Classic barbershop interior at Detroit Cuts — red leather chairs on black and white checkered floor',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=800&q=80', alt: 'Clean taper fade close-up — precision lineup' },
-      { url: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80', alt: 'Barber lining up a fresh fade — Detroit Cuts precision' },
-      { url: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80', alt: 'Detroit Cuts Barbershop interior — leather chairs, clean setup' },
-      { url: 'https://images.unsplash.com/photo-1619233543112-fe382ff3693d?auto=format&fit=crop&w=800&q=80', alt: 'Barber at work — focused craftsmanship at Detroit Cuts' },
+      { url: '/images/brand/detroit-cuts-portrait-01.jpg', alt: 'Client receiving a precision fade at Detroit Cuts Barbershop' },
+      { url: '/images/brand/detroit-cuts-portrait-02.jpg', alt: 'Detroit Cuts client with a fresh clean cut — full chair service' },
+      { url: '/images/brand/detroit-cuts-detail-01.jpg', alt: 'Barber tools laid out at Detroit Cuts — straight razor and clippers' },
+      { url: '/images/brand/detroit-cuts-ambient-01.jpg', alt: 'Detroit Cuts Barbershop exterior on a classic Detroit block' },
       { url: 'https://images.unsplash.com/photo-1615011968353-0392c495eed3?auto=format&fit=crop&w=800&q=80', alt: 'Fresh cut and crisp lineup — Detroit Cuts signature style' },
       { url: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80', alt: 'Two barbers working side by side — busy Saturday at Detroit Cuts' },
       { url: 'https://images.unsplash.com/photo-1596728325488-58c87691e9af?auto=format&fit=crop&w=800&q=80', alt: 'Clean razor edge lineup — Detroit Cuts attention to detail' },
@@ -40,7 +40,7 @@ const DEMO_DATA: Record<string, {
       { name: 'DeShawn R.', stars: 5, text: 'Walk-in on a Saturday, in the chair in 20 minutes. Left looking like a whole new man.' },
       { name: 'Antoine M.', stars: 5, text: 'Best barbershop in Detroit. My waves been looking right every single time.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1686671805337-7d8aa64b965f?auto=format&fit=crop&w=800&q=80',
+    aboutImg: '/images/brand/detroit-cuts-ambient-01.jpg',
     stats: [
       { num: '10+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },
@@ -57,12 +57,12 @@ const DEMO_DATA: Record<string, {
   },
 
   'metro-plumbing': {
-    heroImg: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1400&q=85',
-    heroAlt: 'Metro Plumbing technician working on pipes under a kitchen sink',
+    heroImg: '/images/brand/metro-plumbing-hero-01.jpg',
+    heroAlt: 'Metro Plumbing service van parked on a Detroit street in winter — licensed and insured',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80', alt: 'Copper pipe connection — professional plumbing work' },
-      { url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80', alt: 'Water heater installation in progress' },
-      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80', alt: 'Metro Plumbing van — on the way to your home' },
+      { url: '/images/brand/metro-plumbing-action-01.jpg', alt: 'Metro Plumbing technician working under a kitchen sink — same-day service' },
+      { url: '/images/brand/metro-plumbing-detail-01.jpg', alt: 'Organized Metro Plumbing service van interior — tools ready for any job' },
+      { url: '/images/brand/metro-plumbing-trust-01.jpg', alt: 'Metro Plumbing technician shaking hands with a satisfied Detroit homeowner' },
       { url: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80', alt: 'Plumber working under kitchen sink — same-day service' },
     ],
     beforeAfter: [
@@ -79,7 +79,7 @@ const DEMO_DATA: Record<string, {
       { name: 'James F.', stars: 5, text: 'Used Metro Plumbing twice. Both times on time, straight price before starting, clean work. No upselling.' },
       { name: 'Denise M.', stars: 5, text: "Had a slow drain three plumbers couldn't fix. Metro found it with their camera in 10 minutes. Fixed in an hour." },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80',
+    aboutImg: '/images/brand/metro-plumbing-portrait-01.jpg',
     stats: [
       { num: '15+', label: 'Years Serving Detroit' },
       { num: '4.8★', label: 'Google Rating' },
@@ -96,13 +96,13 @@ const DEMO_DATA: Record<string, {
   },
 
   'luxe-salon': {
-    heroImg: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=85',
-    heroAlt: 'Black woman with stunning natural hair — Luxe Beauty Studio Detroit',
+    heroImg: '/images/brand/luxe-salon-hero-01.jpg',
+    heroAlt: 'Luxe Beauty Studio Detroit — modern minimal salon interior with natural light',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=800&q=80', alt: 'Knotless box braids — flawless protective style at Luxe Beauty Studio' },
-      { url: 'https://images.unsplash.com/photo-1620122301084-d86f1ea6f8e6?auto=format&fit=crop&w=800&q=80', alt: 'Natural TWA — defined curls and gorgeous texture at Luxe Beauty Studio' },
-      { url: 'https://images.unsplash.com/photo-1560066984-138daaa7a6e4?auto=format&fit=crop&w=800&q=80', alt: 'Luxe Beauty Studio Detroit — luxury salon interior' },
-      { url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80', alt: 'Long braids — protective style goals at Luxe Beauty Studio Detroit' },
+      { url: '/images/brand/luxe-salon-portrait-01.jpg', alt: 'Stylist applying highlights at Luxe Beauty Studio Detroit' },
+      { url: '/images/brand/luxe-salon-detail-01.jpg', alt: 'Color station at Luxe Beauty Studio — professional tools and products' },
+      { url: '/images/brand/luxe-salon-action-01.jpg', alt: 'Motion shot of a blowout in progress at Luxe Beauty Studio' },
+      { url: '/images/brand/luxe-salon-brand-01.jpg', alt: 'Luxe Beauty Studio storefront on Woodward Ave, Detroit' },
       { url: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful natural hair — volume and definition on point' },
     ],
     reviews: [
@@ -110,7 +110,7 @@ const DEMO_DATA: Record<string, {
       { name: 'Aaliyah P.', stars: 5, text: 'The salon is gorgeous and professional. My loc retwist looked amazing — my scalp felt so moisturized. These stylists really know locs.' },
       { name: 'Kezia N.', stars: 5, text: 'Booked online, walked in on time, and left feeling like royalty. My braids are always tight and last forever. Best in Detroit.' },
     ],
-    aboutImg: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80',
+    aboutImg: '/images/brand/luxe-salon-portrait-01.jpg',
     stats: [
       { num: '7+', label: 'Years in Detroit' },
       { num: '4.9★', label: 'Google Rating' },

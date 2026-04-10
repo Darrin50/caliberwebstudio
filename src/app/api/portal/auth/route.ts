@@ -14,7 +14,11 @@ import {
 } from '@/lib/portal/auth';
 import { getClientByEmail } from '@/lib/portal/clients';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: Resend | null = null;
+function getResend(): Resend {
+  if (!resend) resend = new Resend(process.env.RESEND_API_KEY);
+  return resend;
+}
 
 /* ─── Rate limit tracking (in-memory, simple) ─── */
 const rateLimitMap = new Map<string, number[]>();
@@ -123,7 +127,7 @@ export async function POST(request: NextRequest) {
     const magicLinkUrl = `${baseUrl}/client/login?token=${encodeURIComponent(token)}`;
 
     // Send email via Resend
-    await resend.emails.send({
+    await getResend().emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'noreply@caliberwebstudio.com',
       to: normalizedEmail,
       subject: 'Sign In to Your Caliber Web Studio Dashboard',

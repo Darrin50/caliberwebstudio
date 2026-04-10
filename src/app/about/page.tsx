@@ -252,8 +252,8 @@ export default function AboutPage() {
 function FounderImage() {
   return (
     <Image
-      src="/images/darrin-singer.png"
-      alt="Darrin Singer — Founder, Caliber Web Studio"
+      src="/images/brand/cws-about-founder-04.jpg"
+      alt="Darrin Singer — Founder of Caliber Web Studio, Detroit web agency"
       width={120}
       height={120}
       className="rounded-full object-cover"

@@ -152,8 +152,18 @@ export default function IndustryGuideHub() {
       <main style={{ minHeight: "100vh", paddingTop: "80px", paddingBottom: "80px" }}>
 
         {/* Hero */}
-        <section style={{ paddingTop: "clamp(48px, 8vw, 96px)", paddingBottom: "clamp(48px, 6vw, 72px)", textAlign: "center", padding: "clamp(48px, 8vw, 96px) 24px clamp(48px, 6vw, 72px)" }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <section style={{ paddingTop: "clamp(48px, 8vw, 96px)", paddingBottom: "clamp(48px, 6vw, 72px)", textAlign: "center", padding: "clamp(48px, 8vw, 96px) 24px clamp(48px, 6vw, 72px)", position: "relative", overflow: "hidden" }}>
+          {/* Detroit brick alley — ambient brand photography */}
+          <Image
+            src="/images/brand/cws-ambient-brick-05.jpg"
+            alt="Detroit brick alley — the city that Caliber Web Studio is built for"
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover", objectPosition: "center", opacity: 0.12 }}
+            priority
+          />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, var(--bg, #141414) 0%, transparent 30%, transparent 70%, var(--bg, #141414) 100%)" }} />
+          <div style={{ maxWidth: "800px", margin: "0 auto", position: "relative" }}>
             <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent, #00d4ff)", marginBottom: "20px" }}>
               Industry Guides
             </p>

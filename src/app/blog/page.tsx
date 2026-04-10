@@ -97,7 +97,7 @@ export default function BlogIndex() {
                   </time>
                 </div>
 
-                <h2 style={{ fontSize: "1.1rem", fontWeight: 700, lineHeight: 1.4, color: "var(--text-primary, #fff)", margin: 0 }}>
+                <h2 style={{ fontSize: "1.375rem", fontWeight: 700, lineHeight: 1.25, color: "var(--text-primary, #fff)", margin: 0 }}>
                   {post.title}
                 </h2>
 

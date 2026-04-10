@@ -113,7 +113,7 @@ export default function ServicesPage() {
             <p className="sec-label fu" style={{ justifyContent: 'center' }}>What We Build</p>
           </ScrollReveal>
           <ScrollReveal delay={80}>
-            <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(44px,7vw,88px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: 'var(--text-primary)', margin: '20px 0 24px' }}>
+            <h1 className="fu" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(2.75rem, 5vw, 4.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--text-primary)', margin: '20px 0 24px' }}>
               Our Services —<br />
               <span style={{ background: 'linear-gradient(135deg, #1E3D8F, #0891b2)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Built to Get You Found.</span>
             </h1>

@@ -125,7 +125,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <p style={{ fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent, #00d4ff)", marginBottom: "12px" }}>
               {post.category}
             </p>
-            <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", fontWeight: 800, lineHeight: 1.2, color: "var(--text-primary, #fff)", marginBottom: "16px" }}>
+            <h1 style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", fontWeight: 800, lineHeight: 1.1, color: "var(--text-primary, #fff)", marginBottom: "16px" }}>
               {post.title}
             </h1>
             <p style={{ fontSize: "1.1rem", color: "var(--text-secondary, rgba(255,255,255,0.7))", lineHeight: 1.7, marginBottom: "20px" }}>

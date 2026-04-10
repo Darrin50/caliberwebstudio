@@ -124,7 +124,7 @@ export default function Home() {
             <div className="ps-grid">
             {/* Problems */}
             <div>
-              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Problem</p>
+              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Problem</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
                 {[
                   'Your website looks outdated',
@@ -159,7 +159,7 @@ export default function Home() {
 
             {/* Solutions */}
             <div>
-              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Solution</p>
+              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: '16px' }}>The Solution</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
                 {[
                   'Professional site that builds trust instantly',

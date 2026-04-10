@@ -1039,8 +1039,8 @@ html[data-theme="light"] .addon-card:hover {
 /* Sec-label — premium micro-type */
 [data-theme="light"] .sec-label {
   color: var(--navy);
-  opacity: 0.8;
-  letter-spacing: 0.22em;
+  opacity: 0.9;
+  letter-spacing: 0.14em;
 }
 
 /* Section border-top separators — subtle */

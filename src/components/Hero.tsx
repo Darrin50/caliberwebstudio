@@ -71,6 +71,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
 
         {/* Main Heading */}
         <h1
+          aria-label="Detroit Websites That Get Found and Win Customers."
           style={{
             fontFamily: "'Syne', sans-serif",
             fontSize: 'clamp(2.5rem, 5.5vw, 4rem)',

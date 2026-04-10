@@ -220,6 +220,8 @@ export default function Nav() {
         </ul>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          {/* ── Phone ── */}
+          <a href="tel:+13137992315" className="nav-phone-link" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.08em', color: 'var(--dim)', textDecoration: 'none', transition: 'color 0.2s' }}>(313) 799-2315</a>
           {/* ── Theme toggle ── */}
           <button
             ref={toggleRef} id="themeToggle" title="Toggle theme"
@@ -350,6 +352,7 @@ export default function Nav() {
         @media (max-width: 768px) {
           .nav-desktop { display: none !important; }
           .nav-cta-desktop { display: none !important; }
+          .nav-phone-link { display: none !important; }
           .nav-hamburger { display: flex !important; }
           .nav-logo-text { font-size: 12px !important; }
         }

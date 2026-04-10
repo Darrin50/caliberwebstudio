@@ -319,6 +319,14 @@ export default function PricingPage() {
           opacity: 0.85;
           transform: translateY(-1px);
         }
+        [data-theme="light"] .pricing-cta {
+          background: var(--navy, #1e3d8f);
+          color: #fff;
+          border-color: transparent;
+        }
+        [data-theme="light"] .pricing-cta:hover {
+          opacity: 0.9;
+        }
         .pricing-cta--popular {
           background: #0070f3;
           color: #fff;

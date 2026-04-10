@@ -217,9 +217,9 @@ export default function IndustryGuideHub() {
                   <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: ind.accentColor, marginBottom: "8px" }}>
                     {ind.title}
                   </p>
-                  <h2 style={{ fontSize: "clamp(16px, 2vw, 18px)", fontWeight: 700, color: "var(--text-primary, #fff)", lineHeight: 1.3, marginBottom: "10px" }}>
+                  <h3 style={{ fontSize: "clamp(16px, 2vw, 18px)", fontWeight: 700, color: "var(--text-primary, #fff)", lineHeight: 1.3, marginBottom: "10px" }}>
                     {ind.headline}
-                  </h2>
+                  </h3>
                   <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7, flex: 1, marginBottom: "20px" }}>
                     {ind.description}
                   </p>

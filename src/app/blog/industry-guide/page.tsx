@@ -242,6 +242,28 @@ export default function IndustryGuideHub() {
           </div>
         </section>
 
+        {/* Ambient image divider — visual breather between grid and content */}
+        <section style={{ position: "relative", width: "100%", height: "clamp(240px, 30vw, 400px)", overflow: "hidden", margin: "0 0 80px" }}>
+          <Image
+            src="/images/brand/cws-ambient-cafe-06.jpg"
+            alt="Detroit local business atmosphere — Caliber Web Studio serves business owners across Metro Detroit"
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover", objectPosition: "center 60%" }}
+          />
+          {/* Dark overlay so any text remains readable */}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.45) 50%, rgba(10,10,11,0.72) 100%)" }} />
+          {/* Centred pull quote */}
+          <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "0 24px", textAlign: "center" }}>
+            <p style={{ fontFamily: "'Space Mono', monospace", fontSize: "clamp(9px,1vw,11px)", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(0,118,182,0.9)", marginBottom: "14px" }}>
+              Built for Detroit
+            </p>
+            <p style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 4vw, 42px)", color: "#ffffff", lineHeight: 1.1, letterSpacing: "-0.025em", maxWidth: "680px", textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}>
+              Every guide is written for real businesses.<br />Not generic SaaS startups.
+            </p>
+          </div>
+        </section>
+
         {/* What Makes a Detroit Business Site Actually Work */}
         <section style={{ maxWidth: "760px", margin: "0 auto", padding: "0 24px 80px" }}>
           <h2 style={{ fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 800, color: "var(--text-primary, #fff)", marginBottom: "32px", letterSpacing: "-0.02em" }}>

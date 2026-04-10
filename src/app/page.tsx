@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import WorkShowcase from '@/components/WorkShowcase';
 import PhoneMockupScroll from '@/components/PhoneMockupScroll';
-import { HeroScene, ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
+import { ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
 import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 
 /* ─── Shared style tokens ─────────────────────────────────────── */
@@ -35,9 +35,7 @@ export default function Home() {
       <Nav />
 
       {/* ══ 1. HERO ══════════════════════════════════════════════ */}
-      <Hero>
-        <HeroScene />
-      </Hero>
+      <Hero />
 
       {/* ══ 2. FOUNDER QUOTE ════════════════════════════════════ */}
       <section

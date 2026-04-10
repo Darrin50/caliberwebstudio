@@ -119,6 +119,130 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* How We Work — 3-step process with real photos */}
+        <section style={{
+          padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 80px)',
+          borderBottom: '1px solid var(--border)',
+          background: 'var(--bg)',
+        }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <ScrollReveal>
+              <p className="sec-label">How We Work</p>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <h2 style={{
+                fontFamily: 'Syne, sans-serif',
+                fontWeight: 800,
+                fontSize: 'clamp(32px, 5vw, 52px)',
+                color: 'var(--text-primary)',
+                marginBottom: 'clamp(40px, 5vw, 64px)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.025em',
+                maxWidth: '620px',
+              }}>
+                From Blank Page to Business Growth
+              </h2>
+            </ScrollReveal>
+            <div className="process-grid">
+              {[
+                {
+                  n: '01',
+                  label: 'Strategy',
+                  title: 'We map your market',
+                  body: 'Before a line of code is written, we dig into your goals, your competitors, and the searches your customers are actually making. Strategy first — always.',
+                  img: '/images/brand/cws-about-sketch-02.jpg',
+                  alt: 'Sketching out a website strategy plan for a Detroit business',
+                },
+                {
+                  n: '02',
+                  label: 'Build',
+                  title: 'We engineer your site',
+                  body: 'Your site goes live in 48 hours — built on Next.js, SEO-optimized from day one, designed to convert. Not a template. Not a drag-and-drop builder. A real system.',
+                  img: '/images/brand/cws-about-keyboard-01.jpg',
+                  alt: 'Developer building a high-performance website for a local business',
+                },
+                {
+                  n: '03',
+                  label: 'Results',
+                  title: 'You get found and win customers',
+                  body: 'Live rankings. Real leads. Ongoing optimization. You track every number in your client portal — we keep the system compounding while you run your business.',
+                  img: '/images/brand/cws-about-review-03.jpg',
+                  alt: 'Reviewing website analytics and rankings with a Detroit business owner',
+                },
+              ].map((step) => (
+                <ScrollReveal key={step.n}>
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    {/* Photo */}
+                    <div style={{
+                      position: 'relative',
+                      aspectRatio: '4 / 3',
+                      borderRadius: '6px',
+                      overflow: 'hidden',
+                      marginBottom: '28px',
+                      border: '1px solid var(--border)',
+                    }}>
+                      <Image
+                        src={step.img}
+                        alt={step.alt}
+                        fill
+                        sizes="(max-width: 860px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                      {/* Step number overlay */}
+                      <div style={{
+                        position: 'absolute',
+                        top: '16px',
+                        left: '16px',
+                        width: '40px',
+                        height: '40px',
+                        borderRadius: '50%',
+                        background: 'rgba(10,10,11,0.80)',
+                        border: '1px solid rgba(0,118,182,0.5)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backdropFilter: 'blur(4px)',
+                      }}>
+                        <span style={{
+                          fontFamily: 'Space Mono, monospace',
+                          fontSize: '11px',
+                          fontWeight: 700,
+                          color: '#60a5fa',
+                          letterSpacing: '0.05em',
+                        }}>{step.n}</span>
+                      </div>
+                    </div>
+                    {/* Copy */}
+                    <p style={{
+                      fontFamily: 'Space Mono, monospace',
+                      fontSize: '9px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: 'var(--accent)',
+                      marginBottom: '10px',
+                    }}>{step.label}</p>
+                    <h3 style={{
+                      fontFamily: 'Syne, sans-serif',
+                      fontWeight: 800,
+                      fontSize: 'clamp(18px, 2vw, 22px)',
+                      color: 'var(--text-primary)',
+                      marginBottom: '10px',
+                      lineHeight: 1.2,
+                      letterSpacing: '-0.02em',
+                    }}>{step.title}</h3>
+                    <p style={{
+                      fontSize: '15px',
+                      color: 'var(--chrome)',
+                      lineHeight: 1.75,
+                      margin: 0,
+                    }}>{step.body}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* What We Stand For */}
         <section style={{
           padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 80px)',
@@ -187,48 +311,88 @@ export default function AboutPage() {
 
         {/* Meet the Founder */}
         <section style={{
-          padding: 'clamp(80px, 10vw, 120px) clamp(20px, 6vw, 80px)',
+          padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 80px)',
           borderBottom: '1px solid var(--border)',
+          background: 'var(--bg2)',
         }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <ScrollReveal>
-              <p className="sec-label" style={{ justifyContent: 'center' }}>The Founder</p>
+              <p className="sec-label">The Founder</p>
             </ScrollReveal>
-            <ScrollReveal delay={80}>
-              {/* Founder photo — file exists at public/images/darrin-singer.png */}
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px', marginTop: '32px' }}>
-                <FounderImage />
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={140}>
-              <h2 style={{
-                fontFamily: 'Syne, sans-serif',
-                fontWeight: 800,
-                fontSize: 'clamp(24px, 3vw, 32px)',
-                color: 'var(--text-primary)',
-                marginBottom: '6px',
-                letterSpacing: '-0.02em',
-              }}>
-                Darrin Singer
-              </h2>
-              <p style={{
-                fontFamily: 'Space Mono, monospace',
-                fontSize: '11px',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: 'var(--dim)',
-                marginBottom: '24px',
-              }}>
-                Founder &amp; CEO · Detroit, MI
-              </p>
-              <p style={{ fontSize: 'clamp(15px, 1.6vw, 17px)', color: 'var(--chrome)', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 32px' }}>
-                Darrin built Caliber Web Studio to close the gap between what big brands get and what local businesses can afford. Based in Detroit, he&apos;s obsessed with making enterprise-grade web technology accessible to the businesses that need it most.
-              </p>
-              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <Link href="/contact" className="btn-chrome" style={{ textDecoration: 'none' }}>Work With Us</Link>
-                <Link href="/work" className="btn-line" style={{ textDecoration: 'none' }}>See Our Work</Link>
-              </div>
-            </ScrollReveal>
+            <div className="founder-grid" style={{ marginTop: 'clamp(32px, 4vw, 48px)' }}>
+              {/* Portrait */}
+              <ScrollReveal>
+                <div style={{
+                  position: 'relative',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                  aspectRatio: '3 / 4',
+                  border: '1px solid var(--border)',
+                  boxShadow: '0 0 60px rgba(0,118,182,0.12)',
+                }}>
+                  <Image
+                    src="/images/brand/cws-about-founder-04.jpg"
+                    alt="Darrin Singer — Founder and CEO of Caliber Web Studio, Detroit MI"
+                    fill
+                    sizes="(max-width: 860px) 100vw, 380px"
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    priority
+                  />
+                  {/* Subtle blue gradient at bottom */}
+                  <div style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '40%',
+                    background: 'linear-gradient(to top, rgba(0,118,182,0.18) 0%, transparent 100%)',
+                    pointerEvents: 'none',
+                  }} />
+                </div>
+              </ScrollReveal>
+
+              {/* Bio copy */}
+              <ScrollReveal delay={100}>
+                <div>
+                  <h2 style={{
+                    fontFamily: 'Syne, sans-serif',
+                    fontWeight: 800,
+                    fontSize: 'clamp(32px, 4vw, 48px)',
+                    color: 'var(--text-primary)',
+                    marginBottom: '6px',
+                    lineHeight: 1.05,
+                    letterSpacing: '-0.03em',
+                  }}>
+                    Darrin Singer
+                  </h2>
+                  <p style={{
+                    fontFamily: 'Space Mono, monospace',
+                    fontSize: '11px',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: 'var(--accent)',
+                    marginBottom: '32px',
+                  }}>
+                    Founder &amp; CEO · Detroit, MI
+                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', marginBottom: '36px' }}>
+                    <p style={{ fontSize: 'clamp(15px, 1.6vw, 17px)', color: 'var(--silver)', lineHeight: 1.85 }}>
+                      Darrin built Caliber Web Studio after watching too many great Detroit businesses lose customers online — not because they were bad at what they do, but because they were invisible. Big agencies charged $15K and disappeared. Template builders ranked nowhere. There was a gap, and nobody was filling it right.
+                    </p>
+                    <p style={{ fontSize: 'clamp(15px, 1.6vw, 17px)', color: 'var(--chrome)', lineHeight: 1.85 }}>
+                      AI changed the math. What took six weeks and $20K five years ago now takes 48 hours at a fraction of the cost. Caliber passes that advantage directly to local business owners — with flat pricing, zero smoke and mirrors, and a system that keeps working long after launch.
+                    </p>
+                    <p style={{ fontSize: 'clamp(15px, 1.6vw, 17px)', color: 'var(--chrome)', lineHeight: 1.85 }}>
+                      When Darrin isn&apos;t building growth systems for Detroit businesses, he&apos;s studying what the top 1% of web agencies do differently — and figuring out how to bring those tools to the businesses that need them most.
+                    </p>
+                  </div>
+                  <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                    <Link href="/contact" className="btn-chrome" style={{ textDecoration: 'none' }}>Work With Us</Link>
+                    <Link href="/work" className="btn-line" style={{ textDecoration: 'none' }}>See Our Work</Link>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 
@@ -244,21 +408,25 @@ export default function AboutPage() {
         @media (max-width: 860px) {
           .values-grid { grid-template-columns: 1fr; }
         }
+        .process-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: clamp(24px, 4vw, 48px);
+        }
+        @media (max-width: 860px) {
+          .process-grid { grid-template-columns: 1fr; gap: clamp(40px, 6vw, 56px); }
+        }
+        .founder-grid {
+          display: grid;
+          grid-template-columns: 380px 1fr;
+          gap: clamp(40px, 6vw, 80px);
+          align-items: center;
+        }
+        @media (max-width: 860px) {
+          .founder-grid { grid-template-columns: 1fr; }
+        }
       `}</style>
     </>
   );
 }
 
-function FounderImage() {
-  return (
-    <Image
-      src="/images/brand/cws-about-founder-04.jpg"
-      alt="Darrin Singer — Founder of Caliber Web Studio, Detroit web agency"
-      width={120}
-      height={120}
-      className="rounded-full object-cover"
-      style={{ border: '2px solid rgba(37,99,235,0.4)', boxShadow: '0 0 32px rgba(37,99,235,0.2)' }}
-      priority
-    />
-  );
-}

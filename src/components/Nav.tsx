@@ -309,7 +309,7 @@ export default function Nav() {
             </span>
           </button>
 
-          <Link href="/contact" className="nav-btn nav-cta-desktop btn-chrome" style={{ textDecoration: 'none', padding: '10px 22px', fontSize: '10px' }}>Get Your Free Mockup</Link>
+          <Link href="/contact" className="nav-btn nav-cta-desktop btn-chrome" style={{ textDecoration: 'none', padding: '16px 22px', fontSize: '10px' }}>Get Your Free Mockup</Link>
 
           <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation menu" style={{ display: 'none', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '5px', width: '40px', height: '40px', background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }}>
             <span style={{ display: 'block', width: '22px', height: '2px', background: 'var(--hamburger-color)', transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />

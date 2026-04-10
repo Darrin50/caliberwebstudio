@@ -51,7 +51,7 @@ const DEMO_DATA: Record<string, {
     theme: {
       bg: '#0a0a0a', bg2: '#111111', bg3: '#1a1a1a',
       accent: '#C9A84C', accent2: '#E8C470',
-      text: '#F5F5F0', muted: '#888888', light: '#cccccc',
+      text: '#F5F0E6', muted: '#888888', light: '#cccccc',
       radius: '4px',
     },
   },
@@ -224,7 +224,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
     .dw .hero-ov { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.86) 0%, rgba(0,0,0,0.62) 52%, rgba(0,0,0,0.22) 100%); }
     .dw .hero-con { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 0 24px; width: 100%; }
     .dw .hero-tag { display: inline-block; border: 1px solid ${t.accent}; color: ${t.accent}; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: ${t.radius}; margin-bottom: 20px; }
-    .dw .hero-title { font-size: clamp(40px, 6vw, 74px); font-weight: 800; line-height: 1.05; letter-spacing: -2px; color: ${t.text}; max-width: 620px; margin-bottom: 18px; }
+    .dw .hero-title { font-size: clamp(40px, 6vw, 74px); font-weight: 800; line-height: 1.05; letter-spacing: -2px; color: ${t.text}; max-width: 620px; margin-bottom: 18px; text-shadow: 0 2px 24px rgba(0,0,0,0.4); }
     .dw .hero-title span { color: ${t.accent}; }
     .dw .hero-sub { font-size: 18px; color: rgba(255,255,255,0.78); max-width: 480px; margin-bottom: 34px; line-height: 1.65; }
     .dw .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }

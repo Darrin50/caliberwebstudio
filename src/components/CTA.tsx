@@ -44,6 +44,7 @@ export default function CTA() {
   }) => {
     const isFocused = focused === name;
     const hasValue = !!formData[name];
+    const fieldId = `cta-${name}`;
 
     const fieldStyle: React.CSSProperties = {
       width: '100%',
@@ -65,7 +66,7 @@ export default function CTA() {
 
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
-        <label style={{
+        <label htmlFor={fieldId} style={{
           fontFamily: "'Space Mono', monospace",
           fontSize: '10px',
           letterSpacing: '0.14em',
@@ -84,7 +85,7 @@ export default function CTA() {
         </label>
         {textarea ? (
           <textarea
-            name={name} placeholder={placeholder}
+            id={fieldId} name={name} placeholder={placeholder}
             value={formData[name]} onChange={handleChange} rows={5}
             onFocus={() => setFocused(name)}
             onBlur={() => setFocused(null)}
@@ -92,7 +93,7 @@ export default function CTA() {
           />
         ) : (
           <input
-            type={type} name={name} placeholder={placeholder}
+            id={fieldId} type={type} name={name} placeholder={placeholder}
             value={formData[name]} onChange={handleChange} required={required}
             onFocus={() => setFocused(name)}
             onBlur={() => setFocused(null)}

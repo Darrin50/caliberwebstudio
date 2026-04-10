@@ -73,7 +73,7 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         <h1
           style={{
             fontFamily: "'Syne', sans-serif",
-            fontSize: 'clamp(2.8rem, 6vw, 5rem)',
+            fontSize: 'clamp(2.5rem, 5.5vw, 4rem)',
             fontWeight: 800,
             lineHeight: 1.05,
             letterSpacing: '-0.03em',

@@ -111,28 +111,29 @@ export default function ContactForm() {
 
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div>
-          <label style={labelStyle}>Name *</label>
-          <input type="text" name="name" required placeholder="Your full name" style={inputStyle} />
+          <label htmlFor="cf-name" style={labelStyle}>Name *</label>
+          <input id="cf-name" type="text" name="name" required placeholder="Your full name" style={inputStyle} />
         </div>
 
         <div>
-          <label style={labelStyle}>Business Name *</label>
-          <input type="text" name="business_name" required placeholder="Your business name" style={inputStyle} />
+          <label htmlFor="cf-business_name" style={labelStyle}>Business Name *</label>
+          <input id="cf-business_name" type="text" name="business_name" required placeholder="Your business name" style={inputStyle} />
         </div>
 
         <div>
-          <label style={labelStyle}>Phone</label>
-          <input type="tel" name="phone" placeholder="(313) 555-0100" style={inputStyle} />
+          <label htmlFor="cf-phone" style={labelStyle}>Phone</label>
+          <input id="cf-phone" type="tel" name="phone" placeholder="(313) 555-0100" style={inputStyle} />
         </div>
 
         <div>
-          <label style={labelStyle}>Email *</label>
-          <input type="email" name="email" required placeholder="you@yourbusiness.com" style={inputStyle} />
+          <label htmlFor="cf-email" style={labelStyle}>Email *</label>
+          <input id="cf-email" type="email" name="email" required placeholder="you@yourbusiness.com" style={inputStyle} />
         </div>
 
         <div>
-          <label style={labelStyle}>Tell Us About Your Business</label>
+          <label htmlFor="cf-message" style={labelStyle}>Tell Us About Your Business</label>
           <textarea
+            id="cf-message"
             name="message"
             rows={4}
             placeholder="What kind of business do you run? What are your biggest challenges right now?"

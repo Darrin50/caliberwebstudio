@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -E \"\\\\.\\(mp3|wav|ogg|aac\\)$\")"
+      "Bash(grep -E \"\\\\.\\(mp3|wav|ogg|aac\\)$\")",
+      "Bash(pnpm tsc:*)",
+      "Bash(npx tsc:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(netstat -ano)"
     ]
   }
 }

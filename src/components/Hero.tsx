@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
-export default function Hero({ children }: { children?: React.ReactNode }) {
+export default function Hero() {
   return (
     <section
       id="hero"
@@ -18,29 +19,32 @@ export default function Hero({ children }: { children?: React.ReactNode }) {
         textAlign: 'center',
       }}
     >
-      {/* 3D canvas background — absolutely positioned, never affects layout */}
-      {children}
+      {/* Photographic background */}
+      <Image
+        src="/images/brand/cws-home-hero-01.jpg"
+        alt="Detroit cityscape — Caliber Web Studio builds websites for local businesses"
+        fill
+        priority
+        sizes="100vw"
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
+      />
 
-      {/* Radial ambient glow */}
+      {/* Primary dark overlay — ensures text is always WCAG AA readable */}
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(30,61,143,0.18) 0%, transparent 70%)',
+        background: 'linear-gradient(180deg, rgba(10,10,11,0.82) 0%, rgba(10,10,11,0.70) 50%, rgba(10,10,11,0.88) 100%)',
         pointerEvents: 'none',
         zIndex: 1,
       }} />
 
-      {/* Secondary ambient orb */}
+      {/* Brand blue radial glow over photo */}
       <div style={{
         position: 'absolute',
-        bottom: '-20%',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        width: '80%',
-        height: '40%',
-        background: 'radial-gradient(ellipse at center, rgba(0,118,182,0.08) 0%, transparent 70%)',
+        inset: 0,
+        background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,118,182,0.22) 0%, transparent 65%)',
         pointerEvents: 'none',
-        zIndex: 1,
+        zIndex: 2,
       }} />
 
       {/* Content — always in front of canvas */}

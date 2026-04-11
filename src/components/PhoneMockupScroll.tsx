@@ -25,16 +25,8 @@ import { PhoneTerrainServices } from './phone-screens/PhoneTerrain.services';
 import { PhoneMaisonServices } from './phone-screens/PhoneMaison.services';
 import { PhoneApexServices } from './phone-screens/PhoneApex.services';
 import { PhoneLuminaryServices } from './phone-screens/PhoneLuminary.services';
-import { PhoneArdorFlowScreen,         ARDOR_FLOW_LABELS         } from './phone-screens/PhoneArdor.flow';
-import { PhoneStudio1908FlowScreen,     STUDIO_1908_FLOW_LABELS   } from './phone-screens/PhoneStudio1908.flow';
-import { PhoneTerrainFlowScreen,        TERRAIN_FLOW_LABELS       } from './phone-screens/PhoneTerrain.flow';
-import { PhoneMaisonFlowScreen,         MAISON_FLOW_LABELS        } from './phone-screens/PhoneMaison.flow';
-import { PhoneApexFlowScreen,           APEX_FLOW_LABELS          } from './phone-screens/PhoneApex.flow';
-import { PhonePrimeHomeFlowScreen,      PRIME_HOME_FLOW_LABELS    } from './phone-screens/PhonePrimeHome.flow';
-import { PhoneMeridianGlassFlowScreen,  MERIDIAN_GLASS_FLOW_LABELS } from './phone-screens/PhoneMeridianGlass.flow';
-import { PhoneLuminaryFlowScreen,       LUMINARY_FLOW_LABELS      } from './phone-screens/PhoneLuminary.flow';
 
-type Category = 'home' | 'services' | 'about' | 'contact' | 'flows';
+type Category = 'home' | 'services' | 'about' | 'contact';
 
 // ─── Business config ──────────────────────────────────────────────────────────
 interface Biz {
@@ -1440,7 +1432,7 @@ function ContactScreen({ b }: { b: Biz }) {
 
 // ══ PHONE CHROME ══════════════════════════════════════════════════════════════
 
-function Phone({ b, category }: { b: Biz; category: Exclude<Category, 'flows'> }) {
+function Phone({ b, category }: { b: Biz; category: Category }) {
   return (
     <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px', pointerEvents: 'none', userSelect: 'none' }}>
       {/* ── Label ABOVE (Mobbin pattern) ── */}
@@ -1483,7 +1475,6 @@ const TABS: { id: Category; label: string }[] = [
   { id: 'services', label: 'Services'   },
   { id: 'about',    label: 'About Us'   },
   { id: 'contact',  label: 'Contact'    },
-  { id: 'flows',    label: 'User Flows' },
 ];
 
 const PHONE_W  = 216;
@@ -1491,98 +1482,6 @@ const PHONE_H  = 444;
 const PHONE_SCALE = 1;
 const LOOP_PX  = BIZ.length * (PHONE_W + 24); // 8 × 240px = 1920px
 
-// ── Flow tab mini-phone constants ─────────────────────────────────────────────
-const MINI_W     = 116;
-const MINI_H     = Math.round(444 * (116 / 216)); // ≈ 239px
-const MINI_SCALE = 116 / 216;                     // ≈ 0.537
-const FLOW_GAP   = 22;                             // px between phones (arrow region)
-const FLOW_CELL_W = MINI_W * 3 + FLOW_GAP * 2;   // 116×3 + 22×2 = 392px
-const FLOW_LOOP_PX = BIZ.length * (FLOW_CELL_W + 28); // 8 × 420 = 3360px
-
-function getFlowLabels(id: string): [string, string, string] {
-  if (id === 'resto')  return ARDOR_FLOW_LABELS;
-  if (id === 'barber') return STUDIO_1908_FLOW_LABELS;
-  if (id === 'land')   return TERRAIN_FLOW_LABELS;
-  if (id === 'salon')  return MAISON_FLOW_LABELS;
-  if (id === 'fitness') return APEX_FLOW_LABELS;
-  if (id === 'plumb')  return PRIME_HOME_FLOW_LABELS;
-  if (id === 'glass')  return MERIDIAN_GLASS_FLOW_LABELS;
-  if (id === 'dental') return LUMINARY_FLOW_LABELS;
-  return ['Step 1', 'Step 2', 'Step 3'];
-}
-
-function FlowScreen({ b, step }: { b: Biz; step: 0 | 1 | 2 }) {
-  if (b.id === 'resto')   return <PhoneArdorFlowScreen        b={b} step={step} />;
-  if (b.id === 'barber')  return <PhoneStudio1908FlowScreen   b={b} step={step} />;
-  if (b.id === 'land')    return <PhoneTerrainFlowScreen      b={b} step={step} />;
-  if (b.id === 'salon')   return <PhoneMaisonFlowScreen       b={b} step={step} />;
-  if (b.id === 'fitness') return <PhoneApexFlowScreen         b={b} step={step} />;
-  if (b.id === 'plumb')   return <PhonePrimeHomeFlowScreen    b={b} step={step} />;
-  if (b.id === 'glass')   return <PhoneMeridianGlassFlowScreen b={b} step={step} />;
-  if (b.id === 'dental')  return <PhoneLuminaryFlowScreen     b={b} step={step} />;
-  return null;
-}
-
-function FlowArrow({ accent }: { accent: string }) {
-  return (
-    <div style={{ width: `${FLOW_GAP}px`, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: '20px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1px' }}>
-        <div style={{ width: '12px', height: '1px', background: `${accent}44` }} />
-        <div style={{ width: 0, height: 0, borderTop: '3px solid transparent', borderBottom: '3px solid transparent', borderLeft: `4px solid ${accent}66` }} />
-      </div>
-    </div>
-  );
-}
-
-function MiniPhone({ b, step, label }: { b: Biz; step: 0 | 1 | 2; label: string }) {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
-      {/* Step badge */}
-      <div style={{ width: '17px', height: '17px', borderRadius: '50%', background: b.accent, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: `0 0 0 3px ${b.accent}22` }}>
-        <span style={{ fontSize: '8px', fontWeight: 900, color: '#fff', lineHeight: 1 }}>{step + 1}</span>
-      </div>
-      {/* Phone chrome */}
-      <div style={{
-        width: `${MINI_W}px`, height: `${MINI_H}px`,
-        background: '#0e0e0e',
-        borderRadius: `${Math.round(40 * MINI_SCALE)}px`,
-        border: '1.5px solid #252525',
-        overflow: 'hidden',
-        boxShadow: '0 0 0 1px rgba(255,255,255,0.04), 0 16px 40px rgba(0,0,0,0.5)',
-        position: 'relative',
-        flexShrink: 0,
-      }}>
-        <div style={{ position: 'absolute', top: `${Math.round(10 * MINI_SCALE)}px`, left: '50%', transform: 'translateX(-50%)', width: `${Math.round(62 * MINI_SCALE)}px`, height: `${Math.round(16 * MINI_SCALE)}px`, background: '#000', borderRadius: `${Math.round(12 * MINI_SCALE)}px`, zIndex: 10 }} />
-        <div style={{ height: '100%', overflow: 'hidden' }}>
-          <div style={{ width: '216px', height: '444px', transform: `scale(${MINI_SCALE})`, transformOrigin: 'top left' }}>
-            <FlowScreen b={b} step={step} />
-          </div>
-        </div>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)', borderRadius: `${Math.round(38 * MINI_SCALE)}px`, pointerEvents: 'none', zIndex: 6 }} />
-      </div>
-      {/* Step label */}
-      <div style={{ fontFamily: "'Inter',system-ui,sans-serif", fontSize: '9px', fontWeight: 500, color: 'var(--dim)', textAlign: 'center', width: `${MINI_W}px`, lineHeight: 1.3 }}>{label}</div>
-    </div>
-  );
-}
-
-function FlowCell({ b }: { b: Biz }) {
-  const labels = getFlowLabels(b.id);
-  return (
-    <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px', pointerEvents: 'none', userSelect: 'none' }}>
-      <div style={{ fontFamily: "'Inter',system-ui,sans-serif", fontSize: '11px', fontWeight: 600, color: 'var(--text-secondary)', letterSpacing: '-0.01em' }}>{b.label}</div>
-      <div style={{ height: `${PHONE_H}px`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <MiniPhone b={b} step={0} label={labels[0]} />
-          <FlowArrow accent={b.accent} />
-          <MiniPhone b={b} step={1} label={labels[1]} />
-          <FlowArrow accent={b.accent} />
-          <MiniPhone b={b} step={2} label={labels[2]} />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function PhoneMockupScroll() {
   const [active, setActive] = useState<Category>('home');
@@ -1654,14 +1553,12 @@ export default function PhoneMockupScroll() {
           style={{
             display: 'flex', gap: '28px', padding: '8px 0 40px',
             opacity: fading ? 0 : 1, transition: 'opacity 0.2s ease',
-            animation: active === 'flows' ? 'pmsScrollFlows 65s linear infinite' : 'pmsScroll 46s linear infinite',
+            animation: 'pmsScroll 46s linear infinite',
             willChange: 'transform',
           }}
         >
           {[...BIZ, ...BIZ].map((b, i) => (
-            active === 'flows'
-              ? <FlowCell key={`${b.id}-${i}`} b={b} />
-              : <Phone key={`${b.id}-${i}`} b={b} category={active as Exclude<Category, 'flows'>} />
+            <Phone key={`${b.id}-${i}`} b={b} category={active} />
           ))}
         </div>
       </div>
@@ -1671,10 +1568,7 @@ export default function PhoneMockupScroll() {
           from { transform: translateX(0); }
           to   { transform: translateX(-${LOOP_PX}px); }
         }
-        @keyframes pmsScrollFlows {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-${FLOW_LOOP_PX}px); }
-        }
+
       `}</style>
     </section>
   );

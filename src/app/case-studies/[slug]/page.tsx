@@ -324,6 +324,91 @@ export default async function CaseStudyPage({ params }: Props) {
             </div>
           </div>
 
+          {/* ── Client Quote ── */}
+          <div style={{ marginBottom: 'clamp(60px,8vw,100px)' }}>
+            <blockquote style={{
+              background: `${cs.accentColor}08`,
+              border: `1px solid ${cs.accentColor}25`,
+              borderLeft: `4px solid ${cs.accentColor}`,
+              borderRadius: '12px',
+              padding: 'clamp(28px,4vw,48px)',
+              margin: 0,
+            }}>
+              <p style={{
+                fontFamily: 'Syne, sans-serif',
+                fontWeight: 600,
+                fontSize: 'clamp(17px,2.2vw,22px)',
+                color: 'var(--white)',
+                lineHeight: 1.55,
+                marginBottom: '20px',
+                fontStyle: 'italic',
+                maxWidth: '100%',
+              }}>
+                &ldquo;{cs.clientQuote}&rdquo;
+              </p>
+              <footer style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                <cite style={{
+                  fontFamily: 'Space Mono, monospace',
+                  fontStyle: 'normal',
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  color: cs.accentColor,
+                  letterSpacing: '0.03em',
+                }}>{cs.clientName}</cite>
+                <span style={{
+                  fontFamily: 'Space Mono, monospace',
+                  fontSize: '11px',
+                  color: 'var(--chrome)',
+                  letterSpacing: '0.02em',
+                }}>{cs.clientTitle}</span>
+              </footer>
+            </blockquote>
+          </div>
+
+          {/* ── Key Metrics ── */}
+          <div style={{ marginBottom: 'clamp(60px,8vw,100px)' }}>
+            <p style={{
+              fontFamily: 'Space Mono, monospace',
+              fontSize: '10px',
+              letterSpacing: '3px',
+              textTransform: 'uppercase',
+              color: 'var(--chrome)',
+              marginBottom: '24px',
+            }}>By the Numbers</p>
+            <div className="metrics-grid" style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: '16px',
+            }}>
+              {cs.metrics.map((m, i) => (
+                <div key={i} style={{
+                  background: 'rgba(255,255,255,0.03)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '10px',
+                  padding: '20px 16px',
+                  textAlign: 'center',
+                }}>
+                  <div style={{
+                    fontFamily: 'Syne, sans-serif',
+                    fontWeight: 800,
+                    fontSize: 'clamp(22px,2.8vw,34px)',
+                    color: cs.accentColor,
+                    lineHeight: 1,
+                    marginBottom: '8px',
+                  }}>{m.value}</div>
+                  <div style={{
+                    fontFamily: 'Space Mono, monospace',
+                    fontSize: '10px',
+                    letterSpacing: '0.05em',
+                    textTransform: 'uppercase',
+                    color: 'var(--chrome)',
+                    lineHeight: 1.4,
+                  }}>{m.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* ── View the Live Site ── */}
           <div style={{
             background: `${cs.accentColor}08`,
@@ -508,10 +593,12 @@ export default async function CaseStudyPage({ params }: Props) {
             .before-after-grid { grid-template-columns: 1fr !important; }
             .features-grid { grid-template-columns: repeat(2, 1fr) !important; }
             .related-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
           @media (max-width: 580px) {
             .features-grid { grid-template-columns: 1fr !important; }
             .related-grid { grid-template-columns: 1fr !important; }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
         `}</style>
 

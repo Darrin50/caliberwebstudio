@@ -29,6 +29,10 @@ export default function InteractiveOrbs() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    // ── Gates ──
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.innerWidth < 768) return;
+
     const container = containerRef.current;
     if (!container) return;
 
@@ -82,7 +86,7 @@ export default function InteractiveOrbs() {
         const rect = sectionEl.getBoundingClientRect();
         renderer.setSize(rect.width, rect.height);
         renderer.setClearColor(0x000000, 0);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
         const camera = new THREE.PerspectiveCamera(50, rect.width / rect.height, 0.1, 100);
         camera.position.z = 18;

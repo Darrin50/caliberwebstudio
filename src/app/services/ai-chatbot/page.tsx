@@ -173,7 +173,7 @@ export default function AIChatbotPage() {
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/pricing" style={{ display: 'inline-block', background: 'var(--navy, #1E3D8F)', color: '#fff', fontFamily: 'Space Mono, monospace', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', padding: '18px 40px', textDecoration: 'none', fontWeight: 700 }}>View Plans</Link>
-              <Link href="/contact" style={{ display: 'inline-block', border: '1px solid var(--border, rgba(168,184,200,0.2))', color: 'var(--chrome, #A8B8C8)', fontFamily: 'Space Mono, monospace', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', padding: '18px 40px', textDecoration: 'none' }}>Get Started Free</Link>
+              <Link href="/contact" style={{ display: 'inline-block', border: '1px solid var(--border, rgba(168,184,200,0.2))', color: 'var(--chrome, #A8B8C8)', fontFamily: 'Space Mono, monospace', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', padding: '18px 40px', textDecoration: 'none' }}>Add a Chatbot to My Site</Link>
             </div>
           </div>
         </section>

@@ -91,7 +91,7 @@ export default function StartupCompletePage() {
           </ScrollReveal>
           <ScrollReveal delay={220}>
             <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <CheckoutButton plan="startup" className="startup-hero-cta">Get Started — $5,000</CheckoutButton>
+              <CheckoutButton plan="startup" className="startup-hero-cta">Launch My Business — $5,000</CheckoutButton>
               <Link href="/contact" className="btn-line" style={{ textDecoration: 'none' }}>Ask a Question First</Link>
             </div>
           </ScrollReveal>
@@ -194,7 +194,7 @@ export default function StartupCompletePage() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <CheckoutButton plan="startup" className="startup-hero-cta">Get Started — $5,000</CheckoutButton>
+              <CheckoutButton plan="startup" className="startup-hero-cta">Launch My Business — $5,000</CheckoutButton>
               <Link href="/contact" className="btn-line" style={{ textDecoration: 'none' }}>Talk Through Your Project</Link>
             </div>
           </ScrollReveal>

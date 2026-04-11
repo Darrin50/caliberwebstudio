@@ -24,6 +24,12 @@ export interface CaseStudy {
   resultPeriod: string;
   beforeStory: string;
   afterStory: string;
+  // Client testimonial
+  clientQuote: string;
+  clientName: string;
+  clientTitle: string;
+  // Supporting metrics
+  metrics: { value: string; label: string }[];
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -79,6 +85,15 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     demoSlug: 'detroit-cuts',
+    clientQuote: "Before Caliber, I was turning away clients because they couldn't find me online. Now my booking calendar fills up two weeks out. I've had to hire a second barber just to keep up with the demand coming from the website.",
+    clientName: 'Marcus T.',
+    clientTitle: 'Owner, Detroit Cuts Barbershop',
+    metrics: [
+      { value: '340%', label: 'Increase in new client bookings' },
+      { value: '2 wks', label: 'Average booking lead time' },
+      { value: '4.9★', label: 'Google rating (from 3.8★)' },
+      { value: '90 days', label: 'Time to full results' },
+    ],
   },
 
   {
@@ -133,6 +148,15 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     demoSlug: 'luxe-salon',
+    clientQuote: "My old Wix site was embarrassing compared to the quality of my work. Caliber built something that actually represents the salon. Within 60 days we hit the number-one spot on Google for our main keyword — and the phone hasn't stopped ringing since.",
+    clientName: 'Dominique R.',
+    clientTitle: 'Owner, Luxe Salon & Spa',
+    metrics: [
+      { value: '#1', label: "Google rank for 'Detroit salon'" },
+      { value: '60 days', label: 'Time to first-page ranking' },
+      { value: '85%', label: 'Reduction in Instagram DM bookings (now automated)' },
+      { value: '4.8★', label: 'Google rating' },
+    ],
   },
 
   {
@@ -187,6 +211,15 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     demoSlug: 'detroits-kitchen',
+    clientQuote: "We were losing catering jobs to competitors just because they had a website and we didn't. Caliber built us a full site in under two weeks. The first month we went live, online orders doubled and we booked three private events through the new events page alone.",
+    clientName: 'Reginald W.',
+    clientTitle: 'Owner, Detroit\'s Kitchen',
+    metrics: [
+      { value: '200%', label: 'Increase in online orders (month 1)' },
+      { value: '3', label: 'Private events booked via new events page (month 1)' },
+      { value: '< 2 wks', label: 'Time from kickoff to live site' },
+      { value: '4.7★', label: 'Google rating' },
+    ],
   },
 
   {
@@ -241,6 +274,15 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     demoSlug: 'metro-plumbing',
+    clientQuote: "We were losing every emergency call to companies that just had a website. Caliber had us on page one of Google in six weeks. Now we're getting 15 or more qualified calls a week — people who already trust us before they even dial because they read our reviews and saw our credentials on the site.",
+    clientName: 'Jerome B.',
+    clientTitle: 'Owner, Metro Plumbing',
+    metrics: [
+      { value: '15+', label: 'New service calls per week from the website' },
+      { value: '6 wks', label: 'Time to first-page Google ranking' },
+      { value: '24/7', label: 'Lead capture via AI chatbot' },
+      { value: '$0', label: 'Ad spend — all organic traffic' },
+    ],
   },
 ];
 

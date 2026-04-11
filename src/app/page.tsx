@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import WorkShowcase from '@/components/WorkShowcase';
 import PhoneMockupScroll from '@/components/PhoneMockupScroll';
-import { ChatWidget, FloatingElements } from '@/components/ClientOnlyComponents';
+import { ChatWidget, FloatingElements, InteractiveOrbs } from '@/components/ClientOnlyComponents';
 import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 
 /* ─── Shared style tokens ─────────────────────────────────────── */
@@ -459,6 +459,7 @@ export default function Home() {
       <Footer />
       <ChatWidget />
       <FloatingElements />
+      <InteractiveOrbs />
     </main>
   );
 }

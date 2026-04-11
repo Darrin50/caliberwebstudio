@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { HeroScene } from './ClientOnlyComponents';
+import { FluidHero } from './ClientOnlyComponents';
+import ScrambleText from './ScrambleText';
 
 export default function Hero() {
   return (
@@ -20,36 +20,17 @@ export default function Hero() {
         textAlign: 'center',
       }}
     >
-      {/* Photographic background */}
-      <Image
-        src="/images/brand/cws-home-hero-01.jpg"
-        alt="Detroit cityscape — Caliber Web Studio builds websites for local businesses"
-        fill
-        priority
-        sizes="100vw"
-        style={{ objectFit: 'cover', objectPosition: 'center' }}
-      />
+      {/* Brand-blue fluid gradient shader — fullscreen quad, zero postprocessing */}
+      <FluidHero />
 
-      {/* Primary dark overlay — ensures text is always WCAG AA readable */}
+      {/* Dark gradient overlay — ensures WCAG AA contrast over shader */}
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.78) 55%, rgba(0,0,0,0.90) 100%)',
+        background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.60) 55%, rgba(0,0,0,0.80) 100%)',
         pointerEvents: 'none',
-        zIndex: 1,
+        zIndex: 3,
       }} />
-
-      {/* Brand blue radial glow over photo */}
-      <div style={{
-        position: 'absolute',
-        inset: 0,
-        background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,118,182,0.22) 0%, transparent 65%)',
-        pointerEvents: 'none',
-        zIndex: 2,
-      }} />
-
-      {/* 3D canvas overlay — desktop only, idle-loaded, pauses when off-screen */}
-      <HeroScene />
 
       {/* Content — always in front of canvas */}
       <div
@@ -62,10 +43,14 @@ export default function Hero() {
           userSelect: 'none',
         }}
       >
-        {/* Label */}
-        <div className="sec-label" style={{ justifyContent: 'center', color: '#ffffff', fontWeight: 600, opacity: 0.9 }}>
-          Detroit&apos;s Premier AI Web Agency
-        </div>
+        {/* Eyebrow label — scramble effect */}
+        <ScrambleText
+          text="DETROIT'S PREMIER AI WEB AGENCY"
+          as="div"
+          resolveDelay={80}
+          className="sec-label"
+          style={{ justifyContent: 'center', color: '#ffffff', fontWeight: 600, opacity: 0.9 }}
+        />
 
         {/* Decorative gradient line */}
         <div style={{
@@ -77,8 +62,9 @@ export default function Hero() {
           opacity: 0.7,
         }} />
 
-        {/* Main Heading */}
+        {/* Main Heading — scramble effect, staggered after eyebrow */}
         <h1
+          aria-label="Detroit Websites That Get Found and Win Customers."
           style={{
             fontFamily: "'Syne', sans-serif",
             fontSize: 'clamp(2.5rem, 5.5vw, 4rem)',
@@ -93,10 +79,18 @@ export default function Hero() {
             textShadow: '0 2px 24px rgba(0,0,0,0.85)',
           }}
         >
-          <span style={{ display: 'block', color: 'var(--hero-text)', WebkitTextFillColor: 'var(--hero-text)' }}>Detroit Websites That</span>
-          <span style={{ display: 'block', color: 'var(--hero-text)', WebkitTextFillColor: 'var(--hero-text)' }}>
-            Get Found and Win Customers.
-          </span>
+          <ScrambleText
+            text="DETROIT WEBSITES THAT"
+            as="span"
+            resolveDelay={200}
+            style={{ display: 'block', color: '#F4F6F8' }}
+          />
+          <ScrambleText
+            text="GET FOUND AND WIN CUSTOMERS."
+            as="span"
+            resolveDelay={340}
+            style={{ display: 'block', color: '#F4F6F8' }}
+          />
         </h1>
 
         {/* Subtitle */}

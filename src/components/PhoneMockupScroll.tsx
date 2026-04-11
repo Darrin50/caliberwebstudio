@@ -1,5 +1,7 @@
 'use client';
 import { useState } from 'react';
+import { PhoneMeridianGlassServices } from './phone-screens/PhoneMeridianGlass.services';
+import { PhoneMeridianGlassAbout } from './phone-screens/PhoneMeridianGlass.about';
 
 type Category = 'home' | 'services' | 'about' | 'contact';
 
@@ -836,7 +838,7 @@ function DentalServices({ b }: { b: Biz }) {
 }
 
 function ServicesScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassServices   b={b} />;
+  if (b.id === 'glass')   return <PhoneMeridianGlassServices b={b} />;
   if (b.id === 'barber')  return <BarberServices  b={b} />;
   if (b.id === 'land')    return <LandServices    b={b} />;
   if (b.id === 'salon')   return <SalonServices   b={b} />;
@@ -1127,7 +1129,7 @@ function DentalAbout({ b }: { b: Biz }) {
 }
 
 function AboutScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassAbout   b={b} />;
+  if (b.id === 'glass')   return <PhoneMeridianGlassAbout b={b} />;
   if (b.id === 'barber')  return <BarberAbout  b={b} />;
   if (b.id === 'land')    return <LandAbout    b={b} />;
   if (b.id === 'salon')   return <SalonAbout   b={b} />;

@@ -1,11 +1,40 @@
 'use client';
 import { useState } from 'react';
-import { PhoneMeridianGlassServices } from './phone-screens/PhoneMeridianGlass.services';
-import { PhoneMeridianGlassAbout } from './phone-screens/PhoneMeridianGlass.about';
-import { PhonePrimeHomeServices } from './phone-screens/PhonePrimeHome.services';
-import { PhonePrimeHomeAbout } from './phone-screens/PhonePrimeHome.about';
+import { PhoneMeridianGlassContact } from './phone-screens/PhoneMeridianGlass.contact';
+import { PhoneStudio1908Contact } from './phone-screens/PhoneStudio1908.contact';
+import { PhoneTerrainContact } from './phone-screens/PhoneTerrain.contact';
+import { PhoneMaisonContact } from './phone-screens/PhoneMaison.contact';
+import { PhoneApexContact } from './phone-screens/PhoneApex.contact';
+import { PhoneArdorContact } from './phone-screens/PhoneArdor.contact';
+import { PhonePrimeHomeContact } from './phone-screens/PhonePrimeHome.contact';
+import { PhoneLuminaryContact } from './phone-screens/PhoneLuminary.contact';
+import { PhoneMeridianGlassHome } from './phone-screens/PhoneMeridianGlass.home';
+import { PhoneTerrainHome } from './phone-screens/PhoneTerrain.home';
+import { PhoneMaisonHome } from './phone-screens/PhoneMaison.home';
+import { PhoneApexHome } from './phone-screens/PhoneApex.home';
+import { PhonePrimeHomeHome } from './phone-screens/PhonePrimeHome.home';
+import { PhoneLuminaryHome } from './phone-screens/PhoneLuminary.home';
+import { PhoneStudio1908About } from './phone-screens/PhoneStudio1908.about';
+import { PhoneTerrainAbout } from './phone-screens/PhoneTerrain.about';
+import { PhoneMaisonAbout } from './phone-screens/PhoneMaison.about';
+import { PhoneApexAbout } from './phone-screens/PhoneApex.about';
+import { PhoneArdorAbout } from './phone-screens/PhoneArdor.about';
+import { PhoneLuminaryAbout } from './phone-screens/PhoneLuminary.about';
+import { PhoneStudio1908Services } from './phone-screens/PhoneStudio1908.services';
+import { PhoneTerrainServices } from './phone-screens/PhoneTerrain.services';
+import { PhoneMaisonServices } from './phone-screens/PhoneMaison.services';
+import { PhoneApexServices } from './phone-screens/PhoneApex.services';
+import { PhoneLuminaryServices } from './phone-screens/PhoneLuminary.services';
+import { PhoneArdorFlowScreen,         ARDOR_FLOW_LABELS         } from './phone-screens/PhoneArdor.flow';
+import { PhoneStudio1908FlowScreen,     STUDIO_1908_FLOW_LABELS   } from './phone-screens/PhoneStudio1908.flow';
+import { PhoneTerrainFlowScreen,        TERRAIN_FLOW_LABELS       } from './phone-screens/PhoneTerrain.flow';
+import { PhoneMaisonFlowScreen,         MAISON_FLOW_LABELS        } from './phone-screens/PhoneMaison.flow';
+import { PhoneApexFlowScreen,           APEX_FLOW_LABELS          } from './phone-screens/PhoneApex.flow';
+import { PhonePrimeHomeFlowScreen,      PRIME_HOME_FLOW_LABELS    } from './phone-screens/PhonePrimeHome.flow';
+import { PhoneMeridianGlassFlowScreen,  MERIDIAN_GLASS_FLOW_LABELS } from './phone-screens/PhoneMeridianGlass.flow';
+import { PhoneLuminaryFlowScreen,       LUMINARY_FLOW_LABELS      } from './phone-screens/PhoneLuminary.flow';
 
-type Category = 'home' | 'services' | 'about' | 'contact';
+type Category = 'home' | 'services' | 'about' | 'contact' | 'flows';
 
 // ─── Business config ──────────────────────────────────────────────────────────
 interface Biz {
@@ -570,14 +599,14 @@ function DentalHome({ b }: { b: Biz }) {
 }
 
 function HomeScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')  return <GlassHome   b={b} />;
-  if (b.id === 'barber') return <BarberHome   b={b} />;
-  if (b.id === 'land')   return <LandHome     b={b} />;
-  if (b.id === 'salon')  return <SalonHome    b={b} />;
-  if (b.id === 'fitness')return <FitnessHome  b={b} />;
-  if (b.id === 'resto')  return <RestoHome    b={b} />;
-  if (b.id === 'plumb')  return <PlumbHome    b={b} />;
-  if (b.id === 'dental') return <DentalHome   b={b} />;
+  if (b.id === 'glass')   return <PhoneMeridianGlassHome b={b} />;
+  if (b.id === 'barber')  return <BarberHome              b={b} />;
+  if (b.id === 'land')    return <PhoneTerrainHome         b={b} />;
+  if (b.id === 'salon')   return <PhoneMaisonHome          b={b} />;
+  if (b.id === 'fitness') return <PhoneApexHome            b={b} />;
+  if (b.id === 'resto')   return <RestoHome                b={b} />;
+  if (b.id === 'plumb')   return <PhonePrimeHomeHome       b={b} />;
+  if (b.id === 'dental')  return <PhoneLuminaryHome        b={b} />;
   return null;
 }
 
@@ -840,14 +869,14 @@ function DentalServices({ b }: { b: Biz }) {
 }
 
 function ServicesScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <PhoneMeridianGlassServices b={b} />;
-  if (b.id === 'barber')  return <BarberServices  b={b} />;
-  if (b.id === 'land')    return <LandServices    b={b} />;
-  if (b.id === 'salon')   return <SalonServices   b={b} />;
-  if (b.id === 'fitness') return <FitnessServices b={b} />;
-  if (b.id === 'resto')   return <RestoServices   b={b} />;
-  if (b.id === 'plumb')   return <PhonePrimeHomeServices b={b} />;
-  if (b.id === 'dental')  return <DentalServices  b={b} />;
+  if (b.id === 'glass')   return <GlassServices   b={b} />;
+  if (b.id === 'barber')  return <PhoneStudio1908Services b={b} />;
+  if (b.id === 'land')    return <PhoneTerrainServices    b={b} />;
+  if (b.id === 'salon')   return <PhoneMaisonServices     b={b} />;
+  if (b.id === 'fitness') return <PhoneApexServices       b={b} />;
+  if (b.id === 'resto')   return <RestoServices           b={b} />;
+  if (b.id === 'plumb')   return <PlumbServices           b={b} />;
+  if (b.id === 'dental')  return <PhoneLuminaryServices   b={b} />;
   return null;
 }
 
@@ -1131,14 +1160,14 @@ function DentalAbout({ b }: { b: Biz }) {
 }
 
 function AboutScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <PhoneMeridianGlassAbout b={b} />;
-  if (b.id === 'barber')  return <BarberAbout  b={b} />;
-  if (b.id === 'land')    return <LandAbout    b={b} />;
-  if (b.id === 'salon')   return <SalonAbout   b={b} />;
-  if (b.id === 'fitness') return <FitnessAbout b={b} />;
-  if (b.id === 'resto')   return <RestoAbout   b={b} />;
-  if (b.id === 'plumb')   return <PhonePrimeHomeAbout b={b} />;
-  if (b.id === 'dental')  return <DentalAbout  b={b} />;
+  if (b.id === 'glass')   return <GlassAbout          b={b} />;
+  if (b.id === 'barber')  return <PhoneStudio1908About b={b} />;
+  if (b.id === 'land')    return <PhoneTerrainAbout    b={b} />;
+  if (b.id === 'salon')   return <PhoneMaisonAbout     b={b} />;
+  if (b.id === 'fitness') return <PhoneApexAbout       b={b} />;
+  if (b.id === 'resto')   return <PhoneArdorAbout      b={b} />;
+  if (b.id === 'plumb')   return <PlumbAbout           b={b} />;
+  if (b.id === 'dental')  return <PhoneLuminaryAbout   b={b} />;
   return null;
 }
 
@@ -1398,20 +1427,20 @@ function DentalContact({ b }: { b: Biz }) {
 }
 
 function ContactScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassContact   b={b} />;
-  if (b.id === 'barber')  return <BarberContact  b={b} />;
-  if (b.id === 'land')    return <LandContact    b={b} />;
-  if (b.id === 'salon')   return <SalonContact   b={b} />;
-  if (b.id === 'fitness') return <FitnessContact b={b} />;
-  if (b.id === 'resto')   return <RestoContact   b={b} />;
-  if (b.id === 'plumb')   return <PlumbContact   b={b} />;
-  if (b.id === 'dental')  return <DentalContact  b={b} />;
+  if (b.id === 'glass')   return <PhoneMeridianGlassContact b={b} />;
+  if (b.id === 'barber')  return <PhoneStudio1908Contact    b={b} />;
+  if (b.id === 'land')    return <PhoneTerrainContact       b={b} />;
+  if (b.id === 'salon')   return <PhoneMaisonContact        b={b} />;
+  if (b.id === 'fitness') return <PhoneApexContact          b={b} />;
+  if (b.id === 'resto')   return <PhoneArdorContact         b={b} />;
+  if (b.id === 'plumb')   return <PhonePrimeHomeContact     b={b} />;
+  if (b.id === 'dental')  return <PhoneLuminaryContact      b={b} />;
   return null;
 }
 
 // ══ PHONE CHROME ══════════════════════════════════════════════════════════════
 
-function Phone({ b, category }: { b: Biz; category: Category }) {
+function Phone({ b, category }: { b: Biz; category: Exclude<Category, 'flows'> }) {
   return (
     <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px', pointerEvents: 'none', userSelect: 'none' }}>
       {/* ── Label ABOVE (Mobbin pattern) ── */}
@@ -1454,12 +1483,106 @@ const TABS: { id: Category; label: string }[] = [
   { id: 'services', label: 'Services'   },
   { id: 'about',    label: 'About Us'   },
   { id: 'contact',  label: 'Contact'    },
+  { id: 'flows',    label: 'User Flows' },
 ];
 
 const PHONE_W  = 216;
 const PHONE_H  = 444;
 const PHONE_SCALE = 1;
 const LOOP_PX  = BIZ.length * (PHONE_W + 24); // 8 × 240px = 1920px
+
+// ── Flow tab mini-phone constants ─────────────────────────────────────────────
+const MINI_W     = 116;
+const MINI_H     = Math.round(444 * (116 / 216)); // ≈ 239px
+const MINI_SCALE = 116 / 216;                     // ≈ 0.537
+const FLOW_GAP   = 22;                             // px between phones (arrow region)
+const FLOW_CELL_W = MINI_W * 3 + FLOW_GAP * 2;   // 116×3 + 22×2 = 392px
+const FLOW_LOOP_PX = BIZ.length * (FLOW_CELL_W + 28); // 8 × 420 = 3360px
+
+function getFlowLabels(id: string): [string, string, string] {
+  if (id === 'resto')  return ARDOR_FLOW_LABELS;
+  if (id === 'barber') return STUDIO_1908_FLOW_LABELS;
+  if (id === 'land')   return TERRAIN_FLOW_LABELS;
+  if (id === 'salon')  return MAISON_FLOW_LABELS;
+  if (id === 'fitness') return APEX_FLOW_LABELS;
+  if (id === 'plumb')  return PRIME_HOME_FLOW_LABELS;
+  if (id === 'glass')  return MERIDIAN_GLASS_FLOW_LABELS;
+  if (id === 'dental') return LUMINARY_FLOW_LABELS;
+  return ['Step 1', 'Step 2', 'Step 3'];
+}
+
+function FlowScreen({ b, step }: { b: Biz; step: 0 | 1 | 2 }) {
+  if (b.id === 'resto')   return <PhoneArdorFlowScreen        b={b} step={step} />;
+  if (b.id === 'barber')  return <PhoneStudio1908FlowScreen   b={b} step={step} />;
+  if (b.id === 'land')    return <PhoneTerrainFlowScreen      b={b} step={step} />;
+  if (b.id === 'salon')   return <PhoneMaisonFlowScreen       b={b} step={step} />;
+  if (b.id === 'fitness') return <PhoneApexFlowScreen         b={b} step={step} />;
+  if (b.id === 'plumb')   return <PhonePrimeHomeFlowScreen    b={b} step={step} />;
+  if (b.id === 'glass')   return <PhoneMeridianGlassFlowScreen b={b} step={step} />;
+  if (b.id === 'dental')  return <PhoneLuminaryFlowScreen     b={b} step={step} />;
+  return null;
+}
+
+function FlowArrow({ accent }: { accent: string }) {
+  return (
+    <div style={{ width: `${FLOW_GAP}px`, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: '20px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1px' }}>
+        <div style={{ width: '12px', height: '1px', background: `${accent}44` }} />
+        <div style={{ width: 0, height: 0, borderTop: '3px solid transparent', borderBottom: '3px solid transparent', borderLeft: `4px solid ${accent}66` }} />
+      </div>
+    </div>
+  );
+}
+
+function MiniPhone({ b, step, label }: { b: Biz; step: 0 | 1 | 2; label: string }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
+      {/* Step badge */}
+      <div style={{ width: '17px', height: '17px', borderRadius: '50%', background: b.accent, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: `0 0 0 3px ${b.accent}22` }}>
+        <span style={{ fontSize: '8px', fontWeight: 900, color: '#fff', lineHeight: 1 }}>{step + 1}</span>
+      </div>
+      {/* Phone chrome */}
+      <div style={{
+        width: `${MINI_W}px`, height: `${MINI_H}px`,
+        background: '#0e0e0e',
+        borderRadius: `${Math.round(40 * MINI_SCALE)}px`,
+        border: '1.5px solid #252525',
+        overflow: 'hidden',
+        boxShadow: '0 0 0 1px rgba(255,255,255,0.04), 0 16px 40px rgba(0,0,0,0.5)',
+        position: 'relative',
+        flexShrink: 0,
+      }}>
+        <div style={{ position: 'absolute', top: `${Math.round(10 * MINI_SCALE)}px`, left: '50%', transform: 'translateX(-50%)', width: `${Math.round(62 * MINI_SCALE)}px`, height: `${Math.round(16 * MINI_SCALE)}px`, background: '#000', borderRadius: `${Math.round(12 * MINI_SCALE)}px`, zIndex: 10 }} />
+        <div style={{ height: '100%', overflow: 'hidden' }}>
+          <div style={{ width: '216px', height: '444px', transform: `scale(${MINI_SCALE})`, transformOrigin: 'top left' }}>
+            <FlowScreen b={b} step={step} />
+          </div>
+        </div>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)', borderRadius: `${Math.round(38 * MINI_SCALE)}px`, pointerEvents: 'none', zIndex: 6 }} />
+      </div>
+      {/* Step label */}
+      <div style={{ fontFamily: "'Inter',system-ui,sans-serif", fontSize: '9px', fontWeight: 500, color: 'var(--dim)', textAlign: 'center', width: `${MINI_W}px`, lineHeight: 1.3 }}>{label}</div>
+    </div>
+  );
+}
+
+function FlowCell({ b }: { b: Biz }) {
+  const labels = getFlowLabels(b.id);
+  return (
+    <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px', pointerEvents: 'none', userSelect: 'none' }}>
+      <div style={{ fontFamily: "'Inter',system-ui,sans-serif", fontSize: '11px', fontWeight: 600, color: 'var(--text-secondary)', letterSpacing: '-0.01em' }}>{b.label}</div>
+      <div style={{ height: `${PHONE_H}px`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <MiniPhone b={b} step={0} label={labels[0]} />
+          <FlowArrow accent={b.accent} />
+          <MiniPhone b={b} step={1} label={labels[1]} />
+          <FlowArrow accent={b.accent} />
+          <MiniPhone b={b} step={2} label={labels[2]} />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function PhoneMockupScroll() {
   const [active, setActive] = useState<Category>('home');
@@ -1531,12 +1654,14 @@ export default function PhoneMockupScroll() {
           style={{
             display: 'flex', gap: '28px', padding: '8px 0 40px',
             opacity: fading ? 0 : 1, transition: 'opacity 0.2s ease',
-            animation: 'pmsScroll 46s linear infinite',
+            animation: active === 'flows' ? 'pmsScrollFlows 65s linear infinite' : 'pmsScroll 46s linear infinite',
             willChange: 'transform',
           }}
         >
           {[...BIZ, ...BIZ].map((b, i) => (
-            <Phone key={`${b.id}-${i}`} b={b} category={active} />
+            active === 'flows'
+              ? <FlowCell key={`${b.id}-${i}`} b={b} />
+              : <Phone key={`${b.id}-${i}`} b={b} category={active as Exclude<Category, 'flows'>} />
           ))}
         </div>
       </div>
@@ -1545,6 +1670,10 @@ export default function PhoneMockupScroll() {
         @keyframes pmsScroll {
           from { transform: translateX(0); }
           to   { transform: translateX(-${LOOP_PX}px); }
+        }
+        @keyframes pmsScrollFlows {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-${FLOW_LOOP_PX}px); }
         }
       `}</style>
     </section>

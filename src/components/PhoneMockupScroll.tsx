@@ -1,5 +1,13 @@
 'use client';
 import { useState } from 'react';
+import { PhoneMeridianGlassContact } from './phone-screens/PhoneMeridianGlass.contact';
+import { PhoneStudio1908Contact } from './phone-screens/PhoneStudio1908.contact';
+import { PhoneTerrainContact } from './phone-screens/PhoneTerrain.contact';
+import { PhoneMaisonContact } from './phone-screens/PhoneMaison.contact';
+import { PhoneApexContact } from './phone-screens/PhoneApex.contact';
+import { PhoneArdorContact } from './phone-screens/PhoneArdor.contact';
+import { PhonePrimeHomeContact } from './phone-screens/PhonePrimeHome.contact';
+import { PhoneLuminaryContact } from './phone-screens/PhoneLuminary.contact';
 
 type Category = 'home' | 'services' | 'about' | 'contact';
 
@@ -1394,14 +1402,14 @@ function DentalContact({ b }: { b: Biz }) {
 }
 
 function ContactScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassContact   b={b} />;
-  if (b.id === 'barber')  return <BarberContact  b={b} />;
-  if (b.id === 'land')    return <LandContact    b={b} />;
-  if (b.id === 'salon')   return <SalonContact   b={b} />;
-  if (b.id === 'fitness') return <FitnessContact b={b} />;
-  if (b.id === 'resto')   return <RestoContact   b={b} />;
-  if (b.id === 'plumb')   return <PlumbContact   b={b} />;
-  if (b.id === 'dental')  return <DentalContact  b={b} />;
+  if (b.id === 'glass')   return <PhoneMeridianGlassContact b={b} />;
+  if (b.id === 'barber')  return <PhoneStudio1908Contact    b={b} />;
+  if (b.id === 'land')    return <PhoneTerrainContact       b={b} />;
+  if (b.id === 'salon')   return <PhoneMaisonContact        b={b} />;
+  if (b.id === 'fitness') return <PhoneApexContact          b={b} />;
+  if (b.id === 'resto')   return <PhoneArdorContact         b={b} />;
+  if (b.id === 'plumb')   return <PhonePrimeHomeContact     b={b} />;
+  if (b.id === 'dental')  return <PhoneLuminaryContact      b={b} />;
   return null;
 }
 

@@ -215,7 +215,7 @@ export default async function DashboardPage({ params }: PageProps) {
               <line x1="12" y1="16" x2="12.01" y2="16" />
             </svg>
           </div>
-          <div>
+          <div style={{ flex: 1 }}>
             <p
               style={{
                 margin: '0 0 4px 0',
@@ -233,9 +233,26 @@ export default async function DashboardPage({ params }: PageProps) {
                 color: '#D97706',
               }}
             >
-              Connect your Google Analytics and Google Business Profile in settings to see real data.
+              Connect your Google Analytics and Google Business Profile to see real data.
             </p>
           </div>
+          <Link
+            href={`/client/${slug}/settings`}
+            style={{
+              flexShrink: 0,
+              padding: '8px 14px',
+              background: 'rgba(217,119,6,0.12)',
+              border: '1px solid rgba(217,119,6,0.3)',
+              borderRadius: '6px',
+              color: '#F59E0B',
+              fontSize: '12px',
+              fontWeight: 600,
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Go to Settings →
+          </Link>
         </div>
       )}
 

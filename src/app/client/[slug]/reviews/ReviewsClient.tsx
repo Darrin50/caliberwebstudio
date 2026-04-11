@@ -220,16 +220,31 @@ export default function ReviewsClient({ slug, plan }: ReviewsClientProps) {
 
   if (loading) {
     return (
-      <div style={{ padding: '40px 24px', color: colors.textSecondary }}>
-        Loading reviews...
+      <div style={{ padding: '40px 24px', maxWidth: 1200, margin: '0 auto' }}>
+        <style>{`@keyframes shimmer { 0% { opacity: 0.4 } 50% { opacity: 0.8 } 100% { opacity: 0.4 } }`}</style>
+        <div style={{ height: 36, width: 140, borderRadius: 8, background: 'rgba(255,255,255,0.07)', animation: 'shimmer 1.4s ease-in-out infinite', marginBottom: 32 }} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginBottom: 40 }}>
+          {[1,2,3].map((i) => (
+            <div key={i} style={{ height: 88, borderRadius: 12, background: 'rgba(255,255,255,0.04)', animation: `shimmer 1.4s ease-in-out ${i * 0.1}s infinite` }} />
+          ))}
+        </div>
+        {[1,2,3,4].map((i) => (
+          <div key={i} style={{ height: 100, borderRadius: 10, background: 'rgba(255,255,255,0.03)', marginBottom: 12, animation: `shimmer 1.4s ease-in-out ${i * 0.1}s infinite` }} />
+        ))}
       </div>
     );
   }
 
   if (error || !data) {
     return (
-      <div style={{ padding: '40px 24px', color: colors.red }}>
-        {error || 'Failed to load reviews'}
+      <div style={{ padding: '40px 24px', maxWidth: 1200, margin: '0 auto' }}>
+        <p style={{ color: colors.red, marginBottom: 16 }}>{error || 'Failed to load reviews'}</p>
+        <button
+          onClick={() => window.location.reload()}
+          style={{ padding: '9px 18px', background: 'rgba(255,255,255,0.06)', border: `1px solid ${colors.border}`, borderRadius: 8, color: colors.textSecondary, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+        >
+          Try again
+        </button>
       </div>
     );
   }
@@ -325,8 +340,26 @@ export default function ReviewsClient({ slug, plan }: ReviewsClientProps) {
       {/* Reviews List */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
         {filteredReviews.length === 0 ? (
-          <div style={{ color: colors.textSecondary, padding: 20 }}>
-            No reviews match this filter.
+          <div style={{
+            padding: '48px 24px',
+            textAlign: 'center',
+            background: 'rgba(255,255,255,0.02)',
+            border: `1px solid ${colors.border}`,
+            borderRadius: 12,
+          }}>
+            <p style={{ color: colors.textSecondary, margin: '0 0 8px 0', fontSize: 14 }}>
+              {data.reviews.length === 0
+                ? 'No reviews synced yet. Connect your Google Business Profile in Settings to pull in your reviews.'
+                : 'No reviews match this filter.'}
+            </p>
+            {filter !== 'all' && (
+              <button
+                onClick={() => setFilter('all')}
+                style={{ background: 'none', border: 'none', color: colors.blue, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', padding: 0, fontWeight: 600 }}
+              >
+                Clear filter
+              </button>
+            )}
           </div>
         ) : (
           filteredReviews.map((review) => (

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 interface PortalNavProps {
@@ -199,7 +199,18 @@ export default function PortalNav({
   plan,
 }: PortalNavProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [signingOut, setSigningOut] = useState(false);
+
+  const handleSignOut = async () => {
+    setSigningOut(true);
+    try {
+      await fetch('/api/portal/auth', { method: 'DELETE' });
+    } finally {
+      router.push('/client/login');
+    }
+  };
 
   const planColor = planColors[plan] || planColors.starter;
 
@@ -406,17 +417,61 @@ export default function PortalNav({
         {/* Footer */}
         <div
           style={{
-            padding: '20px 16px',
+            padding: '16px',
             borderTop: '1px solid var(--border)',
             marginTop: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '12px',
           }}
         >
+          {/* Sign out button */}
+          <button
+            onClick={handleSignOut}
+            disabled={signingOut}
+            style={{
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              padding: '10px 14px',
+              background: 'none',
+              border: '1px solid rgba(255,255,255,0.08)',
+              borderRadius: '8px',
+              color: 'var(--text-secondary)',
+              fontSize: '13px',
+              fontWeight: 500,
+              cursor: signingOut ? 'not-allowed' : 'pointer',
+              opacity: signingOut ? 0.6 : 1,
+              transition: 'all 0.2s ease',
+              fontFamily: 'inherit',
+            }}
+            onMouseEnter={(e) => {
+              if (!signingOut) {
+                (e.currentTarget as HTMLButtonElement).style.color = '#ef4444';
+                (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(239,68,68,0.3)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.color = 'var(--text-secondary)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.08)';
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+            {signingOut ? 'Signing out…' : 'Sign out'}
+          </button>
+
           <p
             style={{
-              fontSize: '11px',
+              fontSize: '10px',
               color: 'var(--text-secondary)',
               textAlign: 'center',
               margin: 0,
+              opacity: 0.6,
             }}
           >
             Powered by{' '}

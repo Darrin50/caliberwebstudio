@@ -243,35 +243,111 @@ export default function LeadsClient({ slug, plan }: LeadsClientProps) {
 
   if (loading) {
     return (
-      <div style={{ padding: '40px 24px', color: colors.textSecondary }}>
-        Loading leads...
+      <div style={{ padding: '40px 24px', maxWidth: 1200, margin: '0 auto' }}>
+        <style>{`@keyframes shimmer { 0% { opacity: 0.4 } 50% { opacity: 0.8 } 100% { opacity: 0.4 } }`}</style>
+        <div style={{ height: 36, width: 120, borderRadius: 8, background: 'rgba(255,255,255,0.07)', animation: 'shimmer 1.4s ease-in-out infinite', marginBottom: 32 }} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginBottom: 40 }}>
+          {[1,2,3,4].map((i) => (
+            <div key={i} style={{ height: 88, borderRadius: 12, background: 'rgba(255,255,255,0.04)', animation: `shimmer 1.4s ease-in-out ${i * 0.1}s infinite` }} />
+          ))}
+        </div>
+        {[1,2,3,4,5].map((i) => (
+          <div key={i} style={{ height: 68, borderRadius: 10, background: 'rgba(255,255,255,0.03)', marginBottom: 10, animation: `shimmer 1.4s ease-in-out ${i * 0.08}s infinite` }} />
+        ))}
       </div>
     );
   }
 
   if (error || !data) {
     return (
-      <div style={{ padding: '40px 24px', color: colors.red }}>
-        {error || 'Failed to load leads'}
+      <div style={{ padding: '40px 24px', maxWidth: 1200, margin: '0 auto' }}>
+        <p style={{ color: colors.red, marginBottom: 16 }}>{error || 'Failed to load leads'}</p>
+        <button
+          onClick={() => window.location.reload()}
+          style={{ padding: '9px 18px', background: 'rgba(255,255,255,0.06)', border: `1px solid ${colors.border}`, borderRadius: 8, color: colors.textSecondary, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+        >
+          Try again
+        </button>
       </div>
     );
   }
 
   const filteredLeads = getFilteredLeads();
 
+  const exportCSV = () => {
+    if (!data?.leads.length) return;
+    const headers = ['Name', 'Email', 'Phone', 'Source', 'Status', 'Date', 'Message'];
+    const rows = data.leads.map((l) => [
+      l.name,
+      l.email,
+      l.phone || '',
+      sourceLabels[l.source] || l.source,
+      l.status,
+      new Date(l.date || '').toLocaleDateString(),
+      (l.message || '').replace(/"/g, '""'),
+    ]);
+    const csv = [headers, ...rows]
+      .map((row) => row.map((cell) => `"${cell}"`).join(','))
+      .join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `leads-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div style={{ padding: '40px 24px', maxWidth: 1200, margin: '0 auto' }}>
-      <h1
-        style={{
-          fontSize: 32,
-          fontWeight: 'bold',
-          color: colors.text,
-          marginBottom: 32,
-          fontFamily: 'Syne, sans-serif',
-        }}
-      >
-        Leads
-      </h1>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 32, flexWrap: 'wrap', gap: 12 }}>
+        <h1
+          style={{
+            fontSize: 32,
+            fontWeight: 'bold',
+            color: colors.text,
+            margin: 0,
+            fontFamily: 'Syne, sans-serif',
+          }}
+        >
+          Leads
+        </h1>
+        {data.leads.length > 0 && (
+          <button
+            onClick={exportCSV}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+              padding: '9px 16px',
+              background: 'rgba(255,255,255,0.04)',
+              border: `1px solid ${colors.border}`,
+              borderRadius: 8,
+              color: colors.textSecondary,
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: 'pointer',
+              fontFamily: 'inherit',
+              transition: 'all 0.2s',
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.color = colors.text;
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.color = colors.textSecondary;
+              (e.currentTarget as HTMLButtonElement).style.borderColor = colors.border;
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Export CSV
+          </button>
+        )}
+      </div>
 
       {/* Summary Cards */}
       <div
@@ -537,12 +613,23 @@ export default function LeadsClient({ slug, plan }: LeadsClientProps) {
                 <td
                   colSpan={7}
                   style={{
-                    padding: '40px 20px',
+                    padding: '48px 20px',
                     textAlign: 'center',
-                    color: colors.textSecondary,
                   }}
                 >
-                  No leads match this filter.
+                  <p style={{ color: colors.textSecondary, margin: '0 0 6px 0', fontSize: 14 }}>
+                    {data.leads.length === 0
+                      ? 'No leads yet. New leads from your contact form and chatbot will appear here.'
+                      : 'No leads match this filter.'}
+                  </p>
+                  {statusFilter !== 'all' || sourceFilter !== 'all' ? (
+                    <button
+                      onClick={() => { setStatusFilter('all'); setSourceFilter('all'); }}
+                      style={{ background: 'none', border: 'none', color: colors.blue, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', padding: 0, fontWeight: 600 }}
+                    >
+                      Clear filters
+                    </button>
+                  ) : null}
                 </td>
               </tr>
             ) : (

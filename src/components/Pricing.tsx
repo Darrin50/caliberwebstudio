@@ -16,7 +16,7 @@ const plans = [
       'SSL & Security Updates',
       'Monthly Performance Report',
     ],
-    cta: 'Get Started',
+    cta: 'Get My Free Mockup',
   },
   {
     name: 'GROWTH',
@@ -31,7 +31,7 @@ const plans = [
       'Priority Support',
       'Monthly Strategy Call',
     ],
-    cta: 'Get Started',
+    cta: 'Claim My Growth Plan',
   },
   {
     name: 'DOMINATION',
@@ -46,7 +46,7 @@ const plans = [
       'Dedicated Account Management',
       'Weekly Strategy Sessions',
     ],
-    cta: 'Get Started',
+    cta: 'Book My Strategy Call',
   },
 ];
 

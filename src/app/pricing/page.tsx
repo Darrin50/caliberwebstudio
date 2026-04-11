@@ -23,6 +23,7 @@ const plans = [
     price: "$197",
     billing: "/mo",
     popular: false,
+    cta: "Get My Free Mockup",
     features: [
       "AI-Optimized Website",
       "AI Chatbot Widget",
@@ -38,6 +39,7 @@ const plans = [
     price: "$397",
     billing: "/mo",
     popular: true,
+    cta: "Claim My Growth Plan",
     features: [
       "Everything in Starter",
       "Review Management System",
@@ -53,6 +55,7 @@ const plans = [
     price: "$697",
     billing: "/mo",
     popular: false,
+    cta: "Book My Strategy Call",
     features: [
       "Everything in Growth",
       "AI Citation Tracking",
@@ -125,7 +128,7 @@ export default function PricingPage() {
                     );
                   })}
                 </ul>
-                <CheckoutButton plan={plan.name.toLowerCase()} className={`pricing-cta${plan.popular ? " pricing-cta--popular" : ""}`}>Get Started</CheckoutButton>
+                <CheckoutButton plan={plan.name.toLowerCase()} className={`pricing-cta${plan.popular ? " pricing-cta--popular" : ""}`}>{plan.cta}</CheckoutButton>
               </div>
             ))}
           </ScrollRevealGroup>
@@ -195,7 +198,7 @@ export default function PricingPage() {
                   <span style={{ fontSize: "clamp(2.6rem, 5vw, 3.4rem)", fontWeight: 800, color: "var(--text-primary, #fff)", lineHeight: 1, display: "block", marginBottom: "6px" }}>$5,000</span>
                   <p style={{ fontSize: "0.8rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "8px", fontFamily: "'Space Mono', monospace", letterSpacing: "0.05em" }}>starting price · one-time</p>
                   <p style={{ fontSize: "0.85rem", color: "var(--text-secondary, rgba(255,255,255,0.65))", marginBottom: "32px", lineHeight: 1.6 }}>Custom scope up to $15,000 depending on brand complexity and business needs.</p>
-                  <CheckoutButton plan="startup" className="startup-cta">Get Started — $5,000</CheckoutButton>
+                  <CheckoutButton plan="startup" className="startup-cta">Launch My Business — $5,000</CheckoutButton>
                 </div>
                 <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
                   {[

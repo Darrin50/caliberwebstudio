@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, Inter, Space_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import ClientEffects from "@/components/ClientEffects";
 import ClientProviders from "@/components/ClientProviders";
@@ -367,25 +368,23 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning className={`${syne.variable} ${inter.variable} ${spaceMono.variable}`}>
       <head>
-        {/* Restore saved theme before first paint — prevents flash of wrong theme. Default is light. */}
-        <script dangerouslySetInnerHTML={{__html: `(function(){try{var t=window['localStorage'].getItem('caliber-theme-v2');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();`}} />
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
-          }}
+        {/* Restore saved theme before first paint — prevents flash of wrong theme. */}
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{__html: `(function(){try{var t=window['localStorage'].getItem('caliber-theme-v2');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();`}}
         />
-        <script
-          type="application/ld+json"
+        {/* Structured Data */}
+        <Script id="ld-local-business" type="application/ld+json" strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <Script id="ld-website" type="application/ld+json" strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
-        <script
-          type="application/ld+json"
+        <Script id="ld-webpage" type="application/ld+json" strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
         />
-        <script
-          type="application/ld+json"
+        <Script id="ld-faq" type="application/ld+json" strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>

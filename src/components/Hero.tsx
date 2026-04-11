@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { HeroScene } from './ClientOnlyComponents';
+import { HeroShader } from './ClientOnlyComponents';
 
 export default function Hero() {
   return (
@@ -20,36 +19,17 @@ export default function Hero() {
         textAlign: 'center',
       }}
     >
-      {/* Photographic background */}
-      <Image
-        src="/images/brand/cws-home-hero-01.jpg"
-        alt="Detroit cityscape — Caliber Web Studio builds websites for local businesses"
-        fill
-        priority
-        sizes="100vw"
-        style={{ objectFit: 'cover', objectPosition: 'center' }}
-      />
+      {/* WebGL shader background — Detroit dusk skyline */}
+      <HeroShader />
 
-      {/* Primary dark overlay — ensures text is always WCAG AA readable */}
+      {/* Dark gradient overlay — ensures WCAG AA contrast over shader */}
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.78) 55%, rgba(0,0,0,0.90) 100%)',
+        background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.60) 55%, rgba(0,0,0,0.80) 100%)',
         pointerEvents: 'none',
-        zIndex: 1,
+        zIndex: 3,
       }} />
-
-      {/* Brand blue radial glow over photo */}
-      <div style={{
-        position: 'absolute',
-        inset: 0,
-        background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,118,182,0.22) 0%, transparent 65%)',
-        pointerEvents: 'none',
-        zIndex: 2,
-      }} />
-
-      {/* 3D canvas overlay — desktop only, idle-loaded, pauses when off-screen */}
-      <HeroScene />
 
       {/* Content — always in front of canvas */}
       <div

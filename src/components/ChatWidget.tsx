@@ -85,7 +85,7 @@ export default function ChatWidget() {
     <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999 }}>
       {/* Idle Nudge Bubble */}
       {showNudge && !open && (
-        <div style={{
+        <div id="cw-nudge" style={{
           position: 'fixed',
           bottom: '90px',
           right: '24px',
@@ -139,6 +139,7 @@ export default function ChatWidget() {
 
       {/* Chat Button — clean solid Caliber Blue circle, white chat icon */}
       <button
+        id="cw-btn"
         onClick={() => setOpen(!open)}
         style={{
           position: 'fixed',
@@ -179,6 +180,7 @@ export default function ChatWidget() {
       {/* Chat Window — fully solid, no blur */}
       {open && (
         <div
+          id="cw-window"
           style={{
             position: 'fixed',
             bottom: '88px',

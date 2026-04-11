@@ -659,8 +659,8 @@ input:focus, textarea:focus {
 [data-theme="light"] main #hero h4,
 [data-theme="light"] main #hero h5,
 [data-theme="light"] main #hero h6 { color: #ffffff !important; }
-[data-theme="light"] [data-dark-section] .sec-label { color: #1e3d8f !important; }
-[data-theme="light"] [data-dark-section] .sec-label::before { background: #1e3d8f !important; }
+[data-theme="light"] [data-dark-section]:not(#hero) .sec-label { color: #1e3d8f !important; }
+[data-theme="light"] [data-dark-section]:not(#hero) .sec-label::before { background: #1e3d8f !important; }
 
 /* Hero headline text color CSS vars — used via inline style in Hero.tsx */
 :root { --hero-text: #ffffff; }
@@ -1111,4 +1111,14 @@ html[data-theme="light"] .addon-card:hover {
 [data-theme="light"] .compare-table td {
   color: var(--text-secondary) !important;
   border-color: rgba(0,0,0,0.05) !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CHAT WIDGET — mobile position override
+   Push the FAB above the hero CTA on small viewports
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  #cw-btn    { bottom: 88px !important; }
+  #cw-nudge  { bottom: 154px !important; }
+  #cw-window { bottom: 152px !important; }
 }

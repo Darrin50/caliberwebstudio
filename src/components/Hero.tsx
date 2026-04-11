@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { HeroScene } from './ClientOnlyComponents';
 
 export default function Hero() {
   return (
@@ -46,6 +47,9 @@ export default function Hero() {
         pointerEvents: 'none',
         zIndex: 2,
       }} />
+
+      {/* 3D canvas overlay — desktop only, idle-loaded, pauses when off-screen */}
+      <HeroScene />
 
       {/* Content — always in front of canvas */}
       <div

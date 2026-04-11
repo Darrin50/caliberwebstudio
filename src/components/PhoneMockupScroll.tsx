@@ -1,7 +1,6 @@
 'use client';
-import { useState } from 'react';
-
-type Category = 'home' | 'services' | 'about' | 'contact';
+import { useState, useEffect, useRef } from 'react';
+import styles from './PhoneMockupScroll.module.css';
 
 // ─── Business config ──────────────────────────────────────────────────────────
 interface Biz {
@@ -1407,7 +1406,7 @@ function ContactScreen({ b }: { b: Biz }) {
 
 // ══ PHONE CHROME ══════════════════════════════════════════════════════════════
 
-function Phone({ b, category }: { b: Biz; category: Category }) {
+function Phone({ b }: { b: Biz }) {
   return (
     <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px', pointerEvents: 'none', userSelect: 'none' }}>
       {/* ── Label ABOVE (Mobbin pattern) ── */}
@@ -1425,17 +1424,14 @@ function Phone({ b, category }: { b: Biz; category: Category }) {
         position: 'relative',
         flexShrink: 0,
       }}>
-        {/* dynamic island — scaled position */}
+        {/* dynamic island */}
         <div style={{ position: 'absolute', top: `${10 * PHONE_SCALE}px`, left: '50%', transform: 'translateX(-50%)', width: `${62 * PHONE_SCALE}px`, height: `${16 * PHONE_SCALE}px`, background: '#000', borderRadius: `${12 * PHONE_SCALE}px`, zIndex: 10 }} />
-        {/* screen — scale all inner content proportionally */}
-        <div style={{ height: '100%', paddingTop: '2px', overflow: 'hidden' }}>
-          <div style={{ width: '216px', height: '444px', transform: `scale(${PHONE_SCALE})`, transformOrigin: 'top left' }}>
-            {category === 'home'     && <HomeScreen     b={b} />}
-            {category === 'services' && <ServicesScreen b={b} />}
-            {category === 'about'    && <AboutScreen    b={b} />}
-            {category === 'contact'  && <ContactScreen  b={b} />}
-          </div>
-        </div>
+        {/* screenshot fills full screen */}
+        <img
+          src={b.heroPhoto}
+          alt={`${b.name} ${b.label} website`}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+        />
         {/* specular sheen */}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)', borderRadius: `${38 * PHONE_SCALE}px`, pointerEvents: 'none', zIndex: 6 }} />
       </div>
@@ -1445,27 +1441,28 @@ function Phone({ b, category }: { b: Biz; category: Category }) {
 
 // ══ SECTION ═══════════════════════════════════════════════════════════════════
 
-const TABS: { id: Category; label: string }[] = [
-  { id: 'home',     label: 'Home Pages' },
-  { id: 'services', label: 'Services'   },
-  { id: 'about',    label: 'About Us'   },
-  { id: 'contact',  label: 'Contact'    },
-];
-
 const PHONE_W  = 216;
 const PHONE_H  = 444;
 const PHONE_SCALE = 1;
-const LOOP_PX  = BIZ.length * (PHONE_W + 24); // 8 × 240px = 1920px
+const GAP_PX   = 28;
 
 export default function PhoneMockupScroll() {
-  const [active, setActive] = useState<Category>('home');
-  const [fading, setFading]   = useState(false);
+  const [inView, setInView]   = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
 
-  const switchTab = (cat: Category) => {
-    if (cat === active) return;
-    setFading(true);
-    setTimeout(() => { setActive(cat); setFading(false); }, 200);
-  };
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    // If already in viewport on mount (e.g. browser restored scroll position), start immediately
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) setInView(true);
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: '100px' }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   return (
     <section
@@ -1494,55 +1491,36 @@ export default function PhoneMockupScroll() {
             </p>
           </div>
 
-          {/* ── Segmented tab control (Mobbin-style) ── */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '3px', background: 'var(--card-bg)', border: '1px solid var(--border)', borderRadius: '999px', padding: '4px' }}>
-            {TABS.map(t => (
-              <button
-                key={t.id}
-                onClick={() => switchTab(t.id)}
-                style={{
-                  padding: '7px 16px', borderRadius: '999px', border: 'none',
-                  background: active === t.id ? 'var(--navy)' : 'transparent',
-                  color: active === t.id ? '#fff' : 'var(--dim)',
-                  fontSize: '12px', fontFamily: "'Inter',sans-serif", fontWeight: active === t.id ? 600 : 400,
-                  cursor: 'pointer', transition: 'all 0.2s ease', outline: 'none', letterSpacing: '-0.01em',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
         </div>
       </div>
 
-      {/* ── Carousel ── */}
-      <div style={{
-        overflow: 'hidden',
-        maskImage: 'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
-      }}>
+      {/* ── Carousel — Mobbin technique: CSS keyframe on doubled flex row ── */}
+      <div
+        ref={trackRef}
+        style={{
+          overflow: 'hidden',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
+        }}
+      >
         <div
-          className="pms-track"
+          className={styles.track}
           style={{
-            display: 'flex', gap: '28px', padding: '8px 0 40px',
-            opacity: fading ? 0 : 1, transition: 'opacity 0.2s ease',
-            animation: 'pmsScroll 46s linear infinite',
-            willChange: 'transform',
-          }}
+            display: 'flex',
+            gap: `${GAP_PX}px`,
+            padding: '8px 0 40px',
+            animationPlayState: inView ? 'running' : 'paused',
+            /* CSS vars drive the keyframe translate distance */
+            '--phone-w': `${PHONE_W}px`,
+            '--gap':     `${GAP_PX}px`,
+            '--count':   BIZ.length,
+          } as React.CSSProperties}
         >
-          {[...BIZ, ...BIZ].map((b, i) => (
-            <Phone key={`${b.id}-${i}`} b={b} category={active} />
+          {BIZ.concat(BIZ).map((b, i) => (
+            <Phone key={`${b.id}-${i}`} b={b} />
           ))}
         </div>
       </div>
-
-      <style>{`
-        @keyframes pmsScroll {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-${LOOP_PX}px); }
-        }
-      `}</style>
     </section>
   );
 }

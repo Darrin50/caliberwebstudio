@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { PhoneMeridianGlassServices } from './phone-screens/PhoneMeridianGlass.services';
 import { PhoneMeridianGlassAbout } from './phone-screens/PhoneMeridianGlass.about';
+import { PhonePrimeHomeServices } from './phone-screens/PhonePrimeHome.services';
+import { PhonePrimeHomeAbout } from './phone-screens/PhonePrimeHome.about';
 
 type Category = 'home' | 'services' | 'about' | 'contact';
 
@@ -844,7 +846,7 @@ function ServicesScreen({ b }: { b: Biz }) {
   if (b.id === 'salon')   return <SalonServices   b={b} />;
   if (b.id === 'fitness') return <FitnessServices b={b} />;
   if (b.id === 'resto')   return <RestoServices   b={b} />;
-  if (b.id === 'plumb')   return <PlumbServices   b={b} />;
+  if (b.id === 'plumb')   return <PhonePrimeHomeServices b={b} />;
   if (b.id === 'dental')  return <DentalServices  b={b} />;
   return null;
 }
@@ -1135,7 +1137,7 @@ function AboutScreen({ b }: { b: Biz }) {
   if (b.id === 'salon')   return <SalonAbout   b={b} />;
   if (b.id === 'fitness') return <FitnessAbout b={b} />;
   if (b.id === 'resto')   return <RestoAbout   b={b} />;
-  if (b.id === 'plumb')   return <PlumbAbout   b={b} />;
+  if (b.id === 'plumb')   return <PhonePrimeHomeAbout b={b} />;
   if (b.id === 'dental')  return <DentalAbout  b={b} />;
   return null;
 }

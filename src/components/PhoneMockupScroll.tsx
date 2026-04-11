@@ -14,6 +14,12 @@ import { PhoneMaisonHome } from './phone-screens/PhoneMaison.home';
 import { PhoneApexHome } from './phone-screens/PhoneApex.home';
 import { PhonePrimeHomeHome } from './phone-screens/PhonePrimeHome.home';
 import { PhoneLuminaryHome } from './phone-screens/PhoneLuminary.home';
+import { PhoneStudio1908About } from './phone-screens/PhoneStudio1908.about';
+import { PhoneTerrainAbout } from './phone-screens/PhoneTerrain.about';
+import { PhoneMaisonAbout } from './phone-screens/PhoneMaison.about';
+import { PhoneApexAbout } from './phone-screens/PhoneApex.about';
+import { PhoneArdorAbout } from './phone-screens/PhoneArdor.about';
+import { PhoneLuminaryAbout } from './phone-screens/PhoneLuminary.about';
 
 type Category = 'home' | 'services' | 'about' | 'contact';
 
@@ -1141,14 +1147,14 @@ function DentalAbout({ b }: { b: Biz }) {
 }
 
 function AboutScreen({ b }: { b: Biz }) {
-  if (b.id === 'glass')   return <GlassAbout   b={b} />;
-  if (b.id === 'barber')  return <BarberAbout  b={b} />;
-  if (b.id === 'land')    return <LandAbout    b={b} />;
-  if (b.id === 'salon')   return <SalonAbout   b={b} />;
-  if (b.id === 'fitness') return <FitnessAbout b={b} />;
-  if (b.id === 'resto')   return <RestoAbout   b={b} />;
-  if (b.id === 'plumb')   return <PlumbAbout   b={b} />;
-  if (b.id === 'dental')  return <DentalAbout  b={b} />;
+  if (b.id === 'glass')   return <GlassAbout          b={b} />;
+  if (b.id === 'barber')  return <PhoneStudio1908About b={b} />;
+  if (b.id === 'land')    return <PhoneTerrainAbout    b={b} />;
+  if (b.id === 'salon')   return <PhoneMaisonAbout     b={b} />;
+  if (b.id === 'fitness') return <PhoneApexAbout       b={b} />;
+  if (b.id === 'resto')   return <PhoneArdorAbout      b={b} />;
+  if (b.id === 'plumb')   return <PlumbAbout           b={b} />;
+  if (b.id === 'dental')  return <PhoneLuminaryAbout   b={b} />;
   return null;
 }
 

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ParticleHero } from './ClientOnlyComponents';
+import { HeroShader } from './ClientOnlyComponents';
 
 export default function Hero() {
   return (
@@ -19,8 +19,8 @@ export default function Hero() {
         textAlign: 'center',
       }}
     >
-      {/* GPU particle curl-noise field */}
-      <ParticleHero />
+      {/* WebGL shader background — Detroit dusk skyline */}
+      <HeroShader />
 
       {/* Dark gradient overlay — ensures WCAG AA contrast over shader */}
       <div style={{

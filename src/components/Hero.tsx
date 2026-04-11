@@ -15,7 +15,7 @@ export default function Hero() {
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        padding: 'clamp(100px, 18vh, 220px) clamp(20px, 6vw, 60px) 80px',
+        padding: 'clamp(100px, 18vh, 220px) clamp(20px, 6vw, 60px) 120px',
         background: 'var(--bg)',
         textAlign: 'center',
       }}
@@ -34,7 +34,7 @@ export default function Hero() {
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(180deg, rgba(10,10,11,0.82) 0%, rgba(10,10,11,0.70) 50%, rgba(10,10,11,0.88) 100%)',
+        background: 'linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.78) 55%, rgba(0,0,0,0.90) 100%)',
         pointerEvents: 'none',
         zIndex: 1,
       }} />
@@ -63,7 +63,7 @@ export default function Hero() {
         }}
       >
         {/* Label */}
-        <div className="sec-label" style={{ justifyContent: 'center', color: '#3b82f6', fontWeight: 600 }}>
+        <div className="sec-label" style={{ justifyContent: 'center', color: '#ffffff', fontWeight: 600, opacity: 0.9 }}>
           Detroit&apos;s Premier AI Web Agency
         </div>
 
@@ -90,6 +90,7 @@ export default function Hero() {
             maxWidth: '900px',
             marginLeft: 'auto',
             marginRight: 'auto',
+            textShadow: '0 2px 24px rgba(0,0,0,0.85)',
           }}
         >
           <span style={{ display: 'block', color: 'var(--hero-text)', WebkitTextFillColor: 'var(--hero-text)' }}>Detroit Websites That</span>

@@ -160,25 +160,42 @@ export default function ScrambleText({
       let scrollRafId        = 0;
 
       /* Single pulse loop — sole renderer on mobile.
-         resolvedRef is the source of truth; this just syncs it to display. */
+         resolvedRef is the source of truth; this just syncs it to display.
+         `cancelled` is a closure flag: cleanup sets it → pulse stops itself on
+         the next tick. This correctly handles React Strict Mode double-mount
+         (where cancelAnimationFrame timing can be unreliable).
+         `flushedFull` ensures one final setDisplay when all chars resolve. */
+      let pulseId     = 0;
+      let cancelled   = false;
+      let flushedFull = false;
       const pulse = () => {
+        if (cancelled) return;
         const anyUnresolved = resolvedRef.current.some((r, i) => !r && chars[i] !== ' ');
         if (anyUnresolved) {
+          flushedFull = false;
           setDisplay(
             chars.map((c, i) =>
               c === ' ' ? ' ' : resolvedRef.current[i] ? c : rndChar(),
             ),
           );
+        } else if (!flushedFull) {
+          flushedFull = true;
+          setDisplay([...chars]);
         }
-        rafRef.current = requestAnimationFrame(pulse);
+        pulseId = requestAnimationFrame(pulse);
       };
-      rafRef.current = requestAnimationFrame(pulse);
+      pulseId = requestAnimationFrame(pulse);
 
-      /* Auto-resolve over ~800 ms — only mutates resolvedRef; pulse renders */
+      /* Auto-resolve over ~800 ms — mutates resolvedRef only; pulse renders.
+         `stepCancelled` mirrors the pattern above: prevents leaked Strict Mode
+         setTimeout callbacks from running after cleanup. */
+      let stepId        = 0;
+      let stepCancelled = false;
       const autoResolve = (delay: number, onDone?: () => void) => {
         let frame = 0;
         const total = 48;
         const step = () => {
+          if (stepCancelled) return;
           const target = Math.round(((frame + 1) / total) * totalNonSpace);
           const already = resolvedRef.current.filter(Boolean).length;
           for (let n = 0; n < target - already; n++) {
@@ -186,10 +203,10 @@ export default function ScrambleText({
             if (idx !== -1) resolvedRef.current[idx] = true;
           }
           frame++;
-          if (frame < total) rafRef.current = requestAnimationFrame(step);
+          if (frame < total) stepId = requestAnimationFrame(step);
           else onDone?.();
         };
-        setTimeout(() => { rafRef.current = requestAnimationFrame(step); }, delay);
+        setTimeout(() => { if (!stepCancelled) stepId = requestAnimationFrame(step); }, delay);
       };
 
       /* Touch: resolve all chars within ~90 px of the finger */
@@ -285,7 +302,10 @@ export default function ScrambleText({
       autoResolve(resolveDelay, () => { initialResolveDone = true; });
 
       return () => {
-        cancelAnimationFrame(rafRef.current);
+        cancelled     = true;
+        stepCancelled = true;
+        cancelAnimationFrame(pulseId);
+        cancelAnimationFrame(stepId);
         cancelAnimationFrame(scrollRafId);
         if (liftInterval) clearInterval(liftInterval);
         io.disconnect();

@@ -938,6 +938,356 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(0);
 }
 
+/* ===== REAL PHOTO IMAGES ===== */
+.hero-photo {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-2xl);
+}
+.about-photo {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+.product-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-default);
+}
+.product-card:hover .product-photo { transform: scale(1.03); }
+.ig-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-default);
+}
+.ig-item:hover .ig-photo { transform: scale(1.05); }
+.nav-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ===== CUSTOM CAKES GALLERY ===== */
+.cakes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+.cake-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3/4;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-default);
+  transition: all var(--duration-normal) var(--ease-default);
+}
+.cake-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-border-strong);
+}
+.cake-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-default);
+}
+.cake-card:hover .cake-photo { transform: scale(1.04); }
+.cake-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: var(--space-4) var(--space-5);
+  background: linear-gradient(to top, rgba(14,8,6,0.92) 0%, transparent 100%);
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* ===== DELIVERY SECTION ===== */
+.delivery-section {
+  background: var(--color-bg-secondary);
+}
+.delivery-grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-10);
+  flex-wrap: wrap;
+  margin-top: var(--space-10);
+}
+.delivery-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg-tertiary);
+  transition: all var(--duration-normal) var(--ease-default);
+  width: 280px;
+}
+.delivery-card:hover {
+  border-color: var(--color-brand-primary);
+  box-shadow: var(--shadow-brand);
+}
+.delivery-logo-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9);
+}
+.delivery-card-body {
+  padding: var(--space-5) var(--space-6);
+  text-align: center;
+}
+.delivery-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: 6px 16px;
+  background: var(--color-brand-accent-strong);
+  color: var(--color-brand-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(212, 114, 140, 0.3);
+}
+.delivery-tagline {
+  text-align: center;
+  margin-top: var(--space-8);
+  font-size: 0.9375rem;
+  color: var(--color-text-tertiary);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ===== CHATBOT ===== */
+#chat-bubble {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 60px; height: 60px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(212, 114, 140, 0.45);
+  z-index: 9999;
+  transition: all var(--duration-normal) var(--ease-bounce);
+  font-size: 1.5rem;
+}
+#chat-bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(212, 114, 140, 0.55);
+}
+#chat-bubble .chat-close-icon { display: none; }
+#chat-bubble.open .chat-choc-icon { display: none; }
+#chat-bubble.open .chat-close-icon { display: flex; }
+#chat-window {
+  position: fixed;
+  bottom: 100px; right: 28px;
+  width: 360px;
+  max-height: 520px;
+  border-radius: var(--radius-2xl);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(212, 114, 140, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9998;
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  pointer-events: none;
+  transition: opacity var(--duration-slow) var(--ease-default),
+              transform var(--duration-slow) var(--ease-bounce);
+}
+#chat-window.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+.chat-header {
+  padding: var(--space-4) var(--space-5);
+  background: linear-gradient(135deg, var(--color-brand-primary), #b85a78);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+.chat-header-avatar {
+  width: 40px; height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.chat-header-info { flex: 1; }
+.chat-header-name {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #fff;
+  line-height: 1.2;
+}
+.chat-header-status {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+.chat-status-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+#chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  scroll-behavior: smooth;
+}
+#chat-messages::-webkit-scrollbar { width: 4px; }
+#chat-messages::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 2px;
+}
+.chat-msg {
+  max-width: 85%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  word-break: break-word;
+}
+.chat-msg-bot {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+  border: 1px solid var(--color-border-default);
+}
+.chat-msg-user {
+  background: var(--color-brand-primary);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+}
+.chat-typing {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-default);
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  width: fit-content;
+  align-self: flex-start;
+}
+.chat-typing.visible { display: flex; }
+.chat-typing-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--color-text-tertiary);
+  animation: typingBounce 1.2s infinite;
+}
+.chat-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.chat-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-6px); opacity: 1; }
+}
+#chat-quick-replies {
+  padding: var(--space-2) var(--space-5) var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+.chat-qr-btn {
+  padding: 6px 14px;
+  background: transparent;
+  color: var(--color-brand-primary);
+  border: 1px solid rgba(212, 114, 140, 0.4);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-default);
+  white-space: nowrap;
+}
+.chat-qr-btn:hover {
+  background: var(--color-brand-accent);
+  border-color: var(--color-brand-primary);
+}
+.chat-input-area {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border-default);
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--color-bg-primary);
+}
+#chat-input {
+  flex: 1;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  padding: 9px 16px;
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color var(--duration-fast);
+}
+#chat-input:focus { border-color: var(--color-brand-primary); }
+#chat-input::placeholder { color: var(--color-text-tertiary); }
+#chat-send {
+  width: 38px; height: 38px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  transition: background var(--duration-fast);
+}
+#chat-send:hover { background: var(--color-brand-hover); }
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -973,11 +1323,16 @@ a { text-decoration: none; color: inherit; }
   .proof-divider { display: none; }
   .cta-actions { flex-direction: column; align-items: center; }
   .marquee-track { gap: 24px; }
+  .cakes-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid-wrap { grid-template-columns: 1fr !important; }
+  #chat-window { width: calc(100vw - 32px); right: 16px; bottom: 90px; }
+  #chat-bubble { bottom: 20px; right: 20px; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .treat-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+  .cakes-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -986,7 +1341,9 @@ a { text-decoration: none; color: inherit; }
 <!-- ===== NAVIGATION ===== -->
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="/" class="nav-logo">Got <span>Chocolate</span></a>
+    <a href="/" class="nav-logo">
+      <img src="/images/gotchocolate/logo-with-treats.png" alt="Got Chocolate LLC" class="nav-logo-img" />
+    </a>
     <ul class="nav-links">
       <li><a href="#about" class="nav-link">Our Story</a></li>
       <li><a href="#grad-packs" class="nav-link">Grad Packs</a></li>
@@ -1039,9 +1396,7 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
       <div class="hero-image-wrapper reveal" style="transition-delay:200ms;">
-        <div class="hero-image">
-          <svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        </div>
+        <img src="/images/gotchocolate/strawberries.png" alt="Chocolate-covered strawberries by Got Chocolate LLC — Detroit's sweetest treats" class="hero-photo" loading="eager" />
       </div>
     </div>
   </div>
@@ -1085,9 +1440,7 @@ a { text-decoration: none; color: inherit; }
   <div class="container">
     <div class="about-grid">
       <div class="about-image-wrapper reveal">
-        <div class="about-image">
-          <svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        </div>
+        <img src="/images/gotchocolate/drip-cake-moet.png" alt="Celebration drip cake with Moet champagne — Got Chocolate LLC custom creation" class="about-photo" loading="lazy" />
       </div>
       <div class="about-text">
         <p class="section-label reveal">Our Story</p>
@@ -1121,9 +1474,7 @@ a { text-decoration: none; color: inherit; }
       <!-- Elite Pack -->
       <div class="product-card reveal" style="transition-delay:100ms;">
         <div class="product-image-wrapper">
-          <div class="product-image">
-            <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
+          <img src="/images/gotchocolate/cupcakes.png" alt="Cupcakes for every celebration — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">The Elite Grad Pack</h3>
@@ -1133,11 +1484,9 @@ a { text-decoration: none; color: inherit; }
       </div>
       <!-- Signature Pack -->
       <div class="product-card reveal" style="transition-delay:200ms;">
-        <div class="product-image-wrapper">
+        <div class="product-image-wrapper" style="position:relative;">
           <div class="product-badge">Most Popular</div>
-          <div class="product-image">
-            <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
+          <img src="/images/gotchocolate/cheesecake-sampler.png" alt="Cheesecake sampler promotion — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">The Signature Grad Pack</h3>
@@ -1147,11 +1496,9 @@ a { text-decoration: none; color: inherit; }
       </div>
       <!-- Luxe Pack -->
       <div class="product-card reveal" style="transition-delay:300ms;">
-        <div class="product-image-wrapper">
+        <div class="product-image-wrapper" style="position:relative;">
           <div class="product-badge" style="background:var(--color-brand-gold);">Premium</div>
-          <div class="product-image">
-            <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
+          <img src="/images/gotchocolate/dessert-jars.png" alt="Colorful layered dessert jars — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">The Luxe Grad Pack</h3>
@@ -1222,6 +1569,43 @@ a { text-decoration: none; color: inherit; }
         <h3 class="treat-name">Custom Orders</h3>
         <p class="treat-desc">Have something special in mind? We take custom orders for events, parties, and corporate gifts.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOM CAKES GALLERY ===== -->
+<section class="section section-alt" id="custom-cakes">
+  <div class="container">
+    <div class="section-header section-header-center">
+      <p class="section-label reveal">Made to Order</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">Custom Cake Gallery</h2>
+      <p class="section-sub reveal" style="transition-delay:200ms;">
+        Every cake is a one-of-a-kind creation. From casino nights to Starbucks vibes — if you can dream it, the Cake Lady can make it.
+      </p>
+    </div>
+    <div class="cakes-grid">
+      <div class="cake-card reveal" style="transition-delay:100ms;">
+        <img src="/images/gotchocolate/casino-cake.png" alt="Casino-themed birthday cake by Got Chocolate LLC" class="cake-photo" loading="lazy" />
+        <div class="cake-label">Casino Theme</div>
+      </div>
+      <div class="cake-card reveal" style="transition-delay:200ms;">
+        <img src="/images/gotchocolate/frappuccino-cake.png" alt="Caramel frappuccino themed celebration cake by Got Chocolate LLC" class="cake-photo" loading="lazy" />
+        <div class="cake-label">Starbucks Frappuccino</div>
+      </div>
+      <div class="cake-card reveal" style="transition-delay:300ms;">
+        <img src="/images/gotchocolate/berry-birthday-cake.png" alt="Berry sweet half-birthday cake by Got Chocolate LLC" class="cake-photo" loading="lazy" />
+        <div class="cake-label">Berry Birthday</div>
+      </div>
+      <div class="cake-card reveal" style="transition-delay:400ms;">
+        <img src="/images/gotchocolate/birthday-50th.png" alt="50th birthday celebration with cake and gifts by Got Chocolate LLC" class="cake-photo" loading="lazy" />
+        <div class="cake-label">50th Milestone</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:var(--space-10);" class="reveal" style="transition-delay:500ms;">
+      <a href="tel:3132888829" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Text Your Vision — (313) 288-8829
+      </a>
     </div>
   </div>
 </section>
@@ -1315,12 +1699,12 @@ a { text-decoration: none; color: inherit; }
       </p>
     </div>
     <div class="ig-grid reveal" style="transition-delay:300ms;">
-      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/football-treats.png" alt="Detroit Lions themed chocolate treats — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/caramel-apples.png" alt="Gourmet caramel apples — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/strawberry-shortcake-squares.png" alt="Strawberry shortcake squares — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/birthday-50th.png" alt="50th birthday celebration cake — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/berry-birthday-cake.png" alt="Berry sweet half-birthday cake — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/frappuccino-cake.png" alt="Caramel frappuccino themed cake — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
     </div>
     <div style="text-align:center;" class="reveal" style="transition-delay:400ms;">
       <a href="https://instagram.com/got.chocolate" target="_blank" rel="noopener" class="ig-link">
@@ -1396,6 +1780,65 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== CAKE MENU + HOW TO BOOK ===== -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header section-header-center">
+      <p class="section-label reveal">Transparent Pricing</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">Cake Menu &amp; How to Book</h2>
+      <p class="section-sub reveal" style="transition-delay:200ms;">
+        Real prices, no surprises. Custom quotes within 24 hours — just text us your vision.
+      </p>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8);" class="pricing-grid-wrap">
+      <div class="reveal" style="transition-delay:100ms;">
+        <img src="/images/gotchocolate/cake-menu.png" alt="Got Chocolate LLC cake menu and pricing — 6 inch round $50 up to full sheet $130" loading="lazy" style="width:100%; border-radius:var(--radius-xl); border:1px solid var(--color-border-strong); box-shadow:var(--shadow-lg);" />
+      </div>
+      <div class="reveal" style="transition-delay:200ms;">
+        <img src="/images/gotchocolate/how-to-book.png" alt="How to book a custom cake at Got Chocolate LLC — text name, date, style, get quote in 24 hours" loading="lazy" style="width:100%; border-radius:var(--radius-xl); border:1px solid var(--color-border-strong); box-shadow:var(--shadow-lg);" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DELIVERY COMING SOON ===== -->
+<section class="section delivery-section" id="delivery">
+  <div class="container">
+    <div class="section-header section-header-center">
+      <p class="section-label reveal">Coming Soon</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">Order From Anywhere</h2>
+      <p class="section-sub reveal" style="transition-delay:200ms;">
+        Got Chocolate is coming to your favorite delivery apps. Get Detroit's sweetest treats delivered straight to your door.
+      </p>
+    </div>
+    <div class="delivery-grid">
+      <div class="delivery-card reveal" style="transition-delay:100ms;">
+        <img src="/images/shared/ubereats-logo.png" alt="Uber Eats" class="delivery-logo-img" loading="lazy" />
+        <div class="delivery-card-body">
+          <div class="delivery-card-name">Uber Eats</div>
+          <span class="coming-soon-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Coming Soon
+          </span>
+        </div>
+      </div>
+      <div class="delivery-card reveal" style="transition-delay:200ms;">
+        <img src="/images/shared/doordash-logo.png" alt="DoorDash" class="delivery-logo-img" loading="lazy" />
+        <div class="delivery-card-body">
+          <div class="delivery-card-name">DoorDash</div>
+          <span class="coming-soon-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Coming Soon
+          </span>
+        </div>
+      </div>
+    </div>
+    <p class="delivery-tagline reveal" style="transition-delay:300ms;">
+      For now, call or text (313) 288-8829 or order at <a href="https://gotchocolatellc.com" target="_blank" rel="noopener" style="color:var(--color-brand-primary);">gotchocolatellc.com</a>
+    </p>
   </div>
 </section>
 
@@ -1477,6 +1920,184 @@ a { text-decoration: none; color: inherit; }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<!-- ===== AI CHATBOT WIDGET ===== -->
+<!-- To reuse on another site: swap out CHAT_CONFIG below with new business data and brand colors -->
+<button id="chat-bubble" aria-label="Chat with us">
+  <span class="chat-choc-icon">🍫</span>
+  <span class="chat-close-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </span>
+</button>
+
+<div id="chat-window" role="dialog" aria-label="Got Chocolate chat">
+  <div class="chat-header">
+    <div class="chat-header-avatar">🍫</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Got Chocolate — Ask Choco</div>
+      <div class="chat-header-status">
+        <span class="chat-status-dot"></span>
+        Usually replies instantly
+      </div>
+    </div>
+  </div>
+  <div id="chat-messages"></div>
+  <div id="chat-quick-replies"></div>
+  <div class="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Ask about prices, hours, orders…" autocomplete="off" />
+    <button id="chat-send" aria-label="Send">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+// ================================================================
+// CHAT_CONFIG — swap this object to reuse widget on any demo site
+// ================================================================
+const CHAT_CONFIG = {
+  businessName: 'Got Chocolate LLC',
+  agentName: 'Choco',
+  welcomeMessage: "Hey there! 🍫 I'm Choco, your Got Chocolate assistant. I can answer questions about our treats, pricing, hours, and how to order. What can I help you with?",
+  quickReplies: ['Hours & Location', 'Cake Prices', 'How to Order', 'Graduation Packs', 'Custom Orders', 'Delivery?'],
+  qna: [
+    {
+      keywords: ['hour', 'open', 'close', 'schedule', 'when'],
+      answer: "We're open Thursday & Friday 11AM–7PM, and Saturday & Sunday 10AM–6PM. We're closed Monday–Wednesday. 🕐"
+    },
+    {
+      keywords: ['location', 'address', 'where', 'wyoming', 'find', 'directions'],
+      answer: "You can find us at 18111 Wyoming Ave, Detroit, MI 48221. We're located inside another space — just look for us when you walk in! 📍"
+    },
+    {
+      keywords: ['order', 'how', 'book', 'reserve', 'contact', 'get', 'buy', 'purchase'],
+      answer: "To order, text or DM your name, event date, and what style you want to (313) 288-8829. You'll get a custom quote within 24 hours. A $25 non-refundable deposit secures your date, with the remaining balance due 3 days before your event. We accept Zelle and Cash App. 🎉"
+    },
+    {
+      keywords: ['graduation', 'grad', 'pack', 'package'],
+      answer: "We have 3 graduation packages:\n\n• Elite Grad Pack — $126\n• Signature Grad Pack — $226 (Most Popular)\n• Luxe Grad Pack — $326 (Premium)\n\nEvery pack is handcrafted with premium chocolate. Text (313) 288-8829 to order! 🎓"
+    },
+    {
+      keywords: ['cake', 'price', 'cost', 'how much', 'pricing', 'round', 'sheet', 'tiered', 'fondant', 'cupcake'],
+      answer: "Here's our cake menu:\n\n• 6\" Round — $50\n• 8\" Round — $65\n• 10\" Round — $80\n• ¼ Sheet — $70\n• ½ Sheet — $90\n• Full Sheet — $130\n• Tiered Cakes — starting at $150\n• Fondant Covered — $100\n• Thanksgiving Cake — $100\n• Cupcake Cake — $70\n• Cupcakes — $4 each\n\nText us for a custom quote! 🎂"
+    },
+    {
+      keywords: ['strawberr', 'dipped', 'chocolate covered'],
+      answer: "Our chocolate-covered strawberries are one of our most popular treats — fresh strawberries hand-dipped in premium chocolate with custom toppings. Text (313) 288-8829 or visit us Thu–Sun to order! 🍓"
+    },
+    {
+      keywords: ['caramel', 'apple', 'pretzel', 'dessert jar', 'cheesecake', 'cupcake', 'treat', 'menu', 'what do you'],
+      answer: "We make all kinds of treats! 🍫\n\n• Chocolate-covered strawberries\n• Custom cakes (all sizes & themes)\n• Caramel apples\n• Cupcakes\n• Cheesecake samplers\n• Dessert jars\n• Dipped pretzels\n• Custom orders for any occasion\n\nText us to order: (313) 288-8829"
+    },
+    {
+      keywords: ['custom', 'special', 'theme', 'design', 'vision', 'idea', 'event', 'party', 'wedding', 'birthday'],
+      answer: "Yes! We LOVE custom orders. 💖 Text or DM us your vision — name, date, and style — at (313) 288-8829. We'll send a custom quote within 24 hours. No idea is too creative for the Cake Lady!"
+    },
+    {
+      keywords: ['deliver', 'doordash', 'uber', 'ubereats', 'ship', 'door'],
+      answer: "Delivery is coming soon on Uber Eats and DoorDash! 🚗 For now, you can order by texting (313) 288-8829 or visiting us in person at 18111 Wyoming Ave. Stay tuned!"
+    },
+    {
+      keywords: ['pay', 'payment', 'zelle', 'cash app', 'venmo', 'deposit'],
+      answer: "We accept Zelle and Cash App. A $25 non-refundable deposit is required to secure your date, with the remaining balance due 3 days before your event. 💳"
+    },
+    {
+      keywords: ['instagram', 'social', 'follow', '@'],
+      answer: "Follow us on Instagram @got.chocolate for daily treats, behind-the-scenes, and custom order inspo! We have 9,500+ followers and growing. 📸"
+    },
+    {
+      keywords: ['phone', 'number', 'call', 'text', 'sms'],
+      answer: "You can reach us by text or call at (313) 288-8829. We respond fastest to texts! You can also DM us on Instagram @got.chocolate. 📱"
+    }
+  ],
+  fallback: "Great question! For the most accurate answer, text us at (313) 288-8829 or DM @got.chocolate on Instagram. We'd love to help! 🍫"
+};
+
+// ================================================================
+// Widget logic — no need to edit below when reusing
+// ================================================================
+(function() {
+  const bubble = document.getElementById('chat-bubble');
+  const chatWindow = document.getElementById('chat-window');
+  const messagesEl = document.getElementById('chat-messages');
+  const quickRepliesEl = document.getElementById('chat-quick-replies');
+  const inputEl = document.getElementById('chat-input');
+  const sendBtn = document.getElementById('chat-send');
+  let opened = false;
+
+  function addMessage(text, role) {
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg chat-msg-' + role;
+    msg.textContent = text;
+    messagesEl.appendChild(msg);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function showTyping() {
+    const el = document.createElement('div');
+    el.className = 'chat-typing visible';
+    el.innerHTML = '<span class="chat-typing-dot"></span><span class="chat-typing-dot"></span><span class="chat-typing-dot"></span>';
+    el.id = 'chat-typing-indicator';
+    messagesEl.appendChild(el);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideTyping() {
+    const el = document.getElementById('chat-typing-indicator');
+    if (el) el.remove();
+  }
+
+  function getBotReply(input) {
+    const lower = input.toLowerCase();
+    for (const item of CHAT_CONFIG.qna) {
+      if (item.keywords.some(k => lower.includes(k))) {
+        return item.answer;
+      }
+    }
+    return CHAT_CONFIG.fallback;
+  }
+
+  function handleUserMessage(text) {
+    if (!text.trim()) return;
+    addMessage(text, 'user');
+    inputEl.value = '';
+    quickRepliesEl.innerHTML = '';
+    showTyping();
+    setTimeout(() => {
+      hideTyping();
+      addMessage(getBotReply(text), 'bot');
+    }, 900 + Math.random() * 400);
+  }
+
+  function renderQuickReplies() {
+    quickRepliesEl.innerHTML = '';
+    CHAT_CONFIG.quickReplies.forEach(label => {
+      const btn = document.createElement('button');
+      btn.className = 'chat-qr-btn';
+      btn.textContent = label;
+      btn.addEventListener('click', () => handleUserMessage(label));
+      quickRepliesEl.appendChild(btn);
+    });
+  }
+
+  bubble.addEventListener('click', () => {
+    opened = !opened;
+    bubble.classList.toggle('open', opened);
+    chatWindow.classList.toggle('open', opened);
+    if (opened && messagesEl.children.length === 0) {
+      setTimeout(() => {
+        addMessage(CHAT_CONFIG.welcomeMessage, 'bot');
+        renderQuickReplies();
+      }, 250);
+    }
+  });
+
+  sendBtn.addEventListener('click', () => handleUserMessage(inputEl.value));
+  inputEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleUserMessage(inputEl.value);
+  });
+})();
 </script>
 
 </body>

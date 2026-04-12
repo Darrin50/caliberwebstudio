@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Got Chocolate LLC — Detroit's Chocolate-Covered Everything | Detroit Cake Lady</title>
+<meta name="description" content="Got Chocolate LLC — Detroit's home for chocolate-covered strawberries, custom cakes, dipped treats, and graduation packages. You want it? I got it!" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+/* ===== DESIGN TOKENS — Got Chocolate LLC ===== */
+/* Tier: Luxury x Warmth hybrid (dark mode) */
+/* Palette: Deep chocolate brown + pink accent + gold highlights */
+:root {
+  /* Backgrounds */
+  --color-bg-primary: #0E0806;
+  --color-bg-secondary: #1A120E;
+  --color-bg-tertiary: #241A14;
+  --color-bg-inverse: #FFF8F5;
+
+  /* Text */
+  --color-text-primary: #F5EDE8;
+  --color-text-secondary: #B8A99E;
+  --color-text-tertiary: #7D6E63;
+
+  /* Brand */
+  --color-brand-primary: #D4728C;
+  --color-brand-hover: #E0859D;
+  --color-brand-accent: rgba(212, 114, 140, 0.10);
+  --color-brand-accent-strong: rgba(212, 114, 140, 0.18);
+  --color-brand-gold: #C9A96E;
+  --color-brand-gold-glow: rgba(201, 169, 110, 0.15);
+  --color-chocolate: #3C2415;
+  --color-chocolate-light: #5C3A24;
+
+  /* Borders */
+  --color-border-default: #2E2019;
+  --color-border-strong: #3E2E24;
+  --color-border-subtle: #1E1410;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* Type Scale */
+  --heading-hero: clamp(2.5rem, 5vw, 4.5rem);
+  --heading-section: clamp(1.75rem, 3vw, 2.5rem);
+  --heading-sub: clamp(1.25rem, 2vw, 1.5rem);
+
+  /* Spacing (8px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 2px -1px rgba(0,0,0,0.15);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.25), 0 2px 4px -2px rgba(0,0,0,0.15);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -4px rgba(0,0,0,0.15);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.35), 0 8px 10px -6px rgba(0,0,0,0.15);
+  --shadow-brand: 0 0 20px rgba(212, 114, 140, 0.15);
+  --shadow-gold: 0 0 30px rgba(201, 169, 110, 0.12);
+
+  /* Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-reveal: 600ms;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(14, 8, 6, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background var(--duration-normal) var(--ease-default);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+.nav-logo {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--color-text-primary);
+  letter-spacing: 0.01em;
+}
+.nav-logo span { color: var(--color-brand-primary); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+}
+.nav-link {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color var(--duration-normal) var(--ease-default);
+}
+.nav-link:hover { color: var(--color-text-primary); }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px 24px;
+  background: var(--color-brand-primary);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--ease-default);
+  box-shadow: var(--shadow-brand);
+}
+.nav-cta:hover {
+  background: var(--color-brand-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 0 30px rgba(212, 114, 140, 0.25);
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+.nav-hamburger svg { color: var(--color-text-primary); }
+
+/* ===== HERO ===== */
+.hero {
+  padding-top: calc(76px + var(--space-24));
+  padding-bottom: var(--space-20);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212, 114, 140, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -150px; left: -150px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+.hero-overline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-brand-gold);
+  margin-bottom: var(--space-4);
+}
+.hero-overline-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--color-brand-gold);
+}
+.hero-headline {
+  font-family: var(--font-heading);
+  font-size: var(--heading-hero);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+.hero-headline em {
+  font-style: italic;
+  color: var(--color-brand-primary);
+}
+.hero-sub {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-6);
+  max-width: 480px;
+  font-weight: 300;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 32px;
+  background: var(--color-brand-primary);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--ease-default);
+  box-shadow: var(--shadow-brand);
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: var(--color-brand-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(212, 114, 140, 0.3);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border-strong);
+  transition: all var(--duration-normal) var(--ease-default);
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary);
+  background: var(--color-brand-accent);
+}
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border-default);
+}
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+.hero-trust-icon { color: var(--color-brand-gold); flex-shrink: 0; }
+.hero-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.hero-image {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1A120E 0%, #3C2415 50%, #1A120E 100%);
+  position: relative;
+}
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 40% 35%, rgba(212, 114, 140, 0.08) 0%, transparent 60%);
+}
+.hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 70%, rgba(201, 169, 110, 0.06) 0%, transparent 50%);
+}
+.placeholder-icon {
+  position: relative;
+  z-index: 1;
+  opacity: 0.15;
+  color: var(--color-text-primary);
+}
+
+/* ===== MARQUEE ===== */
+.marquee {
+  background: var(--color-brand-primary);
+  padding: 13px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 40px;
+  animation: marquee 25s linear infinite;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.marquee-dot { opacity: 0.4; }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== PROOF BAR ===== */
+.proof-bar {
+  background: var(--color-bg-secondary);
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--color-border-default);
+  border-bottom: 1px solid var(--color-border-default);
+}
+.proof-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-10);
+  flex-wrap: wrap;
+}
+.proof-item {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+.proof-item strong {
+  color: var(--color-brand-gold);
+  font-weight: 700;
+}
+.proof-divider {
+  color: var(--color-text-tertiary);
+  font-size: 0.5rem;
+}
+
+/* ===== SECTION UTILITIES ===== */
+.section { padding: var(--space-24) 0; }
+.section-alt { background: var(--color-bg-secondary); }
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+  margin-bottom: var(--space-3);
+}
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: var(--heading-section);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+.section-sub {
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+  max-width: 560px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+.section-header { margin-bottom: var(--space-12); }
+.section-header-center { text-align: center; margin-left: auto; margin-right: auto; }
+.section-header-center .section-sub { margin-left: auto; margin-right: auto; }
+
+/* ===== ABOUT / STORY ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+.about-image-wrapper {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.about-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #241A14 0%, #3C2415 50%, #241A14 100%);
+  position: relative;
+}
+.about-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(212, 114, 140, 0.06) 0%, transparent 60%);
+}
+.about-text .section-heading { max-width: 450px; }
+.about-body {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-6);
+  font-weight: 300;
+}
+.about-signature {
+  margin-top: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.about-sig-line {
+  width: 40px;
+  height: 1px;
+  background: var(--color-brand-gold);
+}
+.about-sig-name {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--color-brand-gold);
+  font-weight: 400;
+}
+
+/* ===== PRODUCT CARDS ===== */
+.product-grid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: repeat(3, 1fr);
+}
+.product-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-default);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-default);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-border-strong);
+}
+.product-image-wrapper {
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1;
+}
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1A120E 0%, #3C2415 60%, #2A1A10 100%);
+  transition: transform var(--duration-slow) var(--ease-default);
+  position: relative;
+}
+.product-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.04) 0%, transparent 50%);
+}
+.product-card:hover .product-image { transform: scale(1.03); }
+.product-badge {
+  position: absolute;
+  top: 16px; left: 16px;
+  padding: 6px 14px;
+  background: var(--color-brand-primary);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  z-index: 2;
+}
+.product-info {
+  padding: var(--space-6);
+}
+.product-name {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.product-price {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-brand-gold);
+  margin-top: var(--space-2);
+}
+.product-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ===== SERVICE/TREAT CARDS ===== */
+.treat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+.treat-card {
+  padding: var(--space-8);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-normal) var(--ease-default);
+}
+.treat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border-strong);
+}
+.treat-icon-wrapper {
+  width: 48px; height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-brand-accent);
+  border-radius: 10px;
+  color: var(--color-brand-primary);
+}
+.treat-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--space-6);
+  color: var(--color-text-primary);
+}
+.treat-desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-3);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+.testimonial-card {
+  padding: var(--space-8);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-xl);
+  transition: all var(--duration-normal) var(--ease-default);
+}
+.testimonial-card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-stars {
+  display: flex;
+  gap: 2px;
+  color: var(--color-brand-gold);
+  margin-bottom: var(--space-4);
+}
+.testimonial-quote {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border-default);
+}
+.testimonial-avatar {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+.testimonial-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+}
+.testimonial-role {
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  margin-top: 2px;
+}
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  padding: 10px 20px;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+/* ===== INSTAGRAM SECTION ===== */
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-3);
+}
+.ig-item {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.ig-image {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #1A120E, #3C2415);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--duration-slow) var(--ease-default);
+  position: relative;
+}
+.ig-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 114, 140, 0.05) 0%, transparent 60%);
+}
+.ig-item:hover .ig-image { transform: scale(1.05); }
+.ig-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 8, 6, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-default);
+}
+.ig-item:hover .ig-overlay { opacity: 1; }
+.ig-overlay svg { color: #fff; }
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-brand-primary);
+  transition: color var(--duration-normal);
+}
+.ig-link:hover { color: var(--color-brand-hover); }
+.ig-link svg { transition: transform var(--duration-normal); }
+.ig-link:hover svg { transform: translateX(4px); }
+
+/* ===== HOURS + LOCATION ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+.info-card {
+  padding: var(--space-8);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-xl);
+}
+.info-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.info-card-title svg { color: var(--color-brand-gold); }
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border-default);
+  font-size: 0.9375rem;
+}
+.hours-row:last-child { border-bottom: none; }
+.hours-day { color: var(--color-text-secondary); font-weight: 400; }
+.hours-time { color: var(--color-text-primary); font-weight: 500; }
+.hours-closed { color: var(--color-text-tertiary); font-style: italic; }
+.location-address {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+.location-note {
+  margin-top: var(--space-4);
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+.location-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal);
+}
+.location-cta:hover {
+  background: var(--color-brand-accent);
+}
+
+/* ===== CTA BLOCK ===== */
+.cta-block {
+  padding: var(--space-24) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 114, 140, 0.06) 0%, transparent 40%, rgba(201, 169, 110, 0.04) 100%);
+  pointer-events: none;
+}
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.cta-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+}
+.cta-heading em {
+  font-style: italic;
+  color: var(--color-brand-primary);
+}
+.cta-sub {
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+  line-height: 1.75;
+  font-weight: 300;
+}
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+.cta-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-brand-gold);
+  font-family: var(--font-heading);
+}
+.cta-phone svg { color: var(--color-brand-gold); }
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: var(--space-16) 0 var(--space-8);
+  border-top: 1px solid var(--color-border-default);
+  background: var(--color-bg-primary);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--space-12);
+}
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+.footer-brand span { color: var(--color-brand-primary); }
+.footer-tagline {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: var(--space-6);
+}
+.footer-social {
+  display: flex;
+  gap: var(--space-3);
+}
+.footer-social-link {
+  width: 40px; height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-normal);
+}
+.footer-social-link:hover {
+  background: var(--color-brand-accent);
+  color: var(--color-brand-primary);
+}
+.footer-col-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-4);
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+.footer-link {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  transition: color var(--duration-normal);
+}
+.footer-link:hover { color: var(--color-text-primary); }
+.footer-bottom {
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border-default);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copy {
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  font-weight: 300;
+}
+.footer-credit {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  font-weight: 300;
+}
+.footer-credit a { color: var(--color-brand-primary); transition: color var(--duration-normal); }
+.footer-credit a:hover { color: var(--color-brand-hover); }
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-reveal) var(--ease-default),
+              transform var(--duration-reveal) var(--ease-default);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .marquee-track { animation: none; }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero { padding-top: calc(76px + var(--space-16)); padding-bottom: var(--space-16); }
+  .hero-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+  .hero-image-wrapper { order: -1; }
+  .hero-image { height: 300px; }
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-secondary { justify-content: center; text-align: center; }
+  .section { padding: var(--space-16) 0; }
+  .product-grid { grid-template-columns: 1fr; }
+  .treat-grid { grid-template-columns: 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image { height: 300px; }
+  .info-grid { grid-template-columns: 1fr; }
+  .ig-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .footer-bottom { flex-direction: column; gap: var(--space-3); text-align: center; }
+  .proof-items { flex-direction: column; gap: var(--space-3); }
+  .proof-divider { display: none; }
+  .cta-actions { flex-direction: column; align-items: center; }
+  .marquee-track { gap: 24px; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .treat-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Got <span>Chocolate</span></a>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">Our Story</a></li>
+      <li><a href="#grad-packs" class="nav-link">Grad Packs</a></li>
+      <li><a href="#treats" class="nav-link">Treats</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#visit" class="nav-link">Visit</a></li>
+      <li><a href="tel:3132888829" class="nav-cta">Order Now</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-overline reveal">
+          <span class="hero-overline-dot"></span>
+          Detroit's Chocolate Destination
+        </div>
+        <h1 class="hero-headline reveal" style="transition-delay:100ms;">
+          You Want It?<br/><em>I Got It.</em>
+        </h1>
+        <p class="hero-sub reveal" style="transition-delay:200ms;">
+          Chocolate-covered strawberries, custom cakes, dipped treats, and graduation packages crafted with love on Wyoming Ave. Detroit's own Cake Lady.
+        </p>
+        <div class="hero-actions reveal" style="transition-delay:300ms;">
+          <a href="tel:3132888829" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call to Order
+          </a>
+          <a href="#grad-packs" class="btn-secondary">View Grad Packs</a>
+        </div>
+        <div class="hero-trust reveal" style="transition-delay:400ms;">
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            4.0&#9733; on Google
+          </div>
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Handcrafted in Detroit
+          </div>
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Custom Orders Welcome
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-wrapper reveal" style="transition-delay:200ms;">
+        <div class="hero-image">
+          <svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCROLLING MARQUEE ===== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>CHOCOLATE-COVERED STRAWBERRIES</span><span class="marquee-dot">&diams;</span>
+    <span>CUSTOM CAKES</span><span class="marquee-dot">&diams;</span>
+    <span>DIPPED PRETZELS</span><span class="marquee-dot">&diams;</span>
+    <span>GRADUATION PACKAGES</span><span class="marquee-dot">&diams;</span>
+    <span>CUSTOM ORDERS</span><span class="marquee-dot">&diams;</span>
+    <span>DETROIT'S CAKE LADY</span><span class="marquee-dot">&diams;</span>
+    <span>CHOCOLATE-COVERED STRAWBERRIES</span><span class="marquee-dot">&diams;</span>
+    <span>CUSTOM CAKES</span><span class="marquee-dot">&diams;</span>
+    <span>DIPPED PRETZELS</span><span class="marquee-dot">&diams;</span>
+    <span>GRADUATION PACKAGES</span><span class="marquee-dot">&diams;</span>
+    <span>CUSTOM ORDERS</span><span class="marquee-dot">&diams;</span>
+    <span>DETROIT'S CAKE LADY</span><span class="marquee-dot">&diams;</span>
+  </div>
+</div>
+
+<!-- ===== PROOF BAR ===== -->
+<section class="proof-bar reveal">
+  <div class="container">
+    <div class="proof-items">
+      <span class="proof-item"><strong>4.0&#9733;</strong> Google Rating</span>
+      <span class="proof-divider">&bull;</span>
+      <span class="proof-item"><strong>9,500+</strong> Instagram Followers</span>
+      <span class="proof-divider">&bull;</span>
+      <span class="proof-item"><strong>813</strong> Posts Shared</span>
+      <span class="proof-divider">&bull;</span>
+      <span class="proof-item"><strong>Wyoming Ave</strong> Detroit, MI</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / STORY ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrapper reveal">
+        <div class="about-image">
+          <svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label reveal">Our Story</p>
+        <h2 class="section-heading reveal" style="transition-delay:100ms;">Detroit's Own<br/>Cake Lady</h2>
+        <p class="about-body reveal" style="transition-delay:200ms;">
+          What started as a passion for making chocolate-covered treats has grown into a Detroit staple. From custom cakes dripping in gold to hand-dipped strawberries that sell out every weekend, Got Chocolate is where the city comes for its sweetest moments.
+        </p>
+        <p class="about-body reveal" style="transition-delay:300ms;">
+          Located inside our cozy space on Wyoming Ave, every treat is handcrafted with premium chocolate and made to order. Whether it's a graduation, a birthday, or just because — we make it special.
+        </p>
+        <div class="about-signature reveal" style="transition-delay:400ms;">
+          <div class="about-sig-line"></div>
+          <span class="about-sig-name">The Detroit Cake Lady</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRADUATION PACKAGES ===== -->
+<section class="section section-alt" id="grad-packs">
+  <div class="container">
+    <div class="section-header section-header-center">
+      <p class="section-label reveal">Celebrate Your Graduate</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">Graduation Packages</h2>
+      <p class="section-sub reveal" style="transition-delay:200ms;">
+        Three curated packages to celebrate your grad in style. Every pack is handcrafted with premium chocolate and assembled with care.
+      </p>
+    </div>
+    <div class="product-grid">
+      <!-- Elite Pack -->
+      <div class="product-card reveal" style="transition-delay:100ms;">
+        <div class="product-image-wrapper">
+          <div class="product-image">
+            <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">The Elite Grad Pack</h3>
+          <p class="product-price">$126.00</p>
+          <p class="product-desc">The perfect starter celebration — chocolate-covered treats hand-selected for your graduate.</p>
+        </div>
+      </div>
+      <!-- Signature Pack -->
+      <div class="product-card reveal" style="transition-delay:200ms;">
+        <div class="product-image-wrapper">
+          <div class="product-badge">Most Popular</div>
+          <div class="product-image">
+            <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">The Signature Grad Pack</h3>
+          <p class="product-price">$226.00</p>
+          <p class="product-desc">Our signature collection — a full spread of chocolate-dipped indulgence to make them feel celebrated.</p>
+        </div>
+      </div>
+      <!-- Luxe Pack -->
+      <div class="product-card reveal" style="transition-delay:300ms;">
+        <div class="product-image-wrapper">
+          <div class="product-badge" style="background:var(--color-brand-gold);">Premium</div>
+          <div class="product-image">
+            <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">The Luxe Grad Pack</h3>
+          <p class="product-price">$326.00</p>
+          <p class="product-desc">The ultimate celebration — our most extravagant package for the graduate who deserves it all.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TREATS / MENU ===== -->
+<section class="section" id="treats">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal">What We Make</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">Chocolate-Covered Everything</h2>
+      <p class="section-sub reveal" style="transition-delay:200ms;">
+        Every treat is handcrafted with premium chocolate. Custom orders available for any occasion.
+      </p>
+    </div>
+    <div class="treat-grid">
+      <!-- Strawberries -->
+      <div class="treat-card reveal" style="transition-delay:100ms;">
+        <div class="treat-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="treat-name">Chocolate-Dipped Strawberries</h3>
+        <p class="treat-desc">Fresh strawberries hand-dipped in premium chocolate with custom toppings and decorations.</p>
+      </div>
+      <!-- Custom Cakes -->
+      <div class="treat-card reveal" style="transition-delay:200ms;">
+        <div class="treat-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg>
+        </div>
+        <h3 class="treat-name">Custom Cakes</h3>
+        <p class="treat-desc">Gold drip cakes, tiered designs, and custom creations for birthdays, graduations, and special events.</p>
+      </div>
+      <!-- Dipped Pretzels -->
+      <div class="treat-card reveal" style="transition-delay:300ms;">
+        <div class="treat-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.64 13.23c.24.5.54.86.92 1.12"/><path d="M12 17c3.87 0 7-1.34 7-3"/><path d="M5 17c0 1.66 3.13 3 7 3s7-1.34 7-3"/></svg>
+        </div>
+        <h3 class="treat-name">Chocolate-Dipped Pretzels</h3>
+        <p class="treat-desc">Crunchy pretzels coated in rich chocolate — the perfect sweet and salty combination.</p>
+      </div>
+      <!-- Graduation Packages -->
+      <div class="treat-card reveal" style="transition-delay:400ms;">
+        <div class="treat-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+        </div>
+        <h3 class="treat-name">Graduation Packages</h3>
+        <p class="treat-desc">Curated chocolate treat packages starting at $126 — three tiers designed to celebrate your graduate.</p>
+      </div>
+      <!-- Chocolate Treats -->
+      <div class="treat-card reveal" style="transition-delay:500ms;">
+        <div class="treat-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+        </div>
+        <h3 class="treat-name">Chocolate-Dipped Treats</h3>
+        <p class="treat-desc">An assortment of hand-dipped chocolate treats — from cookies to fruit — all made to order.</p>
+      </div>
+      <!-- Custom Orders -->
+      <div class="treat-card reveal" style="transition-delay:600ms;">
+        <div class="treat-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4"/><path d="M21 5h-4"/></svg>
+        </div>
+        <h3 class="treat-name">Custom Orders</h3>
+        <p class="treat-desc">Have something special in mind? We take custom orders for events, parties, and corporate gifts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="section section-alt" id="reviews">
+  <div class="container">
+    <div class="section-header section-header-center">
+      <p class="section-label reveal">What Detroit Says</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">Sweet Reviews</h2>
+      <p class="section-sub reveal" style="transition-delay:200ms;">
+        Rated 4.0 stars on Google. Here's what our customers are saying.
+      </p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal" style="transition-delay:100ms;">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">
+          "The strawberries were absolutely gorgeous and tasted even better. My daughter's graduation party was a hit because of Got Chocolate. Will definitely order again!"
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">T</div>
+          <div>
+            <div class="testimonial-name">Tamara W.</div>
+            <div class="testimonial-role">Detroit, MI</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:200ms;">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">
+          "Best custom cake I've ever ordered. The gold drip cake she made for my birthday was a work of art. The Cake Lady does NOT disappoint!"
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">K</div>
+          <div>
+            <div class="testimonial-name">Keisha R.</div>
+            <div class="testimonial-role">Detroit, MI</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:300ms;">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">
+          "Ordered the Signature Grad Pack for my son and everything was perfect. Fresh, beautiful presentation, and the chocolate was premium quality. Highly recommend!"
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">D</div>
+          <div>
+            <div class="testimonial-name">Denise M.</div>
+            <div class="testimonial-role">Detroit, MI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;" class="reveal" style="transition-delay:400ms;">
+      <div class="google-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Rated 4.0 stars on Google &mdash; Review illustrations
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSTAGRAM SECTION ===== -->
+<section class="section" id="instagram">
+  <div class="container">
+    <div class="section-header section-header-center">
+      <p class="section-label reveal">Follow the Sweetness</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">@got.chocolate</h2>
+      <p class="section-sub reveal" style="transition-delay:200ms;">
+        9,517 followers and counting. Follow us on Instagram for daily treats, behind-the-scenes, and custom order inspiration.
+      </p>
+    </div>
+    <div class="ig-grid reveal" style="transition-delay:300ms;">
+      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><div class="ig-image"></div><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+    </div>
+    <div style="text-align:center;" class="reveal" style="transition-delay:400ms;">
+      <a href="https://instagram.com/got.chocolate" target="_blank" rel="noopener" class="ig-link">
+        Follow @got.chocolate on Instagram
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS + LOCATION ===== -->
+<section class="section section-alt" id="visit">
+  <div class="container">
+    <div class="section-header section-header-center">
+      <p class="section-label reveal">Come See Us</p>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">Hours &amp; Location</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card reveal" style="transition-delay:100ms;">
+        <div class="info-card-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Shop Hours
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Monday</span>
+          <span class="hours-closed">Closed</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Tuesday</span>
+          <span class="hours-closed">Closed</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Wednesday</span>
+          <span class="hours-closed">Closed</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Thursday</span>
+          <span class="hours-time">11:00 AM &ndash; 7:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Friday</span>
+          <span class="hours-time">11:00 AM &ndash; 7:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Saturday</span>
+          <span class="hours-time">10:00 AM &ndash; 6:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Sunday</span>
+          <span class="hours-time">10:00 AM &ndash; 6:00 PM</span>
+        </div>
+      </div>
+      <div class="info-card reveal" style="transition-delay:200ms;">
+        <div class="info-card-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Find Us
+        </div>
+        <p class="location-address">
+          18111 Wyoming Ave<br/>
+          Detroit, MI 48221
+        </p>
+        <p class="location-note">Located inside another space — look for us when you walk in!</p>
+        <a href="https://maps.google.com/?q=18111+Wyoming+Ave+Detroit+MI+48221" target="_blank" rel="noopener" class="location-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get Directions
+        </a>
+        <div style="margin-top:var(--space-8); padding-top:var(--space-6); border-top:1px solid var(--color-border-default);">
+          <div class="info-card-title" style="margin-bottom:var(--space-3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Us
+          </div>
+          <a href="tel:3132888829" style="font-size:1.25rem; font-family:var(--font-heading); font-weight:600; color:var(--color-brand-gold);">(313) 288-8829</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BLOCK ===== -->
+<section class="cta-block">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="section-label">Ready to Order?</p>
+      <h2 class="cta-heading" style="transition-delay:100ms;">
+        You Want It?<br/><em>I Got It.</em>
+      </h2>
+      <p class="cta-sub" style="transition-delay:200ms;">
+        Custom cakes, chocolate-covered strawberries, dipped treats, and graduation packages. Call us or visit the shop on Wyoming Ave.
+      </p>
+      <div class="cta-actions" style="transition-delay:300ms;">
+        <a href="tel:3132888829" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call to Order &mdash; (313) 288-8829
+        </a>
+      </div>
+      <div class="cta-phone" style="transition-delay:400ms;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @got.chocolate
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Got <span>Chocolate</span> LLC</div>
+        <p class="footer-tagline">"You Want It? I Got It!"</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/got.chocolate" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="tel:3132888829" class="footer-social-link" aria-label="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#about" class="footer-link">Our Story</a></li>
+          <li><a href="#grad-packs" class="footer-link">Graduation Packages</a></li>
+          <li><a href="#treats" class="footer-link">Treats &amp; Menu</a></li>
+          <li><a href="#reviews" class="footer-link">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:3132888829" class="footer-link">(313) 288-8829</a></li>
+          <li><span class="footer-link">18111 Wyoming Ave</span></li>
+          <li><span class="footer-link">Detroit, MI 48221</span></li>
+          <li><span class="footer-link">Thu-Fri 11AM-7PM</span></li>
+          <li><span class="footer-link">Sat-Sun 10AM-6PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Got Chocolate LLC. All rights reserved.</span>
+      <span class="footer-credit">Built by <a href="#">Caliber Web Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCROLL REVEAL ===== -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

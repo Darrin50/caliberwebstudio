@@ -4,5 +4,8 @@
   "outputDirectory": ".next",
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://caliberwebstudio.com"
-  }
+  },
+  "rewrites": [
+    { "source": "/detroitdogsalon", "destination": "/dds-demo.html" }
+  ]
 }

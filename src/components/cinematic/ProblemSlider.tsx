@@ -125,7 +125,10 @@ export default function ProblemSlider() {
               justifyContent: 'center',
             }}
           >
-            {/* After video placeholder */}
+            {/* After loop video — drop /videos/slider-after-loop.mp4 here when ready */}
+            {/* <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }}>
+              <source src="/videos/slider-after-loop.mp4" type="video/mp4" />
+            </video> */}
             <div
               style={{
                 position: 'absolute',
@@ -174,6 +177,10 @@ export default function ProblemSlider() {
               filter: 'saturate(0.2) brightness(0.7)',
             }}
           >
+            {/* Before loop video — drop /videos/slider-before-loop.mp4 here when ready */}
+            {/* <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }}>
+              <source src="/videos/slider-before-loop.mp4" type="video/mp4" />
+            </video> */}
             {/* Before badges */}
             <div {...{ style: { ...BADGE_STYLE_BASE, top: '18%', left: '8%', background: 'rgba(30,30,35,0.95)', color: 'rgba(208,216,224,0.6)', border: '1px solid rgba(255,255,255,0.1)' } }}>
               0 Google Reviews

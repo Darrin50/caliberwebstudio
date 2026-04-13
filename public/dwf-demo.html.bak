@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detroit Restaurant — Stacked in Detroit</title>
+  <title>Detroit Waffle Factory — Stacked in Detroit</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -16,7 +16,7 @@
       --color-text-tertiary: #6B7280;
       --color-border-default: #27272A;
 
-      /* Brand colors - Detroit Restaurant */
+      /* Brand colors - Detroit Waffle Factory */
       --color-brand-primary: #C41E1E; /* Red from logo */
       --color-brand-secondary: #D4A020; /* Gold/Yellow from logo */
       --color-brand-accent: rgba(196, 30, 30, 0.08);
@@ -805,7 +805,7 @@
   <nav>
     <div class="nav-container">
       <div class="logo">
-        <img src="/dwf-images/detroit-waffle-factory-logo-design-2-transparent.png" alt="Detroit Restaurant">
+        <img src="/dwf-images/detroit-waffle-factory-logo-design-2-transparent.png" alt="Detroit Waffle Factory">
       </div>
       <a href="#order" class="nav-cta">Order Now</a>
     </div>
@@ -1171,12 +1171,12 @@
     <div class="container">
       <div class="story-grid">
         <div class="story-content">
-          <span class="overline">Detroit Favorite</span>
-          <h2>Meet The Owner</h2>
-          <p>The Owner saw an opportunity to bring something special to her neighborhood. Not just food — but a gathering place. A spot where waffles aren't just breakfast, they're a celebration of Detroit culture.</p>
+          <span class="overline">From One West Magazine</span>
+          <h2>Meet Carla Rae</h2>
+          <p>Carla Rae saw an opportunity to bring something special to her neighborhood. Not just food — but a gathering place. A spot where waffles aren't just breakfast, they're a celebration of Detroit culture.</p>
           <p>Grand opening March 15, 2026. From day one, the community showed up. 4.9 stars. Real reviews from real neighbors. No BS. Just good food, great service, and pure Detroit pride.</p>
-          <p>Detroit, MI That's where the magic happens. That's where you should be next time you're hungry for something that hits different.</p>
-          <button class="btn btn-primary">Call The Owner</button>
+          <p>16224 W. 7 Mile Rd. That's where the magic happens. That's where you should be next time you're hungry for something that hits different.</p>
+          <button class="btn btn-primary">Call Carla Rae</button>
         </div>
         <div class="story-image">
           <img src="/dwf-images/waffle,-chicken,-and-slushie-delight.png" alt="Signature dish">
@@ -1194,7 +1194,7 @@
         <p>1,130+ followers documenting the Detroit waffle revolution. New content weekly. Real food. Real people. Real pride.</p>
       </div>
       <a href="https://instagram.com/detroitwafflefactory" class="instagram-button" target="_blank">
-        Follow on Instagram
+        Follow @detroitwafflefactory
       </a>
     </div>
   </section>
@@ -1203,7 +1203,7 @@
   <section id="order" class="cta-block">
     <div class="container">
       <h2>Order Now. Support Detroit.</h2>
-      <p>Detroit, MI, Detroit MI 48235 | </p>
+      <p>16224 W. 7 Mile Rd, Detroit MI 48235 | (313) 799-2315</p>
       <button class="btn">Order Now</button>
     </div>
   </section>
@@ -1213,7 +1213,7 @@
     <div class="container" style="text-align: center;">
       <span class="overline">Order From Anywhere</span>
       <h3 style="color: var(--color-text-primary); font-size: 1.5rem; margin: 0.75rem 0 0.5rem;">Delivery Coming Soon</h3>
-      <p style="color: var(--color-text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">Get Detroit Restaurant delivered straight to your door.</p>
+      <p style="color: var(--color-text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">Get Detroit Waffle Factory delivered straight to your door.</p>
       <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap;">
         <div style="text-align: center;">
           <img src="/dwf-images/uber-eats-logo.png" alt="Uber Eats" style="height: 48px; width: auto; border-radius: 8px; opacity: 0.85;">
@@ -1235,10 +1235,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>Detroit Restaurant</h3>
-          <p>Detroit, MI</p>
+          <h3>Detroit Waffle Factory</h3>
+          <p>16224 W. 7 Mile Rd</p>
           <p>Detroit, MI 48235</p>
-          <p><a href="#"></a></p>
+          <p><a href="tel:3137992315">(313) 799-2315</a></p>
         </div>
         <div class="footer-col">
           <h3>Hours</h3>
@@ -1254,7 +1254,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>Built with pride for Detroit Restaurant. Stacked in Detroit.</p>
+        <p>Built with pride for Detroit Waffle Factory. Stacked in Detroit.</p>
       </div>
     </div>
   </footer>

@@ -1,4 +1,3 @@
-import { NextResponse } from 'next/server';
 import { readFile } from 'fs/promises';
 import path from 'path';
 
@@ -7,7 +6,7 @@ export async function GET() {
     path.join(process.cwd(), 'public', 'dds-demo.html'),
     'utf-8'
   );
-  return new NextResponse(html, {
+  return new Response(html, {
     headers: { 'Content-Type': 'text/html; charset=utf-8' },
   });
 }

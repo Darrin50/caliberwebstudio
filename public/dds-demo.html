@@ -86,9 +86,9 @@ a{color:inherit;text-decoration:none}
 /* WHY US */
 .why-us{padding:96px 0;background:var(--color-surface)}
 .why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;margin-top:56px}
-.why-image{border-radius:var(--radius-2xl);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#E890A8,#D4A24E);position:relative;display:flex;align-items:center;justify-content:center}
+.why-image{border-radius:var(--radius-2xl);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#E890A8,#D4A24E);position:relative}
 .why-image::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 60% 50%,rgba(255,255,255,0.1) 0%,transparent 60%)}
-.why-image svg{width:80px;height:80px;opacity:.15;color:#fff;position:relative;z-index:1}
+.why-image img{width:100%;height:100%;object-fit:cover;display:block;}
 .why-list{display:flex;flex-direction:column;gap:28px}
 .why-item{display:flex;gap:16px;align-items:flex-start}
 .why-check{width:36px;height:36px;min-width:36px;display:flex;align-items:center;justify-content:center;background:var(--color-brand-accent-strong);border-radius:var(--radius-md);color:var(--color-brand);margin-top:2px}
@@ -130,11 +130,8 @@ footer .container{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
 /* GALLERY */
 .gallery{padding:96px 0}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
-.gallery-item{border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#E890A8,#D4A24E);display:flex;align-items:center;justify-content:center;position:relative}
-.gallery-item::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 40% 40%,rgba(255,255,255,0.12) 0%,transparent 60%)}
-.gallery-item svg{width:48px;height:48px;opacity:.15;color:#fff;position:relative;z-index:1}
-.gallery-caption{text-align:center;margin-top:20px;font-size:.85rem;color:var(--color-text-secondary);font-style:italic;display:flex;align-items:center;justify-content:center;gap:6px}
-.gallery-caption svg{width:14px;height:14px;color:var(--color-brand);opacity:1}
+.gallery-item{border-radius:var(--radius-xl);overflow:hidden;background:#fff;border:1px solid var(--color-border);}
+.gallery-item img{width:100%;height:auto;display:block;}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -415,12 +412,7 @@ footer .container{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Walk-Ins Welcome</span>
     </div>
   </div>
-  <div class="hero-image animate delay-2">
-    <svg viewBox="0 0 100 100" fill="currentColor" stroke="none" style="position:relative;z-index:1">
-      <ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/>
-      <path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/>
-    </svg>
-  </div>
+  <div class="hero-image animate delay-2"><img src="/detroitdogsalon/dds-hero.png" alt="Freshly groomed dog at Detroit Dog Salon" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
 </div>
 </section>
 
@@ -498,12 +490,7 @@ footer .container{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
   <p class="section-overline">Why Detroit Dog Salon</p>
   <h2 class="section-title">Because Your Dog Isn't Just a Pet</h2>
   <div class="why-grid">
-    <div class="why-image">
-      <svg viewBox="0 0 100 100" fill="currentColor" stroke="none">
-        <ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/>
-        <path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/>
-      </svg>
-    </div>
+    <div class="why-image"><img src="/detroitdogsalon/dds-why.png" alt="Happy groomed dog at Detroit Dog Salon" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
     <div class="why-list">
       <div class="why-item">
         <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -579,17 +566,13 @@ footer .container{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
   <h2 class="section-title">Fresh Cuts, Happy Dogs</h2>
   <p class="section-sub">Every dog who comes through our door leaves looking — and feeling — amazing.</p>
   <div class="gallery-grid">
-    <div class="gallery-item animate"><svg viewBox="0 0 100 100" fill="currentColor" stroke="none"><ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/><path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/></svg></div>
-    <div class="gallery-item animate delay-1"><svg viewBox="0 0 100 100" fill="currentColor" stroke="none"><ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/><path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/></svg></div>
-    <div class="gallery-item animate delay-2"><svg viewBox="0 0 100 100" fill="currentColor" stroke="none"><ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/><path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/></svg></div>
-    <div class="gallery-item animate delay-1"><svg viewBox="0 0 100 100" fill="currentColor" stroke="none"><ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/><path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/></svg></div>
-    <div class="gallery-item animate delay-2"><svg viewBox="0 0 100 100" fill="currentColor" stroke="none"><ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/><path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/></svg></div>
-    <div class="gallery-item animate delay-3"><svg viewBox="0 0 100 100" fill="currentColor" stroke="none"><ellipse cx="27" cy="28" rx="10" ry="12"/><ellipse cx="50" cy="18" rx="10" ry="12"/><ellipse cx="73" cy="28" rx="10" ry="12"/><ellipse cx="15" cy="52" rx="8" ry="10"/><ellipse cx="85" cy="52" rx="8" ry="10"/><path d="M50 44C33 44 20 57 20 70c0 11 9 17 30 17s30-6 30-17c0-13-13-26-30-26z"/></svg></div>
+    <div class="gallery-item animate"><img src="/detroitdogsalon/dds-g1.png" alt="Happy groomed dog at Detroit Dog Salon" style="width:100%;height:auto;display:block;"></div>
+    <div class="gallery-item animate delay-1"><img src="/detroitdogsalon/dds-g2.png" alt="Happy groomed dog at Detroit Dog Salon" style="width:100%;height:auto;display:block;"></div>
+    <div class="gallery-item animate delay-2"><img src="/detroitdogsalon/dds-g3.png" alt="Happy groomed dog at Detroit Dog Salon" style="width:100%;height:auto;display:block;"></div>
+    <div class="gallery-item animate delay-1"><img src="/detroitdogsalon/dds-g4.png" alt="Happy groomed dog at Detroit Dog Salon" style="width:100%;height:auto;display:block;"></div>
+    <div class="gallery-item animate delay-2"><img src="/detroitdogsalon/dds-g5.png" alt="Happy groomed dog at Detroit Dog Salon" style="width:100%;height:auto;display:block;"></div>
+    <div class="gallery-item animate delay-3"><img src="/detroitdogsalon/dds-g6.png" alt="Happy groomed dog at Detroit Dog Salon" style="width:100%;height:auto;display:block;"></div>
   </div>
-  <p class="gallery-caption">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    Your real photos go here — pulled straight from your Instagram
-  </p>
 </div>
 </section>
 

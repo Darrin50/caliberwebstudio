@@ -156,6 +156,219 @@ footer .container{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .animate{animation:fadeUp .6s ease both}
 .delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}.delay-4{animation-delay:.4s}
+
+/* ===== CWS SALES CHATBOT ===== */
+#chat-bubble {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 60px; height: 60px;
+  border-radius: 9999px;
+  background: #E890A8;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(232, 144, 168, 0.45);
+  z-index: 9999;
+  transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1);
+  font-size: 1.5rem;
+}
+#chat-bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(232, 144, 168, 0.55);
+}
+#chat-bubble .chat-close-icon { display: none; }
+#chat-bubble.open .chat-choc-icon { display: none; }
+#chat-bubble.open .chat-close-icon { display: flex; }
+#chat-window {
+  position: fixed;
+  bottom: 100px; right: 28px;
+  width: 360px;
+  max-height: 520px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  border: 1px solid #E8DFD4;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.04), 0 0 40px rgba(232, 144, 168, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9998;
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+#chat-window.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+.chat-header {
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #E890A8, #D47A94);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.chat-header-avatar {
+  width: 40px; height: 40px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.chat-header-info { flex: 1; }
+.chat-header-name {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #fff;
+  line-height: 1.2;
+}
+.chat-header-status {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+.chat-status-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+#chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+#chat-messages::-webkit-scrollbar { width: 4px; }
+#chat-messages::-webkit-scrollbar-thumb {
+  background: #E8DFD4;
+  border-radius: 2px;
+}
+.chat-msg {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  word-break: break-word;
+  white-space: pre-line;
+}
+.chat-msg-bot {
+  background: #FFF5F8;
+  color: #2D1B0E;
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+  border: 1px solid #E8DFD4;
+}
+.chat-msg-user {
+  background: #E890A8;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+}
+.chat-typing {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 16px;
+  background: #FFF5F8;
+  border: 1px solid #E8DFD4;
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  width: fit-content;
+  align-self: flex-start;
+}
+.chat-typing.visible { display: flex; }
+.chat-typing-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #7C6B5A;
+  animation: typingBounce 1.2s infinite;
+}
+.chat-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.chat-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-6px); opacity: 1; }
+}
+#chat-quick-replies {
+  padding: 8px 20px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-shrink: 0;
+  border-top: 1px solid #E8DFD4;
+}
+.chat-qr-btn {
+  padding: 6px 14px;
+  background: transparent;
+  color: #E890A8;
+  border: 1px solid rgba(232, 144, 168, 0.4);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+.chat-qr-btn:hover {
+  background: rgba(232,144,168,0.08);
+  border-color: #E890A8;
+}
+.chat-input-area {
+  padding: 12px 16px;
+  border-top: 1px solid #E8DFD4;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+  background: #FFFFFF;
+}
+#chat-input {
+  flex: 1;
+  background: #FFF5F8;
+  border: 1px solid #E8DFD4;
+  border-radius: 9999px;
+  padding: 9px 16px;
+  font-size: 0.875rem;
+  color: #2D1B0E;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.15s;
+}
+#chat-input:focus { border-color: #E890A8; }
+#chat-input::placeholder { color: #7C6B5A; }
+#chat-send {
+  width: 38px; height: 38px;
+  border-radius: 9999px;
+  background: #E890A8;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+#chat-send:hover { background: #D47A94; }
+@media (max-width: 768px) {
+  #chat-window { width: calc(100vw - 32px); right: 16px; bottom: 90px; }
+  #chat-bubble { bottom: 20px; right: 20px; }
+}
 </style>
 </head>
 <body>
@@ -401,6 +614,181 @@ footer .container{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px}
   </div>
 </div>
 </footer>
+
+<!-- ===== CWS SALES CHATBOT WIDGET ===== -->
+<!-- This is a Caliber Web Studio sales bot — NOT a Detroit Dog Salon business bot -->
+<!-- To update CWS data: edit CHAT_CONFIG below -->
+<button id="chat-bubble" aria-label="Chat with us">
+  <span class="chat-choc-icon">💬</span>
+  <span class="chat-close-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </span>
+</button>
+
+<div id="chat-window" role="dialog" aria-label="Caliber Web Studio chat">
+  <div class="chat-header">
+    <div class="chat-header-avatar">⚡</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Chat With Us</div>
+      <div class="chat-header-status">
+        <span class="chat-status-dot"></span>
+        Caliber Web Studio · Detroit
+      </div>
+    </div>
+  </div>
+  <div id="chat-messages"></div>
+  <div id="chat-quick-replies"></div>
+  <div class="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Ask about pricing, timeline, how we work…" autocomplete="off" />
+    <button id="chat-send" aria-label="Send">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+// ================================================================
+// CHAT_CONFIG — Caliber Web Studio sales data
+// Update this object to keep CWS info current
+// ================================================================
+const CHAT_CONFIG = {
+  agentName: 'CWS',
+  welcomeMessage: "Hey! This demo site was built by Caliber Web Studio — an AI-powered web design agency right here in Detroit. I'm here to answer any questions you have about how we built this or what we can do for your business. What would you like to know?",
+  quickReplies: ['What is Caliber?', 'Pricing & Plans', 'How long does it take?', 'Do I pay upfront?', 'Get started', 'What makes you different?'],
+  qna: [
+    {
+      keywords: ['what is caliber', 'who are you', 'about', 'what do you do', 'tell me'],
+      answer: "Caliber Web Studio is an AI-powered web design and growth systems agency based in Detroit. We don't just build websites — we build complete digital ecosystems that generate leads, convert visitors, and grow revenue for local businesses. Every site comes with AI chatbots, SEO, and growth tools built in from day one."
+    },
+    {
+      keywords: ['price', 'pricing', 'cost', 'how much', 'plan', 'tier', 'starter', 'growth', 'domination', 'monthly', 'per month'],
+      answer: "We have three monthly plans:\n\n• Starter — $197/mo\n  5-page website, mobile optimization, basic SEO, Google Business Profile setup, hosting included\n\n• Growth — $397/mo\n  Everything in Starter + AI chatbot, review automation, 2 SEO blog posts/mo, social media graphics, monthly performance reports\n\n• Domination — $697/mo\n  The full arsenal — SMS marketing, booking integration, seasonal landing pages, 4 blog posts/mo, 8 social graphics, full reputation management, quarterly strategy calls\n\nWhich plan sounds like a fit for your business?"
+    },
+    {
+      keywords: ['how long', 'timeline', 'when', 'fast', 'quick', 'days', '3 days', 'launch', 'live'],
+      answer: "We go live in 3 business days after you approve the design. If we miss that deadline, your first month is free. That's our guarantee. ⚡"
+    },
+    {
+      keywords: ['pay upfront', 'payment', 'deposit', 'free', 'preview', '14 day', 'before i pay', 'do i have to pay'],
+      answer: "No upfront payment. We build your site first and give you a 14-day free preview. You don't pay anything until you love it. Zero risk."
+    },
+    {
+      keywords: ['cancel', 'contract', 'commitment', 'lock in', 'leave', 'quit', 'stuck'],
+      answer: "After your initial 12-month commitment, you can cancel anytime with 30 days notice. No penalties, no fees. We keep clients because they see results — not because we trap them in contracts."
+    },
+    {
+      keywords: ['who built', 'demo', 'built this', 'made this', 'example', 'sample', 'darrin'],
+      answer: "This demo was built by Darrin Singer, owner of Caliber Web Studio. He's based right here in Detroit and built this using AI-powered tools to show you what your business could look like online. We build a free demo just like this for every prospect — no commitment required."
+    },
+    {
+      keywords: ['start', 'get started', 'sign up', 'contact', 'reach', 'dm', 'instagram', 'call', 'email', 'how do i'],
+      answer: "Ready to get started? Here's how to reach us:\n\n📱 Call/text: (313) 799-2315\n📧 Email: darrin@caliberwebstudio.com\n📸 Instagram: @caliberwebstudio\n\nWe'll build you a free demo just like this one — no commitment, no upfront cost."
+    },
+    {
+      keywords: ['different', 'why you', 'why caliber', 'what sets', 'better than', 'unique', 'special'],
+      answer: "We're not a traditional agency. Every site comes with AI chatbots, SEO infrastructure, review automation, and growth tools built in from day one. Plus we're local — right here in Detroit. We understand the market, we move fast, and you don't pay until you love the result."
+    },
+    {
+      keywords: ['startup', 'new business', 'everything', 'from scratch', 'llc', 'brand', 'complete', 'startup complete'],
+      answer: "Yes! Our Startup Complete package is for new businesses that need everything from scratch:\n\n✅ LLC formation\n✅ Full website\n✅ Brand kit\n✅ AI chatbot\n✅ Google Business Profile\n✅ Social media setup\n✅ Email + payment processing\n✅ Booking system\n\nAll delivered in 48 hours. Starts at $5,000.\n\nText us at (313) 799-2315 to learn more."
+    },
+    {
+      keywords: ['seo', 'google', 'rank', 'search', 'traffic', 'blog', 'content'],
+      answer: "Every plan includes SEO infrastructure from day one — proper schema markup, meta tags, Google Business Profile setup, and mobile optimization. Our Growth and Domination plans add monthly SEO blog posts to help you rank for local searches over time. 📈"
+    },
+    {
+      keywords: ['chatbot', 'ai', 'bot', 'chat', 'widget', 'this chat'],
+      answer: "This chatbot is built and powered by Caliber Web Studio. Every site we build on the Growth or Domination plan comes with an AI chatbot like this one — trained on your business info, capturing leads 24/7. It's included in the plan, no extra setup fees."
+    }
+  ],
+  fallback: "Great question! The best way to get a real answer is to reach out directly:\n\n📱 Text/call: (313) 799-2315\n📧 darrin@caliberwebstudio.com\n📸 @caliberwebstudio on Instagram\n\nWe'd love to show you what we can build for your business."
+};
+
+// ================================================================
+// Widget logic — no need to edit below when reusing
+// ================================================================
+(function() {
+  const bubble = document.getElementById('chat-bubble');
+  const chatWindow = document.getElementById('chat-window');
+  const messagesEl = document.getElementById('chat-messages');
+  const quickRepliesEl = document.getElementById('chat-quick-replies');
+  const inputEl = document.getElementById('chat-input');
+  const sendBtn = document.getElementById('chat-send');
+  let opened = false;
+
+  function addMessage(text, role) {
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg chat-msg-' + role;
+    msg.textContent = text;
+    messagesEl.appendChild(msg);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function showTyping() {
+    const el = document.createElement('div');
+    el.className = 'chat-typing visible';
+    el.innerHTML = '<span class="chat-typing-dot"></span><span class="chat-typing-dot"></span><span class="chat-typing-dot"></span>';
+    el.id = 'chat-typing-indicator';
+    messagesEl.appendChild(el);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideTyping() {
+    const el = document.getElementById('chat-typing-indicator');
+    if (el) el.remove();
+  }
+
+  function getBotReply(input) {
+    const lower = input.toLowerCase();
+    for (const item of CHAT_CONFIG.qna) {
+      if (item.keywords.some(k => lower.includes(k))) {
+        return item.answer;
+      }
+    }
+    return CHAT_CONFIG.fallback;
+  }
+
+  function handleUserMessage(text) {
+    if (!text.trim()) return;
+    addMessage(text, 'user');
+    inputEl.value = '';
+    quickRepliesEl.innerHTML = '';
+    showTyping();
+    setTimeout(() => {
+      hideTyping();
+      addMessage(getBotReply(text), 'bot');
+    }, 900 + Math.random() * 400);
+  }
+
+  function renderQuickReplies() {
+    quickRepliesEl.innerHTML = '';
+    CHAT_CONFIG.quickReplies.forEach(label => {
+      const btn = document.createElement('button');
+      btn.className = 'chat-qr-btn';
+      btn.textContent = label;
+      btn.addEventListener('click', () => handleUserMessage(label));
+      quickRepliesEl.appendChild(btn);
+    });
+  }
+
+  bubble.addEventListener('click', () => {
+    opened = !opened;
+    bubble.classList.toggle('open', opened);
+    chatWindow.classList.toggle('open', opened);
+    if (opened && messagesEl.children.length === 0) {
+      setTimeout(() => {
+        addMessage(CHAT_CONFIG.welcomeMessage, 'bot');
+        renderQuickReplies();
+      }, 250);
+    }
+  });
+
+  sendBtn.addEventListener('click', () => handleUserMessage(inputEl.value));
+  inputEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleUserMessage(inputEl.value);
+  });
+})();
+</script>
 
 </body>
 </html>

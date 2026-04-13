@@ -3,6 +3,8 @@
 export default function FinalCTA() {
   return (
     <section
+      id="final-cta"
+      data-force-dark
       style={{
         position: 'relative',
         minHeight: '80vh',

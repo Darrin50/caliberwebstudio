@@ -74,6 +74,8 @@ export default function CinematicHero() {
 
   return (
     <section
+      id="hero"
+      data-force-dark
       style={{
         minHeight: '100vh',
         background: '#0a0a0b',
@@ -83,8 +85,6 @@ export default function CinematicHero() {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        // Force dark color-scheme so OS light-mode can't bleed in
-        colorScheme: 'dark',
       }}
     >
       {/* ── All 4 videos always in DOM, stacked — opacity crossfade handles transitions ── */}

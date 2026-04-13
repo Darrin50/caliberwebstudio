@@ -1,0 +1,287 @@
+'use client';
+
+import { useRef, useState, useCallback } from 'react';
+
+export default function ProblemSlider() {
+  const [position, setPosition] = useState(50);
+  const [dragging, setDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const updatePosition = useCallback((clientX: number) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const pct = Math.min(100, Math.max(0, ((clientX - rect.left) / rect.width) * 100));
+    setPosition(pct);
+  }, []);
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setDragging(true);
+    updatePosition(e.clientX);
+    const onMove = (ev: MouseEvent) => updatePosition(ev.clientX);
+    const onUp = () => {
+      setDragging(false);
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+    };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setDragging(true);
+    updatePosition(e.touches[0].clientX);
+    const onMove = (ev: TouchEvent) => updatePosition(ev.touches[0].clientX);
+    const onEnd = () => {
+      setDragging(false);
+      window.removeEventListener('touchmove', onMove);
+      window.removeEventListener('touchend', onEnd);
+    };
+    window.addEventListener('touchmove', onMove);
+    window.addEventListener('touchend', onEnd);
+  };
+
+  const BADGE_STYLE_BASE: React.CSSProperties = {
+    position: 'absolute',
+    fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+    fontSize: '10px',
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase',
+    fontWeight: 700,
+    borderRadius: '4px',
+    padding: '6px 12px',
+    pointerEvents: 'none',
+    whiteSpace: 'nowrap',
+  };
+
+  return (
+    <section
+      style={{
+        background: 'var(--bg2, #111114)',
+        padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
+        borderTop: '1px solid var(--border, rgba(176,183,188,0.12))',
+      }}
+    >
+      <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+        {/* Headline */}
+        <div style={{ textAlign: 'center', marginBottom: 'clamp(40px, 5vw, 60px)' }}>
+          <div
+            style={{
+              fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+              fontSize: '10px',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: 'var(--navy, #0076B6)',
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+            }}
+          >
+            <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
+            The Problem
+            <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
+          </div>
+          <h2
+            style={{
+              fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+              fontWeight: 800,
+              lineHeight: 1.05,
+              letterSpacing: '-0.03em',
+              color: 'var(--silver, #D0D8E0)',
+            }}
+          >
+            Most Detroit businesses are{' '}
+            <span style={{ color: 'var(--navy, #0076B6)' }}>invisible online.</span>
+          </h2>
+        </div>
+
+        {/* Slider */}
+        <div
+          ref={containerRef}
+          onMouseDown={onMouseDown}
+          onTouchStart={onTouchStart}
+          style={{
+            position: 'relative',
+            width: '100%',
+            aspectRatio: '16 / 7',
+            borderRadius: '12px',
+            overflow: 'hidden',
+            cursor: dragging ? 'grabbing' : 'grab',
+            userSelect: 'none',
+            border: '1px solid var(--border, rgba(176,183,188,0.12))',
+          }}
+        >
+          {/* AFTER (right, vibrant) — full width base */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(135deg, #0d1f3c 0%, #0a2540 40%, #0d2e4a 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {/* After video placeholder */}
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(135deg, rgba(0,118,182,0.15) 0%, rgba(0,90,142,0.1) 100%)',
+              }}
+            />
+            {/* After badges */}
+            <div {...{ style: { ...BADGE_STYLE_BASE, top: '18%', right: '8%', background: 'rgba(0,118,182,0.9)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 0 20px rgba(0,118,182,0.4)' } }}>
+              47 Google Reviews ★★★★★
+            </div>
+            <div {...{ style: { ...BADGE_STYLE_BASE, top: '45%', right: '12%', background: 'rgba(34,197,94,0.9)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 0 20px rgba(34,197,94,0.3)' } }}>
+              #1 on Google Maps
+            </div>
+            <div {...{ style: { ...BADGE_STYLE_BASE, bottom: '18%', right: '8%', background: 'rgba(249,115,22,0.9)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 0 20px rgba(249,115,22,0.3)' } }}>
+              Phone Ringing Non-Stop
+            </div>
+            {/* After label */}
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '50%',
+                transform: 'translateY(-50%) translateX(60%)',
+                fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+                fontSize: 'clamp(1.2rem, 2.5vw, 2rem)',
+                fontWeight: 800,
+                color: '#ffffff',
+                textAlign: 'center',
+              }}
+            >
+              After
+            </div>
+          </div>
+
+          {/* BEFORE (left, dark, desaturated) — clipped */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              clipPath: `inset(0 ${100 - position}% 0 0)`,
+              background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              filter: 'saturate(0.2) brightness(0.7)',
+            }}
+          >
+            {/* Before badges */}
+            <div {...{ style: { ...BADGE_STYLE_BASE, top: '18%', left: '8%', background: 'rgba(30,30,35,0.95)', color: 'rgba(208,216,224,0.6)', border: '1px solid rgba(255,255,255,0.1)' } }}>
+              0 Google Reviews
+            </div>
+            <div {...{ style: { ...BADGE_STYLE_BASE, top: '45%', left: '12%', background: 'rgba(30,30,35,0.95)', color: 'rgba(208,216,224,0.6)', border: '1px solid rgba(255,255,255,0.1)' } }}>
+              Page 2 of Google
+            </div>
+            <div {...{ style: { ...BADGE_STYLE_BASE, bottom: '18%', left: '8%', background: 'rgba(30,30,35,0.95)', color: 'rgba(208,216,224,0.6)', border: '1px solid rgba(255,255,255,0.1)' } }}>
+              Zero Leads
+            </div>
+            {/* Before label */}
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translateY(-50%) translateX(-60%)',
+                fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+                fontSize: 'clamp(1.2rem, 2.5vw, 2rem)',
+                fontWeight: 800,
+                color: 'rgba(208,216,224,0.5)',
+                textAlign: 'center',
+              }}
+            >
+              Before
+            </div>
+          </div>
+
+          {/* Draggable handle */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              left: `${position}%`,
+              transform: 'translateX(-50%)',
+              width: '3px',
+              background: 'var(--navy, #0076B6)',
+              boxShadow: '0 0 16px rgba(0,118,182,0.8), 0 0 32px rgba(0,118,182,0.4)',
+              zIndex: 10,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {/* Circle handle */}
+            <div
+              style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                background: '#0076B6',
+                border: '3px solid #ffffff',
+                boxShadow: '0 0 20px rgba(0,118,182,0.7)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}
+            >
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+                <path d="M1 6h16M5 2L1 6l4 4M13 2l4 4-4 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* Founder quote */}
+        <div
+          style={{
+            marginTop: 'clamp(48px, 6vw, 72px)',
+            textAlign: 'center',
+            padding: 'clamp(32px, 4vw, 48px)',
+            background: 'rgba(0,118,182,0.06)',
+            border: '1px solid rgba(0,118,182,0.15)',
+            borderRadius: '8px',
+          }}
+        >
+          <blockquote
+            style={{
+              fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+              fontSize: 'clamp(1.05rem, 2vw, 1.4rem)',
+              fontStyle: 'italic',
+              fontWeight: 700,
+              lineHeight: 1.4,
+              letterSpacing: '-0.02em',
+              color: '#ffffff',
+              marginBottom: '20px',
+              maxWidth: '680px',
+              margin: '0 auto 20px',
+            }}
+          >
+            &ldquo;Local businesses deserve the same tools big brands take for granted — without the agency price tag.&rdquo;
+          </blockquote>
+          <cite
+            style={{
+              fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+              fontSize: '10px',
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: 'var(--dim, rgba(176,183,188,0.55))',
+              fontStyle: 'normal',
+            }}
+          >
+            — Darrin Singer, Founder · Caliber Web Studio
+          </cite>
+        </div>
+      </div>
+    </section>
+  );
+}

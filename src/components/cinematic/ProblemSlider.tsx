@@ -48,9 +48,9 @@ export default function ProblemSlider() {
   return (
     <section
       style={{
-        background: 'var(--bg2, #111114)',
+        background: '#111114',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-        borderTop: '1px solid var(--border, rgba(176,183,188,0.12))',
+        borderTop: '1px solid rgba(176,183,188,0.12)',
       }}
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -62,7 +62,7 @@ export default function ProblemSlider() {
               fontSize: '10px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: 'var(--navy, #0076B6)',
+              color: '#0076B6',
               marginBottom: '20px',
               display: 'flex',
               alignItems: 'center',
@@ -70,9 +70,9 @@ export default function ProblemSlider() {
               gap: '12px',
             }}
           >
-            <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
+            <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
             The Problem
-            <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
+            <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
           </div>
           <h2
             style={{
@@ -81,11 +81,11 @@ export default function ProblemSlider() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: 'var(--silver, #D0D8E0)',
+              color: '#D0D8E0',
             }}
           >
             Most Detroit businesses are{' '}
-            <span style={{ color: 'var(--navy, #0076B6)' }}>invisible online.</span>
+            <span style={{ color: '#0076B6' }}>invisible online.</span>
           </h2>
         </div>
 
@@ -102,7 +102,7 @@ export default function ProblemSlider() {
             overflow: 'hidden',
             cursor: dragging ? 'grabbing' : 'grab',
             userSelect: 'none',
-            border: '1px solid var(--border, rgba(176,183,188,0.12))',
+            border: '1px solid rgba(176,183,188,0.12)',
           }}
         >
           {/* AFTER (right, vibrant) — full width base */}
@@ -177,7 +177,7 @@ export default function ProblemSlider() {
               inset: 0,
               clipPath: `inset(0 ${100 - position}% 0 0)`,
               background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
-              filter: 'saturate(0.2) brightness(0.7)',
+              filter: 'saturate(0.25)',
             }}
           >
             {/* Before label */}
@@ -239,7 +239,7 @@ export default function ProblemSlider() {
               left: `${position}%`,
               transform: 'translateX(-50%)',
               width: '3px',
-              background: 'var(--navy, #0076B6)',
+              background: '#0076B6',
               boxShadow: '0 0 16px rgba(0,118,182,0.8), 0 0 32px rgba(0,118,182,0.4)',
               zIndex: 10,
               display: 'flex',
@@ -302,7 +302,7 @@ export default function ProblemSlider() {
               fontSize: '10px',
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: 'var(--dim, rgba(176,183,188,0.55))',
+              color: 'rgba(176,183,188,0.55)',
               fontStyle: 'normal',
             }}
           >

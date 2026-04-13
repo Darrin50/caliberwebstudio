@@ -97,7 +97,7 @@ export default function ProblemSlider() {
           style={{
             position: 'relative',
             width: '100%',
-            aspectRatio: '16 / 7',
+            aspectRatio: '16 / 9',
             borderRadius: '12px',
             overflow: 'hidden',
             cursor: dragging ? 'grabbing' : 'grab',
@@ -136,20 +136,37 @@ export default function ProblemSlider() {
             >
               AFTER →
             </div>
-            {/* After phones — right half */}
+            {/* After content — right half: video + phone graphics */}
             <div style={{
               position: 'absolute',
               top: 0, bottom: 0, right: 0,
               width: '50%',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(6px, 1vw, 14px)',
-              padding: '10px 8px',
+              gap: 'clamp(8px, 1.2vw, 16px)',
+              padding: '12px 8px',
               zIndex: 1,
             }}>
-              <GoogleNumberOne />
-              <PhoneBlowingUp />
+              {/* Packed store video loop */}
+              <div style={{ position: 'relative', width: '55%', aspectRatio: '1/1', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  src="/videos/loop-packed-store.mp4"
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4), transparent)' }} />
+                <span style={{ position: 'absolute', bottom: '8px', left: '10px', fontSize: 'clamp(9px, 1.1vw, 12px)', color: 'rgba(255,255,255,0.75)', fontWeight: 500, fontFamily: "var(--font-space-mono, 'Space Mono', monospace)", letterSpacing: '0.04em' }}>Caliber-built presence</span>
+              </div>
+              {/* Phone graphics */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(6px, 1vw, 14px)' }}>
+                <GoogleNumberOne />
+                <PhoneBlowingUp />
+              </div>
             </div>
           </div>
 
@@ -179,20 +196,37 @@ export default function ProblemSlider() {
             >
               ← BEFORE
             </div>
-            {/* Before phones — left half */}
+            {/* Before content — left half: video + phone graphics */}
             <div style={{
               position: 'absolute',
               top: 0, bottom: 0, left: 0,
               width: '50%',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(6px, 1vw, 14px)',
-              padding: '10px 8px',
+              gap: 'clamp(8px, 1.2vw, 16px)',
+              padding: '12px 8px',
               zIndex: 1,
             }}>
-              <BuriedOnGoogle />
-              <SilentPhone />
+              {/* Empty store video loop */}
+              <div style={{ position: 'relative', width: '55%', aspectRatio: '1/1', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  src="/videos/loop-empty-store.mp4"
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4), transparent)' }} />
+                <span style={{ position: 'absolute', bottom: '8px', left: '10px', fontSize: 'clamp(9px, 1.1vw, 12px)', color: 'rgba(255,255,255,0.75)', fontWeight: 500, fontFamily: "var(--font-space-mono, 'Space Mono', monospace)", letterSpacing: '0.04em' }}>No online presence</span>
+              </div>
+              {/* Phone graphics */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(6px, 1vw, 14px)' }}>
+                <BuriedOnGoogle />
+                <SilentPhone />
+              </div>
             </div>
           </div>
 

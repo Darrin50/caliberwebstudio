@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Detroit Bakery — Detroit's Chocolate-Covered Everything | The Owner</title>
-<meta name="description" content="Detroit Bakery — Detroit's home for chocolate-covered strawberries, custom cakes, dipped treats, and graduation packages. You want it? I got it!" />
+<title>Got Chocolate LLC — Detroit's Chocolate-Covered Everything | Detroit Cake Lady</title>
+<meta name="description" content="Got Chocolate LLC — Detroit's home for chocolate-covered strawberries, custom cakes, dipped treats, and graduation packages. You want it? I got it!" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-/* ===== DESIGN TOKENS — Detroit Bakery ===== */
+/* ===== DESIGN TOKENS — Got Chocolate LLC ===== */
 /* Tier: Luxury x Warmth hybrid (dark mode) */
 /* Palette: Deep chocolate brown + pink accent + gold highlights */
 :root {
@@ -1342,7 +1342,7 @@ a { text-decoration: none; color: inherit; }
 <nav class="nav">
   <div class="container nav-inner">
     <a href="/" class="nav-logo">
-      <span style="font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#D4728C;letter-spacing:-0.01em;">Detroit Bakery</span>
+      <img src="/images/gotchocolate/logo-with-treats.png" alt="Got Chocolate LLC" class="nav-logo-img" />
     </a>
     <ul class="nav-links">
       <li><a href="#about" class="nav-link">Our Story</a></li>
@@ -1350,7 +1350,7 @@ a { text-decoration: none; color: inherit; }
       <li><a href="#treats" class="nav-link">Treats</a></li>
       <li><a href="#reviews" class="nav-link">Reviews</a></li>
       <li><a href="#visit" class="nav-link">Visit</a></li>
-      <li><a href="#" class="nav-cta">Order Now</a></li>
+      <li><a href="tel:3132888829" class="nav-cta">Order Now</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -1371,10 +1371,10 @@ a { text-decoration: none; color: inherit; }
           You Want It?<br/><em>I Got It.</em>
         </h1>
         <p class="hero-sub reveal" style="transition-delay:200ms;">
-          Chocolate-covered strawberries, custom cakes, dipped treats, and graduation packages crafted with love in Detroit. Detroit's own The Owner.
+          Chocolate-covered strawberries, custom cakes, dipped treats, and graduation packages crafted with love on Wyoming Ave. Detroit's own Cake Lady.
         </p>
         <div class="hero-actions reveal" style="transition-delay:300ms;">
-          <a href="#" class="btn-primary">
+          <a href="tel:3132888829" class="btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             Call to Order
           </a>
@@ -1396,7 +1396,7 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
       <div class="hero-image-wrapper reveal" style="transition-delay:200ms;">
-        <img src="/images/gotchocolate/strawberries.png" alt="Chocolate-covered strawberries by Detroit Bakery — Detroit's sweetest treats" class="hero-photo" loading="eager" />
+        <img src="/images/gotchocolate/strawberries.png" alt="Chocolate-covered strawberries by Got Chocolate LLC — Detroit's sweetest treats" class="hero-photo" loading="eager" />
       </div>
     </div>
   </div>
@@ -1430,7 +1430,7 @@ a { text-decoration: none; color: inherit; }
       <span class="proof-divider">&bull;</span>
       <span class="proof-item"><strong>813</strong> Posts Shared</span>
       <span class="proof-divider">&bull;</span>
-      <span class="proof-item"><strong>Detroit, MI</strong></span>
+      <span class="proof-item"><strong>Wyoming Ave</strong> Detroit, MI</span>
     </div>
   </div>
 </section>
@@ -1440,20 +1440,20 @@ a { text-decoration: none; color: inherit; }
   <div class="container">
     <div class="about-grid">
       <div class="about-image-wrapper reveal">
-        <img src="/images/gotchocolate/drip-cake-moet.png" alt="Celebration drip cake with Moet champagne — Detroit Bakery custom creation" class="about-photo" loading="lazy" />
+        <img src="/images/gotchocolate/drip-cake-moet.png" alt="Celebration drip cake with Moet champagne — Got Chocolate LLC custom creation" class="about-photo" loading="lazy" />
       </div>
       <div class="about-text">
         <p class="section-label reveal">Our Story</p>
-        <h2 class="section-heading reveal" style="transition-delay:100ms;">Detroit's Own<br/>The Owner</h2>
+        <h2 class="section-heading reveal" style="transition-delay:100ms;">Detroit's Own<br/>Cake Lady</h2>
         <p class="about-body reveal" style="transition-delay:200ms;">
-          What started as a passion for making chocolate-covered treats has grown into a Detroit staple. From custom cakes dripping in gold to hand-dipped strawberries that sell out every weekend, Detroit Bakery is where the city comes for its sweetest moments.
+          What started as a passion for making chocolate-covered treats has grown into a Detroit staple. From custom cakes dripping in gold to hand-dipped strawberries that sell out every weekend, Got Chocolate is where the city comes for its sweetest moments.
         </p>
         <p class="about-body reveal" style="transition-delay:300ms;">
-          Located inside our cozy space in Detroit, every treat is handcrafted with premium chocolate and made to order. Whether it's a graduation, a birthday, or just because — we make it special.
+          Located inside our cozy space on Wyoming Ave, every treat is handcrafted with premium chocolate and made to order. Whether it's a graduation, a birthday, or just because — we make it special.
         </p>
         <div class="about-signature reveal" style="transition-delay:400ms;">
           <div class="about-sig-line"></div>
-          <span class="about-sig-name">The The Owner</span>
+          <span class="about-sig-name">The Detroit Cake Lady</span>
         </div>
       </div>
     </div>
@@ -1474,7 +1474,7 @@ a { text-decoration: none; color: inherit; }
       <!-- Elite Pack -->
       <div class="product-card reveal" style="transition-delay:100ms;">
         <div class="product-image-wrapper">
-          <img src="/images/gotchocolate/cupcakes.png" alt="Cupcakes for every celebration — Detroit Bakery" class="product-photo" loading="lazy" />
+          <img src="/images/gotchocolate/cupcakes.png" alt="Cupcakes for every celebration — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">The Elite Grad Pack</h3>
@@ -1486,7 +1486,7 @@ a { text-decoration: none; color: inherit; }
       <div class="product-card reveal" style="transition-delay:200ms;">
         <div class="product-image-wrapper" style="position:relative;">
           <div class="product-badge">Most Popular</div>
-          <img src="/images/gotchocolate/cheesecake-sampler.png" alt="Cheesecake sampler promotion — Detroit Bakery" class="product-photo" loading="lazy" />
+          <img src="/images/gotchocolate/cheesecake-sampler.png" alt="Cheesecake sampler promotion — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">The Signature Grad Pack</h3>
@@ -1498,7 +1498,7 @@ a { text-decoration: none; color: inherit; }
       <div class="product-card reveal" style="transition-delay:300ms;">
         <div class="product-image-wrapper" style="position:relative;">
           <div class="product-badge" style="background:var(--color-brand-gold);">Premium</div>
-          <img src="/images/gotchocolate/dessert-jars.png" alt="Colorful layered dessert jars — Detroit Bakery" class="product-photo" loading="lazy" />
+          <img src="/images/gotchocolate/dessert-jars.png" alt="Colorful layered dessert jars — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">The Luxe Grad Pack</h3>
@@ -1509,7 +1509,7 @@ a { text-decoration: none; color: inherit; }
       <!-- Oreo Cheesecake Shooters -->
       <div class="product-card reveal" style="transition-delay:400ms;">
         <div class="product-image-wrapper">
-          <img src="/images/gotchocolate/oreo-cheesecake-shooters.png" alt="Oreo cheesecake shooters in clear cups with caramel drizzle and mini Oreos — Detroit Bakery" class="product-photo" loading="lazy" />
+          <img src="/images/gotchocolate/oreo-cheesecake-shooters.png" alt="Oreo cheesecake shooters in clear cups with caramel drizzle and mini Oreos — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">Oreo Cheesecake Shooters</h3>
@@ -1520,7 +1520,7 @@ a { text-decoration: none; color: inherit; }
       <!-- Oreo Dessert Jars -->
       <div class="product-card reveal" style="transition-delay:500ms;">
         <div class="product-image-wrapper">
-          <img src="/images/gotchocolate/oreo-dessert-jars.png" alt="Four mason jar Oreo desserts with layered cheesecake and chocolate — Detroit Bakery" class="product-photo" loading="lazy" />
+          <img src="/images/gotchocolate/oreo-dessert-jars.png" alt="Four mason jar Oreo desserts with layered cheesecake and chocolate — Got Chocolate LLC" class="product-photo" loading="lazy" />
         </div>
         <div class="product-info">
           <h3 class="product-name">Oreo Dessert Jars</h3>
@@ -1602,31 +1602,31 @@ a { text-decoration: none; color: inherit; }
       <p class="section-label reveal">Made to Order</p>
       <h2 class="section-heading reveal" style="transition-delay:100ms;">Custom Cake Gallery</h2>
       <p class="section-sub reveal" style="transition-delay:200ms;">
-        Every cake is a one-of-a-kind creation. From casino nights to Starbucks vibes — if you can dream it, the The Owner can make it.
+        Every cake is a one-of-a-kind creation. From casino nights to Starbucks vibes — if you can dream it, the Cake Lady can make it.
       </p>
     </div>
     <div class="cakes-grid">
       <div class="cake-card reveal" style="transition-delay:100ms;">
-        <img src="/images/gotchocolate/casino-cake.png" alt="Casino-themed birthday cake by Detroit Bakery" class="cake-photo" loading="lazy" />
+        <img src="/images/gotchocolate/casino-cake.png" alt="Casino-themed birthday cake by Got Chocolate LLC" class="cake-photo" loading="lazy" />
         <div class="cake-label">Casino Theme</div>
       </div>
       <div class="cake-card reveal" style="transition-delay:200ms;">
-        <img src="/images/gotchocolate/frappuccino-cake.png" alt="Caramel frappuccino themed celebration cake by Detroit Bakery" class="cake-photo" loading="lazy" />
+        <img src="/images/gotchocolate/frappuccino-cake.png" alt="Caramel frappuccino themed celebration cake by Got Chocolate LLC" class="cake-photo" loading="lazy" />
         <div class="cake-label">Starbucks Frappuccino</div>
       </div>
       <div class="cake-card reveal" style="transition-delay:300ms;">
-        <img src="/images/gotchocolate/berry-birthday-cake.png" alt="Berry sweet half-birthday cake by Detroit Bakery" class="cake-photo" loading="lazy" />
+        <img src="/images/gotchocolate/berry-birthday-cake.png" alt="Berry sweet half-birthday cake by Got Chocolate LLC" class="cake-photo" loading="lazy" />
         <div class="cake-label">Berry Birthday</div>
       </div>
       <div class="cake-card reveal" style="transition-delay:400ms;">
-        <img src="/images/gotchocolate/birthday-50th.png" alt="50th birthday celebration with cake and gifts by Detroit Bakery" class="cake-photo" loading="lazy" />
+        <img src="/images/gotchocolate/birthday-50th.png" alt="50th birthday celebration with cake and gifts by Got Chocolate LLC" class="cake-photo" loading="lazy" />
         <div class="cake-label">50th Milestone</div>
       </div>
     </div>
     <div style="text-align:center; margin-top:var(--space-10);" class="reveal" style="transition-delay:500ms;">
-      <a href="#" class="btn-primary">
+      <a href="tel:3132888829" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Text Your Vision — 
+        Text Your Vision — (313) 288-8829
       </a>
     </div>
   </div>
@@ -1652,7 +1652,7 @@ a { text-decoration: none; color: inherit; }
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
         <blockquote class="testimonial-quote">
-          "The strawberries were absolutely gorgeous and tasted even better. My daughter's graduation party was a hit because of Detroit Bakery. Will definitely order again!"
+          "The strawberries were absolutely gorgeous and tasted even better. My daughter's graduation party was a hit because of Got Chocolate. Will definitely order again!"
         </blockquote>
         <div class="testimonial-author">
           <div class="testimonial-avatar">T</div>
@@ -1671,7 +1671,7 @@ a { text-decoration: none; color: inherit; }
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
         <blockquote class="testimonial-quote">
-          "Best custom cake I've ever ordered. The gold drip cake she made for my birthday was a work of art. The The Owner does NOT disappoint!"
+          "Best custom cake I've ever ordered. The gold drip cake she made for my birthday was a work of art. The Cake Lady does NOT disappoint!"
         </blockquote>
         <div class="testimonial-author">
           <div class="testimonial-avatar">K</div>
@@ -1715,21 +1715,21 @@ a { text-decoration: none; color: inherit; }
   <div class="container">
     <div class="section-header section-header-center">
       <p class="section-label reveal">Follow the Sweetness</p>
-      <h2 class="section-heading reveal" style="transition-delay:100ms;">Detroit Bakery on Instagram</h2>
+      <h2 class="section-heading reveal" style="transition-delay:100ms;">@got.chocolate</h2>
       <p class="section-sub reveal" style="transition-delay:200ms;">
         9,517 followers and counting. Follow us on Instagram for daily treats, behind-the-scenes, and custom order inspiration.
       </p>
     </div>
     <div class="ig-grid reveal" style="transition-delay:300ms;">
-      <div class="ig-item"><img src="/images/gotchocolate/football-treats.png" alt="Detroit Lions themed chocolate treats — Detroit Bakery" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><img src="/images/gotchocolate/caramel-apples.png" alt="Gourmet caramel apples — Detroit Bakery" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><img src="/images/gotchocolate/strawberry-shortcake-squares.png" alt="Strawberry shortcake squares — Detroit Bakery" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><img src="/images/gotchocolate/oreo-cheesecake-shooters.png" alt="Oreo cheesecake shooters with caramel drizzle — Detroit Bakery" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-      <div class="ig-item"><img src="/images/gotchocolate/oreo-dessert-jars.png" alt="Oreo mason jar desserts with layered cheesecake — Detroit Bakery" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/football-treats.png" alt="Detroit Lions themed chocolate treats — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/caramel-apples.png" alt="Gourmet caramel apples — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/strawberry-shortcake-squares.png" alt="Strawberry shortcake squares — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/oreo-cheesecake-shooters.png" alt="Oreo cheesecake shooters with caramel drizzle — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-item"><img src="/images/gotchocolate/oreo-dessert-jars.png" alt="Oreo mason jar desserts with layered cheesecake — Got Chocolate LLC" class="ig-photo" loading="lazy" /><div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
     </div>
     <div style="text-align:center;" class="reveal" style="transition-delay:400ms;">
       <a href="https://instagram.com/got.chocolate" target="_blank" rel="noopener" class="ig-link">
-        Follow on Instagram
+        Follow @got.chocolate on Instagram
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -1784,7 +1784,7 @@ a { text-decoration: none; color: inherit; }
           Find Us
         </div>
         <p class="location-address">
-          Detroit, MI<br/>
+          18111 Wyoming Ave<br/>
           Detroit, MI 48221
         </p>
         <p class="location-note">Located inside another space — look for us when you walk in!</p>
@@ -1797,7 +1797,7 @@ a { text-decoration: none; color: inherit; }
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             Call Us
           </div>
-          <a href="#" style="font-size:1.25rem; font-family:var(--font-heading); font-weight:600; color:var(--color-brand-gold);"></a>
+          <a href="tel:3132888829" style="font-size:1.25rem; font-family:var(--font-heading); font-weight:600; color:var(--color-brand-gold);">(313) 288-8829</a>
         </div>
       </div>
     </div>
@@ -1816,10 +1816,10 @@ a { text-decoration: none; color: inherit; }
     </div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8);" class="pricing-grid-wrap">
       <div class="reveal" style="transition-delay:100ms;">
-        <img src="/images/gotchocolate/how-to-book.png" alt="How to book a custom cake at Detroit Bakery — text name, date, style, get quote in 24 hours" loading="lazy" style="width:100%; border-radius:var(--radius-xl); border:1px solid var(--color-border-strong); box-shadow:var(--shadow-lg);" />
+        <img src="/images/gotchocolate/how-to-book.png" alt="How to book a custom cake at Got Chocolate LLC — text name, date, style, get quote in 24 hours" loading="lazy" style="width:100%; border-radius:var(--radius-xl); border:1px solid var(--color-border-strong); box-shadow:var(--shadow-lg);" />
       </div>
       <div class="reveal" style="transition-delay:200ms;">
-        <img src="/images/gotchocolate/cake-menu.png" alt="Detroit Bakery cake menu and pricing — 6 inch round $50 up to full sheet $130" loading="lazy" style="width:100%; border-radius:var(--radius-xl); border:1px solid var(--color-border-strong); box-shadow:var(--shadow-lg);" />
+        <img src="/images/gotchocolate/cake-menu.png" alt="Got Chocolate LLC cake menu and pricing — 6 inch round $50 up to full sheet $130" loading="lazy" style="width:100%; border-radius:var(--radius-xl); border:1px solid var(--color-border-strong); box-shadow:var(--shadow-lg);" />
       </div>
     </div>
   </div>
@@ -1832,7 +1832,7 @@ a { text-decoration: none; color: inherit; }
       <p class="section-label reveal">Coming Soon</p>
       <h2 class="section-heading reveal" style="transition-delay:100ms;">Order From Anywhere</h2>
       <p class="section-sub reveal" style="transition-delay:200ms;">
-        Detroit Bakery is coming to your favorite delivery apps. Get Detroit's sweetest treats delivered straight to your door.
+        Got Chocolate is coming to your favorite delivery apps. Get Detroit's sweetest treats delivered straight to your door.
       </p>
     </div>
     <div class="delivery-grid">
@@ -1858,7 +1858,7 @@ a { text-decoration: none; color: inherit; }
       </div>
     </div>
     <p class="delivery-tagline reveal" style="transition-delay:300ms;">
-      For now, reach out directly to place an order.
+      For now, call or text (313) 288-8829 or order at <a href="https://gotchocolatellc.com" target="_blank" rel="noopener" style="color:var(--color-brand-primary);">gotchocolatellc.com</a>
     </p>
   </div>
 </section>
@@ -1872,17 +1872,17 @@ a { text-decoration: none; color: inherit; }
         You Want It?<br/><em>I Got It.</em>
       </h2>
       <p class="cta-sub" style="transition-delay:200ms;">
-        Custom cakes, chocolate-covered strawberries, dipped treats, and graduation packages. Call us or visit the shop in Detroit.
+        Custom cakes, chocolate-covered strawberries, dipped treats, and graduation packages. Call us or visit the shop on Wyoming Ave.
       </p>
       <div class="cta-actions" style="transition-delay:300ms;">
-        <a href="#" class="btn-primary">
+        <a href="tel:3132888829" class="btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call to Order &mdash; 
+          Call to Order &mdash; (313) 288-8829
         </a>
       </div>
       <div class="cta-phone" style="transition-delay:400ms;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        
+        @got.chocolate
       </div>
     </div>
   </div>
@@ -1893,13 +1893,13 @@ a { text-decoration: none; color: inherit; }
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Detroit Bakery</div>
+        <div class="footer-brand">Got <span>Chocolate</span> LLC</div>
         <p class="footer-tagline">"You Want It? I Got It!"</p>
         <div class="footer-social">
           <a href="https://instagram.com/got.chocolate" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <a href="#" class="footer-social-link" aria-label="Phone">
+          <a href="tel:3132888829" class="footer-social-link" aria-label="Phone">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </a>
         </div>
@@ -1916,8 +1916,8 @@ a { text-decoration: none; color: inherit; }
       <div>
         <div class="footer-col-title">Contact</div>
         <ul class="footer-links">
-          <li><a href="#" class="footer-link"></a></li>
-          <li><span class="footer-link">Detroit, MI</span></li>
+          <li><a href="tel:3132888829" class="footer-link">(313) 288-8829</a></li>
+          <li><span class="footer-link">18111 Wyoming Ave</span></li>
           <li><span class="footer-link">Detroit, MI 48221</span></li>
           <li><span class="footer-link">Thu-Fri 11AM-7PM</span></li>
           <li><span class="footer-link">Sat-Sun 10AM-6PM</span></li>
@@ -1925,7 +1925,7 @@ a { text-decoration: none; color: inherit; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">&copy; 2026 Detroit Bakery. All rights reserved.</span>
+      <span class="footer-copy">&copy; 2026 Got Chocolate LLC. All rights reserved.</span>
       <span class="footer-credit">Built by <a href="#">Caliber Web Studio</a></span>
     </div>
   </div>
@@ -1944,7 +1944,7 @@ a { text-decoration: none; color: inherit; }
 </script>
 
 <!-- ===== CWS SALES CHATBOT WIDGET ===== -->
-<!-- This is a Caliber Web Studio sales bot — NOT a Detroit Bakery business bot -->
+<!-- This is a Caliber Web Studio sales bot — NOT a Got Chocolate business bot -->
 <!-- To update CWS data: edit CHAT_CONFIG below -->
 <button id="chat-bubble" aria-label="Chat with us">
   <span class="chat-choc-icon">💬</span>

@@ -1,6 +1,10 @@
 'use client';
 
 import { useRef, useState, useCallback } from 'react';
+import BuriedOnGoogle from './slider/BuriedOnGoogle';
+import SilentPhone from './slider/SilentPhone';
+import GoogleNumberOne from './slider/GoogleNumberOne';
+import PhoneBlowingUp from './slider/PhoneBlowingUp';
 
 export default function ProblemSlider() {
   const [position, setPosition] = useState(50);
@@ -39,19 +43,6 @@ export default function ProblemSlider() {
     };
     window.addEventListener('touchmove', onMove);
     window.addEventListener('touchend', onEnd);
-  };
-
-  const BADGE_STYLE_BASE: React.CSSProperties = {
-    position: 'absolute',
-    fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-    fontSize: '10px',
-    letterSpacing: '0.08em',
-    textTransform: 'uppercase',
-    fontWeight: 700,
-    borderRadius: '4px',
-    padding: '6px 12px',
-    pointerEvents: 'none',
-    whiteSpace: 'nowrap',
   };
 
   return (
@@ -120,15 +111,8 @@ export default function ProblemSlider() {
               position: 'absolute',
               inset: 0,
               background: 'linear-gradient(135deg, #0d1f3c 0%, #0a2540 40%, #0d2e4a 100%)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
             }}
           >
-            {/* After loop video — drop /videos/slider-after-loop.mp4 here when ready */}
-            {/* <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }}>
-              <source src="/videos/slider-after-loop.mp4" type="video/mp4" />
-            </video> */}
             <div
               style={{
                 position: 'absolute',
@@ -136,31 +120,36 @@ export default function ProblemSlider() {
                 background: 'linear-gradient(135deg, rgba(0,118,182,0.15) 0%, rgba(0,90,142,0.1) 100%)',
               }}
             />
-            {/* After badges */}
-            <div {...{ style: { ...BADGE_STYLE_BASE, top: '18%', right: '8%', background: 'rgba(0,118,182,0.9)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 0 20px rgba(0,118,182,0.4)' } }}>
-              47 Google Reviews ★★★★★
-            </div>
-            <div {...{ style: { ...BADGE_STYLE_BASE, top: '45%', right: '12%', background: 'rgba(34,197,94,0.9)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 0 20px rgba(34,197,94,0.3)' } }}>
-              #1 on Google Maps
-            </div>
-            <div {...{ style: { ...BADGE_STYLE_BASE, bottom: '18%', right: '8%', background: 'rgba(249,115,22,0.9)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 0 20px rgba(249,115,22,0.3)' } }}>
-              Phone Ringing Non-Stop
-            </div>
             {/* After label */}
             <div
               style={{
                 position: 'absolute',
-                top: '50%',
-                right: '50%',
-                transform: 'translateY(-50%) translateX(60%)',
-                fontFamily: "var(--font-syne, 'Syne', sans-serif)",
-                fontSize: 'clamp(1.2rem, 2.5vw, 2rem)',
-                fontWeight: 800,
-                color: '#ffffff',
-                textAlign: 'center',
+                top: 12,
+                right: 14,
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                fontSize: 8,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.35)',
+                zIndex: 2,
               }}
             >
-              After
+              AFTER →
+            </div>
+            {/* After phones — right half */}
+            <div style={{
+              position: 'absolute',
+              top: 0, bottom: 0, right: 0,
+              width: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 'clamp(6px, 1vw, 14px)',
+              padding: '10px 8px',
+              zIndex: 1,
+            }}>
+              <GoogleNumberOne />
+              <PhoneBlowingUp />
             </div>
           </div>
 
@@ -171,41 +160,39 @@ export default function ProblemSlider() {
               inset: 0,
               clipPath: `inset(0 ${100 - position}% 0 0)`,
               background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
               filter: 'saturate(0.2) brightness(0.7)',
             }}
           >
-            {/* Before loop video — drop /videos/slider-before-loop.mp4 here when ready */}
-            {/* <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }}>
-              <source src="/videos/slider-before-loop.mp4" type="video/mp4" />
-            </video> */}
-            {/* Before badges */}
-            <div {...{ style: { ...BADGE_STYLE_BASE, top: '18%', left: '8%', background: 'rgba(30,30,35,0.95)', color: 'rgba(208,216,224,0.6)', border: '1px solid rgba(255,255,255,0.1)' } }}>
-              0 Google Reviews
-            </div>
-            <div {...{ style: { ...BADGE_STYLE_BASE, top: '45%', left: '12%', background: 'rgba(30,30,35,0.95)', color: 'rgba(208,216,224,0.6)', border: '1px solid rgba(255,255,255,0.1)' } }}>
-              Page 2 of Google
-            </div>
-            <div {...{ style: { ...BADGE_STYLE_BASE, bottom: '18%', left: '8%', background: 'rgba(30,30,35,0.95)', color: 'rgba(208,216,224,0.6)', border: '1px solid rgba(255,255,255,0.1)' } }}>
-              Zero Leads
-            </div>
             {/* Before label */}
             <div
               style={{
                 position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translateY(-50%) translateX(-60%)',
-                fontFamily: "var(--font-syne, 'Syne', sans-serif)",
-                fontSize: 'clamp(1.2rem, 2.5vw, 2rem)',
-                fontWeight: 800,
-                color: 'rgba(208,216,224,0.5)',
-                textAlign: 'center',
+                top: 12,
+                left: 14,
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                fontSize: 8,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'rgba(208,216,224,0.35)',
+                zIndex: 2,
               }}
             >
-              Before
+              ← BEFORE
+            </div>
+            {/* Before phones — left half */}
+            <div style={{
+              position: 'absolute',
+              top: 0, bottom: 0, left: 0,
+              width: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 'clamp(6px, 1vw, 14px)',
+              padding: '10px 8px',
+              zIndex: 1,
+            }}>
+              <BuriedOnGoogle />
+              <SilentPhone />
             </div>
           </div>
 

@@ -39,8 +39,8 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
       style={{
         textAlign: 'center',
         padding: 'clamp(24px, 3vw, 36px) clamp(16px, 2vw, 24px)',
-        background: 'rgba(255,255,255,0.07)',
-        border: '1px solid rgba(255,255,255,0.12)',
+        background: 'rgba(255,255,255,0.1)',
+        border: '1px solid rgba(255,255,255,0.18)',
         borderRadius: '8px',
         transition: 'border-color 0.3s ease, transform 0.3s ease',
         backdropFilter: 'blur(8px)',
@@ -147,7 +147,7 @@ export default function TransformationSection() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: '#D0D8E0',
+                color: '#ffffff',
                 marginBottom: '12px',
               }}
             >
@@ -160,7 +160,7 @@ export default function TransformationSection() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: '#0076B6',
+                color: '#2196F3',
               }}
             >
               We build your entire online presence.

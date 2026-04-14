@@ -48,7 +48,7 @@ export default function CinematicHero() {
         />
       )}
 
-      {/* Hero content — invisible during video, snaps in the moment it ends */}
+      {/* Hero content — each element slides up in sequence after video ends */}
       <div
         style={{
           position: 'relative',
@@ -60,14 +60,12 @@ export default function CinematicHero() {
           textAlign: 'center',
           padding: 'clamp(60px, 8vw, 120px) clamp(20px, 5vw, 60px)',
           width: '100%',
-          opacity: videoEnded ? 1 : 0,
-          transform: videoEnded ? 'translateY(0)' : 'translateY(12px)',
-          transition: videoEnded ? 'opacity 0.35s ease, transform 0.35s ease' : 'none',
           pointerEvents: videoEnded ? 'auto' : 'none',
         }}
       >
         {/* Eyebrow */}
         <div
+          className={videoEnded ? 'hero-item hero-in' : 'hero-item'}
           style={{
             fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
             fontSize: '10px',
@@ -79,6 +77,7 @@ export default function CinematicHero() {
             alignItems: 'center',
             justifyContent: 'center',
             gap: '12px',
+            animationDelay: '0ms',
           }}
         >
           <span style={{ display: 'block', width: '32px', height: '1px', background: '#0076B6' }} />
@@ -87,6 +86,7 @@ export default function CinematicHero() {
         </div>
 
         <h1
+          className={videoEnded ? 'hero-item hero-in' : 'hero-item'}
           style={{
             fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
             fontSize: 'clamp(2.2rem, 5.5vw, 4.5rem)',
@@ -95,6 +95,7 @@ export default function CinematicHero() {
             letterSpacing: '-0.03em',
             color: '#ffffff',
             marginBottom: '24px',
+            animationDelay: '120ms',
           }}
         >
           We Build Businesses<br />
@@ -102,6 +103,7 @@ export default function CinematicHero() {
         </h1>
 
         <p
+          className={videoEnded ? 'hero-item hero-in' : 'hero-item'}
           style={{
             fontFamily: "var(--font-inter, 'Inter', sans-serif)",
             fontSize: 'clamp(0.95rem, 1.6vw, 1.15rem)',
@@ -109,44 +111,63 @@ export default function CinematicHero() {
             color: 'rgba(208,216,224,0.82)',
             maxWidth: '520px',
             margin: '0 auto 36px',
+            animationDelay: '240ms',
           }}
         >
           High-performance websites. Real Google rankings. AI lead capture.
           <br />$0 down — see your free mockup before you pay a cent.
         </p>
 
-        <a
-          href="/contact"
-          className="cinematic-cta"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            padding: '16px 36px',
-            background: '#0076B6',
-            color: '#ffffff',
-            fontFamily: "var(--font-syne, 'Syne', sans-serif)",
-            fontSize: '15px',
-            fontWeight: 700,
-            letterSpacing: '0.04em',
-            textDecoration: 'none',
-            borderRadius: '4px',
-            border: '1px solid transparent',
-            transition: 'box-shadow 0.3s ease, transform 0.2s ease',
-          }}
+        <div
+          className={videoEnded ? 'hero-item hero-in' : 'hero-item'}
+          style={{ animationDelay: '360ms' }}
         >
-          Get Your Free Mockup →
-        </a>
+          <a
+            href="/contact"
+            className="cinematic-cta"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              padding: '16px 36px',
+              background: '#0076B6',
+              color: '#ffffff',
+              fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+              fontSize: '15px',
+              fontWeight: 700,
+              letterSpacing: '0.04em',
+              textDecoration: 'none',
+              borderRadius: '4px',
+              border: '1px solid transparent',
+              transition: 'box-shadow 0.3s ease, transform 0.2s ease',
+            }}
+          >
+            Get Your Free Mockup →
+          </a>
+        </div>
 
         {/* Scroll chevron */}
-        <div className="chevron-bounce" style={{ marginTop: '48px' }}>
-          <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
-            <path d="M2 2L12 11L22 2" stroke="rgba(208,216,224,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
+        {videoEnded && (
+          <div className="chevron-bounce" style={{ marginTop: '48px' }}>
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
+              <path d="M2 2L12 11L22 2" stroke="rgba(208,216,224,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        )}
       </div>
 
       <style>{`
+        /* Staggered scroll-in — each element starts 70px below and fades up */
+        .hero-item {
+          opacity: 0;
+          transform: translateY(70px);
+        }
+        .hero-in {
+          animation: hero-scroll-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        @keyframes hero-scroll-in {
+          to { opacity: 1; transform: translateY(0); }
+        }
         .cinematic-cta:hover {
           box-shadow: 0 0 32px rgba(0,118,182,0.55), 0 0 64px rgba(0,118,182,0.25);
           transform: translateY(-2px);

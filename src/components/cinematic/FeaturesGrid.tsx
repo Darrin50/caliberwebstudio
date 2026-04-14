@@ -127,7 +127,13 @@ const FEATURES = [
 
 export default function FeaturesGrid() {
   return (
-    <section className="fg-section">
+    <section
+      style={{
+        background: 'var(--bg2, #111114)',
+        padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
+        borderTop: '1px solid var(--border, rgba(176,183,188,0.12))',
+      }}
+    >
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         {/* Headline */}
         <div style={{ textAlign: 'center', marginBottom: 'clamp(48px, 6vw, 72px)' }}>
@@ -149,13 +155,14 @@ export default function FeaturesGrid() {
             What&apos;s Included
             <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
           </div>
-          <h2 className="fg-heading"
+          <h2
             style={{
               fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
               fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
+              color: 'var(--silver, #D0D8E0)',
             }}
           >
             Every page.{' '}
@@ -173,11 +180,12 @@ export default function FeaturesGrid() {
                   <div style={{ marginBottom: '20px' }}>
                     {feature.icon}
                   </div>
-                  <h3 className="fg-card-title"
+                  <h3
                     style={{
                       fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                       fontSize: 'clamp(1rem, 1.5vw, 1.1rem)',
                       fontWeight: 700,
+                      color: 'var(--silver, #D0D8E0)',
                       letterSpacing: '-0.01em',
                       lineHeight: 1.2,
                       margin: 0,
@@ -219,52 +227,20 @@ export default function FeaturesGrid() {
       </div>
 
       <style>{`
-        /* ── Dark mode (default) ── */
-        .fg-section {
-          background: var(--bg2, #111114);
-          padding: clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px);
-          border-top: 1px solid var(--border, rgba(176,183,188,0.12));
-        }
-        .fg-heading    { color: var(--silver, #D0D8E0); }
-        .fg-card-title { color: var(--silver, #D0D8E0); }
+        /* Glass shell — dark default */
         .fg-glass {
           border: 1px solid rgba(255,255,255,0.2);
           background: rgba(255,255,255,0.08);
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 0 30px rgba(90,170,255,0.18);
         }
-        .flip-front {
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.08);
-        }
-        .flip-back {
-          background: rgba(0,118,182,0.12);
-          border: 1px solid rgba(0,118,182,0.3);
+        /* Glass shell — light mode */
+        [data-theme="light"] .fg-glass {
+          border: 1px solid rgba(0,118,182,0.2);
+          background: rgba(0,118,182,0.07);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 0 20px rgba(0,118,182,0.1);
         }
 
-        /* ── Light mode overrides ── */
-        @media (prefers-color-scheme: light) {
-          .fg-section {
-            background: #ffffff;
-            border-top: 1px solid rgba(0,0,0,0.08);
-          }
-          .fg-heading    { color: #0a0a0b; }
-          .fg-card-title { color: #0a0a0b; }
-          .fg-glass {
-            border: 1px solid rgba(37,99,235,0.18);
-            background: rgba(37,99,235,0.06);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 0 20px rgba(37,99,235,0.1);
-          }
-          .flip-front {
-            background: rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.08);
-          }
-          .flip-back {
-            background: rgba(0,118,182,0.08);
-            border: 1px solid rgba(0,118,182,0.25);
-          }
-        }
-
-        /* ── Layout ── */
+        /* Flip cards */
         .features-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -276,7 +252,6 @@ export default function FeaturesGrid() {
         @media (max-width: 480px) {
           .features-grid { grid-template-columns: 1fr; }
         }
-
         .flip-card {
           perspective: 800px;
           height: 220px;
@@ -304,8 +279,23 @@ export default function FeaturesGrid() {
           align-items: flex-start;
           justify-content: center;
         }
+        /* Front card */
+        .flip-front {
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.08);
+        }
+        [data-theme="light"] .flip-front {
+          background: rgba(0,0,0,0.04);
+          border: 1px solid rgba(0,0,0,0.09);
+        }
         .flip-back {
+          background: rgba(0,118,182,0.12);
+          border: 1px solid rgba(0,118,182,0.3);
           transform: rotateY(180deg);
+        }
+        [data-theme="light"] .flip-back {
+          background: rgba(0,118,182,0.08);
+          border: 1px solid rgba(0,118,182,0.25);
         }
       `}</style>
     </section>

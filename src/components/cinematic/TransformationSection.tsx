@@ -159,6 +159,14 @@ export default function TransformationSection() {
         .ts-service-title { color: var(--text-primary); }
         .ts-service-desc  { color: var(--chrome); }
 
+        /* ── Light mode — explicit dark text (overrides variable cascade) ── */
+        [data-theme="light"] .ts-heading      { color: #0d0d0e !important; }
+        [data-theme="light"] .ts-stat-num     { color: #0d0d0e !important; }
+        [data-theme="light"] .ts-stat-lbl     { color: #4b5563 !important; }
+        [data-theme="light"] .ts-service-card { background: #ffffff !important; border-color: rgba(0,0,0,0.09) !important; }
+        [data-theme="light"] .ts-service-title { color: #111827 !important; }
+        [data-theme="light"] .ts-service-desc  { color: #374151 !important; }
+
         /* ── Layout ── */
         .transformation-stats    { display: grid; grid-template-columns: repeat(4,1fr); gap: clamp(12px,2vw,20px); }
         .transformation-services { display: grid; grid-template-columns: repeat(4,1fr); gap: clamp(12px,2vw,20px); }

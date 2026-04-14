@@ -1,10 +1,6 @@
 'use client';
 
 import { useRef, useState, useCallback } from 'react';
-import BuriedOnGoogle from './slider/BuriedOnGoogle';
-import SilentPhone from './slider/SilentPhone';
-import GoogleNumberOne from './slider/GoogleNumberOne';
-import PhoneBlowingUp from './slider/PhoneBlowingUp';
 
 export default function ProblemSlider() {
   const [position, setPosition] = useState(50);
@@ -89,7 +85,20 @@ export default function ProblemSlider() {
           </h2>
         </div>
 
-        {/* Slider */}
+        {/* Drag hint */}
+        <div style={{
+          textAlign: 'center',
+          marginBottom: 'clamp(12px, 2vw, 20px)',
+          fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+          fontSize: '10px',
+          letterSpacing: '0.14em',
+          textTransform: 'uppercase',
+          color: 'rgba(176,183,188,0.4)',
+        }}>
+          ← drag to reveal →
+        </div>
+
+        {/* Slider container */}
         <div
           ref={containerRef}
           onMouseDown={onMouseDown}
@@ -105,203 +114,192 @@ export default function ProblemSlider() {
             border: '1px solid rgba(176,183,188,0.12)',
           }}
         >
-          {/* AFTER (right, vibrant) — full-width base layer, always visible */}
+          {/* ─────────────────────────────────────────────────
+              BEFORE — base layer, always full-width, desaturated.
+              Visible on the RIGHT as AFTER clips away to the left.
+              Card lives in the right half so it's always in the
+              exposed BEFORE area.
+          ───────────────────────────────────────────────── */}
           <div
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(135deg, #0d1f3c 0%, #0a2540 40%, #0d2e4a 100%)',
-            }}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(135deg, rgba(0,118,182,0.15) 0%, rgba(0,90,142,0.1) 100%)',
-              }}
-            />
-            {/* After label */}
-            <div
-              style={{
-                position: 'absolute',
-                top: 12,
-                right: 14,
-                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                fontSize: 8,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.35)',
-                zIndex: 2,
-              }}
-            >
-              AFTER →
-            </div>
-            {/* After content — right half: video + phone graphics */}
-            <div style={{
-              position: 'absolute',
-              top: 0, bottom: 0, right: 0,
-              width: '50%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 'clamp(6px, 1vw, 12px)',
-              padding: '12px 8px 80px',
-              zIndex: 1,
-            }}>
-              {/* Packed store video loop */}
-              <div style={{ position: 'relative', width: '55%', aspectRatio: '1/1', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  src="/videos/loop-packed-store.mp4"
-                />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4), transparent)' }} />
-                <span style={{ position: 'absolute', bottom: '8px', left: '10px', fontSize: 'clamp(9px, 1.1vw, 12px)', color: 'rgba(255,255,255,0.75)', fontWeight: 500, fontFamily: "var(--font-space-mono, 'Space Mono', monospace)", letterSpacing: '0.04em' }}>Caliber-built presence</span>
-              </div>
-              {/* Phone graphics */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(6px, 1vw, 14px)' }}>
-                <GoogleNumberOne />
-                <PhoneBlowingUp />
-              </div>
-            </div>
-
-            {/* AFTER explanation card */}
-            <div
-              style={{
-                position: 'absolute',
-                bottom: 14,
-                right: 14,
-                width: 'min(calc(50% - 28px), 320px)',
-                background: 'rgba(5,18,38,0.88)',
-                border: '1px solid rgba(0,118,182,0.28)',
-                borderRadius: 10,
-                padding: 'clamp(10px, 1.2vw, 16px)',
-                backdropFilter: 'blur(12px)',
-                zIndex: 3,
-              }}
-            >
-              <div style={{
-                fontSize: 'clamp(7px, 0.75vw, 9px)',
-                letterSpacing: '0.16em',
-                textTransform: 'uppercase',
-                color: '#0076B6',
-                marginBottom: 6,
-                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-              }}>
-                With Caliber Web Studio
-              </div>
-              <p style={{
-                fontSize: 'clamp(9px, 0.95vw, 12px)',
-                color: 'rgba(208,216,224,0.8)',
-                lineHeight: 1.55,
-                margin: 0,
-              }}>
-                Google #1 ranking, AI lead capture, 5-star reputation — working 24/7. Your phone rings. Your store fills up. Customers find you every single day.
-              </p>
-            </div>
-          </div>
-
-          {/* BEFORE (left, dark, desaturated) — clipped panel on top.
-              FIX: use inset(0 position% 0 0) so dragging RIGHT reveals more AFTER. */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              clipPath: `inset(0 ${position}% 0 0)`,
               background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
-              filter: 'saturate(0.25)',
+              filter: 'saturate(0.2)',
             }}
           >
-            {/* Before label */}
-            <div
-              style={{
-                position: 'absolute',
-                top: 12,
-                left: 14,
-                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                fontSize: 8,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'rgba(208,216,224,0.35)',
-                zIndex: 2,
-              }}
-            >
-              ← BEFORE
-            </div>
-            {/* Before content — left half: video + phone graphics */}
-            <div style={{
-              position: 'absolute',
-              top: 0, bottom: 0, left: 0,
-              width: '50%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 'clamp(6px, 1vw, 12px)',
-              padding: '12px 8px 80px',
-              zIndex: 1,
-            }}>
-              {/* Empty store video loop */}
-              <div style={{ position: 'relative', width: '55%', aspectRatio: '1/1', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  src="/videos/loop-empty-store.mp4"
-                />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4), transparent)' }} />
-                <span style={{ position: 'absolute', bottom: '8px', left: '10px', fontSize: 'clamp(9px, 1.1vw, 12px)', color: 'rgba(255,255,255,0.75)', fontWeight: 500, fontFamily: "var(--font-space-mono, 'Space Mono', monospace)", letterSpacing: '0.04em' }}>No online presence</span>
-              </div>
-              {/* Phone graphics */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(6px, 1vw, 14px)' }}>
-                <BuriedOnGoogle />
-                <SilentPhone />
-              </div>
+            {/* Subtle video background — left half */}
+            <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: '55%', overflow: 'hidden' }}>
+              <video
+                autoPlay muted loop playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }}
+                src="/videos/loop-empty-store.mp4"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.2), #111114)' }} />
             </div>
 
-            {/* BEFORE explanation card — lives inside the filtered panel so it desaturates naturally */}
-            <div
-              style={{
-                position: 'absolute',
-                bottom: 14,
-                left: 14,
-                width: 'min(calc(50% - 28px), 320px)',
-                background: 'rgba(8,8,10,0.88)',
-                border: '1px solid rgba(176,183,188,0.14)',
-                borderRadius: 10,
-                padding: 'clamp(10px, 1.2vw, 16px)',
-                backdropFilter: 'blur(12px)',
-                zIndex: 3,
-              }}
-            >
+            {/* BEFORE label — top right (visible side) */}
+            <div style={{
+              position: 'absolute',
+              top: 14,
+              right: 16,
+              fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+              fontSize: 9,
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: 'rgba(208,216,224,0.3)',
+              zIndex: 2,
+            }}>
+              BEFORE ←
+            </div>
+
+            {/* BEFORE card — right half, vertically centered */}
+            <div style={{
+              position: 'absolute',
+              top: 0, bottom: 0,
+              right: 0, width: '52%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 'clamp(16px, 2.5vw, 36px)',
+              zIndex: 3,
+            }}>
               <div style={{
-                fontSize: 'clamp(7px, 0.75vw, 9px)',
-                letterSpacing: '0.16em',
-                textTransform: 'uppercase',
-                color: 'rgba(208,216,224,0.45)',
-                marginBottom: 6,
-                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                width: '100%',
+                background: 'rgba(6,6,8,0.80)',
+                border: '1px solid rgba(176,183,188,0.14)',
+                borderRadius: 14,
+                padding: 'clamp(18px, 2.5vw, 36px)',
+                backdropFilter: 'blur(18px)',
+                textAlign: 'center',
               }}>
-                The Status Quo
+                <div style={{
+                  fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                  fontSize: 'clamp(7px, 0.72vw, 9px)',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(208,216,224,0.38)',
+                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
+                }}>
+                  The Status Quo
+                </div>
+                <h3 style={{
+                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                  fontSize: 'clamp(1.1rem, 1.9vw, 2rem)',
+                  fontWeight: 800,
+                  color: 'rgba(208,216,224,0.75)',
+                  lineHeight: 1.15,
+                  letterSpacing: '-0.02em',
+                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
+                }}>
+                  Invisible.<br />Undiscoverable.<br />Forgotten.
+                </h3>
+                <p style={{
+                  fontSize: 'clamp(10px, 1vw, 13px)',
+                  color: 'rgba(176,183,188,0.55)',
+                  lineHeight: 1.65,
+                  margin: 0,
+                }}>
+                  Most businesses rely only on social media and signs. When customers search Google, they find your competitors. Nobody knows you exist.
+                </p>
               </div>
-              <p style={{
-                fontSize: 'clamp(9px, 0.95vw, 12px)',
-                color: 'rgba(208,216,224,0.62)',
-                lineHeight: 1.55,
-                margin: 0,
-              }}>
-                Most businesses rely on signs, word-of-mouth, and social posts. When customers search Google — they find your competitors, not you.
-              </p>
             </div>
           </div>
 
-          {/* Draggable handle */}
+          {/* ─────────────────────────────────────────────────
+              AFTER — top layer, clips with inset(0 (100-pos)% 0 0).
+              pos=0 → inset(0 100% 0 0) → AFTER fully hidden, BEFORE shows.
+              pos=100 → inset(0 0% 0 0) → AFTER fully visible.
+              Dragging RIGHT reveals more AFTER.
+              Card lives in the LEFT half — always in the revealed AFTER area.
+          ───────────────────────────────────────────────── */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              clipPath: `inset(0 ${100 - position}% 0 0)`,
+              background: 'linear-gradient(135deg, #0b1d3a 0%, #091e37 40%, #0c2845 100%)',
+            }}
+          >
+            {/* Subtle video background — right half */}
+            <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: '55%', overflow: 'hidden' }}>
+              <video
+                autoPlay muted loop playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }}
+                src="/videos/loop-packed-store.mp4"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, rgba(0,0,0,0.2), #091e37)' }} />
+            </div>
+
+            {/* AFTER label — top left (visible side) */}
+            <div style={{
+              position: 'absolute',
+              top: 14,
+              left: 16,
+              fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+              fontSize: 9,
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.3)',
+              zIndex: 2,
+            }}>
+              → AFTER
+            </div>
+
+            {/* AFTER card — left half, vertically centered */}
+            <div style={{
+              position: 'absolute',
+              top: 0, bottom: 0,
+              left: 0, width: '52%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 'clamp(16px, 2.5vw, 36px)',
+              zIndex: 3,
+            }}>
+              <div style={{
+                width: '100%',
+                background: 'rgba(4,14,32,0.85)',
+                border: '1px solid rgba(0,118,182,0.38)',
+                borderRadius: 14,
+                padding: 'clamp(18px, 2.5vw, 36px)',
+                backdropFilter: 'blur(18px)',
+                textAlign: 'center',
+              }}>
+                <div style={{
+                  fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                  fontSize: 'clamp(7px, 0.72vw, 9px)',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: '#0076B6',
+                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
+                }}>
+                  With Caliber Web Studio
+                </div>
+                <h3 style={{
+                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                  fontSize: 'clamp(1.1rem, 1.9vw, 2rem)',
+                  fontWeight: 800,
+                  color: '#ffffff',
+                  lineHeight: 1.15,
+                  letterSpacing: '-0.02em',
+                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
+                }}>
+                  Ranked. Found.<br />Booked Solid.
+                </h3>
+                <p style={{
+                  fontSize: 'clamp(10px, 1vw, 13px)',
+                  color: 'rgba(208,216,224,0.82)',
+                  lineHeight: 1.65,
+                  margin: 0,
+                }}>
+                  Google #1 ranking. AI-powered lead capture. 5-star reputation system. Your phone rings. Your store fills up. Customers find YOU first.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ─── Draggable handle ─── */}
           <div
             style={{
               position: 'absolute',
@@ -316,9 +314,9 @@ export default function ProblemSlider() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              pointerEvents: 'none',
             }}
           >
-            {/* Circle handle */}
             <div
               style={{
                 width: '44px',
@@ -331,6 +329,7 @@ export default function ProblemSlider() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 flexShrink: 0,
+                pointerEvents: 'none',
               }}
             >
               <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
@@ -360,7 +359,6 @@ export default function ProblemSlider() {
               lineHeight: 1.4,
               letterSpacing: '-0.02em',
               color: '#ffffff',
-              marginBottom: '20px',
               maxWidth: '680px',
               margin: '0 auto 20px',
             }}

@@ -1,9 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function CinematicHero() {
   const [videoEnded, setVideoEnded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Fallback: show content after 1.5 s even if video hasn't loaded/ended.
+    // This prevents a solid-black hero when the browser can't autoplay or the
+    // file is slow on a first visit.
+    const fallback = setTimeout(() => setVideoEnded(true), 1500);
+
+    // Explicitly attempt play — React hydration doesn't re-trigger autoplay.
+    const v = videoRef.current;
+    if (v) v.play().catch(() => {});
+
+    return () => clearTimeout(fallback);
+  }, []);
 
   return (
     <section
@@ -28,9 +42,11 @@ export default function CinematicHero() {
       >
         {/* Video — plays once, no loop */}
         <video
+          ref={videoRef}
           autoPlay
           muted
           playsInline
+          preload="metadata"
           onEnded={() => setVideoEnded(true)}
           style={{
             position: 'absolute',

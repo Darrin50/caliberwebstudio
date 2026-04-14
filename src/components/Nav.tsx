@@ -19,7 +19,9 @@ export default function Nav() {
     const toggle = toggleRef.current;
     if (!toggle) return;
 
-    let currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    let savedTheme: string | null = null;
+    try { savedTheme = localStorage.getItem('caliber-theme-v2'); } catch (_) {}
+    let currentTheme = document.documentElement.getAttribute('data-theme') || savedTheme || 'dark';
     let transitioning = false;
 
     const applyTheme = (theme: string) => {

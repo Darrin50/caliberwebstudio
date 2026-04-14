@@ -368,11 +368,12 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning className={`${syne.variable} ${inter.variable} ${spaceMono.variable}`}>
       <head>
-        {/* Restore saved theme before first paint — prevents flash of wrong theme. */}
+        {/* Restore saved theme before first paint — prevents flash of wrong theme.
+            Default is dark; only switch to light if the user explicitly saved 'light'. */}
         <Script
           id="theme-init"
           strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{__html: `(function(){try{var t=window['localStorage'].getItem('caliber-theme-v2');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();`}}
+          dangerouslySetInnerHTML={{__html: `(function(){try{var t=window['localStorage'].getItem('caliber-theme-v2');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');}catch(e){}})();`}}
         />
         {/* Structured Data */}
         <Script id="ld-local-business" type="application/ld+json" strategy="beforeInteractive"

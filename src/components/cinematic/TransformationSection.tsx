@@ -208,10 +208,10 @@ export default function TransformationSection() {
         .ts-heading   { color: #D0D8E0; }
         .ts-stat-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
         .ts-stat-num  { color: #ffffff; }
-        .ts-stat-lbl  { color: rgba(208,216,224,0.6); }
+        .ts-stat-lbl  { color: rgba(208,216,224,0.78); }
         .ts-service-card  { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
         .ts-service-title { color: #D0D8E0; }
-        .ts-service-desc  { color: rgba(208,216,224,0.65); }
+        .ts-service-desc  { color: rgba(208,216,224,0.82); }
 
         /* ── Light mode — keyed to html[data-theme="light"] on <html> ── */
         html[data-theme="light"] .ts-section  { background: #ffffff; border-top: 1px solid rgba(0,0,0,0.08); }

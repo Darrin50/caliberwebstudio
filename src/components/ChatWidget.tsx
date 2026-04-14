@@ -9,8 +9,6 @@ interface Message {
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
-  const [showNudge, setShowNudge] = useState(false);
-  const [nudgeDismissed, setNudgeDismissed] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
@@ -20,20 +18,6 @@ export default function ChatWidget() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  // Show nudge after 15s idle if chat hasn't been opened
-  useEffect(() => {
-    if (nudgeDismissed || open) return;
-    const timer = setTimeout(() => {
-      if (!open) setShowNudge(true);
-    }, 15000);
-    return () => clearTimeout(timer);
-  }, [nudgeDismissed, open]);
-
-  // Hide nudge once chat is opened
-  useEffect(() => {
-    if (open) setShowNudge(false);
-  }, [open]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -83,107 +67,103 @@ export default function ChatWidget() {
 
   return (
     <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999 }}>
-      {/* Idle Nudge Bubble */}
-      {showNudge && !open && (
-        <div id="cw-nudge" style={{
-          position: 'fixed',
-          bottom: '90px',
-          right: '24px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          animation: 'nudgeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
-          zIndex: 9998,
-        }}>
-          <button
-            onClick={() => { setOpen(true); setShowNudge(false); setNudgeDismissed(true); }}
-            style={{
-              background: '#0a0e1a',
-              color: '#fff',
-              border: '1px solid #2563eb',
-              borderRadius: '100px',
-              padding: '10px 18px',
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '13px',
-              fontWeight: 600,
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              boxShadow: '0 4px 20px rgba(37,99,235,0.25)',
-              letterSpacing: '-0.01em',
-            }}
-          >
-            Chat with us →
-          </button>
-          <button
-            onClick={() => { setShowNudge(false); setNudgeDismissed(true); }}
-            style={{
-              background: '#0a0e1a',
-              color: 'rgba(255,255,255,0.5)',
-              border: '1px solid rgba(37,99,235,0.3)',
-              borderRadius: '50%',
-              width: '24px',
-              height: '24px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '11px',
-              cursor: 'pointer',
-              padding: 0,
-              flexShrink: 0,
-            }}
-          >
-            ✕
-          </button>
-        </div>
-      )}
 
-      {/* Chat Button — clean solid Caliber Blue circle, white chat icon */}
+      {/* Orb Chat Button */}
       <button
         id="cw-btn"
         onClick={() => setOpen(!open)}
+        aria-label={open ? 'Close chat' : 'Open chat'}
         style={{
           position: 'fixed',
           bottom: '24px',
           right: '24px',
-          width: '56px',
-          height: '56px',
+          width: '64px',
+          height: '64px',
           borderRadius: '50%',
-          backgroundColor: '#2563eb',
           border: 'none',
           cursor: 'pointer',
+          padding: 0,
+          zIndex: 9999,
+          background: 'transparent',
+        }}
+      >
+        {/* Ambient outer glow */}
+        <div style={{
+          position: 'absolute',
+          inset: '-8px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(37,99,235,0.35) 0%, transparent 70%)',
+          animation: 'orbPulse 3s ease-in-out infinite',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Slow spinning ring */}
+        <div style={{
+          position: 'absolute',
+          inset: '-4px',
+          borderRadius: '50%',
+          border: '1.5px solid transparent',
+          borderTopColor: 'rgba(99,179,255,0.6)',
+          borderRightColor: 'rgba(109,77,255,0.4)',
+          animation: 'orbSpin 4s linear infinite',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Main orb sphere */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          borderRadius: '50%',
+          background: 'linear-gradient(135deg, #1e40ff 0%, #2563eb 45%, #6d4dff 100%)',
+          boxShadow: '0 4px 24px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.25)',
+          transition: 'transform 0.2s ease, box-shadow 0.2s ease',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 4px 16px rgba(37,99,235,0.4)',
-          transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-          zIndex: 9999,
+          overflow: 'hidden',
         }}
-        onMouseEnter={(e) => {
-          (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.05)';
-        }}
-        onMouseLeave={(e) => {
-          (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)';
-        }}
-        aria-label={open ? 'Close chat' : 'Open chat'}
-      >
-        {open ? (
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M15 5L5 15M5 5l10 10" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
-        ) : (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        )}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLDivElement).style.transform = 'scale(1.08)';
+            (e.currentTarget as HTMLDivElement).style.boxShadow = '0 6px 32px rgba(37,99,235,0.7), inset 0 1px 0 rgba(255,255,255,0.25)';
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLDivElement).style.transform = 'scale(1)';
+            (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 24px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.25)';
+          }}
+        >
+          {/* Glass sheen */}
+          <div style={{
+            position: 'absolute',
+            top: '4px',
+            left: '8px',
+            width: '28px',
+            height: '14px',
+            borderRadius: '50%',
+            background: 'rgba(255,255,255,0.18)',
+            filter: 'blur(3px)',
+            pointerEvents: 'none',
+          }} />
+
+          {/* Icon */}
+          {open ? (
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ position: 'relative', zIndex: 1 }}>
+              <path d="M15 5L5 15M5 5l10 10" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+          ) : (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style={{ position: 'relative', zIndex: 1 }}>
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          )}
+        </div>
       </button>
 
-      {/* Chat Window — fully solid, no blur */}
+      {/* Chat Window */}
       {open && (
         <div
           id="cw-window"
           style={{
             position: 'fixed',
-            bottom: '88px',
+            bottom: '100px',
             right: '24px',
             width: 'min(380px, calc(100vw - 32px))',
             height: 'min(520px, calc(100vh - 120px))',
@@ -214,11 +194,12 @@ export default function ChatWidget() {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                backgroundColor: '#2563eb',
+                background: 'linear-gradient(135deg, #1e40ff 0%, #2563eb 45%, #6d4dff 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 flexShrink: 0,
+                boxShadow: '0 2px 8px rgba(37,99,235,0.4)',
               }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -387,17 +368,29 @@ export default function ChatWidget() {
               from { opacity: 0; transform: translateY(6px); }
               to   { opacity: 1; transform: translateY(0); }
             }
-            @keyframes nudgeIn {
-              from { opacity: 0; transform: translateY(10px) scale(0.95); }
-              to   { opacity: 1; transform: translateY(0)    scale(1); }
-            }
             @keyframes typing {
               0%, 60%, 100% { opacity: 1; }
               30% { opacity: 0.3; }
             }
+            @keyframes slideIn {
+              from { opacity: 0; transform: translateY(12px) scale(0.97); }
+              to   { opacity: 1; transform: translateY(0) scale(1); }
+            }
           `}</style>
         </div>
       )}
+
+      {/* Global orb animations */}
+      <style>{`
+        @keyframes orbPulse {
+          0%, 100% { opacity: 0.6; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.15); }
+        }
+        @keyframes orbSpin {
+          from { transform: rotate(0deg); }
+          to   { transform: rotate(360deg); }
+        }
+      `}</style>
     </div>
   );
 }

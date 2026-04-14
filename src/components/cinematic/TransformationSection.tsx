@@ -154,6 +154,7 @@ export default function TransformationSection() {
     <section
       style={{
         position: 'relative',
+        isolation: 'isolate',
         overflow: 'hidden',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
         borderTop: '1px solid rgba(176,183,188,0.12)',
@@ -171,7 +172,10 @@ export default function TransformationSection() {
           onEnded={() => handleEnded(i)}
           style={{
             position: 'absolute',
-            inset: 0,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
             width: '100%',
             height: '100%',
             objectFit: 'cover',
@@ -188,15 +192,18 @@ export default function TransformationSection() {
       <div
         style={{
           position: 'absolute',
-          inset: 0,
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           background: 'rgba(10,10,11,0.72)',
-          zIndex: 1,
+          zIndex: 5,
           pointerEvents: 'none',
         }}
       />
 
       {/* ── Content ── */}
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '1280px', margin: '0 auto' }}>
+      <div style={{ position: 'relative', zIndex: 10, maxWidth: '1280px', margin: '0 auto' }}>
         {/* Headline */}
         <div style={{ marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '720px' }}>
           <div

@@ -116,10 +116,11 @@ export default function SocialProof() {
 
   return (
     <section
+      data-force-dark
       style={{
-        background: 'var(--bg3, #18181c)',
+        background: '#18181c',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-        borderTop: '1px solid var(--border, rgba(176,183,188,0.12))',
+        borderTop: '1px solid rgba(176,183,188,0.12)',
       }}
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>

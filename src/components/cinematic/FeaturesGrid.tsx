@@ -128,6 +128,7 @@ const FEATURES = [
 export default function FeaturesGrid() {
   return (
     <section
+      data-force-dark
       style={{
         background: '#0a0a0c',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',

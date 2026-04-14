@@ -281,14 +281,14 @@ export default function FeaturesGrid() {
         }
         /* Flip front — dark mode default */
         .flip-front {
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.1);
-          box-shadow: 0 2px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.18);
+          box-shadow: 0 4px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
           transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .flip-card:hover .flip-front {
-          border-color: rgba(0,118,182,0.4);
-          box-shadow: 0 4px 32px rgba(0,118,182,0.14), inset 0 1px 0 rgba(255,255,255,0.06);
+          border-color: rgba(0,118,182,0.5);
+          box-shadow: 0 6px 40px rgba(0,118,182,0.18), inset 0 1px 0 rgba(255,255,255,0.08);
         }
         /* Flip front — light mode */
         [data-theme="light"] .flip-front {

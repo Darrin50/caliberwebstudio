@@ -98,10 +98,10 @@ export default function ProcessTimeline() {
         {/* Desktop horizontal timeline */}
         <div className="timeline-desktop">
           {/* Background track */}
-          <div className="absolute top-10 left-[12.5%] right-[12.5%] h-[2px] bg-white/10" />
-          {/* Animated gradient line */}
+          <div className="absolute top-10 left-[12.5%] right-[12.5%] h-[2px]" style={{ background: 'rgba(0,118,182,0.2)' }} />
+          {/* Animated brand-blue line */}
           <div className="absolute top-10 left-[12.5%] right-[12.5%] h-[2px] overflow-hidden">
-            <div className="h-full w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 shadow-[0_0_16px_rgba(0,200,255,0.4)]">
+            <div className="h-full w-full" style={{ background: '#0076B6', boxShadow: '0 0 10px rgba(0,118,182,0.5)' }}>
               <div className="absolute top-1/2 h-3 w-24 -translate-y-1/2 bg-gradient-to-r from-transparent via-white to-transparent blur-md animate-flow" />
             </div>
           </div>
@@ -122,19 +122,14 @@ export default function ProcessTimeline() {
                 transitionDelay: `${i * 0.12}s`,
               }}
             >
-              {/* Glass node */}
-              <div className="relative z-10 mb-6 h-20 w-20 rounded-full flex items-center justify-center
-                bg-gradient-to-br from-cyan-400/30 to-purple-500/30
-                border border-white/20 backdrop-blur-md
-                shadow-[0_0_30px_rgba(0,200,255,0.35)]
-                transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_40px_rgba(0,200,255,0.55)]"
-              >
+              {/* Node */}
+              <div className="timeline-node relative z-10 mb-6 h-20 w-20 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                 <span
                   style={{
                     fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
                     fontSize: '14px',
                     fontWeight: 700,
-                    color: '#93c5fd',
+                    color: '#ffffff',
                   }}
                 >
                   {step.number}
@@ -190,17 +185,20 @@ export default function ProcessTimeline() {
             >
               {/* Left: node + connector */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-                <div className="h-14 w-14 rounded-full flex items-center justify-center
-                  bg-gradient-to-br from-cyan-400/30 to-purple-500/30
-                  border border-white/20 backdrop-blur-md
-                  shadow-[0_0_24px_rgba(0,200,255,0.3)]"
+                <div
+                  className="h-14 w-14 rounded-full flex items-center justify-center"
+                  style={{
+                    background: 'rgba(0,118,182,0.18)',
+                    border: '1px solid rgba(0,118,182,0.45)',
+                    boxShadow: '0 0 20px rgba(0,118,182,0.3)',
+                  }}
                 >
                   <span
                     style={{
                       fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
                       fontSize: '11px',
                       fontWeight: 700,
-                      color: '#93c5fd',
+                      color: '#ffffff',
                     }}
                   >
                     {step.number}
@@ -212,7 +210,7 @@ export default function ProcessTimeline() {
                       width: '2px',
                       flex: 1,
                       minHeight: '32px',
-                      background: 'linear-gradient(to bottom, rgba(0,200,255,0.5), rgba(168,85,247,0.3))',
+                      background: 'rgba(0,118,182,0.4)',
                       marginTop: '8px',
                     }}
                   />
@@ -222,7 +220,7 @@ export default function ProcessTimeline() {
               <div
                 className="flex-1 rounded-2xl bg-white/[0.05] border border-white/10 backdrop-blur-xl
                   shadow-[0_10px_30px_rgba(0,0,0,0.3)]
-                  transition-all duration-300 group-hover:border-cyan-300/30"
+                  transition-all duration-300 group-hover:border-blue-400/30"
                 style={{ padding: '16px 20px', marginBottom: i < STEPS.length - 1 ? '12px' : '0' }}
               >
                 <h3
@@ -262,22 +260,31 @@ export default function ProcessTimeline() {
           position: relative;
           align-items: start;
         }
-        /* Equal-height cards via CSS grid subgrid trick */
         .timeline-desktop > div {
           display: flex;
           flex-direction: column;
           height: 100%;
         }
+        /* Step node — dark */
+        .timeline-node {
+          background: rgba(0,118,182,0.18);
+          border: 1px solid rgba(0,118,182,0.45);
+          box-shadow: 0 0 20px rgba(0,118,182,0.3);
+        }
+        /* Step node — light */
+        html[data-theme="light"] .timeline-node {
+          background: #0076B6;
+          border: 1px solid #0076B6;
+          box-shadow: 0 0 16px rgba(0,118,182,0.25);
+        }
         .timeline-card {
           flex: 1;
           width: 100%;
           padding: clamp(20px, 2.5vw, 28px);
-          border-radius: 16px;
+          border-radius: 12px;
           background: rgba(255,255,255,0.05);
           border: 1px solid rgba(255,255,255,0.1);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.2);
           transition: transform 0.3s ease, border-color 0.3s ease;
           display: flex;
           flex-direction: column;
@@ -285,11 +292,11 @@ export default function ProcessTimeline() {
         }
         html[data-theme="light"] .timeline-card {
           background: #ffffff;
-          border: 1px solid rgba(0,0,0,0.12);
-          box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+          border: 1px solid rgba(0,0,0,0.1);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.07);
         }
         html[data-theme="light"] .timeline-card h3 { color: #0a0a0b; }
-        html[data-theme="light"] .timeline-card p  { color: rgba(0,0,0,0.5); }
+        html[data-theme="light"] .timeline-card p  { color: rgba(0,0,0,0.55); }
         .timeline-mobile { display: none; }
         @media (max-width: 720px) {
           .timeline-desktop { display: none; }

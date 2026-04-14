@@ -105,7 +105,7 @@ export default function ChatWidget() {
         .cw-orb { animation: cw-bounce-attention 5s ease-in-out infinite; }
         .cw-orb:hover .cw-sphere {
           transform: scale(1.08);
-          box-shadow: 0 0 40px 8px rgba(109,77,255,0.6), 0 0 0 1px rgba(99,179,255,0.3);
+          box-shadow: 0 0 40px 8px rgba(0,118,182,0.7), 0 0 0 1px rgba(0,163,255,0.3);
         }
         .cw-ring-mask { background: var(--bg, #0a0a0b); }
       `}</style>
@@ -128,32 +128,32 @@ export default function ChatWidget() {
         tabIndex={0}
         onKeyDown={(e) => e.key === 'Enter' && setOpen(!open)}
       >
-        {/* Strobe flash — double-burst every 5 s */}
+        {/* Strobe flash — double-burst every 5 s, brand blue */}
         <div style={{
           position: 'absolute',
           inset: '-18px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(109,77,255,1) 0%, rgba(37,99,235,0.7) 45%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,118,182,0.95) 0%, rgba(0,118,182,0.5) 45%, transparent 70%)',
           animation: 'cw-strobe 5s ease-in-out infinite',
           pointerEvents: 'none',
         }} />
 
-        {/* Outer ambient glow — pulsing halo */}
+        {/* Outer ambient glow — pulsing halo, brand blue */}
         <div style={{
           position: 'absolute',
           inset: '-10px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(109,77,255,0.45) 0%, rgba(37,99,235,0.2) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,118,182,0.4) 0%, rgba(0,118,182,0.15) 55%, transparent 75%)',
           animation: 'cw-pulse 2.8s ease-in-out infinite',
           pointerEvents: 'none',
         }} />
 
-        {/* Spinning conic ring */}
+        {/* Spinning conic ring — brand blue */}
         <div style={{
           position: 'absolute',
           inset: '-5px',
           borderRadius: '50%',
-          background: 'conic-gradient(from 0deg, rgba(99,179,255,0.8) 0deg, rgba(109,77,255,0.6) 120deg, transparent 200deg, transparent 360deg)',
+          background: 'conic-gradient(from 0deg, rgba(0,118,182,0.9) 0deg, rgba(0,163,255,0.6) 120deg, transparent 200deg, transparent 360deg)',
           animation: 'cw-spin 3s linear infinite',
           pointerEvents: 'none',
         }} />
@@ -166,15 +166,15 @@ export default function ChatWidget() {
           pointerEvents: 'none',
         }} />
 
-        {/* Main sphere */}
+        {/* Main sphere — brand blue */}
         <div
           className="cw-sphere"
           style={{
             position: 'absolute',
             inset: 0,
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #1e3aff 0%, #2563eb 40%, #7c3aed 100%)',
-            boxShadow: '0 0 24px 4px rgba(37,99,235,0.5), 0 0 0 1px rgba(99,179,255,0.2)',
+            background: 'linear-gradient(145deg, #0099d6 0%, #0076B6 55%, #005a8e 100%)',
+            boxShadow: '0 0 24px 4px rgba(0,118,182,0.55), 0 0 0 1px rgba(0,163,255,0.2)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -222,8 +222,8 @@ export default function ChatWidget() {
             borderRadius: '16px',
             display: 'flex',
             flexDirection: 'column',
-            boxShadow: '0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(37,99,235,0.2)',
-            border: '1px solid rgba(37,99,235,0.15)',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,118,182,0.2)',
+            border: '1px solid rgba(0,118,182,0.15)',
             zIndex: 9998,
             animation: 'cw-slide-in 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
           }}
@@ -243,12 +243,12 @@ export default function ChatWidget() {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #1e3aff 0%, #7c3aed 100%)',
+                background: 'linear-gradient(135deg, #0076B6 0%, #005a8e 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 flexShrink: 0,
-                boxShadow: '0 2px 10px rgba(37,99,235,0.45)',
+                boxShadow: '0 2px 10px rgba(0,118,182,0.45)',
               }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -311,7 +311,7 @@ export default function ChatWidget() {
                   maxWidth: '82%',
                   padding: '10px 14px',
                   borderRadius: msg.role === 'user' ? '14px 14px 4px 14px' : '14px 14px 14px 4px',
-                  backgroundColor: msg.role === 'user' ? '#2563eb' : '#1e293b',
+                  backgroundColor: msg.role === 'user' ? '#0076B6' : '#1e293b',
                   color: '#f1f5f9',
                   fontSize: '14px',
                   lineHeight: '1.5',
@@ -366,7 +366,7 @@ export default function ChatWidget() {
                 fontFamily: 'inherit',
                 transition: 'border-color 0.15s',
               }}
-              onFocus={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = 'rgba(37,99,235,0.5)'; }}
+              onFocus={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = 'rgba(0,118,182,0.5)'; }}
               onBlur={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
               disabled={loading}
             />
@@ -377,7 +377,7 @@ export default function ChatWidget() {
                 width: '40px',
                 height: '40px',
                 borderRadius: '10px',
-                backgroundColor: !loading && input.trim() ? '#2563eb' : 'rgba(255,255,255,0.06)',
+                backgroundColor: !loading && input.trim() ? '#0076B6' : 'rgba(255,255,255,0.06)',
                 border: 'none',
                 color: '#ffffff',
                 cursor: !loading && input.trim() ? 'pointer' : 'not-allowed',

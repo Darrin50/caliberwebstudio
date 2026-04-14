@@ -5,7 +5,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import SocialProof from '@/components/SocialProof';
 import { ScrollReveal } from '@/components/ScrollReveal';
-import DetroitManifestoVideo from '@/components/DetroitManifestoVideo';
+import AboutStoryVideo from '@/components/AboutStoryVideo';
 
 export const metadata: Metadata = {
   title: { absolute: 'About | Caliber Web Studio — Built in Detroit' },
@@ -59,8 +59,8 @@ export default function AboutPage() {
       <Nav />
       <main style={{ background: 'var(--bg)', color: 'var(--silver)', minHeight: '100vh' }}>
 
-        {/* Detroit manifesto video — plays once, reveals "Pushing The Needle" text */}
-        <DetroitManifestoVideo />
+        {/* Cinematic storytelling section — website stats + CWS origin story, plays once */}
+        <AboutStoryVideo />
 
         {/* Hero */}
         <section style={{

@@ -1,6 +1,14 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+const CINEMATIC_SCENES = [
+  '/videos/hero-scene-1.mp4',
+  '/videos/hero-scene-2.mp4',
+  '/videos/hero-scene-3.mp4',
+  '/videos/hero-scene-4.mp4',
+];
+const CROSSFADE_MS = 700;
 
 function useCountUp(target: number, duration: number, started: boolean) {
   const [count, setCount] = useState(0);
@@ -39,10 +47,12 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
       style={{
         textAlign: 'center',
         padding: 'clamp(24px, 3vw, 36px) clamp(16px, 2vw, 24px)',
-        background: 'rgba(0,0,0,0.03)',
-        border: '1px solid rgba(0,0,0,0.08)',
+        background: 'rgba(255,255,255,0.07)',
+        border: '1px solid rgba(255,255,255,0.12)',
         borderRadius: '8px',
         transition: 'border-color 0.3s ease, transform 0.3s ease',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
       }}
     >
       <div
@@ -51,7 +61,7 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
           fontSize: 'clamp(2rem, 4vw, 3.5rem)',
           fontWeight: 800,
           letterSpacing: '-0.03em',
-          color: '#0a0a0c',
+          color: '#ffffff',
           lineHeight: 1,
           marginBottom: '8px',
         }}
@@ -64,7 +74,7 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
           fontSize: '10px',
           letterSpacing: '0.14em',
           textTransform: 'uppercase',
-          color: 'rgba(0,0,0,0.5)',
+          color: 'rgba(208,216,224,0.6)',
         }}
       >
         {label}
@@ -99,7 +109,17 @@ const SERVICE_CARDS = [
 export default function TransformationSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [statsVisible, setStatsVisible] = useState(false);
+  const [currentScene, setCurrentScene] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([null, null, null, null]);
+  const currentSceneRef = useRef(0);
 
+  // Boot: play scene 0
+  useEffect(() => {
+    const v = videoRefs.current[0];
+    if (v) v.play().catch(() => {});
+  }, []);
+
+  // Stats intersection observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -114,15 +134,69 @@ export default function TransformationSection() {
     return () => observer.disconnect();
   }, []);
 
+  const handleEnded = useCallback((endedScene: number) => {
+    if (endedScene !== currentSceneRef.current) return;
+    const nextScene = (endedScene + 1) % CINEMATIC_SCENES.length;
+    const nextVideo = videoRefs.current[nextScene];
+    if (nextVideo) {
+      nextVideo.currentTime = 0;
+      nextVideo.play().catch(() => {});
+    }
+    currentSceneRef.current = nextScene;
+    setCurrentScene(nextScene);
+    setTimeout(() => {
+      const prev = videoRefs.current[endedScene];
+      if (prev) prev.pause();
+    }, CROSSFADE_MS + 50);
+  }, []);
+
   return (
     <section
       style={{
-        background: 'var(--bg, #0a0a0b)',
+        position: 'relative',
+        overflow: 'hidden',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-        borderTop: '1px solid var(--border, rgba(176,183,188,0.12))',
+        borderTop: '1px solid rgba(176,183,188,0.12)',
+        background: '#0a0a0b',
       }}
     >
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      {/* ── Cinematic video background ── */}
+      {CINEMATIC_SCENES.map((src, i) => (
+        <video
+          key={i}
+          ref={el => { videoRefs.current[i] = el; }}
+          muted
+          playsInline
+          preload="auto"
+          onEnded={() => handleEnded(i)}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: currentScene === i ? 1 : 0,
+            transition: `opacity ${CROSSFADE_MS}ms ease`,
+            zIndex: 0,
+          }}
+        >
+          <source src={src} type="video/mp4" />
+        </video>
+      ))}
+
+      {/* Dark overlay */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'rgba(10,10,11,0.72)',
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* ── Content ── */}
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: '1280px', margin: '0 auto' }}>
         {/* Headline */}
         <div style={{ marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '720px' }}>
           <div
@@ -131,14 +205,14 @@ export default function TransformationSection() {
               fontSize: '10px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: 'var(--navy, #0076B6)',
+              color: '#0076B6',
               marginBottom: '20px',
               display: 'flex',
               alignItems: 'center',
               gap: '10px',
             }}
           >
-            <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
+            <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
             The Transformation
           </div>
           <h2
@@ -148,7 +222,7 @@ export default function TransformationSection() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: 'var(--silver, #D0D8E0)',
+              color: '#D0D8E0',
               marginBottom: '12px',
             }}
           >
@@ -161,54 +235,11 @@ export default function TransformationSection() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: 'var(--navy, #0076B6)',
+              color: '#0076B6',
             }}
           >
             We build your entire online presence.
           </h2>
-        </div>
-
-        {/* Video placeholder */}
-        <div
-          style={{
-            width: '100%',
-            aspectRatio: '16 / 9',
-            background: 'linear-gradient(135deg, #0d1a2e 0%, #0a1622 50%, #060e17 100%)',
-            borderRadius: '12px',
-            border: '1px solid rgba(0,118,182,0.15)',
-            marginBottom: 'clamp(48px, 6vw, 72px)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative',
-            overflow: 'hidden',
-          }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,118,182,0.1) 0%, transparent 70%)',
-            }}
-          />
-          <div
-            style={{
-              width: '72px',
-              height: '72px',
-              borderRadius: '50%',
-              background: 'rgba(0,118,182,0.15)',
-              border: '2px solid rgba(0,118,182,0.4)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-              zIndex: 1,
-            }}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M8 5l13 7-13 7V5z" fill="rgba(0,118,182,0.8)" />
-            </svg>
-          </div>
         </div>
 
         {/* Stats row */}
@@ -226,18 +257,20 @@ export default function TransformationSection() {
               key={card.title}
               className="service-card-hover"
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.1)',
                 borderRadius: '8px',
                 padding: 'clamp(24px, 3vw, 36px)',
                 transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
               }}
             >
               <div
                 style={{
                   fontSize: '28px',
                   marginBottom: '16px',
-                  color: 'var(--navy, #0076B6)',
+                  color: '#0076B6',
                   lineHeight: 1,
                 }}
               >
@@ -248,7 +281,7 @@ export default function TransformationSection() {
                   fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                   fontSize: 'clamp(1rem, 1.6vw, 1.15rem)',
                   fontWeight: 700,
-                  color: 'var(--silver, #D0D8E0)',
+                  color: '#D0D8E0',
                   marginBottom: '8px',
                   letterSpacing: '-0.01em',
                 }}
@@ -260,9 +293,8 @@ export default function TransformationSection() {
                   fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                   fontSize: '14px',
                   lineHeight: 1.65,
-                  color: 'rgba(0,0,0,0.5)',
+                  color: 'rgba(208,216,224,0.65)',
                   margin: 0,
-                  maxWidth: 'none',
                 }}
               >
                 {card.desc}

@@ -39,8 +39,8 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
       style={{
         textAlign: 'center',
         padding: 'clamp(24px, 3vw, 36px) clamp(16px, 2vw, 24px)',
-        background: 'rgba(255,255,255,0.04)',
-        border: '1px solid rgba(255,255,255,0.08)',
+        background: 'rgba(0,0,0,0.03)',
+        border: '1px solid rgba(0,0,0,0.08)',
         borderRadius: '8px',
         transition: 'border-color 0.3s ease, transform 0.3s ease',
       }}
@@ -51,7 +51,7 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
           fontSize: 'clamp(2rem, 4vw, 3.5rem)',
           fontWeight: 800,
           letterSpacing: '-0.03em',
-          color: '#ffffff',
+          color: '#0a0a0c',
           lineHeight: 1,
           marginBottom: '8px',
         }}
@@ -64,7 +64,7 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
           fontSize: '10px',
           letterSpacing: '0.14em',
           textTransform: 'uppercase',
-          color: 'var(--dim, rgba(176,183,188,0.55))',
+          color: 'rgba(0,0,0,0.5)',
         }}
       >
         {label}
@@ -260,7 +260,7 @@ export default function TransformationSection() {
                   fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                   fontSize: '14px',
                   lineHeight: 1.65,
-                  color: 'var(--dim, rgba(176,183,188,0.55))',
+                  color: 'rgba(0,0,0,0.5)',
                   margin: 0,
                   maxWidth: 'none',
                 }}

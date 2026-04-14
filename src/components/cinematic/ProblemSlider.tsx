@@ -42,7 +42,7 @@ export default function ProblemSlider() {
   };
 
   return (
-    <section style={{ background: '#ffffff', padding: 'clamp(64px, 8vw, 110px) clamp(20px, 5vw, 60px)', borderTop: '1px solid rgba(0,0,0,0.08)' }}>
+    <section style={{ background: '#0a0a0c', padding: 'clamp(64px, 8vw, 110px) clamp(20px, 5vw, 60px)', borderTop: '1px solid rgba(176,183,188,0.1)' }}>
 
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         {/* ── Headline ── */}
@@ -52,13 +52,13 @@ export default function ProblemSlider() {
             The Problem
             <span style={{ width: 24, height: 1, background: '#0076B6', display: 'block' }} />
           </div>
-          <h2 style={{ fontFamily: "var(--font-heading,var(--font-syne,'Syne',sans-serif))", fontSize: 'clamp(2rem,4.5vw,3.5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: '#0a0a0c' }}>
+          <h2 style={{ fontFamily: "var(--font-heading,var(--font-syne,'Syne',sans-serif))", fontSize: 'clamp(2rem,4.5vw,3.5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: '#ffffff' }}>
             Most Detroit businesses are{' '}<span style={{ color: '#0076B6' }}>invisible online.</span>
           </h2>
         </div>
 
         {/* ── Drag hint ── */}
-        <div style={{ textAlign: 'center', marginBottom: 'clamp(10px, 1.5vw, 18px)', fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.35)' }}>
+        <div style={{ textAlign: 'center', marginBottom: 'clamp(10px, 1.5vw, 18px)', fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(176,183,188,0.35)' }}>
           ← drag to compare →
         </div>
 
@@ -67,13 +67,13 @@ export default function ProblemSlider() {
           ref={containerRef}
           onMouseDown={onMouseDown}
           onTouchStart={onTouchStart}
-          style={{ position: 'relative', width: '100%', aspectRatio: '16/9', borderRadius: 12, overflow: 'hidden', cursor: dragging ? 'grabbing' : 'grab', userSelect: 'none', border: '1px solid rgba(0,0,0,0.1)' }}
+          style={{ position: 'relative', width: '100%', aspectRatio: '16/9', borderRadius: 12, overflow: 'hidden', cursor: dragging ? 'grabbing' : 'grab', userSelect: 'none', border: '1px solid rgba(176,183,188,0.1)' }}
         >
           {/* ═══ AFTER — base layer (always full-width underneath) ═══ */}
           <div style={{ position: 'absolute', inset: 0, background: '#091e37' }}>
             <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} src="/videos/loop-packed-store.mp4" />
             <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.18)' }} />
-            <div style={{ position: 'absolute', top: 20, right: 24, fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 'clamp(13px, 1.8vw, 20px)', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#000000', zIndex: 2 }}>AFTER →</div>
+            <div style={{ position: 'absolute', top: 20, right: 24, fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 'clamp(13px, 1.8vw, 20px)', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', zIndex: 2 }}>AFTER →</div>
           </div>
 
           {/* ═══ BEFORE — top layer, clips from the right ═══ */}
@@ -93,10 +93,10 @@ export default function ProblemSlider() {
 
         {/* ── Quote ── */}
         <div style={{ marginTop: 'clamp(44px, 5.5vw, 68px)', textAlign: 'center', padding: 'clamp(28px, 3.5vw, 44px)', background: 'rgba(0,118,182,0.05)', border: '1px solid rgba(0,118,182,0.14)', borderRadius: 8 }}>
-          <blockquote style={{ fontFamily: "var(--font-syne,'Syne',sans-serif)", fontSize: 'clamp(1.05rem,2vw,1.4rem)', fontStyle: 'italic', fontWeight: 700, lineHeight: 1.4, letterSpacing: '-0.02em', color: '#0a0a0c', maxWidth: 680, margin: '0 auto 18px' }}>
+          <blockquote style={{ fontFamily: "var(--font-syne,'Syne',sans-serif)", fontSize: 'clamp(1.05rem,2vw,1.4rem)', fontStyle: 'italic', fontWeight: 700, lineHeight: 1.4, letterSpacing: '-0.02em', color: '#ffffff', maxWidth: 680, margin: '0 auto 18px' }}>
             &ldquo;Local businesses deserve the same tools big brands take for granted — without the agency price tag.&rdquo;
           </blockquote>
-          <cite style={{ fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', fontStyle: 'normal' }}>
+          <cite style={{ fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(176,183,188,0.5)', fontStyle: 'normal' }}>
             — Darrin Singer, Founder · Caliber Web Studio
           </cite>
         </div>

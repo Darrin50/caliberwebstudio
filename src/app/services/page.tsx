@@ -5,11 +5,11 @@ import Footer from '@/components/Footer';
 import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Services | Caliber Web Studio — What We Build' },
-  description: 'Every tool a Detroit local business needs online — custom website, AI chatbot, review engine, SEO, social content, and a live dashboard. All in one monthly plan.',
+  title: { absolute: 'Detroit Web Design Services | Websites, SEO & AI Chatbots | Caliber Web Studio' },
+  description: 'Detroit web design services built for local business growth — custom websites, AI chatbots, local SEO, review automation, and Google Business Profile management. Starting at $197/mo.',
   alternates: { canonical: 'https://caliberwebstudio.com/services' },
   openGraph: {
-    title: 'Services | Caliber Web Studio — What We Build',
+    title: 'Detroit Web Design Services | Websites, SEO & AI Chatbots | Caliber Web Studio',
     description: 'AI-powered websites, chatbots, review automation, and local SEO for Detroit businesses. One flat monthly rate, zero upfront.',
     url: 'https://caliberwebstudio.com/services',
     type: 'website',

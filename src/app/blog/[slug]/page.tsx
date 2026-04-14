@@ -180,6 +180,35 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </div>
           </div>
 
+          {/* Service Areas */}
+          <section style={{ marginBottom: "48px", padding: "24px", background: "rgba(30,61,143,0.06)", border: "1px solid rgba(30,61,143,0.15)", borderRadius: "12px" }}>
+            <p style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(208,216,224,0.5)", marginBottom: "12px" }}>
+              Serving Metro Detroit
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+              {[
+                { name: "Detroit", slug: "detroit" },
+                { name: "Dearborn", slug: "dearborn" },
+                { name: "Southfield", slug: "southfield" },
+                { name: "Warren", slug: "warren" },
+                { name: "Sterling Heights", slug: "sterling-heights" },
+                { name: "Livonia", slug: "livonia" },
+                { name: "Troy", slug: "troy" },
+                { name: "Royal Oak", slug: "royal-oak" },
+                { name: "Farmington Hills", slug: "farmington-hills" },
+                { name: "Ann Arbor", slug: "ann-arbor" },
+              ].map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/areas/${city.slug}`}
+                  style={{ fontSize: "0.8rem", padding: "6px 14px", background: "rgba(30,61,143,0.12)", border: "1px solid rgba(30,61,143,0.25)", borderRadius: "4px", color: "rgba(208,216,224,0.7)", textDecoration: "none" }}
+                >
+                  {city.name}
+                </Link>
+              ))}
+            </div>
+          </section>
+
           {/* Related Posts */}
           {related.length > 0 && (
             <section>

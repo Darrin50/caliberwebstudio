@@ -98,7 +98,7 @@ export default function CinematicHero() {
             animationDelay: '120ms',
           }}
         >
-          We Build Businesses<br />
+          We Build Detroit Businesses<br />
           <span style={{ color: '#0076B6' }}>That Get Found.</span>
         </h1>
 

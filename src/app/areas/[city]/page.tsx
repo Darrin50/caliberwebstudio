@@ -18,20 +18,23 @@ export async function generateMetadata({
   const cityData = getCityBySlug(slug);
   if (!cityData) return {};
 
+  const title = `${cityData.name} Web Design & Website Designer | Caliber Web Studio`;
+  const description = `Professional website designer serving ${cityData.name}, MI businesses. Custom web design, local SEO, AI chatbots, and review automation. Free mockup — starting at $197/mo.`;
+
   return {
-    title: { absolute: `Web Design in ${cityData.name}, MI | Caliber Web Studio` },
-    description: `Professional web design, local SEO, and AI-powered growth systems for ${cityData.name} businesses. Custom websites starting at $197/mo.`,
+    title: { absolute: title },
+    description,
     alternates: { canonical: `https://caliberwebstudio.com/areas/${slug}` },
     openGraph: {
-      title: `Web Design in ${cityData.name}, MI | Caliber Web Studio`,
-      description: `Professional web design, local SEO, and AI-powered growth systems for ${cityData.name} businesses. Custom websites starting at $197/mo.`,
+      title,
+      description,
       url: `https://caliberwebstudio.com/areas/${slug}`,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Web Design in ${cityData.name}, MI | Caliber Web Studio`,
-      description: `Professional web design, local SEO, and AI-powered growth systems for ${cityData.name} businesses. Custom websites starting at $197/mo.`,
+      title,
+      description,
     },
   };
 }
@@ -80,30 +83,42 @@ const services = [
 function buildSchema(cityData: CityData) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: `Web Design in ${cityData.name}, MI | Caliber Web Studio`,
-    description: `Professional web design, local SEO, and AI-powered growth systems for ${cityData.name} businesses.`,
-    url: `https://caliberwebstudio.com/areas/${cityData.slug}`,
-    provider: {
-      '@type': 'ProfessionalService',
-      name: 'Caliber Web Studio',
-      url: 'https://caliberwebstudio.com',
-      telephone: '+13137992315',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Detroit',
-        addressRegion: 'MI',
-        addressCountry: 'US',
-      },
-      areaServed: {
-        '@type': 'City',
-        name: cityData.name,
-        containedInPlace: {
-          '@type': 'State',
-          name: 'Michigan',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        name: `${cityData.name} Web Design & Website Designer | Caliber Web Studio`,
+        description: `Professional website designer serving ${cityData.name}, MI businesses. Custom web design, local SEO, AI chatbots, and review automation.`,
+        url: `https://caliberwebstudio.com/areas/${cityData.slug}`,
+        provider: {
+          '@type': 'ProfessionalService',
+          name: 'Caliber Web Studio',
+          url: 'https://caliberwebstudio.com',
+          telephone: '+13137992315',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Detroit',
+            addressRegion: 'MI',
+            addressCountry: 'US',
+          },
+          areaServed: {
+            '@type': 'City',
+            name: cityData.name,
+            containedInPlace: {
+              '@type': 'State',
+              name: 'Michigan',
+            },
+          },
         },
       },
-    },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://caliberwebstudio.com' },
+          { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://caliberwebstudio.com/areas' },
+          { '@type': 'ListItem', position: 3, name: `${cityData.name} Web Design`, item: `https://caliberwebstudio.com/areas/${cityData.slug}` },
+        ],
+      },
+    ],
   };
 }
 

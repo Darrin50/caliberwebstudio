@@ -20,11 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const priorityCities = new Set([
+    "detroit", "dearborn", "southfield", "warren", "sterling-heights",
+    "livonia", "troy", "royal-oak", "farmington-hills", "ann-arbor",
+  ]);
+
   const areaEntries: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${baseUrl}/areas/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority: priorityCities.has(city.slug) ? 0.9 : 0.8,
   }));
 
   return [

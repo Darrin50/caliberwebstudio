@@ -43,7 +43,7 @@ export default function ProcessTimeline() {
             obs.disconnect();
           }
         },
-        { threshold: 0.4 }
+        { threshold: 0.3 }
       );
       obs.observe(el);
       return obs;
@@ -97,108 +97,77 @@ export default function ProcessTimeline() {
 
         {/* Desktop horizontal timeline */}
         <div className="timeline-desktop">
-          {/* Connecting line */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '26px',
-              left: 'calc(12.5%)',
-              right: 'calc(12.5%)',
-              height: '2px',
-              background: 'var(--border, rgba(176,183,188,0.12))',
-              zIndex: 0,
-            }}
-          />
-          {/* Active line fill — fills based on how many steps are active */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '26px',
-              left: 'calc(12.5%)',
-              height: '2px',
-              background: 'var(--navy, #0076B6)',
-              boxShadow: '0 0 8px rgba(0,118,182,0.6)',
-              zIndex: 1,
-              width: activeSteps.filter(Boolean).length === 0
-                ? '0%'
-                : `${((activeSteps.filter(Boolean).length - 1) / (STEPS.length - 1)) * 75}%`,
-              transition: 'width 0.6s ease',
-            }}
-          />
+          {/* Background track */}
+          <div className="absolute top-10 left-[12.5%] right-[12.5%] h-[2px] bg-white/10" />
+          {/* Animated gradient line */}
+          <div className="absolute top-10 left-[12.5%] right-[12.5%] h-[2px] overflow-hidden">
+            <div className="h-full w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 shadow-[0_0_16px_rgba(0,200,255,0.4)]">
+              <div className="absolute top-1/2 h-3 w-24 -translate-y-1/2 bg-gradient-to-r from-transparent via-white to-transparent blur-md animate-flow" />
+            </div>
+          </div>
 
           {STEPS.map((step, i) => (
             <div
               key={step.number}
               ref={(el) => { stepRefs.current[i] = el; }}
+              className="group"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                position: 'relative',
-                zIndex: 2,
-                opacity: activeSteps[i] ? 1 : 0.35,
-                transform: activeSteps[i] ? 'translateY(0)' : 'translateY(8px)',
+                opacity: activeSteps[i] ? 1 : 0,
+                transform: activeSteps[i] ? 'translateY(0)' : 'translateY(16px)',
                 transition: 'opacity 0.6s ease, transform 0.6s ease',
-                transitionDelay: `${i * 0.1}s`,
+                transitionDelay: `${i * 0.12}s`,
               }}
             >
-              {/* Step dot */}
-              <div
-                style={{
-                  width: '52px',
-                  height: '52px',
-                  borderRadius: '50%',
-                  background: activeSteps[i]
-                    ? 'linear-gradient(135deg, #005a8e 0%, #0076B6 100%)'
-                    : 'var(--bg2, #111114)',
-                  border: activeSteps[i]
-                    ? '2px solid rgba(0,118,182,0.4)'
-                    : '2px solid rgba(176,183,188,0.15)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '24px',
-                  boxShadow: activeSteps[i] ? '0 0 24px rgba(0,118,182,0.4)' : 'none',
-                  transition: 'all 0.5s ease',
-                }}
+              {/* Glass node */}
+              <div className="relative z-10 mb-6 h-20 w-20 rounded-full flex items-center justify-center
+                bg-gradient-to-br from-cyan-400/30 to-purple-500/30
+                border border-white/20 backdrop-blur-md
+                shadow-[0_0_30px_rgba(0,200,255,0.35)]
+                transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_40px_rgba(0,200,255,0.55)]"
               >
                 <span
                   style={{
                     fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                    fontSize: '12px',
+                    fontSize: '14px',
                     fontWeight: 700,
-                    color: activeSteps[i] ? '#93c5fd' : 'var(--dim, rgba(176,183,188,0.55))',
+                    color: '#93c5fd',
                   }}
                 >
                   {step.number}
                 </span>
               </div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-syne, 'Syne', sans-serif)",
-                  fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)',
-                  fontWeight: 700,
-                  color: 'var(--silver, #D0D8E0)',
-                  marginBottom: '8px',
-                  letterSpacing: '-0.01em',
-                  lineHeight: 1.25,
-                }}
-              >
-                {step.title}
-              </h3>
-              <p
-                style={{
-                  fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                  fontSize: '13px',
-                  lineHeight: 1.65,
-                  color: 'var(--dim, rgba(176,183,188,0.55))',
-                  margin: 0,
-                  maxWidth: '180px',
-                }}
-              >
-                {step.desc}
-              </p>
+
+              {/* Glass card — equal height via flex-1 stretch */}
+              <div className="timeline-card group-hover:-translate-y-2 group-hover:border-cyan-300/30">
+                <h3
+                  style={{
+                    fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+                    fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)',
+                    fontWeight: 700,
+                    color: 'var(--silver, #D0D8E0)',
+                    marginBottom: '8px',
+                    letterSpacing: '-0.01em',
+                    lineHeight: 1.25,
+                  }}
+                >
+                  {step.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "var(--font-inter, 'Inter', sans-serif)",
+                    fontSize: '13px',
+                    lineHeight: 1.65,
+                    color: 'rgba(176,183,188,0.7)',
+                    margin: 0,
+                  }}
+                >
+                  {step.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -209,43 +178,29 @@ export default function ProcessTimeline() {
             <div
               key={step.number}
               ref={(el) => { if (!stepRefs.current[i]) stepRefs.current[i] = el; }}
+              className="group"
               style={{
                 display: 'flex',
-                gap: '20px',
-                position: 'relative',
-                opacity: activeSteps[i] ? 1 : 0.35,
-                transform: activeSteps[i] ? 'translateX(0)' : 'translateX(-8px)',
+                gap: '16px',
+                opacity: activeSteps[i] ? 1 : 0,
+                transform: activeSteps[i] ? 'translateX(0)' : 'translateX(-12px)',
                 transition: 'opacity 0.6s ease, transform 0.6s ease',
-                transitionDelay: `${i * 0.1}s`,
+                transitionDelay: `${i * 0.12}s`,
               }}
             >
-              {/* Left column: dot + line */}
+              {/* Left: node + connector */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-                <div
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '50%',
-                    background: activeSteps[i]
-                      ? 'linear-gradient(135deg, #005a8e 0%, #0076B6 100%)'
-                      : 'var(--bg2, #111114)',
-                    border: activeSteps[i]
-                      ? '2px solid rgba(0,118,182,0.4)'
-                      : '2px solid rgba(176,183,188,0.15)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                    boxShadow: activeSteps[i] ? '0 0 20px rgba(0,118,182,0.3)' : 'none',
-                    transition: 'all 0.5s ease',
-                  }}
+                <div className="h-14 w-14 rounded-full flex items-center justify-center
+                  bg-gradient-to-br from-cyan-400/30 to-purple-500/30
+                  border border-white/20 backdrop-blur-md
+                  shadow-[0_0_24px_rgba(0,200,255,0.3)]"
                 >
                   <span
                     style={{
                       fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
                       fontSize: '11px',
                       fontWeight: 700,
-                      color: activeSteps[i] ? '#93c5fd' : 'var(--dim, rgba(176,183,188,0.55))',
+                      color: '#93c5fd',
                     }}
                   >
                     {step.number}
@@ -257,17 +212,19 @@ export default function ProcessTimeline() {
                       width: '2px',
                       flex: 1,
                       minHeight: '32px',
-                      background: activeSteps[i]
-                        ? 'var(--navy, #0076B6)'
-                        : 'var(--border, rgba(176,183,188,0.12))',
+                      background: 'linear-gradient(to bottom, rgba(0,200,255,0.5), rgba(168,85,247,0.3))',
                       marginTop: '8px',
-                      transition: 'background 0.5s ease',
                     }}
                   />
                 )}
               </div>
-              {/* Content */}
-              <div style={{ paddingTop: '10px', paddingBottom: i < STEPS.length - 1 ? '32px' : '0' }}>
+              {/* Content card */}
+              <div
+                className="flex-1 rounded-2xl bg-white/[0.05] border border-white/10 backdrop-blur-xl
+                  shadow-[0_10px_30px_rgba(0,0,0,0.3)]
+                  transition-all duration-300 group-hover:border-cyan-300/30"
+                style={{ padding: '16px 20px', marginBottom: i < STEPS.length - 1 ? '12px' : '0' }}
+              >
                 <h3
                   style={{
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
@@ -285,9 +242,8 @@ export default function ProcessTimeline() {
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                     fontSize: '14px',
                     lineHeight: 1.65,
-                    color: 'var(--dim, rgba(176,183,188,0.55))',
+                    color: 'rgba(176,183,188,0.7)',
                     margin: 0,
-                    maxWidth: 'none',
                   }}
                 >
                   {step.desc}
@@ -304,12 +260,41 @@ export default function ProcessTimeline() {
           grid-template-columns: repeat(4, 1fr);
           gap: clamp(16px, 3vw, 32px);
           position: relative;
+          align-items: start;
+        }
+        /* Equal-height cards via CSS grid subgrid trick */
+        .timeline-desktop > div {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        .timeline-card {
+          flex: 1;
+          width: 100%;
+          padding: clamp(20px, 2.5vw, 28px);
+          border-radius: 16px;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+          transition: transform 0.3s ease, border-color 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         .timeline-mobile { display: none; }
         @media (max-width: 720px) {
           .timeline-desktop { display: none; }
           .timeline-mobile { display: flex; flex-direction: column; gap: 0; }
         }
+        @keyframes flow {
+          0%   { transform: translateX(-96px) translateY(-50%); opacity: 0; }
+          15%  { opacity: 1; }
+          85%  { opacity: 1; }
+          100% { transform: translateX(700px) translateY(-50%); opacity: 0; }
+        }
+        .animate-flow { animation: flow 3.5s linear infinite; }
       `}</style>
     </section>
   );

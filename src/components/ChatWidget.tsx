@@ -66,88 +66,114 @@ export default function ChatWidget() {
   };
 
   return (
-    <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999 }}>
+    <>
+      {/* ── Global keyframes ── */}
+      <style>{`
+        @keyframes cw-spin {
+          to { transform: rotate(360deg); }
+        }
+        @keyframes cw-pulse {
+          0%, 100% { opacity: 0.5; transform: scale(1); }
+          50%       { opacity: 1;   transform: scale(1.2); }
+        }
+        @keyframes cw-slide-in {
+          from { opacity: 0; transform: translateY(14px) scale(0.96); }
+          to   { opacity: 1; transform: translateY(0)    scale(1); }
+        }
+        @keyframes cw-msg-in {
+          from { opacity: 0; transform: translateY(6px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes cw-typing {
+          0%, 60%, 100% { opacity: 1; }
+          30%           { opacity: 0.3; }
+        }
+        .cw-orb:hover .cw-sphere {
+          transform: scale(1.08);
+          box-shadow: 0 0 40px 8px rgba(109,77,255,0.6), 0 0 0 1px rgba(99,179,255,0.3);
+        }
+      `}</style>
 
-      {/* Orb Chat Button */}
-      <button
-        id="cw-btn"
-        onClick={() => setOpen(!open)}
-        aria-label={open ? 'Close chat' : 'Open chat'}
+      {/* ── Floating orb wrapper ── */}
+      <div
+        className="cw-orb"
         style={{
           position: 'fixed',
           bottom: '24px',
           right: '24px',
-          width: '64px',
-          height: '64px',
-          borderRadius: '50%',
-          border: 'none',
-          cursor: 'pointer',
-          padding: 0,
+          width: '68px',
+          height: '68px',
           zIndex: 9999,
-          background: 'transparent',
+          cursor: 'pointer',
         }}
+        onClick={() => setOpen(!open)}
+        role="button"
+        aria-label={open ? 'Close chat' : 'Open chat'}
+        tabIndex={0}
+        onKeyDown={(e) => e.key === 'Enter' && setOpen(!open)}
       >
-        {/* Ambient outer glow */}
+        {/* Outer ambient glow — pulsing halo */}
         <div style={{
           position: 'absolute',
-          inset: '-8px',
+          inset: '-10px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(37,99,235,0.35) 0%, transparent 70%)',
-          animation: 'orbPulse 3s ease-in-out infinite',
+          background: 'radial-gradient(circle, rgba(109,77,255,0.45) 0%, rgba(37,99,235,0.2) 50%, transparent 70%)',
+          animation: 'cw-pulse 2.8s ease-in-out infinite',
           pointerEvents: 'none',
         }} />
 
-        {/* Slow spinning ring */}
+        {/* Spinning conic ring */}
         <div style={{
           position: 'absolute',
-          inset: '-4px',
+          inset: '-5px',
           borderRadius: '50%',
-          border: '1.5px solid transparent',
-          borderTopColor: 'rgba(99,179,255,0.6)',
-          borderRightColor: 'rgba(109,77,255,0.4)',
-          animation: 'orbSpin 4s linear infinite',
+          background: 'conic-gradient(from 0deg, rgba(99,179,255,0.8) 0deg, rgba(109,77,255,0.6) 120deg, transparent 200deg, transparent 360deg)',
+          animation: 'cw-spin 3s linear infinite',
           pointerEvents: 'none',
         }} />
 
-        {/* Main orb sphere */}
+        {/* Ring mask — punches out center so only ring edge shows */}
         <div style={{
           position: 'absolute',
-          inset: 0,
+          inset: '-2px',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #1e40ff 0%, #2563eb 45%, #6d4dff 100%)',
-          boxShadow: '0 4px 24px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.25)',
-          transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
-        }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLDivElement).style.transform = 'scale(1.08)';
-            (e.currentTarget as HTMLDivElement).style.boxShadow = '0 6px 32px rgba(37,99,235,0.7), inset 0 1px 0 rgba(255,255,255,0.25)';
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLDivElement).style.transform = 'scale(1)';
-            (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 24px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.25)';
+          background: '#0a0a0b',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Main sphere */}
+        <div
+          className="cw-sphere"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, #1e3aff 0%, #2563eb 40%, #7c3aed 100%)',
+            boxShadow: '0 0 24px 4px rgba(37,99,235,0.5), 0 0 0 1px rgba(99,179,255,0.2)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+            overflow: 'hidden',
           }}
         >
-          {/* Glass sheen */}
+          {/* Glass sheen highlight */}
           <div style={{
             position: 'absolute',
-            top: '4px',
-            left: '8px',
-            width: '28px',
-            height: '14px',
+            top: '6px',
+            left: '10px',
+            width: '26px',
+            height: '12px',
             borderRadius: '50%',
-            background: 'rgba(255,255,255,0.18)',
-            filter: 'blur(3px)',
+            background: 'rgba(255,255,255,0.22)',
+            filter: 'blur(4px)',
             pointerEvents: 'none',
           }} />
 
           {/* Icon */}
           {open ? (
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ position: 'relative', zIndex: 1 }}>
-              <path d="M15 5L5 15M5 5l10 10" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M15 5L5 15M5 5l10 10" stroke="#fff" strokeWidth="2.2" strokeLinecap="round"/>
             </svg>
           ) : (
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style={{ position: 'relative', zIndex: 1 }}>
@@ -155,15 +181,15 @@ export default function ChatWidget() {
             </svg>
           )}
         </div>
-      </button>
+      </div>
 
-      {/* Chat Window */}
+      {/* ── Chat Window ── */}
       {open && (
         <div
           id="cw-window"
           style={{
             position: 'fixed',
-            bottom: '100px',
+            bottom: '104px',
             right: '24px',
             width: 'min(380px, calc(100vw - 32px))',
             height: 'min(520px, calc(100vh - 120px))',
@@ -174,32 +200,30 @@ export default function ChatWidget() {
             boxShadow: '0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(37,99,235,0.2)',
             border: '1px solid rgba(37,99,235,0.15)',
             zIndex: 9998,
-            animation: 'slideIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
+            animation: 'cw-slide-in 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
           }}
         >
           {/* Header */}
-          <div
-            style={{
-              padding: '16px 20px',
-              borderBottom: '1px solid rgba(255,255,255,0.06)',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              backgroundColor: '#0f172a',
-              borderRadius: '16px 16px 0 0',
-            }}
-          >
+          <div style={{
+            padding: '16px 20px',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            backgroundColor: '#0f172a',
+            borderRadius: '16px 16px 0 0',
+          }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #1e40ff 0%, #2563eb 45%, #6d4dff 100%)',
+                background: 'linear-gradient(135deg, #1e3aff 0%, #7c3aed 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 flexShrink: 0,
-                boxShadow: '0 2px 8px rgba(37,99,235,0.4)',
+                boxShadow: '0 2px 10px rgba(37,99,235,0.45)',
               }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -210,12 +234,7 @@ export default function ChatWidget() {
                   Caliber AI
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop: '2px' }}>
-                  <div style={{
-                    width: '6px',
-                    height: '6px',
-                    borderRadius: '50%',
-                    backgroundColor: '#10b981',
-                  }} />
+                  <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#10b981' }} />
                   <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.02em' }}>Online</span>
                 </div>
               </div>
@@ -245,55 +264,49 @@ export default function ChatWidget() {
             </button>
           </div>
 
-          {/* Messages Area */}
-          <div
-            style={{
-              flex: 1,
-              overflowY: 'auto',
-              padding: '16px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px',
-            }}
-          >
+          {/* Messages */}
+          <div style={{
+            flex: 1,
+            overflowY: 'auto',
+            padding: '16px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+          }}>
             {messages.map((msg, idx) => (
               <div
                 key={idx}
                 style={{
                   display: 'flex',
                   justifyContent: msg.role === 'user' ? 'flex-end' : 'flex-start',
-                  animation: 'msgIn 0.2s ease',
+                  animation: 'cw-msg-in 0.2s ease',
                 }}
               >
-                <div
-                  style={{
-                    maxWidth: '82%',
-                    padding: '10px 14px',
-                    borderRadius: msg.role === 'user' ? '14px 14px 4px 14px' : '14px 14px 14px 4px',
-                    backgroundColor: msg.role === 'user' ? '#2563eb' : '#1e293b',
-                    color: '#f1f5f9',
-                    fontSize: '14px',
-                    lineHeight: '1.5',
-                    wordWrap: 'break-word',
-                  }}
-                >
+                <div style={{
+                  maxWidth: '82%',
+                  padding: '10px 14px',
+                  borderRadius: msg.role === 'user' ? '14px 14px 4px 14px' : '14px 14px 14px 4px',
+                  backgroundColor: msg.role === 'user' ? '#2563eb' : '#1e293b',
+                  color: '#f1f5f9',
+                  fontSize: '14px',
+                  lineHeight: '1.5',
+                  wordWrap: 'break-word',
+                }}>
                   {msg.content}
                 </div>
               </div>
             ))}
             {loading && (
               <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                <div
-                  style={{
-                    padding: '10px 16px',
-                    borderRadius: '14px 14px 14px 4px',
-                    backgroundColor: '#1e293b',
-                    color: 'rgba(255,255,255,0.4)',
-                    fontSize: '18px',
-                    letterSpacing: '2px',
-                    animation: 'typing 1.4s infinite',
-                  }}
-                >
+                <div style={{
+                  padding: '10px 16px',
+                  borderRadius: '14px 14px 14px 4px',
+                  backgroundColor: '#1e293b',
+                  color: 'rgba(255,255,255,0.4)',
+                  fontSize: '18px',
+                  letterSpacing: '2px',
+                  animation: 'cw-typing 1.4s infinite',
+                }}>
                   •••
                 </div>
               </div>
@@ -301,26 +314,20 @@ export default function ChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Area */}
-          <div
-            style={{
-              padding: '12px',
-              borderTop: '1px solid rgba(255,255,255,0.06)',
-              display: 'flex',
-              gap: '8px',
-              backgroundColor: '#0f172a',
-              borderRadius: '0 0 16px 16px',
-            }}
-          >
+          {/* Input */}
+          <div style={{
+            padding: '12px',
+            borderTop: '1px solid rgba(255,255,255,0.06)',
+            display: 'flex',
+            gap: '8px',
+            backgroundColor: '#0f172a',
+            borderRadius: '0 0 16px 16px',
+          }}>
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => {
-                if (e.key === 'Enter' && !loading) {
-                  handleSendMessage();
-                }
-              }}
+              onKeyPress={(e) => { if (e.key === 'Enter' && !loading) handleSendMessage(); }}
               placeholder="Ask me anything..."
               style={{
                 flex: 1,
@@ -361,36 +368,8 @@ export default function ChatWidget() {
               </svg>
             </button>
           </div>
-
-          {/* Styles */}
-          <style>{`
-            @keyframes msgIn {
-              from { opacity: 0; transform: translateY(6px); }
-              to   { opacity: 1; transform: translateY(0); }
-            }
-            @keyframes typing {
-              0%, 60%, 100% { opacity: 1; }
-              30% { opacity: 0.3; }
-            }
-            @keyframes slideIn {
-              from { opacity: 0; transform: translateY(12px) scale(0.97); }
-              to   { opacity: 1; transform: translateY(0) scale(1); }
-            }
-          `}</style>
         </div>
       )}
-
-      {/* Global orb animations */}
-      <style>{`
-        @keyframes orbPulse {
-          0%, 100% { opacity: 0.6; transform: scale(1); }
-          50% { opacity: 1; transform: scale(1.15); }
-        }
-        @keyframes orbSpin {
-          from { transform: rotate(0deg); }
-          to   { transform: rotate(360deg); }
-        }
-      `}</style>
-    </div>
+    </>
   );
 }

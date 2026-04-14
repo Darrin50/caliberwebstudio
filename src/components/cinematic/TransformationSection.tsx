@@ -1,14 +1,9 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-const CINEMATIC_SCENES = [
-  '/videos/hero-scene-1.mp4',
-  '/videos/hero-scene-2.mp4',
-  '/videos/hero-scene-3.mp4',
-  '/videos/hero-scene-4.mp4',
-];
-const CROSSFADE_MS = 700;
+// Video background removed — the 4 hero-scene clips moved to /about (AboutStoryVideo).
+// This section now uses a solid dark background so the stat cards and text stand alone.
 
 function useCountUp(target: number, duration: number, started: boolean) {
   const [count, setCount] = useState(0);
@@ -47,8 +42,6 @@ function StatCard({ value, label, numericValue, prefix = '', suffix = '', starte
       padding: 'clamp(24px, 3vw, 36px) clamp(16px, 2vw, 24px)',
       borderRadius: '8px',
       transition: 'border-color 0.3s ease, transform 0.3s ease',
-      backdropFilter: 'blur(8px)',
-      WebkitBackdropFilter: 'blur(8px)',
     }}>
       <div className="ts-stat-num" style={{
         fontFamily: "var(--font-syne, 'Syne', sans-serif)",
@@ -82,14 +75,6 @@ const SERVICE_CARDS = [
 export default function TransformationSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [statsVisible, setStatsVisible] = useState(false);
-  const [currentScene, setCurrentScene] = useState(0);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([null, null, null, null]);
-  const currentSceneRef = useRef(0);
-
-  useEffect(() => {
-    const v = videoRefs.current[0];
-    if (v) v.play().catch(() => {});
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -100,19 +85,6 @@ export default function TransformationSection() {
     return () => observer.disconnect();
   }, []);
 
-  const handleEnded = useCallback((endedScene: number) => {
-    if (endedScene !== currentSceneRef.current) return;
-    const nextScene = (endedScene + 1) % CINEMATIC_SCENES.length;
-    const nextVideo = videoRefs.current[nextScene];
-    if (nextVideo) { nextVideo.currentTime = 0; nextVideo.play().catch(() => {}); }
-    currentSceneRef.current = nextScene;
-    setCurrentScene(nextScene);
-    setTimeout(() => {
-      const prev = videoRefs.current[endedScene];
-      if (prev) prev.pause();
-    }, CROSSFADE_MS + 50);
-  }, []);
-
   return (
     <section className="ts-section" style={{
       position: 'relative',
@@ -120,31 +92,6 @@ export default function TransformationSection() {
       overflow: 'hidden',
       padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
     }}>
-      {/* Cinematic video background */}
-      {CINEMATIC_SCENES.map((src, i) => (
-        <video key={i} ref={el => { videoRefs.current[i] = el; }}
-          muted playsInline preload="auto"
-          onEnded={() => handleEnded(i)}
-          className="ts-video"
-          style={{
-            position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-            width: '100%', height: '100%', objectFit: 'cover',
-            opacity: currentScene === i ? 1 : 0,
-            transition: `opacity ${CROSSFADE_MS}ms ease`,
-            zIndex: 0,
-          }}
-        >
-          <source src={src} type="video/mp4" />
-        </video>
-      ))}
-
-      {/* Dark overlay */}
-      <div className="ts-overlay" style={{
-        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-        background: 'rgba(10,10,11,0.72)',
-        zIndex: 5, pointerEvents: 'none',
-      }} />
-
       {/* Content */}
       <div style={{ position: 'relative', zIndex: 10, maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{ marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '720px' }}>
@@ -173,10 +120,10 @@ export default function TransformationSection() {
         </div>
 
         <div ref={sectionRef} className="transformation-stats">
-          <StatCard value="340%" label="More bookings"     numericValue={340} suffix="%" started={statsVisible} />
-          <StatCard value="#1"   label="Google ranking"    numericValue={0}   started={statsVisible} />
-          <StatCard value="200%" label="More online orders" numericValue={200} suffix="%" started={statsVisible} />
-          <StatCard value="15+"  label="Calls per week"    numericValue={15}  suffix="+" started={statsVisible} />
+          <StatCard value="340%" label="More bookings"      numericValue={340} suffix="%" started={statsVisible} />
+          <StatCard value="#1"   label="Google ranking"     numericValue={0}   started={statsVisible} />
+          <StatCard value="200%" label="More online orders"  numericValue={200} suffix="%" started={statsVisible} />
+          <StatCard value="15+"  label="Calls per week"     numericValue={15}  suffix="+" started={statsVisible} />
         </div>
 
         <div className="transformation-services" style={{ marginTop: 'clamp(48px, 6vw, 64px)' }}>
@@ -185,7 +132,6 @@ export default function TransformationSection() {
               borderRadius: '8px',
               padding: 'clamp(24px, 3vw, 36px)',
               transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
-              backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)',
             }}>
               <div style={{ fontSize: '28px', marginBottom: '16px', color: '#0076B6', lineHeight: 1 }}>{card.icon}</div>
               <h3 className="ts-service-title" style={{
@@ -203,7 +149,7 @@ export default function TransformationSection() {
       </div>
 
       <style>{`
-        /* ── Dark defaults ── */
+        /* ── Always dark — this section has no light-mode variant ── */
         .ts-section   { background: #0a0a0b; border-top: 1px solid rgba(176,183,188,0.12); }
         .ts-heading   { color: #D0D8E0; }
         .ts-stat-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
@@ -212,8 +158,6 @@ export default function TransformationSection() {
         .ts-service-card  { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
         .ts-service-title { color: #D0D8E0; }
         .ts-service-desc  { color: rgba(208,216,224,0.82); }
-
-        /* TransformationSection is always dark — it has a cinematic video background */
 
         /* ── Layout ── */
         .transformation-stats    { display: grid; grid-template-columns: repeat(4,1fr); gap: clamp(12px,2vw,20px); }

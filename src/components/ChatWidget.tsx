@@ -107,7 +107,7 @@ export default function ChatWidget() {
           transform: scale(1.08);
           box-shadow: 0 0 40px 8px rgba(0,118,182,0.7), 0 0 0 1px rgba(0,163,255,0.3);
         }
-        .cw-ring-mask { background: #0a0a0b; }
+        /* ring mask removed — sphere now sits above conic ring via z-index */
       `}</style>
 
       {/* ── Floating orb wrapper ── */}
@@ -158,15 +158,7 @@ export default function ChatWidget() {
           pointerEvents: 'none',
         }} />
 
-        {/* Ring mask — punches out center so only ring edge shows; matches page bg */}
-        <div className="cw-ring-mask" style={{
-          position: 'absolute',
-          inset: '-2px',
-          borderRadius: '50%',
-          pointerEvents: 'none',
-        }} />
-
-        {/* Main sphere — brand blue */}
+        {/* Main sphere — brand blue, sits above conic ring via zIndex */}
         <div
           className="cw-sphere"
           style={{
@@ -180,6 +172,7 @@ export default function ChatWidget() {
             justifyContent: 'center',
             transition: 'transform 0.2s ease, box-shadow 0.2s ease',
             overflow: 'hidden',
+            zIndex: 1,
           }}
         >
           {/* Glass sheen highlight */}

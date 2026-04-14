@@ -102,15 +102,17 @@ export default function ChatWidget() {
           90%  { transform: translateY(-3px); }
           95%  { transform: translateY(0); }
         }
-        .cw-orb { animation: cw-bounce-attention 5s ease-in-out infinite; }
-        .cw-orb:hover .cw-sphere {
-          transform: scale(1.08);
-          box-shadow: 0 0 40px 8px rgba(0,118,182,0.7), 0 0 0 1px rgba(0,163,255,0.3);
+        /* cw-orb IS the sphere — gradient on the outermost positioned element */
+        .cw-orb {
+          animation: cw-bounce-attention 5s ease-in-out infinite;
+          background: linear-gradient(145deg, #0099d6 0%, #0076B6 55%, #005a8e 100%) !important;
         }
-        /* ring mask removed — sphere now sits above conic ring via z-index */
+        .cw-orb:hover {
+          box-shadow: 0 0 40px 8px rgba(0,118,182,0.7), 0 0 0 2px rgba(0,163,255,0.5) !important;
+        }
       `}</style>
 
-      {/* ── Floating orb wrapper ── */}
+      {/* ── Floating orb — the div itself is the blue sphere ── */}
       <div
         className="cw-orb"
         style={{
@@ -121,6 +123,14 @@ export default function ChatWidget() {
           height: '68px',
           zIndex: 9999,
           cursor: 'pointer',
+          borderRadius: '50%',
+          background: 'linear-gradient(145deg, #0099d6 0%, #0076B6 55%, #005a8e 100%)',
+          boxShadow: '0 0 24px 4px rgba(0,118,182,0.55), 0 0 0 1px rgba(0,163,255,0.2)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          overflow: 'visible',
+          transition: 'box-shadow 0.2s ease',
         }}
         onClick={() => setOpen(!open)}
         role="button"
@@ -128,7 +138,7 @@ export default function ChatWidget() {
         tabIndex={0}
         onKeyDown={(e) => e.key === 'Enter' && setOpen(!open)}
       >
-        {/* Strobe flash — double-burst every 5 s, brand blue */}
+        {/* Strobe flash — behind sphere via zIndex:-1 */}
         <div style={{
           position: 'absolute',
           inset: '-18px',
@@ -136,9 +146,10 @@ export default function ChatWidget() {
           background: 'radial-gradient(circle, rgba(0,118,182,0.95) 0%, rgba(0,118,182,0.5) 45%, transparent 70%)',
           animation: 'cw-strobe 5s ease-in-out infinite',
           pointerEvents: 'none',
+          zIndex: -1,
         }} />
 
-        {/* Outer ambient glow — pulsing halo, brand blue */}
+        {/* Ambient glow — behind sphere */}
         <div style={{
           position: 'absolute',
           inset: '-10px',
@@ -146,9 +157,10 @@ export default function ChatWidget() {
           background: 'radial-gradient(circle, rgba(0,118,182,0.4) 0%, rgba(0,118,182,0.15) 55%, transparent 75%)',
           animation: 'cw-pulse 2.8s ease-in-out infinite',
           pointerEvents: 'none',
+          zIndex: -1,
         }} />
 
-        {/* Spinning conic ring — brand blue */}
+        {/* Spinning conic ring — behind sphere */}
         <div style={{
           position: 'absolute',
           inset: '-5px',
@@ -156,49 +168,32 @@ export default function ChatWidget() {
           background: 'conic-gradient(from 0deg, rgba(0,118,182,0.9) 0deg, rgba(0,163,255,0.6) 120deg, transparent 200deg, transparent 360deg)',
           animation: 'cw-spin 3s linear infinite',
           pointerEvents: 'none',
+          zIndex: -1,
         }} />
 
-        {/* Main sphere — brand blue, sits above conic ring via zIndex */}
-        <div
-          className="cw-sphere"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            borderRadius: '50%',
-            background: 'linear-gradient(145deg, #0099d6 0%, #0076B6 55%, #005a8e 100%)',
-            boxShadow: '0 0 24px 4px rgba(0,118,182,0.55), 0 0 0 1px rgba(0,163,255,0.2)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-            overflow: 'hidden',
-            zIndex: 1,
-          }}
-        >
-          {/* Glass sheen highlight */}
-          <div style={{
-            position: 'absolute',
-            top: '6px',
-            left: '10px',
-            width: '26px',
-            height: '12px',
-            borderRadius: '50%',
-            background: 'rgba(255,255,255,0.22)',
-            filter: 'blur(4px)',
-            pointerEvents: 'none',
-          }} />
+        {/* Glass sheen highlight on sphere surface */}
+        <div style={{
+          position: 'absolute',
+          top: '6px',
+          left: '10px',
+          width: '26px',
+          height: '12px',
+          borderRadius: '50%',
+          background: 'rgba(255,255,255,0.22)',
+          filter: 'blur(4px)',
+          pointerEvents: 'none',
+        }} />
 
-          {/* Icon */}
-          {open ? (
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ position: 'relative', zIndex: 1 }}>
-              <path d="M15 5L5 15M5 5l10 10" stroke="#fff" strokeWidth="2.2" strokeLinecap="round"/>
-            </svg>
-          ) : (
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style={{ position: 'relative', zIndex: 1 }}>
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          )}
-        </div>
+        {/* Icon */}
+        {open ? (
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ position: 'relative', zIndex: 1 }}>
+            <path d="M15 5L5 15M5 5l10 10" stroke="#fff" strokeWidth="2.2" strokeLinecap="round"/>
+          </svg>
+        ) : (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style={{ position: 'relative', zIndex: 1 }}>
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        )}
       </div>
 
       {/* ── Chat Window ── */}

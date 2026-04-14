@@ -2,34 +2,42 @@ import Link from 'next/link';
 
 const SERVICES = [
   {
+    num: '01',
     tag: 'Design',
     tagColor: '#0076B6',
-    tagBg: 'rgba(0,118,182,0.08)',
-    tagBorder: 'rgba(0,118,182,0.25)',
+    tagBg: 'rgba(0,118,182,0.1)',
+    tagBorder: 'rgba(0,118,182,0.3)',
+    glow: 'rgba(0,118,182,0.18)',
     title: 'Custom Web Design',
     desc: 'High-performance sites built from scratch — mobile-first, lightning fast, and designed to turn visitors into paying customers. Not a template. Not a drag-and-drop builder.',
   },
   {
+    num: '02',
     tag: 'SEO',
-    tagColor: '#16a34a',
-    tagBg: 'rgba(22,163,74,0.08)',
-    tagBorder: 'rgba(22,163,74,0.25)',
+    tagColor: '#0284c7',
+    tagBg: 'rgba(2,132,199,0.1)',
+    tagBorder: 'rgba(2,132,199,0.3)',
+    glow: 'rgba(2,132,199,0.18)',
     title: 'Local SEO & Google',
     desc: 'Dominate page one for the searches your customers are actually making. Google Business optimization, schema markup, and geo-targeted landing pages.',
   },
   {
+    num: '03',
     tag: 'AI',
-    tagColor: '#0891b2',
-    tagBg: 'rgba(8,145,178,0.08)',
-    tagBorder: 'rgba(8,145,178,0.25)',
+    tagColor: '#6366f1',
+    tagBg: 'rgba(99,102,241,0.1)',
+    tagBorder: 'rgba(99,102,241,0.3)',
+    glow: 'rgba(99,102,241,0.18)',
     title: 'AI Chatbot & Lead Capture',
     desc: 'A 24/7 AI assistant trained on your business — answers questions, books appointments, and captures leads automatically while you sleep.',
   },
   {
+    num: '04',
     tag: 'Growth',
     tagColor: '#7c3aed',
-    tagBg: 'rgba(124,58,237,0.08)',
-    tagBorder: 'rgba(124,58,237,0.25)',
+    tagBg: 'rgba(124,58,237,0.1)',
+    tagBorder: 'rgba(124,58,237,0.3)',
+    glow: 'rgba(124,58,237,0.18)',
     title: 'Digital Growth Systems',
     desc: 'Review automation, reputation management, analytics dashboard, and social content — systems that keep compounding results long after launch day.',
   },
@@ -100,26 +108,39 @@ export default function WhatWeDo() {
             <div
               key={svc.title}
               className="wwd-card"
-              style={{
-                background: 'var(--bg)',
-                border: '1px solid var(--border)',
-                borderRadius: '12px',
-                padding: 'clamp(28px, 3.5vw, 40px)',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
+              style={{ '--card-glow': svc.glow, '--card-accent': svc.tagColor } as React.CSSProperties}
             >
-              {/* Top color accent line */}
+              {/* Top accent bar */}
               <div
                 style={{
                   position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: '3px',
-                  background: `linear-gradient(90deg, ${svc.tagColor}, transparent)`,
+                  top: 0, left: 0, right: 0,
+                  height: '4px',
+                  background: `linear-gradient(90deg, ${svc.tagColor} 0%, transparent 100%)`,
+                  borderRadius: '12px 12px 0 0',
                 }}
               />
+
+              {/* Large background number */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  bottom: '-12px',
+                  right: '20px',
+                  fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+                  fontSize: 'clamp(90px, 11vw, 130px)',
+                  fontWeight: 900,
+                  color: svc.tagColor,
+                  opacity: 0.07,
+                  lineHeight: 1,
+                  letterSpacing: '-0.05em',
+                  pointerEvents: 'none',
+                  userSelect: 'none',
+                }}
+              >
+                {svc.num}
+              </div>
 
               {/* Tag pill */}
               <span
@@ -127,7 +148,7 @@ export default function WhatWeDo() {
                   display: 'inline-block',
                   fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
                   fontSize: '10px',
-                  letterSpacing: '0.12em',
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   color: svc.tagColor,
                   background: svc.tagBg,
@@ -165,6 +186,7 @@ export default function WhatWeDo() {
                   lineHeight: 1.75,
                   margin: 0,
                   maxWidth: '100%',
+                  position: 'relative',
                 }}
               >
                 {svc.desc}
@@ -193,20 +215,56 @@ export default function WhatWeDo() {
         @media (max-width: 640px) {
           .wwd-grid { grid-template-columns: 1fr; }
         }
+
+        /* Card base */
         .wwd-card {
+          background: var(--bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: clamp(28px, 3.5vw, 40px);
+          position: relative;
+          overflow: hidden;
           transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
+
+        /* Radial accent glow in top-right corner — works in all themes */
+        .wwd-card::before {
+          content: '';
+          position: absolute;
+          top: -40px;
+          right: -40px;
+          width: 180px;
+          height: 180px;
+          background: radial-gradient(circle, var(--card-accent) 0%, transparent 70%);
+          opacity: 0.1;
+          pointer-events: none;
+          border-radius: 50%;
+          transition: opacity 0.3s ease;
+        }
+        .wwd-card:hover::before { opacity: 0.18; }
+
+        /* Light mode card */
+        [data-theme="light"] .wwd-card {
+          background: #ffffff;
+          border-color: rgba(0,0,0,0.08);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        [data-theme="light"] .wwd-card::before { opacity: 0.07; }
+
+        /* Hover */
         .wwd-card:hover {
           transform: translateY(-4px);
-        }
-        [data-theme="dark"] .wwd-card:hover {
-          box-shadow: 0 8px 32px rgba(0,118,182,0.1);
-          border-color: rgba(0,118,182,0.25);
+          border-color: var(--card-accent);
+          box-shadow: 0 8px 40px var(--card-glow), 0 2px 0 var(--card-accent) inset;
         }
         [data-theme="light"] .wwd-card:hover {
-          box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-          border-color: rgba(0,0,0,0.12);
+          box-shadow: 0 8px 40px var(--card-glow), 0 2px 12px rgba(0,0,0,0.06);
+          border-color: var(--card-accent);
         }
+
+        /* Light mode text overrides */
+        [data-theme="light"] .wwd-card h3 { color: #111827 !important; }
+        [data-theme="light"] .wwd-card p  { color: #374151 !important; }
       `}</style>
     </section>
   );

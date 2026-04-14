@@ -73,14 +73,14 @@ export default function ProblemSlider() {
           <div style={{ position: 'absolute', inset: 0, background: '#091e37' }}>
             <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} src="/videos/loop-packed-store.mp4" />
             <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.18)' }} />
-            <div style={{ position: 'absolute', top: 14, right: 16, fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', zIndex: 2 }}>AFTER →</div>
+            <div style={{ position: 'absolute', top: 20, right: 24, fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 'clamp(13px, 1.8vw, 20px)', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#000000', zIndex: 2 }}>AFTER →</div>
           </div>
 
           {/* ═══ BEFORE — top layer, clips from the right ═══ */}
           <div style={{ position: 'absolute', inset: 0, clipPath: `inset(0 ${100 - position}% 0 0)`, background: '#0a0a0c', filter: 'saturate(0.4)' }}>
             <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.82 }} src="/videos/loop-empty-store.mp4" />
             <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.22)' }} />
-            <div style={{ position: 'absolute', top: 14, left: 16, fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', zIndex: 2 }}>← BEFORE</div>
+            <div style={{ position: 'absolute', top: 20, left: 24, fontFamily: "var(--font-space-mono,'Space Mono',monospace)", fontSize: 'clamp(13px, 1.8vw, 20px)', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#ffffff', textShadow: '0 1px 6px rgba(0,0,0,0.6)', zIndex: 2 }}>← BEFORE</div>
           </div>
 
           {/* ═══ Handle ═══ */}

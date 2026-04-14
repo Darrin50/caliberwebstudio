@@ -285,8 +285,9 @@ export default function FeaturesGrid() {
           border: 1px solid rgba(255,255,255,0.08);
         }
         html[data-theme="light"] .flip-front {
-          background: rgba(0,0,0,0.04);
-          border: 1px solid rgba(0,0,0,0.09);
+          background: rgba(0,118,182,0.05);
+          border: 1px solid rgba(0,118,182,0.18);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.07);
         }
         .flip-back {
           background: rgba(0,118,182,0.12);

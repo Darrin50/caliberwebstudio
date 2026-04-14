@@ -42,7 +42,7 @@ export default function ProblemSlider() {
   };
 
   return (
-    <section style={{ background: '#0a0a0c', padding: 'clamp(64px, 8vw, 110px) clamp(20px, 5vw, 60px)', borderTop: '1px solid rgba(176,183,188,0.1)' }}>
+    <section data-force-dark style={{ background: '#0a0a0c', padding: 'clamp(64px, 8vw, 110px) clamp(20px, 5vw, 60px)', borderTop: '1px solid rgba(176,183,188,0.1)' }}>
 
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         {/* ── Headline ── */}

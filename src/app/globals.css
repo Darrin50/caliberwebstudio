@@ -663,16 +663,13 @@ input:focus, textarea:focus {
 [data-theme="light"] [data-dark-section]:not(#hero) .sec-label::before { background: #1e3d8f !important; }
 
 /* Sections with permanently-dark backgrounds keep white headings regardless of theme */
-[data-theme="light"] [data-force-dark] h1,
-[data-theme="light"] [data-force-dark] h2,
-[data-theme="light"] [data-force-dark] h3,
-[data-theme="light"] [data-force-dark] h1 span,
-[data-theme="light"] [data-force-dark] h2 span,
-[data-theme="light"] [data-force-dark] h3 span {
+/* force-dark: includes `main` to match specificity of the heading-override rule above */
+[data-theme="light"] main [data-force-dark] h1,
+[data-theme="light"] main [data-force-dark] h2,
+[data-theme="light"] main [data-force-dark] h3 {
   color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  background: none !important;
 }
+/* Spans inside force-dark headings keep their inline color (e.g. accent blue) */
 [data-theme="light"] [data-force-dark] p { color: rgba(208,216,224,0.72) !important; }
 
 /* Hero headline text color CSS vars — used via inline style in Hero.tsx */

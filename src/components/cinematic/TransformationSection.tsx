@@ -86,7 +86,7 @@ export default function TransformationSection() {
   }, []);
 
   return (
-    <section className="ts-section" style={{
+    <section className="ts-section" data-force-dark style={{
       position: 'relative',
       isolation: 'isolate',
       overflow: 'hidden',

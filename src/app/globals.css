@@ -645,12 +645,12 @@ input:focus, textarea:focus {
 /* ═══════════════════════════════════════════════════════
    LIGHT MODE — heading overrides (prevents hardcoded #fff)
    ═══════════════════════════════════════════════════════ */
-[data-theme="light"] main h1,
-[data-theme="light"] main h2,
-[data-theme="light"] main h3,
-[data-theme="light"] main h4,
-[data-theme="light"] main h5,
-[data-theme="light"] main h6 { color: #0e1020 !important; }
+[data-theme="light"] main:not([data-detroit]) h1,
+[data-theme="light"] main:not([data-detroit]) h2,
+[data-theme="light"] main:not([data-detroit]) h3,
+[data-theme="light"] main:not([data-detroit]) h4,
+[data-theme="light"] main:not([data-detroit]) h5,
+[data-theme="light"] main:not([data-detroit]) h6 { color: #0e1020 !important; }
 
 /* Hero keeps white headings in light mode; other dark sections get dark headings */
 [data-theme="light"] main #hero h1,

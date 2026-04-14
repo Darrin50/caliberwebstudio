@@ -79,7 +79,7 @@ export default function DetroitPage() {
   return (
     <>
       <Nav />
-      <main style={{ background: '#0a0a0b', color: '#D0D8E0', minHeight: '100vh' }}>
+      <main data-detroit style={{ background: '#0a0a0b', color: '#D0D8E0', minHeight: '100vh' }}>
 
         {/* ── Scroll-driven frame sequence — the truck builds as you scroll ── */}
         <DetroitScrollVideo />

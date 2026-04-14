@@ -129,9 +129,9 @@ export default function FeaturesGrid() {
   return (
     <section
       style={{
-        background: 'var(--bg2, #111114)',
+        background: '#0a0a0c',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-        borderTop: '1px solid var(--border, rgba(176,183,188,0.12))',
+        borderTop: '1px solid rgba(176,183,188,0.12)',
       }}
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -143,7 +143,7 @@ export default function FeaturesGrid() {
               fontSize: '10px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: 'var(--navy, #0076B6)',
+              color: '#0076B6',
               marginBottom: '20px',
               display: 'flex',
               alignItems: 'center',
@@ -151,9 +151,9 @@ export default function FeaturesGrid() {
               gap: '12px',
             }}
           >
-            <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
+            <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
             What&apos;s Included
-            <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--navy, #0076B6)' }} />
+            <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
           </div>
           <h2
             style={{
@@ -162,11 +162,11 @@ export default function FeaturesGrid() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: 'var(--silver, #D0D8E0)',
+              color: '#D0D8E0',
             }}
           >
             Every page.{' '}
-            <span style={{ color: 'var(--navy, #0076B6)' }}>Built to convert.</span>
+            <span style={{ color: '#0076B6' }}>Built to convert.</span>
           </h2>
         </div>
 
@@ -185,7 +185,7 @@ export default function FeaturesGrid() {
                       fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                       fontSize: 'clamp(1rem, 1.5vw, 1.1rem)',
                       fontWeight: 700,
-                      color: 'var(--silver, #D0D8E0)',
+                      color: '#D0D8E0',
                       letterSpacing: '-0.01em',
                       lineHeight: 1.2,
                       margin: 0,
@@ -213,7 +213,7 @@ export default function FeaturesGrid() {
                       fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                       fontSize: '14px',
                       lineHeight: 1.65,
-                      color: 'var(--silver, #D0D8E0)',
+                      color: 'rgba(208,216,224,0.85)',
                       margin: 0,
                     }}
                   >
@@ -227,17 +227,11 @@ export default function FeaturesGrid() {
       </div>
 
       <style>{`
-        /* Glass shell — dark default */
+        /* Glass shell — always dark */
         .fg-glass {
           border: 1px solid rgba(255,255,255,0.2);
           background: rgba(255,255,255,0.08);
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 0 30px rgba(90,170,255,0.18);
-        }
-        /* Glass shell — light mode */
-        html[data-theme="light"] .fg-glass {
-          border: 1px solid rgba(0,118,182,0.2);
-          background: rgba(0,118,182,0.07);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 0 20px rgba(0,118,182,0.1);
         }
 
         /* Flip cards */
@@ -279,24 +273,21 @@ export default function FeaturesGrid() {
           align-items: flex-start;
           justify-content: center;
         }
-        /* Front card */
         .flip-front {
           background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 2px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        html[data-theme="light"] .flip-front {
-          background: rgba(0,118,182,0.05);
-          border: 1px solid rgba(0,118,182,0.18);
-          box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        .flip-card:hover .flip-front {
+          border-color: rgba(0,118,182,0.4);
+          box-shadow: 0 4px 32px rgba(0,118,182,0.14), inset 0 1px 0 rgba(255,255,255,0.06);
         }
         .flip-back {
-          background: rgba(0,118,182,0.12);
-          border: 1px solid rgba(0,118,182,0.3);
+          background: linear-gradient(135deg, rgba(0,118,182,0.18) 0%, rgba(0,90,142,0.22) 100%);
+          border: 1px solid rgba(0,118,182,0.35);
+          box-shadow: 0 4px 32px rgba(0,118,182,0.18);
           transform: rotateY(180deg);
-        }
-        html[data-theme="light"] .flip-back {
-          background: rgba(0,118,182,0.08);
-          border: 1px solid rgba(0,118,182,0.25);
         }
       `}</style>
     </section>

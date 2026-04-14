@@ -1134,10 +1134,53 @@ html[data-theme="light"] .addon-card:hover {
 
 /* ═══════════════════════════════════════════════════════
    CHAT WIDGET — mobile position override
-   Push the FAB above the hero CTA on small viewports
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 767px) {
-  #cw-btn    { bottom: 88px !important; }
-  #cw-nudge  { bottom: 154px !important; }
+  .cw-orb    { bottom: 88px !important; }
   #cw-window { bottom: 152px !important; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   LIGHT MODE — COMPONENT OVERRIDES
+   Keyed to [data-theme="light"] set on <html> by theme script.
+   These live here (not in component <style> tags) so they are
+   guaranteed to be in the stylesheet cascade before components render.
+   ═══════════════════════════════════════════════════════ */
+
+/* ── TransformationSection ── */
+[data-theme="light"] .ts-section {
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+[data-theme="light"] .ts-video,
+[data-theme="light"] .ts-overlay { display: none; }
+[data-theme="light"] .ts-heading        { color: #0a0a0b; }
+[data-theme="light"] .ts-stat-card      { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.09); }
+[data-theme="light"] .ts-stat-num       { color: #0a0a0b; }
+[data-theme="light"] .ts-stat-lbl       { color: rgba(0,0,0,0.45); }
+[data-theme="light"] .ts-service-card   { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.09); }
+[data-theme="light"] .ts-service-title  { color: #0a0a0b; }
+[data-theme="light"] .ts-service-desc   { color: rgba(0,0,0,0.5); }
+
+/* ── FeaturesGrid ── */
+[data-theme="light"] .fg-glass {
+  border-color: rgba(0,118,182,0.2);
+  background: rgba(0,118,182,0.07);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 0 20px rgba(0,118,182,0.1);
+}
+[data-theme="light"] .flip-front {
+  background: rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.09);
+}
+
+/* ── ProcessTimeline ── */
+[data-theme="light"] .timeline-card {
+  background: rgba(255,255,255,0.85);
+  border-color: rgba(0,0,0,0.09);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+[data-theme="light"] .timeline-card h3 { color: #0a0a0b; }
+[data-theme="light"] .timeline-card p  { color: rgba(0,0,0,0.5); }
+
+/* ── Chat widget orb ring mask ── */
+.cw-ring-mask { background: var(--bg, #0a0a0b); }

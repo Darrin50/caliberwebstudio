@@ -688,7 +688,8 @@ html[data-theme="light"] { --hero-text: #A8B8C8; }
   -webkit-text-fill-color: var(--hero-text) !important;
   color: var(--hero-text) !important;
   -webkit-text-stroke: 0 !important;
-  animation: none !important;
+  /* animation: none removed — it blocked the hero-in reveal (opacity/transform).
+     Gradient/shine prevention is handled by the properties above. */
 }
 
 [data-theme="light"] h1 { color: #0a0a0a !important; }

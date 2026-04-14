@@ -49,6 +49,31 @@ export default function ProblemSlider() {
         borderTop: '1px solid rgba(176,183,188,0.12)',
       }}
     >
+      {/* Card animations */}
+      <style>{`
+        @keyframes ps-float {
+          0%, 100% { transform: translateY(0px); }
+          50%       { transform: translateY(-7px); }
+        }
+        @keyframes ps-glow-before {
+          0%, 100% { box-shadow: 0 8px 32px rgba(0,0,0,0.55), 0 0 0 1px rgba(176,183,188,0.13); }
+          50%       { box-shadow: 0 14px 44px rgba(0,0,0,0.65), 0 0 22px rgba(150,160,170,0.14), 0 0 0 1px rgba(176,183,188,0.28); }
+        }
+        @keyframes ps-glow-after {
+          0%, 100% { box-shadow: 0 8px 32px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,118,182,0.32); }
+          50%       { box-shadow: 0 14px 44px rgba(0,0,0,0.55), 0 0 32px rgba(0,118,182,0.32), 0 0 64px rgba(0,118,182,0.12), 0 0 0 1px rgba(0,118,182,0.58); }
+        }
+        .ps-card-before {
+          animation: ps-float 5s ease-in-out infinite, ps-glow-before 4s ease-in-out infinite;
+        }
+        .ps-card-after {
+          animation: ps-float 5s ease-in-out infinite 0.4s, ps-glow-after 4s ease-in-out infinite 0.8s;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .ps-card-before, .ps-card-after { animation: none !important; }
+        }
+      `}</style>
+
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         {/* Headline */}
         <div style={{ textAlign: 'center', marginBottom: 'clamp(40px, 5vw, 60px)' }}>
@@ -114,186 +139,185 @@ export default function ProblemSlider() {
             border: '1px solid rgba(176,183,188,0.12)',
           }}
         >
-          {/* ─────────────────────────────────────────────────
-              BEFORE — base layer, always full-width, desaturated.
-              Visible on the RIGHT as AFTER clips away to the left.
-              Card lives in the right half so it's always in the
-              exposed BEFORE area.
-          ───────────────────────────────────────────────── */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
-              filter: 'saturate(0.45)',
-            }}
-          >
-            {/* Subtle video background — left half */}
-            <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: '55%', overflow: 'hidden' }}>
+          {/* ═══════════════════════════════════════════════════
+              AFTER — BASE LAYER. Always full-width underneath.
+              Visible on the RIGHT side as BEFORE clips away left.
+              Card anchored to right half — never crosses clip line.
+          ═══════════════════════════════════════════════════ */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #0b1d3a 0%, #091e37 50%, #0c2845 100%)' }}>
+
+            {/* Packed store video — right half background */}
+            <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: '60%', overflow: 'hidden' }}>
               <video
                 autoPlay muted loop playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }}
-                src="/videos/loop-empty-store.mp4"
-              />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(10,10,11,0.55))' }} />
-            </div>
-
-            {/* BEFORE label — top right (visible side) */}
-            <div style={{
-              position: 'absolute',
-              top: 14,
-              right: 16,
-              fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-              fontSize: 9,
-              letterSpacing: '0.16em',
-              textTransform: 'uppercase',
-              color: 'rgba(208,216,224,0.3)',
-              zIndex: 2,
-            }}>
-              BEFORE ←
-            </div>
-
-            {/* BEFORE card — right half, vertically centered */}
-            <div style={{
-              position: 'absolute',
-              top: 0, bottom: 0,
-              right: 0, width: '52%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 'clamp(16px, 2.5vw, 36px)',
-              zIndex: 3,
-            }}>
-              <div style={{
-                width: '100%',
-                background: 'rgba(6,6,8,0.80)',
-                border: '1px solid rgba(176,183,188,0.14)',
-                borderRadius: 14,
-                padding: 'clamp(18px, 2.5vw, 36px)',
-                backdropFilter: 'blur(18px)',
-                textAlign: 'center',
-              }}>
-                <div style={{
-                  fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                  fontSize: 'clamp(7px, 0.72vw, 9px)',
-                  letterSpacing: '0.22em',
-                  textTransform: 'uppercase',
-                  color: 'rgba(208,216,224,0.38)',
-                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
-                }}>
-                  The Status Quo
-                </div>
-                <h3 style={{
-                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                  fontSize: 'clamp(1.1rem, 1.9vw, 2rem)',
-                  fontWeight: 800,
-                  color: 'rgba(208,216,224,0.75)',
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.02em',
-                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
-                }}>
-                  Invisible.<br />Undiscoverable.<br />Forgotten.
-                </h3>
-                <p style={{
-                  fontSize: 'clamp(10px, 1vw, 13px)',
-                  color: 'rgba(176,183,188,0.55)',
-                  lineHeight: 1.65,
-                  margin: 0,
-                }}>
-                  Most businesses rely only on social media and signs. When customers search Google, they find your competitors. Nobody knows you exist.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* ─────────────────────────────────────────────────
-              AFTER — top layer, clips with inset(0 (100-pos)% 0 0).
-              pos=0 → inset(0 100% 0 0) → AFTER fully hidden, BEFORE shows.
-              pos=100 → inset(0 0% 0 0) → AFTER fully visible.
-              Dragging RIGHT reveals more AFTER.
-              Card lives in the LEFT half — always in the revealed AFTER area.
-          ───────────────────────────────────────────────── */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              clipPath: `inset(0 ${100 - position}% 0 0)`,
-              background: 'linear-gradient(135deg, #0b1d3a 0%, #091e37 40%, #0c2845 100%)',
-            }}
-          >
-            {/* Subtle video background — right half */}
-            <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: '55%', overflow: 'hidden' }}>
-              <video
-                autoPlay muted loop playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.88 }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85 }}
                 src="/videos/loop-packed-store.mp4"
               />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, rgba(0,0,0,0.05), rgba(9,30,55,0.45))' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #091e37 0%, transparent 40%)' }} />
             </div>
 
-            {/* AFTER label — top left (visible side) */}
+            {/* AFTER label */}
             <div style={{
               position: 'absolute',
-              top: 14,
-              left: 16,
+              top: 16, right: 18,
               fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
               fontSize: 9,
-              letterSpacing: '0.16em',
+              letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.3)',
+              color: 'rgba(255,255,255,0.28)',
               zIndex: 2,
             }}>
-              → AFTER
+              AFTER →
             </div>
 
-            {/* AFTER card — left half, vertically centered */}
+            {/* AFTER card — anchored to RIGHT half, never crosses into left */}
             <div style={{
               position: 'absolute',
               top: 0, bottom: 0,
-              left: 0, width: '52%',
+              right: 0, left: '50%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: 'clamp(16px, 2.5vw, 36px)',
+              padding: 'clamp(14px, 2.2vw, 30px)',
               zIndex: 3,
             }}>
-              <div style={{
-                width: '100%',
-                background: 'rgba(4,14,32,0.85)',
-                border: '1px solid rgba(0,118,182,0.38)',
-                borderRadius: 14,
-                padding: 'clamp(18px, 2.5vw, 36px)',
-                backdropFilter: 'blur(18px)',
-                textAlign: 'center',
-              }}>
+              <div
+                className="ps-card-after"
+                style={{
+                  width: '100%',
+                  background: 'rgba(4, 12, 28, 0.82)',
+                  border: '1px solid rgba(0,118,182,0.42)',
+                  borderRadius: 16,
+                  padding: 'clamp(20px, 2.8vw, 40px) clamp(16px, 2.2vw, 32px)',
+                  backdropFilter: 'blur(20px)',
+                  textAlign: 'center',
+                }}
+              >
                 <div style={{
                   fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                  fontSize: 'clamp(7px, 0.72vw, 9px)',
+                  fontSize: 'clamp(8px, 0.75vw, 10px)',
                   letterSpacing: '0.22em',
                   textTransform: 'uppercase',
                   color: '#0076B6',
-                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
+                  marginBottom: 'clamp(12px, 1.6vw, 20px)',
                 }}>
                   With Caliber Web Studio
                 </div>
                 <h3 style={{
                   fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                  fontSize: 'clamp(1.1rem, 1.9vw, 2rem)',
+                  fontSize: 'clamp(1.25rem, 2.2vw, 2.4rem)',
                   fontWeight: 800,
                   color: '#ffffff',
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.02em',
-                  marginBottom: 'clamp(10px, 1.4vw, 18px)',
+                  lineHeight: 1.1,
+                  letterSpacing: '-0.025em',
+                  marginBottom: 'clamp(12px, 1.6vw, 20px)',
+                  margin: '0 0 clamp(12px, 1.6vw, 20px)',
                 }}>
-                  Ranked. Found.<br />Booked Solid.
+                  Ranked.<br />Found.<br />Booked Solid.
                 </h3>
                 <p style={{
-                  fontSize: 'clamp(10px, 1vw, 13px)',
-                  color: 'rgba(208,216,224,0.82)',
-                  lineHeight: 1.65,
+                  fontSize: 'clamp(11px, 1.05vw, 14px)',
+                  color: 'rgba(208,216,224,0.85)',
+                  lineHeight: 1.7,
                   margin: 0,
                 }}>
-                  Google #1 ranking. AI-powered lead capture. 5-star reputation system. Your phone rings. Your store fills up. Customers find YOU first.
+                  Google #1 ranking. AI-powered lead capture. 5-star reputation system. Your phone rings. Your store fills up. Customers find <em>you</em> first.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ═══════════════════════════════════════════════════
+              BEFORE — TOP LAYER. Clips to show LEFT portion.
+              clipPath: inset(0 (100-pos)% 0 0)
+                pos=0  → inset(0 100% 0 0) → BEFORE hidden, AFTER shows
+                pos=50 → inset(0 50% 0 0)  → left 50% = BEFORE  ✓
+                pos=100→ inset(0 0% 0 0)   → BEFORE covers all
+              Card anchored to left half — clips away naturally as you drag left.
+          ═══════════════════════════════════════════════════ */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            clipPath: `inset(0 ${100 - position}% 0 0)`,
+            background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
+            filter: 'saturate(0.45)',
+          }}>
+
+            {/* Empty store video — left half background */}
+            <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: '60%', overflow: 'hidden' }}>
+              <video
+                autoPlay muted loop playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }}
+                src="/videos/loop-empty-store.mp4"
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, #111114 0%, transparent 40%)' }} />
+            </div>
+
+            {/* BEFORE label */}
+            <div style={{
+              position: 'absolute',
+              top: 16, left: 18,
+              fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+              fontSize: 9,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: 'rgba(208,216,224,0.28)',
+              zIndex: 2,
+            }}>
+              ← BEFORE
+            </div>
+
+            {/* BEFORE card — anchored to LEFT half, clips away naturally with the panel */}
+            <div style={{
+              position: 'absolute',
+              top: 0, bottom: 0,
+              left: 0, right: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 'clamp(14px, 2.2vw, 30px)',
+              zIndex: 3,
+            }}>
+              <div
+                className="ps-card-before"
+                style={{
+                  width: '100%',
+                  background: 'rgba(6, 6, 8, 0.82)',
+                  border: '1px solid rgba(176,183,188,0.16)',
+                  borderRadius: 16,
+                  padding: 'clamp(20px, 2.8vw, 40px) clamp(16px, 2.2vw, 32px)',
+                  backdropFilter: 'blur(20px)',
+                  textAlign: 'center',
+                }}
+              >
+                <div style={{
+                  fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                  fontSize: 'clamp(8px, 0.75vw, 10px)',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(208,216,224,0.4)',
+                  marginBottom: 'clamp(12px, 1.6vw, 20px)',
+                }}>
+                  The Status Quo
+                </div>
+                <h3 style={{
+                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                  fontSize: 'clamp(1.25rem, 2.2vw, 2.4rem)',
+                  fontWeight: 800,
+                  color: 'rgba(208,216,224,0.82)',
+                  lineHeight: 1.1,
+                  letterSpacing: '-0.025em',
+                  margin: '0 0 clamp(12px, 1.6vw, 20px)',
+                }}>
+                  Invisible.<br />Undiscoverable.<br />Forgotten.
+                </h3>
+                <p style={{
+                  fontSize: 'clamp(11px, 1.05vw, 14px)',
+                  color: 'rgba(176,183,188,0.6)',
+                  lineHeight: 1.7,
+                  margin: 0,
+                }}>
+                  Most businesses rely only on social media and signs. When customers search Google, they find your competitors. Nobody knows you exist.
                 </p>
               </div>
             </div>
@@ -303,13 +327,12 @@ export default function ProblemSlider() {
           <div
             style={{
               position: 'absolute',
-              top: 0,
-              bottom: 0,
+              top: 0, bottom: 0,
               left: `${position}%`,
               transform: 'translateX(-50%)',
               width: '3px',
               background: '#0076B6',
-              boxShadow: '0 0 16px rgba(0,118,182,0.8), 0 0 32px rgba(0,118,182,0.4)',
+              boxShadow: '0 0 16px rgba(0,118,182,0.9), 0 0 40px rgba(0,118,182,0.4)',
               zIndex: 10,
               display: 'flex',
               alignItems: 'center',
@@ -317,23 +340,21 @@ export default function ProblemSlider() {
               pointerEvents: 'none',
             }}
           >
-            <div
-              style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '50%',
-                background: '#0076B6',
-                border: '3px solid #ffffff',
-                boxShadow: '0 0 20px rgba(0,118,182,0.7)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-                pointerEvents: 'none',
-              }}
-            >
-              <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
-                <path d="M1 6h16M5 2L1 6l4 4M13 2l4 4-4 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <div style={{
+              width: '48px',
+              height: '48px',
+              borderRadius: '50%',
+              background: '#0076B6',
+              border: '3px solid #ffffff',
+              boxShadow: '0 0 24px rgba(0,118,182,0.8)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+              pointerEvents: 'none',
+            }}>
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                <path d="M1 7h18M6 2L1 7l5 5M14 2l5 5-5 5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
           </div>

@@ -105,7 +105,7 @@ export default function ProblemSlider() {
             border: '1px solid rgba(176,183,188,0.12)',
           }}
         >
-          {/* AFTER (right, vibrant) — full width base */}
+          {/* AFTER (right, vibrant) — full-width base layer, always visible */}
           <div
             style={{
               position: 'absolute',
@@ -145,8 +145,8 @@ export default function ProblemSlider() {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(8px, 1.2vw, 16px)',
-              padding: '12px 8px',
+              gap: 'clamp(6px, 1vw, 12px)',
+              padding: '12px 8px 80px',
               zIndex: 1,
             }}>
               {/* Packed store video loop */}
@@ -168,14 +168,50 @@ export default function ProblemSlider() {
                 <PhoneBlowingUp />
               </div>
             </div>
+
+            {/* AFTER explanation card */}
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 14,
+                right: 14,
+                width: 'min(calc(50% - 28px), 320px)',
+                background: 'rgba(5,18,38,0.88)',
+                border: '1px solid rgba(0,118,182,0.28)',
+                borderRadius: 10,
+                padding: 'clamp(10px, 1.2vw, 16px)',
+                backdropFilter: 'blur(12px)',
+                zIndex: 3,
+              }}
+            >
+              <div style={{
+                fontSize: 'clamp(7px, 0.75vw, 9px)',
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: '#0076B6',
+                marginBottom: 6,
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+              }}>
+                With Caliber Web Studio
+              </div>
+              <p style={{
+                fontSize: 'clamp(9px, 0.95vw, 12px)',
+                color: 'rgba(208,216,224,0.8)',
+                lineHeight: 1.55,
+                margin: 0,
+              }}>
+                Google #1 ranking, AI lead capture, 5-star reputation — working 24/7. Your phone rings. Your store fills up. Customers find you every single day.
+              </p>
+            </div>
           </div>
 
-          {/* BEFORE (left, dark, desaturated) — clipped */}
+          {/* BEFORE (left, dark, desaturated) — clipped panel on top.
+              FIX: use inset(0 position% 0 0) so dragging RIGHT reveals more AFTER. */}
           <div
             style={{
               position: 'absolute',
               inset: 0,
-              clipPath: `inset(0 ${100 - position}% 0 0)`,
+              clipPath: `inset(0 ${position}% 0 0)`,
               background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
               filter: 'saturate(0.25)',
             }}
@@ -205,8 +241,8 @@ export default function ProblemSlider() {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(8px, 1.2vw, 16px)',
-              padding: '12px 8px',
+              gap: 'clamp(6px, 1vw, 12px)',
+              padding: '12px 8px 80px',
               zIndex: 1,
             }}>
               {/* Empty store video loop */}
@@ -227,6 +263,41 @@ export default function ProblemSlider() {
                 <BuriedOnGoogle />
                 <SilentPhone />
               </div>
+            </div>
+
+            {/* BEFORE explanation card — lives inside the filtered panel so it desaturates naturally */}
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 14,
+                left: 14,
+                width: 'min(calc(50% - 28px), 320px)',
+                background: 'rgba(8,8,10,0.88)',
+                border: '1px solid rgba(176,183,188,0.14)',
+                borderRadius: 10,
+                padding: 'clamp(10px, 1.2vw, 16px)',
+                backdropFilter: 'blur(12px)',
+                zIndex: 3,
+              }}
+            >
+              <div style={{
+                fontSize: 'clamp(7px, 0.75vw, 9px)',
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: 'rgba(208,216,224,0.45)',
+                marginBottom: 6,
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+              }}>
+                The Status Quo
+              </div>
+              <p style={{
+                fontSize: 'clamp(9px, 0.95vw, 12px)',
+                color: 'rgba(208,216,224,0.62)',
+                lineHeight: 1.55,
+                margin: 0,
+              }}>
+                Most businesses rely on signs, word-of-mouth, and social posts. When customers search Google — they find your competitors, not you.
+              </p>
             </div>
           </div>
 

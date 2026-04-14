@@ -151,18 +151,96 @@ export default function TransformationSection() {
   }, []);
 
   return (
-    <section
-      style={{
-        position: 'relative',
-        isolation: 'isolate',
-        overflow: 'hidden',
-        padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-        borderTop: '1px solid rgba(176,183,188,0.12)',
-        background: '#0a0a0b',
-      }}
-    >
-      {/* ── Video + overlay wrapper — single stacking layer behind content ── */}
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+    <section style={{ background: '#0a0a0b', borderTop: '1px solid rgba(176,183,188,0.12)' }}>
+      {/* ── Text + Cards content ── */}
+      <div style={{ padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          {/* Headline */}
+          <div style={{ marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '720px' }}>
+            <div
+              style={{
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                fontSize: '10px',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#0076B6',
+                marginBottom: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+              }}
+            >
+              <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
+              The Transformation
+            </div>
+            <h2
+              style={{
+                fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: '#D0D8E0',
+                marginBottom: '12px',
+              }}
+            >
+              We don&apos;t just build websites.
+            </h2>
+            <h2
+              style={{
+                fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: '#0076B6',
+              }}
+            >
+              We build your entire online presence.
+            </h2>
+          </div>
+
+          {/* Stats row */}
+          <div ref={sectionRef} className="transformation-stats">
+            <StatCard value="340%" label="More bookings" numericValue={340} suffix="%" started={statsVisible} />
+            <StatCard value="#1" label="Google ranking" numericValue={0} started={statsVisible} />
+            <StatCard value="200%" label="More online orders" numericValue={200} suffix="%" started={statsVisible} />
+            <StatCard value="15+" label="Calls per week" numericValue={15} suffix="+" started={statsVisible} />
+          </div>
+
+          {/* Service cards */}
+          <div className="transformation-services" style={{ marginTop: 'clamp(48px, 6vw, 64px)' }}>
+            {SERVICE_CARDS.map((card) => (
+              <div
+                key={card.title}
+                className="service-card-hover"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '8px',
+                  padding: 'clamp(24px, 3vw, 36px)',
+                  transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                }}
+              >
+                <div style={{ fontSize: '28px', marginBottom: '16px', color: '#0076B6', lineHeight: 1 }}>
+                  {card.icon}
+                </div>
+                <h3 style={{ fontFamily: "var(--font-syne, 'Syne', sans-serif)", fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', fontWeight: 700, color: '#D0D8E0', marginBottom: '8px', letterSpacing: '-0.01em' }}>
+                  {card.title}
+                </h3>
+                <p style={{ fontFamily: "var(--font-inter, 'Inter', sans-serif)", fontSize: '14px', lineHeight: 1.65, color: 'rgba(208,216,224,0.65)', margin: 0 }}>
+                  {card.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Cinematic video reel — BELOW the content ── */}
+      <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
         {CINEMATIC_SCENES.map((src, i) => (
           <video
             key={i}
@@ -185,117 +263,6 @@ export default function TransformationSection() {
             <source src={src} type="video/mp4" />
           </video>
         ))}
-        {/* Dark overlay */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(10,10,11,0.75)' }} />
-      </div>
-
-      {/* ── Content — above video layer ── */}
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto' }}>
-        {/* Headline */}
-        <div style={{ marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '720px' }}>
-          <div
-            style={{
-              fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-              fontSize: '10px',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#0076B6',
-              marginBottom: '20px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-            }}
-          >
-            <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
-            The Transformation
-          </div>
-          <h2
-            style={{
-              fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
-              color: '#D0D8E0',
-              marginBottom: '12px',
-            }}
-          >
-            We don&apos;t just build websites.
-          </h2>
-          <h2
-            style={{
-              fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
-              color: '#0076B6',
-            }}
-          >
-            We build your entire online presence.
-          </h2>
-        </div>
-
-        {/* Stats row */}
-        <div ref={sectionRef} className="transformation-stats">
-          <StatCard value="340%" label="More bookings" numericValue={340} suffix="%" started={statsVisible} />
-          <StatCard value="#1" label="Google ranking" numericValue={0} started={statsVisible} />
-          <StatCard value="200%" label="More online orders" numericValue={200} suffix="%" started={statsVisible} />
-          <StatCard value="15+" label="Calls per week" numericValue={15} suffix="+" started={statsVisible} />
-        </div>
-
-        {/* Service cards */}
-        <div className="transformation-services" style={{ marginTop: 'clamp(48px, 6vw, 64px)' }}>
-          {SERVICE_CARDS.map((card) => (
-            <div
-              key={card.title}
-              className="service-card-hover"
-              style={{
-                background: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                borderRadius: '8px',
-                padding: 'clamp(24px, 3vw, 36px)',
-                transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
-                backdropFilter: 'blur(8px)',
-                WebkitBackdropFilter: 'blur(8px)',
-              }}
-            >
-              <div
-                style={{
-                  fontSize: '28px',
-                  marginBottom: '16px',
-                  color: '#0076B6',
-                  lineHeight: 1,
-                }}
-              >
-                {card.icon}
-              </div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-syne, 'Syne', sans-serif)",
-                  fontSize: 'clamp(1rem, 1.6vw, 1.15rem)',
-                  fontWeight: 700,
-                  color: '#D0D8E0',
-                  marginBottom: '8px',
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                {card.title}
-              </h3>
-              <p
-                style={{
-                  fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                  fontSize: '14px',
-                  lineHeight: 1.65,
-                  color: 'rgba(208,216,224,0.65)',
-                  margin: 0,
-                }}
-              >
-                {card.desc}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
 
       <style>{`

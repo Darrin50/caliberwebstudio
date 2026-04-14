@@ -1,14 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
-
-const CINEMATIC_SCENES = [
-  '/videos/hero-scene-1.mp4',
-  '/videos/hero-scene-2.mp4',
-  '/videos/hero-scene-3.mp4',
-  '/videos/hero-scene-4.mp4',
-];
-const CROSSFADE_MS = 700;
+import { useEffect, useRef, useState } from 'react';
 
 function useCountUp(target: number, duration: number, started: boolean) {
   const [count, setCount] = useState(0);
@@ -109,15 +101,6 @@ const SERVICE_CARDS = [
 export default function TransformationSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [statsVisible, setStatsVisible] = useState(false);
-  const [currentScene, setCurrentScene] = useState(0);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([null, null, null, null]);
-  const currentSceneRef = useRef(0);
-
-  // Boot: play scene 0
-  useEffect(() => {
-    const v = videoRefs.current[0];
-    if (v) v.play().catch(() => {});
-  }, []);
 
   // Stats intersection observer
   useEffect(() => {
@@ -132,22 +115,6 @@ export default function TransformationSection() {
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
-  }, []);
-
-  const handleEnded = useCallback((endedScene: number) => {
-    if (endedScene !== currentSceneRef.current) return;
-    const nextScene = (endedScene + 1) % CINEMATIC_SCENES.length;
-    const nextVideo = videoRefs.current[nextScene];
-    if (nextVideo) {
-      nextVideo.currentTime = 0;
-      nextVideo.play().catch(() => {});
-    }
-    currentSceneRef.current = nextScene;
-    setCurrentScene(nextScene);
-    setTimeout(() => {
-      const prev = videoRefs.current[endedScene];
-      if (prev) prev.pause();
-    }, CROSSFADE_MS + 50);
   }, []);
 
   return (
@@ -237,32 +204,6 @@ export default function TransformationSection() {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* ── Cinematic video reel — BELOW the content ── */}
-      <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
-        {CINEMATIC_SCENES.map((src, i) => (
-          <video
-            key={i}
-            ref={el => { videoRefs.current[i] = el; }}
-            muted
-            playsInline
-            preload="auto"
-            onEnded={() => handleEnded(i)}
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              opacity: currentScene === i ? 1 : 0,
-              transition: `opacity ${CROSSFADE_MS}ms ease`,
-            }}
-          >
-            <source src={src} type="video/mp4" />
-          </video>
-        ))}
       </div>
 
       <style>{`

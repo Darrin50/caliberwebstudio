@@ -144,17 +144,16 @@ export default function ProblemSlider() {
               Visible on the RIGHT side as BEFORE clips away left.
               Card anchored to right half — never crosses clip line.
           ═══════════════════════════════════════════════════ */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #0b1d3a 0%, #091e37 50%, #0c2845 100%)' }}>
+          <div style={{ position: 'absolute', inset: 0, background: '#091e37' }}>
 
-            {/* Packed store video — right half background */}
-            <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: '60%', overflow: 'hidden' }}>
-              <video
-                autoPlay muted loop playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85 }}
-                src="/videos/loop-packed-store.mp4"
-              />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #091e37 0%, transparent 40%)' }} />
-            </div>
+            {/* Packed store video — full panel */}
+            <video
+              autoPlay muted loop playsInline
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.92 }}
+              src="/videos/loop-packed-store.mp4"
+            />
+            {/* Subtle readability overlay */}
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.15)' }} />
 
             {/* AFTER label */}
             <div style={{
@@ -164,66 +163,55 @@ export default function ProblemSlider() {
               fontSize: 9,
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.28)',
+              color: 'rgba(255,255,255,0.55)',
               zIndex: 2,
             }}>
               AFTER →
             </div>
 
-            {/* AFTER card — anchored to RIGHT half, never crosses into left */}
-            <div style={{
-              position: 'absolute',
-              top: 0, bottom: 0,
-              right: 0, left: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 'clamp(14px, 2.2vw, 30px)',
-              zIndex: 3,
-            }}>
-              <div
-                className="ps-card-after"
-                style={{
-                  width: '100%',
-                  background: 'rgba(4, 12, 28, 0.82)',
-                  border: '1px solid rgba(0,118,182,0.42)',
-                  borderRadius: 16,
-                  padding: 'clamp(20px, 2.8vw, 40px) clamp(16px, 2.2vw, 32px)',
-                  backdropFilter: 'blur(20px)',
-                  textAlign: 'center',
-                }}
-              >
-                <div style={{
-                  fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                  fontSize: 'clamp(8px, 0.75vw, 10px)',
-                  letterSpacing: '0.22em',
-                  textTransform: 'uppercase',
-                  color: '#0076B6',
-                  marginBottom: 'clamp(12px, 1.6vw, 20px)',
-                }}>
-                  With Caliber Web Studio
-                </div>
-                <h3 style={{
-                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                  fontSize: 'clamp(1.25rem, 2.2vw, 2.4rem)',
-                  fontWeight: 800,
-                  color: '#ffffff',
-                  lineHeight: 1.1,
-                  letterSpacing: '-0.025em',
-                  marginBottom: 'clamp(12px, 1.6vw, 20px)',
-                  margin: '0 0 clamp(12px, 1.6vw, 20px)',
-                }}>
-                  Ranked.<br />Found.<br />Booked Solid.
-                </h3>
-                <p style={{
-                  fontSize: 'clamp(11px, 1.05vw, 14px)',
-                  color: 'rgba(208,216,224,0.85)',
-                  lineHeight: 1.7,
-                  margin: 0,
-                }}>
-                  Google #1 ranking. AI-powered lead capture. 5-star reputation system. Your phone rings. Your store fills up. Customers find <em>you</em> first.
-                </p>
+            {/* AFTER card — lower-right quadrant, video visible above and around */}
+            <div
+              className="ps-card-after"
+              style={{
+                position: 'absolute',
+                bottom: '8%', left: '54%', right: '8%',
+                background: 'rgba(4,12,28,0.65)',
+                border: '1px solid rgba(0,118,182,0.42)',
+                borderRadius: 16,
+                padding: 'clamp(14px, 1.8vw, 24px)',
+                backdropFilter: 'blur(12px)',
+                zIndex: 3,
+              }}
+            >
+              <div style={{
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                fontSize: 10,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#0076B6',
+                marginBottom: 10,
+              }}>
+                With Caliber Web Studio
               </div>
+              <h3 style={{
+                fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                fontSize: 'clamp(16px, 1.8vw, 26px)',
+                fontWeight: 800,
+                color: '#ffffff',
+                lineHeight: 1.15,
+                letterSpacing: '-0.02em',
+                margin: '0 0 10px',
+              }}>
+                Ranked. Found.<br />Booked Solid.
+              </h3>
+              <p style={{
+                fontSize: 'clamp(13px, 1.1vw, 15px)',
+                color: 'rgba(208,216,224,0.88)',
+                lineHeight: 1.6,
+                margin: 0,
+              }}>
+                Google #1 ranking. AI-powered lead capture. 5-star reputation system. Your phone rings. Your store fills up. Customers find <em>you</em> first.
+              </p>
             </div>
           </div>
 
@@ -239,19 +227,18 @@ export default function ProblemSlider() {
             position: 'absolute',
             inset: 0,
             clipPath: `inset(0 ${100 - position}% 0 0)`,
-            background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
+            background: '#0a0a0b',
             filter: 'saturate(0.45)',
           }}>
 
-            {/* Empty store video — left half background */}
-            <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: '60%', overflow: 'hidden' }}>
-              <video
-                autoPlay muted loop playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }}
-                src="/videos/loop-empty-store.mp4"
-              />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, #111114 0%, transparent 40%)' }} />
-            </div>
+            {/* Empty store video — full panel */}
+            <video
+              autoPlay muted loop playsInline
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85 }}
+              src="/videos/loop-empty-store.mp4"
+            />
+            {/* Subtle readability overlay */}
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.25)' }} />
 
             {/* BEFORE label */}
             <div style={{
@@ -261,65 +248,55 @@ export default function ProblemSlider() {
               fontSize: 9,
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: 'rgba(208,216,224,0.28)',
+              color: 'rgba(208,216,224,0.55)',
               zIndex: 2,
             }}>
               ← BEFORE
             </div>
 
-            {/* BEFORE card — anchored to LEFT half, clips away naturally with the panel */}
-            <div style={{
-              position: 'absolute',
-              top: 0, bottom: 0,
-              left: 0, right: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 'clamp(14px, 2.2vw, 30px)',
-              zIndex: 3,
-            }}>
-              <div
-                className="ps-card-before"
-                style={{
-                  width: '100%',
-                  background: 'rgba(6, 6, 8, 0.82)',
-                  border: '1px solid rgba(176,183,188,0.16)',
-                  borderRadius: 16,
-                  padding: 'clamp(20px, 2.8vw, 40px) clamp(16px, 2.2vw, 32px)',
-                  backdropFilter: 'blur(20px)',
-                  textAlign: 'center',
-                }}
-              >
-                <div style={{
-                  fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                  fontSize: 'clamp(8px, 0.75vw, 10px)',
-                  letterSpacing: '0.22em',
-                  textTransform: 'uppercase',
-                  color: 'rgba(208,216,224,0.4)',
-                  marginBottom: 'clamp(12px, 1.6vw, 20px)',
-                }}>
-                  The Status Quo
-                </div>
-                <h3 style={{
-                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                  fontSize: 'clamp(1.25rem, 2.2vw, 2.4rem)',
-                  fontWeight: 800,
-                  color: 'rgba(208,216,224,0.82)',
-                  lineHeight: 1.1,
-                  letterSpacing: '-0.025em',
-                  margin: '0 0 clamp(12px, 1.6vw, 20px)',
-                }}>
-                  Invisible.<br />Undiscoverable.<br />Forgotten.
-                </h3>
-                <p style={{
-                  fontSize: 'clamp(11px, 1.05vw, 14px)',
-                  color: 'rgba(176,183,188,0.6)',
-                  lineHeight: 1.7,
-                  margin: 0,
-                }}>
-                  Most businesses rely only on social media and signs. When customers search Google, they find your competitors. Nobody knows you exist.
-                </p>
+            {/* BEFORE card — lower-left quadrant, video visible above and around */}
+            <div
+              className="ps-card-before"
+              style={{
+                position: 'absolute',
+                bottom: '8%', left: '8%', right: '54%',
+                background: 'rgba(6,6,8,0.65)',
+                border: '1px solid rgba(176,183,188,0.18)',
+                borderRadius: 16,
+                padding: 'clamp(14px, 1.8vw, 24px)',
+                backdropFilter: 'blur(12px)',
+                zIndex: 3,
+              }}
+            >
+              <div style={{
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                fontSize: 10,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'rgba(208,216,224,0.5)',
+                marginBottom: 10,
+              }}>
+                The Status Quo
               </div>
+              <h3 style={{
+                fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                fontSize: 'clamp(16px, 1.8vw, 26px)',
+                fontWeight: 800,
+                color: 'rgba(208,216,224,0.9)',
+                lineHeight: 1.15,
+                letterSpacing: '-0.02em',
+                margin: '0 0 10px',
+              }}>
+                Invisible.<br />Undiscoverable.<br />Forgotten.
+              </h3>
+              <p style={{
+                fontSize: 'clamp(13px, 1.1vw, 15px)',
+                color: 'rgba(176,183,188,0.75)',
+                lineHeight: 1.6,
+                margin: 0,
+              }}>
+                Most businesses rely only on social media and signs. When customers search Google, they find your competitors. Nobody knows you exist.
+              </p>
             </div>
           </div>
 

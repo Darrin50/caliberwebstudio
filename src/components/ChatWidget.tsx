@@ -88,6 +88,21 @@ export default function ChatWidget() {
           0%, 60%, 100% { opacity: 1; }
           30%           { opacity: 0.3; }
         }
+        @keyframes cw-strobe {
+          0%, 80%, 100% { opacity: 0; transform: scale(0.7); }
+          84%  { opacity: 1;   transform: scale(1.5); }
+          87%  { opacity: 0;   transform: scale(0.9); }
+          91%  { opacity: 0.8; transform: scale(1.3); }
+          94%  { opacity: 0;   transform: scale(1);   }
+        }
+        @keyframes cw-bounce-attention {
+          0%, 75%, 100% { transform: translateY(0); }
+          80%  { transform: translateY(-6px); }
+          85%  { transform: translateY(0); }
+          90%  { transform: translateY(-3px); }
+          95%  { transform: translateY(0); }
+        }
+        .cw-orb { animation: cw-bounce-attention 5s ease-in-out infinite; }
         .cw-orb:hover .cw-sphere {
           transform: scale(1.08);
           box-shadow: 0 0 40px 8px rgba(109,77,255,0.6), 0 0 0 1px rgba(99,179,255,0.3);
@@ -113,6 +128,16 @@ export default function ChatWidget() {
         tabIndex={0}
         onKeyDown={(e) => e.key === 'Enter' && setOpen(!open)}
       >
+        {/* Strobe flash — double-burst every 5 s */}
+        <div style={{
+          position: 'absolute',
+          inset: '-18px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(109,77,255,1) 0%, rgba(37,99,235,0.7) 45%, transparent 70%)',
+          animation: 'cw-strobe 5s ease-in-out infinite',
+          pointerEvents: 'none',
+        }} />
+
         {/* Outer ambient glow — pulsing halo */}
         <div style={{
           position: 'absolute',

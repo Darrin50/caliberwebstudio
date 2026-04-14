@@ -125,17 +125,17 @@ export default function ProblemSlider() {
               position: 'absolute',
               inset: 0,
               background: 'linear-gradient(135deg, #0a0a0b 0%, #111114 100%)',
-              filter: 'saturate(0.2)',
+              filter: 'saturate(0.45)',
             }}
           >
             {/* Subtle video background — left half */}
             <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: '55%', overflow: 'hidden' }}>
               <video
                 autoPlay muted loop playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }}
                 src="/videos/loop-empty-store.mp4"
               />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.2), #111114)' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(10,10,11,0.55))' }} />
             </div>
 
             {/* BEFORE label — top right (visible side) */}
@@ -225,10 +225,10 @@ export default function ProblemSlider() {
             <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: '55%', overflow: 'hidden' }}>
               <video
                 autoPlay muted loop playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.88 }}
                 src="/videos/loop-packed-store.mp4"
               />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, rgba(0,0,0,0.2), #091e37)' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, rgba(0,0,0,0.05), rgba(9,30,55,0.45))' }} />
             </div>
 
             {/* AFTER label — top left (visible side) */}

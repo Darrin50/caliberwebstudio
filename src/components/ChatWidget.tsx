@@ -92,6 +92,7 @@ export default function ChatWidget() {
           transform: scale(1.08);
           box-shadow: 0 0 40px 8px rgba(109,77,255,0.6), 0 0 0 1px rgba(99,179,255,0.3);
         }
+        .cw-ring-mask { background: var(--bg, #0a0a0b); }
       `}</style>
 
       {/* ── Floating orb wrapper ── */}
@@ -132,12 +133,11 @@ export default function ChatWidget() {
           pointerEvents: 'none',
         }} />
 
-        {/* Ring mask — punches out center so only ring edge shows */}
-        <div style={{
+        {/* Ring mask — punches out center so only ring edge shows; matches page bg */}
+        <div className="cw-ring-mask" style={{
           position: 'absolute',
           inset: '-2px',
           borderRadius: '50%',
-          background: '#0a0a0b',
           pointerEvents: 'none',
         }} />
 

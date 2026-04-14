@@ -107,7 +107,7 @@ export default function ChatWidget() {
           transform: scale(1.08);
           box-shadow: 0 0 40px 8px rgba(0,118,182,0.7), 0 0 0 1px rgba(0,163,255,0.3);
         }
-        .cw-ring-mask { background: var(--bg, #0a0a0b); }
+        .cw-ring-mask { background: #0a0a0b; }
       `}</style>
 
       {/* ── Floating orb wrapper ── */}

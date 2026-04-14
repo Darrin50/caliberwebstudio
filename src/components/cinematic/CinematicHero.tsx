@@ -1,14 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function CinematicHero() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 300);
-    return () => clearTimeout(t);
-  }, []);
+  const [videoEnded, setVideoEnded] = useState(false);
 
   return (
     <section
@@ -25,12 +20,12 @@ export default function CinematicHero() {
         overflow: 'hidden',
       }}
     >
-      {/* ── Single looping hero video ── */}
+      {/* ── Hero video — plays once, no loop ── */}
       <video
         autoPlay
         muted
-        loop
         playsInline
+        onEnded={() => setVideoEnded(true)}
         style={{
           position: 'absolute',
           inset: 0,
@@ -42,18 +37,20 @@ export default function CinematicHero() {
         src="/videos/hero-new.mp4"
       />
 
-      {/* Dark overlay for text readability */}
+      {/* Dark overlay — fades in after video ends */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           background: 'linear-gradient(to bottom, rgba(10,10,11,0.25) 0%, rgba(10,10,11,0.6) 100%)',
+          opacity: videoEnded ? 1 : 0,
+          transition: 'opacity 0.8s ease',
           zIndex: 1,
           pointerEvents: 'none',
         }}
       />
 
-      {/* ── Hero text overlay ── */}
+      {/* ── Hero text — fades in after video ends ── */}
       <div
         style={{
           position: 'relative',
@@ -62,9 +59,10 @@ export default function CinematicHero() {
           padding: 'clamp(100px, 12vw, 140px) clamp(20px, 6vw, 60px) clamp(60px, 8vw, 100px)',
           maxWidth: '900px',
           margin: '0 auto',
-          opacity: visible ? 1 : 0,
-          transform: visible ? 'translateY(0)' : 'translateY(20px)',
-          transition: 'opacity 0.9s ease, transform 0.9s ease',
+          opacity: videoEnded ? 1 : 0,
+          transform: videoEnded ? 'translateY(0)' : 'translateY(24px)',
+          transition: 'opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s',
+          pointerEvents: videoEnded ? 'auto' : 'none',
         }}
       >
         {/* Eyebrow */}
@@ -140,8 +138,8 @@ export default function CinematicHero() {
         </a>
       </div>
 
-      {/* Bounce chevron */}
-      {visible && (
+      {/* Bounce chevron — appears after video ends */}
+      {videoEnded && (
         <div
           className="chevron-bounce"
           style={{

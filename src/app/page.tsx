@@ -4,7 +4,6 @@ import { ChatWidget, FloatingElements, InteractiveOrbs } from '@/components/Clie
 import CinematicHero from '@/components/cinematic/CinematicHero';
 import ProblemSlider from '@/components/cinematic/ProblemSlider';
 import TransformationSection from '@/components/cinematic/TransformationSection';
-import ProcessTimeline from '@/components/cinematic/ProcessTimeline';
 import FeaturesGrid from '@/components/cinematic/FeaturesGrid';
 import SocialProof from '@/components/cinematic/SocialProof';
 import FinalCTA from '@/components/cinematic/FinalCTA';
@@ -16,7 +15,6 @@ export default function Home() {
       <CinematicHero />
       <ProblemSlider />
       <TransformationSection />
-      <ProcessTimeline />
       <FeaturesGrid />
       <SocialProof />
       <FinalCTA />

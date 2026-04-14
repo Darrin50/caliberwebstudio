@@ -128,11 +128,10 @@ const FEATURES = [
 export default function FeaturesGrid() {
   return (
     <section
-      data-force-dark
       style={{
-        background: '#0a0a0c',
+        background: 'var(--bg2)',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-        borderTop: '1px solid rgba(176,183,188,0.12)',
+        borderTop: '1px solid var(--border)',
       }}
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -163,7 +162,7 @@ export default function FeaturesGrid() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: '#D0D8E0',
+              color: 'var(--text-primary)',
             }}
           >
             Every page.{' '}
@@ -186,7 +185,7 @@ export default function FeaturesGrid() {
                       fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                       fontSize: 'clamp(1rem, 1.5vw, 1.1rem)',
                       fontWeight: 700,
-                      color: '#D0D8E0',
+                      color: 'var(--text-primary)',
                       letterSpacing: '-0.01em',
                       lineHeight: 1.2,
                       margin: 0,
@@ -228,11 +227,17 @@ export default function FeaturesGrid() {
       </div>
 
       <style>{`
-        /* Glass shell — always dark */
+        /* Glass shell — dark mode default */
         .fg-glass {
           border: 1px solid rgba(255,255,255,0.2);
           background: rgba(255,255,255,0.08);
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 0 30px rgba(90,170,255,0.18);
+        }
+        /* Glass shell — light mode */
+        [data-theme="light"] .fg-glass {
+          border: 1px solid rgba(0,118,182,0.18);
+          background: rgba(0,118,182,0.07);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 0 20px rgba(0,118,182,0.1);
         }
 
         /* Flip cards */
@@ -274,6 +279,7 @@ export default function FeaturesGrid() {
           align-items: flex-start;
           justify-content: center;
         }
+        /* Flip front — dark mode default */
         .flip-front {
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.1);
@@ -284,11 +290,33 @@ export default function FeaturesGrid() {
           border-color: rgba(0,118,182,0.4);
           box-shadow: 0 4px 32px rgba(0,118,182,0.14), inset 0 1px 0 rgba(255,255,255,0.06);
         }
+        /* Flip front — light mode */
+        [data-theme="light"] .flip-front {
+          background: var(--bg);
+          border: 1px solid var(--border);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.8);
+        }
+        [data-theme="light"] .flip-card:hover .flip-front {
+          border-color: rgba(0,118,182,0.3);
+          box-shadow: 0 4px 24px rgba(0,118,182,0.1);
+        }
+        /* Flip back — always dark blue gradient (stays as accent on hover) */
         .flip-back {
           background: linear-gradient(135deg, rgba(0,118,182,0.18) 0%, rgba(0,90,142,0.22) 100%);
           border: 1px solid rgba(0,118,182,0.35);
           box-shadow: 0 4px 32px rgba(0,118,182,0.18);
           transform: rotateY(180deg);
+        }
+        [data-theme="light"] .flip-back {
+          background: linear-gradient(135deg, #0076B6 0%, #005a8e 100%);
+          border: 1px solid rgba(0,118,182,0.6);
+          box-shadow: 0 4px 32px rgba(0,118,182,0.25);
+        }
+        [data-theme="light"] .flip-back h3 {
+          color: #ffffff !important;
+        }
+        [data-theme="light"] .flip-back p {
+          color: rgba(255,255,255,0.85) !important;
         }
       `}</style>
     </section>

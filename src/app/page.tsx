@@ -2,6 +2,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { ChatWidget, FloatingElements, InteractiveOrbs } from '@/components/ClientOnlyComponents';
 import CinematicHero from '@/components/cinematic/CinematicHero';
+import WhatWeDo from '@/components/cinematic/WhatWeDo';
 import ProblemSlider from '@/components/cinematic/ProblemSlider';
 import TransformationSection from '@/components/cinematic/TransformationSection';
 import FeaturesGrid from '@/components/cinematic/FeaturesGrid';
@@ -13,6 +14,7 @@ export default function Home() {
     <main style={{ position: 'relative' }}>
       <Nav />
       <CinematicHero />
+      <WhatWeDo />
       <ProblemSlider />
       <TransformationSection />
       <FeaturesGrid />

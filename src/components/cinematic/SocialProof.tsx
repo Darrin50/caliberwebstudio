@@ -73,7 +73,7 @@ function TrustStat({
           fontFamily: "var(--font-syne, 'Syne', sans-serif)",
           fontSize: 'clamp(2rem, 4vw, 3rem)',
           fontWeight: 800,
-          color: '#ffffff',
+          color: 'var(--text-primary)',
           letterSpacing: '-0.03em',
           lineHeight: 1,
           marginBottom: '8px',
@@ -116,11 +116,10 @@ export default function SocialProof() {
 
   return (
     <section
-      data-force-dark
       style={{
-        background: '#18181c',
+        background: 'var(--bg)',
         padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-        borderTop: '1px solid rgba(176,183,188,0.12)',
+        borderTop: '1px solid var(--border)',
       }}
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -164,8 +163,8 @@ export default function SocialProof() {
             <div
               key={t.name}
               style={{
-                background: 'var(--bg2, #111114)',
-                border: '1px solid var(--border, rgba(176,183,188,0.12))',
+                background: 'var(--bg2)',
+                border: '1px solid var(--border)',
                 borderRadius: '12px',
                 padding: 'clamp(28px, 3.5vw, 40px)',
                 display: 'flex',
@@ -207,7 +206,7 @@ export default function SocialProof() {
               </blockquote>
 
               {/* Attribution */}
-              <div style={{ paddingTop: '20px', borderTop: '1px solid var(--border, rgba(176,183,188,0.12))' }}>
+              <div style={{ paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
                 <div
                   style={{
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
@@ -246,8 +245,8 @@ export default function SocialProof() {
             flexWrap: 'wrap',
             gap: '0',
             padding: 'clamp(32px, 4vw, 48px)',
-            background: 'rgba(255,255,255,0.03)',
-            border: '1px solid var(--border, rgba(176,183,188,0.12))',
+            background: 'var(--bg2)',
+            border: '1px solid var(--border)',
             borderRadius: '8px',
           }}
         >
@@ -259,7 +258,7 @@ export default function SocialProof() {
                   style={{
                     width: '1px',
                     height: '48px',
-                    background: 'var(--border, rgba(176,183,188,0.12))',
+                    background: 'var(--border)',
                     margin: '0 clamp(16px, 3vw, 32px)',
                   }}
                 />

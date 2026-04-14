@@ -86,7 +86,7 @@ export default function TransformationSection() {
   }, []);
 
   return (
-    <section className="ts-section" data-force-dark style={{
+    <section className="ts-section" style={{
       position: 'relative',
       isolation: 'isolate',
       overflow: 'hidden',
@@ -149,15 +149,15 @@ export default function TransformationSection() {
       </div>
 
       <style>{`
-        /* ── Always dark — this section has no light-mode variant ── */
-        .ts-section   { background: #0a0a0b; border-top: 1px solid rgba(176,183,188,0.12); }
-        .ts-heading   { color: #D0D8E0; }
-        .ts-stat-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
-        .ts-stat-num  { color: #ffffff; }
-        .ts-stat-lbl  { color: rgba(208,216,224,0.78); }
-        .ts-service-card  { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
-        .ts-service-title { color: #D0D8E0; }
-        .ts-service-desc  { color: rgba(208,216,224,0.82); }
+        /* ── Theme-responsive backgrounds and text ── */
+        .ts-section   { background: var(--bg); border-top: 1px solid var(--border); }
+        .ts-heading   { color: var(--text-primary); }
+        .ts-stat-card { background: var(--bg2); border: 1px solid var(--border); }
+        .ts-stat-num  { color: var(--text-primary); }
+        .ts-stat-lbl  { color: var(--chrome); }
+        .ts-service-card  { background: var(--bg2); border: 1px solid var(--border); }
+        .ts-service-title { color: var(--text-primary); }
+        .ts-service-desc  { color: var(--chrome); }
 
         /* ── Layout ── */
         .transformation-stats    { display: grid; grid-template-columns: repeat(4,1fr); gap: clamp(12px,2vw,20px); }

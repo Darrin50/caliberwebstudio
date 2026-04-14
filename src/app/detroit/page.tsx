@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import DetroitScrollVideo from '@/components/DetroitScrollVideo';
-import { ScrollReveal } from '@/components/ScrollReveal';
 
 /**
  * /detroit — hidden portfolio flex page.
@@ -11,6 +10,10 @@ import { ScrollReveal } from '@/components/ScrollReveal';
  * Not linked in nav. Darrin shares this URL directly with Detroit prospects
  * to show Detroit pride, mission, and credibility. Vibe: love letter to the
  * city, not a standard marketing page.
+ *
+ * NOTE: No ScrollReveal on this page — all content below the 350vh frame
+ * sequencer would stay at opacity:0 until the IntersectionObserver fired,
+ * making the text unreadable. Content is always visible here.
  */
 export const metadata: Metadata = {
   title: { absolute: 'Detroit | Caliber Web Studio — Built in Detroit, For Detroit' },
@@ -95,7 +98,7 @@ export default function DetroitPage() {
             background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,118,182,0.13) 0%, transparent 70%)',
             pointerEvents: 'none',
           }} />
-          <ScrollReveal>
+          <div style={{ position: 'relative' }}>
             <p style={{
               fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
               fontSize: '11px', letterSpacing: '0.22em', textTransform: 'uppercase',
@@ -106,8 +109,6 @@ export default function DetroitPage() {
               Detroit First
               <span style={{ display: 'block', width: '32px', height: '1px', background: '#0076B6' }} />
             </p>
-          </ScrollReveal>
-          <ScrollReveal delay={80}>
             <h1 style={{
               fontFamily: "var(--font-syne,'Syne',sans-serif)",
               fontWeight: 800,
@@ -120,8 +121,6 @@ export default function DetroitPage() {
             }}>
               Detroit Built The World.
             </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={160}>
             <h2 style={{
               fontFamily: "var(--font-syne,'Syne',sans-serif)",
               fontWeight: 800,
@@ -134,8 +133,6 @@ export default function DetroitPage() {
             }}>
               We&apos;re Making Sure<br />The World Finds It Again.
             </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={240}>
             <p style={{
               fontFamily: "var(--font-inter,'Inter',sans-serif)",
               fontSize: 'clamp(1rem, 1.8vw, 1.2rem)',
@@ -148,7 +145,7 @@ export default function DetroitPage() {
               American grit. Our mission is simple: make sure every great Detroit business
               gets found online.
             </p>
-          </ScrollReveal>
+          </div>
         </section>
 
         {/* ── Detroit reality stats ───────────────────────────────────────── */}
@@ -158,58 +155,51 @@ export default function DetroitPage() {
           borderBottom: '1px solid rgba(176,183,188,0.1)',
         }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <ScrollReveal>
-              <p style={{
-                fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
-                fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-                color: '#0076B6', marginBottom: '12px',
-                display: 'flex', alignItems: 'center', gap: '10px',
-              }}>
-                <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
-                The Reality
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <h2 style={{
-                fontFamily: "var(--font-syne,'Syne',sans-serif)",
-                fontWeight: 800,
-                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-                color: '#ffffff', lineHeight: 1.05, letterSpacing: '-0.03em',
-                marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '660px',
-              }}>
-                Great businesses.<br />Invisible online.
-              </h2>
-            </ScrollReveal>
+            <p style={{
+              fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
+              fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
+              color: '#0076B6', marginBottom: '12px',
+              display: 'flex', alignItems: 'center', gap: '10px',
+            }}>
+              <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
+              The Reality
+            </p>
+            <h2 style={{
+              fontFamily: "var(--font-syne,'Syne',sans-serif)",
+              fontWeight: 800,
+              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+              color: '#ffffff', lineHeight: 1.05, letterSpacing: '-0.03em',
+              marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '660px',
+            }}>
+              Great businesses.<br />Invisible online.
+            </h2>
             <div className="detroit-stats-grid">
-              {detroitStats.map((stat, i) => (
-                <ScrollReveal key={stat.label} delay={i * 80}>
+              {detroitStats.map((stat) => (
+                <div key={stat.label} style={{
+                  background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(0,118,182,0.18)',
+                  borderRadius: '6px',
+                  padding: 'clamp(28px, 4vw, 44px) clamp(20px, 3vw, 32px)',
+                  position: 'relative', overflow: 'hidden',
+                }}>
                   <div style={{
-                    background: 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(0,118,182,0.18)',
-                    borderRadius: '6px',
-                    padding: 'clamp(28px, 4vw, 44px) clamp(20px, 3vw, 32px)',
-                    position: 'relative', overflow: 'hidden',
-                    height: '100%',
-                  }}>
-                    <div style={{
-                      position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
-                      background: 'linear-gradient(to right, #0076B6, transparent)',
-                    }} />
-                    <div style={{
-                      fontFamily: "var(--font-syne,'Syne',sans-serif)",
-                      fontWeight: 800,
-                      fontSize: 'clamp(2rem, 5vw, 4rem)',
-                      lineHeight: 1, letterSpacing: '-0.03em',
-                      color: '#0076B6', marginBottom: '12px',
-                    }}>{stat.number}</div>
-                    <div style={{
-                      fontFamily: "var(--font-inter,'Inter',sans-serif)",
-                      fontSize: 'clamp(13px, 1.4vw, 15px)',
-                      color: 'rgba(208,216,224,0.72)',
-                      lineHeight: 1.6,
-                    }}>{stat.label}</div>
-                  </div>
-                </ScrollReveal>
+                    position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
+                    background: 'linear-gradient(to right, #0076B6, transparent)',
+                  }} />
+                  <div style={{
+                    fontFamily: "var(--font-syne,'Syne',sans-serif)",
+                    fontWeight: 800,
+                    fontSize: 'clamp(2rem, 5vw, 4rem)',
+                    lineHeight: 1, letterSpacing: '-0.03em',
+                    color: '#0076B6', marginBottom: '12px',
+                  }}>{stat.number}</div>
+                  <div style={{
+                    fontFamily: "var(--font-inter,'Inter',sans-serif)",
+                    fontSize: 'clamp(13px, 1.4vw, 15px)',
+                    color: 'rgba(208,216,224,0.72)',
+                    lineHeight: 1.6,
+                  }}>{stat.label}</div>
+                </div>
               ))}
             </div>
           </div>
@@ -222,58 +212,52 @@ export default function DetroitPage() {
           borderBottom: '1px solid rgba(176,183,188,0.1)',
         }}>
           <div style={{ maxWidth: '820px', margin: '0 auto' }}>
-            <ScrollReveal>
+            <p style={{
+              fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
+              fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
+              color: '#0076B6', marginBottom: '12px',
+              display: 'flex', alignItems: 'center', gap: '10px',
+            }}>
+              <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
+              Our Mission
+            </p>
+            <h2 style={{
+              fontFamily: "var(--font-syne,'Syne',sans-serif)",
+              fontWeight: 800,
+              fontSize: 'clamp(2.2rem, 5vw, 4rem)',
+              color: '#ffffff', lineHeight: 1.0, letterSpacing: '-0.035em',
+              marginBottom: '36px',
+            }}>
+              Help every Detroit business{' '}
+              <span style={{ color: '#0076B6' }}>get found.</span>
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <p style={{
-                fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
-                fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-                color: '#0076B6', marginBottom: '12px',
-                display: 'flex', alignItems: 'center', gap: '10px',
+                fontFamily: "var(--font-inter,'Inter',sans-serif)",
+                fontSize: 'clamp(16px, 1.6vw, 18px)', color: 'rgba(208,216,224,0.85)', lineHeight: 1.85,
               }}>
-                <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
-                Our Mission
+                Detroit built the world. The assembly line. Motown. The middle class. The
+                city&apos;s fingerprints are on everything. But right now, too many of its
+                best businesses are invisible online — losing customers every day to
+                competitors who spent more on ads or stumbled into a decent template.
               </p>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <h2 style={{
-                fontFamily: "var(--font-syne,'Syne',sans-serif)",
-                fontWeight: 800,
-                fontSize: 'clamp(2.2rem, 5vw, 4rem)',
-                color: '#ffffff', lineHeight: 1.0, letterSpacing: '-0.035em',
-                marginBottom: '36px',
+              <p style={{
+                fontFamily: "var(--font-inter,'Inter',sans-serif)",
+                fontSize: 'clamp(16px, 1.6vw, 18px)', color: 'rgba(208,216,224,0.85)', lineHeight: 1.85,
               }}>
-                Help every Detroit business{' '}
-                <span style={{ color: '#0076B6' }}>get found.</span>
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={120}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <p style={{
-                  fontFamily: "var(--font-inter,'Inter',sans-serif)",
-                  fontSize: 'clamp(16px, 1.6vw, 18px)', color: 'rgba(208,216,224,0.85)', lineHeight: 1.85,
-                }}>
-                  Detroit built the world. The assembly line. Motown. The middle class. The
-                  city&apos;s fingerprints are on everything. But right now, too many of its
-                  best businesses are invisible online — losing customers every day to
-                  competitors who spent more on ads or stumbled into a decent template.
-                </p>
-                <p style={{
-                  fontFamily: "var(--font-inter,'Inter',sans-serif)",
-                  fontSize: 'clamp(16px, 1.6vw, 18px)', color: 'rgba(208,216,224,0.85)', lineHeight: 1.85,
-                }}>
-                  We started Caliber Web Studio with one goal: level the playing field. Give
-                  Detroit&apos;s local businesses access to the same enterprise-level web
-                  systems that national brands pay agencies six figures to build — at a price
-                  that actually makes sense.
-                </p>
-                <p style={{
-                  fontFamily: "var(--font-inter,'Inter',sans-serif)",
-                  fontSize: 'clamp(16px, 1.6vw, 18px)', color: '#ffffff', lineHeight: 1.85, fontWeight: 500,
-                }}>
-                  If your business is great, Detroit deserves to know about it.
-                  That&apos;s what we&apos;re here for.
-                </p>
-              </div>
-            </ScrollReveal>
+                We started Caliber Web Studio with one goal: level the playing field. Give
+                Detroit&apos;s local businesses access to the same enterprise-level web
+                systems that national brands pay agencies six figures to build — at a price
+                that actually makes sense.
+              </p>
+              <p style={{
+                fontFamily: "var(--font-inter,'Inter',sans-serif)",
+                fontSize: 'clamp(16px, 1.6vw, 18px)', color: '#ffffff', lineHeight: 1.85, fontWeight: 500,
+              }}>
+                If your business is great, Detroit deserves to know about it.
+                That&apos;s what we&apos;re here for.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -284,57 +268,51 @@ export default function DetroitPage() {
           borderBottom: '1px solid rgba(176,183,188,0.1)',
         }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <ScrollReveal>
-              <p style={{
-                fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
-                fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-                color: '#0076B6', marginBottom: '12px',
-                display: 'flex', alignItems: 'center', gap: '10px',
-              }}>
-                <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
-                How We Help
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <h2 style={{
-                fontFamily: "var(--font-syne,'Syne',sans-serif)",
-                fontWeight: 800,
-                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-                color: '#ffffff', lineHeight: 1.05, letterSpacing: '-0.03em',
-                marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '660px',
-              }}>
-                We don&apos;t just build sites.<br />
-                We build your entire online presence.
-              </h2>
-            </ScrollReveal>
+            <p style={{
+              fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
+              fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
+              color: '#0076B6', marginBottom: '12px',
+              display: 'flex', alignItems: 'center', gap: '10px',
+            }}>
+              <span style={{ display: 'block', width: '24px', height: '1px', background: '#0076B6' }} />
+              How We Help
+            </p>
+            <h2 style={{
+              fontFamily: "var(--font-syne,'Syne',sans-serif)",
+              fontWeight: 800,
+              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+              color: '#ffffff', lineHeight: 1.05, letterSpacing: '-0.03em',
+              marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '660px',
+            }}>
+              We don&apos;t just build sites.<br />
+              We build your entire online presence.
+            </h2>
             <div className="detroit-cards-grid">
-              {helpCards.map((card, i) => (
-                <ScrollReveal key={card.title} delay={i * 80}>
-                  <div style={{
+              {helpCards.map((card) => (
+                <div key={card.title}
+                  className="detroit-help-card"
+                  style={{
                     background: 'rgba(255,255,255,0.04)',
                     border: '1px solid rgba(176,183,188,0.09)',
                     borderRadius: '6px',
                     padding: 'clamp(28px, 4vw, 44px)',
-                    height: '100%',
                     transition: 'border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease',
                   }}
-                  className="detroit-help-card"
-                  >
-                    <div style={{ fontSize: '28px', color: '#0076B6', marginBottom: '16px', lineHeight: 1 }}>
-                      {card.icon}
-                    </div>
-                    <h3 style={{
-                      fontFamily: "var(--font-syne,'Syne',sans-serif)",
-                      fontWeight: 800, fontSize: 'clamp(18px, 2vw, 22px)',
-                      color: '#ffffff', marginBottom: '10px',
-                      letterSpacing: '-0.02em', lineHeight: 1.2,
-                    }}>{card.title}</h3>
-                    <p style={{
-                      fontFamily: "var(--font-inter,'Inter',sans-serif)",
-                      fontSize: '15px', color: 'rgba(208,216,224,0.72)', lineHeight: 1.75, margin: 0,
-                    }}>{card.body}</p>
+                >
+                  <div style={{ fontSize: '28px', color: '#0076B6', marginBottom: '16px', lineHeight: 1 }}>
+                    {card.icon}
                   </div>
-                </ScrollReveal>
+                  <h3 style={{
+                    fontFamily: "var(--font-syne,'Syne',sans-serif)",
+                    fontWeight: 800, fontSize: 'clamp(18px, 2vw, 22px)',
+                    color: '#ffffff', marginBottom: '10px',
+                    letterSpacing: '-0.02em', lineHeight: 1.2,
+                  }}>{card.title}</h3>
+                  <p style={{
+                    fontFamily: "var(--font-inter,'Inter',sans-serif)",
+                    fontSize: '15px', color: 'rgba(208,216,224,0.72)', lineHeight: 1.75, margin: 0,
+                  }}>{card.body}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -353,56 +331,48 @@ export default function DetroitPage() {
             pointerEvents: 'none',
           }} />
           <div style={{ position: 'relative', maxWidth: '700px', margin: '0 auto' }}>
-            <ScrollReveal>
-              <p style={{
-                fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
-                fontSize: '11px', letterSpacing: '0.22em', textTransform: 'uppercase',
-                color: '#0076B6', marginBottom: '24px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px',
-              }}>
-                <span style={{ display: 'block', width: '32px', height: '1px', background: '#0076B6' }} />
-                Is Your Business Invisible?
-                <span style={{ display: 'block', width: '32px', height: '1px', background: '#0076B6' }} />
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <h2 style={{
+            <p style={{
+              fontFamily: "var(--font-space-mono,'Space Mono',monospace)",
+              fontSize: '11px', letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: '#0076B6', marginBottom: '24px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px',
+            }}>
+              <span style={{ display: 'block', width: '32px', height: '1px', background: '#0076B6' }} />
+              Is Your Business Invisible?
+              <span style={{ display: 'block', width: '32px', height: '1px', background: '#0076B6' }} />
+            </p>
+            <h2 style={{
+              fontFamily: "var(--font-syne,'Syne',sans-serif)",
+              fontWeight: 800,
+              fontSize: 'clamp(2.4rem, 5.5vw, 4.5rem)',
+              lineHeight: 0.97, letterSpacing: '-0.04em',
+              color: '#ffffff', marginBottom: '20px',
+            }}>
+              Let&apos;s change that.
+            </h2>
+            <p style={{
+              fontFamily: "var(--font-inter,'Inter',sans-serif)",
+              fontSize: 'clamp(1rem, 1.8vw, 1.15rem)',
+              color: 'rgba(208,216,224,0.72)',
+              maxWidth: '520px', margin: '0 auto 44px', lineHeight: 1.75,
+            }}>
+              See your custom website before you commit. Free mockup, built around your
+              business, delivered in&nbsp;48&nbsp;hours.
+            </p>
+            <Link
+              href="/contact"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '10px',
+                padding: '18px 52px',
+                background: '#0076B6', color: '#fff',
                 fontFamily: "var(--font-syne,'Syne',sans-serif)",
-                fontWeight: 800,
-                fontSize: 'clamp(2.4rem, 5.5vw, 4.5rem)',
-                lineHeight: 0.97, letterSpacing: '-0.04em',
-                color: '#ffffff', marginBottom: '20px',
-              }}>
-                Let&apos;s change that.
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={160}>
-              <p style={{
-                fontFamily: "var(--font-inter,'Inter',sans-serif)",
-                fontSize: 'clamp(1rem, 1.8vw, 1.15rem)',
-                color: 'rgba(208,216,224,0.72)',
-                maxWidth: '520px', margin: '0 auto 44px', lineHeight: 1.75,
-              }}>
-                See your custom website before you commit. Free mockup, built around your
-                business, delivered in&nbsp;48&nbsp;hours.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={220}>
-              <Link
-                href="/contact"
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '10px',
-                  padding: '18px 52px',
-                  background: '#0076B6', color: '#fff',
-                  fontFamily: "var(--font-syne,'Syne',sans-serif)",
-                  fontSize: '16px', fontWeight: 700, letterSpacing: '0.04em',
-                  textDecoration: 'none', borderRadius: '4px',
-                  transition: 'box-shadow 0.3s ease, transform 0.2s ease',
-                }}
-              >
-                Get Your Free Mockup Today →
-              </Link>
-            </ScrollReveal>
+                fontSize: '16px', fontWeight: 700, letterSpacing: '0.04em',
+                textDecoration: 'none', borderRadius: '4px',
+                transition: 'box-shadow 0.3s ease, transform 0.2s ease',
+              }}
+            >
+              Get Your Free Mockup Today →
+            </Link>
           </div>
         </section>
 

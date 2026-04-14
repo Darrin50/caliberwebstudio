@@ -331,7 +331,7 @@ export default function AboutPage() {
                   boxShadow: '0 0 60px rgba(0,118,182,0.12)',
                 }}>
                   <Image
-                    src="/images/brand/cws-about-founder-04.jpg"
+                    src="/images/darrin-headshot.png"
                     alt="Darrin Singer — Founder and CEO of Caliber Web Studio, Detroit MI"
                     fill
                     sizes="(max-width: 860px) 100vw, 380px"

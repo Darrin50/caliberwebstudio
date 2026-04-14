@@ -283,13 +283,13 @@ export default function ProcessTimeline() {
           flex-direction: column;
           justify-content: center;
         }
-        [data-theme="light"] .timeline-card {
-          background: rgba(255,255,255,0.8);
-          border: 1px solid rgba(0,0,0,0.09);
-          box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        html[data-theme="light"] .timeline-card {
+          background: #ffffff;
+          border: 1px solid rgba(0,0,0,0.12);
+          box-shadow: 0 2px 16px rgba(0,0,0,0.08);
         }
-        [data-theme="light"] .timeline-card h3 { color: #0a0a0b; }
-        [data-theme="light"] .timeline-card p  { color: rgba(0,0,0,0.5); }
+        html[data-theme="light"] .timeline-card h3 { color: #0a0a0b; }
+        html[data-theme="light"] .timeline-card p  { color: rgba(0,0,0,0.5); }
         .timeline-mobile { display: none; }
         @media (max-width: 720px) {
           .timeline-desktop { display: none; }

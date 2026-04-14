@@ -213,23 +213,23 @@ export default function TransformationSection() {
         .ts-service-title { color: #D0D8E0; }
         .ts-service-desc  { color: rgba(208,216,224,0.65); }
 
-        /* ── Light mode — keyed to [data-theme="light"] on <html> ── */
-        [data-theme="light"] .ts-section  { background: #ffffff; border-top: 1px solid rgba(0,0,0,0.08); }
-        [data-theme="light"] .ts-video,
-        [data-theme="light"] .ts-overlay  { display: none; }
-        [data-theme="light"] .ts-heading  { color: #0a0a0b; }
-        [data-theme="light"] .ts-stat-card {
+        /* ── Light mode — keyed to html[data-theme="light"] on <html> ── */
+        html[data-theme="light"] .ts-section  { background: #ffffff; border-top: 1px solid rgba(0,0,0,0.08); }
+        html[data-theme="light"] .ts-video,
+        html[data-theme="light"] .ts-overlay  { display: none; }
+        html[data-theme="light"] .ts-heading  { color: #0a0a0b; }
+        html[data-theme="light"] .ts-stat-card {
           background: rgba(0,0,0,0.04);
           border: 1px solid rgba(0,0,0,0.09);
         }
-        [data-theme="light"] .ts-stat-num  { color: #0a0a0b; }
-        [data-theme="light"] .ts-stat-lbl  { color: rgba(0,0,0,0.45); }
-        [data-theme="light"] .ts-service-card {
+        html[data-theme="light"] .ts-stat-num  { color: #0a0a0b; }
+        html[data-theme="light"] .ts-stat-lbl  { color: rgba(0,0,0,0.45); }
+        html[data-theme="light"] .ts-service-card {
           background: rgba(0,0,0,0.04);
           border: 1px solid rgba(0,0,0,0.09);
         }
-        [data-theme="light"] .ts-service-title { color: #0a0a0b; }
-        [data-theme="light"] .ts-service-desc  { color: rgba(0,0,0,0.5); }
+        html[data-theme="light"] .ts-service-title { color: #0a0a0b; }
+        html[data-theme="light"] .ts-service-desc  { color: rgba(0,0,0,0.5); }
 
         /* ── Layout ── */
         .transformation-stats    { display: grid; grid-template-columns: repeat(4,1fr); gap: clamp(12px,2vw,20px); }

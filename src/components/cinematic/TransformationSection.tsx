@@ -161,49 +161,36 @@ export default function TransformationSection() {
         background: '#0a0a0b',
       }}
     >
-      {/* ── Cinematic video background ── */}
-      {CINEMATIC_SCENES.map((src, i) => (
-        <video
-          key={i}
-          ref={el => { videoRefs.current[i] = el; }}
-          muted
-          playsInline
-          preload="auto"
-          onEnded={() => handleEnded(i)}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            opacity: currentScene === i ? 1 : 0,
-            transition: `opacity ${CROSSFADE_MS}ms ease`,
-            zIndex: 0,
-          }}
-        >
-          <source src={src} type="video/mp4" />
-        </video>
-      ))}
+      {/* ── Video + overlay wrapper — single stacking layer behind content ── */}
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+        {CINEMATIC_SCENES.map((src, i) => (
+          <video
+            key={i}
+            ref={el => { videoRefs.current[i] = el; }}
+            muted
+            playsInline
+            preload="auto"
+            onEnded={() => handleEnded(i)}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              opacity: currentScene === i ? 1 : 0,
+              transition: `opacity ${CROSSFADE_MS}ms ease`,
+            }}
+          >
+            <source src={src} type="video/mp4" />
+          </video>
+        ))}
+        {/* Dark overlay */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(10,10,11,0.75)' }} />
+      </div>
 
-      {/* Dark overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(10,10,11,0.72)',
-          zIndex: 5,
-          pointerEvents: 'none',
-        }}
-      />
-
-      {/* ── Content ── */}
-      <div style={{ position: 'relative', zIndex: 10, maxWidth: '1280px', margin: '0 auto' }}>
+      {/* ── Content — above video layer ── */}
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto' }}>
         {/* Headline */}
         <div style={{ marginBottom: 'clamp(48px, 6vw, 72px)', maxWidth: '720px' }}>
           <div

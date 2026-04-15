@@ -6681,122 +6681,141 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     "slug": "hvac-website-design-detroit",
-    "thumbnail": "/blog/hvac-website-design-detroit-thumb.png",
-    "title": "Why Your Detroit HVAC Company Needs a Professional Website",
-    "description": "Detroit HVAC companies lose thousands in missed calls every month because their websites don't rank. Here's exactly what professional HVAC website design in Detroit looks like — and why it pays for itself.",
+    "thumbnail": "/blog/hvac-website-design-detroit-hero.jpg.png",
+    "title": "7 Must-Have Features for Detroit HVAC Company Websites",
+    "description": "Your HVAC website isn't just a digital brochure — it's your 24/7 dispatcher. Here are the 7 features every Detroit HVAC company needs to turn their site into a lead machine that books service calls around the clock.",
     "date": "2026-04-14",
-    "category": "Industry — HVAC",
-    "relatedSlugs": ["website-design-service-businesses-what-converts", "google-business-profile-2026-complete-guide", "500-dollar-website-lost-revenue", "ai-chatbots-customer-service-small-business"],
+    "category": "Industry Guides",
+    "relatedSlugs": ["website-design-for-plumbers-contractors", "local-seo-guide-for-small-businesses", "affordable-website-design-detroit", "how-much-does-a-small-business-website-cost"],
     "content": `
-<h1>Why Your Detroit HVAC Company Is Losing Customers Right Now — And How a Professional Website Fixes It</h1>
+<h1>7 Must-Have Features for Detroit HVAC Company Websites</h1>
 
-<p>Two things happen when a Metro Detroit homeowner's furnace stops working at 11 PM in January. They panic. Then they grab their phone. The question is: whose name comes up first on Google? If it's not yours, you just lost a $1,200–$3,000 emergency call — and you'll never know it happened.</p>
+<p>Your HVAC company is great at what it does. You show up on time, you fix the problem, and customers are happy. But right now, someone in Southfield has a furnace that won't kick on — and they're on their phone, about to call the first HVAC company that looks trustworthy and makes it easy to reach them. If your website isn't built to win that moment, you're handing that job to your competitor.</p>
 
-<p>This is the core of the HVAC website design Detroit problem. It's not about having a website. It's about having a website that works hard enough to make your phone ring before your competition's does. Most HVAC companies in Metro Detroit have some kind of web presence. Fewer than a third of them have a website that's doing anything useful for their bottom line.</p>
+<p><strong>HVAC website design in Detroit isn't about looking pretty. It's about capturing high-intent leads at the exact second they need you.</strong> A furnace dying in February, an AC unit seizing in July — these are urgent, high-dollar calls. Your website either earns them or loses them in under 10 seconds.</p>
 
-<img src="/blog/hvac-website-design-detroit-1.png" alt="Detroit homeowner searching on mobile phone for emergency HVAC repair in winter" style="width:100%;border-radius:12px;margin:32px 0;" />
+<p>Here are the 7 features every Detroit HVAC company website needs to consistently win service calls, emergency jobs, and repeat customers.</p>
 
-<h2>The Detroit HVAC Market Is First-Page-or-Nothing</h2>
+<img src="/blog/hvac-website-design-detroit-hero.jpg.png" alt="HVAC technician working on an outdoor air conditioning unit in a Detroit residential neighborhood" style="width:100%;border-radius:12px;margin:32px 0;" />
 
-<p>Detroit's HVAC market is brutally competitive. There are hundreds of heating and cooling contractors operating across Metro Detroit — from the city proper to Dearborn, Warren, Sterling Heights, Livonia, and every suburb in between. Most of them have websites. Very few of them have websites that actually rank.</p>
+<h2>1. Click-to-Call on Every Single Page</h2>
 
-<h3>What "Ranking" Means in Plain Language</h3>
-<p>When a homeowner in Southfield searches "HVAC repair near me" or "furnace tune-up Detroit," Google returns ten organic results on the first page plus the local map pack. Studies consistently show that 75% of users never scroll past those first results. If you're on page two, you are invisible — not sometimes, not usually, but every single time that search happens. This isn't a theory. It's the mechanics of every search query running right now across Metro Detroit.</p>
+<p>This sounds obvious. Most HVAC sites still get it wrong.</p>
 
-<h3>The Emergency Call Economy</h3>
-<p>Emergency HVAC calls — a furnace down in January, an AC failure in August — are the highest-value jobs you'll take all year. They're not price-shopped. The homeowner calls the first company that looks credible and can answer the phone. If your website doesn't show up on page one, loads slowly on a phone, or looks like it was built in 2012, that $2,000 call goes to a competitor who invested in their digital presence. You never get a second shot at it.</p>
+<p>Your phone number needs to be in the header — large, tappable on mobile, visible without scrolling. It also needs to be in the footer, in the hero section, and ideally in a sticky bar at the bottom of every mobile page. When someone's furnace dies at 10 PM, they are not filling out a contact form and waiting for a callback. They're tapping the first phone number they can find.</p>
 
-<h2>What "HVAC Website Design Detroit" Actually Means for Your Business</h2>
+<p>If a visitor has to scroll, search, or hunt for your number, they're gone. The next HVAC company is one tap away.</p>
 
-<p>A lot of HVAC companies confuse "having a website" with "having a website that works." These are two completely different things. The gap between them is measured in missed calls and lost revenue.</p>
+<p><strong>What this looks like in practice:</strong> A sticky mobile footer with a "Call Now" button. A header with your number as a clickable tel: link. A hero section that leads with your phone number above the fold. No exceptions.</p>
 
-<h3>Design Is the Last 10%</h3>
-<p>A professional HVAC website isn't primarily about looking good — though that matters. It's about technical structure: the way Google's crawlers understand your services, your service area, and your relevance for specific searches. Schema markup, page architecture, load speed, mobile optimization, and local SEO signals determine whether you rank. The design closes the sale once someone arrives. The SEO gets them there. Without both working together, you have a brochure nobody reads.</p>
+<p>This single change — making your phone number impossible to miss — is often the difference between a site that generates 10 calls a month and one that generates 40. The investment is minimal. The revenue impact is not.</p>
 
-<h3>The Speed Problem That's Costing You Jobs</h3>
-<p>Google uses page speed as a direct ranking factor. A site that loads in 4–5 seconds on mobile — which describes most small business websites built on generic WordPress templates with a stack of plugins — gets penalized in rankings and abandoned by users before they ever see your content. On average, a one-second delay in mobile load time reduces conversions by 20%. For an HVAC company averaging a $300 service call, that's real money evaporating before you ever pick up the phone.</p>
+<h2>2. Service Area Pages for Every Metro Detroit City You Cover</h2>
 
-<h3>Mobile Is Where Your Customers Search</h3>
-<p>More than 70% of local service searches happen on mobile devices. For emergency searches specifically — "furnace repair near me," "AC not working Detroit" — mobile share is even higher. Your website needs to load in under two seconds, be fully readable on a small screen without pinching or zooming, and put your phone number front and center where it cannot be missed. If a homeowner with a dead furnace has to hunt for your contact info, they're already dialing someone else.</p>
+<p>Here's a question: how many cities do you serve? If the answer is more than one, you need a page for each of them.</p>
 
-<h2>The 5 Things Every HVAC Website in Detroit Needs</h2>
+<p>"HVAC repair Detroit" and "HVAC repair Southfield" are completely different search queries with completely different results. If your website only ranks for the city in your business name, you're invisible to everyone searching from Dearborn, Warren, Troy, Livonia, Ferndale, or any of the other 30+ cities that make up Metro Detroit's residential market.</p>
 
-<p>Here's what separates websites that generate consistent calls from websites that sit there looking like digital brochures nobody asked for.</p>
+<p>Service area pages — individual pages targeting each city you cover — are how HVAC companies dominate a region instead of just a single zip code. Each page needs the city name throughout the content, a Google Maps embed, and specific mentions of the neighborhoods and major roads in that area.</p>
 
-<h3>1. Dedicated Service Pages for Every Service You Offer</h3>
-<p>One homepage that lists "furnace repair, AC installation, duct cleaning, heat pump service" will not rank for any of those search terms. You need individual, optimized pages for each service — with location targeting built in. "Furnace Repair Detroit." "AC Installation Dearborn." "Heat Pump Service Warren." Each page targets a distinct search with a distinct audience. This is the foundation of any real HVAC SEO strategy, and it is non-negotiable if you want to rank for more than one thing at a time.</p>
+<p>This is one of the highest-ROI moves in <a href="/blog/local-seo-guide-for-small-businesses">local SEO for service businesses</a>. An HVAC company in Oak Park that builds service area pages for the surrounding 15 cities doesn't just rank for Oak Park — they rank across the entire region. That's 15x the search visibility from a one-time content investment.</p>
 
-<h3>2. An Emergency CTA That's Impossible to Miss</h3>
-<p>Your phone number belongs in the header, visible above the fold on every page, and formatted for one-tap calling on mobile. "24/7 Emergency Service Available" should be visible without scrolling on any device. Homeowners with a dead furnace in January are not browsing your website — they want a number to call immediately. Make it impossible to miss. Every extra second it takes them to find your contact info increases the probability they bounce to a competitor who made it easier.</p>
+<h2>3. An Emergency Service Callout That's Impossible to Miss</h2>
 
-<h3>3. Local SEO Structure Built Into the Foundation</h3>
-<p>Local SEO for HVAC isn't something you bolt on later — it has to be built into the site's architecture from day one. That means proper LocalBusiness schema markup, NAP consistency (your name, address, and phone number matching exactly across Google, Yelp, and every directory), and dedicated location pages for each city you serve. A site built without local SEO in mind requires a rebuild to fix properly — not a plugin. Read our <a href="/blog/google-business-profile-2026-complete-guide">complete Google Business Profile guide</a> to understand how your website and GBP work together to dominate local search results.</p>
+<p>Emergency HVAC calls are your highest-margin work. A furnace replacement call at midnight is worth $400–$2,000 or more. Your website needs to make it immediately obvious that you handle emergencies — before the visitor reads anything else.</p>
 
-<h3>4. Review Integration That Converts First-Time Visitors</h3>
-<p>For a homeowner who's never heard of your company, reviews are the deciding factor. Displaying your Google or Yelp reviews prominently — with star ratings, reviewer names, and specific praise for your technicians' professionalism and response speed — closes the gap between "found you on Google" and "trusted you enough to call." An HVAC website without visible social proof is leaving serious conversion rate on the table. Your competitor with 87 reviews and a 4.8 star rating is winning the click even when you rank above them.</p>
+<p>Most HVAC websites bury this. "24/7 Emergency Service Available" in a footer is not a callout. It's a footnote.</p>
 
-<h3>5. A Platform Built to Handle Peak Demand</h3>
-<p>A website running on overloaded shared hosting or a WordPress install with eighteen plugins is a liability. When a cold snap sends emergency search volume through the roof, or your Google Ads drive traffic during peak season, your site needs to stay fast and available. Modern HVAC websites should be built on high-performance frameworks deployed on infrastructure that scales. That's not a luxury — that's the minimum requirement for a business that depends on online leads.</p>
-
-<img src="/blog/hvac-website-design-detroit-2.png" alt="Professional HVAC website displayed on laptop and mobile phone screens" style="width:100%;border-radius:12px;margin:32px 0;" />
-
-<h2>The Real Cost of a Weak HVAC Website</h2>
-
-<p>Let's do the math that most HVAC companies never sit down to run.</p>
-
-<p>The average HVAC service call in Metro Detroit runs $150–$400. Emergency repair calls run $800–$2,500 depending on the job. A new furnace or central AC installation runs $3,500–$8,000+. If a professional HVAC website generates just three additional calls per month — a conservative number for a properly optimized local site — that's a minimum of $450/month in additional revenue at the low end, and potentially $7,500+/month if those calls include installations or emergency service. The site pays for itself many times over.</p>
-
-<h3>What the Alternative Actually Costs You</h3>
-<p>The alternative to investing in professional HVAC website design is relying on word of mouth, repeat customers, and whatever trickle of leads comes in from a mediocre online presence. That model works until it doesn't. When a key referral source dries up, or when a well-funded competitor moves into your market with a dominant digital presence and starts eating your search share, you have no recovery plan. The HVAC companies dominating Metro Detroit right now aren't more skilled than you — they invested in their digital infrastructure earlier. Our breakdown of <a href="/blog/500-dollar-website-lost-revenue">what a cheap website actually costs your business</a> runs through exactly how those losses accumulate.</p>
-
-<h3>Your Google Business Profile Is Not Enough on Its Own</h3>
-<p>Many HVAC contractors believe an optimized Google Business Profile covers their online presence. It doesn't — it's one piece of the system. Google's local ranking algorithm treats your website as a major authority signal. A weak or thin website actively undermines your GBP ranking. They work in tandem: a strong website boosts your map pack placement; a neglected one limits how far your GBP can climb no matter how many reviews you collect. If your profile is dialed in but your website is an afterthought, you're running with one engine shut off.</p>
-
-<h2>What a Professional HVAC Website Build Includes</h2>
-
-<p>A properly built HVAC website for a Detroit contractor includes the following components — all of them working together:</p>
-
+<p><strong>A proper emergency callout includes:</strong></p>
 <ul>
-  <li><strong>Homepage</strong> — Above-the-fold emergency CTA, service overview, trust signals (reviews, certifications, years in business), and a clear, fast path to contact</li>
-  <li><strong>Dedicated service pages</strong> — Individual optimized pages for furnace repair, AC installation, heat pump service, duct cleaning, boiler service, and emergency heating and cooling</li>
-  <li><strong>Location pages</strong> — Optimized landing pages targeting each Metro Detroit service area: Detroit, Dearborn, Warren, Livonia, Southfield, Sterling Heights, Hamtramck, and more</li>
-  <li><strong>Contact page</strong> — Click-to-call phone number, fast-response contact form, Google Maps embed, and clear service hours</li>
-  <li><strong>Review section</strong> — Integrated Google or Yelp reviews displayed prominently throughout the site to build trust before the first call</li>
-  <li><strong>Schema markup</strong> — Structured data for LocalBusiness and HVAC services so Google understands exactly what you do and where you do it</li>
-  <li><strong>Mobile-first design</strong> — Sub-2-second load times on mobile, a clean layout that requires no zooming, and a contact CTA always within thumb reach</li>
+  <li>A dedicated banner or section above the fold (or in the header) that says exactly "24/7 Emergency HVAC Service" with your phone number</li>
+  <li>A contrasting color — red, orange, or bright blue — that visually separates it from the rest of the page</li>
+  <li>Short, confident language: "Furnace out? AC down? Call now — we answer every call." No marketing fluff, no disclaimers</li>
+  <li>Repeated on your services page and any service-specific landing pages</li>
 </ul>
 
-<p>This is not a one-time project you set and forget. The websites that maintain and grow their rankings receive consistent attention: seasonal landing pages ahead of demand spikes, new reviews integrated as they come in, technical performance monitoring, and content updates that signal an active, maintained presence. Read our guide on <a href="/blog/website-design-service-businesses-what-converts">what service business websites need to actually convert visitors</a> to understand what drives leads after someone arrives on your site.</p>
+<p>The HVAC companies that win the most emergency calls aren't always the best technicians. They're the ones whose websites make calling feel like the obvious, immediate next move.</p>
 
-<img src="/blog/hvac-website-design-detroit-3.png" alt="Professional HVAC technician completing a furnace installation in a Metro Detroit home" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/hvac-website-design-detroit-4.jpg.png" alt="HVAC technician inspecting a residential furnace system during a service call" style="width:100%;border-radius:12px;margin:32px 0;" />
 
-<h2>Why the Detroit Market Makes This More Urgent</h2>
+<h2>4. Trust Signals — Licenses, Certifications, and Real Reviews</h2>
 
-<p>Metro Detroit's HVAC market has specific characteristics that make professional website investment more critical — not less — than in most other markets.</p>
+<p>Homeowners letting an HVAC technician into their house are making a trust decision, not just a price decision. Your website needs to answer every "but can I trust them?" question before the visitor even thinks to ask it.</p>
 
-<h3>Extreme Seasonality Creates Narrow Windows</h3>
-<p>Furnace season (October–February) and cooling season (June–August) create defined windows where HVAC call volume spikes sharply. The businesses that dominate those windows are the ones who already rank when the season arrives. You cannot build your search rankings in October for October emergency calls — that authority takes months to develop. An HVAC website that has been consistently optimized is positioned to capture the seasonal surge when it hits. One that's been neglected misses it entirely, year after year, while competitors take every call.</p>
+<p><strong>What builds trust on an HVAC website:</strong></p>
+<ul>
+  <li><strong>NATE certification badge</strong> — NATE (North American Technician Excellence) is the gold standard in HVAC credentialing. If your techs are certified, display it prominently.</li>
+  <li><strong>Michigan contractor license number</strong> — Required by law. Displaying it signals you're legitimate and have nothing to hide.</li>
+  <li><strong>Google reviews widget or pull-through</strong> — A 4.7-star average with 120+ reviews converts better than any headline you can write. Show the count and the rating above the fold if you can.</li>
+  <li><strong>BBB accreditation, ACCA membership, or manufacturer certifications</strong> — Display every credential that signals "we've been vetted."</li>
+  <li><strong>Years in business</strong> — "Serving Metro Detroit since 2009" is a trust signal. Use it.</li>
+</ul>
 
-<h3>The Competition Is Already Moving</h3>
-<p>The larger HVAC companies in Metro Detroit are running Google Ads, optimizing their GBP listings, and publishing content that builds domain authority month over month. Every month your website sits static is another month those companies are extending their lead in search. The window to compete effectively on organic search before the market fully consolidates around established players is open right now — but it won't stay open indefinitely. The businesses investing today are the ones who will own those first-page positions next winter.</p>
+<p>Trust signals reduce what marketers call "friction" — the hesitation before someone picks up the phone. Every unanswered doubt is a reason not to call. Remove the doubts, and conversion goes up.</p>
 
-<h2>Frequently Asked Questions About HVAC Website Design</h2>
+<h2>5. Online Scheduling or a Lead Capture Form That Works After Hours</h2>
 
-<h3>How long does it take to see results from a new HVAC website?</h3>
-<p>Meaningful search rankings typically develop over 3–6 months of consistent optimization. That's not a limitation — that's how organic search works. The HVAC companies that start today are the ones positioned to dominate Metro Detroit searches heading into next heating season. The ones that wait are watching their competitors rank for another full cycle while their own site goes nowhere.</p>
+<p>Not every HVAC call is an emergency. Maintenance visits, seasonal tune-ups, equipment quotes — these are decisions people make at 9 PM on a Sunday when your office is closed. If your website has no way to capture those leads, you're losing them to whoever does.</p>
 
-<h3>Do I need a completely new website if I already have one?</h3>
-<p>Not necessarily. What you need is an honest assessment of what your current site is actually doing for your business. If you're not getting consistent inbound calls from search, your site is either failing to rank or failing to convert the traffic it does get. Both are diagnosable. <a href="/contact">Get a free site audit</a> — we'll tell you exactly what's holding your current site back and what it would take to fix it.</p>
+<p>Online scheduling — or at minimum a simple quote request form — turns your website into a 24/7 dispatcher. The lead comes in overnight. Your team sees it first thing in the morning. You call before the customer has looked at anyone else.</p>
 
-<h3>What makes HVAC website design different from a general small business website?</h3>
-<p>The difference is specialization. HVAC websites require specific service page architecture for heating and cooling searches, emergency CTA placement that drives calls under pressure, seasonal content strategy aligned to demand cycles, and local SEO built specifically for home services. A general web designer can produce a professional-looking site. An experienced HVAC web designer builds a site that ranks for the exact searches your customers use when their heat goes out at midnight.</p>
+<p><strong>What the form needs to capture:</strong></p>
+<ul>
+  <li>Name, phone, and email (required)</li>
+  <li>Service type (dropdown: AC repair, furnace repair, maintenance, new installation, other)</li>
+  <li>Best time to reach them</li>
+  <li>Brief description of the issue (optional textarea)</li>
+</ul>
 
-<h3>Is a professional website worth it on a contractor's budget?</h3>
-<p>The right question is: what's the cost of not having one? If your website generates even two additional calls per month — at a $300 average ticket — that's $600/month in additional revenue from a monthly investment starting at $197. The math makes itself. The risk isn't in the investment. The risk is in continuing to leave those calls on the table while competitors collect them.</p>
+<p>The form should be short. Every additional field drops completion rates. Name, phone, service type — that's enough to qualify the lead and make the callback. If you're using <a href="/blog/website-design-for-plumbers-contractors">a platform like Jobber or ServiceTitan</a>, the form can integrate directly into your scheduling workflow, eliminating manual entry entirely.</p>
+
+<h2>6. Mobile-First, Speed-Optimized Design</h2>
+
+<p>Over 75% of local service searches happen on mobile. People searching "HVAC repair near me" at noon are standing in their utility room staring at a unit that won't turn on — they're on a phone, not a desktop. If your site doesn't load fast and look clean on a 375px screen, you're invisible to most of your market.</p>
+
+<p>Page speed isn't just a user experience issue — it's a ranking issue. Google uses Core Web Vitals (load time, interactivity, visual stability) as a ranking factor. A site that loads in 4 seconds ranks lower than a site that loads in 1.2 seconds. In a competitive market like Metro Detroit HVAC, that ranking difference translates directly to missed calls.</p>
+
+<p><strong>What speed optimization looks like:</strong></p>
+<ul>
+  <li>Images compressed and served in next-gen formats (WebP)</li>
+  <li>No unnecessary plugins, scripts, or tracking bloat</li>
+  <li>A modern framework (Next.js, not WordPress with 14 plugins)</li>
+  <li>Lazy loading for below-the-fold content</li>
+  <li>Target: under 2-second load time on mobile</li>
+</ul>
+
+<p>If you're running a WordPress site with a generic theme and a page builder, it's almost certainly failing Core Web Vitals. That's a problem that no amount of content or backlinks fully compensates for. Speed is the foundation everything else is built on. See <a href="/blog/affordable-website-design-detroit">what a properly built HVAC website actually costs in Detroit</a> — the investment pays back faster than most owners expect.</p>
+
+<img src="/blog/hvac-website-design-detroit-5.jpg.png" alt="Smartphone showing a fast-loading HVAC company website with click-to-call button" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>7. Local SEO Schema Markup</h2>
+
+<p>This one is technical, but the impact is anything but. Schema markup is structured data — code embedded in your website that tells Google exactly what your business is, where it operates, what services it offers, and when it's available. Think of it as a clear, machine-readable label on your entire business.</p>
+
+<p>For HVAC companies, proper schema markup means:</p>
+<ul>
+  <li><strong>LocalBusiness schema</strong> — Your name, address, phone, hours, and service area explicitly defined for Google's crawlers</li>
+  <li><strong>Service schema</strong> — Each service (AC repair, furnace installation, heat pump service) tagged individually, so Google understands your full service offering</li>
+  <li><strong>EmergencyService flag</strong> — Signals to Google that you offer emergency service, which can surface your business for urgent-intent searches</li>
+  <li><strong>Review schema</strong> — Pulls your star rating into Google search results as rich snippets (the gold stars you see under some results)</li>
+  <li><strong>FAQPage schema</strong> — FAQ content marked up for potential rich result display in search</li>
+</ul>
+
+<p>Without schema, Google has to guess what your website means. With schema, you're telling it directly. HVAC companies with properly implemented schema consistently rank higher in the local pack — the map results that appear above the organic listings and capture the majority of clicks for service searches. <a href="/blog/local-seo-guide-for-small-businesses">Read our full local SEO guide</a> to understand how schema fits into a complete visibility strategy.</p>
+
+<h2>What These 7 Features Add Up To</h2>
+
+<p>Taken together, these features don't just make your website look more professional — they build a system that converts visitors into calls, calls into jobs, and jobs into reviews that feed the next cycle of visibility.</p>
+
+<p>A Detroit HVAC company website without these features is a business card with a picture on it. A website with all seven is a lead generation machine that works 24 hours a day, 7 days a week, 365 days a year — including during polar vortex warnings when every phone in Metro Detroit is searching for emergency heat.</p>
+
+<p>That's not an exaggeration. The HVAC companies that dominate Metro Detroit search results — that show up in the map pack for "emergency furnace repair Southfield" or "AC installation Warren MI" — aren't there by accident. They're there because someone built their digital presence with the same precision their techs bring to a refrigerant recharge.</p>
+
+<p>If your current website is missing any of these features, you're not just leaving money on the table. You're actively sending it to your competitors. <a href="/blog/how-much-does-a-small-business-website-cost">Understand what a properly built local business website costs</a> and compare it against a single lost emergency job — the math isn't close.</p>
 
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
-  <strong style="font-size:1.1em;">Stop losing HVAC calls to competitors who outrank you.</strong>
-  <p style="margin:12px 0 0;">Caliber Web Studio builds high-performance websites for Detroit HVAC companies — built to rank, built to convert, with $0 down. Plans start at $197/month. Call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">get your free site audit</a> — we'll show you exactly what your competitors are doing that you're not.</p>
+  <strong style="font-size:1.1em;">Ready to Build an HVAC Website That Books Service Calls?</strong>
+  <p style="margin:12px 0 0;">Caliber Web Studio builds HVAC websites for Metro Detroit contractors — mobile-first, speed-optimized, with local SEO and emergency callouts built in from day one. No templates. No WordPress. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you exactly what your new site looks like before you spend a dollar.</p>
 </div>
 
 `

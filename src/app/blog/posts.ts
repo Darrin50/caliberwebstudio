@@ -5934,7 +5934,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     "slug": "why-detroit-restaurant-needs-custom-website-2026",
-    "thumbnail": "/blog/restaurant-website-detroit-2026-1.jpg.png",
+    "thumbnail": "/blog/restaurant-website-detroit-2026-thumb.jpg.png",
     "title": "Why Your Detroit Restaurant Needs a Custom Website in 2026",
     "description": "Instagram followers don't fill tables. Discover why Detroit restaurant owners need custom restaurant website design to get found on Google and convert diners in 2026.",
     "date": "2026-04-14",

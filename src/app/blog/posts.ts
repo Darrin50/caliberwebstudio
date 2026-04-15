@@ -6055,6 +6055,118 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   <strong style="font-size:1.1em;">Your restaurant deserves a website that fills tables — not just looks good on someone's portfolio.</strong>
   <p style="margin:12px 0 0;">See what a custom Detroit restaurant website looks like before you commit. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free site preview</a> or call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> — we'll build it around your neighborhood, your menu, and your customers.</p>
 </div>
+
+`
+  },
+  {
+    "slug": "restaurant-website-design-detroit",
+    "thumbnail": "/blog/website-design-for-restaurants-thumb.jpg",
+    "title": "How to Design a Restaurant Website That Drives Reservations in Detroit",
+    "description": "Detroit restaurants lose reservations every day to competitors with better websites. Here's exactly what your restaurant site needs to fill tables, rank on Google, and turn browsers into booked guests.",
+    "date": "2026-04-14",
+    "category": "Industry Guides",
+    "relatedSlugs": ["local-seo-guide-for-small-businesses", "google-business-profile-optimization", "how-to-get-more-google-reviews", "roi-of-a-professional-website"],
+    "content": `
+<p>Detroit's restaurant scene is having a moment. Corktown is packed on Friday nights. Eastern Market draws a crowd that spills into the surrounding blocks. Midtown brunch spots have a 45-minute wait before noon on Saturday. The city is eating well — and customers are deciding where to eat based on what they find on their phones before they ever pull on their coat.</p>
+
+<p>That's the problem. Restaurant owners in Detroit pour everything into the food — the sourcing, the prep, the service, the experience. The website is an afterthought. A PDF menu, a phone number, a few photos taken on an iPhone in 2019. Meanwhile, the place down the street with mediocre food and a fast, beautiful website that ranks on Google is booked out three Fridays in a row. This guide is about closing that gap.</p>
+
+<h2>Your Website Is Your First Table</h2>
+
+<p>Before a guest walks through your door, they've already made a judgment. They found you on Google or Instagram, clicked your website, and in under ten seconds decided whether you're worth a reservation or a browser close. Your website is where the dining experience actually begins — and most restaurant websites fail that first table before the host says hello.</p>
+
+<p>What's at stake is measurable. A restaurant that seats 60 with three turns on a Friday night is worth $3,000–$6,000 in a single evening, depending on average check. If your website converts even five additional reservation requests per week that would otherwise have gone to a competitor, that's a material revenue difference at the end of the quarter. A restaurant website isn't a marketing expense — it's an operational asset that either earns its keep or doesn't.</p>
+
+<h3>What Detroit Diners Are Actually Searching</h3>
+
+<p>Before building or rebuilding your site, understand what your future guests are typing. "Restaurants in Corktown." "Best brunch Detroit." "Rooftop dining Detroit." "Italian restaurant Midtown Detroit." "Late night food Detroit." These aren't abstract SEO terms — they're the searches happening right now, on phones, by people two miles from your dining room who have no idea you exist yet. Your website is either showing up for those searches or it isn't. There's no middle ground.</p>
+
+<img src="/blog/website-design-for-restaurants-1.jpg" alt="Detroit restaurant dining room with warm lighting and guests at tables" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>What a Restaurant Website Is Actually For</h2>
+
+<p>Most restaurant owners think a website needs to look good. That's table stakes. What a restaurant website actually needs to do is convert — turn the person scrolling through Google results at 7pm into a confirmed reservation by 7:02pm. Design serves that conversion. Every element on the page either accelerates that path or creates friction on it.</p>
+
+<h3>The Menu Has to Live on the Website — Not a PDF</h3>
+
+<p>Menus as PDFs are the single most common mistake restaurant websites make, and it kills both the user experience and your search rankings. PDFs don't render well on mobile, can't be indexed by Google for relevant search terms like "wood-fired pizza Detroit" or "prix fixe dinner Midtown," and create friction when customers want to browse on their phone in bed before making a reservation. Your menu needs to be actual HTML text on an actual web page — formatted clearly, with sections, prices, and descriptions.</p>
+
+<p>An indexed menu page also means Google can surface your site when someone searches a specific dish or cuisine type. "Duck confit Detroit restaurant" pulling up your menu page is not hypothetical — it happens when the menu is built into the site correctly.</p>
+
+<h3>Reservations and Ordering Must Be Above the Fold</h3>
+
+<p>The reservation button belongs at the top of the page — not buried in a navigation menu, not linked from the footer, not two scrolls down. Above the fold, on mobile, immediately visible. If you use OpenTable, Resy, Tock, or a direct booking form, that integration should load fast and work on a phone without pinching and zooming.</p>
+
+<p>The same applies to online ordering if you offer it. A customer who can't find how to order in the first ten seconds will close the tab and order from whoever made it easiest. That's not a loyalty problem — it's a UX problem you can fix.</p>
+
+<h3>Mobile Is the Only Device That Matters</h3>
+
+<p>Over 70% of restaurant searches happen on mobile. That's not a trend — it's the floor. Your website must load in under two seconds on a phone, display without horizontal scrolling, and present a click-to-call phone number on every page. If your site requires a desktop to navigate comfortably, you're turning away the majority of your potential guests before they've read a single word of your menu.</p>
+
+<img src="/blog/website-design-for-restaurants-2.jpg" alt="Restaurant website displayed on smartphone showing menu and reservation button" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Local SEO for Detroit Restaurants — How to Show Up When It Counts</h2>
+
+<p>A beautiful website that nobody finds is a monument to wasted money. Local SEO is what puts your restaurant in front of the guest who's searching right now, in your neighborhood, for exactly what you serve. It's not a technical nicety — it's the difference between a full house and a quiet Tuesday.</p>
+
+<h3>Google Business Profile Is Your Second Homepage</h3>
+
+<p>Your Google Business Profile is often the first thing a potential guest sees — before they ever visit your website. It shows your hours, photos, reviews, menu link, reservation button, and location in the map pack. A fully optimized GBP with recent photos, complete hours (including holiday changes), and a steady stream of fresh reviews outranks a half-filled profile with a missing phone number every time.</p>
+
+<p>Restaurants that treat their GBP as a live, active marketing channel — adding photos weekly, responding to every review, posting specials and events — rank higher in local results and build trust faster with new guests. Read the full breakdown of <a href="/blog/google-business-profile-optimization">Google Business Profile optimization</a> to understand exactly what a complete, competitive profile looks like.</p>
+
+<h3>Schema Markup Tells Google What You Are</h3>
+
+<p>Schema markup is structured data in your website's code that explicitly tells Google you're a restaurant, your cuisine type, your price range, your hours, your address, and your reservation URL. Without it, Google infers these details — sometimes correctly, often not. With it, you're eligible for rich results in search: star ratings, price range, and reservation links that appear directly in the results page before a guest even clicks through to your site.</p>
+
+<p>This is one of the most consistently skipped elements of restaurant websites and one of the most valuable. The full explanation of <a href="/blog/what-is-schema-markup">what schema markup does and how it works</a> covers why it matters and what implementing it looks like in practice.</p>
+
+<h3>Reviews Are Your Yelp, Your Word of Mouth, and Your Trust Signal</h3>
+
+<p>A Detroit restaurant with 12 Google reviews and a 4.2 average is invisible next to the competitor with 180 reviews and a 4.7. Google ranks the restaurant that more people have validated — and new guests trust the restaurant that more people have reviewed. Both effects compound over time: more reviews means higher ranking means more guests means more reviews.</p>
+
+<p>The problem is that happy guests almost never leave reviews on their own. The experience needs to prompt them. A text message after the meal — "Thanks for dining with us tonight. If you enjoyed your visit, a Google review means the world to our team. [direct link]" — sent automatically is how restaurants build review profiles that outrank the competition. The <a href="/blog/how-to-get-more-google-reviews">guide to getting more Google reviews</a> covers the exact system that works for restaurants specifically.</p>
+
+<img src="/blog/website-design-for-restaurants-3.jpg" alt="Beautifully plated dish photographed for restaurant website" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Food Photography Makes or Breaks the Reservation</h2>
+
+<p>People decide whether to book based on photos before they read a single word of your copy. That seared duck breast photographed in natural light by a professional food photographer generates more reservations than a paragraph about your locally sourced menu ever will. The visual impression is the first impression, and it happens in under three seconds.</p>
+
+<p>This doesn't mean you need a full editorial shoot for every dish. It means you need five to ten hero-quality photos that represent your food and your space honestly and beautifully. The dining room at full atmosphere. The signature dish that defines your menu. The bar setup. Plating close-ups that make a guest's stomach react before their brain does. These photos work on your website, on your Google Business Profile, and across every platform where guests are researching where to eat tonight.</p>
+
+<p>Stock photos don't work for restaurants. They signal that the food isn't worth showing. Real photography of real food, at your actual location, shot under the right conditions, is a one-time investment that returns value every day it's on the site.</p>
+
+<h2>The Restaurant Website Checklist</h2>
+
+<ul>
+  <li><strong>HTML menu on a dedicated page</strong> — no PDFs, indexed by Google, readable on mobile</li>
+  <li><strong>Reservation button above the fold</strong> — OpenTable, Resy, Tock, or direct form; loads fast on mobile</li>
+  <li><strong>Click-to-call phone number on every page</strong> — one tap from anywhere on the site</li>
+  <li><strong>Hours clearly displayed</strong> — including holiday hours, updated in real time</li>
+  <li><strong>Address linked to Google Maps</strong> — one tap for directions from the site</li>
+  <li><strong>Professional food and interior photos</strong> — not stock, not iPhone snapshots from 2020</li>
+  <li><strong>Google Business Profile fully optimized</strong> — photos, hours, menu link, reservation button</li>
+  <li><strong>Schema markup implemented</strong> — Restaurant type, cuisine, hours, price range, reservation URL</li>
+  <li><strong>Review generation system running</strong> — automated post-visit text with direct review link</li>
+  <li><strong>Page speed under two seconds on mobile</strong> — tested, not assumed</li>
+  <li><strong>Neighborhood-specific language in content</strong> — "Corktown," "Eastern Market," "New Center" — not just "Detroit"</li>
+</ul>
+
+<h2>The Math — Empty Tables vs. a Website That Books</h2>
+
+<p>A restaurant website done right costs money. So does every empty chair on a Saturday night. Here's the honest math: if a professionally built website generates ten additional reservation requests per month — guests who found you on Google and would otherwise have gone to a competitor — and each table represents a $120–$180 average check, that's $1,200–$1,800 in incremental monthly revenue from a single source. That math holds even at modest conversion rates.</p>
+
+<p>The <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> is measurable for any local business, but it's especially clear for restaurants because the average check and return visit rate create compounding value. A guest who books once and becomes a monthly regular is worth $1,400–$2,200 per year. A website that brings in five new guests like that per month is building a foundation that makes the initial investment look trivial inside the first quarter.</p>
+
+<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+  <strong style="font-size:1.1em;">Ready to Fill More Tables?</strong>
+  <p style="margin:12px 0 0;">Caliber Web Studio builds restaurant websites for Detroit businesses — fast, mobile-first, built for local search from the ground up. Menu pages, reservation integration, photography-forward design, schema markup, and GBP optimization included. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">313-799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">get your free site preview</a> and see what your restaurant's website could look like before you spend a dollar.</p>
+</div>
+
+<h2>Stop Sending Reservations to the Competition</h2>
+
+<p>Every week, someone in your neighborhood searches for a restaurant like yours, finds a competitor's site that loads faster and has a clearer reservation button, and books there instead. That's not because your food is worse. It's because their website did its job and yours didn't. A restaurant website built specifically for Detroit's local search environment fixes that — and it keeps working for you every night the dining room is open.</p>
 `
   }
 ];

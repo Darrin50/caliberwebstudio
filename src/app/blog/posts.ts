@@ -5931,6 +5931,129 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 </div>
 
 `
+  },
+  {
+    "slug": "restaurant-website-features-detroit",
+    "thumbnail": "/blog/restaurant-website-features-detroit-thumb.jpg",
+    "title": "5 Website Features Every Detroit Restaurant Owner Needs",
+    "description": "Most Detroit restaurant websites are losing reservations every day. Here are the 5 must-have features for restaurant website design in Detroit that actually fill tables.",
+    "date": "2026-04-14",
+    "category": "Industry Guides",
+    "relatedSlugs": ["website-design-for-restaurants", "local-seo-guide-for-small-businesses", "google-business-profile-optimization", "roi-of-a-professional-website"],
+    "content": `
+<h1>5 Website Features Every Detroit Restaurant Owner Needs</h1>
+
+<p>Detroit restaurant owners work harder than almost any other small business operator on the planet. You're managing inventory, staff, health inspections, and equipment failures — simultaneously, daily. Your website should be the one part of your business that works without you watching. It's the employee who never calls in sick, answers questions at 2 AM, and tells people how to find you while you're managing the dinner rush.</p>
+
+<p>But here's what most restaurant websites in Detroit are actually doing: nothing. A PDF menu that doesn't load on mobile. A phone number you can't tap to call. A beautiful hero photo with no way to book a table. A Google Maps link that nobody clicks because the site took six seconds to load and they already bounced. These aren't design problems. They're revenue problems. Here are the 5 features that separate a <strong>restaurant website design in Detroit</strong> that fills tables from one that just takes up server space.</p>
+
+<img src="/blog/restaurant-website-features-detroit-1.jpg" alt="Detroit restaurant interior with warm lighting and set tables during evening service" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Feature 1: An HTML Menu Page (Not a PDF)</h2>
+
+<p>The most important page on your restaurant's website isn't your homepage. It's your menu. And the most common mistake Detroit restaurants make? Posting it as a PDF.</p>
+
+<p>PDFs kill conversions. They don't load cleanly on mobile — they require a separate download, zoom in wrong, and half your visitors give up before they read a single item. Google can't fully index a PDF the way it indexes HTML text. Which means your menu — the most relevant content on your entire site — is invisible to search engines.</p>
+
+<p>An HTML menu page does three things that matter immediately:</p>
+<ul>
+  <li><strong>It loads instantly</strong> — especially on mobile, where over 70% of restaurant search traffic comes from</li>
+  <li><strong>It gets indexed</strong> — when someone searches "lamb shank Detroit" or "vegan brunch Midtown," your menu page is a candidate; a PDF isn't</li>
+  <li><strong>It converts</strong> — a diner who reads your full menu with descriptions and prices, without downloading anything, is one tap away from making a reservation</li>
+</ul>
+
+<h3>What Your Menu Page Needs</h3>
+<p>Full menu organized by section. Descriptions — not just "Salmon" but "Pan-seared salmon with roasted fingerlings and lemon caper sauce." Prices. Dietary callouts: halal, vegan, gluten-free, nut-free. And critically: update it when your menu changes. An outdated menu listing items you no longer serve is an active trust killer — a diner who shows up expecting something you discontinued doesn't come back.</p>
+
+<p>For Dearborn restaurants specifically: English and Arabic menus on the same page, with proper transliterations of dish names, serve a bilingual community and capture both language search queries. It's a small technical investment with measurable search impact.</p>
+
+<h2>Feature 2: Mobile-First Design with Click-to-Call</h2>
+
+<p>Over 70% of local restaurant searches happen on a phone. When someone searches "restaurants in Corktown" at 7 PM on a Saturday, they're standing on a sidewalk deciding where to eat in the next thirty minutes. If your site takes five seconds to load, they're gone. If your phone number isn't a blue tap-to-call link, you've added friction to someone who's already hungry and already decided to call somebody.</p>
+
+<p>A mobile-first restaurant website means:</p>
+<ul>
+  <li><strong>Load time under 2 seconds on a 4G connection</strong> — every additional second costs roughly 20% of those visitors</li>
+  <li><strong>Phone number is a tap-to-call link</strong> — one tap, no copy-pasting</li>
+  <li><strong>Reservation or order button visible immediately</strong> — no scrolling required before your key CTA appears</li>
+  <li><strong>Menu readable without pinching and zooming</strong> — this sounds obvious; most Detroit restaurant websites fail it</li>
+  <li><strong>Address that opens Google Maps on tap</strong> — your customer is on the street with their phone; get them walking to your door</li>
+</ul>
+
+<h3>The Mobile Decision Window</h3>
+<p>The average diner making a same-night decision takes under 20 seconds to decide whether your site is worth their time. That's not a design problem. That's a revenue window. A site that passes the 20-second mobile test gets the reservation. One that doesn't gets the back button — and your competitor two blocks over gets the table.</p>
+
+<p>Most Detroit restaurant websites were built for desktops in 2019 and nobody touched them since. That's the baseline you're competing against. A mobile-first build isn't a luxury; it's the floor.</p>
+
+<img src="/blog/restaurant-website-features-detroit-2.jpg" alt="Person holding smartphone showing restaurant website with visible menu and reservation button" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Feature 3: An Embedded Reservation or Online Ordering System</h2>
+
+<p>A diner who wants to book a table should be able to do it from your website. Not from a link to OpenTable that opens a new tab. Not from a Google search result. From your website — without leaving it.</p>
+
+<p>The difference matters more than most owners realize. When a customer clicks out to an external reservation platform, you've added friction, lost your branding, and sent them somewhere you don't control. Some percentage of those customers don't complete the reservation. That's real money from real diners who were one step away from showing up.</p>
+
+<p>OpenTable, Resy, and Square Online all embed directly into a website. Real-time availability. No redirect. The customer stays on your page and books — seamless because it is seamless.</p>
+
+<h3>The Direct Ordering Math</h3>
+<p>For takeout and delivery, the economics are even clearer. DoorDash and Grubhub take 15–30% per order. If you're doing $6,000 per month in delivery, that's up to $1,800 per month leaving your pocket. ChowNow, Toast, and Square Online let you build a direct-to-website ordering system for a flat monthly fee — and you keep the margin you earned.</p>
+
+<p>Direct ordering customers are also yours, not DoorDash's. You get their email. You control the experience. You can run loyalty programs. The website becomes the hub of your customer relationship instead of a passive brochure linking to someone else's platform.</p>
+
+<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+  <strong style="font-size:1.1em;">Want to see what a proper Detroit restaurant website looks like?</strong>
+  <p style="margin:12px 0 0;">Caliber Web Studio builds restaurant websites in Detroit with all 5 features built in from day one. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free site preview</a> or call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> — we'll audit your current site and show you exactly what it's costing you.</p>
+</div>
+
+<h2>Feature 4: A Local SEO Foundation</h2>
+
+<p>Restaurant website design in Detroit doesn't just mean making it look good. It means making it findable. The specific searches that fill tables in Detroit:</p>
+<ul>
+  <li>"Brunch in Midtown Detroit"</li>
+  <li>"Best wings Detroit East Side"</li>
+  <li>"Halal restaurant Dearborn"</li>
+  <li>"Eastern Market lunch"</li>
+  <li>"Soul food near me Detroit"</li>
+</ul>
+
+<p>These aren't hypothetical. They're exactly what people type into Google at specific moments of hunger and decision. If your restaurant doesn't appear in the results for searches relevant to you, all the great food in the world doesn't matter — they're eating at whoever showed up.</p>
+
+<h3>The Three-Part Local SEO Foundation for Restaurants</h3>
+
+<p><strong>Schema markup</strong> — The code that tells Google exactly what kind of restaurant you are, your cuisine type, your hours, your price range, your neighborhood, and your rating. Without it, Google has to guess. With it, you're telling Google directly — and that's what produces the star ratings and rich snippets you see in search results. Our <a href="/blog/what-is-schema-markup">guide to schema markup</a> covers exactly how this works for local restaurants.</p>
+
+<p><strong>Neighborhood language</strong> — Your website should reference your specific neighborhood, nearby landmarks, and cross streets in natural language. "We're on Michigan Avenue in Corktown, two blocks from the old train station" tells Google and your potential customer exactly where you are. That specificity outperforms a generic address in the footer every single time. A <a href="/areas/corktown">Corktown</a> restaurant that uses "Corktown" throughout relevant content ranks better than one that buries its location in metadata.</p>
+
+<p><strong>Google Business Profile sync</strong> — Your website and GBP must share the same name, address, phone, and hours exactly. Inconsistency creates conflicting signals that suppress your ranking. The <a href="/blog/google-business-profile-optimization">GBP optimization guide</a> covers the full setup for restaurants, including cuisine category selection, photo strategy, and review velocity. Read our <a href="/blog/local-seo-guide-for-small-businesses">complete local SEO guide</a> to understand how all the pieces connect.</p>
+
+<p>These three components form the foundation that determines your map pack placement — the three-result block that captures the majority of clicks in any local restaurant search. The restaurants in that block didn't get there by accident.</p>
+
+<h2>Feature 5: A Reviews and Social Proof Engine</h2>
+
+<p>Detroit diners trust other Detroit diners. A Google review from someone in your neighborhood carries more weight than any marketing copy you write. An 80-review profile at 4.8 stars does more selling than a paid Instagram ad. The problem is most restaurant websites treat reviews as an afterthought — a link to Yelp buried in the footer, if that.</p>
+
+<p>A professional restaurant website builds social proof directly into the experience:</p>
+<ul>
+  <li><strong>Google Reviews widget on the homepage</strong> — your rating and recent reviews visible without asking visitors to leave the page</li>
+  <li><strong>Star rating in search result snippets</strong> — rich snippets in Google search results showing your rating attract clicks before a visitor even reaches your site</li>
+  <li><strong>Automated review request system</strong> — after a great meal, a follow-up text or QR code at checkout captures reviews when satisfaction is at its peak</li>
+</ul>
+
+<h3>Photos Are Social Proof Too</h3>
+<p>A gallery of 15+ professional food photos isn't decoration — it's visual proof your restaurant is worth visiting. A first-time diner who sees a gorgeous plate on your website and 200 Google reviews calling it the best meal in Corktown is not a hard close. You've already won. They're just confirming the decision they've already made.</p>
+
+<p>Budget for a two-to-three hour session with a Detroit food photographer. You'll get 30–50 usable images that carry your website, Google Business Profile, and Instagram for years. It's one of the highest per-dollar investments a restaurant makes in its digital presence. Our <a href="/blog/how-to-get-more-google-reviews">guide to getting more Google reviews</a> covers exactly how to build review velocity without pestering your customers.</p>
+
+<h2>These 5 Features Are the Difference Between Full Tables and Empty Ones</h2>
+
+<p>None of this is complicated. None of it is expensive relative to what it generates. But these 5 features are the difference between a restaurant website that works and one that just takes up server space while your competitor two blocks over collects the Google traffic.</p>
+
+<p>If your current site is missing any of these — and most Detroit restaurant sites are missing three or four — you're leaving covers on the table every single week. The restaurant with the same quality food, same neighborhood, same prices, but a properly built website gets the reservations. They get the direct orders. They get the reviews that compound into more searches, more clicks, more covers.</p>
+
+<p>Caliber Web Studio builds restaurant website designs in Detroit with all five features built in from day one. HTML menus. Mobile-first design. Embedded reservations. Local SEO foundation. Social proof engine. No PDFs, no five-second load times, no missing reservation systems.</p>
+
+<p>Call <a href="tel:3137992315">(313) 799-2315</a> or <a href="/contact">get a free site preview</a> — we'll show you exactly what your restaurant's website should look like and what it's currently costing you not to have it.</p>
+`
   }
 ];
 

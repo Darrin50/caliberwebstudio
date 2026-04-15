@@ -4,7 +4,7 @@ import path from 'path';
 
 export async function GET() {
   const html = await readFile(
-    path.join(process.cwd(), 'public', 'detroitbestsoulfood-demo.html'),
+    path.join(process.cwd(), 'public', 'detroitbestsoulfood', 'index.html'),
     'utf-8'
   );
   return new NextResponse(html, {

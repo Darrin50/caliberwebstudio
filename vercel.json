@@ -6,6 +6,5 @@
     "NEXT_PUBLIC_SITE_URL": "https://caliberwebstudio.com"
   },
   "rewrites": [
-    { "source": "/detroitdogsalon", "destination": "/dds-demo.html" }
-  ]
-}
+    { "source": "/detroitdogsalon", "destination": "/dds-demo.html" },
+    { "

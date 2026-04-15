@@ -3,10 +3,12 @@ import { readFile } from 'fs/promises';
 import path from 'path';
 
 export async function GET() {
-  const html = await readFile(
-    path.join(process.cwd(), 'public', 'detroitbestsoulfood-demo.html'),
+  let html = await readFile(
+    path.join(process.cwd(), 'public', 'detroitbestsoulfood', 'index.html'),
     'utf-8'
   );
+  // Inject base tag so relative image paths resolve correctly
+  html = html.replace('<head>', '<head><base href="/detroitbestsoulfood/">');
   return new NextResponse(html, {
     headers: { 'Content-Type': 'text/html; charset=utf-8' },
   });

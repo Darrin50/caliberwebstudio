@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<\!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,1629 +8,462 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <style>
-    /* ============================================================
-       DESIGN TOKENS — LUXURY TIER
-       Dare to Stare Beauty
-    ============================================================ */
     :root {
-      --color-bg-primary:   #0A0A0A;
-      --color-bg-secondary: #111111;
-      --color-bg-tertiary:  #171717;
-      --color-bg-card:      #141414;
-
-      --color-text-primary:   #F5F0EB;
-      --color-text-secondary: #A89B90;
-      --color-text-tertiary:  #6B6059;
-
-      --color-accent:         #B76E79;
-      --color-accent-light:   #C98A94;
-      --color-accent-dim:     rgba(183, 110, 121, 0.12);
-      --color-accent-glow:    rgba(183, 110, 121, 0.18);
-      --color-gold:           #C9A96E;
-      --gradient-luxury:      linear-gradient(135deg, #B76E79 0%, #C9A96E 100%);
-      --gradient-subtle:      linear-gradient(135deg, rgba(183,110,121,0.15) 0%, rgba(201,169,110,0.08) 100%);
-
-      --color-border:         rgba(255,255,255,0.07);
-      --color-border-accent:  rgba(183, 110, 121, 0.25);
-
-      --font-heading: 'Cormorant Garamond', Georgia, serif;
-      --font-body:    'Inter', system-ui, sans-serif;
-
-      --heading-hero:    clamp(3rem, 6vw, 5.5rem);
-      --heading-section: clamp(2rem, 3.5vw, 3rem);
-      --heading-sub:     clamp(1.25rem, 2vw, 1.5rem);
-
-      --space-4:  1rem;
-      --space-6:  1.5rem;
-      --space-8:  2rem;
-      --space-12: 3rem;
-      --space-16: 4rem;
-      --space-20: 5rem;
-      --space-24: 6rem;
-      --space-32: 8rem;
-
-      --radius-sm:   0.375rem;
-      --radius-md:   0.5rem;
-      --radius-lg:   0.75rem;
-      --radius-xl:   1rem;
-      --radius-full: 9999px;
-
-      --shadow-glow:    0 0 30px rgba(183, 110, 121, 0.15);
-      --shadow-card:    0 1px 0 rgba(255,255,255,0.04), 0 8px 24px rgba(0,0,0,0.4);
-      --shadow-card-hover: 0 1px 0 rgba(255,255,255,0.06), 0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(183,110,121,0.08);
-
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-      --duration: 220ms;
-    }
-
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background-color: var(--color-bg-primary);
-      color: var(--color-text-primary);
-      font-family: var(--font-body);
-      font-size: 1rem;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img { display: block; max-width: 100%; }
-    a { text-decoration: none; color: inherit; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-    }
-
-    /* ============================================================
-       NAV
-    ============================================================ */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 20px var(--space-6);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(10, 10, 10, 0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--color-border);
-      transition: background var(--duration) var(--ease);
-    }
-
-    .nav-logo {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--color-text-primary);
-    }
-
-    .nav-logo span {
-      color: var(--color-accent);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: var(--space-8);
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.8125rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-text-secondary);
-      transition: color var(--duration) var(--ease);
-    }
-
-    .nav-links a:hover { color: var(--color-text-primary); }
-
-    .nav-cta {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 10px 22px;
-      border: 1px solid var(--color-accent);
-      color: var(--color-accent);
-      border-radius: var(--radius-full);
-      transition: background var(--duration) var(--ease), color var(--duration) var(--ease);
-    }
-
-    .nav-cta:hover {
-      background: var(--color-accent);
-      color: #fff;
-    }
-
-    .nav-mobile-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .nav-mobile-toggle span {
-      display: block;
-      width: 22px;
-      height: 1.5px;
-      background: var(--color-text-primary);
-      border-radius: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-mobile-toggle { display: flex; }
-    }
-
-    /* ============================================================
-       HERO
-    ============================================================ */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 80px;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(183, 110, 121, 0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201, 169, 110, 0.05) 0%, transparent 60%),
-        var(--color-bg-primary);
-    }
-
-    /* Decorative grain texture */
-    .hero-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-      opacity: 0.025;
-      pointer-events: none;
-    }
-
-    .hero-container {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: var(--space-32) var(--space-6);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-16);
-      align-items: center;
-    }
-
-    .hero-label {
-      display: inline-block;
-      font-size: 0.6875rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      margin-bottom: var(--space-6);
-    }
-
-    .hero-title {
-      font-family: var(--font-heading);
-      font-size: var(--heading-hero);
-      font-weight: 400;
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      color: var(--color-text-primary);
-    }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--color-accent);
-    }
-
-    .hero-subtitle {
-      margin-top: var(--space-6);
-      font-size: 1.0625rem;
-      line-height: 1.75;
-      color: var(--color-text-secondary);
-      max-width: 420px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: var(--space-4);
-      margin-top: var(--space-8);
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 30px;
-      background: var(--gradient-luxury);
-      color: #fff;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-radius: var(--radius-full);
-      transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
-      box-shadow: 0 4px 20px rgba(183, 110, 121, 0.3);
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 30px rgba(183, 110, 121, 0.4);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: transparent;
-      color: var(--color-text-secondary);
-      font-size: 0.8125rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-radius: var(--radius-full);
-      border: 1px solid var(--color-border);
-      transition: border-color var(--duration) var(--ease), color var(--duration) var(--ease);
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.2);
-      color: var(--color-text-primary);
-    }
-
-    .hero-trust {
-      display: flex;
-      align-items: center;
-      gap: var(--space-6);
-      margin-top: var(--space-8);
-      flex-wrap: wrap;
-    }
-
-    .hero-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.8125rem;
-      color: var(--color-text-tertiary);
-    }
-
-    .hero-trust-dot {
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--color-accent-dim);
-      display: inline-block;
-    }
-
-    .hero-image-side {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-image-frame {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 3/4;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      background: linear-gradient(145deg, #1a1014 0%, #261820 40%, #1c1118 70%, #0f0a0c 100%);
-      box-shadow: var(--shadow-card);
-    }
-
-    /* Luxury photo placeholder with shimmer */
-    .hero-image-frame::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 50% 35%, rgba(183, 110, 121, 0.18) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 30% at 70% 70%, rgba(201, 169, 110, 0.1) 0%, transparent 50%);
-    }
-
-    .hero-image-frame::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(45deg, transparent 30%, rgba(183,110,121,0.06) 50%, transparent 70%);
-      animation: shimmer 4s ease-in-out infinite;
-    }
-
-    @keyframes shimmer {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-
-    .hero-image-placeholder-icon {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: rgba(183, 110, 121, 0.2);
-    }
-
-    .hero-image-placeholder-icon svg {
-      width: 48px; height: 48px;
-    }
-
-    .hero-image-caption {
-      position: absolute;
-      bottom: -28px;
-      left: 0; right: 0;
-      text-align: center;
-      font-size: 0.6875rem;
-      color: var(--color-text-tertiary);
-      letter-spacing: 0.05em;
-    }
-
-    .hero-floating-badge {
-      position: absolute;
-      top: 32px;
-      left: -16px;
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: 14px 18px;
-      box-shadow: var(--shadow-card);
-      white-space: nowrap;
-    }
-
-    .hero-floating-badge .badge-number {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--color-accent);
-      display: block;
-    }
-
-    .hero-floating-badge .badge-label {
-      font-size: 0.6875rem;
-      color: var(--color-text-tertiary);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .hero-floating-cta {
-      position: absolute;
-      bottom: 40px;
-      right: -20px;
-      background: var(--gradient-luxury);
-      border-radius: var(--radius-lg);
-      padding: 14px 20px;
-      box-shadow: 0 8px 24px rgba(183,110,121,0.35);
-      white-space: nowrap;
-    }
-
-    .hero-floating-cta .cta-text {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #fff;
-      display: block;
-    }
-
-    .hero-floating-cta .cta-sub {
-      font-size: 0.6875rem;
-      color: rgba(255,255,255,0.7);
-    }
-
-    @media (max-width: 768px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        padding: var(--space-16) var(--space-6);
-        text-align: center;
-      }
-      .hero-subtitle { max-width: 100%; }
-      .hero-actions { justify-content: center; }
-      .hero-trust { justify-content: center; }
-      .hero-image-side { display: none; }
-    }
-
-    /* ============================================================
-       MARQUEE STRIP
-    ============================================================ */
-    .marquee-strip {
-      background: var(--color-accent);
-      padding: 11px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .marquee-track {
-      display: inline-flex;
-      gap: 40px;
-      animation: marqueeScroll 22s linear infinite;
-      font-size: 0.6875rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #fff;
-    }
-
-    .marquee-dot {
-      opacity: 0.6;
-      font-size: 0.5rem;
-    }
-
-    @keyframes marqueeScroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-
-    /* ============================================================
-       SERVICES SECTION
-    ============================================================ */
-    .section {
-      padding: var(--space-24) 0;
-    }
-
-    .section-label {
-      font-size: 0.6875rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      margin-bottom: var(--space-4);
-    }
-
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: var(--heading-section);
-      font-weight: 400;
-      line-height: 1.15;
-      color: var(--color-text-primary);
-    }
-
-    .section-sub {
-      margin-top: var(--space-4);
-      font-size: 1.0625rem;
-      line-height: 1.75;
-      color: var(--color-text-secondary);
-      max-width: 520px;
-    }
-
-    .section-header {
-      margin-bottom: var(--space-12);
-    }
-
-    /* Service cards */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-6);
-    }
-
-    .service-card {
-      padding: var(--space-8);
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-card);
-      transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), border-color var(--duration) var(--ease);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(183,110,121,0.3), transparent);
-      opacity: 0;
-      transition: opacity var(--duration) var(--ease);
-    }
-
-    .service-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-card-hover);
-      border-color: var(--color-border-accent);
-    }
-
-    .service-card:hover::before { opacity: 1; }
-
-    .service-icon-wrap {
-      width: 44px; height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--color-accent-dim);
-      border-radius: var(--radius-lg);
-      color: var(--color-accent);
-      margin-bottom: var(--space-6);
-    }
-
-    .service-icon-wrap svg {
-      width: 20px; height: 20px;
-      stroke: var(--color-accent);
-      stroke-width: 1.5;
-      fill: none;
-    }
-
-    .service-name {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-4);
-    }
-
-    .service-desc {
-      font-size: 0.9375rem;
-      line-height: 1.7;
-      color: var(--color-text-secondary);
-    }
-
-    .service-tag {
-      display: inline-block;
-      margin-top: var(--space-4);
-      font-size: 0.6875rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-gold);
-    }
-
-    @media (max-width: 768px) {
-      .services-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    /* ============================================================
-       ABOUT / SPLIT SECTION
-    ============================================================ */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-16);
-      align-items: center;
-    }
-
-    .about-image-frame {
-      aspect-ratio: 4/5;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      background: linear-gradient(155deg, #1a1014 0%, #261820 50%, #1c1118 100%);
-      position: relative;
-      box-shadow: var(--shadow-card);
-    }
-
-    .about-image-frame::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(183,110,121,0.15) 0%, transparent 65%);
-    }
-
-    .about-image-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(183,110,121,0.18);
-    }
-
-    .about-image-placeholder svg { width: 42px; height: 42px; }
-    .about-image-caption-below {
-      text-align: center;
-      font-size: 0.6875rem;
-      color: var(--color-text-tertiary);
-      letter-spacing: 0.04em;
-      margin-top: 10px;
-    }
-
-    .about-quote {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 300;
-      font-style: italic;
-      line-height: 1.5;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-6);
-      border-left: 1px solid var(--color-accent);
-      padding-left: var(--space-6);
-    }
-
-    .about-body {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-6);
-    }
-
-    .about-sig {
-      font-family: var(--font-heading);
-      font-size: 1.125rem;
-      font-style: italic;
-      color: var(--color-accent);
-    }
-
-    @media (max-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ============================================================
-       TESTIMONIALS
-    ============================================================ */
-    .testimonials-bg {
-      background: var(--color-bg-secondary);
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-6);
-    }
-
-    .testimonial-card {
-      padding: var(--space-8);
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-card);
-    }
-
-    .stars {
-      display: flex;
-      gap: 3px;
-      margin-bottom: var(--space-4);
-    }
-
-    .star-icon {
-      color: var(--color-gold);
-      font-size: 14px;
-    }
-
-    .testimonial-quote {
-      font-size: 0.9375rem;
-      line-height: 1.75;
-      color: var(--color-text-secondary);
-      font-style: italic;
-      margin-bottom: var(--space-6);
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: var(--space-4);
-    }
-
-    .author-avatar {
-      width: 40px; height: 40px;
-      border-radius: var(--radius-full);
-      background: var(--gradient-luxury);
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      color: #fff;
-    }
-
-    .author-name {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--color-text-primary);
-    }
-
-    .author-meta {
-      font-size: 0.75rem;
-      color: var(--color-text-tertiary);
-      letter-spacing: 0.03em;
-    }
-
-    @media (max-width: 768px) {
-      .testimonials-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      .testimonials-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    /* ============================================================
-       TRAINING CTA SECTION
-    ============================================================ */
-    .training-section {
-      background: var(--color-bg-tertiary);
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .training-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-16);
-      align-items: center;
-    }
-
-    .training-label {
-      font-size: 0.6875rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--color-gold);
-      margin-bottom: var(--space-4);
-    }
-
-    .training-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 3.5vw, 2.75rem);
-      font-weight: 400;
-      line-height: 1.15;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-4);
-    }
-
-    .training-body {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-8);
-    }
-
-    .training-stats {
-      display: flex;
-      gap: var(--space-8);
-    }
-
-    .training-stat-value {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--color-accent);
-      display: block;
-    }
-
-    .training-stat-label {
-      font-size: 0.75rem;
-      color: var(--color-text-tertiary);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .training-image-frame {
-      aspect-ratio: 4/3;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(155deg, #1a1014 0%, #231619 100%);
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-    }
-
-    .training-image-frame::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(201,169,110,0.12) 0%, transparent 60%);
-    }
-
-    .training-image-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(201,169,110,0.18);
-    }
-
-    .training-image-placeholder svg { width: 42px; height: 42px; }
-    .training-image-caption-below {
-      text-align: center;
-      font-size: 0.6875rem;
-      color: var(--color-text-tertiary);
-      letter-spacing: 0.04em;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .training-inner { grid-template-columns: 1fr; }
-      .training-stats { flex-wrap: wrap; gap: var(--space-6); }
-    }
-
-    /* ============================================================
-       FINAL CTA
-    ============================================================ */
-    .final-cta {
-      padding: var(--space-32) 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .final-cta::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(183,110,121,0.07) 0%, transparent 70%);
-    }
-
-    .final-cta-content {
-      position: relative;
-    }
-
-    .final-cta-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-6);
-    }
-
-    .final-cta-title em {
-      font-style: italic;
-      color: var(--color-accent);
-    }
-
-    .final-cta-sub {
-      font-size: 1.0625rem;
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-8);
-      max-width: 460px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.75;
-    }
-
-    .final-cta-actions {
-      display: flex;
-      justify-content: center;
-      gap: var(--space-4);
-      flex-wrap: wrap;
-    }
-
-    /* ============================================================
-       FOOTER
-    ============================================================ */
-    .footer {
-      background: var(--color-bg-secondary);
-      border-top: 1px solid var(--color-border);
-      padding: var(--space-12) 0 var(--space-8);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: var(--space-12);
-      margin-bottom: var(--space-8);
-    }
-
-    .footer-brand-name {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-4);
-    }
-
-    .footer-brand-desc {
-      font-size: 0.875rem;
-      line-height: 1.7;
-      color: var(--color-text-tertiary);
-      max-width: 260px;
-      margin-bottom: var(--space-6);
-    }
-
-    .footer-social {
-      display: flex;
-      gap: var(--space-4);
-    }
-
-    .footer-social a {
-      width: 34px; height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-full);
-      color: var(--color-text-tertiary);
-      transition: border-color var(--duration) var(--ease), color var(--duration) var(--ease);
-    }
-
-    .footer-social a:hover {
-      border-color: var(--color-accent);
-      color: var(--color-accent);
-    }
-
-    .footer-social svg {
-      width: 15px; height: 15px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-    }
-
-    .footer-col-title {
-      font-size: 0.6875rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-4);
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-3);
-    }
-
-    .footer-links a {
-      font-size: 0.875rem;
-      color: var(--color-text-tertiary);
-      transition: color var(--duration) var(--ease);
-    }
-
-    .footer-links a:hover { color: var(--color-accent); }
-
-    .footer-contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 0.875rem;
-      color: var(--color-text-tertiary);
-      margin-bottom: var(--space-3);
-    }
-
-    .footer-contact-item svg {
-      width: 14px; height: 14px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      stroke: var(--color-accent);
-      stroke-width: 1.5;
-      fill: none;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid var(--color-border);
-      padding-top: var(--space-6);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: var(--space-4);
-    }
-
-    .footer-copy {
-      font-size: 0.75rem;
-      color: var(--color-text-tertiary);
-    }
-
-    .footer-credit {
-      font-size: 0.75rem;
-      color: var(--color-text-tertiary);
-    }
-
-    .footer-credit a {
-      color: var(--color-accent);
-      transition: opacity var(--duration) var(--ease);
-    }
-
-    .footer-credit a:hover { opacity: 0.75; }
-
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: 1fr; gap: var(--space-8); }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-
-    /* ============================================================
-       MOBILE STICKY BAR
-    ============================================================ */
-    .mobile-sticky-bar {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 99;
-      background: var(--color-bg-secondary);
-      border-top: 1px solid var(--color-border);
-      padding: 12px 16px;
-      gap: 12px;
-    }
-
-    .mobile-sticky-bar a {
-      flex: 1;
-      text-align: center;
-      padding: 13px;
-      border-radius: var(--radius-full);
-      font-size: 0.8125rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .mobile-sticky-bar .mob-call {
-      background: var(--gradient-luxury);
-      color: #fff;
-    }
-
-    .mobile-sticky-bar .mob-book {
-      border: 1px solid var(--color-border);
-      color: var(--color-text-secondary);
-    }
-
-    @media (max-width: 768px) {
-      .mobile-sticky-bar { display: flex; }
-      body { padding-bottom: 70px; }
-    }
-
-    /* ============================================================
-       SCROLL REVEAL ANIMATIONS
-    ============================================================ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-
-    /* Divider */
-    .section-divider {
-      width: 48px;
-      height: 1px;
-      background: var(--gradient-luxury);
-      margin: var(--space-4) 0 var(--space-8);
-      display: block;
-    }
+      --bg:        #0A0A0A;
+      --bg2:       #111111;
+      --bg3:       #171717;
+      --card:      #141414;
+      --text:      #F5F0EB;
+      --muted:     #A89B90;
+      --dim:       #6B6059;
+      --accent:    #B76E79;
+      --accent-l:  #C98A94;
+      --accent-d:  rgba(183,110,121,0.12);
+      --gold:      #C9A96E;
+      --grad:      linear-gradient(135deg,#B76E79 0%,#C9A96E 100%);
+      --border:    rgba(255,255,255,0.07);
+      --border-a:  rgba(183,110,121,0.25);
+      --shadow:    0 1px 0 rgba(255,255,255,0.04),0 8px 24px rgba(0,0,0,0.4);
+      --shadow-h:  0 1px 0 rgba(255,255,255,0.06),0 16px 40px rgba(0,0,0,0.5),0 0 20px rgba(183,110,121,0.08);
+      --fh: 'Cormorant Garamond',Georgia,serif;
+      --fb: 'Inter',system-ui,sans-serif;
+      --ease: cubic-bezier(0.4,0,0.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:1rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+
+    /* ── NAV ── */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 1.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.75);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background 220ms var(--ease)}
+    .nav-logo{display:flex;align-items:center;gap:10px}
+    .nav-logo svg{width:32px;height:32px;flex-shrink:0}
+    .nav-brand{font-family:var(--fh);font-size:1.3rem;font-weight:500;letter-spacing:0.04em;color:var(--text)}
+    .nav-brand span{color:var(--accent)}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+    .nav-links a{font-size:0.8rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);transition:color 200ms}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:10px 22px;border:1px solid var(--accent);color:var(--accent);border-radius:9999px;transition:background 200ms,color 200ms}
+    .nav-cta:hover{background:var(--accent);color:#fff}
+    @media(max-width:768px){.nav-links{display:none}}
+
+    /* ── HERO ── */
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:80px}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(183,110,121,0.08) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(201,169,110,0.05) 0%,transparent 60%),var(--bg)}
+    .hero-container{position:relative;max-width:1200px;margin:0 auto;padding:8rem 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .hero-label{display:inline-block;font-size:0.6875rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+    .hero-title{font-family:var(--fh);font-size:clamp(3rem,6vw,5.5rem);font-weight:400;line-height:1.05;letter-spacing:-0.01em}
+    .hero-title em{font-style:italic;color:var(--accent)}
+    .hero-sub{margin-top:1.5rem;font-size:1.0625rem;line-height:1.75;color:var(--muted);max-width:420px}
+    .hero-actions{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+    .btn-pri{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:var(--grad);color:#fff;font-size:0.8125rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border-radius:9999px;box-shadow:0 4px 20px rgba(183,110,121,0.3);transition:opacity 200ms,transform 200ms,box-shadow 200ms}
+    .btn-pri:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 8px 30px rgba(183,110,121,0.4)}
+    .btn-sec{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:transparent;color:var(--muted);font-size:0.8125rem;letter-spacing:0.06em;text-transform:uppercase;border-radius:9999px;border:1px solid var(--border);transition:border-color 200ms,color 200ms}
+    .btn-sec:hover{border-color:rgba(255,255,255,.2);color:var(--text)}
+    .hero-trust{display:flex;align-items:center;gap:1.5rem;margin-top:2rem;flex-wrap:wrap}
+    .hero-trust-item{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:var(--dim)}
+    .hero-trust-dot{width:4px;height:4px;border-radius:50%;background:var(--accent-d);display:inline-block}
+    /* hero image */
+    .hero-img-side{position:relative;display:flex;align-items:center;justify-content:center}
+    .hero-img-frame{position:relative;width:100%;aspect-ratio:3/4;border-radius:1rem;overflow:hidden;box-shadow:var(--shadow)}
+    .hero-img-frame img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .hero-img-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,10,10,0.5) 100%)}
+    .hero-badge{position:absolute;top:28px;left:-16px;background:var(--card);border:1px solid var(--border);border-radius:0.75rem;padding:14px 18px;box-shadow:var(--shadow);white-space:nowrap;z-index:2}
+    .hero-badge .b-num{font-family:var(--fh);font-size:1.5rem;font-weight:500;color:var(--accent);display:block}
+    .hero-badge .b-lbl{font-size:0.6875rem;color:var(--dim);letter-spacing:.05em;text-transform:uppercase}
+    .hero-badge2{position:absolute;bottom:36px;right:-18px;background:var(--grad);border-radius:0.75rem;padding:14px 20px;box-shadow:0 8px 24px rgba(183,110,121,.35);z-index:2;white-space:nowrap}
+    .hero-badge2 .b2-t{font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#fff;display:block}
+    .hero-badge2 .b2-s{font-size:.6875rem;color:rgba(255,255,255,.7)}
+    @media(max-width:768px){.hero-container{grid-template-columns:1fr;padding:5rem 1.5rem;text-align:center}.hero-sub,.hero-actions,.hero-trust{max-width:100%;justify-content:center}.hero-img-side{display:none}}
+
+    /* ── MARQUEE ── */
+    .marquee-strip{background:var(--accent);padding:11px 0;overflow:hidden;white-space:nowrap}
+    .marquee-track{display:inline-flex;gap:40px;animation:marqueeScroll 22s linear infinite;font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+    .marquee-dot{opacity:.6;font-size:.5rem}
+    @keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ── SECTIONS ── */
+    .section{padding:6rem 0}
+    .section-label{font-size:.6875rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+    .section-title{font-family:var(--fh);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.15}
+    .section-title em{font-style:italic;color:var(--accent)}
+    .section-sub{margin-top:1rem;font-size:1.0625rem;line-height:1.75;color:var(--muted);max-width:520px}
+    .section-header{margin-bottom:3rem}
+    .divider{width:48px;height:1px;background:var(--grad);margin:.75rem 0 2rem;display:block}
+
+    /* ── SERVICES ── */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .svc-card{padding:2rem;background:var(--card);border:1px solid var(--border);border-radius:1rem;box-shadow:var(--shadow);transition:transform 220ms var(--ease),box-shadow 220ms,border-color 220ms;position:relative;overflow:hidden}
+    .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(183,110,121,.3),transparent);opacity:0;transition:opacity 220ms}
+    .svc-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h);border-color:var(--border-a)}
+    .svc-card:hover::before{opacity:1}
+    .svc-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--accent-d);border-radius:.75rem;color:var(--accent);margin-bottom:1.5rem}
+    .svc-icon svg{width:20px;height:20px;stroke:var(--accent);stroke-width:1.5;fill:none}
+    .svc-name{font-family:var(--fh);font-size:1.25rem;font-weight:500;color:var(--text);margin-bottom:1rem}
+    .svc-desc{font-size:.9375rem;line-height:1.7;color:var(--muted)}
+    .svc-tag{display:inline-block;margin-top:1rem;font-size:.6875rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+    @media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+    @media(min-width:768px) and (max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+
+    /* ── ABOUT ── */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .about-img-wrap{position:relative}
+    .about-img-frame{aspect-ratio:4/5;border-radius:1rem;overflow:hidden;box-shadow:var(--shadow)}
+    .about-img-frame img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .about-quote{font-family:var(--fh);font-size:1.5rem;font-weight:300;font-style:italic;line-height:1.5;color:var(--text);margin-bottom:1.5rem;border-left:1px solid var(--accent);padding-left:1.5rem}
+    .about-body{font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:1.5rem}
+    .about-sig{font-family:var(--fh);font-size:1.125rem;font-style:italic;color:var(--accent)}
+    @media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-bg{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .test-card{padding:2rem;background:var(--card);border:1px solid var(--border);border-radius:1rem;box-shadow:var(--shadow)}
+    .stars{display:flex;gap:3px;margin-bottom:1rem;color:var(--gold);font-size:14px}
+    .test-quote{font-size:.9375rem;line-height:1.75;color:var(--muted);font-style:italic;margin-bottom:1.5rem}
+    .test-author{display:flex;align-items:center;gap:1rem}
+    .avatar{width:40px;height:40px;border-radius:9999px;background:var(--grad);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:1rem;color:#fff}
+    .author-name{font-size:.875rem;font-weight:500;color:var(--text)}
+    .author-meta{font-size:.75rem;color:var(--dim)}
+    @media(max-width:768px){.test-grid{grid-template-columns:1fr}}
+    @media(min-width:768px) and (max-width:1024px){.test-grid{grid-template-columns:1fr 1fr}}
+
+    /* ── TRAINING ── */
+    .training-section{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .training-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .training-label{font-size:.6875rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+    .training-title{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.75rem);font-weight:400;line-height:1.15;color:var(--text);margin-bottom:1rem}
+    .training-body{font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:2rem}
+    .training-stats{display:flex;gap:2rem;margin-bottom:2rem;flex-wrap:wrap}
+    .stat-val{font-family:var(--fh);font-size:2rem;font-weight:400;color:var(--accent);display:block}
+    .stat-lbl{font-size:.75rem;color:var(--dim);letter-spacing:.04em;text-transform:uppercase}
+    .training-img-frame{aspect-ratio:4/3;border-radius:1rem;overflow:hidden;box-shadow:var(--shadow)}
+    .training-img-frame img{width:100%;height:100%;object-fit:cover}
+    @media(max-width:768px){.training-inner{grid-template-columns:1fr}}
+
+    /* ── FINAL CTA ── */
+    .final-cta{padding:8rem 0;text-align:center;position:relative;overflow:hidden}
+    .final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(183,110,121,.07) 0%,transparent 70%)}
+    .final-cta-content{position:relative}
+    .cta-title{font-family:var(--fh);font-size:clamp(2.5rem,5vw,4rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem}
+    .cta-title em{font-style:italic;color:var(--accent)}
+    .cta-sub{font-size:1.0625rem;color:var(--muted);margin-bottom:2rem;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.75}
+    .cta-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+
+    /* ── FOOTER ── */
+    .footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 2rem}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
+    .footer-brand{font-family:var(--fh);font-size:1.25rem;font-weight:500;margin-bottom:1rem}
+    .footer-desc{font-size:.875rem;line-height:1.7;color:var(--dim);max-width:260px;margin-bottom:1.5rem}
+    .footer-social{display:flex;gap:1rem}
+    .footer-social a{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:9999px;color:var(--dim);transition:border-color 200ms,color 200ms}
+    .footer-social a:hover{border-color:var(--accent);color:var(--accent)}
+    .footer-social svg{width:15px;height:15px;stroke:currentColor;stroke-width:1.5;fill:none}
+    .footer-col-title{font-size:.6875rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text);margin-bottom:1rem}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+    .footer-links a{font-size:.875rem;color:var(--dim);transition:color 200ms}
+    .footer-links a:hover{color:var(--accent)}
+    .footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:.875rem;color:var(--dim);margin-bottom:.75rem}
+    .footer-contact-item svg{width:14px;height:14px;flex-shrink:0;margin-top:2px;stroke:var(--accent);stroke-width:1.5;fill:none}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-copy,.footer-credit{font-size:.75rem;color:var(--dim)}
+    .footer-credit a{color:var(--accent);transition:opacity 200ms}
+    .footer-credit a:hover{opacity:.75}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center}}
+
+    /* ── MOBILE BAR ── */
+    .mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;background:var(--bg2);border-top:1px solid var(--border);padding:12px 16px;gap:12px}
+    .mob-bar a{flex:1;text-align:center;padding:13px;border-radius:9999px;font-size:.8125rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+    .mob-call{background:var(--grad);color:#fff}
+    .mob-book{border:1px solid var(--border);color:var(--muted)}
+    @media(max-width:768px){.mob-bar{display:flex};body{padding-bottom:70px}}
+
+    /* ── REVEAL ── */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}
   </style>
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVIGATION
-  ============================================================ -->
-  <nav class="nav">
-    <a href="#" class="nav-logo">Dare <span>to</span> Stare</a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#training">Training</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="nav-cta">Book Now</a>
-    <div class="nav-mobile-toggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
+<\!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    <\!-- Inline SVG Logo Mark -->
+    <img src="/daretostare/logo.png" alt="Dare to Stare Lash Extensions" style="height:38px;width:auto;object-fit:contain;" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="nav-cta">Book Now</a>
+</nav>
+
+<\!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-container">
+    <div>
+      <span class="hero-label">Dearborn's Luxury Lash Studio</span>
+      <h1 class="hero-title">Wake Up<br/><em>Completely</em><br/>Flawless.</h1>
+      <p class="hero-sub">Premium lash extensions by Jordan — Detroit's most in-demand lash artist. Classic, volume, and hybrid sets designed to make you dare to stare.</p>
+      <div class="hero-actions">
+        <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-pri">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book Your Appointment
+        </a>
+        <a href="#services" class="btn-sec">View Services</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-trust-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#B76E79" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Highly Rated
+        </span>
+        <span class="hero-trust-dot"></span>
+        <span class="hero-trust-item">Dearborn, MI</span>
+        <span class="hero-trust-dot"></span>
+        <span class="hero-trust-item">3,700+ IG Followers</span>
+        <span class="hero-trust-dot"></span>
+        <span class="hero-trust-item">By Appointment Only</span>
+      </div>
     </div>
-  </nav>
+    <div class="hero-img-side">
+      <div class="hero-badge">
+        <span class="b-num">3.7K+</span>
+        <span class="b-lbl">Happy Clients on IG</span>
+      </div>
+      <div class="hero-img-frame">
+        <img src="/daretostare/hero.png" alt="Luxury lash studio — Dare to Stare Beauty" />
+      </div>
+      <div class="hero-badge2">
+        <span class="b2-t">Spots Filling Fast</span>
+        <span class="b2-s">Book online in 60 seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-container">
+<\!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Classic Sets</span><span class="marquee-dot">◆</span>
+    <span>Volume Sets</span><span class="marquee-dot">◆</span>
+    <span>Hybrid Sets</span><span class="marquee-dot">◆</span>
+    <span>Lash Fills</span><span class="marquee-dot">◆</span>
+    <span>Lash Training</span><span class="marquee-dot">◆</span>
+    <span>Dearborn, MI</span><span class="marquee-dot">◆</span>
+    <span>By Jordan</span><span class="marquee-dot">◆</span>
+    <span>Classic Sets</span><span class="marquee-dot">◆</span>
+    <span>Volume Sets</span><span class="marquee-dot">◆</span>
+    <span>Hybrid Sets</span><span class="marquee-dot">◆</span>
+    <span>Lash Fills</span><span class="marquee-dot">◆</span>
+    <span>Lash Training</span><span class="marquee-dot">◆</span>
+    <span>Dearborn, MI</span><span class="marquee-dot">◆</span>
+    <span>By Jordan</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
 
-      <!-- Left: Copy -->
+<\!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-title">Extensions That <em>Speak for Themselves</em></h2>
+      <span class="divider"></span>
+      <p class="section-sub">Every set is custom-mapped to your eye shape, bone structure, and lifestyle. No two clients leave looking the same.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal rd1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 class="svc-name">Classic Set</h3>
+        <p class="svc-desc">One extension per natural lash for a clean, natural look that enhances without overpowering. Perfect for first-timers and everyday elegance.</p>
+        <span class="svc-tag">Natural Enhancement</span>
+      </div>
+      <div class="svc-card reveal rd2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1M3 12H2m2.22-6.36-.71-.71M19.07 4.93l-.71.71M22 12h-1M19.07 19.07l-.71-.71M4.93 19.07l-.71.71M12 6a6 6 0 1 0 0 12A6 6 0 0 0 12 6z"/></svg></div>
+        <h3 class="svc-name">Volume Set</h3>
+        <p class="svc-desc">Multiple lightweight extensions fanned onto each natural lash for dramatic fullness. The set that makes them ask, "Are those real?"</p>
+        <span class="svc-tag">Full &amp; Dramatic</span>
+      </div>
+      <div class="svc-card reveal rd3">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <h3 class="svc-name">Hybrid Set</h3>
+        <p class="svc-desc">The best of both worlds. Classic and volume blended for a textured, dimensional look — neither too natural nor too bold.</p>
+        <span class="svc-tag">Textured &amp; Dimensional</span>
+      </div>
+      <div class="svc-card reveal rd1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+        <h3 class="svc-name">Lash Fill</h3>
+        <p class="svc-desc">Keep your set looking fresh. Fills replace shed extensions and maintain fullness. Recommended every 2–3 weeks for optimal retention.</p>
+        <span class="svc-tag">Maintenance</span>
+      </div>
+      <div class="svc-card reveal rd2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/></svg></div>
+        <h3 class="svc-name">Mega Volume</h3>
+        <p class="svc-desc">Ultra-dense, ultra-glamorous. Mega fans stacked for jaw-dropping, red-carpet fullness. For the woman who demands maximum impact.</p>
+        <span class="svc-tag">Maximum Glam</span>
+      </div>
+      <div class="svc-card reveal rd3">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <h3 class="svc-name">Safe Removal</h3>
+        <p class="svc-desc">Gentle, professional removal of any set — applied here or elsewhere. Zero damage to your natural lashes when done right.</p>
+        <span class="svc-tag">Safe &amp; Gentle</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<\!-- ABOUT -->
+<section class="section" id="about" style="background:var(--bg2);border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-frame">
+          <img src="/daretostare/lash-1.png" alt="Jordan — Lead Lash Artist at Dare to Stare Beauty" />
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="section-label">Meet Your Artist</p>
+        <h2 class="section-title" style="margin-bottom:1.5rem">Jordan</h2>
+        <span class="divider"></span>
+        <blockquote class="about-quote">"Every client deserves to wake up feeling like the most beautiful version of themselves."</blockquote>
+        <p class="about-body">Jordan built Dare to Stare Beauty from a passion for precision and a belief that lash artistry is exactly that — art. Based out of Dearborn, MI, she's become one of Detroit's most sought-after lash specialists, with a client list so packed she's had to pause new bookings just to keep up with demand.</p>
+        <p class="about-body">Every set is custom-crafted. Jordan maps your eye shape, assesses your natural lash health, and designs a look that enhances your specific features — never a cookie-cutter set.</p>
+        <p class="about-sig">— Jordan, Owner &amp; Lead Artist</p>
+        <div style="margin-top:2rem"><a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-pri">Book with Jordan</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<\!-- TESTIMONIALS -->
+<section class="section testimonials-bg" id="reviews">
+  <div class="container">
+    <div class="section-header reveal" style="text-align:center">
+      <p class="section-label">Client Love</p>
+      <h2 class="section-title">They Said It Best</h2>
+      <span class="divider" style="margin:1rem auto 2rem"></span>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal rd1">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">"Jordan is an absolute artist. My hybrid set looked incredible — exactly what I described but better than I imagined. I've never gotten so many compliments. Will not trust anyone else with my lashes."</p>
+        <div class="test-author"><div class="avatar">A</div><div><div class="author-name">Aisha M.</div><div class="author-meta">Detroit, MI · Volume Set</div></div></div>
+      </div>
+      <div class="test-card reveal rd2">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">"My classic set has been the best investment in my confidence. I wake up ready. Jordan takes her time, explains everything, and the retention on my fills is unmatched."</p>
+        <div class="test-author"><div class="avatar">T</div><div><div class="author-name">Tanisha R.</div><div class="author-meta">Dearborn, MI · Classic Set</div></div></div>
+      </div>
+      <div class="test-card reveal rd3">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">"Booked for my birthday and honestly wish I'd found Jordan sooner. The vibe, the attention to detail, the RESULTS — completely worth it. My lashes stayed full for 4 weeks."</p>
+        <div class="test-author"><div class="avatar">K</div><div><div class="author-name">Kezia B.</div><div class="author-meta">Southfield, MI · Mega Volume</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<\!-- TRAINING -->
+<section class="section training-section" id="training">
+  <div class="container">
+    <div class="training-inner">
+      <div class="reveal">
+        <p class="training-label">For Aspiring Artists</p>
+        <h2 class="training-title">Learn From Detroit's Best. Start Earning.</h2>
+        <p class="training-body">Jordan offers hands-on lash training for aspiring artists ready to turn their passion into a career. You'll learn proper isolation technique, safe application, eye mapping, and how to build a clientele — everything she used to build her own booked-out business.</p>
+        <div class="training-stats">
+          <div><span class="stat-val">$200</span><span class="stat-lbl">Registration Fee</span></div>
+          <div><span class="stat-val">$600</span><span class="stat-lbl">Potential Weekly Earnings</span></div>
+          <div><span class="stat-val">1-on-1</span><span class="stat-lbl">Personalized Training</span></div>
+        </div>
+        <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-pri">Register for Training</a>
+      </div>
       <div>
-        <span class="hero-label">Dearborn's Luxury Lash Studio</span>
-        <h1 class="hero-title">
-          Wake Up<br/>
-          <em>Completely</em><br/>
-          Flawless.
-        </h1>
-        <p class="hero-subtitle">
-          Premium lash extensions by Jordan — Detroit's most in-demand lash artist. Classic, volume, and hybrid sets designed to make you dare to stare.
-        </p>
-        <div class="hero-actions">
-          <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Book Your Appointment
-          </a>
-          <a href="#services" class="btn-secondary">View Services</a>
-        </div>
-        <div class="hero-trust">
-          <span class="hero-trust-item">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B76E79" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            Highly Rated
-          </span>
-          <span class="hero-trust-dot"></span>
-          <span class="hero-trust-item">Dearborn, MI</span>
-          <span class="hero-trust-dot"></span>
-          <span class="hero-trust-item">3,700+ IG Followers</span>
-          <span class="hero-trust-dot"></span>
-          <span class="hero-trust-item">By Appointment Only</span>
+        <div class="training-img-frame">
+          <img src="/daretostare/lash-2.png" alt="Lash training session at Dare to Stare Beauty" />
         </div>
       </div>
-
-      <!-- Right: Image -->
-      <div class="hero-image-side">
-        <!-- Floating badge -->
-        <div class="hero-floating-badge">
-          <span class="badge-number">3.7K+</span>
-          <span class="badge-label">Happy Clients on IG</span>
-        </div>
-
-        <div class="hero-image-frame">
-          <div class="hero-image-placeholder-icon">
-            <!-- Camera icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-              <circle cx="12" cy="13" r="4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="hero-image-caption">Midjourney photo — lash close-up, editorial Detroit studio</div>
-
-        <!-- Floating booking CTA -->
-        <div class="hero-floating-cta">
-          <span class="cta-text">Spots Filling Fast</span>
-          <span class="cta-sub">Book online in 60 seconds</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
-       MARQUEE STRIP
-  ============================================================ -->
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>Classic Sets</span>
-      <span class="marquee-dot">◆</span>
-      <span>Volume Sets</span>
-      <span class="marquee-dot">◆</span>
-      <span>Hybrid Sets</span>
-      <span class="marquee-dot">◆</span>
-      <span>Lash Fills</span>
-      <span class="marquee-dot">◆</span>
-      <span>Lash Training</span>
-      <span class="marquee-dot">◆</span>
-      <span>Dearborn, MI</span>
-      <span class="marquee-dot">◆</span>
-      <span>By Jordan</span>
-      <span class="marquee-dot">◆</span>
-      <!-- Duplicate for seamless loop -->
-      <span>Classic Sets</span>
-      <span class="marquee-dot">◆</span>
-      <span>Volume Sets</span>
-      <span class="marquee-dot">◆</span>
-      <span>Hybrid Sets</span>
-      <span class="marquee-dot">◆</span>
-      <span>Lash Fills</span>
-      <span class="marquee-dot">◆</span>
-      <span>Lash Training</span>
-      <span class="marquee-dot">◆</span>
-      <span>Dearborn, MI</span>
-      <span class="marquee-dot">◆</span>
-      <span>By Jordan</span>
-      <span class="marquee-dot">◆</span>
     </div>
   </div>
+</section>
 
-  <!-- ============================================================
-       SERVICES
-  ============================================================ -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label">What We Offer</p>
-        <h2 class="section-title">Extensions That<br/><em style="font-style:italic; font-family: var(--font-heading);">Speak for Themselves</em></h2>
-        <span class="section-divider"></span>
-        <p class="section-sub">Every set is custom-mapped to your eye shape, bone structure, and lifestyle. No two clients leave looking the same.</p>
+<\!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <div class="final-cta-content reveal">
+      <h2 class="cta-title">Ready to <em>Dare</em><br/>to Stare?</h2>
+      <p class="cta-sub">Spots are limited and fill up fast. Book your appointment online — it takes less than 60 seconds.</p>
+      <div class="cta-actions">
+        <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-pri">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book Your Appointment
+        </a>
+        <a href="https://www.instagram.com/dare2starelash/" target="_blank" class="btn-sec">Follow @dare2starelash</a>
       </div>
-
-      <div class="services-grid">
-
-        <!-- Classic Set -->
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon-wrap">
-            <!-- Eye/lash icon -->
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-          </div>
-          <h3 class="service-name">Classic Set</h3>
-          <p class="service-desc">One extension per natural lash for a clean, natural look that enhances without overpowering. Perfect for first-timers and everyday elegance.</p>
-          <span class="service-tag">Natural Enhancement</span>
-        </div>
-
-        <!-- Volume Set -->
-        <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon-wrap">
-            <!-- Sparkles icon -->
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v1m0 16v1M3 12H2m2.22-6.36-.71-.71M19.07 4.93l-.71.71M22 12h-1M19.07 19.07l-.71-.71M4.93 19.07l-.71.71M12 6a6 6 0 1 0 0 12A6 6 0 0 0 12 6z"/>
-            </svg>
-          </div>
-          <h3 class="service-name">Volume Set</h3>
-          <p class="service-desc">Multiple lightweight extensions fanned onto each natural lash for dramatic fullness. The set that makes them ask, "Are those real?"</p>
-          <span class="service-tag">Full & Dramatic</span>
-        </div>
-
-        <!-- Hybrid Set -->
-        <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon-wrap">
-            <!-- Layers icon -->
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-              <polyline points="2 17 12 22 22 17"/>
-              <polyline points="2 12 12 17 22 12"/>
-            </svg>
-          </div>
-          <h3 class="service-name">Hybrid Set</h3>
-          <p class="service-desc">The best of both worlds. Classic and volume extensions blended for a textured, dimensional look that's neither too natural nor too bold.</p>
-          <span class="service-tag">Textured & Dimensional</span>
-        </div>
-
-        <!-- Lash Fill -->
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon-wrap">
-            <!-- RefreshCw icon -->
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 4 23 10 17 10"/>
-              <polyline points="1 20 1 14 7 14"/>
-              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-            </svg>
-          </div>
-          <h3 class="service-name">Lash Fill</h3>
-          <p class="service-desc">Keep your set looking fresh. Fills replace shed extensions and maintain fullness. Recommended every 2–3 weeks for optimal retention.</p>
-          <span class="service-tag">Maintenance</span>
-        </div>
-
-        <!-- Mega Volume -->
-        <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon-wrap">
-            <!-- Crown icon -->
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/>
-              <path d="M5 20h14"/>
-            </svg>
-          </div>
-          <h3 class="service-name">Mega Volume</h3>
-          <p class="service-desc">Ultra-dense, ultra-glamorous. For the woman who demands maximum impact. Mega fans stacked for jaw-dropping, red-carpet fullness.</p>
-          <span class="service-tag">Maximum Glam</span>
-        </div>
-
-        <!-- Lash Removal -->
-        <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon-wrap">
-            <!-- Scissors icon -->
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="6" cy="6" r="3"/>
-              <circle cx="6" cy="18" r="3"/>
-              <line x1="20" y1="4" x2="8.12" y2="15.88"/>
-              <line x1="14.47" y1="14.48" x2="20" y2="20"/>
-              <line x1="8.12" y1="8.12" x2="12" y2="12"/>
-            </svg>
-          </div>
-          <h3 class="service-name">Safe Removal</h3>
-          <p class="service-desc">Gentle, professional removal of any set — whether applied here or elsewhere. Zero damage to your natural lashes when done right.</p>
-          <span class="service-tag">Safe & Gentle</span>
-        </div>
-
-      </div>
+      <p style="margin-top:1.5rem;font-size:.8125rem;color:var(--dim)">3720 Monroe St, Dearborn, MI &nbsp;·&nbsp; <a href="tel:3132285874" style="color:var(--accent)">(313) 228-5874</a></p>
     </div>
-  </section>
-
-  <!-- ============================================================
-       ABOUT / JORDAN
-  ============================================================ -->
-  <section class="section" id="about" style="background: var(--color-bg-secondary); border-top: 1px solid var(--color-border);">
-    <div class="container">
-      <div class="about-grid">
-
-        <!-- Image -->
-        <div>
-          <div class="about-image-frame">
-            <div class="about-image-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                <circle cx="12" cy="13" r="4"/>
-              </svg>
-            </div>
-          </div>
-          <p class="about-image-caption-below">Jordan — Midjourney portrait, modern Dearborn studio setting</p>
-        </div>
-
-        <!-- Copy -->
-        <div class="reveal">
-          <p class="section-label">Meet Your Artist</p>
-          <h2 class="section-title" style="margin-bottom: var(--space-6);">Jordan</h2>
-          <span class="section-divider"></span>
-          <blockquote class="about-quote">
-            "Every client deserves to wake up feeling like the most beautiful version of themselves."
-          </blockquote>
-          <p class="about-body">
-            Jordan built Dare to Stare Beauty from a passion for precision and a belief that lash artistry is exactly that — art. Based out of Dearborn, MI, she's become one of Detroit's most sought-after lash specialists, with a client list so packed she's had to pause new bookings just to keep up with demand.
-          </p>
-          <p class="about-body">
-            Every set is custom-crafted. Jordan maps your eye shape, assesses your natural lash health, and designs a look that enhances your specific features — not a cookie-cutter set from a template.
-          </p>
-          <p class="about-sig">— Jordan, Owner & Lead Artist</p>
-          <div style="margin-top: var(--space-8);">
-            <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-primary">Book with Jordan</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       TESTIMONIALS
-  ============================================================ -->
-  <section class="section testimonials-bg" id="reviews">
-    <div class="container">
-      <div class="section-header reveal" style="text-align: center;">
-        <p class="section-label">Client Love</p>
-        <h2 class="section-title">They Said It Best</h2>
-        <span class="section-divider" style="margin: var(--space-4) auto var(--space-8);"></span>
-      </div>
-
-      <div class="testimonials-grid">
-
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="stars">
-            <span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span>
-          </div>
-          <p class="testimonial-quote">"Jordan is an absolute artist. My hybrid set looked incredible — exactly what I described but better than I imagined. I've never gotten so many compliments. Will not trust anyone else with my lashes."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">A</div>
-            <div>
-              <div class="author-name">Aisha M.</div>
-              <div class="author-meta">Detroit, MI • Volume Set</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="stars">
-            <span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span>
-          </div>
-          <p class="testimonial-quote">"My classic set has been the best investment in my confidence. I wake up and feel ready. Jordan takes her time, explains everything, and the retention on my fills is unmatched. Already booked my next appointment."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">T</div>
-            <div>
-              <div class="author-name">Tanisha R.</div>
-              <div class="author-meta">Dearborn, MI • Classic Set</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal reveal-delay-3">
-          <div class="stars">
-            <span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span><span class="star-icon">★</span>
-          </div>
-          <p class="testimonial-quote">"Booked for my birthday and honestly wish I had found Jordan sooner. The vibe, the attention to detail, the RESULTS — completely worth every dollar. My lashes stayed full for 4 weeks."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">K</div>
-            <div>
-              <div class="author-name">Kezia B.</div>
-              <div class="author-meta">Southfield, MI • Mega Volume</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       LASH TRAINING
-  ============================================================ -->
-  <section class="section training-section" id="training">
-    <div class="container">
-      <div class="training-inner">
-
-        <!-- Copy -->
-        <div class="reveal">
-          <p class="training-label">For Aspiring Artists</p>
-          <h2 class="training-title">Learn From Detroit's<br/>Best. Start Earning.</h2>
-          <p class="training-body">
-            Jordan offers hands-on lash training for aspiring artists ready to turn their passion into a career. You'll learn proper isolation technique, safe application, eye mapping, and how to build a clientele — everything she used to build her own booked-out business.
-          </p>
-          <div class="training-stats">
-            <div>
-              <span class="training-stat-value">$200</span>
-              <span class="training-stat-label">Registration Fee</span>
-            </div>
-            <div>
-              <span class="training-stat-value">$600</span>
-              <span class="training-stat-label">Potential Weekly Earnings</span>
-            </div>
-            <div>
-              <span class="training-stat-value">1-on-1</span>
-              <span class="training-stat-label">Personalized Training</span>
-            </div>
-          </div>
-          <div style="margin-top: var(--space-8);">
-            <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-primary">
-              Register for Training
-            </a>
-          </div>
-        </div>
-
-        <!-- Image -->
-        <div>
-          <div class="training-image-frame">
-            <div class="training-image-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                <circle cx="12" cy="13" r="4"/>
-              </svg>
-            </div>
-          </div>
-          <p class="training-image-caption-below">Midjourney — lash training session, mentor & student, Detroit studio</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FINAL CTA
-  ============================================================ -->
-  <section class="final-cta" id="contact">
-    <div class="container">
-      <div class="final-cta-content reveal">
-        <h2 class="final-cta-title">
-          Ready to <em>Dare</em><br/>to Stare?
-        </h2>
-        <p class="final-cta-sub">
-          Spots are limited and fill up fast. Book your appointment online — it takes less than 60 seconds.
-        </p>
-        <div class="final-cta-actions">
-          <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="btn-primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Book Your Appointment
-          </a>
-          <a href="https://www.instagram.com/dare2starelash/" target="_blank" class="btn-secondary">
-            Follow @dare2starelash
-          </a>
-        </div>
-        <p style="margin-top: var(--space-6); font-size: 0.8125rem; color: var(--color-text-tertiary);">
-          3720 Monroe St, Dearborn, MI &nbsp;·&nbsp;
-          <a href="tel:3132285874" style="color: var(--color-accent);">(313) 228-5874</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-
-        <!-- Brand -->
-        <div>
-          <div class="footer-brand-name">Dare to Stare Beauty</div>
-          <p class="footer-brand-desc">Premium lash extensions by Jordan — Dearborn's most sought-after lash artist. Custom sets for every client, every time.</p>
-          <div class="footer-social">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/dare2starelash/" target="_blank" aria-label="Instagram">
-              <svg viewBox="0 0 24 24">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-              </svg>
-            </a>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/dare2starelash/" target="_blank" aria-label="Facebook">
-              <svg viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <div class="footer-col-title">Services</div>
-          <ul class="footer-links">
-            <li><a href="#services">Classic Set</a></li>
-            <li><a href="#services">Volume Set</a></li>
-            <li><a href="#services">Hybrid Set</a></li>
-            <li><a href="#services">Mega Volume</a></li>
-            <li><a href="#services">Lash Fills</a></li>
-            <li><a href="#training">Lash Training</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <div class="footer-col-title">Contact</div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            3720 Monroe St<br/>Dearborn, MI
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:3132285874">(313) 228-5874</a>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank">Book Online</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copy">© 2026 Dare to Stare Beauty. All rights reserved.</p>
-        <p class="footer-credit">Built by <a href="https://caliberwebstudio.com" target="_blank">Caliber Web Studio</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ============================================================
-       MOBILE STICKY BAR
-  ============================================================ -->
-  <div class="mobile-sticky-bar">
-    <a href="tel:3132285874" class="mob-call">Call Now</a>
-    <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="mob-book">Book Appointment</a>
   </div>
+</section>
 
-  <!-- ============================================================
-       SCRIPTS
-  ============================================================ -->
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+<\!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Dare to Stare Beauty</div>
+        <p class="footer-desc">Premium lash extensions by Jordan — Dearborn's most sought-after lash artist. Custom sets for every client, every time.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/dare2starelash/" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/dare2starelash/" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Classic Set</a></li>
+          <li><a href="#services">Volume Set</a></li>
+          <li><a href="#services">Hybrid Set</a></li>
+          <li><a href="#services">Mega Volume</a></li>
+          <li><a href="#services">Lash Fills</a></li>
+          <li><a href="#training">Lash Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>3720 Monroe St, Dearborn, MI</div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:3132285874">(313) 228-5874</a></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank">Book Online</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Dare to Stare Beauty. All rights reserved.</p>
+      <p class="footer-credit">Built by <a href="https://caliberwebstudio.com" target="_blank">Caliber Web Studio</a></p>
+    </div>
+  </div>
+</footer>
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+<\!-- MOBILE BAR -->
+<div class="mob-bar">
+  <a href="tel:3132285874" class="mob-call">Call Now</a>
+  <a href="https://dare2starelash.as.me/schedule/bef14c8e" target="_blank" class="mob-book">Book Appointment</a>
+</div>
 
-    // Nav scroll opacity
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.nav');
-      if (window.scrollY > 40) {
-        nav.style.background = 'rgba(10, 10, 10, 0.92)';
-      } else {
-        nav.style.background = 'rgba(10, 10, 10, 0.7)';
-      }
-    });
-  </script>
-
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), {threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.background = window.scrollY > 40 ? 'rgba(10,10,10,0.92)' : 'rgba(10,10,10,0.75)';
+  });
+</script>
 </body>
 </html>

@@ -6395,6 +6395,139 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   <strong style="font-size:1.1em;">Your next new patient is searching right now.</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds dental websites in Metro Detroit that rank on Google and convert visitors into booked appointments — starting at $197/month, $0 down. <a href="/contact" style="color:#2563eb;font-weight:600;">Get a free site audit</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a>.</p>
 </div>`
+
+  },
+  {
+    "slug": "lawyer-website-design-detroit",
+    "thumbnail": "/blog/lawyer-website-design-detroit-hero3.jpg.png",
+    "title": "The Complete Guide to Law Firm Website Design in Detroit",
+    "description": "Need lawyer website design in Detroit? This complete guide covers what your law firm site must have to rank on Google, convert visitors, and win more clients — from design elements to cost.",
+    "date": "2026-04-14",
+    "category": "Industry Guides",
+    "relatedSlugs": ["website-design-for-lawyers", "local-seo-guide-for-small-businesses", "roi-of-a-professional-website", "how-much-does-a-small-business-website-cost"],
+    "content": `
+<h1>The Complete Guide to Law Firm Website Design in Detroit</h1>
+
+<p>Two Detroit law firms. Same practice area. Same city. One's calendar is booked two weeks out. The other's site gets traffic — and the phone doesn't ring. The difference isn't better lawyers. It's better website design.</p>
+
+<p>Lawyer website design in Detroit isn't like building a site for a restaurant or a gym. Legal clients arrive with a problem that's costing them money, freedom, or family. They're evaluating you in under ten seconds. They're on their phone. They have three other tabs open with your competitors. The first firm to make them feel confident is the one that gets the call.</p>
+
+<p>This guide is everything you need to know about designing a law firm website that ranks in Detroit, earns trust instantly, and converts visitors into booked consultations — written for attorneys who don't have time for marketing theory.</p>
+
+<img src="/blog/lawyer-website-design-detroit-hero3.jpg.png" alt="Professional law firm website displayed on desktop and mobile in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Why Law Firm Website Design Is Its Own Discipline</h2>
+
+<p>Most web designers build websites. They know how to make things look clean and load fast. That's necessary — but not sufficient for a law firm site.</p>
+
+<p>Legal is a YMYL category — Your Money or Your Life. Google holds these sites to a higher standard because the information affects people's finances, freedom, and family. Design decisions that work for an e-commerce store will get a law firm ignored in search results and dismissed by visitors in seconds.</p>
+
+<h3>The Stakes Are Higher Than Any Other Industry</h3>
+
+<p>A person searching "personal injury lawyer Detroit" isn't browsing. They've been in an accident. They're scared. They need to know — within seconds — that you can handle their case and that you've handled cases like theirs before. Your website is the first credentialing moment. Get the design wrong and they click back to Google before reading a word about your qualifications.</p>
+
+<h3>Your Competitors Are Better Than You Think</h3>
+
+<p>Personal injury, family law, criminal defense — these are some of the most competitive digital niches in Michigan. Large firms invest serious budget in their digital presence. Solo practitioners and small firms that ignore lawyer website design in Detroit are surrendering clients unilaterally to attorneys who may be less qualified but happen to have a better site. This isn't about ego — it's about not bleeding revenue to the competition.</p>
+
+<h2>The 6 Design Elements That Separate Firms That Win From Firms That Wonder</h2>
+
+<h3>1. Above the Fold: Pass the 3-Second Credential Test</h3>
+
+<p>The first screen a visitor sees — before scrolling — must do three things simultaneously: establish authority, name your practice areas, and tell them exactly what to do next. That means:</p>
+
+<ul>
+<li><strong>A clear, specific headline</strong> — not "Experienced Detroit Attorney" but "Detroit Auto Accident Attorney | 20+ Years, 1,000+ Cases in Wayne County"</li>
+<li><strong>A visible phone number</strong>, click-to-call on mobile, ideally above the navigation bar</li>
+<li><strong>One primary CTA button</strong> — "Schedule Your Free Consultation" — not three competing options</li>
+<li><strong>A real photo of the attorney</strong>, not a stock photo of a gavel, courthouse steps, or scales of justice</li>
+</ul>
+
+<p>The gavel photo is finished. Potential clients have been trained to ignore it the same way they ignore banner ads. A professional photo of your face — confident, approachable, direct — is a trust signal no icon can replicate. It signals there's a real human who will answer for this case.</p>
+
+<h3>2. Navigation That Leads With Client Problems</h3>
+
+<p>Most law firm navigation menus are organized like a filing cabinet: Home. About. Practice Areas. Contact. That's not design — that's filing. High-converting navigation leads with the client's problem, not your firm's org chart.</p>
+
+<p>Consider leading with what they need: "Practice Areas | Free Case Review | Results | About | Contact." Structure that puts the client first converts measurably better than structure that prioritizes your firm's internal taxonomy.</p>
+
+<h3>3. Practice Area Pages Built to Rank and Reassure</h3>
+
+<p>Each practice area needs its own dedicated page — not a bullet point in a paragraph, not a row in a table, a full page with real substance. A strong practice area page opens with the specific problem the client is facing, explains your approach in plain language a non-lawyer can follow, shows relevant results or testimonials specific to that area, and ends with a frictionless consultation CTA.</p>
+
+<p>Thin practice area pages — 200 words and a generic "contact us" link — are the primary reason law firm websites fail to rank in competitive markets. Google knows the difference between a page that helps legal clients and one that was built to check a box. Your visitors know too.</p>
+
+<h3>4. An Intake Funnel Designed for Stress, Not Ideal Conditions</h3>
+
+<p>Legal clients are not calm and analytical when they find you. Design for their actual reality:</p>
+
+<ul>
+<li><strong>Multiple contact paths</strong> — phone, form, and online scheduling if possible. Some clients won't call; they'll fill out a form at midnight when they finally have quiet to deal with their situation.</li>
+<li><strong>Short intake forms</strong> — name, phone, email, "briefly describe your situation." Get the details on the consultation call. Don't interrogate them before you've earned their trust.</li>
+<li><strong>Stated response time</strong> — "We respond within 2 business hours" builds trust and primes fast follow-up, which wins more engagements than almost any other single variable.</li>
+</ul>
+
+<img src="/blog/lawyer-website-design-detroit-intake.jpg.png" alt="Mobile-optimized law firm contact form and consultation scheduling on smartphone" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h3>5. Mobile-First Design — Non-Negotiable in 2026</h3>
+
+<p>Over 70% of legal searches happen on mobile. More than seven out of ten people searching for a Detroit lawyer right now are on their phone. Mobile-first design isn't a feature — it's the baseline minimum.</p>
+
+<p>What that means in practice: the phone number is a tap-to-call link visible at the top of every page without scrolling; buttons are large enough to tap without pinching; text is readable at 16px minimum without zooming; forms are designed for thumbs. And critically — page load time on mobile LTE is under 2 seconds. Not desktop broadband. Mobile LTE. That's the real test.</p>
+
+<h3>6. Page Speed — Every Second Is Revenue Walking Out the Door</h3>
+
+<p>For a law firm where a single retained case is worth $5,000 to $150,000+, the math on page speed is straightforward. Google's data shows conversion rates drop roughly 20% for each additional second of mobile load delay. A site loading in 1.5 seconds versus one at 4.5 seconds isn't a design preference — it's a business decision with real dollar consequences attached to it.</p>
+
+<p>Modern law firm websites built on frameworks like Next.js consistently deliver sub-2-second load times. Legacy WordPress builds stacked with plugins routinely fail Core Web Vitals and drag rankings down with them. This is the largest technical gap between Detroit law firms that dominate local search and the ones that don't.</p>
+
+<h2>Detroit-Specific Design Considerations</h2>
+
+<h3>Position Against the Market, Not Just Within It</h3>
+
+<p>Detroit's legal market runs the full spectrum — from solo practitioners in Hamtramck to large firms in the Renaissance Center. Effective lawyer website design in Detroit means making a clear, specific choice about who you serve. "Serving Metro Detroit" is vague enough to mean nothing. "Representing auto accident victims in Wayne, Oakland, and Macomb County since 2009" is specific enough to matter.</p>
+
+<h3>Court-Specific and Neighborhood Language</h3>
+
+<p>Hyper-local language converts better and ranks better. Name the courts you practice in — 36th District Court, Wayne County Circuit Court, Eastern District of Michigan. Name the communities you serve — Dearborn, Warren, Southfield, Livonia, Sterling Heights. This signals to both Google and prospective clients that you understand this specific market, not just the idea of Metro Detroit.</p>
+
+<h2>What Law Firm Website Design Costs in Detroit</h2>
+
+<p>Here's the honest pricing breakdown:</p>
+
+<ul>
+<li><strong>DIY website builders (Wix, Squarespace):</strong> $20–50/month. Functional for almost no serious legal practice — slow, generic, and with a low SEO ceiling that won't compete in contested practice areas.</li>
+<li><strong>Freelancer, one-time build:</strong> $3,000–$10,000. Quality varies enormously. No ongoing SEO or maintenance included. You're on your own after launch day.</li>
+<li><strong>Full-service agency retainer:</strong> $197–$697/month. Build included, hosting included, ongoing SEO, maintenance, and edits included. Monthly accountability to performance — not a one-and-done handoff.</li>
+<li><strong>Enterprise legal marketing agency:</strong> $15,000–$75,000+ one-time. Built for large firms with large marketing budgets. Overkill for most practices.</li>
+</ul>
+
+<p>For most Detroit law firms — solo practitioners, small group practices, firms with 2–10 attorneys — the retainer model delivers the best outcome per dollar. Zero upfront investment, professional results from day one, and ongoing accountability from people whose job doesn't end at launch.</p>
+
+<p>The <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> is compelling in any industry. In legal, where one retained matter can cover the full annual cost of a properly designed site in a single engagement, it's not a marketing decision — it's an obvious business investment. See also our breakdown of <a href="/blog/how-much-does-a-small-business-website-cost">what small business websites actually cost</a>.</p>
+
+<h2>How to Choose a Designer Who Understands Legal</h2>
+
+<p>Not every web designer should build a law firm website. Ask these questions before signing anything:</p>
+
+<ul>
+<li><strong>Have you built sites for attorneys before?</strong> Can you show me results — traffic data and lead generation numbers, not just screenshots?</li>
+<li><strong>Do you understand Michigan Bar advertising rules?</strong> Specifically MRPC 7.1–7.5? Wrong language on your site can become a bar complaint before you know it.</li>
+<li><strong>How do you handle attorney schema markup and local SEO?</strong> If they go quiet, keep looking.</li>
+<li><strong>What platform do you build on, and why?</strong> You want modern infrastructure — not a five-year-old WordPress theme with eight plugins fighting each other.</li>
+<li><strong>What's included after launch?</strong> Security updates, content edits, SEO adjustments — or do you become a support ticket?</li>
+</ul>
+
+<p>For the full picture on what a law firm website needs to perform in Michigan's legal market — including E-E-A-T requirements, compliance language, and trust signal architecture — read our companion guide on <a href="/blog/website-design-for-lawyers">website design for lawyers in Detroit</a>. And for the SEO foundations that make any law firm site visible, our <a href="/blog/local-seo-guide-for-small-businesses">local SEO guide for small businesses</a> covers what every professional service firm needs to compete in local search.</p>
+
+<h2>Ready to Build a Law Firm Website That Wins Cases?</h2>
+
+<p>Caliber Web Studio builds custom websites for Detroit-area law firms. No templates. No cookie-cutter builds. No disappearing after launch. Every site we build is designed around your specific practice areas, your competitive market position, and what it actually takes to win in Detroit's legal landscape.</p>
+
+<p>Our sites run on Next.js — fast, modern, and built to rank. Plans start at $197/month with no build fee upfront. That includes your complete custom site, hosting, maintenance, and ongoing SEO — from a team that stays accountable to your results month after month.</p>
+
+<p>Call us at <a href="tel:3137992315">(313) 799-2315</a> or reach out online. Your next client is searching right now — make sure they find you first.</p>
+`
   }
 ];
 

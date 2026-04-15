@@ -55,15 +55,24 @@ export default function DetroitScrollVideo() {
     });
     framesRef.current = images;
 
-    // ── Cover-fill draw helper ────────────────────────────────────
+    // ── Draw helper ───────────────────────────────────────────────
+    // Mobile (portrait) → contain: full truck always visible
+    // Desktop           → cover:   fills viewport edge-to-edge
     function drawFrame(idx: number) {
       const img = framesRef.current[idx];
       if (!img || !img.complete || img.naturalWidth === 0) return;
 
-      const scale = Math.max(
-        canvas!.width  / img.naturalWidth,
-        canvas!.height / img.naturalHeight,
-      );
+      const isMobile = canvas!.width < 768;
+      const scale = isMobile
+        ? Math.min(
+            canvas!.width  / img.naturalWidth,
+            canvas!.height / img.naturalHeight,
+          )
+        : Math.max(
+            canvas!.width  / img.naturalWidth,
+            canvas!.height / img.naturalHeight,
+          );
+
       const w = img.naturalWidth  * scale;
       const h = img.naturalHeight * scale;
       const x = (canvas!.width  - w) / 2;

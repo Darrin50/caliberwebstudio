@@ -6398,21 +6398,23 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
   },
   {
-    "slug": "lawyer-website-design-detroit",
-    "thumbnail": "/blog/lawyer-website-design-detroit-hero3.jpg.png",
-    "title": "The Complete Guide to Law Firm Website Design in Detroit",
-    "description": "Need lawyer website design in Detroit? This complete guide covers what your law firm site must have to rank on Google, convert visitors, and win more clients — from design elements to cost.",
-    "date": "2026-04-14",
-    "category": "Industry Guides",
-    "relatedSlugs": ["website-design-for-lawyers", "local-seo-guide-for-small-businesses", "roi-of-a-professional-website", "how-much-does-a-small-business-website-cost"],
-    "content": `
-<h1>The Complete Guide to Law Firm Website Design in Detroit</h1>
+    slug: "lawyer-website-design-detroit",
+    thumbnail: "/blog/website-design-for-lawyers-thumb.jpg",
+    title: "Website Design for Detroit Law Firms: What Actually Converts Clients",
+    description: "Most Detroit law firms lose cases to competitors with better websites. Here's what your lawyer website design in Detroit must include to convert.",
+    date: "2026-04-14",
+    category: "Industry Guides",
+    relatedSlugs: ["website-design-for-lawyers", "local-seo-guide-for-small-businesses", "what-is-schema-markup", "roi-of-a-professional-website", "what-is-an-ai-chatbot-for-business"],
+    content: `
+<h1>Website Design for Detroit Law Firms: What Actually Converts Clients</h1>
 
-<p>Two Detroit law firms. Same practice area. Same city. One's calendar is booked two weeks out. The other's site gets traffic — and the phone doesn't ring. The difference isn't better lawyers. It's better website design.</p>
+<p>A person gets into an accident on I-75 near the Lodge interchange at 9 PM. They can't sleep. They open their phone and start searching. Within four minutes, they've visited three law firm websites. They've already decided which one to call in the morning — and it was not based on who had the most experience or the best credentials.</p>
 
-<p>Lawyer website design in Detroit isn't like building a site for a restaurant or a gym. Legal clients arrive with a problem that's costing them money, freedom, or family. They're evaluating you in under ten seconds. They're on their phone. They have three other tabs open with your competitors. The first firm to make them feel confident is the one that gets the call.</p>
+<p>It was based on whose website made them feel like they were in the right place.</p>
 
-<p>This guide is everything you need to know about designing a law firm website that ranks in Detroit, earns trust instantly, and converts visitors into booked consultations — written for attorneys who don't have time for marketing theory.</p>
+<p>That's the conversion problem most Detroit law firms have. They invest in credentials, relationships, and reputation — and then they put up a website that communicates none of it. Visitor lands. Visitor leaves. Case goes to a competitor with a better homepage.</p>
+
+<p>This is about fixing that. Specifically: what makes lawyer website design in Detroit actually convert prospects into booked consultations — not just look professional.</p>
 
 <img src="/blog/lawyer-website-design-detroit-hero3.jpg.png" alt="Professional law firm website displayed on desktop and mobile in Detroit" style="width:100%;border-radius:12px;margin:32px 0;" />
 

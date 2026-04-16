@@ -1,1 +1,97 @@
-[]
+[
+  {
+    "slug": "detroit-vegan-soul",
+    "businessName": "Detroit Vegan Soul",
+    "businessType": "Plant-Based Soul Food Restaurant",
+    "tagline": "Detroit's Original Plant-Based Soul Food. Real Flavor. Real Soul. No Compromise.",
+    "primaryColor": "#0F2D1A",
+    "accentColor": "#D4921E",
+    "gallery": [],
+    "services": [
+      {
+        "name": "Mac n Yease",
+        "description": "Our legendary plant-based mac and cheese — creamy, smoky, and packed with flavor. Comes with your choice of two sides. The dish that made us famous.",
+        "price": "$14"
+      },
+      {
+        "name": "BBQ Jackfruit Plate",
+        "description": "Slow-smoked jackfruit in our house BBQ sauce, served on a toasted bun or over jasmine rice. A Detroit Vegan Soul staple that'll convert any skeptic.",
+        "price": "$15"
+      },
+      {
+        "name": "Smothered Portobello",
+        "description": "Thick portobello mushroom caps in rich onion-herb gravy, served with mashed sweet potatoes and braised collard greens.",
+        "price": "$17"
+      },
+      {
+        "name": "Soul Platter",
+        "description": "Pick any three sides — collard greens, candied yams, black-eyed peas, mac n yease, or fresh-baked cornbread. Pure plant-based comfort.",
+        "price": "$13"
+      },
+      {
+        "name": "Sweet Potato Pie",
+        "description": "Made from scratch daily with fresh Detroit sweet potatoes, warming spices, and a buttery vegan crust. Voted best pie in the city — by us and our regulars.",
+        "price": "$5 / slice"
+      },
+      {
+        "name": "Catering & Events",
+        "description": "Feed your crew plant-based soul food that converts even the skeptics. Church dinners, corporate lunches, family reunions, and graduation parties. We handle everything.",
+        "price": "Call for quote"
+      }
+    ],
+    "hours": [
+      { "day": "Wednesday – Thursday", "hours": "11:00 AM – 8:00 PM" },
+      { "day": "Friday – Saturday", "hours": "11:00 AM – 9:00 PM" },
+      { "day": "Sunday", "hours": "12:00 PM – 7:00 PM" },
+      { "day": "Monday – Tuesday", "hours": "Closed" }
+    ],
+    "phone": "(313) 766-5728",
+    "address": "19614 Grand River Ave",
+    "city": "Detroit, MI 48223",
+    "about": "Detroit Vegan Soul is the city's original plant-based soul food restaurant, rooted in the heart of Grandmont-Rosedale on Detroit's west side. Founded by Detroit natives who believe you shouldn't have to choose between eating plants and eating food that actually tastes like home, we bring real soul food energy to every plate — from our smoky BBQ jackfruit to our legendary Mac n Yease. No meat, no dairy, no shortcuts. Our kitchen runs on Detroit pride, family recipes reimagined for a new generation, and a deep commitment to nourishing our community. If you think vegan food is bland, you haven't eaten with us yet.",
+    "chatbotGreeting": "Hey, welcome to Detroit Vegan Soul! Looking to order, ask about our menu, or book catering for an event?",
+    "reviews": [
+      {
+        "name": "Kendra T.",
+        "stars": 5,
+        "text": "I've been plant-based for three years and this is THE best vegan soul food I've ever had anywhere. The Mac n Yease is life-changing. I bring every out-of-town guest here first thing."
+      },
+      {
+        "name": "Marcus J.",
+        "stars": 5,
+        "text": "I'm not even vegan and I'm here every weekend. The BBQ jackfruit is better than most BBQ spots in the whole city. My friends don't believe it's plants until they eat it."
+      },
+      {
+        "name": "Latoya B.",
+        "stars": 5,
+        "text": "Ordered catering for my daughter's graduation — 60 guests, mixed crowd, vegans and meat-eaters and picky kids. Everyone went back for seconds. Detroit Vegan Soul absolutely saved the day."
+      }
+    ],
+    "theme": {
+      "bg": "#0A1F10",
+      "bg2": "#0F2A15",
+      "bg3": "#142E1A",
+      "accent": "#D4921E",
+      "accent2": "#B87A12",
+      "text": "#F5F0E8",
+      "muted": "#8DA890",
+      "light": "#D6E8D0",
+      "radius": "6px"
+    },
+    "announceBar": "Now booking summer catering — family reunions, graduations & corporate events. Call us today!",
+    "stats": [
+      { "num": "10+", "label": "Years Serving Detroit" },
+      { "num": "100%", "label": "Plant-Based Menu" },
+      { "num": "Black-Owned", "label": "Detroit Business" },
+      { "num": "4.8★", "label": "Google Rating" }
+    ],
+    "ctaLabel": "View Menu & Order",
+    "website": "https://detroitvegansoulfood.com",
+    "email": "",
+    "socials": {
+      "facebook": "https://www.facebook.com/detroitvegansoulfood",
+      "instagram": "https://www.instagram.com/detroitvegansoulfood"
+    },
+    "createdAt": "2026-04-16"
+  }
+]

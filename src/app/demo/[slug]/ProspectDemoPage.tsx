@@ -316,16 +316,20 @@ export default function ProspectDemoPage({ config }: { config: ProspectDemoConfi
           <div className="about-grid">
             <div className="about-img-wrap">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={config.aboutImg || config.heroImg}
-                alt={`About ${config.businessName}`}
-                className="about-img"
-                onError={(e) => {
-                  const el = e.currentTarget as HTMLImageElement
-                  el.parentElement!.style.background = `linear-gradient(135deg, ${t.bg3}, ${t.bg2})`
-                  el.style.display = 'none'
-                }}
-              />
+              {(config.aboutImg || config.heroImg) ? (
+                <img
+                  src={config.aboutImg || config.heroImg}
+                  alt={`About ${config.businessName}`}
+                  className="about-img"
+                  onError={(e) => {
+                    const el = e.currentTarget as HTMLImageElement
+                    el.parentElement!.style.background = `linear-gradient(135deg, ${t.bg3}, ${t.bg2})`
+                    el.style.display = 'none'
+                  }}
+                />
+              ) : (
+                <div className="about-img" style={{ background: `linear-gradient(135deg, ${t.bg3}, ${t.bg2})` }} />
+              )}
             </div>
             <div className="about-text">
               <div className="slbl">Our Story</div>

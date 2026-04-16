@@ -16,10 +16,10 @@ export interface ProspectDemoConfig {
   about: string
   chatbotGreeting: string
   // Visual / theme data
-  heroImg: string
+  heroImg?: string
   gallery: { url: string; alt: string }[]
   reviews: { name: string; stars: number; text: string }[]
-  aboutImg: string
+  aboutImg?: string
   theme: {
     bg: string
     bg2: string

@@ -8268,6 +8268,151 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 </div>
 `
   }
+  ,
+  {
+    "slug": "website-mistakes-detroit-dental-practices",
+    "thumbnail": "/blog/website-mistakes-detroit-dental-practices-1.png",
+    "title": "5 Website Mistakes Detroit Dental Practices Keep Making",
+    "description": "Detroit dental practices lose new patients every week because of five fixable website mistakes.",
+    "date": "2026-04-16",
+    "category": "Detroit Local / Industry — Dentist",
+    "relatedSlugs": ["dental-website-design-detroit", "website-design-for-dentists", "local-seo-guide-for-small-businesses", "get-google-reviews-without-being-annoying"],
+    "content": `<h1>5 Website Mistakes Detroit Dental Practices Keep Making</h1>
+
+<p>Detroit dental practices with bad websites aren't losing new patients because of their care quality — they're losing them before anyone picks up the phone. Most dental website problems come down to five fixable mistakes that quietly drain appointment bookings every single week. Here's what they are and how to correct them.</p>
+
+<div style="background:#f8f9ff;border:1px solid #e0e7ff;padding:20px 24px;border-radius:8px;margin:28px 0;">
+  <strong style="font-size:1.05em;color:#1a1a2e;">Key Takeaways</strong>
+  <ul style="margin:12px 0 0;padding-left:20px;color:#1a1a2e;">
+    <li>Most Detroit dental websites lose patients before the page fully loads</li>
+    <li>Hiding the phone number costs practices more patients than bad reviews do</li>
+    <li>Stock photography signals generic — real team photos build trust in seconds</li>
+    <li>No service-area pages means competitors capture your neighborhood searches</li>
+    <li>An outdated design communicates outdated care, even when it isn't true</li>
+  </ul>
+</div>
+
+<img src="/blog/website-mistakes-detroit-dental-practices-1.png" alt="Frustrated woman on her phone trying to find a dentist in Detroit, sitting in a car with natural window light" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Mistake 1: The Website Wasn't Built for Mobile — It Was Adapted for It</h2>
+
+<p>There is a difference between a website that technically functions on a smartphone and a website built for one. Most dental practices in Metro Detroit have the former. The site was designed on a desktop, then someone checked a box that said mobile responsive and shipped it.</p>
+
+<p>The result: menus that require pinching. Phone numbers that aren't tappable. Booking buttons that sit below the fold on a 375px screen. Text that's technically readable but requires zooming to use comfortably.</p>
+
+<p>More than 70% of healthcare searches happen on a mobile device. A parent searching "family dentist Ferndale MI" at 9 PM is on their phone, comparing two or three practices side by side. If your site makes calling or booking harder than a competitor's, they call the competitor — not because of your clinical reputation, but because of a tap-to-call button that didn't exist.</p>
+
+<p>A properly mobile-first dental website has a sticky click-to-call bar pinned to the bottom of every page, a booking button visible before the first scroll, and a contact form that works without zooming. <a href="/blog/dental-website-design-detroit">See what dentist website design in Detroit actually requires</a> to convert mobile visitors into booked appointments.</p>
+
+<h2>Mistake 2: The Phone Number Is Buried</h2>
+
+<p>Walk through your own website right now on your phone. How many seconds does it take to find your phone number from the homepage? If the answer is more than two, you're losing patients every day. A person who can't find your number in two seconds does not hunt for it — they go back to Google and call someone else.</p>
+
+<p>Your phone number belongs in four places: the header navigation (large and clickable), the hero section, a sticky mobile footer bar, and the footer. On mobile, every instance should be a tel: link — one tap, dialing immediately.</p>
+
+<p>This single fix routinely increases call volume for dental practices without any other change to the site. If your last web agency put a Contact Us page link where your phone number should be, you've been paying for lost appointments every month since launch.</p>
+
+<img src="/blog/website-mistakes-detroit-dental-practices-2.png" alt="Laptop screen showing an outdated dental practice website with a cluttered layout and small fonts" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Mistake 3: Stock Photos Instead of Real Team Photos</h2>
+
+<p>Dental anxiety affects roughly one in five Americans. Your website is the first opportunity to address that anxiety — before the patient ever calls, before they walk through your door.</p>
+
+<p>Most Detroit dental websites use stock photography of suspiciously perfect smiles and models who have never visited a Michigan dental practice. Patients recognize stock photos immediately. The message it sends is not professional — it signals the practice is hiding who they actually are.</p>
+
+<p>Real photos of your actual team — the dentist, the hygienists, the front desk staff, the waiting room — make a nervous patient feel like they've already been there. That recognition reduces anxiety and increases the likelihood of a call.</p>
+
+<p><a href="/blog/website-design-for-dentists">Our guide on dental practice website design</a> covers photography as a conversion element in full detail.</p>
+
+<img src="/blog/website-mistakes-detroit-dental-practices-3.png" alt="Clean modern dental office waiting room with comfortable gray chairs, a potted plant, and warm recessed lighting" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Mistake 4: No Local SEO Architecture — Missing the Searches That Drive New Patients</h2>
+
+<p>A dental website that only ranks for your practice name is not a lead generation tool. The patients your website should be winning are the ones searching for a specific service in a specific place.</p>
+
+<p>"Emergency dentist Detroit." "Invisalign Troy MI." "Family dentist accepting new patients Ferndale." "Dentist that accepts Delta Dental near me." These are searches with real commercial intent. Most Metro Detroit dental websites rank for none of them because they were built without dedicated service pages, without location-specific content, and without schema markup.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:28px 0;font-size:0.95em;">
+  <thead>
+    <tr style="background:#1E3D8F;color:#fff;">
+      <th style="padding:12px 16px;text-align:left;">What's Missing</th>
+      <th style="padding:12px 16px;text-align:left;">What You're Losing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;"><strong>No service-specific pages</strong></td>
+      <td style="padding:12px 16px;">Every "Invisalign Detroit" search goes to a competitor with a dedicated page</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;"><strong>No location signals in page titles</strong></td>
+      <td style="padding:12px 16px;">Google doesn't know you're in Ferndale — you rank for your name and nothing else</td>
+    </tr>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;"><strong>No LocalBusiness schema</strong></td>
+      <td style="padding:12px 16px;">Google guesses what kind of business you are instead of knowing for certain</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;"><strong>GBP not synced with website</strong></td>
+      <td style="padding:12px 16px;">Mixed signals reduce your chances of appearing in the local map pack</td>
+    </tr>
+    <tr>
+      <td style="padding:12px 16px;"><strong>No insurance information listed</strong></td>
+      <td style="padding:12px 16px;">Patients uncertain about coverage click away rather than call to ask</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Fixing this requires dedicated service pages, city-specific language, <a href="/blog/local-seo-guide-for-small-businesses">local SEO fundamentals</a>, and syncing your Google Business Profile with your website. Most practices see new rankings within 60 to 90 days.</p>
+
+<img src="/blog/website-mistakes-detroit-dental-practices-4.png" alt="Man sitting at a kitchen table searching for a local dentist on his smartphone in the morning" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Mistake 5: An Outdated Design That Signals Outdated Care</h2>
+
+<p>Prospective patients form an impression within the first seven seconds — before they read a single word of your copy. A dental website with a cluttered layout, a 2013 color scheme, small fonts, and a contact form that looks like a WordPress tutorial sends a signal the patient can't quite name but absolutely feels: this practice is behind.</p>
+
+<p>Modern dental website design in Detroit doesn't require a dramatic redesign every year. It requires clean hierarchy, adequate white space, a mobile-first layout, legible typography, and photography that reflects the actual quality of your practice.</p>
+
+<p>For practices in competitive corridors — Troy, Novi, Birmingham, Royal Oak — design credibility is especially high-stakes. A cosmetic dentistry practice with a website that looks like a 2011 small business template is losing consultations to competitors with cleaner sites before a single word of their copy is read.</p>
+
+<img src="/blog/website-mistakes-detroit-dental-practices-5.png" alt="Two computer monitors side by side showing an old cluttered dental website next to a clean modern dental website design" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>What Fixing All Five Mistakes Actually Looks Like</h2>
+
+<p>A family practice in Ferndale had the full combination: no mobile optimization, a buried phone number, stock photos, no service-specific pages, and a design unchanged since 2017. They were invisible to every search except their practice name. New patient volume had plateaued for two straight years.</p>
+
+<p>After rebuilding with mobile-first architecture, real team photography, and dedicated pages for cleanings, whitening, Invisalign, and pediatric dentistry — each targeting Ferndale and surrounding neighborhoods — and implementing LocalBusiness schema synced with their Google Business Profile, they began appearing in the local map pack for four new search queries within 90 days.</p>
+
+<p><a href="/blog/get-google-reviews-without-being-annoying">Pairing a strong website with a systematic review-building strategy</a> compounds the effect further — reviews are the final trust signal that converts a visitor who found you through search into someone who actually calls.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How do I know if my dental website is costing me new patients?</h3>
+<p>Check three things: load your site on your phone and count how long it takes to find your phone number. Search "dentist [your city] MI" on Google and see whether you appear on page one. Check your Google Analytics bounce rate — if it's over 60%, most visitors are leaving without taking action.</p>
+
+<h3>Do I really need separate pages for each dental service?</h3>
+<p>Yes, if ranking for anything beyond your practice name matters. Google indexes pages, not websites. A single Services page with bullet points does not rank for "Invisalign Troy MI" or "emergency dentist Detroit." Each service needs its own page with dedicated content.</p>
+
+<h3>How much does a dental office photo session cost in Metro Detroit?</h3>
+<p>A professional half-day shoot runs $300-$800 depending on the photographer. It is one of the highest-ROI investments a practice can make for their website. The conversion improvement from authentic team photography consistently outperforms its cost within the first month of new patient bookings.</p>
+
+<h3>What is schema markup and does my dental website need it?</h3>
+<p>Schema markup is structured code that tells Google exactly what kind of business you are, where you operate, what hours you keep, and which services you offer. Every dental practice in Detroit that wants to rank in the local map pack needs LocalBusiness and MedicalBusiness schema implemented correctly.</p>
+
+<h3>How long does it take to see results after fixing these mistakes?</h3>
+<p>Mobile and contact fixes produce improvements within days of going live. Local SEO improvements typically show ranking changes within 60 to 90 days. Most practices see meaningful new patient volume increases within the first 60 days after a properly executed rebuild.</p>
+
+<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+  <strong style="font-size:1.1em;">Is your dental website making any of these mistakes?</strong>
+  <p style="margin:12px 0 0;">Caliber Web Studio builds dental practice websites in Metro Detroit that rank on Google and convert visitors into booked appointments — starting at $197/month with $0 down. <a href="/contact" style="color:#2563eb;font-weight:600;">Request a free site audit</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a>.</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding-top:24px;margin-top:40px;">
+  <strong>About the Author</strong>
+  <p style="margin:8px 0 0;color:#4b5563;">Darrin Singer Jr. is the founder of <a href="/about" style="color:#2563eb;">Caliber Web Studio</a>, a Detroit-based web design and local SEO agency serving small businesses across Metro Detroit.</p>
+</div>
+`
+  }
 ];
 
 export function getPost(slug: string): BlogPost | undefined {

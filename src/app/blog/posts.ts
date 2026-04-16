@@ -3359,7 +3359,7 @@ export const posts: BlogPost[] = [
     "description": "Detroit contractors need websites that generate leads, not just look good. Discover what a high-converting contractor website must include to win jobs in Metro Detroit.",
     "date": "2025-05-15",
     "category": "Industry Guides",
-    "relatedSlugs": ["local-seo-guide-for-small-businesses", "why-detroit-small-businesses-need-a-website", "what-is-schema-markup", "google-business-profile-optimization"],
+    "relatedSlugs": ["detroit-contractors-win-more-bids-better-website", "website-design-detroit-contractors-blueprint-to-launch", "local-seo-guide-for-small-businesses", "google-business-profile-optimization"],
     "content": `<p>It's January in Detroit. Fourteen degrees. A pipe burst in the basement of a 1920s brick bungalow on the East Side, and the homeowner is watching water spread across a century-old concrete floor. They grab their phone and type "emergency plumber Detroit." Three websites come up. One has a giant red "Call Now" button, a click-to-call number, and a form that says "We respond in under an hour." The other two take eight seconds to load and require scrolling to find a phone number.</p>
 
 <p>That homeowner is calling the first one. Your website is either the one they call or the one they scroll past.</p>
@@ -3693,7 +3693,7 @@ export const posts: BlogPost[] = [
     "description": "Auto repair shops in Detroit need websites that earn trust and get calls. See what a high-converting auto shop website needs to win customers in Metro Detroit.",
     "date": "2025-06-01",
     "category": "Industry Guides",
-    "relatedSlugs": ["website-design-for-plumbers-contractors", "local-seo-guide-for-small-businesses", "why-detroit-small-businesses-need-a-website", "google-business-profile-optimization"],
+    "relatedSlugs": ["detroit-mechanics-getting-found-online-better-websites", "website-design-detroit-auto-repair-shops-brings-customers", "local-seo-guide-for-small-businesses", "google-business-profile-optimization"],
     "content": `<p>Detroit is the only major American city where the car isn't just transportation — it's identity. The Motor City didn't earn that name from indifference. For generations of Detroit residents, your car is how you get to work in a city with limited public transit, how you show what you've built, and in many neighborhoods, how you signal that you're doing alright. When that car breaks down, the person you take it to is someone you have to trust completely.</p>
 
 <p>That trust starts on your website now. Before a Detroit driver calls your shop, they've looked at your Google reviews, your certifications, your website, and they've made an informal judgment about whether you're the kind of shop they can trust with their car and their money. Your website is doing sales work you don't even see — and if it's not doing it well, you're losing jobs to shops that are.</p>
@@ -3983,7 +3983,7 @@ export const posts: BlogPost[] = [
     "description": "Detroit dental practices need websites that attract new patients and reduce no-shows. See what a modern dental website must include to grow your practice in Metro Detroit.",
     "date": "2025-06-10",
     "category": "Industry Guides",
-    "relatedSlugs": ["local-seo-guide-for-small-businesses", "google-business-profile-optimization", "what-is-schema-markup", "why-detroit-small-businesses-need-a-website"],
+    "relatedSlugs": ["dental-website-design-detroit", "detroit-dentists-investing-custom-websites-2026", "local-seo-guide-for-small-businesses", "google-business-profile-optimization"],
     "content": `<p>A new patient searches "<a href="/industries/dentists">dentist near</a> me" or "family dentist in Troy Michigan." They land on your website. In the next 30 seconds they decide whether to book or keep scrolling. But here is the challenge most dental practices do not talk about openly: getting patients to your site is only half the battle. The other half is getting booked patients to actually show up.</p>
 
 <p>No-shows and last-minute cancellations are one of the biggest operational drains in dentistry. The average dental practice loses <strong>$50,000 to $100,000 in annual revenue</strong> to unfilled appointment slots. The right website — built with the right booking and communication systems — can significantly reduce that number while simultaneously attracting more new patients.</p>
@@ -4127,7 +4127,7 @@ export const posts: BlogPost[] = [
     "description": "Detroit real estate agents need websites that capture leads and showcase listings. Learn what a high-performing real estate website needs to grow your business in Metro Detroit.",
     "date": "2025-06-15",
     "category": "Industry Guides",
-    "relatedSlugs": ["local-seo-guide-for-small-businesses", "why-detroit-small-businesses-need-a-website", "google-business-profile-optimization", "what-is-schema-markup"],
+    "relatedSlugs": ["real-estate-website-design-detroit-top-agents", "idx-vs-custom-builds-detroit-real-estate", "local-seo-guide-for-small-businesses", "google-business-profile-optimization"],
     "content": `<p>Detroit's real estate market is not what it was five years ago. Corktown has gone from a neighborhood people were cautious about to one where buyers are paying over asking price for renovated bungalows. Midtown is priced like a major coastal city for the square footage. Eastern Market and West Village have waiting lists for rentals that barely existed in 2018. Meanwhile, affordable first-time buyer opportunities are shifting further into neighborhoods that national platforms have not caught up to yet.</p>
 
 <p>For real estate agents operating in this market, your website is not a digital business card. It is your most important lead generation system. The agents winning in Detroit and Metro Detroit are not necessarily the ones with the most experience — they are the ones whose websites show up when buyers and sellers are searching, and then convert those visitors into clients before a competitor does.</p>
@@ -6299,7 +6299,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     "description": "Most Detroit dental websites exist but don't work. Here's what dentist website design in Detroit actually needs to rank on Google and convert visitors into booked patients.",
     "date": "2026-04-14",
     "category": "Industry — Dentist",
-    "relatedSlugs": ["website-design-for-dentists", "local-seo-guide-for-small-businesses", "google-business-profile-optimization", "get-google-reviews-without-being-annoying"],
+    "relatedSlugs": ["website-design-for-dentists", "detroit-dentists-investing-custom-websites-2026", "website-mistakes-detroit-dental-practices", "local-seo-guide-for-small-businesses"],
     "content": `
 <p>Detroit has more dentists per capita than most American metros. The Michigan Dental Association lists hundreds of licensed practices across Wayne, Oakland, and Macomb counties. Which means when a new patient searches for a dentist in your neighborhood, they have options — probably a dozen within five miles. The question isn't whether they'll find a dentist. It's whether they'll find <em>yours</em>.</p>
 
@@ -6681,12 +6681,12 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     "slug": "hvac-website-design-detroit",
-    "thumbnail": "/blog/hvac-website-design-detroit-hero.jpg.png",
+    "thumbnail": "/blog/hvac-website-design-detroit-thumb.png",
     "title": "7 Must-Have Features for Detroit HVAC Company Websites",
     "description": "Your HVAC website isn't just a digital brochure — it's your 24/7 dispatcher. Here are the 7 features every Detroit HVAC company needs to turn their site into a lead machine that books service calls around the clock.",
     "date": "2026-04-14",
     "category": "Industry Guides",
-    "relatedSlugs": ["website-design-for-plumbers-contractors", "local-seo-guide-for-small-businesses", "affordable-website-design-detroit", "how-much-does-a-small-business-website-cost"],
+    "relatedSlugs": ["website-design-for-plumbers-contractors", "detroit-contractors-win-more-bids-better-website", "local-seo-guide-for-small-businesses", "affordable-website-design-detroit"],
     "content": `
 <h1>7 Must-Have Features for Detroit HVAC Company Websites</h1>
 
@@ -6828,11 +6828,10 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     date: "2026-04-16",
     category: "Detroit Local / Industry — Real Estate",
     relatedSlugs: [
+      "idx-vs-custom-builds-detroit-real-estate",
+      "detroit-real-estate-agencies-websites-close-deals",
+      "website-design-for-real-estate-agents",
       "local-seo-guide-for-small-businesses",
-      "google-business-profile-optimization",
-      "is-paying-monthly-for-a-website-worth-it",
-      "roi-of-a-professional-website",
-      "why-small-business-websites-dont-rank"
     ],
     content: `
 <h1>Real Estate Website Design in Detroit: How Top Agents Stand Out Online</h1>
@@ -7016,7 +7015,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     "description": "Most Detroit contractors lose bids before anyone picks up the phone — because their website loses the trust test. Here's how to fix it and start winning more jobs.",
     "date": "2026-04-16",
     "category": "Industry Guides",
-    "relatedSlugs": ["website-design-for-plumbers-contractors", "local-seo-guide-for-small-businesses", "affordable-website-design-detroit", "how-much-does-a-small-business-website-cost"],
+    "relatedSlugs": ["website-design-for-plumbers-contractors", "website-design-detroit-contractors-blueprint-to-launch", "detroit-contractor-website-works-hard", "local-seo-guide-for-small-businesses"],
     "content": `
 <h1>How Detroit General Contractors Can Win More Bids With a Better Website</h1>
 
@@ -7189,9 +7188,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     thumbnail: "/blog/website-design-detroit-contractors-blueprint-to-launch-1.png",
     relatedSlugs: [
       "website-design-for-plumbers-contractors",
+      "detroit-contractors-win-more-bids-better-website",
+      "detroit-contractor-website-works-hard",
       "local-seo-guide-for-small-businesses",
-      "affordable-website-design-detroit",
-      "why-cheap-websites-cost-more",
     ],
     content: `
 <h1>Website Design for Detroit Contractors: From Blueprint to Launch</h1>
@@ -7364,9 +7363,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     category: "Detroit Local / Industry — Real Estate",
     relatedSlugs: [
       "website-design-for-real-estate-agents",
+      "real-estate-website-design-detroit-top-agents",
+      "detroit-real-estate-agencies-websites-close-deals",
       "local-seo-guide-for-small-businesses",
-      "affordable-website-design-detroit",
-      "best-web-designer-detroit"
     ],
     content: `
 <h1>IDX vs Custom Builds: What Detroit Real Estate Agents Actually Need</h1>
@@ -7555,7 +7554,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     "description": "Detroit contractors are losing jobs online before they ever answer the phone. Here's what a hard-working contractor website looks like — and why it's your best employee.",
     "date": "2026-04-16",
     "category": "Detroit Local / Industry — Contractor",
-    "relatedSlugs": ["website-design-for-plumbers-contractors", "local-seo-guide-for-small-businesses", "roi-professional-web-design-numbers", "is-paying-monthly-for-a-website-worth-it"],
+    "relatedSlugs": ["website-design-for-plumbers-contractors", "detroit-contractors-win-more-bids-better-website", "website-design-detroit-contractors-blueprint-to-launch", "local-seo-guide-for-small-businesses"],
     "content": `
 <h1>Why Every Detroit Contractor Needs a Website That Works as Hard as They Do</h1>
 
@@ -7707,9 +7706,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     category: "Detroit Local / Industry — Auto Shop",
     relatedSlugs: [
       "website-design-for-auto-repair-shops",
+      "website-design-detroit-auto-repair-shops-brings-customers",
       "google-business-profile-optimization",
       "local-seo-guide-for-small-businesses",
-      "how-to-get-more-google-reviews",
     ],
     content: `
 <h1>How Detroit Mechanics Are Getting Found Online With Better Websites</h1>
@@ -7891,10 +7890,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     category: "Detroit Local / Industry — Auto Shop",
     relatedSlugs: [
       "website-design-for-auto-repair-shops",
+      "detroit-mechanics-getting-found-online-better-websites",
       "local-seo-guide-for-small-businesses",
       "google-business-profile-optimization",
-      "how-to-get-more-google-reviews",
-      "what-is-schema-markup",
     ],
     content: `
 <h1>Website Design for Detroit Auto Repair Shops That Actually Brings Customers</h1>
@@ -8096,9 +8094,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     "category": "Detroit Local / Industry — Real Estate",
     "relatedSlugs": [
       "website-design-for-real-estate-agents",
+      "real-estate-website-design-detroit-top-agents",
+      "idx-vs-custom-builds-detroit-real-estate",
       "local-seo-guide-for-small-businesses",
-      "google-business-profile-optimization",
-      "roi-professional-web-design-numbers"
     ],
     "content": `
 <h1>How Detroit Real Estate Agencies Are Using Websites to Close More Deals</h1>
@@ -8292,7 +8290,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     "description": "Detroit dentists are moving away from templates and generic builders \u2014 and into custom websites built to rank, convert, and compete. Here\u2019s why 2026 is the year it\u2019s becoming non-negotiable.",
     "date": "2026-04-16",
     "category": "Industry \u2014 Dentist",
-    "relatedSlugs": ["dental-website-design-detroit", "website-design-for-dentists", "local-seo-detroit-small-businesses-2026", "local-seo-guide-for-small-businesses"],
+    "relatedSlugs": ["dental-website-design-detroit", "website-mistakes-detroit-dental-practices", "website-design-for-dentists", "local-seo-detroit-small-businesses-2026"],
     "content": `
 <h1>Why Detroit Dentists Are Investing in Custom Websites in 2026</h1>
 
@@ -8463,7 +8461,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     "description": "Detroit dental practices lose new patients every week because of five fixable website mistakes.",
     "date": "2026-04-16",
     "category": "Detroit Local / Industry — Dentist",
-    "relatedSlugs": ["dental-website-design-detroit", "website-design-for-dentists", "local-seo-guide-for-small-businesses", "get-google-reviews-without-being-annoying"],
+    "relatedSlugs": ["dental-website-design-detroit", "detroit-dentists-investing-custom-websites-2026", "website-design-for-dentists", "local-seo-guide-for-small-businesses"],
     "content": `<h1>5 Website Mistakes Detroit Dental Practices Keep Making</h1>
 
 <p>Detroit dental practices with bad websites aren't losing new patients because of their care quality — they're losing them before anyone picks up the phone. Most dental website problems come down to five fixable mistakes that quietly drain appointment bookings every single week. Here's what they are and how to correct them.</p>

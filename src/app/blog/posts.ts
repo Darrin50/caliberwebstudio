@@ -7353,6 +7353,173 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 `
   }
 
+
+  ,
+  {
+    slug: "idx-vs-custom-builds-detroit-real-estate",
+    thumbnail: "/blog/idx-vs-custom-builds-detroit-real-estate-1.png",
+    title: "IDX vs Custom Builds: What Detroit Real Estate Agents Actually Need",
+    description: "IDX plugins or a fully custom website — which is right for Detroit real estate agents? A practical breakdown of what each delivers, where each fails, and how to choose.",
+    date: "2026-04-16",
+    category: "Detroit Local / Industry — Real Estate",
+    relatedSlugs: [
+      "website-design-for-real-estate-agents",
+      "local-seo-guide-for-small-businesses",
+      "affordable-website-design-detroit",
+      "best-web-designer-detroit"
+    ],
+    content: `CONTENT_PLACEHOLDER`
+  },
+
+  {
+    "slug": "detroit-contractor-website-works-hard",
+    "thumbnail": "/blog/detroit-contractor-website-works-hard-1.png",
+    "title": "Why Every Detroit Contractor Needs a Website That Works as Hard as They Do",
+    "description": "Detroit contractors are losing jobs online before they ever answer the phone. Here's what a hard-working contractor website looks like — and why it's your best employee.",
+    "date": "2026-04-16",
+    "category": "Detroit Local / Industry — Contractor",
+    "relatedSlugs": ["website-design-for-plumbers-contractors", "local-seo-guide-for-small-businesses", "roi-professional-web-design-numbers", "is-paying-monthly-for-a-website-worth-it"],
+    "content": `
+<h1>Why Every Detroit Contractor Needs a Website That Works as Hard as They Do</h1>
+
+<p>Detroit contractors losing jobs in 2026 usually aren't losing them because their work is subpar — they're losing them because they're invisible online. A hard-working contractor website generates qualified leads around the clock, captures homeowners searching at midnight, and converts visitors into phone calls before your competition even knows the job exists.</p>
+
+<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+  <strong style="font-size:1em;display:block;margin-bottom:10px;">Key Takeaways</strong>
+  <ul style="margin:0;padding-left:20px;">
+    <li>Most homeowners research contractors online before making a single phone call</li>
+    <li>A contractor website that "works hard" is available 24/7, loads fast, and captures leads automatically</li>
+    <li>Mobile speed, click-to-call, and local SEO are the three non-negotiables</li>
+    <li>One qualified lead from your website can cover months of site costs</li>
+    <li>Contractors without a strong digital presence are handing jobs to the competition</li>
+  </ul>
+</div>
+
+<img src="/blog/detroit-contractor-website-works-hard-1.png" alt="Detroit contractor working late inside a home renovation, focused and hardworking under work lights" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Detroit Contractors Are Winning and Losing Jobs Before Anyone Picks Up the Phone</h2>
+
+<p>Here's what actually happens when a homeowner in Eastpointe needs a bathroom remodel or a Grosse Pointe homeowner needs a roof replaced: they pull out their phone. They search "bathroom remodel contractor Detroit" or "licensed roofer near me." They look at three or four results, click on a couple of sites, form an impression in about eight seconds, and call one or two of them.</p>
+
+<p>If your website doesn't show up — or shows up and immediately looks dated, slow, or unprofessional — you're not in the running. The homeowner doesn't know your name. They don't know you've been doing this work for fifteen years. They don't know your reviews are excellent. All they know is what they can find online in the next three minutes.</p>
+
+<p>That's the brutal reality of <a href="/blog/website-design-for-plumbers-contractors">contractor website design in Detroit</a>. The contractors booking the most jobs aren't necessarily the most skilled in the trade — they're the ones whose digital presence makes calling feel like the obvious next move.</p>
+
+<p>Referrals have always been the lifeblood of contracting. But referral networks shrink, people move, and a single bad winter can dry up word-of-mouth entirely. The contractors building sustainable businesses in Metro Detroit have a second pipeline running alongside referrals: their website.</p>
+
+<h2>What It Actually Means for a Website to "Work Hard"</h2>
+
+<p>A website that works hard for a contractor isn't complicated — but it has to do several things right simultaneously.</p>
+
+<img src="/blog/detroit-contractor-website-works-hard-2.png" alt="Contractor's hand holding a smartphone showing a professional contractor website with a lead capture form" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<p><strong>It's available when you're not.</strong> You're on a job site at 2 PM when a homeowner finds your site and fills out a quote request. You check messages at 5 PM and call them back before dinner. Without that form, they called someone else at 2:15.</p>
+
+<p><strong>It loads fast on a phone.</strong> Over 75% of local service searches happen on mobile. If your site takes four seconds to load, the visitor is already gone. Google measures this and uses it as a ranking factor. Slow sites rank lower and convert worse — a double penalty.</p>
+
+<p><strong>It makes calling instant.</strong> A tap-to-call button in the header, visible without scrolling, is the single highest-impact element on a contractor website. When someone decides to call, any friction between that decision and your phone ringing costs you the job.</p>
+
+<p><strong>It tells Google exactly who you are.</strong> Local SEO — proper schema markup, service area pages, Google Business Profile integration — is how your site gets found by homeowners searching in the specific neighborhoods where you work. Without it, you're invisible to everyone outside your own zip code.</p>
+
+<p><strong>It builds trust before the first conversation.</strong> Licenses displayed. Reviews front and center. Years in business. Photos of real completed projects. These elements answer the homeowner's unspoken question — "Can I trust this person in my home?" — before they ever dial your number.</p>
+
+<h2>The 5 Features Every Detroit Contractor Website Must Have</h2>
+
+<img src="/blog/detroit-contractor-website-works-hard-3.png" alt="Detroit neighborhood home mid-renovation with work truck parked in driveway and scaffolding on the side" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<p>Contractor websites that actually generate work share a common set of features. Here's what every site needs — and why each one matters.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;">
+  <thead>
+    <tr style="background:#1E3D8F;color:#fff;">
+      <th style="padding:12px 16px;text-align:left;">Feature</th>
+      <th style="padding:12px 16px;text-align:left;">What It Does For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;font-weight:600;">Click-to-call on every page</td>
+      <td style="padding:12px 16px;">Converts mobile visitors instantly — no hunting for a number</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;font-weight:600;">Mobile-first, sub-2-second load time</td>
+      <td style="padding:12px 16px;">Ranks higher on Google, keeps visitors who would have bounced</td>
+    </tr>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;font-weight:600;">Quote request / lead capture form</td>
+      <td style="padding:12px 16px;">Catches leads after hours when you can't answer the phone</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;font-weight:600;">Service area pages (per city)</td>
+      <td style="padding:12px 16px;">Ranks for "contractor [city]" across every market you serve</td>
+    </tr>
+    <tr>
+      <td style="padding:12px 16px;font-weight:600;">Trust signals (license, reviews, photos)</td>
+      <td style="padding:12px 16px;">Eliminates doubt before the homeowner even calls</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>These aren't nice-to-haves. They're the baseline for a contractor website that generates real work. A site missing any one of them is leaving jobs on the table every single day. Understanding <a href="/blog/local-seo-guide-for-small-businesses">how local SEO works for service businesses</a> is the foundation — these five features are how you execute it.</p>
+
+<h2>What Happens When Your Website Doesn't Convert</h2>
+
+<img src="/blog/detroit-contractor-website-works-hard-4.png" alt="Contractor shaking hands with a smiling homeowner in front of a freshly renovated Detroit home" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<p>The damage from a weak contractor website is almost entirely invisible. You don't get a notification when a homeowner visited your site, couldn't find your number quickly, and called your competitor. You don't see the form submission that never came in because the form was broken on mobile. You don't know about the homeowner in Royal Oak who googled "deck builder near me," clicked your site, waited four seconds for it to load, and left.</p>
+
+<p>What you do see is that work has been slower than it should be. That you're still relying entirely on referrals from a network that isn't growing. That jobs you expected to come in haven't materialized. That competitors you know are no better than you seem to stay busier.</p>
+
+<p>The website isn't always the only factor — but for most Detroit contractors running a small operation, it's the one factor they have the most control over and the most room to improve. A bad referral year doesn't have to mean a bad revenue year if your website is doing its job.</p>
+
+<p>This is why <a href="/blog/roi-professional-web-design-numbers">the ROI on professional web design</a> is so clear for contractors. The alternative isn't free — it's the ongoing cost of leads you never knew you were losing.</p>
+
+<h2>The Math on One Qualified Lead</h2>
+
+<img src="/blog/detroit-contractor-website-works-hard-5.png" alt="Contractor sitting in a work truck reviewing job estimates on a tablet while on the phone, managing multiple projects" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<p>Most Detroit contractors charge anywhere from $3,000 to $30,000+ for a single project depending on scope — bathroom remodels, additions, basement finishing, full kitchen renovations, roofing, siding. The average job for a mid-size residential contractor is somewhere around $8,000 to $12,000.</p>
+
+<p>Caliber Web Studio's entry-level contractor website runs $197 per month. That's $2,364 per year.</p>
+
+<p>One job from a website lead covers the site for five years.</p>
+
+<p>That's not theoretical. That's what happens when a homeowner finds your site, reads your reviews, sees your completed project photos, and calls you because your site gave them confidence before they ever spoke to you. One close, one job, one satisfied customer who refers two more — and the website has already paid for itself many times over.</p>
+
+<p>The harder question isn't whether a contractor website is worth the investment. It's how many jobs you've already lost while waiting to find out. Understanding <a href="/blog/is-paying-monthly-for-a-website-worth-it">why a monthly website plan makes sense for small businesses</a> is the starting point for contractors who want to stop that bleed.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Do Detroit contractors really need a website if they have a Google Business Profile?</h3>
+<p>A Google Business Profile is essential — but it's not a website. Your GBP handles map pack visibility, reviews, and basic contact info. Your website handles everything else: detailed service pages, project photos, lead capture forms, trust signals, and the deeper content that converts a curious visitor into a booked call. You need both. The GBP gets you found; the website gets you hired.</p>
+
+<h3>How long does it take to start getting leads from a new contractor website?</h3>
+<p>For organic search traffic, expect three to six months before rankings and lead volume become meaningful — local SEO is a long game. However, a well-built site with click-to-call and a clear lead form starts working immediately for anyone who finds it through referrals, direct visits, or social media. The SEO layer builds over time on top of a foundation that's already converting.</p>
+
+<h3>What's the single most important element on a contractor website?</h3>
+<p>Click-to-call. Every other feature matters, but the phone number needs to be large, visible without scrolling, and tappable on mobile — on every page, not just the contact page. The moment a homeowner decides to call, any friction between that decision and your phone ringing increases the chance they call someone else instead.</p>
+
+<h3>How much does contractor website design cost in Detroit?</h3>
+<p>The range is wide. DIY platforms (Wix, Squarespace) run $20–$40/month but typically underdeliver on performance and local SEO. Freelancers charge $1,500–$5,000+ for a one-time build with no ongoing support. Caliber Web Studio's monthly plan starts at $197/month and includes design, development, hosting, maintenance, and local SEO built in from day one — no upfront cost, no disappearing after launch.</p>
+
+<h3>Can a contractor website generate leads without running Google Ads?</h3>
+<p>Yes — through local SEO. Contractors with properly built websites, service area pages, and optimized Google Business Profiles rank organically for searches like "bathroom remodel contractor Warren MI" or "licensed roofer Detroit." It takes three to six months to build, but organic leads have zero per-click cost and keep coming in long after the initial work is done. Ads accelerate the timeline but aren't required for results.</p>
+
+<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+  <strong style="font-size:1.1em;">Ready to Build a Contractor Website That Books Real Jobs?</strong>
+  <p style="margin:12px 0 0;">Caliber Web Studio builds contractor websites for Metro Detroit — mobile-first, fast-loading, with local SEO and lead capture built in from day one. No templates. No WordPress. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you exactly what your new site looks like before you commit to a thing.</p>
+</div>
+
+<div style="background:#1a1a2e;color:#e5e7eb;padding:24px 28px;margin:40px 0;border-radius:8px;display:flex;gap:20px;align-items:flex-start;">
+  <div>
+    <strong style="color:#fff;font-size:1em;">Darrin Singer Jr.</strong>
+    <p style="margin:8px 0 0;font-size:0.9em;color:#a0aec0;">Founder, Caliber Web Studio — Detroit web design agency helping local contractors, tradespeople, and service businesses build websites that generate real leads. Darrin has built contractor sites across Metro Detroit including Wayne, Oakland, and Macomb counties.</p>
+  </div>
+</div>
+
+`
+  }
+
 ];
 
 export function getPost(slug: string): BlogPost | undefined {

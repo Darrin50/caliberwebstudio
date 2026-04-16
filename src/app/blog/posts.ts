@@ -9,7 +9,7 @@ export interface BlogPost {
   thumbnail?: string;
 }
 
-export const posts: BlogPost[] = [
+export const posts: BlogPost[] = (([
   {
     "slug": "best-web-designer-detroit",
     "thumbnail": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80",
@@ -8598,7 +8598,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 </div>
 `
   }
-];
+]) as (BlogPost | undefined)[]).filter((p): p is BlogPost => p !== undefined);
 
 export function getPost(slug: string): BlogPost | undefined {
   return posts.find(p => p.slug === slug);

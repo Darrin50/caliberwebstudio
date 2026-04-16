@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lefty's Barbershop — Eastern Market, Detroit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ─── RESET ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ─── DESIGN TOKENS ─────────────────────────────────────── */
+    :root {
+      /* Backgrounds */
+      --bg:  #0F0F0F;
+      --bg2: #1A1A1A;
+      --bg3: #242424;
+      --bg4: #2E2E2E;
+
+      /* Brand — Gold + Warm Charcoal */
+      --accent:  #D4A853;
+      --accent2: #C49840;
+      --accent-glow: rgba(212, 168, 83, 0.15);
+      --accent-thin: rgba(212, 168, 83, 0.12);
+
+      /* Text */
+      --text:  #F3F4F6;
+      --light: rgba(255, 255, 255, 0.82);
+      --muted: #9CA3AF;
+      --subtle: #6B7280;
+
+      /* Borders */
+      --border: rgba(255, 255, 255, 0.07);
+      --border-strong: rgba(255, 255, 255, 0.13);
+
+      /* Typography */
+      --font-head: 'Oswald', 'Impact', sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+      /* Type scale */
+      --hero-size: clamp(2.75rem, 6vw, 5rem);
+      --section-size: clamp(1.875rem, 4vw, 2.75rem);
+      --sub-size: clamp(1.125rem, 2vw, 1.375rem);
+
+      /* Spacing */
+      --section-gap: 96px;
+      --container: 1160px;
+      --pad: 28px;
+
+      /* Radius */
+      --r-sm: 6px;
+      --r-md: 10px;
+      --r-lg: 14px;
+
+      /* Shadows */
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.4);
+      --shadow-brand: 0 0 28px rgba(212,168,83,0.18);
+
+      /* Transitions */
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --fast: 160ms;
+      --normal: 220ms;
+    }
+
+    /* ─── BASE ───────────────────────────────────────────────── */
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── UTILITY ─────────────────────────────────────────────── */
+    .con {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+    .sec { padding: var(--section-gap) 0; }
+    .sec-alt { background: var(--bg2); }
+    .sec-dark { background: var(--bg3); }
+
+    .slbl {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .stitle {
+      font-family: var(--font-head);
+      font-size: var(--section-size);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .ssub {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 540px;
+    }
+    .dvdr {
+      width: 44px;
+      height: 3px;
+      background: var(--accent);
+      margin: 14px 0 20px;
+      border-radius: 2px;
+    }
+    .shdr { margin-bottom: 52px; }
+
+    /* ─── ANNOUNCE BAR ─────────────────────────────────────────── */
+    .announce {
+      background: var(--accent);
+      color: var(--bg);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .announce a { color: var(--bg); text-decoration: underline; }
+
+    /* ─── NAV ─────────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(15,15,15,0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--normal) var(--ease);
+    }
+    .nav-in {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-logo { display: flex; flex-direction: column; gap: 1px; }
+    .logo-name {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .logo-tag {
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--light);
+      transition: color var(--fast) var(--ease);
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 10px 22px;
+      border-radius: var(--r-sm);
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.02em;
+      transition: background var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--accent2);
+      box-shadow: var(--shadow-brand);
+    }
+    /* hamburger */
+    .ham-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .ham-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform var(--normal) var(--ease), opacity var(--normal) var(--ease);
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 300;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.04em;
+      transition: color var(--fast);
+    }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-close {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.75rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ─── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .hero-ov {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.70) 50%,
+        rgba(0,0,0,0.38) 100%
+      );
+    }
+    /* Subtle noise texture */
+    .hero-noise {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .hero-con {
+      position: relative;
+      z-index: 2;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 120px var(--pad) 80px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(212,168,83,0.45);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: var(--r-sm);
+      margin-bottom: 22px;
+    }
+    .hero-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+    .hero-h1 {
+      font-family: var(--font-head);
+      font-size: var(--hero-size);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      max-width: 680px;
+      margin-bottom: 20px;
+    }
+    .hero-h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 38px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
+    .btn-p {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 15px 32px;
+      border-radius: var(--r-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.025em;
+      transition: background var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
+    }
+    .btn-p:hover {
+      background: var(--accent2);
+      box-shadow: var(--shadow-brand);
+    }
+    .btn-o {
+      display: inline-block;
+      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--text);
+      padding: 13px 30px;
+      border-radius: var(--r-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: border-color var(--fast) var(--ease), color var(--fast) var(--ease);
+    }
+    .btn-o:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-proof {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .hproof {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .hproof-dot { width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+
+    /* ─── STATS BAR ─────────────────────────────────────────────── */
+    .stats-bar {
+      background: var(--bg3);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 0;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 0 48px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-lbl {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 6px;
+    }
+
+    /* ─── SERVICES ─────────────────────────────────────────────── */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .svc-card {
+      background: var(--bg2);
+      padding: 32px 28px;
+      transition: background var(--normal) var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform var(--normal) var(--ease);
+    }
+    .svc-card:hover { background: var(--bg3); }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-thin);
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .svc-icon svg { color: var(--accent); }
+    .svc-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .svc-name {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+    .svc-price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .svc-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ─── GALLERY ─────────────────────────────────────────────── */
+    .gal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 10px;
+    }
+    .gal-item {
+      overflow: hidden;
+      border-radius: var(--r-md);
+      background: var(--bg3);
+      position: relative;
+    }
+    .gal-item:first-child {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+    .gal-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 260px;
+      transition: transform 0.45s var(--ease);
+    }
+    .gal-item:hover img { transform: scale(1.04); }
+    .gal-item-ov {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.65) 100%);
+      opacity: 0;
+      transition: opacity var(--normal) var(--ease);
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+    }
+    .gal-item:hover .gal-item-ov { opacity: 1; }
+    .gal-caption {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── ABOUT ─────────────────────────────────────────────── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .about-img-wrap {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      background: var(--bg3);
+      position: relative;
+    }
+    .about-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--r-lg);
+      pointer-events: none;
+    }
+    .about-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 12px 18px;
+      border-radius: var(--r-md);
+      text-align: center;
+    }
+    .about-badge-num {
+      font-family: var(--font-head);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+    }
+    .about-badge-lbl {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 2px;
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: var(--light);
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+    .about-details {
+      display: flex;
+      gap: 32px;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .about-detail-num {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .about-detail-lbl {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    /* ─── REVIEWS ─────────────────────────────────────────────── */
+    .rv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .rv-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 32px 28px;
+      transition: border-color var(--normal) var(--ease), transform var(--normal) var(--ease);
+    }
+    .rv-card:hover {
+      border-color: rgba(212,168,83,0.3);
+      transform: translateY(-2px);
+    }
+    .rv-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .rv-star { color: var(--accent); font-size: 0.95rem; }
+    .rv-text {
+      font-size: 0.95rem;
+      color: var(--light);
+      line-height: 1.75;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .rv-author { display: flex; align-items: center; gap: 12px; }
+    .rv-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .rv-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .rv-loc {
+      font-size: 0.78rem;
+      color: var(--subtle);
+      margin-top: 1px;
+    }
+    .rv-google {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--subtle);
+    }
+
+    /* ─── CTA BAND ─────────────────────────────────────────────── */
+    .cta-band {
+      background: var(--accent);
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 70%);
+    }
+    .cta-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--bg);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .cta-sub {
+      font-size: 1.05rem;
+      color: rgba(15,15,15,0.72);
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--bg);
+      color: var(--accent);
+      padding: 16px 40px;
+      border-radius: var(--r-sm);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      transition: opacity var(--fast) var(--ease);
+      position: relative;
+    }
+    .cta-btn:hover { opacity: 0.88; }
+
+    /* ─── CONTACT & HOURS ─────────────────────────────────────── */
+    .ct-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .ct-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 36px 32px;
+    }
+    .ct-card-title {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ci {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .ci-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--bg3);
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ci-icon svg { color: var(--accent); }
+    .ci-label {
+      font-size: 0.68rem;
+      color: var(--subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 3px;
+    }
+    .ci-val {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .ci-val a { color: var(--accent); }
+    .ci-val a:hover { text-decoration: underline; }
+    .hr-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.9rem;
+    }
+    .hr-row:last-child { border-bottom: none; }
+    .hr-day { color: var(--muted); }
+    .hr-time { color: var(--text); font-weight: 500; }
+    .hr-closed { color: var(--subtle); }
+    .hr-today .hr-day { color: var(--accent); }
+    .hr-today .hr-time { color: var(--accent); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    .footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 28px;
+    }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .footer-biz {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.04em;
+    }
+    .footer-city { font-size: 0.8rem; color: var(--muted); margin-top: 3px; }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      transition: color var(--fast) var(--ease);
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--subtle);
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-copy a { color: var(--accent); }
+
+    /* ─── PREVIEW BANNER ─────────────────────────────────────── */
+    .preview-banner {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(10,10,10,0.95);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 40px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 9999;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      white-space: nowrap;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+    .preview-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .preview-text { font-size: 0.8rem; color: #fff; font-weight: 500; }
+    .preview-cta {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .preview-cta:hover { background: var(--accent2); }
+
+    /* ─── MOBILE ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      :root { --section-gap: 64px; }
+      .nav-links { display: none; }
+      .ham-btn { display: flex; }
+      .svc-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .rv-grid { grid-template-columns: 1fr 1fr; }
+      .ct-grid { grid-template-columns: 1fr; }
+      .gal-grid { grid-template-columns: 1fr 1fr; }
+      .gal-item:first-child { grid-column: span 2; }
+      .footer-row { flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      :root { --section-gap: 56px; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .rv-grid { grid-template-columns: 1fr; }
+      .stats-row { gap: 0; }
+      .stat-item { padding: 16px 24px; border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:last-child { border-bottom: none; }
+      .hero-h1 { letter-spacing: 0; }
+      .preview-banner { padding: 8px 14px; bottom: 12px; font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCE BAR -->
+  <div class="announce">
+    Now booking online — spots fill fast &mdash; <a href="https://leftysbarbershopdetroit.setmore.com/" target="_blank" rel="noopener">Book Your Seat</a>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-in">
+      <div class="nav-logo">
+        <div class="logo-name">LEFTY'S</div>
+        <div class="logo-tag">Barbershop · Eastern Market</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://leftysbarbershopdetroit.setmore.com/" target="_blank" rel="noopener" class="nav-cta">Book Now</a>
+      <button class="ham-btn" id="hamBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+    <a href="https://leftysbarbershopdetroit.setmore.com/" target="_blank" rel="noopener" style="color: #D4A853;">Book Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80"
+      alt="Barber at work in barbershop"
+      class="hero-img"
+    />
+    <div class="hero-ov"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-con">
+      <div class="hero-eyebrow">
+        <span class="hero-dot"></span>
+        Eastern Market · Detroit, MI
+      </div>
+      <h1 class="hero-h1">
+        The Cleanest Cuts<br>on <span>Adelaide</span>.
+      </h1>
+      <p class="hero-sub">
+        Classic fades, pompadours, flattops, and beard work. Precision barbering inside one of Detroit's most storied neighborhoods.
+      </p>
+      <div class="hero-btns">
+        <a href="https://leftysbarbershopdetroit.setmore.com/" target="_blank" rel="noopener" class="btn-p">Book Your Appointment</a>
+        <a href="tel:3136705795" class="btn-o">Call (313) 670-5795</a>
+      </div>
+      <div class="hero-proof">
+        <div class="hproof"><span class="hproof-dot"></span>Walk-ins Welcome</div>
+        <div class="hproof"><span class="hproof-dot"></span>Eastern Market Since Day One</div>
+        <div class="hproof"><span class="hproof-dot"></span>4.9★ on Google</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-lbl">Years Cutting</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4.9★</span>
+        <span class="stat-lbl">Google Rating</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-lbl">Happy Clients</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1</span>
+        <span class="stat-lbl">Eastern Market</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="sec">
+    <div class="con">
+      <div class="shdr">
+        <div class="slbl">What We Do</div>
+        <h2 class="stitle">Services</h2>
+        <div class="dvdr"></div>
+        <p class="ssub">Old-school craft, modern execution. Every service done by hand, every time.</p>
+      </div>
+      <div class="svc-grid">
+
+        <!-- Haircut -->
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div class="svc-head">
+            <div class="svc-name">Classic Haircut</div>
+          </div>
+          <div class="svc-desc">The full treatment — consultation, cut, and finish. Whether you're in for something traditional or want to update your look, we've got you.</div>
+        </div>
+
+        <!-- Fade -->
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <div class="svc-head">
+            <div class="svc-name">Fade</div>
+          </div>
+          <div class="svc-desc">Skin to 3 guard. Tight, clean, precise. Blended or hard — your fade, your way. This is what we're known for.</div>
+        </div>
+
+        <!-- Beard -->
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l3 9a5.002 5.002 0 01-6.001 0M18 7l-3 9m-9-9h.01M18 7h.01"/>
+            </svg>
+          </div>
+          <div class="svc-head">
+            <div class="svc-name">Beard Trim & Shape</div>
+          </div>
+          <div class="svc-desc">Sculpted lineup, defined edge, hot towel finish. Sharp from chin to collar. Come in scruffy, leave sharp.</div>
+        </div>
+
+        <!-- Pompadour / Flattop -->
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/>
+              <line x1="12" y1="4" x2="12" y2="20"/>
+            </svg>
+          </div>
+          <div class="svc-head">
+            <div class="svc-name">Pompadour / Flat Top</div>
+          </div>
+          <div class="svc-desc">Classic shapes that have been around for a reason. We do them right — structured, clean, built to last until your next visit.</div>
+        </div>
+
+        <!-- Contour -->
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+          <div class="svc-head">
+            <div class="svc-name">Contour / Lineup</div>
+          </div>
+          <div class="svc-desc">The detail work that separates a good cut from a great one. Hairline, edges, and temple — every angle dialed in.</div>
+        </div>
+
+        <!-- Kids -->
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="svc-head">
+            <div class="svc-name">Kids' Cut</div>
+          </div>
+          <div class="svc-desc">For the young ones. Patient, professional, and fun. We make sure every kid leaves looking clean and feeling good.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="sec sec-alt">
+    <div class="con">
+      <div class="shdr">
+        <div class="slbl">The Work</div>
+        <h2 class="stitle">Gallery</h2>
+        <div class="dvdr"></div>
+        <p class="ssub">The chair doesn't lie. See what we bring to every cut.</p>
+      </div>
+      <div class="gal-grid">
+        <div class="gal-item">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=80" alt="Modern barbershop interior, barber giving fade" />
+          <div class="gal-item-ov"><span class="gal-caption">Shop Interior</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Barber precision fade close up" />
+          <div class="gal-item-ov"><span class="gal-caption">Precision Fade</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Classic barbershop atmosphere" />
+          <div class="gal-item-ov"><span class="gal-caption">Classic Atmosphere</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?auto=format&fit=crop&w=600&q=80" alt="Barber with client beard trim" />
+          <div class="gal-item-ov"><span class="gal-caption">Beard Work</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="https://images.unsplash.com/photo-1512864084360-7c0c4d3b5571?auto=format&fit=crop&w=600&q=80" alt="Detailed haircut and lineup" />
+          <div class="gal-item-ov"><span class="gal-caption">Lineup & Edges</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Barber chair and tools" />
+          <div class="gal-item-ov"><span class="gal-caption">The Chair</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec sec-dark">
+    <div class="con">
+      <div class="shdr">
+        <div class="slbl">What People Say</div>
+        <h2 class="stitle">Client Reviews</h2>
+        <div class="dvdr"></div>
+      </div>
+      <div class="rv-grid">
+
+        <div class="rv-card">
+          <div class="rv-stars">
+            <span class="rv-star">★</span><span class="rv-star">★</span>
+            <span class="rv-star">★</span><span class="rv-star">★</span><span class="rv-star">★</span>
+          </div>
+          <p class="rv-text">"Josh has been cutting my hair for two years straight. Best fade in the city, no debate. Clean shop, good music, and he actually listens to what you want. I don't go anywhere else."</p>
+          <div class="rv-author">
+            <div class="rv-avatar">M</div>
+            <div>
+              <div class="rv-name">Marcus T.</div>
+              <div class="rv-loc">Eastern Market, Detroit</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rv-card">
+          <div class="rv-stars">
+            <span class="rv-star">★</span><span class="rv-star">★</span>
+            <span class="rv-star">★</span><span class="rv-star">★</span><span class="rv-star">★</span>
+          </div>
+          <p class="rv-text">"Finally found my barbershop. Clean spot, great vibe, no wait drama. Been bringing my son here too — barber is patient with the kids and the cuts come out sharp every time."</p>
+          <div class="rv-author">
+            <div class="rv-avatar">D</div>
+            <div>
+              <div class="rv-name">DeShawn R.</div>
+              <div class="rv-loc">Detroit, MI</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rv-card">
+          <div class="rv-stars">
+            <span class="rv-star">★</span><span class="rv-star">★</span>
+            <span class="rv-star">★</span><span class="rv-star">★</span><span class="rv-star">★</span>
+          </div>
+          <p class="rv-text">"Don't sleep on this spot. It's up above Electric Park but worth every step. Pompadour came out looking like a photo — and that was just a walk-in. Book ahead if you can."</p>
+          <div class="rv-author">
+            <div class="rv-avatar">K</div>
+            <div>
+              <div class="rv-name">Kevin L.</div>
+              <div class="rv-loc">Detroit, MI</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p style="text-align:center; margin-top: 28px; font-size: 0.78rem; color: var(--subtle);">
+        * Review illustrations — representative of customer sentiment at Lefty's
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec sec-alt">
+    <div class="con">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+            alt="Barber at work in Lefty's Barbershop"
+            class="about-img"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#242424,#1a1a1a)'; this.style.display='none'"
+          />
+          <div class="about-badge">
+            <span class="about-badge-num">10+</span>
+            <span class="about-badge-lbl">Years In Business</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="slbl">Our Story</div>
+          <h2 class="stitle">About Lefty's</h2>
+          <div class="dvdr"></div>
+          <p>
+            Lefty's Barbershop is tucked above Electric Park Tattoo on Adelaide Street in the heart of Eastern Market — one of Detroit's most alive and real neighborhoods. From day one, the focus has been simple: classic cuts, done right, every time.
+          </p>
+          <p>
+            Pompadours, flattops, contours, fades — styles that have been around for generations because they work. We don't chase trends. We master the fundamentals and execute them clean.
+          </p>
+          <p>
+            Walk-ins are always welcome, but online booking means you can lock in your time and walk straight to the chair.
+          </p>
+          <div class="about-details">
+            <div>
+              <span class="about-detail-num">4.9★</span>
+              <span class="about-detail-lbl">Google Rating</span>
+            </div>
+            <div>
+              <span class="about-detail-num">100%</span>
+              <span class="about-detail-lbl">Walk-ins Welcome</span>
+            </div>
+            <div>
+              <span class="about-detail-num">E. Market</span>
+              <span class="about-detail-lbl">Detroit, MI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="con">
+      <h2 class="cta-title">Ready to Get Fresh?</h2>
+      <p class="cta-sub">Book online in 60 seconds. Walk-ins also welcome, first come first served.</p>
+      <a href="https://leftysbarbershopdetroit.setmore.com/" target="_blank" rel="noopener" class="cta-btn">Book Your Appointment</a>
+    </div>
+  </section>
+
+  <!-- CONTACT & HOURS -->
+  <section id="contact" class="sec">
+    <div class="con">
+      <div class="shdr">
+        <div class="slbl">Find Us</div>
+        <h2 class="stitle">Contact & Hours</h2>
+        <div class="dvdr"></div>
+      </div>
+      <div class="ct-grid">
+
+        <!-- Contact info -->
+        <div class="ct-card">
+          <div class="ct-card-title">Contact Information</div>
+
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="ci-label">Phone</div>
+              <div class="ci-val"><a href="tel:3136705795">(313) 670-5795</a></div>
+            </div>
+          </div>
+
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="ci-label">Address</div>
+              <div class="ci-val">1350 Adelaide St Suite 2<br>Detroit, MI 48207</div>
+            </div>
+          </div>
+
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div>
+              <div class="ci-label">Book Online</div>
+              <div class="ci-val"><a href="https://leftysbarbershopdetroit.setmore.com/" target="_blank" rel="noopener">leftysbarbershopdetroit.setmore.com</a></div>
+            </div>
+          </div>
+
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </div>
+            <div>
+              <div class="ci-label">Instagram</div>
+              <div class="ci-val"><a href="https://www.instagram.com/leftysbarbershop_detroit/" target="_blank" rel="noopener">@leftysbarbershop_detroit</a></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hours -->
+        <div class="ct-card">
+          <div class="ct-card-title">Hours of Operation</div>
+          <div class="hr-row"><span class="hr-day">Monday</span><span class="hr-closed">Closed</span></div>
+          <div class="hr-row hr-today"><span class="hr-day">Tuesday</span><span class="hr-time">10:00 AM – 5:00 PM</span></div>
+          <div class="hr-row hr-today"><span class="hr-day">Wednesday</span><span class="hr-time">10:00 AM – 5:00 PM</span></div>
+          <div class="hr-row hr-today"><span class="hr-day">Thursday</span><span class="hr-time">10:00 AM – 5:00 PM</span></div>
+          <div class="hr-row hr-today"><span class="hr-day">Friday</span><span class="hr-time">10:00 AM – 5:00 PM</span></div>
+          <div class="hr-row"><span class="hr-day">Saturday</span><span class="hr-time">10:00 AM – 3:00 PM</span></div>
+          <div class="hr-row"><span class="hr-day">Sunday</span><span class="hr-closed">Closed</span></div>
+          <div style="margin-top: 20px; padding: 14px 16px; background: var(--accent-thin); border-radius: var(--r-md); border: 1px solid rgba(212,168,83,0.2);">
+            <p style="font-size: 0.82rem; color: var(--muted); line-height: 1.6;">
+              <strong style="color: var(--accent);">Walk-ins welcome</strong> — but booking ahead guarantees your slot. Online booking available 24/7.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="con">
+      <div class="footer-row">
+        <div>
+          <div class="footer-biz">LEFTY'S BARBERSHOP</div>
+          <div class="footer-city">1350 Adelaide St · Eastern Market · Detroit, MI 48207</div>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="https://www.instagram.com/leftysbarbershop_detroit/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <span>© 2026 Lefty's Barbershop. All rights reserved.</span>
+        <span>Demo built by <a href="https://caliberwebstudio.com" target="_blank" rel="noopener">Caliber Web Studio</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PREVIEW BANNER -->
+  <div class="preview-banner">
+    <span class="preview-dot"></span>
+    <span class="preview-text">Preview site for Lefty's Barbershop</span>
+    <a href="https://caliberwebstudio.com" target="_blank" rel="noopener" class="preview-cta">Get This Site</a>
+  </div>
+
+  <script>
+    // Mobile menu
+    function closeMobile() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+    document.getElementById('hamBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobile);
+
+    // Highlight today's hours
+    (function() {
+      const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const today = days[new Date().getDay()];
+      const rows = document.querySelectorAll('.hr-row');
+      rows.forEach(function(row) {
+        const dayEl = row.querySelector('.hr-day');
+        if (dayEl && dayEl.textContent === today) {
+          row.classList.add('hr-today');
+        } else {
+          row.classList.remove('hr-today');
+        }
+      });
+    })();
+
+    // Subtle scroll-based nav opacity
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 60) {
+        nav.style.background = 'rgba(15,15,15,0.98)';
+      } else {
+        nav.style.background = 'rgba(15,15,15,0.92)';
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>

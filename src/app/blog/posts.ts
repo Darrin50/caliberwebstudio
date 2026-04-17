@@ -245,7 +245,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "detroit-web-design-agency-vs-freelancer",
-    "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+    "thumbnail": "/blog/detroit-web-design-agency-vs-freelancer-thumb.jpg",
     "title": "Detroit Web Design Agency vs. Freelancer \u2014 Which Is Right for Your Business?",
     "description": "Should you hire a Detroit web design agency or a freelancer? We break down the real pros, cons, and costs so you can make the right call for your small business.",
     "date": "2025-01-13",
@@ -364,7 +364,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-detroit-small-businesses-need-a-website",
-    "thumbnail": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
+    "thumbnail": "/blog/why-detroit-small-businesses-need-a-website-thumb.jpg",
     "title": "Why Every Detroit Small Business Needs a Website in 2025",
     "description": "Still running your Detroit business without a proper website? Here are the real, data-backed reasons why a professional website is no longer optional \u2014 and what you're losing every month without one.",
     "date": "2025-01-16",
@@ -462,7 +462,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-caliber-web-studio-helps-detroit-businesses",
-    "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+    "thumbnail": "/blog/how-caliber-web-studio-helps-detroit-businesses-thumb.jpg",
     "title": "How Caliber Web Studio Helps Detroit Businesses Grow Online",
     "description": "From web design to AI chatbots and local SEO, here's exactly how Caliber Web Studio helps Detroit small businesses get found online, win customers, and grow revenue.",
     "date": "2025-01-20",
@@ -556,7 +556,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-much-does-a-small-business-website-cost",
-    "thumbnail": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80",
+    "thumbnail": "/blog/how-much-does-a-small-business-website-cost-thumb.jpg",
     "title": "How Much Does a Small Business Website Cost in 2025?",
     "description": "What does a small business website actually cost? We break down every pricing model \u2014 from DIY to agencies \u2014 so you can make an informed decision for your Detroit business.",
     "date": "2025-01-23",
@@ -827,7 +827,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "whats-included-in-197-per-month-website",
-    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80",
+    "thumbnail": "/blog/whats-included-in-197-per-month-website-thumb.jpg",
     "title": "What's Actually Included in a $197/Month Website from Caliber Web Studio?",
     "description": "Our Starter Plan starts at $197/month with $0 down. Here's exactly what that includes \u2014 no hidden fees, no vague promises, just a complete breakdown of every deliverable.",
     "date": "2025-01-30",
@@ -1005,7 +1005,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "is-paying-monthly-for-a-website-worth-it",
-    "thumbnail": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
+    "thumbnail": "/blog/is-paying-monthly-for-a-website-worth-it-thumb.jpg",
     "title": "Is Paying Monthly for a Website Worth It? (Honest Answer)",
     "description": "Monthly website subscriptions are gaining popularity \u2014 but are they worth it compared to paying upfront? We give you the honest breakdown to help Detroit business owners decide.",
     "date": "2025-02-03",
@@ -1134,7 +1134,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "roi-of-a-professional-website",
-    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+    "thumbnail": "/blog/roi-of-a-professional-website-thumb.jpg",
     "title": "The ROI of a Professional Website for Detroit Small Businesses",
     "description": "Can you actually measure the return on investment from a professional website? Yes \u2014 and the numbers are compelling. Here's how Detroit small businesses calculate website ROI.",
     "date": "2025-02-06",
@@ -1603,7 +1603,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-aeo-answer-engine-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80",
+    "thumbnail": "/blog/what-is-aeo-answer-engine-optimization-thumb.jpg",
     "title": "What Is AEO (Answer Engine Optimization) and Why Your Detroit Business Needs It",
     "description": "Answer Engine Optimization (AEO) is the new SEO \u2014 optimizing your content to be chosen by AI tools like ChatGPT and Google's AI Overviews. Here's what it is and how to do it.",
     "date": "2025-02-17",
@@ -1787,7 +1787,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-geo-generative-engine-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
+    "thumbnail": "/blog/what-is-geo-generative-engine-optimization-thumb.jpg",
     "title": "What Is GEO (Generative Engine Optimization)? A Guide for Detroit Business Owners",
     "description": "GEO \u2014 Generative Engine Optimization \u2014 is the practice of optimizing your online presence to appear in AI-generated search results. Here's what it means for your Detroit business.",
     "date": "2025-02-20",
@@ -1989,7 +1989,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-to-show-up-in-chatgpt-and-perplexity",
-    "thumbnail": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80",
+    "thumbnail": "/blog/how-to-show-up-in-chatgpt-and-perplexity-thumb.jpg",
     "title": "How to Show Up in ChatGPT and Perplexity Search Results",
     "description": "More customers are using AI tools like ChatGPT and Perplexity to find local businesses. Here's the practical strategy for getting your Detroit business recommended by AI search.",
     "date": "2025-02-24",
@@ -2187,7 +2187,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "local-seo-guide-for-small-businesses",
-    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200&q=80",
+    "thumbnail": "/blog/local-seo-guide-for-small-businesses-thumb.jpg",
     "title": "The Complete Local SEO Guide for Detroit Small Businesses",
     "description": "Want more customers finding your Detroit business on Google? This complete local SEO guide covers everything you need to rank in your city and neighborhood.",
     "date": "2025-02-27",
@@ -2395,7 +2395,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "how-to-get-on-first-page-of-google",
-    "thumbnail": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80",
+    "thumbnail": "/blog/how-to-get-on-first-page-of-google-thumb.jpg",
     "title": "How to Get Your Detroit Business on the First Page of Google",
     "description": "Getting on page one of Google for Detroit search terms is achievable for small businesses \u2014 but it requires the right strategy. Here's the practical roadmap.",
     "date": "2025-03-03",
@@ -2576,7 +2576,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "google-business-profile-optimization",
-    "thumbnail": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80",
+    "thumbnail": "/blog/google-business-profile-optimization-thumb.jpg",
     "title": "Google Business Profile Optimization: The Complete Guide for Detroit Businesses",
     "description": "Your Google Business Profile is often the first thing potential customers see. Here's how to fully optimize it for maximum visibility in Detroit local search.",
     "date": "2025-03-06",
@@ -2752,7 +2752,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "what-is-schema-markup",
-    "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80",
+    "thumbnail": "/blog/what-is-schema-markup-thumb.jpg",
     "title": "What Is Schema Markup and Why Does Your Detroit Business Need It?",
     "description": "Schema markup helps Google understand your business and display rich results. Here's what it is and how to implement it for your Detroit small business website.",
     "date": "2025-05-01",
@@ -3030,7 +3030,7 @@ export const posts: BlogPost[] = [
   },
   {
     "slug": "why-small-business-websites-dont-rank",
-    "thumbnail": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80",
+    "thumbnail": "/blog/why-small-business-websites-dont-rank-thumb.jpg",
     "title": "Why Small Business Websites Don't Rank (And How to Fix It)",
     "description": "Most small business websites fail at SEO for the same handful of reasons. Learn what's holding your Detroit business back from page one and how to fix it fast.",
     "date": "2025-05-05",

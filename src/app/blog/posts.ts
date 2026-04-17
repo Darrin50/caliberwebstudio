@@ -8083,8 +8083,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p style="margin-top:40px;padding-top:24px;border-top:1px solid #e5e7eb;font-size:0.92em;color:#555;"><strong>About the Author:</strong> <strong>Darrin Singer Jr.</strong> is the founder of Caliber Web Studio, a Detroit-based web design agency that builds high-performance websites exclusively for local businesses across Metro Detroit. Darrin has helped dozens of Detroit-area service businesses — auto shops, contractors, restaurants, salons — go from invisible online to ranking on the first page of Google. Every site Caliber builds is custom-coded, mobile-first, and designed to generate real leads, not just traffic.</p>
 `,
   },
-
-,
   {
     "slug": "detroit-real-estate-agencies-websites-close-deals",
     "thumbnail": "/blog/detroit-real-estate-agencies-websites-close-deals-1.png",

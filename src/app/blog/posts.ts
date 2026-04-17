@@ -9070,7 +9070,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>The mechanics of why calls are lost are predictable: the site doesn't rank for the suburb the homeowner is in, the site loads too slow on mobile and the visitor bounces, the phone number isn't obvious and the visitor moves on, or there's no after-hours capture and the lead goes dark overnight. These are engineering problems, not market problems. They're solvable.</p>
 
-<img src="/blog/detroit-hvac-website-design-2026-2.jpg" alt="HVAC technician working on an outdoor AC condenser unit in a Detroit suburb during summer heat" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/detroit-hvac-website-design-2026-2.jpg" alt="Detroit homeowner checking HVAC repair estimate on phone next to non-running furnace in unfinished basement" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The ROI Math — What a Modern Website Is Worth to a Detroit HVAC Company</h2>
 
@@ -9858,7 +9858,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Photos that work in menus are shot in natural or controlled warm light, on simple backgrounds that don't compete with the food, and sized for fast loading on mobile. A 4MB JPEG of every dish is a page speed problem that Google penalizes and impatient diners abandon. Optimize images to under 200KB without visible quality loss. It's a technical step most restaurant sites skip — and one that costs them both rankings and conversions.</p>
 
-<img src="/blog/detroit-restaurant-website-design-menus-reservations-02.jpg" alt="Smartphone screen showing restaurant reservation booking widget with date selector and available time slots" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/detroit-restaurant-website-design-menus-reservations-02.jpg" alt="Detroit restaurant manager at host stand reviewing evening reservation list on desktop computer" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Reservation Design: Reduce Every Point of Friction</h2>
 
@@ -9880,7 +9880,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>The standards: tap targets no smaller than 44x44px, date and time selectors that use native mobile pickers, a party size field that doesn't require keyboard input, and a confirmation that appears in the same screen without a full page reload. These aren't optional polish — they're the baseline for a reservation system that functions for the majority of your potential guests.</p>
 
-<img src="/blog/detroit-restaurant-website-design-menus-reservations-03.jpg" alt="Beautifully lit signature dish plated on dark slate, professional food photography for restaurant website hero" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/detroit-restaurant-website-design-menus-reservations-03.jpg" alt="Head chef calling orders at kitchen pass-through window during busy Detroit restaurant dinner service" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Visual Design That Makes Detroit Diners Book</h2>
 
@@ -9902,7 +9902,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Whitespace isn't blank space — it's breathing room that makes everything else more readable and more intentional. Dense, content-packed restaurant websites feel overwhelming and low-quality regardless of how good the food is. Generous padding between sections, space between menu items, and a visual hierarchy that lets the eye move naturally from hero to menu to reservation CTA communicates confidence in the product. Restaurants that cram everything above the fold because they're afraid guests won't scroll are solving the wrong problem. Build pages that reward a scroll because the content is worth it.</p>
 
-<img src="/blog/detroit-restaurant-website-design-menus-reservations-04.jpg" alt="Detroit restaurant dining room at full evening service with warm ambient lighting and guests at candlelit tables" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/detroit-restaurant-website-design-menus-reservations-04.jpg" alt="Couple waiting outside a busy Detroit restaurant checking their reservation on a phone, full dining room visible through window" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Technical Side: Speed, Schema, and Mobile Performance</h2>
 
@@ -10089,7 +10089,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>A beautiful law firm website that nobody finds is a monument to wasted potential. Local SEO is what makes a Detroit law firm website visible to the people actively searching for legal help in Metro Detroit right now.</p>
 
-<img src="/blog/detroit-law-firm-websites-bring-cases-04.png" alt="Close-up of a Google search results page showing Detroit law firm listings in the local map pack" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/detroit-law-firm-websites-bring-cases-04.png" alt="Dearborn man at home desk filling out a Detroit law firm consultation form on his laptop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <p>The local map pack — the three business listings that appear at the top of location-based searches — is where the highest-intent legal searches click. "Car accident lawyer Detroit," "DUI attorney near me," "divorce attorney Wayne County" all trigger map pack results. The firms appearing there are getting clicks that never reach organic listings. Capturing that visibility requires:</p>
 

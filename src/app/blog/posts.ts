@@ -8794,9 +8794,204 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   <p style="margin:8px 0 0;color:#4b5563;">Darrin Singer Jr. is the founder of <a href="/about" style="color:#2563eb;">Caliber Web Studio</a>, a Detroit-based web design and local SEO agency serving small businesses across Metro Detroit.</p>
 </div>
 `
+  },
+  {
+    slug: "detroit-restaurants-websites-drive-orders",
+    thumbnail: "/blog/detroit-restaurants-websites-drive-orders-hero.jpg",
+    title: "How Detroit Restaurants Are Using Websites to Drive Orders",
+    description: "Detroit restaurants are cutting delivery commissions and driving more orders with direct-ordering websites. Here's the revenue strategy behind it.",
+    date: "2026-04-16",
+    category: "Industry Guides",
+    relatedSlugs: [
+      "why-detroit-restaurant-needs-custom-website-2026",
+      "restaurant-website-design-detroit",
+      "detroit-restaurant-website-design-menus-reservations",
+      "local-seo-guide-for-small-businesses",
+    ],
+    content: `
+<h1>How Detroit Restaurants Are Using Websites to Drive Orders</h1>
+
+<p>Your detroit restaurant website is either generating orders right now or it's costing you money every single day. There is no middle ground. While you're paying DoorDash 27% to deliver your own food to your own customers, restaurants across Metro Detroit that invested in a direct-ordering website are pocketing that margin instead. This post breaks down exactly how they're doing it — and how you can too.</p>
+
+<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+  <strong style="font-size:1.05em;">Key Takeaways</strong>
+  <ul style="margin:12px 0 0;padding-left:20px;">
+    <li>Third-party delivery apps charge 15–30% commission per order — a direct ordering site eliminates most of that</li>
+    <li>Over 70% of restaurant searches happen on a mobile phone; your site must convert on mobile first</li>
+    <li>Google now shows an "Order Online" button directly in search results — your site can own it</li>
+    <li>Local search visibility drives walk-in traffic; a properly built restaurant website ranks for neighborhood searches</li>
+    <li>Restaurants with direct ordering sites report 20–40% higher average order values than third-party platforms</li>
+  </ul>
+</div>
+
+<h2>The Commission Trap Most Detroit Restaurants Are Stuck In</h2>
+
+<p>Here's the situation. You built your reputation. You trained your kitchen. You built the brand. Then DoorDash, Grubhub, and Uber Eats showed up and offered to send you customers — for 15 to 30 cents of every dollar those customers spend.</p>
+
+<p>That's not a distribution deal. That's a tax on your own brand.</p>
+
+<h3>The Math Nobody Talks About</h3>
+
+<p>Say you do $8,000 in third-party delivery revenue per month. At a 25% commission, you're writing a $2,000 check to DoorDash every single month. That's $24,000 per year. For a restaurant running 10–15% net margins, that commission isn't just expensive — it often wipes out the profit on every delivery order entirely.</p>
+
+<p>The restaurants winning in Detroit right now aren't abandoning delivery. They're moving their regular customers off the apps and onto direct ordering through their own website. The apps still handle customer acquisition for new customers. But once someone's ordered from you twice, they should be ordering through your site — where you keep the full margin.</p>
+
+<h3>What Direct Ordering Actually Looks Like</h3>
+
+<p>A direct ordering integration on your restaurant website doesn't require a custom app or a $20,000 build. Platforms like Toast, Square for Restaurants, and ChowNow integrate directly into your website and let customers order the same way they would on DoorDash — except you keep 95–100% of the revenue. The checkout experience is seamless. The customer stays on your site. And you collect the customer data, which the delivery apps never share with you.</p>
+
+<p>That last point matters more than most restaurant owners realize. Every order through DoorDash is a customer you don't own. They ordered from your food, but DoorDash has their email, their address, and their order history. They can retarget that customer for a competitor next week. When orders come through your website, you own that relationship.</p>
+
+<img src="/blog/detroit-restaurants-websites-drive-orders-1.jpg" alt="Detroit restaurant owner reviewing online order dashboard on a tablet behind the counter" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>How a Detroit Restaurant Website Becomes an Order Machine</h2>
+
+<p>There's a specific architecture that turns a restaurant website from a digital brochure into a revenue driver. Most Detroit restaurant sites are built wrong from the start — pretty, but passive. Here's what an active ordering site actually requires.</p>
+
+<h3>Google's "Order Online" Button — And How to Own It</h3>
+
+<p>When someone searches "restaurants near me" or "Detroit pizza delivery" on Google, some results now show an "Order Online" button directly in the search result. That button doesn't link to DoorDash. It links to your website's direct ordering page — if your site is properly set up.</p>
+
+<p>This is one of the highest-ROI features most Detroit restaurants haven't touched. It requires connecting your Google Business Profile to your direct ordering system and properly structuring your site's menu and ordering pages. Once it's in place, you're capturing customers at the exact moment they're ready to spend — and sending them straight to your checkout, not a competitor's platform.</p>
+
+<p>Read our <a href="/blog/google-business-profile-optimization">complete Google Business Profile guide</a> to understand how this connection works and why your GBP and website need to operate as a unified system.</p>
+
+<h3>Mobile Checkout That Doesn't Lose Orders</h3>
+
+<p>Over 70% of restaurant searches happen on a mobile phone. Your customer is standing in their kitchen at 6:30 PM, hungry, and they have 45 seconds of patience before they go somewhere else. If your site takes more than two seconds to load, the checkout process has more than three steps, or the menu isn't readable on a phone screen — you just lost that order to a competitor whose site works.</p>
+
+<p>This is where most restaurant websites fail. They're designed on a desktop, look fine on a laptop, and are a nightmare on a phone. Mobile-first design isn't a feature you add later. It's the foundation.</p>
+
+<h3>The Click-to-Call and Click-to-Reserve Layer</h3>
+
+<p>Not every customer wants to order digitally. Older customers, catering inquiries, large party bookings — these often convert best with a phone call. Your restaurant site needs a tap-to-call button that's visible on every mobile page without scrolling. One tap, phone rings, order placed.</p>
+
+<p>If your site buries the phone number in the footer, you're losing calls. If there's no tap-to-call functionality at all, you're leaving catering and event revenue on the table every single week. For the reservations and booking side of the equation, see our companion post on <a href="/blog/detroit-restaurant-website-design-menus-reservations">restaurant website design in Detroit covering menus, photos, and reservations</a>.</p>
+
+<img src="/blog/detroit-restaurants-websites-drive-orders-2.jpg" alt="Close-up of a smartphone showing a Detroit restaurant's online ordering page with menu items and cart" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>The Three Revenue Streams a Restaurant Website Drives</h2>
+
+<p>Most restaurant owners think of their website as one thing: an online menu. It's actually three separate revenue channels working simultaneously.</p>
+
+<h3>1. Walk-In Traffic From Local Search</h3>
+
+<p>Someone new to your neighborhood searches "best tacos in Corktown" or "open late restaurants near me." Your website either shows up or it doesn't. If it does — and if the site is fast, shows your menu, and makes it easy to find your address — you've just turned a Google search into a table.</p>
+
+<p>This requires your site to have proper <a href="/blog/local-seo-guide-for-small-businesses">local SEO fundamentals</a>: location-specific page titles and headings, schema markup that tells Google your address and cuisine type, and content that uses the exact language your customers search for. Generic restaurant templates rank for nothing specific. A properly built Detroit restaurant website can own its neighborhood's search results.</p>
+
+<h3>2. Direct Online Orders — Commission-Free</h3>
+
+<p>This is the margin-protection play described above. Every customer you move from a third-party app to your own ordering page saves you 15–30% per order. For a restaurant doing $10,000/month in delivery, moving half of that to direct ordering is worth $1,250–$1,500 in pure margin every month — without serving a single additional customer.</p>
+
+<h3>3. Repeat Business Through Owned Channels</h3>
+
+<p>When customers order through your website, you collect their email and order history. That lets you send a promotion when you introduce a new dish, run a loyalty program, or re-engage customers who haven't ordered in 60 days. The delivery apps deliberately prevent you from doing this — because the moment your customers have a direct relationship with you, DoorDash becomes redundant.</p>
+
+<p>Restaurants that build an email list of 2,000 direct-ordering customers and send one campaign per month — even a simple "new item alert" — routinely generate $3,000–$8,000 in additional monthly revenue from those campaigns alone.</p>
+
+<img src="/blog/detroit-restaurants-websites-drive-orders-3.jpg" alt="Busy Detroit restaurant dining room at dinner service with full tables and kitchen visible through pass-through window" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>What Detroit Restaurants With Revenue-Focused Sites Look Like in Practice</h2>
+
+<p>A restaurant in Midtown Detroit was doing strong business but struggling with margins. Third-party apps represented 35% of their total revenue and were generating almost no profit after commissions. Their website was a one-page static site with a PDF menu and a phone number.</p>
+
+<p>The rebuild focused entirely on revenue recovery: direct ordering integration, a Google Business Profile connection to display the "Order Now" button in search results, and a mobile-first redesign that loaded under 1.5 seconds. Within 90 days, 40% of their delivery orders had migrated from the apps to direct. That shift recovered over $2,200 per month in commissions. The site paid for itself in the first six weeks.</p>
+
+<p>A second example: a family-owned Eastern Market restaurant had no online ordering at all. They were visible in search but had no mechanism to convert that visibility into revenue. Adding direct ordering and a proper click-to-call bar increased their average Friday revenue by $800 — not from more customers, but from making it easier for the customers they already had to order and pay online before arriving.</p>
+
+<h2>The Restaurant Website Revenue Checklist</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:28px 0;font-size:0.97em;">
+  <thead>
+    <tr style="background:#1E3D8F;color:#fff;">
+      <th style="padding:12px 16px;text-align:left;">Element</th>
+      <th style="padding:12px 16px;text-align:left;">Revenue Impact</th>
+      <th style="padding:12px 16px;text-align:center;">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Direct online ordering integration</td>
+      <td style="padding:12px 16px;">Eliminates 15–30% commission on delivery orders</td>
+      <td style="padding:12px 16px;text-align:center;">Critical</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Google "Order Online" button setup</td>
+      <td style="padding:12px 16px;">Captures high-intent customers at point of search</td>
+      <td style="padding:12px 16px;text-align:center;">Critical</td>
+    </tr>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Mobile load time under 2 seconds</td>
+      <td style="padding:12px 16px;">Reduces order abandonment; improves search ranking</td>
+      <td style="padding:12px 16px;text-align:center;">Critical</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Click-to-call in header and sticky bar</td>
+      <td style="padding:12px 16px;">Captures catering/event inquiries before they bounce</td>
+      <td style="padding:12px 16px;text-align:center;">High</td>
+    </tr>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">LocalBusiness + Restaurant schema</td>
+      <td style="padding:12px 16px;">Tells Google your cuisine, hours, and service area precisely</td>
+      <td style="padding:12px 16px;text-align:center;">High</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Neighborhood/city in page titles</td>
+      <td style="padding:12px 16px;">Required for ranking in local "restaurants near me" searches</td>
+      <td style="padding:12px 16px;text-align:center;">High</td>
+    </tr>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Customer email capture at checkout</td>
+      <td style="padding:12px 16px;">Enables repeat-order campaigns worth $3K–$8K/month</td>
+      <td style="padding:12px 16px;text-align:center;">High</td>
+    </tr>
+    <tr style="background:#f9fafb;border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Google reviews displayed on-site</td>
+      <td style="padding:12px 16px;">Social proof increases order conversion rate for new visitors</td>
+      <td style="padding:12px 16px;text-align:center;">Medium</td>
+    </tr>
+    <tr style="border-bottom:1px solid #e5e7eb;">
+      <td style="padding:12px 16px;">Hours + holiday schedule visible</td>
+      <td style="padding:12px 16px;">Reduces "are you open?" calls; builds visit confidence</td>
+      <td style="padding:12px 16px;text-align:center;">Medium</td>
+    </tr>
+    <tr style="background:#f9fafb;">
+      <td style="padding:12px 16px;">Catering/private event inquiry form</td>
+      <td style="padding:12px 16px;">High-ticket revenue channel most restaurants never capture online</td>
+      <td style="padding:12px 16px;text-align:center;">Medium</td>
+    </tr>
+  </tbody>
+</table>
+
+<img src="/blog/detroit-restaurants-websites-drive-orders-4.jpg" alt="Detroit restaurant exterior at dusk with warm lighting in windows and an open sign visible from the street" style="width:100%;border-radius:12px;margin:32px 0;" />
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How much does a restaurant website with online ordering cost in Detroit?</h3>
+<p>A properly built restaurant website with direct ordering integration typically runs $2,000–$5,000 for a one-time build, or $200–$350/month on a subscription model that includes hosting, maintenance, and ordering platform integration. The ROI calculation is straightforward: if moving even 20% of third-party delivery volume to direct saves $500–$1,000 in monthly commissions, the site pays for itself within the first 30–60 days.</p>
+
+<h3>Can I keep using DoorDash and also have my own ordering system?</h3>
+<p>Yes, and most successful Detroit restaurants do exactly this. The apps are useful for customer acquisition — people who discover you for the first time through the platform. The goal is to convert those customers to direct ordering on their second or third purchase, when they already trust you. A QR code on your packaging, a small discount for direct orders, or a loyalty card can migrate regular customers off the apps without losing new customer discovery.</p>
+
+<h3>Do I need a separate app for online ordering?</h3>
+<p>No. A web-based ordering system embedded in your restaurant website works on every phone without a download. Ordering apps have lower conversion rates because customers have to download them first. Web ordering requires nothing — the customer visits your site, orders, and pays in under two minutes. For most Detroit independent restaurants, a native app is unnecessary expense and complexity.</p>
+
+<h3>How long before my restaurant website ranks on Google?</h3>
+<p>For high-competition terms like "best restaurants in Detroit," expect 3–6 months of steady work. For neighborhood-specific searches — "Corktown brunch," "Eastern Market lunch," "Hamtramck late night food" — a properly built site can start appearing in local results within 4–8 weeks. The combination of your website and an optimized Google Business Profile accelerates this significantly.</p>
+
+<h3>What's the difference between this post and your restaurant website design post?</h3>
+<p>This post focuses on the revenue and ordering side — how your website generates orders and reduces commission dependency. Our companion post on <a href="/blog/detroit-restaurant-website-design-menus-reservations">restaurant website design covering menus, photos, and reservations</a> covers the design and presentation layer: how to display your menu, what photos convert, and how to handle reservation flows. Together they cover the full picture of what a high-performing Detroit restaurant website requires.</p>
+
+<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+  <strong style="font-size:1.1em;">Ready to Turn Your Restaurant Website Into an Order Machine?</strong>
+  <p style="margin:12px 0 0;">Caliber Web Studio builds restaurant websites for Detroit-area operators — with direct ordering integration, Google Business Profile connection, and mobile-first design that converts. No templates. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you what your new site looks like before you spend a dollar.</p>
+</div>
+
+<p style="margin-top:40px;padding-top:24px;border-top:1px solid #e5e7eb;font-size:0.92em;color:#555;"><strong>About the Author:</strong> <strong>Darrin Singer Jr.</strong> is the founder of Caliber Web Studio, a Detroit-based web design agency that builds high-performance websites exclusively for local businesses across Metro Detroit. Darrin has helped dozens of Detroit-area restaurants, retailers, and service businesses go from invisible online to generating consistent revenue from their websites. Every site Caliber builds is custom-coded, mobile-first, and designed to generate real orders and leads — not just traffic.</p>
+`
   }
 ];
-
 export function getPost(slug: string): BlogPost | undefined {
   return posts.find(p => p.slug === slug);
 }

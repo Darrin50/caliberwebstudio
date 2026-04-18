@@ -669,7 +669,13 @@ input:focus, textarea:focus {
 [data-theme="light"] main [data-force-dark] h3 {
   color: #ffffff !important;
 }
-/* Spans inside force-dark headings keep their inline color (e.g. accent blue) */
+/* Spans inside force-dark headings: use bright accent (not near-black) since background is always dark */
+[data-theme="light"] main [data-force-dark] h1 span,
+[data-theme="light"] main [data-force-dark] h2 span,
+[data-theme="light"] main [data-force-dark] h3 span {
+  color: #4DB8FF !important;
+  -webkit-text-fill-color: #4DB8FF !important;
+}
 [data-theme="light"] [data-force-dark] p { color: rgba(208,216,224,0.72) !important; }
 
 /* Hero headline text color CSS vars — used via inline style in Hero.tsx */

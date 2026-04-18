@@ -761,6 +761,12 @@ export default function PlumbersPageContent() {
         /* ── Light mode icon shell tint ── */
         [data-theme="light"] .feat-body,
         [data-theme="light"] .card-body { color: var(--chrome); }
+
+        /* ── Hero accent span: always bright on dark hero background ── */
+        [data-theme="light"] [data-force-dark] h1 span {
+          color: #4DB8FF !important;
+          -webkit-text-fill-color: #4DB8FF !important;
+        }
       `}</style>
     </>
   );

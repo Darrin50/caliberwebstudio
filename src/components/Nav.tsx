@@ -4,10 +4,15 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+type NavChild = { label: string; href: string };
+type NavItem = { label: string; href: string; children?: NavChild[] };
+
 export default function Nav() {
   const toggleRef = useRef<HTMLButtonElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -196,12 +201,22 @@ export default function Nav() {
     setMenuOpen(false);
   };
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { label: 'Services', href: '/services' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Our Work', href: '/case-studies' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
+    {
+      label: 'Industries',
+      href: '/industries',
+      children: [
+        { label: 'Plumbers', href: '/plumbers' },
+        { label: 'Barbershops', href: '/industries/barbershops' },
+        { label: 'Restaurants', href: '/industries/restaurants' },
+        { label: 'View All Industries →', href: '/industries' },
+      ],
+    },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -215,8 +230,42 @@ export default function Nav() {
 
         <ul className="nav-desktop" style={{ display: 'flex', gap: '36px', listStyle: 'none', alignItems: 'center' }}>
           {navItems.map((item) => (
-            <li key={item.label}>
-              <Link href={item.href} className="text-hover-line" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}>{item.label}</Link>
+            <li
+              key={item.label}
+              style={{ position: 'relative' }}
+              onMouseEnter={() => item.children && setActiveDropdown(item.label)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              {item.children ? (
+                <>
+                  <button
+                    style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: activeDropdown === item.label ? 'var(--silver)' : 'var(--dim)', background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center', gap: '5px', transition: 'color 0.2s' }}
+                  >
+                    {item.label}
+                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" style={{ transition: 'transform 0.2s', transform: activeDropdown === item.label ? 'rotate(180deg)' : 'none' }}>
+                      <path d="M1 1l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                  {activeDropdown === item.label && (
+                    <div style={{ position: 'absolute', top: 'calc(100% + 12px)', left: '50%', transform: 'translateX(-50%)', background: 'var(--nav-bg)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', border: '1px solid var(--border)', borderRadius: '8px', padding: '8px', minWidth: '200px', zIndex: 1001, boxShadow: '0 16px 40px rgba(0,0,0,0.4)' }}>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          onClick={() => setActiveDropdown(null)}
+                          style={{ display: 'block', padding: '10px 14px', fontFamily: "'Space Mono', monospace", fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', borderRadius: '4px', transition: 'background 0.15s, color 0.15s', whiteSpace: 'nowrap' }}
+                          onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(0,118,182,0.1)'; e.currentTarget.style.color = 'var(--silver)'; }}
+                          onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--dim)'; }}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link href={item.href} className="text-hover-line" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--silver)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dim)')}>{item.label}</Link>
+              )}
             </li>
           ))}
         </ul>
@@ -323,9 +372,32 @@ export default function Nav() {
 
       {menuOpen && <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 998 }} onClick={() => setMenuOpen(false)} />}
 
-      <div className="nav-mobile-menu" style={{ position: 'fixed', top: '72px', right: 0, width: '280px', maxWidth: '80vw', height: 'calc(100vh - 72px)', background: 'var(--nav-bg)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderLeft: '1px solid var(--border)', zIndex: 999, transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform 0.3s ease, background 0.4s ease', display: 'flex', flexDirection: 'column', padding: '32px 24px', gap: '8px' }}>
+      <div className="nav-mobile-menu" style={{ position: 'fixed', top: '72px', right: 0, width: '280px', maxWidth: '80vw', height: 'calc(100vh - 72px)', background: 'var(--nav-bg)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderLeft: '1px solid var(--border)', zIndex: 999, transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform 0.3s ease, background 0.4s ease', display: 'flex', flexDirection: 'column', padding: '32px 24px', gap: '8px', overflowY: 'auto' }}>
         {navItems.map((item) => (
-          <Link key={item.label} href={item.href} onClick={handleLinkClick} style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', padding: '14px 0', borderBottom: '1px solid var(--border)', transition: 'color 0.2s' }}>{item.label}</Link>
+          item.children ? (
+            <div key={item.label}>
+              <button
+                onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: "'Space Mono', monospace", fontSize: '13px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim)', background: 'none', border: 'none', borderBottom: '1px solid var(--border)', padding: '14px 0', cursor: 'pointer' }}
+              >
+                {item.label}
+                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" style={{ transition: 'transform 0.2s', transform: mobileExpanded === item.label ? 'rotate(180deg)' : 'none' }}>
+                  <path d="M1 1l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              {mobileExpanded === item.label && (
+                <div style={{ paddingLeft: '12px', paddingBottom: '4px', borderBottom: '1px solid var(--border)' }}>
+                  {item.children.map((child) => (
+                    <Link key={child.label} href={child.href} onClick={handleLinkClick} style={{ display: 'block', fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', padding: '10px 0' }}>
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link key={item.label} href={item.href} onClick={handleLinkClick} style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none', padding: '14px 0', borderBottom: '1px solid var(--border)', transition: 'color 0.2s' }}>{item.label}</Link>
+          )
         ))}
         <Link href="/contact" onClick={handleLinkClick} className="btn-chrome" style={{ fontFamily: "'Space Mono', monospace", fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', textAlign: 'center', fontWeight: 700, marginTop: '16px', display: 'block' }}>Get Your Free Mockup</Link>
       </div>

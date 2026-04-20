@@ -1,1 +1,131 @@
-[]
+[
+  {
+    "slug": "flawlessbytamika",
+    "businessName": "Flawless by Tamika",
+    "businessType": "Med Spa",
+    "tagline": "25 years of transforming Livonia women — one treatment at a time. Expert injections, medical-grade facials, and body contouring from a licensed nurse injector who's been doing this since before it was trendy.",
+    "primaryColor": "#B76E79",
+    "accentColor": "#C9A96E",
+    "announceBar": "New Client Special — 20% Off Your First Treatment | Call (734) 444-9454",
+    "heroImg": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1600&auto=format&fit=crop&q=80",
+    "aboutImg": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+    "theme": {
+      "bg": "#0A0A0A",
+      "bg2": "#141414",
+      "bg3": "#1C1C1E",
+      "accent": "#B76E79",
+      "accent2": "#C9A96E",
+      "text": "#F5F5F5",
+      "muted": "#A3A3A3",
+      "light": "#E5E5E5",
+      "radius": "10px"
+    },
+    "stats": [
+      { "num": "25+", "label": "Years in Livonia" },
+      { "num": "18+", "label": "Treatments Offered" },
+      { "num": "500+", "label": "Clients Served" },
+      { "num": "4.9★", "label": "Client Rating" }
+    ],
+    "services": [
+      {
+        "name": "Botox & Dysport",
+        "description": "Smooth forehead lines, crow's feet, and frown lines with precision neurotoxin injections. Tamika's natural-looking results have kept Livonia clients coming back for years — no frozen faces here.",
+        "price": "From $12/unit"
+      },
+      {
+        "name": "Dermal Fillers",
+        "description": "Restore lost volume, define your lips, or lift your cheeks with hyaluronic acid fillers. Results last 12–18 months. Consultations included with every treatment.",
+        "price": "From $450"
+      },
+      {
+        "name": "HydraFacial",
+        "description": "The signature 3-in-1 facial: deep cleanse, gentle exfoliation, and intense hydration in 45 minutes. Zero downtime. Glowing skin you'll see immediately walking out the door.",
+        "price": "From $175"
+      },
+      {
+        "name": "Chemical Peels",
+        "description": "Medical-grade peels that resurface and brighten dull, uneven skin. We customize your peel depth based on your skin type — from light refreshers to deeper resurfacing treatments.",
+        "price": "From $150"
+      },
+      {
+        "name": "Body Contouring",
+        "description": "Non-surgical fat reduction and skin tightening using the latest contouring technology. Target the stomach, flanks, thighs, and arms without a single incision or recovery day.",
+        "price": "From $299"
+      },
+      {
+        "name": "Microneedling",
+        "description": "Collagen-stimulating microneedling to reduce acne scars, fine lines, and hyperpigmentation. Safe for all skin tones — including darker skin that's been underserved by traditional treatments.",
+        "price": "From $250"
+      },
+      {
+        "name": "Medical Grade Facials",
+        "description": "More than a spa facial — these treatments use clinical-grade ingredients to address real skin concerns: hyperpigmentation, rosacea, dehydration, and aging. Customized to your skin at every visit.",
+        "price": "From $125"
+      },
+      {
+        "name": "Semaglutide Weight Loss",
+        "description": "FDA-approved weight loss injections combined with personalized support from a licensed nurse. Medical oversight, real results, and a practitioner who actually knows your name.",
+        "price": "Call for pricing"
+      }
+    ],
+    "hours": [
+      { "day": "Tuesday", "hours": "11:00 AM – 5:00 PM" },
+      { "day": "Thursday", "hours": "10:00 AM – 7:00 PM" },
+      { "day": "Saturday (Every Other)", "hours": "11:00 AM – 4:00 PM" },
+      { "day": "Sunday – Monday", "hours": "Closed" }
+    ],
+    "phone": "(734) 444-9454",
+    "address": "9194 Middlebelt Rd",
+    "city": "Livonia, MI 48150",
+    "about": "Tamika has been caring for Livonia women for over 25 years — long before med spas became a trend. As a licensed nurse injector and master skin care specialist, she built her practice on one principle: every client deserves results that look natural, not done. No cookie-cutter treatments. No upselling procedures you don't need. Just honest assessments, expert hands, and real results from someone who genuinely knows your face.\n\nFrom her first days as a licensed nurse to her advanced training in aesthetic injections and body contouring, Tamika has never stopped learning. She was mastering Botox and chemical peels when most providers in this area were just getting started. That depth of experience shows in every single treatment — and it's why her clients drive from across the metro to sit in her chair.",
+    "ctaLabel": "Book Your Consultation",
+    "website": "https://flawlessbytamikamedspa.com",
+    "email": "",
+    "socials": {},
+    "chatbotGreeting": "Welcome to Flawless by Tamika! I'm here to help you book a consultation or answer questions about our treatments. What can I help you with today?",
+    "reviews": [
+      {
+        "name": "Jasmine M. — Detroit, MI",
+        "stars": 5,
+        "text": "Tamika has been doing my Botox for three years and I will never go anywhere else. She has the most precise hand I've ever seen — my results always look completely natural. My coworkers think I just 'look rested.' That's exactly the goal."
+      },
+      {
+        "name": "Keisha T. — Livonia, MI",
+        "stars": 5,
+        "text": "I was so nervous about lip filler but Tamika walked me through every single step and made sure I was comfortable the whole time. I came in wanting subtle and she gave me exactly that. She truly listens. Six months later I'm still obsessed."
+      },
+      {
+        "name": "Nicole R. — Dearborn Heights, MI",
+        "stars": 5,
+        "text": "I've done HydraFacials with other providers but nothing compares to what Tamika does. My skin glows for weeks after. She also caught that I had some hyperpigmentation starting and recommended a chemical peel series that completely changed my skin. Genuinely changed my life."
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1560750133-c8f8f6f4e5ee?w=800&auto=format&fit=crop&q=80",
+        "alt": "Facial treatment at Flawless by Tamika"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&auto=format&fit=crop&q=80",
+        "alt": "Radiant skin results"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop&q=80",
+        "alt": "Luxury med spa treatment room"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=800&auto=format&fit=crop&q=80",
+        "alt": "Relaxing spa environment"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&auto=format&fit=crop&q=80",
+        "alt": "Skincare treatment close-up"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&auto=format&fit=crop&q=80",
+        "alt": "Medical grade skincare"
+      }
+    ],
+    "createdAt": "2026-04-20"
+  }
+]

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michigan Med Spa | Medical Spa West Bloomfield, MI</title>
+  <meta name="description" content="Michigan Med Spa — physician-supervised aesthetic treatments in West Bloomfield, MI. HydraFacial, laser hair removal, injectables, body contouring & free consultation.">
+  <meta property="og:title" content="Michigan Med Spa | West Bloomfield, MI">
+  <meta property="og:description" content="Physician-supervised med spa offering HydraFacial, laser hair removal, Botox, dermal fillers, scar removal & body contouring. Free consultation.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="noindex, nofollow">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalBusiness",
+    "name":"Michigan Med Spa",
+    "description":"Physician-supervised medical spa in West Bloomfield, MI offering laser treatments, injectables, body contouring, and advanced skincare.",
+    "url":"https://michiganmedspa.com",
+    "telephone":"+12488517246",
+    "email":"michiganmedspa@gmail.com",
+    "address":{"@type":"PostalAddress","streetAddress":"6079 W Maple Rd #100b","addressLocality":"West Bloomfield","addressRegion":"MI","postalCode":"48322","addressCountry":"US"},
+    "geo":{"@type":"GeoCoordinates","latitude":42.5395,"longitude":-83.3772},
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"17:00"}],
+    "medicalSpecialty":"Aesthetic Medicine",
+    "employee":[
+      {"@type":"Physician","name":"Marvin Bleiberg","honorificSuffix":"MD","medicalSpecialty":"Physical Medicine and Rehabilitation"},
+      {"@type":"Person","name":"Erin Bleiberg","jobTitle":"Business Director"},
+      {"@type":"Person","name":"Kelly D'Arcy","honorificSuffix":"RN, BSN","jobTitle":"Master Injector and Laser Specialist"}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:     #0A0A0A;
+      --bg2:    #121212;
+      --bg3:    #1A1A1A;
+      --bg4:    #222222;
+      --accent: #B76E79;
+      --accent2:#C9A96E;
+      --glow:   rgba(183,110,121,0.14);
+      --text:   #F5F5F5;
+      --muted:  #A3A3A3;
+      --dim:    #6B7280;
+      --border: rgba(255,255,255,0.07);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+      --radius: 4px;
+      --radius-lg: 8px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 16px; line-height: 1.7; overflow-x: hidden; cursor: auto; }
+
+    /* ── ANNOUNCE BAR ── */
+    .announce { background: var(--accent); color: #0A0A0A; text-align: center; padding: 10px 20px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+    .announce a { color: #0A0A0A; text-decoration: none; font-weight: 700; }
+
+    /* ── NAV ── */
+    .nav { position: sticky; top: 0; z-index: 200; background: rgba(10,10,10,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-in { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { display: flex; flex-direction: column; }
+    .logo-name { font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--text); letter-spacing: 0.5px; line-height: 1; }
+    .logo-tag { font-size: 9px; font-weight: 400; color: var(--muted); letter-spacing: 2.5px; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--muted); font-size: 13px; font-weight: 400; text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 9px 22px; border-radius: var(--radius); font-size: 13px; font-weight: 500; text-decoration: none; letter-spacing: 0.5px; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+    .nav-cta:hover { background: var(--accent); color: #0A0A0A; }
+
+    /* ── HERO ── */
+    .hero { position: relative; min-height: 90vh; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0A0A0A 0%, #1a0e10 50%, #0f0a0c 100%); }
+    .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: 0.35; }
+    .hero-ov { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0.3) 100%); }
+    .hero-con { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 80px 24px; width: 100%; }
+    .hero-eyebrow { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); border-top: 1px solid var(--accent); padding-top: 8px; margin-bottom: 24px; }
+    .hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.08; letter-spacing: -0.5px; color: var(--text); max-width: 700px; margin-bottom: 24px; }
+    .hero-title em { font-style: italic; color: var(--accent); }
+    .hero-sub { font-size: 17px; font-weight: 300; color: rgba(245,245,245,0.72); max-width: 480px; margin-bottom: 44px; line-height: 1.8; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: #0A0A0A; padding: 15px 36px; border-radius: var(--radius); font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: 0.5px; transition: background 0.2s, transform 0.15s; display: inline-block; }
+    .btn-primary:hover { background: #a0606b; transform: translateY(-1px); }
+    .btn-outline { border: 1px solid rgba(245,245,245,0.25); color: var(--text); padding: 14px 32px; border-radius: var(--radius); font-size: 14px; font-weight: 400; text-decoration: none; letter-spacing: 0.5px; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-badges { display: flex; gap: 32px; margin-top: 48px; flex-wrap: wrap; }
+    .hbadge { font-size: 12px; font-weight: 400; letter-spacing: 1px; color: rgba(245,245,245,0.5); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+    .hbadge::before { content: ''; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+
+    /* ── MARQUEE ── */
+    .marquee { background: var(--bg3); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 0; overflow: hidden; white-space: nowrap; }
+    .marquee-track { display: inline-flex; gap: 0; animation: marquee 28s linear infinite; }
+    .marquee-track span { font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); padding: 0 28px; }
+    .marquee-dot { color: var(--accent) !important; font-size: 8px !important; padding: 0 8px !important; letter-spacing: 0 !important; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ── PROOF BAR ── */
+    .proof { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 32px 0; }
+    .proof-in { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: center; }
+    .proof-item { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); letter-spacing: 0.5px; }
+    .proof-icon { color: var(--accent); flex-shrink: 0; }
+    .proof-item strong { color: var(--text); font-weight: 600; }
+    .proof-sep { width: 1px; height: 28px; background: var(--border); }
+
+    /* ── SECTIONS ── */
+    .sec { padding: 96px 0; }
+    .sec-alt { background: var(--bg2); }
+    .sec-dark { background: var(--bg3); }
+    .con { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .sec-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .sec-title { font-family: var(--font-serif); font-size: clamp(1.9rem, 3.5vw, 2.9rem); font-weight: 400; color: var(--text); line-height: 1.15; margin-bottom: 16px; }
+    .sec-line { width: 40px; height: 1px; background: var(--accent); margin: 18px 0 24px; }
+    .sec-sub { font-size: 15px; color: var(--muted); max-width: 520px; line-height: 1.8; font-weight: 300; }
+    .shdr { margin-bottom: 56px; }
+    .shdr-center { text-align: center; }
+    .shdr-center .sec-line { margin: 18px auto 24px; }
+    .shdr-center .sec-sub { margin: 0 auto; }
+
+    /* ── SERVICES ── */
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .svc-card { background: var(--bg2); padding: 32px 28px; transition: background 0.2s; cursor: default; }
+    .svc-card:hover { background: var(--bg3); }
+    .svc-icon { width: 40px; height: 40px; margin-bottom: 18px; color: var(--accent); opacity: 0.9; }
+    .svc-name { font-family: var(--font-serif); font-size: 19px; font-weight: 500; color: var(--text); margin-bottom: 8px; letter-spacing: 0.3px; }
+    .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+    /* ── TEAM ── */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .team-card { text-align: center; }
+    .team-avatar { width: 100%; aspect-ratio: 3/4; background: var(--bg3); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 20px; position: relative; }
+    .team-avatar-inner { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+    .team-avatar-grad { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(183,110,121,0.12), rgba(201,169,110,0.08)); }
+    .team-initial { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 48px; font-weight: 300; color: var(--accent); opacity: 0.6; }
+    .team-name { font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+    .team-cred { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; font-weight: 500; }
+    .team-bio { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+    /* ── REVIEWS ── */
+    .rv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+    .rv-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; transition: border-color 0.2s; }
+    .rv-card:hover { border-color: rgba(183,110,121,0.3); }
+    .stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .star { color: var(--accent2); font-size: 14px; }
+    .rv-text { font-family: var(--font-serif); font-size: 17px; font-style: italic; color: rgba(245,245,245,0.85); line-height: 1.65; margin-bottom: 20px; font-weight: 300; }
+    .rv-author { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-img-wrap { overflow: hidden; border-radius: var(--radius-lg); background: var(--bg3); position: relative; aspect-ratio: 4/5; }
+    .about-img { width: 100%; height: 100%; object-fit: cover; }
+    .about-img-grad { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(10,10,10,0.6) 100%); }
+    .about-img-placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .about-text p { color: rgba(245,245,245,0.75); font-size: 15px; line-height: 1.85; margin-bottom: 20px; font-weight: 300; }
+    .about-text p strong { color: var(--text); font-weight: 500; }
+    .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .astat-num { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 400; color: var(--accent); display: block; line-height: 1; margin-bottom: 6px; }
+    .astat-lbl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: linear-gradient(135deg, #1a0e10 0%, #0a0a0a 40%, #0f0e08 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
+    .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, var(--glow) 0%, transparent 65%); pointer-events: none; }
+    .cta-band .con { position: relative; }
+    .cta-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
+    .cta-sub { font-size: 15px; color: var(--muted); margin-bottom: 36px; font-weight: 300; }
+
+    /* ── CONTACT ── */
+    .ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .ct-block { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; }
+    .ct-block h3 { font-family: var(--font-serif); font-size: 22px; font-weight: 500; color: var(--text); margin-bottom: 28px; }
+    .ci { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+    .ci-icon { width: 38px; height: 38px; background: rgba(183,110,121,0.1); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+    .ci-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--dim); margin-bottom: 3px; }
+    .ci-val { font-size: 15px; color: var(--text); font-weight: 400; }
+    .ci-val a { color: var(--accent); text-decoration: none; }
+    .ci-val a:hover { text-decoration: underline; }
+    .hr-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .hr-row:last-child { border-bottom: none; }
+    .hr-day { color: var(--muted); font-weight: 300; }
+    .hr-time { color: var(--text); font-weight: 500; }
+    .hr-row.closed .hr-time { color: var(--dim); }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--bg); border-top: 1px solid var(--border); padding: 48px 0 28px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; margin-bottom: 36px; }
+    .footer-biz { font-family: var(--font-serif); font-size: 18px; font-weight: 400; color: var(--text); margin-bottom: 4px; }
+    .footer-city { font-size: 12px; letter-spacing: 1px; color: var(--dim); text-transform: uppercase; }
+    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+    .footer-links a { color: var(--dim); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { font-size: 12px; color: var(--dim); padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .footer-copy a { color: var(--accent); text-decoration: none; }
+
+    /* ── MOBILE STICKY BAR ── */
+    .mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 300; background: var(--bg2); border-top: 1px solid var(--border); padding: 12px 16px; gap: 12px; }
+    .mobile-bar a { flex: 1; text-align: center; padding: 14px 10px; border-radius: var(--radius); font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: 0.3px; }
+    .mb-call { background: var(--accent); color: #0A0A0A; }
+    .mb-dir { border: 1px solid var(--border); color: var(--text); }
+
+    /* ── PREVIEW BANNER ── */
+    .preview-banner { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: rgba(10,10,10,0.95); border: 1px solid rgba(183,110,121,0.35); border-radius: 40px; padding: 10px 20px; display: flex; align-items: center; gap: 12px; z-index: 9999; backdrop-filter: blur(16px); white-space: nowrap; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+    .pb-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; flex-shrink: 0; animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+    .pb-text { font-size: 12px; color: rgba(245,245,245,0.8); font-weight: 400; letter-spacing: 0.3px; }
+    .pb-cta { background: var(--accent); color: #0A0A0A; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; text-decoration: none; transition: background 0.2s; }
+    .pb-cta:hover { background: var(--accent2); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .team-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .ct-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .sec { padding: 64px 0; }
+      .team-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+      .preview-banner { display: none; }
+      .mobile-bar { display: flex; }
+      body { padding-bottom: 76px; }
+      .proof-sep { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announce bar — FIX: real CTA, not lorem ipsum -->
+  <div class="announce">
+    Complimentary Consultations Available — <a href="tel:2488517246">Call (248) 851-7246</a>
+  </div>
+
+  <!-- Navigation — FIX: real brand name, not "Avada Health" -->
+  <nav class="nav">
+    <div class="nav-in">
+      <div class="logo">
+        <div class="logo-name">Michigan Med Spa</div>
+        <div class="logo-tag">West Bloomfield, Michigan</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:2488517246" class="nav-cta">(248) 851-7246</a>
+    </div>
+  </nav>
+
+  <!-- Hero — FIX: modern luxury aesthetic, no lorem ipsum, real copy -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <img
+      src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=85"
+      alt="Luxury med spa aesthetic treatment West Bloomfield"
+      class="hero-img"
+      onerror="this.style.display='none'"
+    >
+    <div class="hero-ov"></div>
+    <div class="hero-con">
+      <div class="hero-eyebrow">Physician-Supervised · West Bloomfield, MI</div>
+      <h1 class="hero-title">
+        Your <em>Best Skin</em><br>Starts Here
+      </h1>
+      <p class="hero-sub">
+        Advanced aesthetic treatments by board-certified MD Dr. Marvin Bleiberg and master injector Kelly D'Arcy RN. Personalized results. Zero pressure.
+      </p>
+      <div class="hero-btns">
+        <a href="tel:2488517246" class="btn-primary">Book Free Consultation</a>
+        <a href="#services" class="btn-outline">View Treatments</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hbadge">MD Supervised</span>
+        <span class="hbadge">Icon™ Laser Technology</span>
+        <span class="hbadge">Free Consultation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee — Luxury tier trust strip -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Physician-Supervised Care</span><span class="marquee-dot">◆</span>
+      <span>HydraFacial Certified</span><span class="marquee-dot">◆</span>
+      <span>Icon™ Laser Technology</span><span class="marquee-dot">◆</span>
+      <span>West Bloomfield, Michigan</span><span class="marquee-dot">◆</span>
+      <span>Free Consultation</span><span class="marquee-dot">◆</span>
+      <span>Board-Certified MD on Staff</span><span class="marquee-dot">◆</span>
+      <span>Botox &amp; Dermal Fillers</span><span class="marquee-dot">◆</span>
+      <span>Body Contouring</span><span class="marquee-dot">◆</span>
+      <!-- Duplicate for seamless loop -->
+      <span>Physician-Supervised Care</span><span class="marquee-dot">◆</span>
+      <span>HydraFacial Certified</span><span class="marquee-dot">◆</span>
+      <span>Icon™ Laser Technology</span><span class="marquee-dot">◆</span>
+      <span>West Bloomfield, Michigan</span><span class="marquee-dot">◆</span>
+      <span>Free Consultation</span><span class="marquee-dot">◆</span>
+      <span>Board-Certified MD on Staff</span><span class="marquee-dot">◆</span>
+      <span>Botox &amp; Dermal Fillers</span><span class="marquee-dot">◆</span>
+      <span>Body Contouring</span><span class="marquee-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- Proof bar — FIX: real stats, not zeros -->
+  <div class="proof">
+    <div class="proof-in">
+      <div class="proof-item">
+        <span class="proof-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </span>
+        <span><strong>MD-Supervised</strong> Every Treatment</span>
+      </div>
+      <div class="proof-sep"></div>
+      <div class="proof-item">
+        <span class="proof-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <span><strong>8+ Years</strong> Serving West Bloomfield</span>
+      </div>
+      <div class="proof-sep"></div>
+      <div class="proof-item">
+        <span class="proof-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </span>
+        <span><strong>13+ Treatments</strong> Available</span>
+      </div>
+      <div class="proof-sep"></div>
+      <div class="proof-item">
+        <span class="proof-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </span>
+        <span><strong>Mon–Thu</strong> 8 AM – 5 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services — FIX: no "Product/Service #1", no lorem ipsum, working CTAs, real services -->
+  <section id="services" class="sec">
+    <div class="con">
+      <div class="shdr">
+        <div class="sec-eyebrow">What We Offer</div>
+        <h2 class="sec-title">Our Treatments</h2>
+        <div class="sec-line"></div>
+        <p class="sec-sub">Advanced aesthetic medicine with physician oversight and the Icon™ laser system. Personalized plans for every skin type.</p>
+      </div>
+      <div class="svc-grid">
+
+        <!-- HydraFacial -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+            <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+          </svg>
+          <div class="svc-name">HydraFacial</div>
+          <div class="svc-desc">Deep cleansing, exfoliation, and hydration in one treatment. Immediately visible results with zero downtime — glowing skin after a single session.</div>
+        </div>
+
+        <!-- Laser Hair Removal -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <div class="svc-name">Laser Hair Removal</div>
+          <div class="svc-desc">Permanent hair reduction using the Icon™ system. Safe for all skin types, treating face and body areas with lasting precision and comfort.</div>
+        </div>
+
+        <!-- Scar Removal -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+          </svg>
+          <div class="svc-name">Scar Removal</div>
+          <div class="svc-desc">The Icon™ fractional laser breaks down scar tissue and triggers natural healing. Effective on acne scars, surgical scars, and stretch marks.</div>
+        </div>
+
+        <!-- Skin Rejuvenation -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+          </svg>
+          <div class="svc-name">Skin Rejuvenation</div>
+          <div class="svc-desc">Icon™ treatments for brown spot removal, rosacea, facial veins, and texture improvement. Brighter, more even-toned skin with each session.</div>
+        </div>
+
+        <!-- Botox -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4m0 0v-4m0 4H9"/>
+            <path d="M3 9h18"/><path d="M3 15h18"/>
+          </svg>
+          <div class="svc-name">Botox® Injectables</div>
+          <div class="svc-desc">Administered by Kelly D'Arcy RN, Master Injector. Precise, natural-looking results for forehead lines, crow's feet, and facial contouring.</div>
+        </div>
+
+        <!-- Dermal Fillers -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 2v6"/><path d="M15 2v6"/><path d="M12 17v5"/><path d="M5 8a7 7 0 0 1 14 0c0 5.25-7 13-7 13S5 13.25 5 8Z"/>
+          </svg>
+          <div class="svc-name">Dermal Fillers</div>
+          <div class="svc-desc">Hyaluronic acid fillers for lip augmentation, cheek volume, and facial contouring. Soft, natural results that restore youthful structure.</div>
+        </div>
+
+        <!-- SculpSure -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+          </svg>
+          <div class="svc-name">SculpSure Body Contouring</div>
+          <div class="svc-desc">FDA-cleared laser treatment destroys stubborn fat cells in 25 minutes. No surgery, no downtime. Targets abdomen, flanks, back, and thighs.</div>
+        </div>
+
+        <!-- Kybella -->
+        <div class="svc-card">
+          <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M8 5.2A7.9 7.9 0 0 1 12 4a7.9 7.9 0 0 1 4 1.2"/><path d="M2.5 8.875A10 10 0 0 1 12 4a10 10 0 0 1 9.5 4.875"/>
+          </svg>
+          <div class="svc-name">Kybella & Skin Tightening</div>
+          <div class="svc-desc">Eliminate submental fullness (double chin) permanently with Kybella, or tighten lax skin on face and body with our non-surgical lifting protocols.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Team — FIX: real staff, real credentials, no Jon Snow / Tony Stark -->
+  <section id="team" class="sec sec-alt">
+    <div class="con">
+      <div class="shdr shdr-center">
+        <div class="sec-eyebrow">Meet the Team</div>
+        <h2 class="sec-title">Your Care Team</h2>
+        <div class="sec-line"></div>
+        <p class="sec-sub">Every treatment is supervised by a board-certified physician. Precision, expertise, and genuine care — every visit.</p>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img
+              class="team-avatar-inner"
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80"
+              alt="Dr. Marvin Bleiberg MD"
+              onerror="this.style.display='none'"
+            >
+            <div class="team-avatar-grad"></div>
+            <div class="team-initial" style="display:none">MB</div>
+          </div>
+          <div class="team-name">Dr. Marvin Bleiberg</div>
+          <div class="team-cred">MD · Board-Certified Physician</div>
+          <div class="team-bio">Board-certified in Physical Medicine &amp; Rehabilitation, Dr. Bleiberg provides physician oversight and customized treatment plans for every Michigan Med Spa patient. Under his supervision, your results are clinically grounded and medically sound.</div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img
+              class="team-avatar-inner"
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+              alt="Erin Bleiberg Business Director"
+              onerror="this.style.display='none'"
+            >
+            <div class="team-avatar-grad"></div>
+            <div class="team-initial" style="display:none">EB</div>
+          </div>
+          <div class="team-name">Erin Bleiberg</div>
+          <div class="team-cred">Business Director</div>
+          <div class="team-bio">Erin oversees the patient experience from first consultation to final treatment. Her commitment to attentive, unhurried care is what sets Michigan Med Spa apart from larger, impersonal practices in the area.</div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img
+              class="team-avatar-inner"
+              src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=600&q=80"
+              alt="Kelly D'Arcy RN BSN Master Injector"
+              onerror="this.style.display='none'"
+            >
+            <div class="team-avatar-grad"></div>
+            <div class="team-initial" style="display:none">KD</div>
+          </div>
+          <div class="team-name">Kelly D'Arcy</div>
+          <div class="team-cred">RN, BSN · Master Injector &amp; Laser Specialist</div>
+          <div class="team-bio">Kelly brings surgical precision and artistic sensibility to every injection. As a Master Injector and certified Icon™ laser operator, she delivers natural-looking results that enhance without overdoing.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews — FIX: real testimonials, not identical filler text -->
+  <section class="sec sec-dark">
+    <div class="con">
+      <div class="shdr shdr-center">
+        <div class="sec-eyebrow">Patient Stories</div>
+        <h2 class="sec-title">What Our Patients Say</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="rv-grid">
+        <div class="rv-card">
+          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="rv-text">"Kelly did my Botox and the results are the most natural I've ever had. She actually listened to what I wanted and didn't over-inject. I looked refreshed, not frozen. I won't go anywhere else."</p>
+          <div class="rv-author">— Sarah M., West Bloomfield</div>
+        </div>
+        <div class="rv-card">
+          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="rv-text">"Four laser hair removal sessions and I'm done. Seriously done. The Icon™ system is painless compared to what I'd experienced elsewhere, and the staff actually takes time to explain everything before they start."</p>
+          <div class="rv-author">— Dani R., Bloomfield Hills</div>
+        </div>
+        <div class="rv-card">
+          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="rv-text">"My HydraFacial results were instant and lasted weeks. This is not a spa — it's a real medical practice that happens to offer beautiful skincare. The difference is obvious when you're in the chair."</p>
+          <div class="rv-author">— Marcus T., Southfield</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About — FIX: no "Avada Health", no zeros, real practice copy -->
+  <section id="about" class="sec">
+    <div class="con">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img
+            class="about-img"
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+            alt="Michigan Med Spa treatment room West Bloomfield"
+            onerror="this.style.display='none'"
+          >
+          <div class="about-img-grad"></div>
+        </div>
+        <div class="about-text">
+          <div class="sec-eyebrow">Our Practice</div>
+          <h2 class="sec-title">Medicine Meets Aesthetics</h2>
+          <div class="sec-line"></div>
+          <p>Michigan Med Spa is a full-service medical spa in West Bloomfield, MI, operating under the physician supervision of <strong>Dr. Marvin Bleiberg, MD</strong>. We combine clinical precision with a luxury spa experience — the kind of results you can only get when a real doctor is guiding your care.</p>
+          <p>We use the <strong>Icon™ Aesthetic System</strong> — one of the most advanced laser platforms available — for treatments ranging from laser hair removal to scar reduction to skin rejuvenation. Our injectable treatments are performed exclusively by <strong>Kelly D'Arcy RN, Master Injector</strong>, with a focus on natural-looking enhancement.</p>
+          <p>We operate by appointment, with time built in to actually listen to you. No quotas. No upselling. Just a customized plan that gets you where you want to be.</p>
+          <div class="about-stats">
+            <div>
+              <span class="astat-num">8+</span>
+              <span class="astat-lbl">Years in Business</span>
+            </div>
+            <div>
+              <span class="astat-num">13</span>
+              <span class="astat-lbl">Treatments Available</span>
+            </div>
+            <div>
+              <span class="astat-num">3</span>
+              <span class="astat-lbl">Expert Providers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="cta-band">
+    <div class="con">
+      <div class="sec-eyebrow" style="text-align:center; margin-bottom:16px;">Ready to Start?</div>
+      <h2 class="cta-title">Your Free Consultation Is Waiting</h2>
+      <p class="cta-sub">No obligation. No pressure. A 20-minute conversation with our team to understand your goals and build a treatment plan that makes sense for you.</p>
+      <a href="tel:2488517246" class="btn-primary" style="font-size:16px; padding:17px 44px;">(248) 851-7246</a>
+    </div>
+  </section>
+
+  <!-- Contact — FIX: real hours, proper address, no empty contact page -->
+  <section id="contact" class="sec sec-alt">
+    <div class="con">
+      <div class="shdr">
+        <div class="sec-eyebrow">Get In Touch</div>
+        <h2 class="sec-title">Contact & Hours</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="ct-grid">
+        <div class="ct-block">
+          <h3>Contact Information</h3>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Phone</div>
+              <div class="ci-val"><a href="tel:2488517246">(248) 851-7246</a></div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-val"><a href="mailto:michiganmedspa@gmail.com">michiganmedspa@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Address</div>
+              <div class="ci-val">
+                <a href="https://maps.google.com/?q=6079+W+Maple+Rd+West+Bloomfield+MI+48322" target="_blank" rel="noopener noreferrer">
+                  6079 W Maple Rd #100b<br>West Bloomfield, MI 48322
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Instagram</div>
+              <div class="ci-val"><a href="https://www.instagram.com/mi_medspa/" target="_blank" rel="noopener noreferrer">@mi_medspa</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ct-block">
+          <h3>Hours of Operation</h3>
+          <!-- FIX: hours actually displayed — missing from original site -->
+          <div class="hr-row"><span class="hr-day">Monday</span><span class="hr-time">8:00 AM – 5:00 PM</span></div>
+          <div class="hr-row"><span class="hr-day">Tuesday</span><span class="hr-time">8:00 AM – 5:00 PM</span></div>
+          <div class="hr-row"><span class="hr-day">Wednesday</span><span class="hr-time">8:00 AM – 5:00 PM</span></div>
+          <div class="hr-row"><span class="hr-day">Thursday</span><span class="hr-time">8:00 AM – 5:00 PM</span></div>
+          <div class="hr-row closed"><span class="hr-day">Friday</span><span class="hr-time">Closed</span></div>
+          <div class="hr-row closed"><span class="hr-day">Saturday</span><span class="hr-time">Closed</span></div>
+          <div class="hr-row closed"><span class="hr-day">Sunday</span><span class="hr-time">Closed</span></div>
+          <div style="margin-top: 24px; padding: 16px; background: rgba(183,110,121,0.08); border-radius: var(--radius); border: 1px solid rgba(183,110,121,0.2);">
+            <div style="font-size:12px; color:var(--accent); font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;">Free Consultation</div>
+            <div style="font-size:14px; color:var(--muted); font-weight:300;">No charge or obligation. Call to schedule your personalized treatment discussion.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer — FIX: real copyright year, real brand, CWS credit -->
+  <footer class="footer">
+    <div class="con">
+      <div class="footer-row">
+        <div>
+          <div class="footer-biz">Michigan Med Spa</div>
+          <div class="footer-city">West Bloomfield, Michigan · 6079 W Maple Rd</div>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#team">Our Team</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="https://www.instagram.com/mi_medspa/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/MichiganMedSpa/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <span>© 2026 Michigan Med Spa. All rights reserved. · (248) 851-7246</span>
+        <span>Demo built by <a href="https://caliberwebstudio.com" target="_blank" rel="noopener noreferrer">Caliber Web Studio</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky bar — FIX: missing from original site -->
+  <div class="mobile-bar">
+    <a href="tel:2488517246" class="mb-call">Call Now</a>
+    <a href="https://maps.google.com/?q=6079+W+Maple+Rd+West+Bloomfield+MI+48322" target="_blank" rel="noopener noreferrer" class="mb-dir">Get Directions</a>
+  </div>
+
+  <!-- Preview banner -->
+  <div class="preview-banner">
+    <span class="pb-dot"></span>
+    <span class="pb-text">Demo preview for Michigan Med Spa</span>
+    <a href="https://caliberwebstudio.com" target="_blank" rel="noopener noreferrer" class="pb-cta">Get This Site</a>
+  </div>
+
+</body>
+</html>

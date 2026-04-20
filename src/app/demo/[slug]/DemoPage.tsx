@@ -125,6 +125,137 @@ const DEMO_DATA: Record<string, {
       radius: '8px',
     },
   },
+  'salon-detroit': {
+    heroImg: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80',
+    heroAlt: 'Salon Detroit — modern hair studio interior on Woodward Ave, Downtown Detroit',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80', alt: 'Stylist blow-drying a client at Salon Detroit' },
+      { url: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80', alt: 'Precision haircut in progress at Salon Detroit' },
+      { url: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80', alt: 'Hair color treatment at Salon Detroit — highlights and balayage' },
+      { url: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80', alt: 'Beautiful finished hair result at Salon Detroit — volume and shine' },
+      { url: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=800&q=80', alt: 'Professional styling tools and products at Salon Detroit' },
+      { url: 'https://images.unsplash.com/photo-1500840216050-6ffa99d75160?auto=format&fit=crop&w=800&q=80', alt: 'Client consultation at Salon Detroit — stylist discussing hair goals' },
+    ],
+    reviews: [
+      { name: 'Monique B.', stars: 5, text: 'Got my balayage done here and I still get compliments three months later. Jessica is an artist. This is the only salon I trust in Detroit.' },
+      { name: 'Rachel T.', stars: 5, text: 'Finally found a stylist who actually listens. My cut was perfect and the keratin treatment is the best I\'ve had. Already booked my next appointment.' },
+      { name: 'Ciara W.', stars: 5, text: 'The salon is gorgeous and so professional. My color came out exactly as I showed on Pinterest. These stylists are genuinely elite.' },
+    ],
+    aboutImg: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80',
+    stats: [
+      { num: '5+', label: 'Years on Woodward' },
+      { num: '4.9★', label: 'Google Rating' },
+      { num: '2K+', label: 'Clients Served' },
+    ],
+    ctaLabel: '✂️ Book Your Appointment',
+    announceBar: '✨ Now booking May — 1540 Woodward Ave, Downtown Detroit · Tue – Sat',
+    theme: {
+      bg: '#0C0C0F', bg2: '#161619', bg3: '#1E1E23',
+      accent: '#C9A07A', accent2: '#E0BB9B',
+      text: '#FAF9F7', muted: '#888884', light: '#DDDBD6',
+      radius: '6px',
+    },
+  },
+
+  'detroit-furnace-ac': {
+    heroImg: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=80',
+    heroAlt: 'NATE-certified HVAC technician servicing a furnace — Detroit Furnace & Air Conditioning',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80', alt: 'New high-efficiency furnace installation — Detroit Furnace & Air Conditioning' },
+      { url: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80', alt: 'HVAC technician inspecting a heating system in a Metro Detroit home' },
+      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80', alt: 'Licensed technician working on residential HVAC system' },
+      { url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80', alt: 'Clean duct system after professional cleaning — Detroit Furnace & AC' },
+      { url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80', alt: 'HVAC service van at a Metro Detroit home — same-day service' },
+      { url: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80', alt: 'Satisfied Detroit homeowner after furnace repair — warm and comfortable again' },
+    ],
+    beforeAfter: [
+      {
+        before: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=600&q=80',
+        after: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80',
+        beforeLabel: 'Old failing furnace — inefficient, unreliable, unsafe',
+        afterLabel: 'New high-efficiency unit — quiet, clean, warrantied',
+        title: 'Furnace Replacement — Warren, MI',
+      },
+    ],
+    reviews: [
+      { name: 'Linda M.', stars: 5, text: 'Called at 2am with no heat in January. They were at my house in under 90 minutes and fixed it that night. My family was warm by morning. Unbelievable.' },
+      { name: 'Robert J.', stars: 5, text: "Best HVAC company in Metro Detroit. Straight pricing before they start, clean work, no upsell. I've used them twice and won't call anyone else." },
+      { name: 'Tamara S.', stars: 5, text: 'AC went out during the July heatwave. They had a tech at my house same day and fixed it in two hours. Absolute lifesavers. Highly recommend.' },
+    ],
+    aboutImg: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80',
+    stats: [
+      { num: '20+', label: 'Years in Metro Detroit' },
+      { num: '4.8★', label: 'Google Rating' },
+      { num: '5K+', label: 'Systems Serviced' },
+    ],
+    ctaLabel: '📞 Call Now — 24/7 Emergency Line',
+    announceBar: '🔥 Furnace out? AC down? 24/7 Emergency Service — Metro Detroit\'s trusted HVAC team',
+    theme: {
+      bg: '#0A1520',
+      bg2: '#0F1E2E',
+      bg3: '#152538',
+      accent: '#E07B2A',
+      accent2: '#F09040',
+      text: '#F5F8FA',
+      muted: '#7B90A0',
+      light: '#B8CCD8',
+      radius: '4px',
+    },
+  },
+
+  'fusion-med-spa': {
+    heroImg: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80',
+    heroAlt: 'Fusion Med Spa Dearborn Heights — luxury medical spa facial treatment with glowing skin results',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80', alt: 'Professional laser hair removal treatment at Fusion Med Spa Dearborn Heights' },
+      { url: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80', alt: 'Luxury treatment room at Fusion Med Spa — modern medical spa interior' },
+      { url: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80', alt: 'HydraFacial treatment in progress at Fusion Med Spa — instant glow results' },
+      { url: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80', alt: 'Client relaxing during IV therapy drip at Fusion Med Spa Dearborn Heights' },
+      { url: 'https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=800&q=80', alt: 'Radiant skin close-up after facial treatment at Fusion Med Spa' },
+      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80', alt: 'Fusion Med Spa consultation — esthetician reviewing treatment plan with client' },
+    ],
+    beforeAfter: [
+      {
+        before: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80',
+        after: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80',
+        beforeLabel: 'Before: unwanted hair, multiple shaving sessions per week',
+        afterLabel: 'After 6 sessions: permanent reduction, smooth skin year-round',
+        title: 'Laser Hair Removal — Full Legs',
+      },
+      {
+        before: 'https://images.unsplash.com/photo-1606902965551-dce093cda6e7?auto=format&fit=crop&w=600&q=80',
+        after: 'https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=600&q=80',
+        beforeLabel: 'Before: dull texture, uneven tone, enlarged pores',
+        afterLabel: 'After HydraFacial series: radiant, clear, hydrated glow',
+        title: 'HydraFacial Treatment Series',
+      },
+    ],
+    reviews: [
+      { name: 'Amira S.', stars: 5, text: 'My laser results after just 4 sessions are unreal. The staff is incredibly professional and made me feel comfortable the entire time. This place genuinely changed my life.' },
+      { name: 'Priya M.', stars: 5, text: 'Been coming here for HydraFacials for two years. My skin has never looked better — clear, glowing, and hydrated. Fusion is hands-down the best med spa in the metro area.' },
+      { name: 'Jasmine W.', stars: 5, text: 'Started Brazilian laser six months ago. I will never shave again. The team at Fusion genuinely cares about your results and comfort. Worth every single dollar.' },
+    ],
+    aboutImg: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80',
+    stats: [
+      { num: '16+', label: 'Years in Dearborn Heights' },
+      { num: '4.5★', label: 'Google Rating' },
+      { num: '549+', label: 'Verified Reviews' },
+    ],
+    ctaLabel: 'Book Your Free Consultation',
+    announceBar: 'Now booking spring appointments · 6970 N Telegraph Rd, Dearborn Heights · Mon – Sat',
+    theme: {
+      bg: '#0A0608',
+      bg2: '#130C10',
+      bg3: '#1C1018',
+      accent: '#B76E79',
+      accent2: '#C98A93',
+      text: '#F7F2F5',
+      muted: '#8A7880',
+      light: '#D4B8C0',
+      radius: '8px',
+    },
+  },
+
   'detroits-kitchen': {
     heroImg: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
     heroAlt: "Detroit's Kitchen soul food restaurant in Detroit MI",
@@ -197,7 +328,10 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
   const isBarber = config.slug === 'detroit-cuts';
   const isPlumbing = config.slug === 'metro-plumbing';
   const isSalon = config.slug === 'luxe-salon';
+  const isSalonDetroit = config.slug === 'salon-detroit';
   const isRestaurant = config.slug === 'detroits-kitchen';
+  const isHVAC = config.slug === 'detroit-furnace-ac';
+  const isMedSpa = config.slug === 'fusion-med-spa';
 
   const css = `
     .dw *, .dw *::before, .dw *::after { box-sizing: border-box; }
@@ -254,7 +388,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
 
     .dw .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .dw .gal-item { overflow: hidden; border-radius: 6px; }
-    .dw .gal-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: ${isSalon ? 'center' : 'top'}; transition: transform 0.4s; }
+    .dw .gal-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: ${isSalon || isMedSpa ? 'center' : 'top'}; transition: transform 0.4s; }
     .dw .gal-item:hover img { transform: scale(1.04); }
 
     .dw .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -341,7 +475,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
             </ul>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
               <div className="nav-phone">📞 {config.phone}</div>
-              <a href="#contact" className="nav-cta">{isPlumbing ? 'Call Now' : 'Book Now'}</a>
+              <a href="#contact" className="nav-cta">{isPlumbing || isHVAC ? 'Call Now' : isMedSpa ? 'Book Consult' : 'Book Now'}</a>
             </div>
           </div>
         </nav>
@@ -357,7 +491,10 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
               {isBarber && (<>Fresh Cuts.<br /><span>Sharp Fades.</span><br />No Waiting.</>)}
               {isPlumbing && (<>Detroit&apos;s<br /><span>Trusted</span><br />Plumber.</>)}
               {isSalon && (<>Your Hair.<br />Your Crown.<br /><span>Protected.</span></>)}
-            {isRestaurant && (<>Detroit&apos;s<br /><span>Soul Food.</span><br />Made Fresh.</>)}
+              {isSalonDetroit && (<>Downtown<br /><span>Detroit&apos;s</span><br />Hair Studio.</>)}
+              {isRestaurant && (<>Detroit&apos;s<br /><span>Soul Food.</span><br />Made Fresh.</>)}
+              {isHVAC && (<>Heating Down?<br /><span>We&apos;re Coming.</span><br />24/7 Always.</>)}
+              {isMedSpa && (<>Laser Results.<br /><span>Real Beauty.</span><br />Dearborn Heights.</>)}
             </h1>
             <p className="hero-sub">{config.tagline}</p>
             <div className="hero-btns">
@@ -365,9 +502,9 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
               <a href="#services" className="btn-o">See Services &amp; Pricing</a>
             </div>
             <div className="hero-badges">
-              <div className="hbadge"><div className="bdot" /><span>{isPlumbing ? '24/7 Emergency Service' : 'Walk-ins Welcome'}</span></div>
-              <div className="hbadge"><div className="bdot" /><span>Licensed &amp; Insured · Detroit, MI</span></div>
-              <div className="hbadge"><div className="bdot" /><span>4.8+ Stars on Google</span></div>
+              <div className="hbadge"><div className="bdot" /><span>{isPlumbing || isHVAC ? '24/7 Emergency Service' : isMedSpa ? 'All Skin Tones & Types Welcome' : isSalonDetroit ? 'Appointments & Walk-ins' : 'Walk-ins Welcome'}</span></div>
+              <div className="hbadge"><div className="bdot" /><span>{isMedSpa ? 'Medical-Grade Technology' : 'Licensed & Insured · Detroit, MI'}</span></div>
+              <div className="hbadge"><div className="bdot" /><span>{isMedSpa ? '549+ Google Reviews · 4.5★' : '4.8+ Stars on Google'}</span></div>
             </div>
           </div>
         </section>
@@ -376,13 +513,16 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
         <section className="sec" id="services">
           <div className="con">
             <div className="shdr">
-              <div className="slbl">{isPlumbing ? 'What We Fix' : 'What We Offer'}</div>
+              <div className="slbl">{isPlumbing || isHVAC ? 'What We Fix' : isMedSpa ? 'Treatments & Pricing' : isSalonDetroit ? 'Services & Pricing' : 'What We Offer'}</div>
               <h2 className="stitle">Services &amp; Pricing</h2>
               <div className="dvdr" />
               <p className="ssub">
                 {isBarber && 'Every cut done right the first time. No rushing, no corners cut.'}
                 {isPlumbing && 'From slow drains to major emergencies — we handle it all, fast and clean.'}
                 {isSalon && 'Every client leaves feeling confident. We take our time, we do it right.'}
+                {isSalonDetroit && 'Every service is tailored to your hair, your texture, your life. No cookie-cutter cuts here.'}
+                {isHVAC && 'Furnace, AC, ductwork, or emergency — we show up fast and fix it right the first time.'}
+                {isMedSpa && 'Clinical results without the clinical coldness. Every treatment is tailored to your skin, your goals, and your timeline.'}
               </p>
             </div>
             <div className="svc-grid">
@@ -404,11 +544,13 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
           <div className="con">
             <div className="shdr">
               <div className="slbl">Our Work</div>
-              <h2 className="stitle">{isPlumbing ? 'Before & After' : 'The Gallery'}</h2>
+              <h2 className="stitle">{isPlumbing || isHVAC || isMedSpa ? 'Before & After' : 'The Gallery'}</h2>
               <div className="dvdr" />
               <p className="ssub">
-                {isPlumbing
+                {isPlumbing || isHVAC
                   ? "Real jobs we've completed. We leave it better than we found it."
+                  : isMedSpa
+                  ? 'Real clients, real results. No filters, no Facetune — just what our treatments actually do.'
                   : 'Real work from real clients. This is what we do.'}
               </p>
             </div>
@@ -465,6 +607,9 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                   {isBarber && 'Built in Detroit.\nFor Detroit.'}
                   {isPlumbing && 'Detroit Owned.\nDetroit Proud.'}
                   {isSalon && 'Your Hair.\nOur Passion.'}
+                  {isSalonDetroit && 'Craft. Color.\nCommunity.'}
+                  {isHVAC && 'Detroit\'s HVAC Team.\nTrusted for 20 Years.'}
+                  {isMedSpa && 'Your Results.\nOur Mission.'}
                 </h2>
                 <div className="dvdr" />
                 <p>{config.about}</p>
@@ -472,6 +617,9 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                   {isBarber && "When you sit in one of our chairs, you're not just getting a haircut. You're getting a fresh start to your week."}
                   {isPlumbing && 'Every technician is Michigan-licensed, background checked, and trained in the latest techniques. When we give you a price, that\'s the price. No hidden fees.'}
                   {isSalon && 'Detroit is home. Our clients are our community. Every appointment is a chance to make someone feel like the royalty they are.'}
+                  {isSalonDetroit && 'Downtown Detroit is home. When you sit in our chair, you get our full attention — not a rushed consultation, not a generic look. Your hair, done right.'}
+                  {isHVAC && 'We serve Detroit, Dearborn, Southfield, Warren, Royal Oak, Livonia, Sterling Heights, Troy, and surrounding Metro Detroit communities. One call — we come to you.'}
+                  {isMedSpa && 'We specialize in all skin tones and types — our laser technology and treatment protocols are selected specifically for the diverse clientele of Metro Detroit. This is not a one-size-fits-all clinic. Serving Dearborn Heights, Dearborn, Detroit, and surrounding communities.'}
                 </p>
           {isRestaurant && <p className="about-para">Detroit's Kitchen has been serving the community since day one — real comfort food, made from scratch, with love. We believe everyone deserves a hot meal that feels like home.</p>}
                 <div className="stats">
@@ -491,7 +639,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
         <section className="sec sec-alt">
           <div className="con">
             <div className="shdr">
-              <div className="slbl">{isSalon ? 'Client Love' : 'Customer Reviews'}</div>
+              <div className="slbl">{isSalon || isSalonDetroit || isMedSpa ? 'Client Love' : 'Customer Reviews'}</div>
               <h2 className="stitle">What People Say</h2>
               <div className="dvdr" />
             </div>
@@ -529,6 +677,11 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                     Emergency service available 24/7 for burst pipes, gas line issues, and major leaks.
                   </p>
                 )}
+                {isHVAC && (
+                  <p style={{ marginTop: 16, fontSize: 13, color: t.muted, lineHeight: 1.6 }}>
+                    Emergency HVAC service available 24/7 — no heat in winter or no AC in summer is always an emergency. We answer the phone.
+                  </p>
+                )}
               </div>
               <div className="ct-block">
                 <h3>Get In Touch</h3>
@@ -542,7 +695,7 @@ export default function DemoPage({ config }: { config: DemoConfig }) {
                 <div className="ci">
                   <div className="ci-icon">📞</div>
                   <div>
-                    <div className="ci-lbl">Phone{isPlumbing ? ' (24/7)' : ''}</div>
+                    <div className="ci-lbl">Phone{isPlumbing || isHVAC ? ' (24/7)' : ''}</div>
                     <div className="ci-val">{config.phone}</div>
                   </div>
                 </div>

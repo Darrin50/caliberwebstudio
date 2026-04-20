@@ -153,6 +153,118 @@ export const demos: DemoConfig[] = [
               chatbotGreeting:
         "Hey, welcome to Detroit's Kitchen! We're cooking fresh daily. Want to see our menu, check our hours, or ask about catering?",
           },
+  // Detroit Furnace & Air Conditioning
+  {
+    slug: 'detroit-furnace-ac',
+    businessName: 'Detroit Furnace & Air Conditioning',
+    businessType: 'HVAC / Heating & Cooling',
+    tagline: "24/7 Emergency Service. Furnace Repair, AC Installation & Heating Across Metro Detroit.",
+    primaryColor: '#0A1520',
+    accentColor: '#E07B2A',
+    services: [
+      { name: 'Furnace Repair', description: 'Fast same-day furnace diagnostics and repair. We fix all makes and models — no heat is an emergency, and we treat it like one.', price: 'From $89 diagnostic' },
+      { name: 'AC Repair & Service', description: 'AC not cooling? We diagnose, repair, and recharge systems fast — usually same day across Metro Detroit.', price: 'From $89 diagnostic' },
+      { name: '24/7 Emergency HVAC', description: 'Heating or cooling emergency at 2am? We answer the phone. Emergency dispatch available 365 days a year across Metro Detroit.', price: 'Call for pricing' },
+      { name: 'New System Installation', description: 'New furnace or AC installation done right. We size your system correctly, install it cleanly, and back it with a full labor warranty.', price: 'Free estimate' },
+      { name: 'Annual Maintenance', description: 'Keep your system running at peak efficiency. Seasonal tune-ups catch small problems before they turn into expensive breakdowns.', price: 'From $79/visit' },
+      { name: 'Air Quality & Duct Cleaning', description: 'Dirty ducts reduce efficiency and air quality. Our duct cleaning service removes buildup and improves airflow throughout your home.', price: 'Call for quote' },
+    ],
+    hours: [
+      { day: 'Monday – Friday', hours: '7:00 AM – 7:00 PM' },
+      { day: 'Saturday', hours: '8:00 AM – 5:00 PM' },
+      { day: 'Sunday', hours: 'Emergency Only' },
+      { day: '24/7 Emergency Line', hours: 'Always Available' },
+    ],
+    phone: '(313) 555-0178',
+    address: 'Metro Detroit Service Area',
+    city: 'Detroit, MI',
+    about: "Detroit Furnace & Air Conditioning has been keeping Metro Detroit homes comfortable for over 20 years. From emergency furnace calls in January to AC installations before the summer heat hits — we've seen it all and fixed it all. Our technicians are NATE-certified, fully licensed in Michigan, and committed to straight pricing. No surprise fees. No upselling. Just honest HVAC work done right.",
+    chatbotGreeting: "Hi! HVAC emergency or need a quote? Tell me what's going on and I'll get you connected with our team right away.",
+  },
+
+  // Salon Detroit
+  {
+    slug: 'salon-detroit',
+    businessName: 'Salon Detroit',
+    businessType: 'Full-Service Salon',
+    tagline: "Downtown Detroit's Premier Hair Studio — Cuts, Color, Balayage & More.",
+    primaryColor: '#0C0C0F',
+    accentColor: '#C9A07A',
+    services: [
+      { name: 'Haircut & Blowout', description: 'Precision cut tailored to your face shape, finished with a professional blowout. All hair types welcome.', price: 'From $65' },
+      { name: 'Color & Highlights', description: 'Single process color, partial or full highlights. Ammonia-free options available.', price: 'From $95' },
+      { name: 'Balayage', description: 'Hand-painted highlights for a natural, sun-kissed finish. Low maintenance and high impact.', price: 'From $175' },
+      { name: 'Keratin Treatment', description: 'Smooth, frizz-free locks for up to 4 months. Suitable for all textures.', price: 'From $225' },
+      { name: 'Deep Conditioning', description: 'Intensive moisture treatment to restore health, shine, and strength to damaged or dry hair.', price: 'From $55' },
+      { name: 'Extensions Consultation', description: 'Tape-in, clip-in, or sewn-in extensions. Book a free consultation to find your perfect length and match.', price: 'Free Consult' },
+    ],
+    hours: [
+      { day: 'Tuesday – Friday', hours: '10:00 AM – 7:00 PM' },
+      { day: 'Saturday', hours: '9:00 AM – 6:00 PM' },
+      { day: 'Sunday – Monday', hours: 'Closed' },
+    ],
+    phone: '(313) 555-0721',
+    address: '1540 Woodward Ave',
+    city: 'Detroit, MI 48226',
+    about:
+      "Salon Detroit is a full-service hair studio rooted in craft and community on Downtown Detroit's iconic Woodward Ave. We believe great hair starts with a great conversation — your stylist takes time to understand your lifestyle, your texture, and your vision before a single snip. From precision cuts to balayage, color, extensions, and keratin treatments, every service is executed with care and intention. Our team of licensed stylists brings years of experience and a genuine love for the craft to every chair. Detroit moves fast and looks good doing it. We're here to keep you ahead of the curve.",
+    chatbotGreeting:
+      'Welcome to Salon Detroit! Ready to book your next appointment? I can check availability for cuts, color, balayage, and more.',
+  },
+
+  // Fusion Med Spa — Dearborn Heights, MI
+  {
+    slug: 'fusion-med-spa',
+    businessName: 'Fusion Med Spa',
+    businessType: 'Medical Spa',
+    tagline: "Dearborn Heights' Premier Med Spa — Laser Hair Removal, HydraFacials, Body Contouring & More.",
+    primaryColor: '#0A0608',
+    accentColor: '#B76E79',
+    services: [
+      {
+        name: 'Laser Hair Removal',
+        description: 'FDA-cleared laser technology for permanent hair reduction on all skin types. See real results in as few as 4–6 sessions. Free consultation included.',
+        price: 'From $99/session',
+      },
+      {
+        name: 'HydraFacial',
+        description: "Deep cleanse, extract, and hydrate in one signature treatment. Immediate glow, zero downtime. Detroit's most-booked facial — and for good reason.",
+        price: 'From $129',
+      },
+      {
+        name: 'Body Contouring',
+        description: 'Non-invasive CoolSculpting and fat-reduction treatments. Sculpt your shape without surgery, without downtime, without compromise.',
+        price: 'From $299',
+      },
+      {
+        name: 'IV Therapy',
+        description: 'Custom vitamin infusion drips for energy, immunity, skin radiance, and recovery. Feel better from the inside out in under an hour.',
+        price: 'From $149',
+      },
+      {
+        name: 'Facial Treatments',
+        description: 'Chemical peels, dermaplaning, microdermabrasion, and custom facials. Real clinical results — not just relaxation.',
+        price: 'From $89',
+      },
+      {
+        name: 'Waxing & Hair Removal',
+        description: 'Brazilian wax, full body waxing, and threading. Smooth, precise, and comfortable. Walk-ins welcome for waxing services.',
+        price: 'From $35',
+      },
+    ],
+    hours: [
+      { day: 'Monday – Friday', hours: '9:00 AM – 6:00 PM' },
+      { day: 'Saturday', hours: '9:00 AM – 6:00 PM' },
+      { day: 'Sunday', hours: 'Closed' },
+    ],
+    phone: '(313) 582-0808',
+    address: '6970 N Telegraph Rd',
+    city: 'Dearborn Heights, MI 48127',
+    about:
+      "Fusion Med Spa has been the trusted name in medical aesthetics in the Dearborn Heights community for over 16 years. We combine clinical expertise with genuine care — every treatment is performed by trained professionals who take your goals seriously. Whether you're starting laser hair removal, refreshing your skin with a HydraFacial, or sculpting your body with non-invasive contouring, you'll leave looking and feeling like the best version of yourself. We specialize in serving clients of all skin tones and types. Our technology is selected specifically for efficacy and safety across diverse skin profiles. Fusion is not a chain. We know your name, we remember your goals, and we celebrate your results.",
+    chatbotGreeting:
+      'Welcome to Fusion Med Spa! Ready to book a consultation for laser hair removal, HydraFacials, or body contouring? I can check availability right now.',
+  },
 ]
 
 export function getDemo(slug: string): DemoConfig | undefined {

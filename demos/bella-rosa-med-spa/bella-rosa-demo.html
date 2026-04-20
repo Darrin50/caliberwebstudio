@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bella Rosa Med Spa | West Bloomfield, MI — Advanced Laser Aesthetics</title>
+<meta name="description" content="Bella Rosa Med Spa in West Bloomfield, MI offers laser hair removal, tattoo removal, body contouring, and skin rejuvenation with licensed medical professionals." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* =============================================
+   BELLA ROSA MED SPA — LUXURY TIER
+   Caliber Web Studio Demo | 2026-04-20
+   Tier: Luxury (Dark / Rose Gold)
+   ============================================= */
+
+:root {
+  --color-bg: #0A0A0A;
+  --color-surface: #141414;
+  --color-surface-2: #1A1A1A;
+  --color-border: rgba(255,255,255,0.07);
+  --color-border-strong: rgba(255,255,255,0.12);
+  --color-text: #F0EBE8;
+  --color-text-secondary: #9A9080;
+  --color-text-muted: #5E5650;
+  --color-accent: #B76E79;
+  --color-accent-light: #CA8A93;
+  --color-accent-glow: rgba(183,110,121,0.12);
+  --color-accent-border: rgba(183,110,121,0.22);
+  --gradient-luxury: linear-gradient(135deg, #B76E79 0%, #C9A96E 100%);
+  --gradient-luxury-soft: linear-gradient(135deg, rgba(183,110,121,0.10), rgba(201,169,110,0.05));
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --shadow-accent: 0 0 28px rgba(183,110,121,0.14);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 220ms;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+}
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* =============================================
+   DEMO BANNER
+   ============================================= */
+.demo-banner {
+  background: var(--gradient-luxury);
+  color: #0A0A0A;
+  text-align: center;
+  padding: 9px 16px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+.demo-banner a { color: #0A0A0A; text-decoration: underline; }
+
+/* =============================================
+   NAV
+   ============================================= */
+.nav {
+  position: fixed;
+  top: 37px; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(10,10,10,0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--dur) var(--ease);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+}
+.nav-logo span {
+  background: var(--gradient-luxury);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  list-style: none;
+}
+.nav-link {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  transition: color var(--dur) var(--ease);
+}
+.nav-link:hover { color: var(--color-text); }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 22px;
+  background: transparent;
+  border: 1px solid var(--color-accent-border);
+  color: var(--color-accent-light);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--dur) var(--ease);
+}
+.nav-cta:hover {
+  background: var(--color-accent-glow);
+  border-color: var(--color-accent);
+}
+.nav-mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(37px + 68px);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(183,110,121,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: var(--space-16);
+  align-items: center;
+  padding: var(--space-24) 0;
+}
+.hero-overline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-6);
+}
+.hero-overline::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--color-accent);
+}
+.hero-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 5vw, 4.75rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+.hero-headline em {
+  font-style: italic;
+  background: var(--gradient-luxury);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-6);
+  max-width: 440px;
+  font-weight: 300;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 32px;
+  background: var(--gradient-luxury);
+  color: #0A0A0A;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+  box-shadow: var(--shadow-accent);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 36px rgba(183,110,121,0.24);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+.btn-secondary:hover {
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+.hero-trust-icon { color: var(--color-accent); flex-shrink: 0; }
+
+/* Image placeholder — luxury branded gradient */
+.image-placeholder {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+.image-placeholder-inner {
+  aspect-ratio: 4/5;
+  background: linear-gradient(160deg, #1A1214 0%, #2A1820 50%, #1F1020 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.image-placeholder-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 40% 35%, rgba(183,110,121,0.12) 0%, transparent 65%);
+}
+.placeholder-icon {
+  position: relative;
+  z-index: 1;
+  opacity: 0.14;
+  color: var(--color-accent);
+}
+.image-caption {
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  font-style: italic;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+/* =============================================
+   MARQUEE
+   ============================================= */
+.marquee-wrap {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 13px 0;
+  overflow: hidden;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: var(--space-12);
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+.marquee-item {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.marquee-dot {
+  color: var(--color-accent);
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* =============================================
+   PROOF BAR
+   ============================================= */
+.proof-bar {
+  background: var(--gradient-luxury-soft);
+  border-bottom: 1px solid var(--color-accent-border);
+  padding: var(--space-8) 0;
+}
+.proof-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+.proof-item { text-align: center; }
+.proof-value {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: var(--color-accent-light);
+  line-height: 1;
+  display: block;
+}
+.proof-label {
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+  display: block;
+}
+.proof-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-accent-border);
+}
+
+/* =============================================
+   SECTION COMMON
+   ============================================= */
+section { padding: var(--space-24) 0; }
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--color-accent);
+}
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.875rem, 3.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+.section-heading em {
+  font-style: italic;
+  color: var(--color-accent-light);
+}
+.section-sub {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+  max-width: 560px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+/* =============================================
+   SERVICES
+   ============================================= */
+.services-section { background: var(--color-surface); }
+.services-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.service-card {
+  padding: var(--space-8);
+  background: var(--color-surface);
+  transition: background var(--dur) var(--ease);
+}
+.service-card:hover { background: var(--color-surface-2, #1E1E1E); }
+.service-card:hover .service-icon-wrap {
+  background: var(--color-accent-glow);
+  border-color: var(--color-accent-border);
+}
+.service-icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+  margin-bottom: var(--space-5);
+  transition: all var(--dur) var(--ease);
+}
+.service-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+.service-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.service-tag {
+  display: inline-block;
+  margin-top: var(--space-4);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent-border);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* =============================================
+   BEFORE/AFTER GALLERY
+   ============================================= */
+.gallery-section { background: var(--color-bg); }
+.gallery-header { margin-bottom: var(--space-12); }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.gallery-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+.gallery-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+.gallery-panel {
+  aspect-ratio: 3/4;
+  position: relative;
+}
+.panel-bg-before {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #181212 0%, #2A1C1C 100%);
+}
+.panel-bg-after {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #1F1420 0%, #2E1828 100%);
+  position: relative;
+}
+.panel-bg-after::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 60%, rgba(183,110,121,0.16) 0%, transparent 65%);
+}
+.gallery-panel-label {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-3);
+  font-size: 0.5625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.55);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.gallery-divider-line {
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 1px;
+  background: var(--color-accent);
+  opacity: 0.35;
+  z-index: 2;
+}
+.gallery-info {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.gallery-treatment {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.gallery-note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+.gallery-footer-note {
+  margin-top: var(--space-8);
+  padding: var(--space-4) var(--space-5);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* =============================================
+   WHY US
+   ============================================= */
+.why-section { background: var(--color-surface); }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+.why-visual-wrap { position: relative; }
+.why-image-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, #1A1218 0%, #221622 40%, #1A1218 100%);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.why-image-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(183,110,121,0.09) 0%, transparent 65%);
+}
+.why-floating-card {
+  position: absolute;
+  bottom: calc(-1 * var(--space-4));
+  right: calc(-1 * var(--space-6));
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.why-card-label {
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+.why-card-text {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+.why-points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+.why-point { display: flex; gap: var(--space-4); align-items: flex-start; }
+.why-point-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-glow);
+  border: 1px solid var(--color-accent-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.why-point-title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+.why-point-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* =============================================
+   TEAM / PROVIDERS
+   ============================================= */
+.team-section { background: var(--color-bg); }
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+  margin-top: var(--space-12);
+}
+.team-visual-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(155deg, #151018 0%, #1E1520 60%, #141018 100%);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.team-visual-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(183,110,121,0.07) 0%, transparent 70%);
+}
+.credentials-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-top: var(--space-6);
+}
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.credential-item:last-child { border-bottom: none; }
+.cred-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+.cred-text {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+.team-quote {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin-top: var(--space-8);
+}
+.team-quote-attr {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: var(--space-3);
+}
+
+/* =============================================
+   REVIEWS
+   ============================================= */
+.reviews-section { background: var(--color-surface); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+.review-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.review-card:hover {
+  border-color: var(--color-accent-border);
+  box-shadow: var(--shadow-accent);
+}
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: var(--space-4);
+}
+.star { color: var(--color-accent); }
+.review-quote {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.65;
+  margin-bottom: var(--space-6);
+}
+.review-author { display: flex; align-items: center; gap: var(--space-3); }
+.review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2A1820, #3A2030);
+  border: 1px solid var(--color-accent-border);
+  flex-shrink: 0;
+}
+.review-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.review-loc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* =============================================
+   BOOKING CTA
+   ============================================= */
+.cta-section {
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(183,110,121,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cta-inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.cta-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.18;
+}
+.cta-headline em { font-style: italic; color: var(--color-accent-light); }
+.cta-sub {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-8);
+  font-weight: 300;
+}
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+.cta-note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-5);
+  letter-spacing: 0.04em;
+}
+
+/* =============================================
+   CONTACT
+   ============================================= */
+.contact-section { background: var(--color-surface); }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+  margin-top: var(--space-12);
+}
+.contact-item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-7);
+}
+.contact-icon { color: var(--color-accent); flex-shrink: 0; margin-top: 2px; }
+.contact-item-label {
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+  display: block;
+}
+.contact-item-value {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+.contact-item-value a { color: var(--color-accent-light); transition: color var(--dur) var(--ease); }
+.contact-item-value a:hover { color: var(--color-accent); }
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1) var(--space-6);
+}
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+.hours-day { color: var(--color-text-muted); }
+.map-placeholder {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: var(--radius-lg);
+  background: #0E0E0E;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.map-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px);
+}
+.map-pin-wrap {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.map-address-text {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+  line-height: 1.5;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  background: #060606;
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-12) 0 var(--space-8);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: var(--space-12);
+  margin-bottom: var(--space-10);
+}
+.footer-brand {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+.footer-brand span {
+  background: var(--gradient-luxury);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.footer-tagline {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 260px;
+}
+.footer-col-heading {
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.footer-link {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  transition: color var(--dur) var(--ease);
+}
+.footer-link:hover { color: var(--color-text); }
+.footer-contact-block {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.9;
+  font-weight: 300;
+}
+.footer-contact-block a { color: var(--color-accent-light); transition: color var(--dur) var(--ease); }
+.footer-contact-block a:hover { color: var(--color-accent); }
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copy { font-size: 0.75rem; color: var(--color-text-muted); }
+.footer-credit { font-size: 0.75rem; color: var(--color-text-muted); }
+.footer-credit a { color: var(--color-accent); transition: color var(--dur) var(--ease); }
+.footer-credit a:hover { color: var(--color-accent-light); }
+
+/* =============================================
+   MOBILE STICKY BAR
+   ============================================= */
+.mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 300;
+  background: rgba(10,10,10,0.96);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+}
+.mobile-bar-inner { display: flex; gap: var(--space-3); }
+.mobile-bar-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
+  transition: all var(--dur) var(--ease);
+  text-decoration: none;
+}
+.mobile-bar-call {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border-strong) !important;
+}
+.mobile-bar-book {
+  background: var(--gradient-luxury);
+  color: #0A0A0A;
+}
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1024px) {
+  .why-floating-card { position: static; margin-top: var(--space-4); }
+}
+@media (max-width: 768px) {
+  .nav { top: 34px; }
+  .hero { padding-top: calc(34px + 68px); }
+  section { padding: var(--space-16) 0; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual-col { order: -1; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn-primary, .hero-actions .btn-secondary { justify-content: center; }
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+  .service-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: var(--space-3); text-align: center; }
+  .team-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .proof-items { gap: var(--space-6); }
+  .proof-divider { display: none; }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .cta-actions .btn-primary, .cta-actions .btn-secondary { justify-content: center; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-mobile-btn { display: flex; }
+  .mobile-bar { display: block; }
+  body { padding-bottom: 76px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .marquee-track { animation: none; }
+  .btn-primary:hover, .btn-secondary:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- =============================================
+     CALIBER DEMO BANNER
+     ============================================= -->
+<div class="demo-banner">
+  Demo Preview — Built by <a href="https://caliberwebstudio.com" target="_blank">Caliber Web Studio</a> for Bella Rosa Med Spa
+</div>
+
+<!-- =============================================
+     NAV
+     ============================================= -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Bella <span>Rosa</span></a>
+    <ul class="nav-links">
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#results" class="nav-link">Results</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="tel:2489777791" class="nav-cta">Book Consultation</a>
+    <button class="nav-mobile-btn" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- =============================================
+     HERO
+     ============================================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-overline reveal">West Bloomfield's Premier Medical Spa</div>
+        <h1 class="hero-headline reveal" style="transition-delay:80ms;">
+          Age Beautifully,<br/><em>On Your Terms.</em>
+        </h1>
+        <p class="hero-sub reveal" style="transition-delay:160ms;">
+          Advanced laser treatments, licensed medical providers, and personalized care rooted in West Bloomfield. Real procedures, real results — no pressure, no guesswork.
+        </p>
+        <div class="hero-actions reveal" style="transition-delay:240ms;">
+          <a href="tel:2489777791" class="btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 15.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 12.91a16 16 0 0 0 5.99 5.99l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Book Free Consultation
+          </a>
+          <a href="#services" class="btn-secondary">View Treatments</a>
+        </div>
+        <div class="hero-trust reveal" style="transition-delay:320ms;">
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed Professionals
+          </div>
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            FDA-Cleared Technology
+          </div>
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            West Bloomfield, MI
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual-col reveal" style="transition-delay:160ms;">
+        <div class="image-placeholder">
+          <div class="image-placeholder-inner">
+            <svg class="placeholder-icon" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <div class="image-caption">Prompt → Black woman 30s, serene expression, laser facial treatment in modern med spa, rose gold ambient lighting, professional clinical setting, West Bloomfield MI --ar 4:5 --raw --s 30 --c 5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     MARQUEE
+     ============================================= -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Laser Hair Removal</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Tattoo Removal</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Body Contouring</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Skin Rejuvenation</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vaginal Rejuvenation</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Complimentary Consultations</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Laser Hair Removal</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Tattoo Removal</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Body Contouring</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Skin Rejuvenation</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vaginal Rejuvenation</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Complimentary Consultations</span>
+    <span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- =============================================
+     PROOF BAR
+     ============================================= -->
+<div class="proof-bar reveal">
+  <div class="container">
+    <div class="proof-items">
+      <div class="proof-item">
+        <span class="proof-value">6</span>
+        <span class="proof-label">Advanced Treatments</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-value">Elite iQ</span>
+        <span class="proof-label">Laser Technology</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-value">Licensed</span>
+        <span class="proof-label">Michigan Providers</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-value">Free</span>
+        <span class="proof-label">Consultations</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     SERVICES
+     ============================================= -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="section-label reveal">Our Treatments</div>
+        <h2 class="section-heading reveal" style="transition-delay:80ms;">Precision technology for <em>lasting change.</em></h2>
+        <p class="section-sub reveal" style="transition-delay:160ms;">Every treatment uses FDA-cleared devices selected for proven efficacy across all skin tones.</p>
+      </div>
+    </div>
+    <div class="service-grid">
+
+      <!-- Laser Hair Removal -->
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <h3 class="service-name">Laser Hair Removal</h3>
+        <p class="service-desc">Permanent hair reduction using the Elite iQ laser — built-in cooling, safe on all skin tones, face to body.</p>
+        <span class="service-tag">Elite iQ Technology</span>
+      </div>
+
+      <!-- Tattoo Removal -->
+      <div class="service-card reveal" style="transition-delay:60ms;">
+        <div class="service-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3 class="service-name">Tattoo Removal</h3>
+        <p class="service-desc">PicoSure® picosecond laser clears all ink colors — including stubborn blues and greens — in fewer sessions.</p>
+        <span class="service-tag">PicoSure® Technology</span>
+      </div>
+
+      <!-- Body Contouring -->
+      <div class="service-card reveal" style="transition-delay:120ms;">
+        <div class="service-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="service-name">Body Contouring</h3>
+        <p class="service-desc">SculpSure® non-invasive laser sculpting targets and permanently eliminates fat cells — no surgery, zero downtime.</p>
+        <span class="service-tag">SculpSure® Technology</span>
+      </div>
+
+      <!-- Skin Rejuvenation -->
+      <div class="service-card reveal" style="transition-delay:60ms;">
+        <div class="service-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3 class="service-name">Skin Rejuvenation</h3>
+        <p class="service-desc">Potenza RF microneedling delivers radiofrequency energy deep into tissue to tighten, tone, and restore texture.</p>
+        <span class="service-tag">Potenza RF Technology</span>
+      </div>
+
+      <!-- Skin Spot Treatment -->
+      <div class="service-card reveal" style="transition-delay:120ms;">
+        <div class="service-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+        </div>
+        <h3 class="service-name">Skin Spot Treatment</h3>
+        <p class="service-desc">Targeted laser therapy reduces hyperpigmentation, sun spots, and age spots — revealing clearer, more even skin.</p>
+        <span class="service-tag">Laser Precision</span>
+      </div>
+
+      <!-- Vaginal Rejuvenation -->
+      <div class="service-card reveal" style="transition-delay:180ms;">
+        <div class="service-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="service-name">Vaginal Rejuvenation</h3>
+        <p class="service-desc">FemTouch™ fractional CO₂ laser gently restores tissue for women navigating changes from childbirth or menopause.</p>
+        <span class="service-tag">FemTouch™ Technology</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     BEFORE/AFTER GALLERY
+     ============================================= -->
+<section class="gallery-section" id="results">
+  <div class="container">
+    <div class="gallery-header">
+      <div class="section-label reveal">Patient Results</div>
+      <h2 class="section-heading reveal" style="transition-delay:80ms;">Real patients. <em>Visible results.</em></h2>
+      <p class="section-sub reveal" style="transition-delay:160ms;">Every image shown is from a Bella Rosa patient, documented with written consent. Individual results vary.</p>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="gallery-item reveal">
+        <div class="gallery-panels">
+          <div class="gallery-panel">
+            <div class="panel-bg-before"></div>
+            <span class="gallery-panel-label">Before</span>
+          </div>
+          <div class="gallery-panel">
+            <div class="panel-bg-after"></div>
+            <span class="gallery-panel-label">After</span>
+          </div>
+          <div class="gallery-divider-line"></div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-treatment">Laser Hair Removal</div>
+          <div class="gallery-note">3 sessions · Elite iQ · West Bloomfield patient</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" style="transition-delay:80ms;">
+        <div class="gallery-panels">
+          <div class="gallery-panel">
+            <div class="panel-bg-before"></div>
+            <span class="gallery-panel-label">Before</span>
+          </div>
+          <div class="gallery-panel">
+            <div class="panel-bg-after"></div>
+            <span class="gallery-panel-label">After</span>
+          </div>
+          <div class="gallery-divider-line"></div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-treatment">Body Contouring</div>
+          <div class="gallery-note">2 sessions · SculpSure® · Farmington Hills patient</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" style="transition-delay:160ms;">
+        <div class="gallery-panels">
+          <div class="gallery-panel">
+            <div class="panel-bg-before"></div>
+            <span class="gallery-panel-label">Before</span>
+          </div>
+          <div class="gallery-panel">
+            <div class="panel-bg-after"></div>
+            <span class="gallery-panel-label">After</span>
+          </div>
+          <div class="gallery-divider-line"></div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-treatment">Skin Spot Treatment</div>
+          <div class="gallery-note">1 session · Laser precision · Bloomfield Hills patient</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="gallery-footer-note reveal">
+      Demo note: These placeholders show the before/after layout. Real Bella Rosa patient photos (with written consent) replace these in the live site.
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     WHY BELLA ROSA
+     ============================================= -->
+<section class="why-section" id="about">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-visual-wrap reveal">
+        <div class="why-image-placeholder">
+          <svg style="opacity:0.12;color:var(--color-accent);" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <div class="why-floating-card">
+          <div class="why-card-label">Our Standard</div>
+          <div class="why-card-text">Every client.<br/>Every treatment.<br/>Every time.</div>
+        </div>
+        <p class="image-caption" style="margin-top:1rem;font-size:0.6875rem;color:var(--color-text-muted);font-style:italic;">Prompt → Modern med spa interior, clean treatment room, rose gold accent lighting, West Bloomfield MI, professional clinical aesthetic --ar 3:4 --raw --s 30 --c 5</p>
+      </div>
+      <div>
+        <div class="section-label reveal">Why Bella Rosa</div>
+        <h2 class="section-heading reveal" style="transition-delay:80ms;">The difference is<br/><em>in the details.</em></h2>
+        <div class="why-points">
+          <div class="why-point reveal">
+            <div class="why-point-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="why-point-title">Licensed Medical Professionals</div>
+              <p class="why-point-desc">Our providers are licensed registered nurses trained in advanced laser protocols — not estheticians with weekend certifications.</p>
+            </div>
+          </div>
+          <div class="why-point reveal" style="transition-delay:80ms;">
+            <div class="why-point-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+            <div>
+              <div class="why-point-title">The Right Equipment</div>
+              <p class="why-point-desc">We invested in Elite iQ, PicoSure®, SculpSure®, FemTouch™, and Potenza RF — the devices that deliver results, not the cheapest options available.</p>
+            </div>
+          </div>
+          <div class="why-point reveal" style="transition-delay:160ms;">
+            <div class="why-point-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="why-point-title">A Plan Built Around You</div>
+              <p class="why-point-desc">Your consultation is a real conversation about your goals — not a sales pitch. We build a treatment plan around your skin, your timeline, and your budget.</p>
+            </div>
+          </div>
+          <div class="why-point reveal" style="transition-delay:240ms;">
+            <div class="why-point-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="why-point-title">West Bloomfield's Own</div>
+              <p class="why-point-desc">We're a community practice, not a franchise. When you call, you reach someone who knows your name and your treatment history.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     PROVIDERS / TEAM
+     ============================================= -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-label reveal">Our Providers</div>
+    <h2 class="section-heading reveal" style="transition-delay:80ms;">You deserve to know <em>who's treating you.</em></h2>
+    <p class="section-sub reveal" style="transition-delay:160ms;">Our licensed nursing team holds Michigan state credentials and receives continuous training in advanced aesthetic laser medicine.</p>
+    <div class="team-grid">
+      <div class="reveal">
+        <div class="team-visual-placeholder">
+          <svg style="opacity:0.12;color:var(--color-accent);" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <p style="font-size:0.6875rem;color:var(--color-text-muted);font-style:italic;margin-top:0.75rem;">Prompt → Black female nurse 35-45, professional clinical uniform, warm headshot, slight confident smile, soft studio lighting --ar 3:4 --raw --s 30 --c 5</p>
+      </div>
+      <div>
+        <div class="credentials-card reveal">
+          <div class="credential-item">
+            <div class="cred-dot"></div>
+            <div class="cred-text">Licensed Registered Nurses — State of Michigan</div>
+          </div>
+          <div class="credential-item">
+            <div class="cred-dot"></div>
+            <div class="cred-text">Cynosure-Certified Elite iQ &amp; PicoSure® Operators</div>
+          </div>
+          <div class="credential-item">
+            <div class="cred-dot"></div>
+            <div class="cred-text">BTL SculpSure® Body Contouring Specialists</div>
+          </div>
+          <div class="credential-item">
+            <div class="cred-dot"></div>
+            <div class="cred-text">FemTouch™ &amp; Potenza RF Certified</div>
+          </div>
+          <div class="credential-item">
+            <div class="cred-dot"></div>
+            <div class="cred-text">Laser Safety Officer Certified</div>
+          </div>
+          <div class="credential-item">
+            <div class="cred-dot"></div>
+            <div class="cred-text">Ongoing CE Credits in Aesthetic Medicine</div>
+          </div>
+        </div>
+        <p class="team-quote reveal">"We started Bella Rosa because West Bloomfield deserved a medical spa run by actual medical professionals — people who take your results as seriously as you do."</p>
+        <p class="team-quote-attr reveal">— Bella Rosa Med Spa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     REVIEWS
+     ============================================= -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="section-label reveal">Patient Feedback</div>
+    <h2 class="section-heading reveal" style="transition-delay:80ms;">Heard from our <em>community.</em></h2>
+    <div class="reviews-grid">
+
+      <div class="review-card reveal">
+        <div class="review-stars">
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="review-quote">"Finally found a med spa that actually listens. Three laser hair removal sessions in and I'm already seeing permanent reduction. The nurse walked me through every single step."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar"></div>
+          <div>
+            <div class="review-name">Michelle T.</div>
+            <div class="review-loc">West Bloomfield · Laser Hair Removal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal" style="transition-delay:80ms;">
+        <div class="review-stars">
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="review-quote">"The PicoSure results have been faster than expected. They explained what would happen at every session — two more to go and I can already see the ink fading."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar"></div>
+          <div>
+            <div class="review-name">James A.</div>
+            <div class="review-loc">Farmington Hills · Tattoo Removal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal" style="transition-delay:160ms;">
+        <div class="review-stars">
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="review-quote">"More comfortable than I expected, and I'm seeing real changes two months post-SculpSure. The team was warm and totally professional. I've referred two friends already."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar"></div>
+          <div>
+            <div class="review-name">Danielle R.</div>
+            <div class="review-loc">Bloomfield Hills · Body Contouring</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     BOOKING CTA
+     ============================================= -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-label reveal" style="justify-content:center;">Get Started</div>
+      <h2 class="cta-headline reveal" style="transition-delay:80ms;">
+        Your first step is <em>a conversation,</em><br/>not a commitment.
+      </h2>
+      <p class="cta-sub reveal" style="transition-delay:160ms;">
+        Book a complimentary consultation. No pressure, no upsells — just an honest conversation about your goals and what treatments make sense for you.
+      </p>
+      <div class="cta-actions reveal" style="transition-delay:240ms;">
+        <a href="tel:2489777791" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 15.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 12.91a16 16 0 0 0 5.99 5.99l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (248) 977-7791
+        </a>
+        <a href="mailto:info@bellarosamedspa.com" class="btn-secondary">Send a Message</a>
+      </div>
+      <p class="cta-note reveal" style="transition-delay:320ms;">Complimentary consultations available Monday – Friday · West Bloomfield, MI</p>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     CONTACT
+     ============================================= -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-label reveal">Find Us</div>
+    <h2 class="section-heading reveal" style="transition-delay:80ms;">We're in <em>West Bloomfield.</em></h2>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <span class="contact-item-label">Address</span>
+            <div class="contact-item-value">33200 W 14 Mile Rd<br/>West Bloomfield, MI 48322</div>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 15.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 12.91a16 16 0 0 0 5.99 5.99l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <span class="contact-item-label">Phone</span>
+            <div class="contact-item-value"><a href="tel:2489777791">(248) 977-7791</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <span class="contact-item-label">Hours</span>
+            <div class="contact-item-value">
+              <div class="hours-grid">
+                <div class="hours-row"><span class="hours-day">Monday</span><span>8:00 AM – 5:00 PM</span></div>
+                <div class="hours-row"><span class="hours-day">Tuesday</span><span>8:00 AM – 5:00 PM</span></div>
+                <div class="hours-row"><span class="hours-day">Wednesday</span><span>8:00 AM – 5:00 PM</span></div>
+                <div class="hours-row"><span class="hours-day">Thursday</span><span>8:00 AM – 5:00 PM</span></div>
+                <div class="hours-row"><span class="hours-day">Friday</span><span>8:00 AM – 5:00 PM</span></div>
+                <div class="hours-row"><span class="hours-day">Sat – Sun</span><span>Closed</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="map-placeholder">
+          <div class="map-pin-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="map-address-text">33200 W 14 Mile Rd<br/>West Bloomfield, MI 48322</div>
+          </div>
+        </div>
+        <p style="font-size:0.6875rem;color:var(--color-text-muted);font-style:italic;margin-top:0.75rem;text-align:center;">Google Maps embed appears here in the live site</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Bella <span>Rosa</span> Med Spa</div>
+        <p class="footer-tagline">Advanced laser aesthetics for West Bloomfield and Metro Detroit — run by licensed medical professionals who take your results seriously.</p>
+      </div>
+      <div>
+        <div class="footer-col-heading">Treatments</div>
+        <ul class="footer-links-list">
+          <li><a href="#services" class="footer-link">Laser Hair Removal</a></li>
+          <li><a href="#services" class="footer-link">Tattoo Removal</a></li>
+          <li><a href="#services" class="footer-link">Body Contouring</a></li>
+          <li><a href="#services" class="footer-link">Skin Rejuvenation</a></li>
+          <li><a href="#services" class="footer-link">Skin Spot Treatment</a></li>
+          <li><a href="#services" class="footer-link">Vaginal Rejuvenation</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-heading">Contact</div>
+        <div class="footer-contact-block">
+          33200 W 14 Mile Rd<br/>
+          West Bloomfield, MI 48322<br/>
+          <a href="tel:2489777791">(248) 977-7791</a><br/><br/>
+          Mon – Fri: 8:00 AM – 5:00 PM<br/>
+          Saturday – Sunday: Closed
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Bella Rosa Med Spa. All rights reserved.</div>
+      <div class="footer-credit">Built by <a href="https://caliberwebstudio.com" target="_blank" rel="noopener">Caliber Web Studio</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- =============================================
+     MOBILE STICKY BAR
+     ============================================= -->
+<div class="mobile-bar">
+  <div class="mobile-bar-inner">
+    <a href="tel:2489777791" class="mobile-bar-btn mobile-bar-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 15.7a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 12.91a16 16 0 0 0 5.99 5.99l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Us
+    </a>
+    <a href="tel:2489777791" class="mobile-bar-btn mobile-bar-book">Book Consultation</a>
+  </div>
+</div>
+
+<!-- =============================================
+     SCRIPTS
+     ============================================= -->
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Nav opacity on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 80
+      ? 'rgba(10,10,10,0.97)'
+      : 'rgba(10,10,10,0.88)';
+  }, { passive: true });
+</script>
+</body>
+</html>

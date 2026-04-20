@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ageless Spa Medica | Dr. Bhanu J. Shah, MD | Warren, MI</title>
+<meta name="description" content="Board Certified OB/GYN physician Dr. Bhanu J. Shah offers physician-supervised aesthetic treatments in Warren, Sterling Heights &amp; Chesterfield, MI. Botox, laser, and skin rejuvenation." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ─── Reset & Root ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+
+:root{
+  --bg:#080808;
+  --bg2:#111111;
+  --bg3:#161616;
+  --bg4:#1C1C1C;
+  --text:#F0EDE8;
+  --text2:#C8C5C0;
+  --muted:#888882;
+  --subtle:#555550;
+  --accent:#B76E79;
+  --accent2:#C9A96E;
+  --accent-glow:rgba(183,110,121,0.15);
+  --accent-glow2:rgba(201,169,110,0.12);
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.12);
+  --radius:8px;
+  --radius-lg:14px;
+  --radius-xl:20px;
+  --font-h:'Cormorant Garamond',Georgia,serif;
+  --font-b:'Inter',system-ui,sans-serif;
+  --max:1180px;
+  --nav-h:72px;
+}
+
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{border:none;background:none;cursor:pointer;font:inherit}
+ul,ol{list-style:none}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
+
+/* ─── Utility ─── */
+.con{max-width:var(--max);margin:0 auto;padding:0 24px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.overline{font-family:var(--font-b);font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)}
+.section-label{font-family:var(--font-b);font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+.divider{width:40px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin:16px 0 22px;border-radius:1px}
+.tag{display:inline-block;border:1px solid var(--accent);color:var(--accent);font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:6px 16px;border-radius:100px}
+
+/* ─── Announce Bar ─── */
+.announce{background:linear-gradient(90deg,var(--accent),var(--accent2));padding:10px 20px;text-align:center;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;color:#0a0a0a;text-transform:uppercase}
+
+/* ─── Navigation ─── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);transition:background 0.3s,border-color 0.3s,backdrop-filter 0.3s}
+.nav.scrolled{background:rgba(8,8,8,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border2)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;flex-direction:column;gap:1px}
+.logo-name{font-family:var(--font-h);font-size:1.25rem;font-weight:600;letter-spacing:0.02em;color:var(--text);line-height:1}
+.logo-sub{font-size:0.6rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:0.8rem;font-weight:400;letter-spacing:0.04em;color:var(--text2);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#0a0a0a;padding:10px 22px;border-radius:var(--radius);font-size:0.78rem;font-weight:600;letter-spacing:0.04em;transition:background 0.2s,transform 0.15s}
+.nav-cta:hover{background:var(--accent2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:1px;transition:transform 0.2s}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(8,8,8,0.97);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-family:var(--font-h);font-size:2rem;font-weight:500;color:var(--text2);transition:color 0.2s}
+.mob-menu a:hover{color:var(--accent)}
+.mob-close{position:absolute;top:24px;right:24px;font-size:1.5rem;color:var(--muted);cursor:pointer}
+
+/* ─── Hero ─── */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:var(--nav-h)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(183,110,121,0.07) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 20% 80%,rgba(201,169,110,0.05) 0%,transparent 50%),var(--bg)}
+.hero-grain{position:absolute;inset:0;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");background-size:256px}
+.hero-ring{position:absolute;border-radius:50%;border:1px solid rgba(183,110,121,0.08);pointer-events:none}
+.ring1{width:600px;height:600px;top:-100px;right:-100px}
+.ring2{width:400px;height:400px;bottom:60px;right:80px;border-color:rgba(201,169,110,0.06)}
+.hero-con{position:relative;z-index:2;padding:80px 24px}
+.hero-in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center}
+.hero-text{}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--border2);background:rgba(183,110,121,0.08);padding:8px 18px;border-radius:100px;margin-bottom:28px}
+.hero-badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.hero-badge-text{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)}
+.hero-h1{font-family:var(--font-h);font-size:clamp(3rem,5.5vw,5.5rem);font-weight:600;line-height:1.05;letter-spacing:-0.01em;color:var(--text);margin-bottom:20px}
+.hero-h1 em{font-style:italic;color:var(--accent);font-weight:400}
+.hero-sub{font-size:1rem;line-height:1.75;color:var(--text2);max-width:480px;margin-bottom:36px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.btn-primary{background:var(--accent);color:#080808;padding:15px 30px;border-radius:var(--radius);font-size:0.85rem;font-weight:700;letter-spacing:0.04em;transition:background 0.2s,transform 0.15s,box-shadow 0.2s}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(183,110,121,0.3)}
+.btn-outline{border:1px solid var(--border2);color:var(--text2);padding:14px 28px;border-radius:var(--radius);font-size:0.85rem;font-weight:500;letter-spacing:0.04em;transition:border-color 0.2s,color 0.2s}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.hero-trust{display:flex;flex-direction:column;gap:10px}
+.htrust-item{display:flex;align-items:center;gap:10px;font-size:0.8rem;color:var(--muted)}
+.htrust-item svg{flex-shrink:0;color:var(--accent)}
+.hero-visual{position:relative}
+.hero-img-wrap{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/5;background:linear-gradient(145deg,var(--bg3) 0%,var(--bg4) 100%);border:1px solid var(--border2)}
+.hero-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--subtle)}
+.hero-img-placeholder svg{opacity:0.25}
+.hero-img-placeholder span{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.4;font-weight:500}
+.hero-img-shimmer{position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(183,110,121,0.05) 50%,transparent 60%);animation:shimmer 4s ease-in-out infinite}
+@keyframes shimmer{0%,100%{opacity:0}50%{opacity:1}}
+.hero-badge-float{position:absolute;bottom:24px;left:-20px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:16px 20px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(8px)}
+.hbf-icon{width:42px;height:42px;background:var(--accent-glow);border:1px solid var(--border2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0}
+.hbf-label{font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.hbf-value{font-size:0.95rem;font-weight:700;color:var(--text)}
+.hero-stars-float{position:absolute;top:20px;right:-16px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:14px 18px;backdrop-filter:blur(8px)}
+.hsf-stars{display:flex;gap:3px;margin-bottom:3px}
+.hsf-star{color:#C9A96E;font-size:0.9rem}
+.hsf-label{font-size:0.68rem;color:var(--muted);letter-spacing:0.06em}
+.hero-img-caption{font-size:0.65rem;color:var(--subtle);text-align:center;margin-top:10px;letter-spacing:0.1em;text-transform:uppercase}
+
+/* ─── Marquee ─── */
+.marquee-wrap{background:linear-gradient(90deg,var(--accent),var(--accent2));padding:13px 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:40px;animation:marquee-scroll 30s linear infinite}
+.marquee-item{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#080808}
+.marquee-dot{opacity:0.5}
+@keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── Stats Bar ─── */
+.stats-bar{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 0}
+.stats-row{display:flex;justify-content:center;gap:0;flex-wrap:wrap}
+.stat-item{text-align:center;padding:8px 48px;border-right:1px solid var(--border)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--font-h);font-size:2.4rem;font-weight:600;color:var(--accent);line-height:1;display:block}
+.stat-label{font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;display:block}
+
+/* ─── Section Common ─── */
+.section{padding:96px 0}
+.section-alt{background:var(--bg2)}
+.section-dark{background:var(--bg3)}
+.section-hdr{margin-bottom:56px}
+.section-title{font-family:var(--font-h);font-size:clamp(2rem,3.5vw,3.2rem);font-weight:600;line-height:1.1;letter-spacing:-0.01em;color:var(--text)}
+.section-sub{font-size:0.95rem;line-height:1.75;color:var(--text2);max-width:500px;margin-top:14px}
+
+/* ─── Services ─── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.svc-card{background:var(--bg2);padding:32px;transition:background 0.25s}
+.svc-card:hover{background:var(--bg3)}
+.svc-icon{width:48px;height:48px;background:rgba(183,110,121,0.1);border:1px solid rgba(183,110,121,0.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:20px;transition:background 0.25s,border-color 0.25s}
+.svc-card:hover .svc-icon{background:rgba(183,110,121,0.18);border-color:rgba(183,110,121,0.35)}
+.svc-name{font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:10px}
+.svc-desc{font-size:0.85rem;line-height:1.7;color:var(--muted)}
+
+/* ─── Credentials / About Section ─── */
+.cred-wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.cred-img{position:relative}
+.cred-img-box{aspect-ratio:3/4;border-radius:var(--radius-xl);background:linear-gradient(145deg,var(--bg3),var(--bg4));border:1px solid var(--border2);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--subtle)}
+.cred-img-box svg{opacity:0.2}
+.cred-img-box span{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.35;font-weight:500}
+.cred-badge{position:absolute;top:-16px;right:-16px;background:linear-gradient(135deg,var(--accent),var(--accent2));padding:14px 20px;border-radius:var(--radius-lg);text-align:center}
+.cred-badge-line1{font-family:var(--font-h);font-size:1.5rem;font-weight:700;color:#080808;line-height:1}
+.cred-badge-line2{font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(8,8,8,0.7);margin-top:2px}
+.cred-text{}
+.cred-bullets{display:flex;flex-direction:column;gap:14px;margin-top:28px;margin-bottom:32px}
+.cred-bullet{display:flex;align-items:flex-start;gap:14px}
+.cred-bullet-icon{width:32px;height:32px;border-radius:var(--radius);background:rgba(183,110,121,0.1);border:1px solid rgba(183,110,121,0.2);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;margin-top:2px}
+.cred-bullet-text strong{display:block;font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.cred-bullet-text span{font-size:0.82rem;color:var(--muted);line-height:1.6}
+
+/* ─── Philosophy / Differentiator ─── */
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:8px}
+.diff-card{border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;position:relative;overflow:hidden;transition:border-color 0.25s,transform 0.25s}
+.diff-card:hover{border-color:rgba(183,110,121,0.3);transform:translateY(-3px)}
+.diff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity 0.25s}
+.diff-card:hover::before{opacity:1}
+.diff-num{font-family:var(--font-h);font-size:3rem;font-weight:300;color:var(--border2);line-height:1;margin-bottom:16px}
+.diff-title{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:8px}
+.diff-body{font-size:0.83rem;line-height:1.75;color:var(--muted)}
+
+/* ─── Reviews ─── */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;transition:border-color 0.25s,transform 0.25s}
+.review-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-star{color:var(--accent2);font-size:0.85rem}
+.review-text{font-size:0.88rem;line-height:1.75;color:var(--text2);margin-bottom:18px;font-style:italic}
+.review-author{display:flex;align-items:center;gap:12px}
+.review-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#080808;flex-shrink:0}
+.review-name{font-size:0.82rem;font-weight:600;color:var(--text)}
+.review-source{font-size:0.72rem;color:var(--muted);margin-top:1px}
+.reviews-notice{text-align:center;font-size:0.75rem;color:var(--subtle);margin-top:32px;letter-spacing:0.06em}
+
+/* ─── Gallery ─── */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal-item{aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(145deg,var(--bg3),var(--bg4));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--subtle);transition:border-color 0.2s,transform 0.2s}
+.gal-item:hover{border-color:var(--border2);transform:scale(1.02)}
+.gal-item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.gal-item svg{opacity:0.2}
+.gallery-note{text-align:center;font-size:0.72rem;color:var(--subtle);margin-top:16px;letter-spacing:0.08em;text-transform:uppercase}
+
+/* ─── Areas ─── */
+.areas-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.area-tag{border:1px solid var(--border);border-radius:100px;padding:8px 18px;font-size:0.78rem;color:var(--text2);transition:border-color 0.2s,color 0.2s}
+.area-tag:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ─── CTA Block ─── */
+.cta-block{background:linear-gradient(135deg,rgba(183,110,121,0.12) 0%,rgba(201,169,110,0.08) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:96px 0}
+.cta-inner{text-align:center;max-width:620px;margin:0 auto}
+.cta-title{font-family:var(--font-h);font-size:clamp(2.2rem,4vw,3.8rem);font-weight:600;line-height:1.1;letter-spacing:-0.01em;margin-bottom:16px}
+.cta-title em{font-style:italic;color:var(--accent)}
+.cta-sub{font-size:0.95rem;color:var(--text2);line-height:1.75;margin-bottom:36px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-phone{font-family:var(--font-h);font-size:1.6rem;font-weight:500;color:var(--text);margin-top:28px;display:block;letter-spacing:0.02em}
+.cta-phone a{color:var(--accent);transition:color 0.2s}
+.cta-phone a:hover{color:var(--accent2)}
+
+/* ─── Footer ─── */
+.footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 0 32px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand{}
+.footer-logo{font-family:var(--font-h);font-size:1.2rem;font-weight:600;color:var(--text);margin-bottom:10px}
+.footer-tagline{font-size:0.82rem;color:var(--muted);line-height:1.7;max-width:240px}
+.footer-col-label{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.82rem;color:var(--muted);transition:color 0.2s}
+.footer-links a:hover{color:var(--text)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;font-size:0.8rem;color:var(--muted);margin-bottom:10px}
+.footer-contact-item svg{flex-shrink:0;color:var(--subtle);margin-top:1px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:0.75rem;color:var(--subtle)}
+.footer-cws{font-size:0.75rem;color:var(--subtle)}
+.footer-cws a{color:var(--muted);transition:color 0.2s}
+.footer-cws a:hover{color:var(--accent)}
+
+/* ─── Mobile Sticky Bar ─── */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--bg2);border-top:1px solid var(--border2);padding:12px 16px;gap:10px}
+.mob-bar a{flex:1;text-align:center;padding:13px 10px;border-radius:var(--radius);font-size:0.8rem;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center;gap:8px;transition:background 0.2s}
+.mob-bar-call{background:var(--accent);color:#080808}
+.mob-bar-map{background:var(--bg3);border:1px solid var(--border2);color:var(--text2)}
+
+/* ─── Responsive ─── */
+@media(max-width:1024px){
+  .hero-in{grid-template-columns:1fr;gap:48px}
+  .hero-visual{display:none}
+  .cred-wrap{grid-template-columns:1fr;gap:40px}
+  .cred-img{display:none}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:768px){
+  :root{--nav-h:60px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .section{padding:64px 0}
+  .stats-bar{padding:24px 0}
+  .stat-item{padding:8px 24px;border-right:none;border-bottom:1px solid var(--border)}
+  .stat-item:last-child{border-bottom:none}
+  .stats-row{flex-direction:row;flex-wrap:wrap}
+  .stat-item{width:50%;border-bottom:none;border-right:1px solid var(--border)}
+  .stat-item:nth-child(even){border-right:none}
+  .svc-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .diff-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-item:first-child{grid-column:span 2;aspect-ratio:16/9}
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .cta-block{padding:64px 0}
+  .mob-bar{display:flex}
+  body{padding-bottom:72px}
+  .hero-con{padding:40px 24px 56px}
+  .cred-wrap{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-btns{flex-direction:column}
+  .hero-btns a{text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .grid3{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Announce Bar -->
+<div class="announce">
+  Physician-Supervised Aesthetic Treatments — Book Your Free Consultation Today
+</div>
+
+<!-- Navigation -->
+<nav class="nav" id="mainNav">
+  <div class="nav-in">
+    <a href="#" class="logo">
+      <span class="logo-name">Ageless Spa Medica</span>
+      <span class="logo-sub">Dr. Bhanu J. Shah, MD</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Dr. Shah</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:5865742191" class="nav-cta">Book Now</a>
+    <div class="hamburger" id="hamburger" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <span class="mob-close" onclick="toggleMob()">✕</span>
+  <a href="#services" onclick="toggleMob()">Services</a>
+  <a href="#about" onclick="toggleMob()">About Dr. Shah</a>
+  <a href="#reviews" onclick="toggleMob()">Reviews</a>
+  <a href="#contact" onclick="toggleMob()">Contact</a>
+  <a href="tel:5865742191" class="btn-primary" style="margin-top:12px">Call (586) 574-2191</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-ring ring1"></div>
+  <div class="hero-ring ring2"></div>
+
+  <div class="hero-con">
+    <div class="hero-in">
+
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <span class="hero-badge-text">Board Certified OB/GYN, MD · Warren, MI</span>
+        </div>
+
+        <h1 class="hero-h1">
+          Where Medical<br/>
+          Expertise Meets<br/>
+          <em>Aesthetic Excellence</em>
+        </h1>
+
+        <p class="hero-sub">
+          Physician-supervised aesthetic treatments delivered by Dr. Bhanu J. Shah — a Board Certified OB/GYN with over 30 years of medical excellence. This is not a typical med spa.
+        </p>
+
+        <div class="hero-btns">
+          <a href="tel:5865742191" class="btn-primary">Book Your Consultation</a>
+          <a href="#services" class="btn-outline">Explore Treatments</a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="htrust-item">
+            <!-- shield check icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Board Certified OB/GYN — not a nurse injector
+          </div>
+          <div class="htrust-item">
+            <!-- star icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            4.9 stars across 93 verified patient reviews
+          </div>
+          <div class="htrust-item">
+            <!-- map-pin icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Warren · Sterling Heights · Chesterfield, MI
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <div class="hero-img-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+            <span>Dr. Shah's Portrait</span>
+          </div>
+          <div class="hero-img-shimmer"></div>
+        </div>
+
+        <!-- Floating MD Badge -->
+        <div class="hero-badge-float">
+          <div class="hbf-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <div class="hbf-label">Credentials</div>
+            <div class="hbf-value">MD · Board Certified OB/GYN</div>
+          </div>
+        </div>
+
+        <!-- Floating Stars -->
+        <div class="hero-stars-float">
+          <div class="hsf-stars">
+            <span class="hsf-star">★</span><span class="hsf-star">★</span><span class="hsf-star">★</span><span class="hsf-star">★</span><span class="hsf-star">★</span>
+          </div>
+          <div class="hsf-label">4.9 · 93 reviews</div>
+        </div>
+
+        <p class="hero-img-caption">Photo: Dr. Bhanu J. Shah, MD</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Marquee Strip -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Board Certified OB/GYN</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">Physician-Supervised Treatments</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">4.9 Stars · 93 Reviews</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">20 Years of Excellence</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">Warren · Sterling Heights · Chesterfield</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">Real Laser · Real MD · Real Results</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Board Certified OB/GYN</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">Physician-Supervised Treatments</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">4.9 Stars · 93 Reviews</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">20 Years of Excellence</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">Warren · Sterling Heights · Chesterfield</span>
+    <span class="marquee-item marquee-dot">◆</span>
+    <span class="marquee-item">Real Laser · Real MD · Real Results</span>
+    <span class="marquee-item marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="con">
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-num">4.9</span>
+        <span class="stat-label">Star Rating</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">93</span>
+        <span class="stat-label">Patient Reviews</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">20+</span>
+        <span class="stat-label">Years in Practice</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">SE Michigan Locations</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">MD</span>
+        <span class="stat-label">Board Certified</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="con">
+    <div class="section-hdr">
+      <span class="section-label">Treatments &amp; Services</span>
+      <h2 class="section-title">Aesthetic Excellence,<br/>Medically Delivered</h2>
+      <p class="section-sub">Every treatment is administered or directly supervised by Dr. Shah — a licensed MD with 30+ years of medical training. The difference is in the credentials.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- Botox -->
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l4 4-14 14H4v-4L18 2z"/><line x1="14" y1="6" x2="18" y2="10"/></svg>
+        </div>
+        <div class="svc-name">Botox &amp; Dermal Fillers</div>
+        <div class="svc-desc">Precise injections for lines, wrinkles, and volume loss — administered by an MD who understands facial anatomy at the deepest clinical level.</div>
+      </div>
+
+      <!-- Laser Hair Removal -->
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="svc-name">Laser Hair Removal</div>
+        <div class="svc-desc">Medical-grade laser technology with real physician oversight. As one patient put it: "The doctor is right there — not just a tech."</div>
+      </div>
+
+      <!-- Skin Resurfacing -->
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <div class="svc-name">Photofacial &amp; Pixel Resurfacing</div>
+        <div class="svc-desc">Light-based skin rejuvenation targeting sun damage, hyperpigmentation, and uneven texture. Clearer, brighter skin with clinical results.</div>
+      </div>
+
+      <!-- Chemical Peels -->
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <div class="svc-name">Chemical Peels &amp; Microdermabrasion</div>
+        <div class="svc-desc">Physician-grade peels calibrated to your skin type. Deep exfoliation that reveals fresh, refined skin with zero guesswork.</div>
+      </div>
+
+      <!-- Venus Freeze -->
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="svc-name">Venus Freeze Skin Tightening</div>
+        <div class="svc-desc">Non-invasive body contouring and skin tightening with proven, visible results. Patients report lasting improvements from the first session.</div>
+      </div>
+
+      <!-- Tattoo Removal -->
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.76z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+        </div>
+        <div class="svc-name">Tattoo Removal</div>
+        <div class="svc-desc">Medical laser tattoo removal with physician oversight at every session. Safe, effective, and calibrated to your skin tone and ink depth.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Credentials / About Dr. Shah -->
+<section class="section section-alt" id="about">
+  <div class="con">
+    <div class="cred-wrap">
+
+      <!-- Image side -->
+      <div class="cred-img">
+        <div class="cred-img-box">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+          <span>Dr. Shah Photo Here</span>
+        </div>
+        <div class="cred-badge">
+          <div class="cred-badge-line1">MD</div>
+          <div class="cred-badge-line2">Board Certified</div>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="cred-text">
+        <span class="section-label">About Dr. Shah</span>
+        <h2 class="section-title">30 Years of Medicine.<br/>The Credentials<br/><em style="font-style:italic;color:var(--accent);font-family:var(--font-h)">Matter Here.</em></h2>
+        <div class="divider"></div>
+        <p style="font-size:0.92rem;line-height:1.8;color:var(--text2);margin-bottom:8px;">
+          Dr. Bhanu J. Shah is a Board Certified OB/GYN physician who spent over three decades dedicated to women's health and medical excellence. She brought that same precision and clinical rigor to Ageless Spa Medica — because aesthetic treatments deserve real medical supervision.
+        </p>
+        <p style="font-size:0.92rem;line-height:1.8;color:var(--text2);margin-bottom:24px;">
+          At most med spas, a nurse practitioner or aesthetician performs your Botox. Here, it's an MD with board certification in hand and decades of human anatomy experience. That difference is everything.
+        </p>
+
+        <div class="cred-bullets">
+          <div class="cred-bullet">
+            <div class="cred-bullet-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="cred-bullet-text">
+              <strong>Board Certified OB/GYN</strong>
+              <span>Michigan License #31534 · NPI 1295743896 · Active since 2006</span>
+            </div>
+          </div>
+          <div class="cred-bullet">
+            <div class="cred-bullet-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="cred-bullet-text">
+              <strong>Medical Director &amp; Lead Provider</strong>
+              <span>Every treatment plan reviewed and supervised by Dr. Shah personally</span>
+            </div>
+          </div>
+          <div class="cred-bullet">
+            <div class="cred-bullet-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="cred-bullet-text">
+              <strong>30+ Years of Clinical Excellence</strong>
+              <span>Woman to Woman Care Center · Ageless Spa Medica · SE Michigan's trusted physician</span>
+            </div>
+          </div>
+          <div class="cred-bullet">
+            <div class="cred-bullet-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="cred-bullet-text">
+              <strong>BBB A+ Rated · 20-Year Practice</strong>
+              <span>In business since 2006 · No BBB complaints on record</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="tel:5865742191" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (586) 574-2191
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Dr. Shah -->
+<section class="section section-dark">
+  <div class="con">
+    <div class="section-hdr" style="text-align:center;max-width:580px;margin:0 auto 56px">
+      <span class="section-label">The Difference</span>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.8rem)">Why Physician-Led<br/>Treatment Changes Everything</h2>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-num">01</div>
+        <div class="diff-title">Medical-Grade Equipment</div>
+        <div class="diff-body">Dr. Shah invests in the same laser and aesthetic technology used in clinical medical settings — not consumer-grade equipment dressed up for a spa environment.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-num">02</div>
+        <div class="diff-title">Anatomy-Informed Technique</div>
+        <div class="diff-body">30 years of OB/GYN practice means a deeper understanding of human tissue, nerves, and vascular structures than any esthetician or non-physician injector.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-num">03</div>
+        <div class="diff-title">Unhurried, Personalized Care</div>
+        <div class="diff-body">Patients consistently report that Dr. Shah "answered all my questions," "took time to make me comfortable," and "worked with my schedule." This isn't a volume shop.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section" id="reviews">
+  <div class="con">
+    <div class="section-hdr">
+      <span class="section-label">Patient Reviews</span>
+      <h2 class="section-title">What Patients Say</h2>
+      <p class="section-sub">4.9 stars across 93 reviews. Real patients. Real results.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars">
+          <span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span>
+        </div>
+        <p class="review-text">"I am a frequent Botox customer. I have been extremely satisfied with my service. Price is AWESOME! I would not go anywhere else."</p>
+        <div class="review-author">
+          <div class="review-avatar">AL</div>
+          <div>
+            <div class="review-name">Ade L.</div>
+            <div class="review-source">Verified Patient · Yellow Pages</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span>
+        </div>
+        <p class="review-text">"Been seen here multiple times. They always treat me good and work with my schedule. Never had to wait more than 5 minutes. Highly recommend."</p>
+        <div class="review-author">
+          <div class="review-avatar">JB</div>
+          <div>
+            <div class="review-name">Jacquet B.</div>
+            <div class="review-source">Verified Patient · Yellow Pages</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span>
+        </div>
+        <p class="review-text">"I received great care at Ageless Spa! Answered all my questions and concerns, took time to make me comfortable. Dr. Shah is extremely meticulous — a true perfectionist."</p>
+        <div class="review-author">
+          <div class="review-avatar">CM</div>
+          <div>
+            <div class="review-name">Carl M.</div>
+            <div class="review-source">Verified Patient · Yellow Pages</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:40px">
+      <div style="border:1px solid var(--border2);border-radius:var(--radius-lg);padding:20px 36px;display:flex;align-items:center;gap:20px;text-align:center">
+        <div>
+          <div style="font-family:var(--font-h);font-size:3rem;font-weight:600;color:var(--accent);line-height:1">4.9</div>
+          <div style="display:flex;gap:3px;justify-content:center;margin-top:4px">
+            <span style="color:var(--accent2)">★★★★★</span>
+          </div>
+        </div>
+        <div style="width:1px;height:56px;background:var(--border)"></div>
+        <div>
+          <div style="font-size:0.82rem;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px">Based on</div>
+          <div style="font-family:var(--font-h);font-size:2rem;font-weight:600;color:var(--text);line-height:1">93 Reviews</div>
+          <div style="font-size:0.72rem;color:var(--subtle);margin-top:3px">Birdeye Verified</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="reviews-notice">All reviews are from verified patients via Yellow Pages and Citysearch aggregated by Birdeye. We're building toward fresh Google reviews — ask Dr. Shah about our review program.</p>
+  </div>
+</section>
+
+<!-- Gallery placeholder -->
+<section class="section section-alt">
+  <div class="con">
+    <div class="section-hdr" style="text-align:center;max-width:520px;margin:0 auto 48px">
+      <span class="section-label">Gallery</span>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.8rem)">Our Spaces &amp; Results</h2>
+      <p class="section-sub" style="margin:12px auto 0">Real treatment rooms. Real clinical environment. Real results. Photos coming soon.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gal-item" style="min-height:280px">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      </div>
+      <div class="gal-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+      <div class="gal-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+      <div class="gal-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+      <div class="gal-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <p class="gallery-note">Final site will include professional photography of facilities and results</p>
+  </div>
+</section>
+
+<!-- Service Areas + Contact -->
+<section class="section section-dark" id="contact">
+  <div class="con">
+    <div class="grid2" style="gap:64px">
+
+      <div>
+        <span class="section-label">Service Areas</span>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.8rem)">Serving Southeast Michigan</h2>
+        <div class="divider"></div>
+        <p style="font-size:0.88rem;color:var(--text2);line-height:1.75;max-width:420px;margin-bottom:24px">Three convenient locations across Macomb and Wayne counties. If you're in Southeast Michigan, exceptional physician-supervised aesthetic care is within reach.</p>
+        <div class="areas-list">
+          <span class="area-tag">Warren</span>
+          <span class="area-tag">Sterling Heights</span>
+          <span class="area-tag">Chesterfield</span>
+          <span class="area-tag">Troy</span>
+          <span class="area-tag">Clinton Township</span>
+          <span class="area-tag">Utica</span>
+          <span class="area-tag">Shelby Township</span>
+          <span class="area-tag">Macomb Township</span>
+          <span class="area-tag">St. Clair Shores</span>
+          <span class="area-tag">Eastpointe</span>
+          <span class="area-tag">Roseville</span>
+          <span class="area-tag">Fraser</span>
+        </div>
+      </div>
+
+      <div>
+        <span class="section-label">Contact &amp; Hours</span>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.6rem)">Get in Touch</h2>
+        <div class="divider"></div>
+
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px">
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:5865742191" style="color:var(--accent);font-size:1.1rem;font-weight:600">(586) 574-2191</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div style="font-size:0.82rem;color:var(--text2);font-weight:500">Warren (Ryan Rd)</div>
+              <div style="font-size:0.8rem;color:var(--muted)">29187 Ryan Rd, Warren MI 48092</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div style="font-size:0.82rem;color:var(--text2);font-weight:500">Sterling Heights (Dequindre)</div>
+              <div style="font-size:0.8rem;color:var(--muted)">37300 Dequindre Rd #115, Sterling Heights MI 48310</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <div style="font-size:0.82rem;color:var(--text2);font-weight:500">Hours</div>
+              <div style="font-size:0.8rem;color:var(--muted)">Monday – Friday: 9:00 AM – 5:00 PM</div>
+              <div style="font-size:0.8rem;color:var(--muted)">Saturday – Sunday: Closed</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="tel:5865742191" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Schedule a Consultation
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<div class="cta-block">
+  <div class="con">
+    <div class="cta-inner">
+      <p class="overline" style="text-align:center;display:block;margin-bottom:16px">Ready to Begin?</p>
+      <h2 class="cta-title">Your Results Deserve<br/><em>a Real Doctor.</em></h2>
+      <p class="cta-sub">Stop settling for aestheticians and nurse practitioners. Dr. Bhanu J. Shah brings 30 years of medical expertise to every treatment. Call today for a free consultation.</p>
+      <div class="cta-btns">
+        <a href="tel:5865742191" class="btn-primary" style="font-size:0.9rem;padding:16px 36px">Call (586) 574-2191</a>
+        <a href="#services" class="btn-outline" style="font-size:0.9rem;padding:15px 32px">View All Services</a>
+      </div>
+      <span class="cta-phone">
+        Or call directly: <a href="tel:5865742191">(586) 574-2191</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="con">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Ageless Spa Medica</div>
+        <p class="footer-tagline">Physician-supervised aesthetic excellence. Board Certified OB/GYN Dr. Bhanu J. Shah, MD — serving Southeast Michigan since 2006.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Botox &amp; Fillers</a></li>
+          <li><a href="#services">Laser Hair Removal</a></li>
+          <li><a href="#services">Skin Resurfacing</a></li>
+          <li><a href="#services">Chemical Peels</a></li>
+          <li><a href="#services">Venus Freeze</a></li>
+          <li><a href="#services">Tattoo Removal</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Practice</div>
+        <ul class="footer-links">
+          <li><a href="#about">About Dr. Shah</a></li>
+          <li><a href="#reviews">Patient Reviews</a></li>
+          <li><a href="#contact">Locations</a></li>
+          <li><a href="#contact">Hours</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Contact</div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:5865742191" style="color:var(--muted)">(586) 574-2191</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@agelessspamedica.com" style="color:var(--muted)">info@agelessspamedica.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>29187 Ryan Rd, Warren MI 48092</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Ageless Spa Medica · Dr. Bhanu J. Shah, MD. All rights reserved.</span>
+      <span class="footer-cws">Built by <a href="https://caliberwebstudio.com" target="_blank" rel="noopener">Caliber Web Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Sticky Bar -->
+<div class="mob-bar">
+  <a href="tel:5865742191" class="mob-bar-call">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call Dr. Shah
+  </a>
+  <a href="https://maps.google.com/?q=29187+Ryan+Rd+Warren+MI+48092" target="_blank" rel="noopener" class="mob-bar-map">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Directions
+  </a>
+</div>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// Mobile menu
+function toggleMob() {
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id === '#') return;
+    const el = document.querySelector(id);
+    if (el) {
+      e.preventDefault();
+      const offset = 80;
+      window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -14,7 +14,7 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const data = {
       name: (form.elements.namedItem('name') as HTMLInputElement).value,
-      business: (form.elements.namedItem('business_name') as HTMLInputElement).value,
+      businessName: (form.elements.namedItem('business_name') as HTMLInputElement).value,
       phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
@@ -32,7 +32,7 @@ export default function ContactForm() {
         form.reset();
       } else {
         setStatus('error');
-        setErrorMsg(json.message || 'Something went wrong. Please try again.');
+        setErrorMsg(json.error || json.message || 'Something went wrong. Please try again.');
       }
     } catch {
       setStatus('error');
@@ -136,6 +136,7 @@ export default function ContactForm() {
             id="contact-message"
             name="message"
             rows={4}
+            required
             placeholder="What kind of business do you run? What are your biggest challenges right now?"
             aria-label="Tell us about your business"
             style={{ ...inputStyle, resize: 'vertical' }}

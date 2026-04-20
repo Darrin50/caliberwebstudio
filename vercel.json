@@ -5,6 +5,14 @@
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://caliberwebstudio.com"
   },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.caliberwebstudio.com" }],
+      "destination": "https://caliberwebstudio.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/detroitdogsalon", "destination": "/dds-demo.html" }
   ]

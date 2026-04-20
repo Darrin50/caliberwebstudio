@@ -169,7 +169,7 @@ export default function AIChatbotPage() {
             <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--chrome, #A8B8C8)', marginBottom: '24px' }}>Pricing</p>
             <h2 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff', marginBottom: '20px', lineHeight: 1.1 }}>Ready to Install the AI Employee That Never Clocks Out?</h2>
             <p style={{ fontSize: 'clamp(15px,1.8vw,18px)', color: 'var(--chrome, #A8B8C8)', marginBottom: '48px', lineHeight: 1.6 }}>
-              Included with <strong style={{ color: '#fff' }}>Growth</strong> and <strong style={{ color: '#fff' }}>Scale</strong> plans at no extra cost. Starter plan clients can add the AI chatbot for <strong style={{ color: '#fff' }}>$97/mo</strong>.
+              The AI chatbot is <strong style={{ color: '#fff' }}>included in all managed plans</strong> — Starter, Growth, and Domination — at no extra cost. It&apos;s built and trained on your business from day one.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/pricing" style={{ display: 'inline-block', background: 'var(--navy, #1E3D8F)', color: '#fff', fontFamily: 'Space Mono, monospace', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', padding: '18px 40px', textDecoration: 'none', fontWeight: 700 }}>View Plans</Link>

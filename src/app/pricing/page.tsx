@@ -64,7 +64,7 @@ const plans = [
       "Full Automation Suite",
       "Advanced SEO Reporting",
       "Dedicated Account Management",
-      "Weekly Strategy Sessions",
+      "Dedicated Monthly Strategy Call",
     ],
   },
 ];
@@ -336,7 +336,7 @@ export default function PricingPage() {
                     ["AI Chatbot", true, true, true],
                     ["SEO + AEO Setup", true, true, true],
                     ["Google Business Profile", true, true, true],
-                    ["48hr Turnaround", true, true, true],
+                    ["Same-Day Edits", true, true, true],
                     ["Monthly Blog Posts", "—", "4/mo", "8/mo"],
                     ["Review Generation", "—", true, true],
                     ["Social Media Posts", "—", "8/mo", "12/mo"],

@@ -1449,9 +1449,9 @@ export const posts: BlogPost[] = [
 <h2>Your Next Step</h2>
 <p>Every day you run a website without a chatbot is a day you're leaving leads on the table — specifically the ones that come in after 5 PM, on weekends, and while you're on the phone with another customer.</p>
 
-<p>At Caliber, AI chatbot setup is included in our <a href="/#pricing">Growth Plan at $397/month</a>. We configure it, train it on your business, connect it to your calendar, and monitor it ongoing. You just watch the leads come in.</p>
+<p>At Caliber, AI chatbot setup is included in our <a href="/pricing">Growth Plan at $397/month</a>. We configure it, train it on your business, connect it to your calendar, and monitor it ongoing. You just watch the leads come in.</p>
 
-<p><a href="/#contact">Book a free consultation</a> to see what a chatbot could do for your specific business. We'll estimate your potential lead increase based on your current traffic and conversion rate — no fluff, just math.</p>
+<p><a href="/contact">Book a free consultation</a> to see what a chatbot could do for your specific business. We'll estimate your potential lead increase based on your current traffic and conversion rate — no fluff, just math.</p>
 
 <p><strong>What questions do customers ask your business most often?</strong> Those are exactly the questions your chatbot should be answering at 2 AM while you sleep.</p>`
   },
@@ -1597,7 +1597,7 @@ export const posts: BlogPost[] = [
 <h2>Start Here</h2>
 <p>The single highest-impact move most Detroit businesses can make today is building a complete local SEO and authority foundation. That means an optimized GBP, consistent directory citations, and service pages that answer real questions. Everything else in this article amplifies that foundation.</p>
 
-<p><a href="/#contact">Book a free strategy session</a>. We'll audit your current AI visibility — where you appear in ChatGPT, Perplexity, and Google AI Overviews — and show you exactly what to fix first to start showing up.</p>
+<p><a href="/contact">Book a free strategy session</a>. We'll audit your current AI visibility — where you appear in ChatGPT, Perplexity, and Google AI Overviews — and show you exactly what to fix first to start showing up.</p>
 
 <p><strong>Where does your business currently appear when someone asks ChatGPT for your service in your city?</strong> Try it right now. The answer will tell you everything about where you stand.</p>`
   },
@@ -1781,7 +1781,7 @@ export const posts: BlogPost[] = [
 
 <p>This is why Caliber exists. We build websites and content architectures specifically designed for the answer engine era. Every client gets schema markup, FAQ content, structured service pages, and an ongoing content strategy optimized for AI citation — not just keyword rankings.</p>
 
-<p><a href="/#contact">Book a free AEO audit</a>. We'll show you exactly where you appear (and don't appear) across Google AI Overviews, ChatGPT, and Perplexity — and give you a specific 90-day plan to become the recommended answer in your Detroit market.</p>
+<p><a href="/contact">Book a free AEO audit</a>. We'll show you exactly where you appear (and don't appear) across Google AI Overviews, ChatGPT, and Perplexity — and give you a specific 90-day plan to become the recommended answer in your Detroit market.</p>
 
 <p><strong>When did you last search for your own business in ChatGPT?</strong> If you haven't done it yet, stop reading and try it right now. What you find will tell you everything about your current AI visibility.</p>`
   },
@@ -1983,7 +1983,7 @@ export const posts: BlogPost[] = [
 
 <p>Every website Caliber builds is GEO-optimized by default. Schema markup, entity-consistent citation strategy, semantic content architecture, and FAQ structures are built into every project — not sold as add-ons. Because we believe this is what a website is supposed to do in 2025: get your business generated into AI answers.</p>
 
-<p><a href="/#contact">Book a free GEO assessment</a>. We'll audit your entity recognition, schema completeness, citation profile, and content semantic depth — then show you exactly which pillars need the most work for your specific Detroit business and market.</p>
+<p><a href="/contact">Book a free GEO assessment</a>. We'll audit your entity recognition, schema completeness, citation profile, and content semantic depth — then show you exactly which pillars need the most work for your specific Detroit business and market.</p>
 
 <p><strong>What percentage of your new customers found you through AI-assisted search vs. traditional Google in the last 6 months?</strong> If you're not tracking this, you're flying blind in the most important shift in search since mobile.</p>`
   },
@@ -2181,7 +2181,7 @@ export const posts: BlogPost[] = [
 
 <p>Caliber builds every website with AI visibility as a core design requirement — not an afterthought. Schema markup, FAQ architecture, local content strategy, and GBP optimization are included in every plan.</p>
 
-<p><a href="/#contact">Book a free AI visibility audit</a>. We'll show you exactly where you appear in ChatGPT, Perplexity, and Google AI Overviews today — and give you a prioritized action plan to change it.</p>
+<p><a href="/contact">Book a free AI visibility audit</a>. We'll show you exactly where you appear in ChatGPT, Perplexity, and Google AI Overviews today — and give you a prioritized action plan to change it.</p>
 
 <p><strong>Which of the seven checklist items above is your biggest gap right now?</strong> Start there. That's your fastest path to AI visibility.</p>`
   },
@@ -2389,7 +2389,7 @@ export const posts: BlogPost[] = [
 
 <p>Caliber builds every website with local SEO as a foundational requirement. Every plan includes GBP optimization, schema markup, location-optimized service pages, and an ongoing content strategy. We don't build websites — we build local search presence.</p>
 
-<p><a href="/#contact">Book a free local SEO audit</a>. We'll show you exactly where you rank today, which competitors are beating you and why, and give you a prioritized plan to overtake them.</p>
+<p><a href="/contact">Book a free local SEO audit</a>. We'll show you exactly where you rank today, which competitors are beating you and why, and give you a prioritized plan to overtake them.</p>
 
 <p><strong>What's your current ranking for your primary service + city keyword?</strong> Google it right now and see where you stand. If you're not in the top 3 of the map pack, this guide is your roadmap to get there.</p>`
   },
@@ -2570,7 +2570,7 @@ export const posts: BlogPost[] = [
 
 <p>At Caliber, every website we build is engineered for page one rankings. Schema markup, GBP optimization, location-targeted service pages, and ongoing content publishing are included in every plan. We don't just build websites — we build page one presence.</p>
 
-<p><a href="/#contact">Book a free ranking audit</a>. We'll show you exactly where you rank today for your most important keywords, who's beating you and why, and give you a specific action plan to start climbing. No fluff — just a clear path from invisible to page one.</p>
+<p><a href="/contact">Book a free ranking audit</a>. We'll show you exactly where you rank today for your most important keywords, who's beating you and why, and give you a specific action plan to start climbing. No fluff — just a clear path from invisible to page one.</p>
 
 <p><strong>What keyword do you most want to rank on page one for?</strong> Google it right now, see where you stand, and use this guide to build the plan to get there.</p>`
   },
@@ -2746,7 +2746,7 @@ export const posts: BlogPost[] = [
 
 <p>At Caliber, GBP optimization and ongoing monthly management are included in every plan. We handle the photos, the posts, the review response, and the ongoing optimization so you can focus on running your business while we focus on making sure customers can find it.</p>
 
-<p><a href="/#contact">Book a free GBP audit</a>. We'll evaluate your current profile against your top-ranking competitors and show you exactly what to fix to start taking their map pack spots.</p>
+<p><a href="/contact">Book a free GBP audit</a>. We'll evaluate your current profile against your top-ranking competitors and show you exactly what to fix to start taking their map pack spots.</p>
 
 <p><strong>When did you last update your Google Business Profile?</strong> If the honest answer is "I'm not sure," your competitors are outranking you — and a 30-minute profile audit is the fastest fix.</p>`
   },
@@ -3024,7 +3024,7 @@ export const posts: BlogPost[] = [
 
 <p>Every website Caliber builds includes comprehensive schema markup from day one: LocalBusiness, Service, FAQPage, BreadcrumbList, and AggregateRating schema are standard components. Not add-ons. Not upgrades. Standard.</p>
 
-<p><a href="/#contact">Book a free schema audit</a>. We'll check your current site for schema markup, identify every missing or broken schema type, and show you exactly what implementing it would do for your local search visibility. Most Detroit businesses we audit have zero schema markup — and adding it alone is worth an average of 15-25% improvement in local search click-through rates.</p>
+<p><a href="/contact">Book a free schema audit</a>. We'll check your current site for schema markup, identify every missing or broken schema type, and show you exactly what implementing it would do for your local search visibility. Most Detroit businesses we audit have zero schema markup — and adding it alone is worth an average of 15-25% improvement in local search click-through rates.</p>
 
 <p><strong>Does your website have LocalBusiness schema?</strong> Check right now: open your homepage, right-click, select "View Source," and search for "schema.org." If you don't find it, you're missing one of the most impactful technical SEO wins available to you today.</p>`
   },
@@ -3232,7 +3232,7 @@ export const posts: BlogPost[] = [
 
 <p>The four ranking blockers aren't mysterious. They're fixable. Fix them and you'll rank.</p>
 
-<p><a href="/#contact">Book a free ranking audit</a>. We'll diagnose exactly which of the four problems is holding your site back, show you where your competitors are outperforming you, and give you a concrete action plan to start climbing. Most sites see meaningful movement within 60 days of implementing the fixes.</p>
+<p><a href="/contact">Book a free ranking audit</a>. We'll diagnose exactly which of the four problems is holding your site back, show you where your competitors are outperforming you, and give you a concrete action plan to start climbing. Most sites see meaningful movement within 60 days of implementing the fixes.</p>
 
 <p><strong>Of the four ranking blockers, which one do you suspect is your biggest issue right now?</strong> Identify it, start there, and use the resources in this guide to fix it this week.</p>`
   },
@@ -3350,7 +3350,7 @@ export const posts: BlogPost[] = [
 
 <p>Every week, someone in your neighborhood Googles a barbershop, finds your Instagram, can't figure out how to book, and calls the shop down the street instead. That's not a problem with your cuts — it's a problem with your digital presence. A website built for Detroit barbershops fixes it.</p>
 
-<p>Caliber builds websites for shops like yours — not templates, not cookie-cutter — built around your neighborhood, your services, and the booking flow that converts browsers into regulars. <a href="/#contact">Talk to us about what a barbershop website looks like for your specific shop.</a></p>`
+<p>Caliber builds websites for shops like yours — not templates, not cookie-cutter — built around your neighborhood, your services, and the booking flow that converts browsers into regulars. <a href="/contact">Talk to us about what a barbershop website looks like for your specific shop.</a></p>`
   },
   {
     "slug": "website-design-for-plumbers-contractors",
@@ -3464,7 +3464,7 @@ export const posts: BlogPost[] = [
 
 <p>Detroit's housing stock is aging. The problems aren't going away — they're compounding. Homeowners across Metro Detroit are searching for contractors they can trust right now, and most of them are making that decision based on which website shows up first and makes them feel confident enough to call.</p>
 
-<p>Caliber builds contractor websites that are built for leads — not aesthetics, not awards, not impressing other contractors. Leads. <a href="/#contact">Tell us about your service area and what you're trying to capture, and we'll show you what a site built for your market looks like.</a></p>`
+<p>Caliber builds contractor websites that are built for leads — not aesthetics, not awards, not impressing other contractors. Leads. <a href="/contact">Tell us about your service area and what you're trying to capture, and we'll show you what a site built for your market looks like.</a></p>`
   },
   {
     "slug": "website-design-for-salons",
@@ -3582,7 +3582,7 @@ export const posts: BlogPost[] = [
 
 <p>The work you do matters to your clients — their hair is how they show up in the world. Your website should reflect the same level of craft and intentionality. Not a template thrown up in an afternoon. A considered, specific, Detroit-focused presence that tells the right clients: this is your salon.</p>
 
-<p>Caliber builds salon websites designed for Detroit's market — the natural hair community, the braiding specialists, the stylists who've built loyal client relationships over years. <a href="/#contact">Talk to us about what your salon specializes in and who you want to reach. We'll build the website that gets you in front of them.</a></p>`
+<p>Caliber builds salon websites designed for Detroit's market — the natural hair community, the braiding specialists, the stylists who've built loyal client relationships over years. <a href="/contact">Talk to us about what your salon specializes in and who you want to reach. We'll build the website that gets you in front of them.</a></p>`
   },
   {
     "slug": "website-design-for-restaurants",
@@ -3684,7 +3684,7 @@ export const posts: BlogPost[] = [
 
 <p>You've built a menu worth eating and a room worth sitting in. The website is the digital version of that room — and right now, it might be the reason diners are going somewhere else first. Detroit has the food culture. Your restaurant has the goods. The website is what connects the two.</p>
 
-<p>Caliber builds restaurant websites for Detroit's dining scene — from Eastern Market lunch spots to Corktown fine dining to Dearborn family restaurants. We focus on menus that work, reservations that convert, and local SEO that gets you found. <a href="/#contact">Tell us about your restaurant and what you're trying to build. We'll show you what a site built for your neighborhood looks like.</a></p>`
+<p>Caliber builds restaurant websites for Detroit's dining scene — from Eastern Market lunch spots to Corktown fine dining to Dearborn family restaurants. We focus on menus that work, reservations that convert, and local SEO that gets you found. <a href="/contact">Tell us about your restaurant and what you're trying to build. We'll show you what a site built for your neighborhood looks like.</a></p>`
   },
   {
     "slug": "website-design-for-auto-repair-shops",
@@ -3795,7 +3795,7 @@ export const posts: BlogPost[] = [
 
 <p>Your shop has the expertise. The question is whether your website communicates that to the driver who's never met you but needs a mechanic they can trust. Caliber builds auto repair websites for Detroit shops that are built around trust signals, lead capture, and local search — everything a Metro Detroit mechanic needs to win the customer searching right now.</p>
 
-<p><a href="/#contact">Tell us about your shop, your market, and what you're trying to build. We'll show you exactly what a site built for Detroit auto repair looks like.</a></p>`
+<p><a href="/contact">Tell us about your shop, your market, and what you're trying to build. We'll show you exactly what a site built for Detroit auto repair looks like.</a></p>`
   },
   {
     "slug": "website-design-for-lawyers",
@@ -8778,13 +8778,13 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>We don't use templates. A Grosse Pointe landscaper serving high-net-worth homeowners needs a different website than a Southfield company focused on HOA maintenance contracts. The content, the photography direction, the CTA copy — all of it is built around your specific market and the clients you're trying to win.</p>
 
-<p>If your pipeline fills itself in April and empties itself in October, your website is most of the reason. Call us at <a href="tel:3137992315">(313) 799-2315</a> or <a href="/#contact">tell us about your landscaping business and we'll show you exactly what a pipeline-filling website looks like for your market</a>.</p>
+<p>If your pipeline fills itself in April and empties itself in October, your website is most of the reason. Call us at <a href="tel:3137992315">(313) 799-2315</a> or <a href="/contact">tell us about your landscaping business and we'll show you exactly what a pipeline-filling website looks like for your market</a>.</p>
 
 <img src="/blog/detroit-landscaping-website-fill-pipeline-5.png" alt="Landscaping company owner reviewing website lead inquiries on a laptop showing estimate requests from Metro Detroit homeowners" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="font-size:1.1em;">Ready to fill your pipeline before spring?</strong>
-  <p style="margin:12px 0 0;">Caliber Web Studio builds Detroit landscaping websites that rank, convert, and generate leads year-round — starting at $197/month with $0 down. <a href="/#contact" style="color:#1E3D8F;font-weight:600;">Request a free estimate</a> or call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a>.</p>
+  <p style="margin:12px 0 0;">Caliber Web Studio builds Detroit landscaping websites that rank, convert, and generate leads year-round — starting at $197/month with $0 down. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Request a free estimate</a> or call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a>.</p>
 </div>
 
 <div style="border-top:1px solid #e5e7eb;padding-top:24px;margin-top:40px;">
@@ -10764,7 +10764,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <li><strong>Service variants built into the flow</strong> — Unit ranges, area combinations, new vs. returning client pathways</li>
 </ul>
 
-<p>Caliber builds and configures med spa booking flows to this standard. If your practice is generating traffic but losing the booking, <a href="/#contact">reach out for a free booking flow audit</a> — we will show you where the drop-off is happening and what it is costing per month. See our <a href="/industries/med-spas">med spa industry page</a> for the full scope of what we build.</p>
+<p>Caliber builds and configures med spa booking flows to this standard. If your practice is generating traffic but losing the booking, <a href="/contact">reach out for a free booking flow audit</a> — we will show you where the drop-off is happening and what it is costing per month. See our <a href="/industries/med-spas">med spa industry page</a> for the full scope of what we build.</p>
 
 <img src="/blog/detroit-med-spa-booking-mistakes-confirmation.jpg" alt="Woman smiling at her phone showing a confirmed Detroit med spa booking with a calendar sync prompt" style="width:100%;border-radius:12px;margin:32px 0;" />
 
@@ -10838,7 +10838,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h2 style="font-size:1.4rem;font-weight:700;color:#fff;margin:0 0 12px;">Losing Bookings You Already Earned?</h2>
 <p style="color:rgba(255,255,255,0.7);margin:0 0 24px;line-height:1.7;">Caliber Web Studio audits and fixes med spa booking flows for Detroit-area practices — from platform configuration to full site rebuilds. $0 down, starting at $197/month.</p>
 <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-<a href="/#contact" style="padding:12px 24px;background:#00d4ff;color:#000;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.9rem;">Free Booking Flow Audit</a>
+<a href="/contact" style="padding:12px 24px;background:#00d4ff;color:#000;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.9rem;">Free Booking Flow Audit</a>
 <a href="/industries/med-spas" style="padding:12px 24px;background:transparent;border:1px solid #00d4ff;color:#00d4ff;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.9rem;">Med Spa Web Design</a>
 </div>
 </div>

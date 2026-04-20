@@ -204,6 +204,7 @@ export default function Nav() {
   const navItems: NavItem[] = [
     { label: 'Services', href: '/services' },
     { label: 'Pricing', href: '/pricing' },
+    { label: 'Tools', href: '/tools' },
     { label: 'Our Work', href: '/case-studies' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },

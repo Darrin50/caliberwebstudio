@@ -171,10 +171,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               Custom websites, local SEO, AI chatbots, and review automation — starting at $197/mo with $0 down.
             </p>
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/#pricing" style={{ padding: "12px 24px", background: "var(--accent, #00d4ff)", color: "#000", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.9rem" }}>
+              <Link href="/pricing" style={{ padding: "12px 24px", background: "var(--accent, #00d4ff)", color: "#000", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.9rem" }}>
                 View Plans
               </Link>
-              <Link href="/#contact" style={{ padding: "12px 24px", background: "transparent", border: "1px solid var(--accent, #00d4ff)", color: "var(--accent, #00d4ff)", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.9rem" }}>
+              <Link href="/contact" style={{ padding: "12px 24px", background: "transparent", border: "1px solid var(--accent, #00d4ff)", color: "var(--accent, #00d4ff)", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.9rem" }}>
                 Free Consultation
               </Link>
             </div>

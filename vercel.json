@@ -7,9 +7,9 @@
   },
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.caliberwebstudio.com" }],
-      "destination": "https://caliberwebstudio.com/:path*",
+      "destination": "https://caliberwebstudio.com/$1",
       "permanent": true
     }
   ],

@@ -127,5 +127,127 @@
       }
     ],
     "createdAt": "2026-04-20"
+  },
+  {
+    "slug": "kvitalityspa",
+    "businessName": "K Vitality Spa",
+    "businessType": "Clinical Aesthetics & Therapeutic Spa",
+    "tagline": "549 five-star reviews. 17 years of expertise. Warren's most trusted destination for clinical skincare and therapeutic massage — finally with a site that shows it.",
+    "primaryColor": "#1A5C45",
+    "accentColor": "#C9A96E",
+    "announceBar": "Warren's Highest-Rated Spa — 549 Google Reviews ⭐ 4.9 | Now Booking Microneedling & Clinical Facials",
+    "heroImg": "https://images.unsplash.com/photo-1552693673-1bf958298935?w=1600&auto=format&fit=crop&q=80",
+    "aboutImg": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=900&auto=format&fit=crop&q=80",
+    "theme": {
+      "bg": "#080B09",
+      "bg2": "#0F1410",
+      "bg3": "#172018",
+      "accent": "#1A5C45",
+      "accent2": "#C9A96E",
+      "text": "#F0F5F0",
+      "muted": "#9AA89A",
+      "light": "#DDE8DD",
+      "radius": "10px"
+    },
+    "stats": [
+      { "num": "549", "label": "Google Reviews" },
+      { "num": "4.9★", "label": "Average Rating" },
+      { "num": "17+", "label": "Years of Expertise" },
+      { "num": "20+", "label": "Treatments Offered" }
+    ],
+    "services": [
+      {
+        "name": "Microneedling",
+        "description": "Collagen-induction therapy that reduces acne scars, fine lines, and hyperpigmentation at a cellular level. Safe for all skin tones. Results visible in as little as two weeks — full transformation over a series of treatments.",
+        "price": "Starting at $200"
+      },
+      {
+        "name": "Medical-Grade Facials",
+        "description": "From Hydrodermabrasion to our Forever Young and Detox Facial, every treatment is customized to your exact skin profile. Clinical-grade ingredients, zero downtime, and visible results after session one.",
+        "price": "Starting at $125"
+      },
+      {
+        "name": "Chemical Peels",
+        "description": "Brightening, acne-clearing, and deep-cleanse peel protocols using professional-grade acids. We match peel depth to your skin type and concerns — no guesswork, no cookie-cutter approach.",
+        "price": "Starting at $130"
+      },
+      {
+        "name": "Therapeutic Massage",
+        "description": "Led by a licensed massage therapist with 17 years of clinical experience. Swedish, deep tissue, prenatal, and K's Signature Massage — tailored to your body's needs, not a timer.",
+        "price": "Starting at $75"
+      },
+      {
+        "name": "Lymphatic Drainage",
+        "description": "Manual lymphatic drainage for post-surgical recovery, swelling reduction, and immune support. Face and full-body protocols available from a credentialed LMT trained in clinical lymphatic technique.",
+        "price": "Starting at $85"
+      },
+      {
+        "name": "Body Treatments",
+        "description": "Signature body scrubs, detox wraps, seaweed wraps, and slimming treatments that combine therapeutic touch with clinical results. Full-body transformation from head to toe.",
+        "price": "Starting at $125"
+      }
+    ],
+    "hours": [
+      { "day": "Monday", "hours": "9:00 AM – 7:00 PM" },
+      { "day": "Tuesday – Wednesday", "hours": "Closed" },
+      { "day": "Thursday", "hours": "9:00 AM – 7:00 PM" },
+      { "day": "Friday", "hours": "9:00 AM – 6:00 PM" },
+      { "day": "Saturday – Sunday", "hours": "10:00 AM – 5:00 PM" }
+    ],
+    "phone": "(586) 879-0836",
+    "address": "13775 E 13 Mile Rd, Unit A",
+    "city": "Warren, MI 48088",
+    "about": "K Vitality Spa was founded in 2022 on a simple belief: exceptional clinical results and genuine therapeutic care are not mutually exclusive. Led by Kia Vang — a licensed massage therapist with 17 years of hands-on experience and a licensed esthetician with advanced Aveda Institute training — the team brings a level of expertise that goes far beyond what you'll find at a standard day spa.\n\nKia built K Vitality from the ground up in Warren with a curated team of licensed professionals who share her philosophy: understand the client's skin and body first, then customize every treatment to deliver real, lasting results. From clinical-grade facials and microneedling to therapeutic massage and lymphatic drainage, every service is grounded in technique, training, and genuine care.\n\nThree years and 549 five-star reviews later, K Vitality Spa has become one of Macomb County's most trusted names in clinical aesthetics and therapeutic wellness — one client at a time.",
+    "ctaLabel": "Book Your Treatment",
+    "website": "https://www.kvitalityspa.com",
+    "email": "",
+    "socials": {
+      "instagram": "https://www.instagram.com/kvitalityspa/"
+    },
+    "chatbotGreeting": "Welcome to K Vitality Spa! I'm here to help you book a treatment or answer questions about our services. What can I help you with today?",
+    "reviews": [
+      {
+        "name": "Brianna T. — Warren, MI",
+        "stars": 5,
+        "text": "I've been getting microneedling here for the past six months and my skin has completely transformed. Hyperpigmentation I've had for years is finally fading. Kia is incredibly knowledgeable — she explained every step and customized the protocol for my skin tone. I will not go anywhere else."
+      },
+      {
+        "name": "Monique R. — Roseville, MI",
+        "stars": 5,
+        "text": "My husband and I did a couples massage for our anniversary and it was genuinely the best massage I've ever had in my life. Therapeutic, not just relaxing — I could feel the years of skill behind every move. We've already booked again for next month."
+      },
+      {
+        "name": "Danielle W. — Sterling Heights, MI",
+        "stars": 5,
+        "text": "I came in for a Hydrodermabrasion facial after years of struggling with acne-prone skin. The esthetician did a thorough consultation first — she actually looked at my skin under a light and explained what was happening. Two treatments in and my skin is clearer than it's been in a decade."
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&auto=format&fit=crop&q=80",
+        "alt": "Clinical facial treatment at K Vitality Spa"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&auto=format&fit=crop&q=80",
+        "alt": "Therapeutic massage session"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop&q=80",
+        "alt": "Microneedling treatment"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1607009905566-f7f0d2c6f6b3?w=800&auto=format&fit=crop&q=80",
+        "alt": "Glowing skin results"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&auto=format&fit=crop&q=80",
+        "alt": "Luxury spa treatment room"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1599577180513-a67a9eed8e06?w=800&auto=format&fit=crop&q=80",
+        "alt": "Body treatment and wrap service"
+      }
+    ],
+    "createdAt": "2026-04-20"
   }
 ]

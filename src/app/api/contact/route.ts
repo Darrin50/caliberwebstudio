@@ -12,11 +12,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Send email via Resend
     const { Resend } = await import('resend');
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    await resend.emails.send({
+    const { error: sendError } = await resend.emails.send({
       from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
       to: ['darrin@caliberwebstudio.com'],
       reply_to: email,
@@ -33,11 +32,19 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    // Also send confirmation to the lead
+    if (sendError) {
+      console.error('Resend error:', sendError);
+      return NextResponse.json(
+        { error: 'Failed to send message. Please email us directly at darrin@caliberwebstudio.com' },
+        { status: 500 }
+      );
+    }
+
+    // Confirmation to the lead — non-critical, don't fail if this errors
     await resend.emails.send({
       from: 'Caliber Web Studio <noreply@caliberwebstudio.com>',
       to: [email],
-      subject: `We got your message, ${name.split(' ')[0]}! 🚀`,
+      subject: `We got your message, ${name.split(' ')[0]}!`,
       html: `
         <div style="font-family:Inter,sans-serif;max-width:600px;margin:0 auto;">
           <h1 style="color:#1E3D8F;">Measure. Design. Rise.</h1>
@@ -56,9 +63,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      {
-        error: 'Failed to send message. Please email us directly at darrin@caliberwebstudio.com',
-      },
+      { error: 'Failed to send message. Please email us directly at darrin@caliberwebstudio.com' },
       { status: 500 }
     );
   }

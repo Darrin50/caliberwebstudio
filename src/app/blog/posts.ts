@@ -10855,7 +10855,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   {
   slug: "detroit-med-spa-website-michigan-regulations",
   thumbnail: "/blog/detroit-med-spa-website-michigan-regulations-hero.jpg",
-  title: "Michigan Med Spa Regulations: What Your Website Must and Cannot Say",
+  title: "Michigan Med Spa Compliance: What Your Website Must and Cannot Say",
   description:
     "Michigan med spas face strict advertising and disclosure rules that most websites ignore — here's what the law requires and what can get you flagged.",
   date: "2026-05-03",
@@ -10871,7 +10871,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <script type="application/ld+json">${JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Michigan Med Spa Regulations: What Your Website Must and Cannot Say",
+  "headline": "Michigan Med Spa Compliance: What Your Website Must and Cannot Say",
   "description": "Michigan med spas face strict advertising and disclosure rules that most websites ignore — here's what the law requires and what can get you flagged.",
   "image": "https://caliberwebstudio.com/blog/detroit-med-spa-website-michigan-regulations-hero.jpg",
   "datePublished": "2026-05-03",

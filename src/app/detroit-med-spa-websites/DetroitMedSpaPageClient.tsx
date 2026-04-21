@@ -390,11 +390,10 @@ export default function DetroitMedSpaPageClient() {
         ══════════════════════════════════════════════════════ */}
         <section
           id="case-study"
-          data-force-dark
           style={{
-            background: '#111114',
+            background: 'var(--bg2)',
             padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-            borderTop: '1px solid rgba(255,255,255,0.06)',
+            borderTop: '1px solid var(--border)',
           }}
         >
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -417,7 +416,7 @@ export default function DetroitMedSpaPageClient() {
                   fontWeight: 800,
                   lineHeight: 1.05,
                   letterSpacing: '-0.03em',
-                  color: '#F4F6F8',
+                  color: 'var(--white)',
                   marginBottom: '20px',
                 }}>
                   Detroit&#39;s Best Med Spas<br />
@@ -427,7 +426,7 @@ export default function DetroitMedSpaPageClient() {
                   fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                   fontSize: 'clamp(0.95rem, 1.5vw, 1.05rem)',
                   lineHeight: 1.75,
-                  color: 'rgba(208,216,224,0.68)',
+                  color: 'var(--chrome)',
                   marginBottom: '32px',
                 }}>
                   We build for practices that take their image seriously — providers
@@ -462,7 +461,7 @@ export default function DetroitMedSpaPageClient() {
                 height: 'clamp(420px, 50vw, 600px)',
                 borderRadius: '12px',
                 overflow: 'hidden',
-                border: '1px solid rgba(255,255,255,0.08)',
+                border: '1px solid var(--border-color)',
                 boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
               }}>
                 <Image
@@ -481,9 +480,9 @@ export default function DetroitMedSpaPageClient() {
             PROBLEMS
         ══════════════════════════════════════════════════════ */}
         <section style={{
-          background: 'var(--bg3, #18181c)',
+          background: 'var(--bg3)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
+          borderTop: '1px solid var(--border)',
         }}>
           <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
@@ -498,7 +497,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: '#F4F6F8',
+                color: 'var(--white)',
                 maxWidth: '600px',
               }}>
                 Why Most Detroit Med Spa Websites<br />
@@ -533,7 +532,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                     fontSize: 'clamp(1rem, 1.5vw, 1.15rem)',
                     fontWeight: 700,
-                    color: '#F4F6F8',
+                    color: 'var(--white)',
                     marginBottom: '10px',
                   }}>
                     {p.title}
@@ -542,7 +541,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                     fontSize: '14px',
                     lineHeight: 1.7,
-                    color: 'rgba(208,216,224,0.62)',
+                    color: 'var(--chrome)',
                     marginBottom: '16px',
                   }}>
                     {p.desc}
@@ -568,9 +567,9 @@ export default function DetroitMedSpaPageClient() {
             PROCESS
         ══════════════════════════════════════════════════════ */}
         <section style={{
-          background: 'var(--bg2, #111114)',
+          background: 'var(--bg2)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
+          borderTop: '1px solid var(--border)',
         }}>
           <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
@@ -585,7 +584,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: '#F4F6F8',
+                color: 'var(--white)',
               }}>
                 Four Steps From<br />
                 <span style={{ color: '#0076B6' }}>Signed to Launched</span>
@@ -607,7 +606,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
                     fontSize: '11px',
                     letterSpacing: '0.12em',
-                    color: 'rgba(255,255,255,0.15)',
+                    color: 'var(--border-color)',
                     fontWeight: 700,
                   }}>
                     {step.num}
@@ -634,7 +633,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                     fontSize: 'clamp(1.1rem, 1.6vw, 1.25rem)',
                     fontWeight: 700,
-                    color: '#F4F6F8',
+                    color: 'var(--white)',
                     marginBottom: '12px',
                   }}>
                     {step.title}
@@ -643,7 +642,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                     fontSize: '14px',
                     lineHeight: 1.7,
-                    color: 'rgba(208,216,224,0.62)',
+                    color: 'var(--chrome)',
                     margin: 0,
                   }}>
                     {step.desc}
@@ -659,9 +658,9 @@ export default function DetroitMedSpaPageClient() {
             STATS
         ══════════════════════════════════════════════════════ */}
         <section style={{
-          background: '#0a0a0b',
+          background: 'var(--bg)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
+          borderTop: '1px solid var(--border)',
         }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
@@ -677,7 +676,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: '#F4F6F8',
+                color: 'var(--white)',
               }}>
                 Data That Drives<br />
                 <span style={{ color: '#0076B6' }}>Our Decisions</span>
@@ -706,7 +705,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                     fontSize: '14px',
                     lineHeight: 1.6,
-                    color: 'rgba(208,216,224,0.72)',
+                    color: 'var(--chrome)',
                     marginBottom: '14px',
                   }}>
                     {s.label}
@@ -737,9 +736,9 @@ export default function DetroitMedSpaPageClient() {
             PRICING
         ══════════════════════════════════════════════════════ */}
         <section style={{
-          background: 'var(--bg2, #111114)',
+          background: 'var(--bg2)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
+          borderTop: '1px solid var(--border)',
         }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
@@ -755,7 +754,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: '#F4F6F8',
+                color: 'var(--white)',
                 marginBottom: '16px',
               }}>
                 Simple Pricing.<br />
@@ -764,12 +763,12 @@ export default function DetroitMedSpaPageClient() {
               <p style={{
                 fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                 fontSize: '15px',
-                color: 'rgba(208,216,224,0.55)',
+                color: 'var(--dim)',
                 maxWidth: '460px',
                 margin: '0 auto',
                 lineHeight: 1.65,
               }}>
-                All plans start with a <strong style={{ color: 'rgba(208,216,224,0.8)' }}>$0 down custom mockup</strong> — you
+                All plans start with a <strong style={{ color: 'var(--white)' }}>$0 down custom mockup</strong> — you
                 see exactly what your site will look like before you pay a cent.
               </p>
             </div>
@@ -832,7 +831,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                     fontSize: '20px',
                     fontWeight: 800,
-                    color: '#F4F6F8',
+                    color: 'var(--white)',
                     marginBottom: '8px',
                   }}>
                     {plan.name}
@@ -851,7 +850,7 @@ export default function DetroitMedSpaPageClient() {
                     <span style={{
                       fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
                       fontSize: '12px',
-                      color: 'rgba(208,216,224,0.45)',
+                      color: 'var(--dim)',
                     }}>
                       {plan.period}
                     </span>
@@ -861,7 +860,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                     fontSize: '13px',
                     lineHeight: 1.65,
-                    color: 'rgba(208,216,224,0.55)',
+                    color: 'var(--dim)',
                     marginBottom: '20px',
                   }}>
                     {plan.desc}
@@ -872,7 +871,7 @@ export default function DetroitMedSpaPageClient() {
                       <li key={f} style={{
                         fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                         fontSize: '13px',
-                        color: 'rgba(208,216,224,0.72)',
+                        color: 'var(--chrome)',
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: '10px',
@@ -897,9 +896,9 @@ export default function DetroitMedSpaPageClient() {
             LOCAL TRUST + BLOG LINKS
         ══════════════════════════════════════════════════════ */}
         <section style={{
-          background: 'var(--bg3, #18181c)',
+          background: 'var(--bg3)',
           padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
+          borderTop: '1px solid var(--border)',
         }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
@@ -922,7 +921,7 @@ export default function DetroitMedSpaPageClient() {
                   fontWeight: 800,
                   lineHeight: 1.05,
                   letterSpacing: '-0.03em',
-                  color: '#F4F6F8',
+                  color: 'var(--white)',
                   marginBottom: '20px',
                 }}>
                   Based in Detroit.<br />
@@ -932,7 +931,7 @@ export default function DetroitMedSpaPageClient() {
                   fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                   fontSize: '15px',
                   lineHeight: 1.7,
-                  color: 'rgba(208,216,224,0.62)',
+                  color: 'var(--chrome)',
                   marginBottom: '28px',
                 }}>
                   We know Metro Detroit. We know which zip codes are searching for
@@ -951,9 +950,9 @@ export default function DetroitMedSpaPageClient() {
                       fontSize: '10px',
                       letterSpacing: '0.08em',
                       textTransform: 'uppercase',
-                      color: 'rgba(208,216,224,0.5)',
-                      background: 'rgba(255,255,255,0.04)',
-                      border: '1px solid rgba(255,255,255,0.08)',
+                      color: 'var(--chrome)',
+                      background: 'var(--card-bg)',
+                      border: '1px solid var(--border-color)',
                       borderRadius: '4px',
                       padding: '5px 10px',
                     }}>
@@ -1001,7 +1000,7 @@ export default function DetroitMedSpaPageClient() {
                   fontWeight: 800,
                   lineHeight: 1.1,
                   letterSpacing: '-0.02em',
-                  color: '#F4F6F8',
+                  color: 'var(--white)',
                   marginBottom: '28px',
                 }}>
                   More on Detroit<br />Med Spa Websites
@@ -1033,7 +1032,7 @@ export default function DetroitMedSpaPageClient() {
                         fontSize: '14px',
                         fontWeight: 500,
                         lineHeight: 1.5,
-                        color: 'rgba(208,216,224,0.78)',
+                        color: 'var(--chrome)',
                         margin: 0,
                       }}>
                         {post.title} →
@@ -1104,7 +1103,7 @@ export default function DetroitMedSpaPageClient() {
               fontFamily: "var(--font-inter, 'Inter', sans-serif)",
               fontSize: 'clamp(1rem, 1.8vw, 1.15rem)',
               lineHeight: 1.7,
-              color: 'rgba(208,216,224,0.72)',
+              color: 'var(--chrome)',
               marginBottom: '44px',
               maxWidth: '500px',
               margin: '0 auto 44px',
@@ -1199,14 +1198,14 @@ export default function DetroitMedSpaPageClient() {
           gap: 8px;
           padding: 15px 28px;
           background: transparent;
-          color: rgba(208,216,224,0.72);
+          color: var(--chrome);
           font-family: var(--font-syne, 'Syne', sans-serif);
           font-size: 15px;
           font-weight: 600;
           letter-spacing: 0.03em;
           text-decoration: none;
           border-radius: 4px;
-          border: 1px solid rgba(255,255,255,0.14);
+          border: 1px solid var(--border);
           transition: border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
         }
         .ms-btn-secondary:hover {
@@ -1240,8 +1239,8 @@ export default function DetroitMedSpaPageClient() {
 
         /* ── Cards ─────────────────────────────────────────── */
         .ms-card {
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.08);
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
           border-radius: 12px;
           padding: clamp(20px, 2.5vw, 28px);
           transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -1249,13 +1248,13 @@ export default function DetroitMedSpaPageClient() {
         .ms-card:hover {
           transform: translateY(-4px);
           border-color: rgba(0,118,182,0.3);
-          box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+          box-shadow: 0 12px 40px rgba(0,118,182,0.1);
         }
 
         /* ── Stat card ─────────────────────────────────────── */
         .ms-stat-card {
-          background: rgba(255,255,255,0.03);
-          border: 1px solid rgba(255,255,255,0.07);
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
           border-radius: 12px;
           padding: clamp(24px, 3vw, 32px);
           transition: transform 0.25s ease, border-color 0.25s ease;
@@ -1267,8 +1266,8 @@ export default function DetroitMedSpaPageClient() {
 
         /* ── Plan card (default — non-featured) ────────────── */
         .ms-plan-card:not([style]) {
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.08);
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
           border-radius: 12px;
           padding: clamp(24px, 3vw, 36px);
           transition: transform 0.25s ease, border-color 0.25s ease;
@@ -1285,16 +1284,35 @@ export default function DetroitMedSpaPageClient() {
         .ms-blog-link {
           display: block;
           padding: 16px 20px;
-          background: rgba(255,255,255,0.03);
-          border: 1px solid rgba(255,255,255,0.07);
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
           border-radius: 8px;
           text-decoration: none;
           transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
         }
         .ms-blog-link:hover {
-          background: rgba(255,255,255,0.05);
           border-color: rgba(0,118,182,0.3);
           transform: translateX(4px);
+        }
+
+        /* ── Light mode: card box shadows ──────────────────── */
+        [data-theme="light"] .ms-card {
+          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        [data-theme="light"] .ms-card:hover {
+          box-shadow: 0 8px 24px rgba(0,118,182,0.1), 0 2px 8px rgba(0,0,0,0.05);
+        }
+        [data-theme="light"] .ms-stat-card {
+          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        [data-theme="light"] .ms-plan-card:not([style]) {
+          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        [data-theme="light"] .ms-blog-link {
+          box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        [data-theme="light"] .ms-blog-link:hover {
+          box-shadow: 0 4px 12px rgba(0,118,182,0.1);
         }
 
         /* ── Browser frame shadow on small screens ─────────── */

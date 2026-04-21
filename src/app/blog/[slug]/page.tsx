@@ -201,7 +201,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 <Link
                   key={city.slug}
                   href={`/areas/${city.slug}`}
-                  style={{ fontSize: "0.8rem", padding: "6px 14px", background: "rgba(30,61,143,0.12)", border: "1px solid rgba(30,61,143,0.25)", borderRadius: "4px", color: "rgba(208,216,224,0.7)", textDecoration: "none" }}
+                  style={{ fontSize: "0.8rem", padding: "6px 14px", background: "rgba(30,61,143,0.12)", border: "1px solid rgba(30,61,143,0.25)", borderRadius: "4px", color: "var(--text-secondary)", textDecoration: "none" }}
                 >
                   {city.name}
                 </Link>

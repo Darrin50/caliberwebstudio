@@ -11281,8 +11281,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   </ul>
 </div>
 
-<img src="/blog/hipaa-compliant-website-design-detroit-medical-practices-1.png" alt="Detroit physician reviewing medical practice website on laptop in a clinical office" style="width:100%;border-radius:12px;margin:32px 0;" />
-
 <h2>What HIPAA Actually Requires on Your Practice Website</h2>
 
 <p>Most Detroit physicians associate HIPAA compliance with their EHR, intake forms, and staff training. The website barely registers — until it becomes a problem.</p>

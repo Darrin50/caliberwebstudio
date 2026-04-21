@@ -11255,7 +11255,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 },
   {
     slug: "choose-botox-provider-detroit",
-    thumbnail: "/blog/choose-botox-provider-detroit-hero.jpg",
+    thumbnail: "/blog/choose-botox-provider-detroit-thumb.jpg",
     title: "How to Choose a Botox Provider in Metro Detroit: 7 Questions to Ask",
     description: "Choosing a Botox provider in Detroit? Ask these 7 questions before you book. Michigan law, credential checks, and what separates safe clinics from risky ones.",
     date: "2026-04-24",

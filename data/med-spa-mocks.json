@@ -97,8 +97,8 @@
       },
       {
         "before": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
-        "after": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=400&q=80",
-        "treatment": "HALO Laser Resurfacing"
+        "after": "/mocks/adorn-medical-spa/adorn-halo-bbl-before-after.jpg",
+        "treatment": "HALO Laser Resurfacing — Real Patient Result"
       },
       {
         "before": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
@@ -118,6 +118,10 @@
       {
         "url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80",
         "alt": "Aesthetic treatment in progress"
+      },
+      {
+        "url": "/mocks/adorn-medical-spa/adorn-client-testimonial-02.jpg",
+        "alt": "Happy client with NP Liz at Adorn Medical Spa"
       }
     ],
     "reviews": [
@@ -159,6 +163,6 @@
     "ctaLabel": "Book a Consultation",
     "financing": ["Cherry Financing", "CareCredit"],
     "createdAt": "2026-04-21",
-    "notionPageId": "placeholder-adorn-page-id"
+    "notionPageId": "349febcd5144811e99ccf651f3c17f82"
   }
 ]

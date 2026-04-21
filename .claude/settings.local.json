@@ -5,7 +5,16 @@
       "Bash(pnpm tsc:*)",
       "Bash(npx tsc:*)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(netstat -ano)"
+      "Bash(netstat -ano)",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\" ls-files \".claude/\")",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\" ls-files \".claude/worktrees/stoic-ptolemy-ab2bdd/\")",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\" ls-files \"recon/\")",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\" ls-files \".claude/worktrees/stupefied-robinson-545a90/\")",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\\\\.claude\\\\worktrees\\\\goofy-wu-bb4549\" log --oneline -5)",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\\\\.claude\\\\worktrees\\\\goofy-wu-bb4549\" diff HEAD main -- .env.local.example)",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\\\\.claude\\\\worktrees\\\\goofy-wu-bb4549\" ls-files \".env.local.example\")",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\\\\.claude\\\\worktrees\\\\goofy-wu-bb4549\" diff .claude/settings.local.json)",
+      "Bash(git -C \"C:\\\\Users\\\\singe\\\\OneDrive\\\\Desktop\\\\Website-Building\\\\caliberwebstudio\\\\.claude\\\\worktrees\\\\goofy-wu-bb4549\" add recon/detroit-medspas-2026-04-20/fusion-med-spa/sources.md .env.local.example _cleanup/ .claude/settings.local.json)"
     ]
   }
 }

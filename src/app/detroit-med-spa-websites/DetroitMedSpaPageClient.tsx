@@ -263,33 +263,27 @@ export default function DetroitMedSpaPageClient() {
             overflow: 'hidden',
           }}
         >
-          {/* Hero photo */}
-          <Image
-            src="/images/detroit-med-spa-websites-hero.jpg"
-            alt="Confident med spa owner in a modern Detroit aesthetic clinic"
-            fill
-            priority
-            style={{ objectFit: 'cover', objectPosition: 'center 20%', zIndex: 0 }}
-          />
-          {/* Dark overlay so text stays readable */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'rgba(0,0,0,0.62)',
-            zIndex: 1,
-          }} />
-          {/* Navy radial glow over the overlay */}
+          {/* Radial glow */}
           <div style={{
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 75% 65% at 50% 38%, rgba(0,118,182,0.18) 0%, rgba(0,118,182,0.05) 50%, transparent 75%)',
-            zIndex: 2,
+              'radial-gradient(ellipse 75% 65% at 50% 38%, rgba(0,118,182,0.22) 0%, rgba(0,118,182,0.07) 45%, transparent 72%)',
+            zIndex: 0,
+          }} />
+          {/* Subtle grid texture */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+            zIndex: 0,
           }} />
 
           <div style={{
             position: 'relative',
-            zIndex: 3,
+            zIndex: 1,
             textAlign: 'center',
             padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 60px)',
             maxWidth: '900px',
@@ -366,7 +360,7 @@ export default function DetroitMedSpaPageClient() {
           {/* Scroll chevron */}
           {heroVisible && (
             <div className="ms-chevron" style={{
-              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 3,
+              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 1,
             }}>
               <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
                 <path d="M2 2L12 11L22 2" stroke="rgba(208,216,224,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -411,65 +405,26 @@ export default function DetroitMedSpaPageClient() {
                 color: 'rgba(208,216,224,0.65)',
                 maxWidth: '520px',
               }}>
-                Adorn Medical Spa — Dearborn, Michigan. 615 Google reviews.
-                Live preview below, not a template.
+                The caliber of practice we build for. Adorn Medical Spa — Dearborn, Michigan.
+                615 Google reviews.
               </p>
             </div>
 
-            {/* Browser chrome + iframe */}
-            <div className="ms-reveal ms-browser-frame" style={{
-              background: '#1a1a1e',
+            {/* Case study image */}
+            <div className="ms-reveal" style={{
               borderRadius: '12px',
-              border: '1px solid rgba(255,255,255,0.1)',
               overflow: 'hidden',
+              border: '1px solid rgba(255,255,255,0.1)',
               boxShadow: '0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04)',
+              position: 'relative',
+              height: 'clamp(360px, 50vw, 600px)',
             }}>
-              {/* Chrome bar */}
-              <div style={{
-                height: '42px',
-                background: '#252528',
-                borderBottom: '1px solid rgba(255,255,255,0.07)',
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0 16px',
-                gap: '8px',
-                flexShrink: 0,
-              }}>
-                <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f57', display: 'block', flexShrink: 0 }} />
-                <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#febc2e', display: 'block', flexShrink: 0 }} />
-                <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#28c840', display: 'block', flexShrink: 0 }} />
-                <div style={{
-                  flex: 1,
-                  height: '26px',
-                  background: 'rgba(255,255,255,0.05)',
-                  borderRadius: '5px',
-                  margin: '0 12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  padding: '0 14px',
-                  overflow: 'hidden',
-                }}>
-                  <span style={{
-                    fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                    fontSize: '10px',
-                    color: 'rgba(208,216,224,0.38)',
-                    letterSpacing: '0.02em',
-                    whiteSpace: 'nowrap',
-                  }}>
-                    caliberwebstudio.com/mocks/adorn-medical-spa
-                  </span>
-                </div>
-              </div>
-
-              {/* iframe */}
-              <div style={{ height: 'clamp(400px, 55vw, 640px)', overflow: 'hidden', position: 'relative' }}>
-                <iframe
-                  src="/mocks/adorn-medical-spa"
-                  title="Adorn Medical Spa — Live Website Preview"
-                  style={{ width: '100%', height: '100%', border: 'none', pointerEvents: 'none' }}
-                  loading="lazy"
-                />
-              </div>
+              <Image
+                src="/images/detroit-med-spa-websites-hero.jpg"
+                alt="Premium Detroit med spa aesthetic clinic interior with professional provider"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+              />
             </div>
 
             {/* Credential + CTA row */}

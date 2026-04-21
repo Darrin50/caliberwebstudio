@@ -263,27 +263,43 @@ export default function DetroitMedSpaPageClient() {
             overflow: 'hidden',
           }}
         >
-          {/* Radial glow */}
+          {/* Looping background video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center center',
+              zIndex: 0,
+            }}
+            src="/videos/detroit-med-spa-hero.mp4"
+          />
+          {/* Dark overlay — makes video readable without washing out text */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'rgba(0,0,0,0.58)',
+            zIndex: 1,
+          }} />
+          {/* Blue radial glow behind text */}
           <div style={{
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 75% 65% at 50% 38%, rgba(0,118,182,0.22) 0%, rgba(0,118,182,0.07) 45%, transparent 72%)',
-            zIndex: 0,
-          }} />
-          {/* Subtle grid texture */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-            zIndex: 0,
+              'radial-gradient(ellipse 70% 55% at 50% 42%, rgba(0,118,182,0.18) 0%, transparent 70%)',
+            zIndex: 2,
           }} />
 
           <div style={{
             position: 'relative',
-            zIndex: 1,
+            zIndex: 3,
             textAlign: 'center',
             padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 60px)',
             maxWidth: '900px',

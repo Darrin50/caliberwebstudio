@@ -1,0 +1,14 @@
+choose-botox-provider-detroit-hero.jpg
+a Black woman in her early 40s seated across from a Black female nurse practitioner at a clean modern med spa consultation room in Detroit, the provider holds a tablet showing treatment options, warm professional lighting from overhead softbox, wide mid-shot framing with both women visible, natural skin texture, slight smile of a genuine conversation, contemporary clinic interior with neutral walls and medical-grade equipment in background, realistic photo style --raw --s 50 --c 5 --ar 16:9
+
+choose-botox-provider-detroit-lara.jpg
+close-up of a Black woman's hands holding a smartphone showing a government license lookup website, sitting at a white desk in a bright clean home office, soft diffused window light from the left, overhead flat-lay angle tilted slightly, the phone screen is clearly lit and readable, natural nail polish, no extra props, realistic photo style --raw --s 50 --c 0 --ar 3:2
+
+choose-botox-provider-detroit-before-after.jpg
+a Black female med spa provider in a white clinical coat holding a tablet toward a Black woman patient in her mid-30s, both looking at the screen together during a consultation, the tablet shows two side-by-side portrait photos in a before-and-after layout, warm professional lighting in a Detroit med spa treatment room, candid mid-shot framing at eye level, natural expressions of genuine discussion, clothing wrinkles, subtle under-eye detail, realistic photo style --raw --s 50 --c 5 --ar 3:2
+
+choose-botox-provider-detroit-consultation.jpg
+close-up of a Black female nurse practitioner's hands reviewing a printed patient chart and consent form on a clipboard at a clean clinical desk in a Detroit med spa, studio softbox lighting with soft shadow falloff, overhead slightly angled composition, medical pen in hand mid-signature, realistic paper texture and slight clipboard shadow, no patient visible, realistic photo style --raw --s 50 --c 0 --ar 3:2
+
+choose-botox-provider-detroit-compare.jpg
+two Black women in their 30s seated side by side at a modern Detroit med spa reception area, one holding a phone while both look at the screen comparing provider options, bright airy interior with soft neutral decor and frosted glass partition in background, soft overhead ambient light, candid waist-up framing, genuine expressions of focused consideration, authentic everyday clothing, one woman points at the screen, realistic photo style --raw --s 50 --c 5 --ar 16:9

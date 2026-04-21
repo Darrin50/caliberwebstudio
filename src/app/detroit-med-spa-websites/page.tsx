@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import DetroitMedSpaPageClient from './DetroitMedSpaPageClient';
 
 export const metadata: Metadata = {
-  title: 'Detroit Med Spa Website Design | Caliber Web Studio',
+  title: 'Detroit Med Spa Website Design',
   description:
     'Caliber Web Studio builds conversion-focused websites for Detroit med spas — custom-designed, Google-ranked, mobile-first, and built to book high-ticket clients. Free mockup in 48 hours.',
   alternates: {

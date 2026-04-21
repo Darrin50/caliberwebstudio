@@ -71,7 +71,7 @@
 
 ### GBP Data via Mindtrip.ai Aggregation
 **URL:** https://mindtrip.ai/attraction/dearborn-heights-michigan/fusion-med-spa/at-JLQmO3nP
-**Method:** Firecrawl API (fc-1f18907d65f24b55ae689ea1f2931e90)
+**Method:** Firecrawl API (key rotated 2026-04-20 — use env var FIRECRAWL_API_KEY)
 **Date:** 2026-04-20
 
 **Raw excerpt:**

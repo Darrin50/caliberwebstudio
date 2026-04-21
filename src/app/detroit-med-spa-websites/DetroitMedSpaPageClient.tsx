@@ -263,38 +263,13 @@ export default function DetroitMedSpaPageClient() {
             overflow: 'hidden',
           }}
         >
-          {/* Looping background video */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center center',
-              zIndex: 0,
-            }}
-            src="/videos/detroit-med-spa-hero.mp4"
-          />
-          {/* Dark overlay — lightened so video shows through clearly */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'rgba(0,0,0,0.42)',
-            zIndex: 1,
-          }} />
-          {/* Bottom gradient — anchors text legibility at the top without full blackout */}
+          {/* Gradient background */}
           <div style={{
             position: 'absolute',
             inset: 0,
             background:
-              'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 100%)',
-            zIndex: 2,
+              'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(0,118,182,0.22) 0%, rgba(0,118,182,0.06) 45%, transparent 70%), #000000',
+            zIndex: 0,
           }} />
           {/* Blue radial glow behind text */}
           <div style={{
@@ -302,12 +277,12 @@ export default function DetroitMedSpaPageClient() {
             inset: 0,
             background:
               'radial-gradient(ellipse 70% 55% at 50% 42%, rgba(0,118,182,0.14) 0%, transparent 70%)',
-            zIndex: 3,
+            zIndex: 1,
           }} />
 
           <div style={{
             position: 'relative',
-            zIndex: 4,
+            zIndex: 2,
             textAlign: 'center',
             padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 60px)',
             maxWidth: '900px',
@@ -336,11 +311,10 @@ export default function DetroitMedSpaPageClient() {
                 color: '#ffffff',
                 marginBottom: '24px',
                 animationDelay: '120ms',
-                textShadow: '0 2px 24px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.8)',
               }}
             >
               Detroit Med Spa Websites<br />
-              <span style={{ color: '#4DB8FF' }}>That Actually Convert.</span>
+              <span style={{ color: '#0076B6' }}>That Actually Convert.</span>
             </h1>
 
             {/* Sub */}
@@ -350,11 +324,10 @@ export default function DetroitMedSpaPageClient() {
                 fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                 fontSize: 'clamp(0.95rem, 1.6vw, 1.15rem)',
                 lineHeight: 1.65,
-                color: '#ffffff',
+                color: 'rgba(208,216,224,0.82)',
                 maxWidth: '580px',
                 margin: '0 auto 40px',
                 animationDelay: '240ms',
-                textShadow: '0 1px 12px rgba(0,0,0,0.7)',
               }}
             >
               Caliber Web Studio builds high-performance, custom websites for Detroit-area
@@ -386,7 +359,7 @@ export default function DetroitMedSpaPageClient() {
           {/* Scroll chevron */}
           {heroVisible && (
             <div className="ms-chevron" style={{
-              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 4,
+              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 2,
             }}>
               <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
                 <path d="M2 2L12 11L22 2" stroke="rgba(208,216,224,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -394,6 +367,48 @@ export default function DetroitMedSpaPageClient() {
             </div>
           )}
         </section>
+
+        {/* ══════════════════════════════════════════════════════
+            TRUST BAR
+        ══════════════════════════════════════════════════════ */}
+        <div
+          data-force-dark
+          style={{
+            background: '#0076B6',
+            padding: '18px clamp(20px, 6vw, 60px)',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'clamp(20px, 4vw, 52px)',
+          }}
+        >
+          {[
+            { num: '$0', label: 'Down to start' },
+            { num: '48hr', label: 'Free mockup turnaround' },
+            { num: '100%', label: 'Custom — no templates' },
+            { num: 'Detroit', label: 'Local studio' },
+          ].map((item) => (
+            <div key={item.label} style={{ textAlign: 'center' }}>
+              <div style={{
+                fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+                fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
+                fontWeight: 800,
+                color: '#ffffff',
+                lineHeight: 1,
+                letterSpacing: '-0.02em',
+              }}>{item.num}</div>
+              <div style={{
+                fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                fontSize: '9px',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.75)',
+                marginTop: '4px',
+              }}>{item.label}</div>
+            </div>
+          ))}
+        </div>
 
         {/* ══════════════════════════════════════════════════════
             VISUAL SHOWCASE

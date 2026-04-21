@@ -370,105 +370,94 @@ export default function DetroitMedSpaPageClient() {
         </section>
 
         {/* ══════════════════════════════════════════════════════
-            CASE STUDY — ADORN
+            VISUAL SHOWCASE
         ══════════════════════════════════════════════════════ */}
         <section
           id="case-study"
+          data-force-dark
           style={{
-            background: 'var(--bg2, #111114)',
+            background: '#111114',
             padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
             borderTop: '1px solid rgba(255,255,255,0.06)',
           }}
         >
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-
-            <div className="ms-reveal" style={{ marginBottom: 'clamp(32px, 4vw, 52px)' }}>
-              <div style={eyebrowStyle}>
-                {eyebrowLine}
-                Live Client Preview
-              </div>
-              <h2 style={{
-                fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                fontSize: 'clamp(1.9rem, 4vw, 3rem)',
-                fontWeight: 800,
-                lineHeight: 1.05,
-                letterSpacing: '-0.03em',
-                color: '#F4F6F8',
-                marginBottom: '16px',
-              }}>
-                Built for a Real Detroit Med Spa
-              </h2>
-              <p style={{
-                fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)',
-                lineHeight: 1.7,
-                color: 'rgba(208,216,224,0.65)',
-                maxWidth: '520px',
-              }}>
-                The caliber of practice we build for. Adorn Medical Spa — Dearborn, Michigan.
-                615 Google reviews.
-              </p>
-            </div>
-
-            {/* Case study image */}
-            <div className="ms-reveal" style={{
-              borderRadius: '12px',
-              overflow: 'hidden',
-              border: '1px solid rgba(255,255,255,0.1)',
-              boxShadow: '0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04)',
-              position: 'relative',
-              height: 'clamp(360px, 50vw, 600px)',
-            }}>
-              <Image
-                src="/images/detroit-med-spa-websites-hero.jpg"
-                alt="Premium Detroit med spa aesthetic clinic interior with professional provider"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
-              />
-            </div>
-
-            {/* Credential + CTA row */}
             <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',
+              gap: 'clamp(48px, 7vw, 80px)',
               alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '20px',
-              marginTop: '28px',
-              padding: '24px 28px',
-              background: 'rgba(255,255,255,0.03)',
-              borderRadius: '10px',
-              border: '1px solid rgba(255,255,255,0.07)',
             }}>
-              <div>
-                <p style={{
-                  fontFamily: "var(--font-syne, 'Syne', sans-serif)",
-                  fontSize: '14px',
-                  fontWeight: 700,
+
+              {/* Left: text */}
+              <div className="ms-reveal">
+                <div style={eyebrowStyle}>
+                  {eyebrowLine}
+                  The Standard
+                </div>
+                <h2 style={{
+                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                  fontSize: 'clamp(1.9rem, 4vw, 3rem)',
+                  fontWeight: 800,
+                  lineHeight: 1.05,
+                  letterSpacing: '-0.03em',
                   color: '#F4F6F8',
-                  margin: 0,
+                  marginBottom: '20px',
                 }}>
-                  Adorn Medical Spa — Dearborn, MI
-                </p>
+                  Detroit&#39;s Best Med Spas<br />
+                  <span style={{ color: '#0076B6' }}>Deserve Better Websites.</span>
+                </h2>
                 <p style={{
                   fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                  fontSize: '13px',
-                  color: 'rgba(208,216,224,0.5)',
-                  margin: '4px 0 0',
+                  fontSize: 'clamp(0.95rem, 1.5vw, 1.05rem)',
+                  lineHeight: 1.75,
+                  color: 'rgba(208,216,224,0.68)',
+                  marginBottom: '32px',
                 }}>
-                  615 Google reviews · HALO by Sciton laser results · Provider-led practice
+                  We build for practices that take their image seriously — providers
+                  who invest in their craft and know their website should reflect it.
+                  Custom-built, not templated. Premium from the first pixel.
                 </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <a href="/contact" className="ms-btn-primary" style={{ alignSelf: 'flex-start' }}>
+                    See Your Free Mockup →
+                  </a>
+                  <a
+                    href="https://www.caliberwebstudio.com/mocks/adorn-medical-spa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                      fontSize: '10px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(0,118,182,0.65)',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    ↗ View a live Detroit med spa demo
+                  </a>
+                </div>
               </div>
-              <a
-                href="https://www.caliberwebstudio.com/mocks/adorn-medical-spa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ms-btn-outline"
-              >
-                View Live Site ↗
-              </a>
-            </div>
 
+              {/* Right: image */}
+              <div className="ms-reveal" style={{
+                position: 'relative',
+                height: 'clamp(380px, 48vw, 580px)',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                border: '1px solid rgba(255,255,255,0.08)',
+                boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+              }}>
+                <Image
+                  src="/images/detroit-med-spa-websites-hero.jpg"
+                  alt="Confident Detroit med spa owner in a modern aesthetic clinic"
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+                />
+              </div>
+
+            </div>
           </div>
         </section>
 

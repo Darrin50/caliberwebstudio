@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "adorn-medical-spa",
+    "businessName": "Adorn Medical Spa",
+    "location": "Dearborn, MI",
+    "phone": "(313) 582-3376",
+    "email": "info@adornmedspa.com",
+    "website": "https://adornmedspa.com",
+    "socials": {
+      "ig": "https://www.instagram.com/adornmedspa/",
+      "fb": "https://www.facebook.com/adornmedspa"
+    },
+    "announceBar": "Now accepting new clients · Book your complimentary consultation today · <span>Morpheus8 & HALO packages available</span>",
+    "heroHeadline": "Medical Aesthetics for Dearborn Women Who Want to *Look Their Best*",
+    "heroSub": "Botox · Morpheus8 · HALO Laser · IV Therapy · Medical Weight Loss — Under Physician Direction in Dearborn, MI",
+    "heroImg": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1600&q=80",
+    "tagline": "Elite medical aesthetics under physician direction. Serving Dearborn, Dearborn Heights, Southfield, and Metro Detroit.",
+    "about": "Adorn Medical Spa is an elite aesthetic medical practice co-founded by Dr. Fouad Dakhlallah and Nurse Practitioner Liz Karaali. With a shared belief that every patient deserves medical-grade care in a welcoming atmosphere, Adorn brings together the precision of medicine and the artistry of aesthetics. Serving Dearborn and the greater Metro Detroit community since our founding, we specialize in premium treatments using the most advanced FDA-cleared technology available — HALO Laser by Sciton, Morpheus8 RF microneedling, invisa-RED weight loss therapy, and more. Our practice is built on trust: every treatment is personalized, every result is earned.",
+    "aboutImg": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80",
+    "providers": [
+      {
+        "name": "Dr. Fouad Dakhlallah",
+        "title": "Medical Director & Co-Founder",
+        "credentials": "MD · Board-Certified Physician · Medical Director",
+        "bio": "Dr. Dakhlallah brings extensive medical expertise to Adorn as our Medical Director and Co-Founder. His commitment to patient safety and evidence-based treatments ensures that every procedure at Adorn meets the highest standard of care.",
+        "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80"
+      },
+      {
+        "name": "Liz Karaali",
+        "title": "Co-Founder & Lead Injector",
+        "credentials": "NP · Nurse Practitioner · Certified Aesthetic Injector",
+        "bio": "NP Liz Karaali is a skilled aesthetic injector and co-founder of Adorn. With an eye for natural, elegant results, Liz specializes in injectables, skincare, and comprehensive treatment planning — ensuring each patient leaves feeling their most confident.",
+        "photo": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80"
+      }
+    ],
+    "services": [
+      {
+        "name": "Botox & Dysport",
+        "description": "Smooth fine lines and dynamic wrinkles with precision neurotoxin injections. Natural results that refresh without freezing.",
+        "price": "From $12/unit",
+        "category": "Injectables"
+      },
+      {
+        "name": "Dermal Fillers",
+        "description": "Restore volume, define contours, and soften deep lines with hyaluronic acid fillers tailored to your anatomy.",
+        "price": "From $650/syringe",
+        "category": "Injectables"
+      },
+      {
+        "name": "Morpheus8 RF Microneedling",
+        "description": "Fractional radiofrequency microneedling that remodels collagen deep in the dermis — tighter skin, refined texture, lifted contours.",
+        "price": "From $1,200/session",
+        "category": "Laser & Energy"
+      },
+      {
+        "name": "HALO Laser by Sciton",
+        "description": "The world's first hybrid fractional laser. Addresses pigmentation, fine lines, texture, and tone in a single treatment session.",
+        "price": "From $1,400/session",
+        "category": "Laser & Energy"
+      },
+      {
+        "name": "Clarity II Laser Hair Removal",
+        "description": "Fast, effective permanent hair reduction for all skin types. Safe for face, body, and sensitive areas.",
+        "price": "From $150/session",
+        "category": "Laser & Energy"
+      },
+      {
+        "name": "invisa-RED Medical Weight Loss",
+        "description": "FDA-cleared laser technology that targets fat cells and boosts metabolism — a clinical, non-surgical path to sustainable weight loss.",
+        "price": "Package pricing",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "IV Infusion Therapy",
+        "description": "Custom IV drips for hydration, energy, immunity, and recovery. Formulated by our medical team and administered on-site.",
+        "price": "From $175/session",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "Medical-Grade Facials",
+        "description": "Customized clinical facials combining chemical exfoliation, extractions, and active ingredients for real, visible skin improvement.",
+        "price": "From $120",
+        "category": "Skin Care"
+      },
+      {
+        "name": "Rosacea Treatment",
+        "description": "Targeted laser and topical protocols to reduce redness, calm flare-ups, and improve the appearance of rosacea long-term.",
+        "price": "Consult required",
+        "category": "Skin Care"
+      }
+    ],
+    "beforeAfterGallery": [
+      {
+        "before": "https://images.unsplash.com/photo-1614859324967-bdf413c36049?w=400&q=80",
+        "after": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80",
+        "treatment": "Morpheus8 RF Microneedling"
+      },
+      {
+        "before": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+        "after": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=400&q=80",
+        "treatment": "HALO Laser Resurfacing"
+      },
+      {
+        "before": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
+        "after": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80",
+        "treatment": "Botox & Filler — Natural Refresh"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80",
+        "alt": "Adorn Medical Spa treatment room"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",
+        "alt": "Luxury spa reception area"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80",
+        "alt": "Aesthetic treatment in progress"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Samantha R.",
+        "stars": 5,
+        "text": "I've been coming to Adorn for two years. Dr. Dakhlallah is meticulous and takes his time explaining everything. My Morpheus8 results were honestly shocking — in the best way. My skin looks 10 years younger.",
+        "treatment": "Morpheus8 RF Microneedling"
+      },
+      {
+        "name": "Nadia K.",
+        "stars": 5,
+        "text": "Liz is an artist with filler. I was nervous about looking overdone — she listened to exactly what I wanted and the result looks completely natural. My family didn't even realize I'd had anything done.",
+        "treatment": "Dermal Fillers"
+      },
+      {
+        "name": "Fatima A.",
+        "stars": 5,
+        "text": "The HALO laser cleared up sun damage I've had for years. The team is professional, the space is beautiful, and they make you feel like a priority from the moment you walk in. I won't go anywhere else.",
+        "treatment": "HALO Laser by Sciton"
+      }
+    ],
+    "stats": [
+      { "num": "MD", "label": "Medical Director On-Site" },
+      { "num": "4.9★", "label": "Google Rating" },
+      { "num": "FDA", "label": "Cleared Technology" },
+      { "num": "1,000+", "label": "Happy Patients" }
+    ],
+    "hours": [
+      { "day": "Monday", "hours": "10:00 AM – 6:00 PM" },
+      { "day": "Tuesday", "hours": "10:00 AM – 6:00 PM" },
+      { "day": "Wednesday", "hours": "10:00 AM – 7:00 PM" },
+      { "day": "Thursday", "hours": "10:00 AM – 7:00 PM" },
+      { "day": "Friday", "hours": "9:00 AM – 5:00 PM" },
+      { "day": "Saturday", "hours": "9:00 AM – 3:00 PM" },
+      { "day": "Sunday", "hours": "Closed" }
+    ],
+    "bookingUrl": "https://adornmedspa.com/book",
+    "ctaLabel": "Book a Consultation",
+    "financing": ["Cherry Financing", "CareCredit"],
+    "createdAt": "2026-04-21",
+    "notionPageId": "placeholder-adorn-page-id"
+  }
+]

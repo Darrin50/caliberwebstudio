@@ -399,7 +399,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: 'var(--white, #F4F6F8)',
+                color: '#F4F6F8',
                 marginBottom: '16px',
               }}>
                 Built for a Real Detroit Med Spa
@@ -490,7 +490,7 @@ export default function DetroitMedSpaPageClient() {
                   fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                   fontSize: '14px',
                   fontWeight: 700,
-                  color: 'var(--white, #F4F6F8)',
+                  color: '#F4F6F8',
                   margin: 0,
                 }}>
                   Adorn Medical Spa — Dearborn, MI
@@ -538,7 +538,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: 'var(--white, #F4F6F8)',
+                color: '#F4F6F8',
                 maxWidth: '600px',
               }}>
                 Why Most Detroit Med Spa Websites<br />
@@ -573,7 +573,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                     fontSize: 'clamp(1rem, 1.5vw, 1.15rem)',
                     fontWeight: 700,
-                    color: 'var(--white, #F4F6F8)',
+                    color: '#F4F6F8',
                     marginBottom: '10px',
                   }}>
                     {p.title}
@@ -625,7 +625,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: 'var(--white, #F4F6F8)',
+                color: '#F4F6F8',
               }}>
                 Four Steps From<br />
                 <span style={{ color: '#0076B6' }}>Signed to Launched</span>
@@ -674,7 +674,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                     fontSize: 'clamp(1.1rem, 1.6vw, 1.25rem)',
                     fontWeight: 700,
-                    color: 'var(--white, #F4F6F8)',
+                    color: '#F4F6F8',
                     marginBottom: '12px',
                   }}>
                     {step.title}
@@ -717,7 +717,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: 'var(--white, #F4F6F8)',
+                color: '#F4F6F8',
               }}>
                 Data That Drives<br />
                 <span style={{ color: '#0076B6' }}>Our Decisions</span>
@@ -795,7 +795,7 @@ export default function DetroitMedSpaPageClient() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
-                color: 'var(--white, #F4F6F8)',
+                color: '#F4F6F8',
                 marginBottom: '16px',
               }}>
                 Simple Pricing.<br />
@@ -872,7 +872,7 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                     fontSize: '20px',
                     fontWeight: 800,
-                    color: 'var(--white, #F4F6F8)',
+                    color: '#F4F6F8',
                     marginBottom: '8px',
                   }}>
                     {plan.name}
@@ -962,7 +962,7 @@ export default function DetroitMedSpaPageClient() {
                   fontWeight: 800,
                   lineHeight: 1.05,
                   letterSpacing: '-0.03em',
-                  color: 'var(--white, #F4F6F8)',
+                  color: '#F4F6F8',
                   marginBottom: '20px',
                 }}>
                   Based in Detroit.<br />
@@ -1041,7 +1041,7 @@ export default function DetroitMedSpaPageClient() {
                   fontWeight: 800,
                   lineHeight: 1.1,
                   letterSpacing: '-0.02em',
-                  color: 'var(--white, #F4F6F8)',
+                  color: '#F4F6F8',
                   marginBottom: '28px',
                 }}>
                   More on Detroit<br />Med Spa Websites

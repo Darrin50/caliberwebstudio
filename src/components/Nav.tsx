@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
@@ -225,7 +224,18 @@ export default function Nav() {
     <>
       <nav className="site-nav" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 clamp(16px, 4vw, 40px)', height: '72px', background: 'var(--nav-bg)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent', transition: 'background 0.4s ease, border-color 0.4s ease' }}>
         <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
-          <Image src="/logo-mark-nav.png" alt="Caliber Web Studio" width={36} height={36} style={{ objectFit: 'contain', animation: 'logo-breathe 3s ease-in-out infinite' }} priority />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width={36} height={36} style={{ flexShrink: 0, animation: 'logo-breathe 3s ease-in-out infinite' }} aria-hidden="true">
+            <defs>
+              <linearGradient id="cws-nav-g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#2563eb"/>
+                <stop offset="100%" stopColor="#0d9488"/>
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="12" fill="#0a0e1a"/>
+            <text x="50%" y="52%" textAnchor="middle" dominantBaseline="middle"
+                  fontFamily="Syne, serif" fontSize="32" fontWeight="800"
+                  fill="url(#cws-nav-g)">C</text>
+          </svg>
           <span className="nav-logo-text" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: '14px', letterSpacing: '0.08em', textTransform: 'uppercase', background: 'linear-gradient(135deg, var(--chrome), var(--white), var(--chrome))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Caliber Web Studio</span>
         </Link>
 

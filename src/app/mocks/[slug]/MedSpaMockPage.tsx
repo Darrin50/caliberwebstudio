@@ -236,9 +236,7 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
 
       {/* Announce bar */}
       {config.announceBar && (
-        <div className="announce">
-          {config.announceBar}
-        </div>
+        <div className="announce" dangerouslySetInnerHTML={{ __html: config.announceBar }} />
       )}
 
       {/* Nav */}

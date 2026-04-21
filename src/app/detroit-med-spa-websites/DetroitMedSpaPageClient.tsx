@@ -443,17 +443,18 @@ export default function DetroitMedSpaPageClient() {
               {/* Right: image */}
               <div className="ms-reveal" style={{
                 position: 'relative',
-                height: 'clamp(380px, 48vw, 580px)',
+                aspectRatio: '3/4',
                 borderRadius: '12px',
                 overflow: 'hidden',
                 border: '1px solid rgba(255,255,255,0.08)',
                 boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+                background: '#0a0a0b',
               }}>
                 <Image
                   src="/images/detroit-med-spa-websites-hero.jpg"
                   alt="Confident Detroit med spa owner in a modern aesthetic clinic"
                   fill
-                  style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+                  style={{ objectFit: 'contain', objectPosition: 'center center' }}
                 />
               </div>
 

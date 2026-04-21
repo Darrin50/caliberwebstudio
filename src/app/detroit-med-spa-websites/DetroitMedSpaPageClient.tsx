@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -262,27 +263,33 @@ export default function DetroitMedSpaPageClient() {
             overflow: 'hidden',
           }}
         >
-          {/* Radial glow */}
+          {/* Hero photo */}
+          <Image
+            src="/images/detroit-med-spa-websites-hero.jpg"
+            alt="Confident med spa owner in a modern Detroit aesthetic clinic"
+            fill
+            priority
+            style={{ objectFit: 'cover', objectPosition: 'center 20%', zIndex: 0 }}
+          />
+          {/* Dark overlay so text stays readable */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'rgba(0,0,0,0.62)',
+            zIndex: 1,
+          }} />
+          {/* Navy radial glow over the overlay */}
           <div style={{
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 75% 65% at 50% 38%, rgba(0,118,182,0.22) 0%, rgba(0,118,182,0.07) 45%, transparent 72%)',
-            zIndex: 0,
-          }} />
-          {/* subtle grid texture */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-            zIndex: 0,
+              'radial-gradient(ellipse 75% 65% at 50% 38%, rgba(0,118,182,0.18) 0%, rgba(0,118,182,0.05) 50%, transparent 75%)',
+            zIndex: 2,
           }} />
 
           <div style={{
             position: 'relative',
-            zIndex: 1,
+            zIndex: 3,
             textAlign: 'center',
             padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 60px)',
             maxWidth: '900px',
@@ -359,7 +366,7 @@ export default function DetroitMedSpaPageClient() {
           {/* Scroll chevron */}
           {heroVisible && (
             <div className="ms-chevron" style={{
-              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)',
+              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 3,
             }}>
               <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
                 <path d="M2 2L12 11L22 2" stroke="rgba(208,216,224,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

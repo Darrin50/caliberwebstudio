@@ -218,13 +218,24 @@ export default function DetroitMedSpaPageClient() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('ms-visible');
+            observer.unobserve(entry.target);
           }
         });
       },
-      { rootMargin: '0px 0px -60px 0px', threshold: 0.08 }
+      { rootMargin: '0px 0px -50px 0px', threshold: 0.06 }
     );
 
-    document.querySelectorAll('.ms-reveal').forEach((el) => observer.observe(el));
+    // Observe all reveal variants
+    document.querySelectorAll(
+      '.ms-reveal, .ms-reveal-left, .ms-reveal-right, .ms-reveal-scale'
+    ).forEach((el) => observer.observe(el));
+
+    // Stagger delay for grid children — set CSS --i on each sibling
+    document.querySelectorAll('.ms-stagger').forEach((grid) => {
+      Array.from(grid.children).forEach((child, i) => {
+        (child as HTMLElement).style.setProperty('--i', String(i));
+      });
+    });
 
     return () => {
       clearTimeout(t);
@@ -370,7 +381,7 @@ export default function DetroitMedSpaPageClient() {
                 animationDelay: '360ms',
               }}
             >
-              <a href="/contact" className="ms-btn-primary">
+              <a href="/contact" className="ms-btn-primary ms-float">
                 See Your Free Custom Mock →
               </a>
               <a href="#case-study" className="ms-btn-secondary">
@@ -411,8 +422,8 @@ export default function DetroitMedSpaPageClient() {
             { num: '48hr', label: 'Free mockup turnaround' },
             { num: '100%', label: 'Custom — no templates' },
             { num: 'Detroit', label: 'Local studio' },
-          ].map((item) => (
-            <div key={item.label} style={{ textAlign: 'center' }}>
+          ].map((item, i) => (
+            <div key={item.label} className="ms-trust-item" style={{ textAlign: 'center', '--i': i } as React.CSSProperties}>
               <div style={{
                 fontFamily: "var(--font-syne, 'Syne', sans-serif)",
                 fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
@@ -462,7 +473,7 @@ export default function DetroitMedSpaPageClient() {
               </h2>
             </div>
 
-            <div style={{
+            <div className="ms-stagger" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))',
               gap: '20px',
@@ -645,7 +656,7 @@ export default function DetroitMedSpaPageClient() {
               </h2>
             </div>
 
-            <div style={{
+            <div className="ms-stagger" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 260px), 1fr))',
               gap: '20px',
@@ -737,14 +748,14 @@ export default function DetroitMedSpaPageClient() {
               </h2>
             </div>
 
-            <div style={{
+            <div className="ms-stagger" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 230px), 1fr))',
               gap: '20px',
             }}>
               {STATS.map((s, i) => (
                 <div key={i} className="ms-reveal ms-stat-card">
-                  <div style={{
+                  <div className="ms-stat-num" style={{
                     fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
                     fontSize: 'clamp(2.2rem, 4vw, 3rem)',
                     fontWeight: 800,
@@ -752,7 +763,8 @@ export default function DetroitMedSpaPageClient() {
                     lineHeight: 1,
                     marginBottom: '12px',
                     letterSpacing: '-0.02em',
-                  }}>
+                    '--i': i,
+                  } as React.CSSProperties}>
                     {s.number}
                   </div>
                   <p style={{
@@ -827,7 +839,7 @@ export default function DetroitMedSpaPageClient() {
               </p>
             </div>
 
-            <div style={{
+            <div className="ms-stagger" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
               gap: '20px',
@@ -964,7 +976,7 @@ export default function DetroitMedSpaPageClient() {
             }}>
 
               {/* Left: trust + areas */}
-              <div className="ms-reveal">
+              <div className="ms-reveal ms-reveal-left">
                 <div style={eyebrowStyle}>
                   {eyebrowLine}
                   Detroit-Built
@@ -1043,7 +1055,7 @@ export default function DetroitMedSpaPageClient() {
               </div>
 
               {/* Right: blog links */}
-              <div className="ms-reveal">
+              <div className="ms-reveal ms-reveal-right">
                 <div style={eyebrowStyle}>
                   {eyebrowLine}
                   From the Blog
@@ -1191,37 +1203,129 @@ export default function DetroitMedSpaPageClient() {
       <Footer />
 
       <style>{`
-        /* ── Hero animation ────────────────────────────────── */
+        /* ═══════════════════════════════════════════════════
+           KEYFRAMES
+        ═══════════════════════════════════════════════════ */
+
+        @keyframes ms-rise {
+          from { opacity: 0; transform: translateY(38px); }
+          to   { opacity: 1; transform: translateY(0);    }
+        }
+        @keyframes ms-slide-left {
+          from { opacity: 0; transform: translateX(-44px); }
+          to   { opacity: 1; transform: translateX(0);     }
+        }
+        @keyframes ms-slide-right {
+          from { opacity: 0; transform: translateX(44px); }
+          to   { opacity: 1; transform: translateX(0);    }
+        }
+        @keyframes ms-scale-in {
+          from { opacity: 0; transform: scale(0.93); }
+          to   { opacity: 1; transform: scale(1);    }
+        }
+        @keyframes ms-float {
+          0%, 100% { transform: translateY(0px);  }
+          50%       { transform: translateY(-7px); }
+        }
+        @keyframes ms-bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0);  opacity: 0.35; }
+          50%       { transform: translateX(-50%) translateY(8px); opacity: 0.75; }
+        }
+        @keyframes ms-glow-pulse {
+          0%, 100% { text-shadow: none; }
+          50%       { text-shadow: 0 0 24px rgba(0,118,182,0.55), 0 0 48px rgba(0,118,182,0.2); }
+        }
+        @keyframes ms-trust-in {
+          from { opacity: 0; transform: translateY(14px); }
+          to   { opacity: 1; transform: translateY(0);    }
+        }
+        @keyframes ms-hero-bg-drift {
+          0%   { background-position: 40% 50%; }
+          50%  { background-position: 60% 45%; }
+          100% { background-position: 40% 50%; }
+        }
+        @keyframes ms-accent-bar {
+          from { transform: scaleX(0); transform-origin: left; }
+          to   { transform: scaleX(1); transform-origin: left; }
+        }
+
+        /* ═══════════════════════════════════════════════════
+           HERO ANIMATION
+        ═══════════════════════════════════════════════════ */
         .ms-hero-item {
           opacity: 0;
           transform: translateY(70px);
         }
         .ms-hero-in {
-          animation: ms-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-        @keyframes ms-rise {
-          to { opacity: 1; transform: translateY(0); }
+          animation: ms-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
-        /* ── Scroll reveal ─────────────────────────────────── */
+        /* ═══════════════════════════════════════════════════
+           SCROLL REVEAL — base (fade up)
+        ═══════════════════════════════════════════════════ */
         .ms-reveal {
           opacity: 0;
-          transform: translateY(36px);
-          transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-                      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+          transform: translateY(38px);
         }
-        .ms-visible {
-          opacity: 1;
-          transform: translateY(0);
+        .ms-reveal.ms-visible {
+          animation: ms-rise 0.72s cubic-bezier(0.22, 1, 0.36, 1)
+                     calc(var(--i, 0) * 90ms) both;
         }
 
-        /* ── Chevron bounce ────────────────────────────────── */
+        /* Slide from left */
+        .ms-reveal-left {
+          opacity: 0;
+          transform: translateX(-44px);
+        }
+        .ms-reveal-left.ms-visible {
+          animation: ms-slide-left 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        /* Slide from right */
+        .ms-reveal-right {
+          opacity: 0;
+          transform: translateX(44px);
+        }
+        .ms-reveal-right.ms-visible {
+          animation: ms-slide-right 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        /* Scale in */
+        .ms-reveal-scale {
+          opacity: 0;
+          transform: scale(0.93);
+        }
+        .ms-reveal-scale.ms-visible {
+          animation: ms-scale-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           CONTINUOUS MOTION
+        ═══════════════════════════════════════════════════ */
+
+        /* Floating CTA */
+        .ms-float {
+          animation: ms-float 3.2s ease-in-out infinite;
+        }
+        .ms-float:hover {
+          animation-play-state: paused;
+        }
+
+        /* Chevron bounce */
         .ms-chevron {
           animation: ms-bounce 2s ease-in-out infinite;
         }
-        @keyframes ms-bounce {
-          0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.35; }
-          50%       { transform: translateX(-50%) translateY(8px); opacity: 0.75; }
+
+        /* Stat number glow pulse — staggered per card */
+        .ms-stat-num {
+          animation: ms-glow-pulse 3.5s ease-in-out infinite;
+          animation-delay: calc(var(--i, 0) * 0.6s + 1s);
+        }
+
+        /* Trust bar items stagger in */
+        .ms-trust-item {
+          animation: ms-trust-in 0.55s cubic-bezier(0.22, 1, 0.36, 1)
+                     calc(var(--i, 0) * 110ms + 150ms) both;
         }
 
         /* ── Buttons ───────────────────────────────────────── */

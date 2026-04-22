@@ -617,7 +617,7 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
             </p>
           </div>
           <div className="provider-grid">
-            {config.providers.map((p) => (
+            {config.providers.filter((p) => p !== leadProvider).map((p) => (
               <div key={p.name} className="provider-card">
                 {p.photo ? (
                   <img

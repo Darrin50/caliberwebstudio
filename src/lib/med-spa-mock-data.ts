@@ -45,6 +45,7 @@ export interface MedSpaMockConfig {
   stats: { num: string; label: string }[]
   hours?: { day: string; hours: string }[]
   bookingUrl?: string
+  bookingSystem?: 'Boulevard' | 'Vagaro' | 'Acuity' | 'Jane' | 'Mindbody' | 'placeholder'
   ctaLabel?: string
   financing?: string[]
   createdAt: string

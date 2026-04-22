@@ -327,18 +327,18 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
         </div>
       </section>
 
-      {/* Before / After */}
-      <section id="results" className="sec sec-cream">
-        <div className="con">
-          <div className="shdr">
-            <div className="slbl">Real Results</div>
-            <h2 className="stitle">Before &amp; After</h2>
-            <div className="dvdr" />
-            <p className="ssub">
-              Every result shown is from a real patient treated at {config.businessName}. Individual results vary.
-            </p>
-          </div>
-          {hasBeforeAfter ? (
+      {/* Before / After — only renders when real B/A photos are present; no fallback */}
+      {hasBeforeAfter && (
+        <section id="results" className="sec sec-cream">
+          <div className="con">
+            <div className="shdr">
+              <div className="slbl">Real Results</div>
+              <h2 className="stitle">Before &amp; After</h2>
+              <div className="dvdr" />
+              <p className="ssub">
+                Every result shown is from a real patient treated at {config.businessName}. Individual results vary.
+              </p>
+            </div>
             <div className="ba-grid">
               {config.beforeAfterGallery.map((pair, i) => (
                 <div key={i} className="ba-item">
@@ -374,23 +374,9 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
                 </div>
               ))}
             </div>
-          ) : (
-            <div style={{
-              background: CREAM3,
-              padding: '48px 32px',
-              textAlign: 'center',
-              border: `1px solid ${CREAM3}`,
-            }}>
-              <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 13, color: MUTED, lineHeight: 1.7 }}>
-                Before &amp; after photos will appear here. Contact us to see real patient results.
-              </p>
-              <a href={bookingHref} className="btn-p" style={{ marginTop: 20, display: 'inline-block' }}>
-                Request a Consultation
-              </a>
-            </div>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* Additional gallery */}
       {hasGallery && (

@@ -42,6 +42,13 @@ const PROBLEMS = [
     sourceLabel: 'CWS Practice Audits',
     sourceHref: '/blog/detroit-med-spa-website-design-high-ticket',
   },
+  {
+    num: '06',
+    title: 'No Local SEO Strategy',
+    desc: "Ranking for 'Botox Detroit' or 'lip filler Bloomfield Hills' doesn't happen by accident. Without geo-targeted pages and schema markup, your practice is invisible to the clients searching right now.",
+    sourceLabel: 'CWS SEO Audit',
+    sourceHref: '/blog/detroit-med-spa-website-design-high-ticket',
+  },
 ];
 
 const PROCESS = [
@@ -540,12 +547,12 @@ export default function DetroitMedSpaPageClient() {
                 style={{ objectFit: 'cover', objectPosition: 'left center' }}
                 priority
               />
-              {/* Right-side gradient — darkens only the right 55% for text legibility */}
+              {/* Right-side gradient — solid dark panel behind text, transparent left */}
               <div style={{
                 position: 'absolute',
                 inset: 0,
                 background:
-                  'linear-gradient(to left, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.72) 40%, rgba(0,0,0,0.1) 65%, transparent 100%)',
+                  'linear-gradient(to left, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.05) 72%, transparent 100%)',
                 zIndex: 1,
               }} />
               {/* Text overlay — right column */}
@@ -558,31 +565,29 @@ export default function DetroitMedSpaPageClient() {
                 justifyContent: 'flex-end',
                 padding: 'clamp(32px, 5vw, 64px)',
               }}>
-                <div style={{ maxWidth: '420px', width: '100%' }}>
+                <div style={{ maxWidth: '400px', width: '100%' }}>
                   <div style={{ ...eyebrowStyle, marginBottom: '20px' }}>
                     {eyebrowLine}
                     The Standard
                   </div>
                   <h2 style={{
                     fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                    fontSize: 'clamp(1.7rem, 3.2vw, 2.6rem)',
+                    fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)',
                     fontWeight: 800,
                     lineHeight: 1.05,
                     letterSpacing: '-0.03em',
                     color: '#ffffff',
                     marginBottom: '16px',
-                    textShadow: '0 2px 16px rgba(0,0,0,0.5)',
                   }}>
                     Detroit&#39;s Best Med Spas<br />
                     <span style={{ color: '#4DB8FF' }}>Deserve Better Websites.</span>
                   </h2>
                   <p style={{
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                    fontSize: 'clamp(0.9rem, 1.4vw, 1rem)',
+                    fontSize: 'clamp(0.88rem, 1.3vw, 0.97rem)',
                     lineHeight: 1.75,
-                    color: 'rgba(208,216,224,0.85)',
+                    color: 'rgba(208,216,224,0.88)',
                     marginBottom: '28px',
-                    textShadow: '0 1px 8px rgba(0,0,0,0.4)',
                   }}>
                     We build for practices that take their image seriously —
                     custom-built, not templated. Premium from the first pixel.
@@ -600,7 +605,7 @@ export default function DetroitMedSpaPageClient() {
                         fontSize: '10px',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: 'rgba(77,184,255,0.75)',
+                        color: 'rgba(77,184,255,0.8)',
                         textDecoration: 'none',
                       }}
                     >

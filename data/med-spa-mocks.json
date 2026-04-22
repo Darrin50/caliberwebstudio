@@ -284,34 +284,41 @@
       "ig": "https://www.instagram.com/aestheticrx_/",
       "fb": "https://www.facebook.com/AestheticRxNovi/"
     },
-    "announceBar": "Now accepting new clients in Novi · <span>4.9★ on Google · 122 Reviews</span> · Book your consultation today",
-    "heroHeadline": "Novi's Top-Rated Aesthetic Practice — *4.9 Stars. PA-C Led. Personalized Results.*",
+    "announceBar": "Now accepting new clients in Novi · <span>4.9★ Google · 122 Reviews · PA-C Led</span> · Book your consultation today",
+    "heroHeadline": "Novi's Top-Rated Aesthetic Practice — *Real Results. Real Credentials.*",
     "heroSub": "Botox · Daxxify · Dermal Fillers · UltraClear Laser · PRF — Under PA-C Direction in Novi, MI",
-    "heroImg": "https://aestheticrx.net/wp-content/uploads/2024/09/ARX-alison-michigan-brand-photographer-melissa-douglas-co-00513.jpg",
+    "heroImg": "/mocks/aesthetic-rx/aesthetic-rx-hero-01.png",
     "tagline": "Personalized aesthetic medicine for Novi. Every treatment is a prescription — designed for your face, your goals, your results.",
     "about": "Aesthetic RX is a PA-C-led aesthetic practice in Novi, Michigan built around one principle: your face is not a template. Lead injector Alison (PA-C) founded Aesthetic RX on a full-face balancing philosophy — treating the face as a whole rather than chasing individual lines or features. The result is natural, cohesive outcomes that enhance rather than alter. With a team of specialized injectors and estheticians and a verified 4.9-star Google rating across 122 reviews, Aesthetic RX has become one of Novi's most trusted aesthetic practices.",
-    "aboutImg": "https://aestheticrx.net/wp-content/uploads/2025/11/IMG_3164.jpg",
+    "aboutImg": "/mocks/aesthetic-rx/aesthetic-rx-providers-alison.png",
     "providers": [
       {
         "name": "Alison",
         "title": "Founder & Lead Injector",
         "credentials": "PA-C · Physician Assistant — Certified",
         "bio": "Alison founded Aesthetic RX on a full-face balancing philosophy. As a PA-C with advanced aesthetic training, she approaches every patient with the goal of natural enhancement — results that colleagues and family notice, but can't quite place. Her work has earned Aesthetic RX a verified 4.9-star Google rating.",
-        "photo": "https://aestheticrx.net/wp-content/uploads/2024/09/ARX-alison-michigan-brand-photographer-melissa-douglas-co-00513.jpg"
+        "photo": "/mocks/aesthetic-rx/aesthetic-rx-providers-alison.png"
       },
       {
         "name": "Jenna",
         "title": "Injector",
         "credentials": "Aesthetic Injector",
-        "bio": "Jenna brings precision and artistry to the Aesthetic RX injection suite. She is also the face behind the practice's UltraClear 3D MIRACL treatment results — her own skin transformation is documented on the Aesthetic RX Instagram.",
-        "photo": ""
+        "bio": "Jenna brings precision and artistry to the Aesthetic RX injection suite. She documents real treatment results on the practice's Instagram — including her own UltraClear 3D MIRACL skin transformation.",
+        "photo": "/mocks/aesthetic-rx/aesthetic-rx-providers-jenna.png"
       },
       {
         "name": "Jennie",
         "title": "Esthetician & Skincare Specialist",
         "credentials": "Licensed Esthetician",
         "bio": "Jennie curates the skincare experience at Aesthetic RX with intentional, science-backed product selection. Her morning skincare routine and treatment philosophy are featured regularly on the practice's social channels.",
-        "photo": ""
+        "photo": "/mocks/aesthetic-rx/aesthetic-rx-providers-jennie.png"
+      },
+      {
+        "name": "Ivana",
+        "title": "Provider",
+        "credentials": "",
+        "bio": "Ivana is part of the Aesthetic RX team, delivering personalized treatments aligned with the practice's commitment to natural, results-driven aesthetics.",
+        "photo": "/mocks/aesthetic-rx/aesthetic-rx-providers-ivana.png"
       },
       {
         "name": "Abeer",
@@ -365,8 +372,14 @@
         "category": "Laser & Energy"
       },
       {
+        "name": "Glass Facial",
+        "description": "Aesthetic RX's signature facial — deep hydration, gentle exfoliation, and medical-grade actives for a luminous glass-skin glow in one session.",
+        "price": "Book a consultation",
+        "category": "Skin Care"
+      },
+      {
         "name": "Chemical Peels & Facials",
-        "description": "Medical-grade peels and customized facials including the signature Glass Facial — deep hydration, gentle exfoliation, and glass-skin glow in one session.",
+        "description": "Medical-grade peels and customized facials using Toskani skincare line for real, visible skin improvement.",
         "price": "Book a consultation",
         "category": "Skin Care"
       },
@@ -380,12 +393,20 @@
     "beforeAfterGallery": [],
     "gallery": [
       {
-        "url": "https://aestheticrx.net/wp-content/uploads/2024/09/ARX-alison-michigan-brand-photographer-melissa-douglas-co-00513.jpg",
-        "alt": "Alison, PA-C — Founder of Aesthetic RX Novi"
+        "url": "/mocks/aesthetic-rx/aesthetic-rx-hero-01.png",
+        "alt": "Alison, PA-C — Founder & Lead Injector at Aesthetic RX, Novi"
       },
       {
-        "url": "https://aestheticrx.net/wp-content/uploads/2025/11/IMG_3164.jpg",
-        "alt": "Aesthetic RX team — Novi, MI"
+        "url": "/mocks/aesthetic-rx/aesthetic-rx-before-after-1.png",
+        "alt": "Real patient results — full face transformation at Aesthetic RX Novi"
+      },
+      {
+        "url": "/mocks/aesthetic-rx/aesthetic-rx-before-after-2.png",
+        "alt": "Glass Facial before & after — Aesthetic RX Novi"
+      },
+      {
+        "url": "/mocks/aesthetic-rx/aesthetic-rx-before-after-3.png",
+        "alt": "UltraClear laser results — real patient, Aesthetic RX Novi"
       }
     ],
     "reviews": [],
@@ -393,7 +414,7 @@
       { "num": "4.9★", "label": "Google Rating" },
       { "num": "122", "label": "Verified Reviews" },
       { "num": "PA-C", "label": "Physician Assistant Led" },
-      { "num": "Verified", "label": "Instagram Verified" }
+      { "num": "FDA", "label": "Cleared Technology" }
     ],
     "hours": [
       { "day": "Monday", "hours": "9:00 AM – 5:00 PM" },
@@ -405,9 +426,10 @@
       { "day": "Sunday", "hours": "Closed" }
     ],
     "bookingUrl": "https://arx.janeapp.com/",
+    "bookingSystem": "Jane",
     "ctaLabel": "Book a Consultation",
     "financing": [],
-    "createdAt": "2026-04-21",
+    "createdAt": "2026-04-22",
     "notionPageId": "349febcd514481098003faf6cfd09b0e"
   }
 ]

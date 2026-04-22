@@ -84,6 +84,7 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
     .ms .nav { background: rgba(253,250,246,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(107,45,78,0.08); position: sticky; top: 0; z-index: 100; padding: 0 28px; }
     .ms .nav-in { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .ms .logo { display: flex; flex-direction: column; }
+    .ms .logo-img { height: 44px; width: auto; object-fit: contain; }
     .ms .logo-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: ${PLUM}; line-height: 1; }
     .ms .logo-tag { font-family: 'Montserrat', sans-serif; font-size: 9px; color: ${MUTED}; letter-spacing: 2px; text-transform: uppercase; margin-top: 3px; }
     .ms .nav-links { display: flex; gap: 32px; list-style: none; }
@@ -243,8 +244,13 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
       <nav className="nav">
         <div className="nav-in">
           <div className="logo">
-            <div className="logo-name">{config.businessName}</div>
-            <div className="logo-tag">Medical Spa · {config.location}</div>
+            {config.logoImg
+              ? <img src={config.logoImg} alt={config.businessName} className="logo-img" />
+              : <>
+                  <div className="logo-name">{config.businessName}</div>
+                  <div className="logo-tag">Medical Spa · {config.location}</div>
+                </>
+            }
           </div>
           <ul className="nav-links">
             <li><a href="#services">Services</a></li>

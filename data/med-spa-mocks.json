@@ -145,23 +145,59 @@
       }
     ],
     "stats": [
-      { "num": "MD", "label": "Medical Director On-Site" },
-      { "num": "4.9★", "label": "Google Rating" },
-      { "num": "FDA", "label": "Cleared Technology" },
-      { "num": "1,000+", "label": "Happy Patients" }
+      {
+        "num": "MD",
+        "label": "Medical Director On-Site"
+      },
+      {
+        "num": "4.9★",
+        "label": "Google Rating"
+      },
+      {
+        "num": "FDA",
+        "label": "Cleared Technology"
+      },
+      {
+        "num": "1,000+",
+        "label": "Happy Patients"
+      }
     ],
     "hours": [
-      { "day": "Monday", "hours": "10:00 AM – 6:00 PM" },
-      { "day": "Tuesday", "hours": "10:00 AM – 6:00 PM" },
-      { "day": "Wednesday", "hours": "10:00 AM – 7:00 PM" },
-      { "day": "Thursday", "hours": "10:00 AM – 7:00 PM" },
-      { "day": "Friday", "hours": "9:00 AM – 5:00 PM" },
-      { "day": "Saturday", "hours": "9:00 AM – 3:00 PM" },
-      { "day": "Sunday", "hours": "Closed" }
+      {
+        "day": "Monday",
+        "hours": "10:00 AM – 6:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10:00 AM – 6:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10:00 AM – 7:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10:00 AM – 7:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9:00 AM – 5:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:00 AM – 3:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
     ],
     "bookingUrl": "https://adornmedspa.com/book",
     "ctaLabel": "Book a Consultation",
-    "financing": ["Cherry Financing", "CareCredit"],
+    "financing": [
+      "Cherry Financing",
+      "CareCredit"
+    ],
     "createdAt": "2026-04-21",
     "notionPageId": "349febcd5144811e99ccf651f3c17f82"
   },
@@ -176,33 +212,34 @@
       "ig": "https://www.instagram.com/se.la.holisticspa/",
       "fb": "https://www.facebook.com/p/Sela-Holistic-Spa-61558746126780/"
     },
-    "announceBar": "Now accepting new clients in Birmingham · Book your complimentary consultation · <span>Injectables · IV Therapy · Sound Healing</span>",
-    "heroHeadline": "Birmingham Medical + Holistic Spa — *Where Science Meets Healing*",
-    "heroSub": "Microneedling · IV Therapy · Medical Weight Loss · Injectables · Sound Healing — Clinical + Holistic in Birmingham, MI",
-    "heroImg": "https://images.squarespace-cdn.com/content/v1/65c4807ceba3416782ea8319/dc96980d-5635-4c1c-b7f1-62aff1c2b883/seya-murray.png",
-    "tagline": "Birmingham's only practice combining licensed medical aesthetics with certified holistic healing — all under one roof, all from one practitioner.",
-    "about": "SeLa Medical & Holistic Spa is founded and operated by Seya Murray — Licensed Massage Therapist, Licensed Aesthetician, Certified Herbalist, Reiki Practitioner, and Sound & Vibration Practitioner. Seya comes from a family of holistic healers and brings that generational depth to a fully clinical practice. At SeLa, you can book Botox and a sound bath in the same visit. Medical weight loss with Semaglutide and Tirzepatide alongside herbal wellness consultations. Microneedling and IV therapy under the same certified hands. This is Birmingham aesthetics, redefined.",
-    "aboutImg": "https://images.squarespace-cdn.com/content/v1/65c4807ceba3416782ea8319/dc96980d-5635-4c1c-b7f1-62aff1c2b883/seya-murray.png",
+    "announceBar": "Now accepting new clients in Birmingham � Book your complimentary consultation � <span>Injectables � IV Therapy � Sound Healing</span>",
+    "logoImg": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-logo-01.png",
+    "heroHeadline": "Birmingham Medical + Holistic Spa � *Where Science Meets Healing*",
+    "heroSub": "Microneedling � IV Therapy � Medical Weight Loss � Injectables � Sound Healing � Clinical + Holistic in Birmingham, MI",
+    "heroImg": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-hero-01.png",
+    "tagline": "Birmingham's only practice combining licensed medical aesthetics with certified holistic healing � all under one roof, all from one practitioner.",
+    "about": "SeLa Medical & Holistic Spa is founded and operated by Seya Murray � Licensed Massage Therapist, Licensed Aesthetician, Certified Herbalist, Reiki Practitioner, and Sound & Vibration Practitioner. Seya comes from a family of holistic healers and brings that generational depth to a fully clinical practice. At SeLa, you can book Botox and a sound bath in the same visit. Medical weight loss with Semaglutide and Tirzepatide alongside herbal wellness consultations. Microneedling and IV therapy under the same certified hands. This is Birmingham aesthetics, redefined.",
+    "aboutImg": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-asset-03.png",
     "providers": [
       {
         "name": "Seya Murray",
         "title": "Founder & Lead Practitioner",
-        "credentials": "LMT · Licensed Aesthetician · Certified Herbalist · Reiki Practitioner · Sound & Vibration Practitioner",
+        "credentials": "LMT � Licensed Aesthetician � Certified Herbalist � Reiki Practitioner � Sound & Vibration Practitioner",
         "bio": "Seya Murray built SeLa on a rare foundation: the clinical precision of a licensed medical aesthetician combined with the healing depth of a certified herbalist and energy practitioner. Trained across five disciplines, she offers a whole-body approach to aesthetics that no corporate med spa can match. Every treatment at SeLa is designed by Seya, performed by Seya, and tailored to you.",
-        "photo": "https://images.squarespace-cdn.com/content/v1/65c4807ceba3416782ea8319/dc96980d-5635-4c1c-b7f1-62aff1c2b883/seya-murray.png"
+        "photo": ""
       }
     ],
     "services": [
       {
         "name": "Microneedling with SkinPen",
         "description": "FDA-cleared SkinPen microneedling for fine lines, acne scarring, stretch marks, and pore reduction. Three-session series recommended at 4-6 week intervals.",
-        "price": "From $300 · 3-session series from $825",
+        "price": "From $300 � 3-session series from $825",
         "category": "Skin Care"
       },
       {
         "name": "Aqua-Gold Facial",
         "description": "Gold-plated microinfusion delivering hyaluronic acid, Botox, and custom actives to shrink pores, smooth skin, and create a lasting luminous glow.",
-        "price": "From $275 · With Botox from $399",
+        "price": "From $275 � With Botox from $399",
         "category": "Injectables"
       },
       {
@@ -220,7 +257,7 @@
       {
         "name": "IV Therapy",
         "description": "Custom intravenous infusions for hydration, energy, immunity, and recovery. Pairs naturally with any holistic or clinical treatment.",
-        "price": "Starting at — book to discuss",
+        "price": "Starting at � book to discuss",
         "category": "Body & Wellness"
       },
       {
@@ -231,7 +268,7 @@
       },
       {
         "name": "Sound Therapy",
-        "description": "Certified sound and vibration healing sessions that reduce stress, restore balance, and support the body's natural recovery processes.",
+        "description": "Certified sound and vibration healing sessions that reduce stress, restore balance, and support the body�s natural recovery processes.",
         "price": "Book a session",
         "category": "Other"
       },
@@ -244,30 +281,72 @@
       {
         "name": "Holistic Programs",
         "description": "Structured multi-session wellness plans combining herbal consultation, reiki, and therapeutic bodywork into a comprehensive healing protocol.",
-        "price": "Package pricing — book a consultation",
+        "price": "Package pricing � book a consultation",
         "category": "Other"
       }
     ],
     "beforeAfterGallery": [],
     "gallery": [
       {
-        "url": "https://images.squarespace-cdn.com/content/v1/65c4807ceba3416782ea8319/dc96980d-5635-4c1c-b7f1-62aff1c2b883/seya-murray.png",
-        "alt": "Seya Murray, Founder of SeLa Medical & Holistic Spa"
+        "url": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-interior-01.png",
+        "alt": "SeLa Medical & Holistic Spa treatment room"
+      },
+      {
+        "url": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-interior-02.png",
+        "alt": "Client receiving treatment at SeLa"
+      },
+      {
+        "url": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-asset-01.png",
+        "alt": "Injectable treatment at SeLa"
+      },
+      {
+        "url": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-asset-02.png",
+        "alt": "IV Therapy at SeLa Medical & Holistic Spa"
+      },
+      {
+        "url": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-asset-04.png",
+        "alt": "Facial treatment at SeLa"
+      },
+      {
+        "url": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-asset-05.png",
+        "alt": "Massage therapy at SeLa"
       }
     ],
     "reviews": [],
     "stats": [
-      { "num": "5", "label": "Certifications & Licenses" },
-      { "num": "LMT", "label": "Licensed Massage Therapist" },
-      { "num": "FDA", "label": "Cleared Microneedling" },
-      { "num": "1-on-1", "label": "Solo Practitioner Care" }
+      {
+        "num": "5",
+        "label": "Certifications & Licenses"
+      },
+      {
+        "num": "LMT",
+        "label": "Licensed Massage Therapist"
+      },
+      {
+        "num": "FDA",
+        "label": "Cleared Microneedling"
+      },
+      {
+        "num": "1-on-1",
+        "label": "Solo Practitioner Care"
+      }
     ],
     "hours": [
-      { "day": "Monday–Friday", "hours": "By appointment" },
-      { "day": "Saturday", "hours": "By appointment" },
-      { "day": "Sunday", "hours": "Closed" }
+      {
+        "day": "Monday�Friday",
+        "hours": "By appointment"
+      },
+      {
+        "day": "Saturday",
+        "hours": "By appointment"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
     ],
     "bookingUrl": "https://selamedspa-booking.as.me/",
+    "bookingSystem": "Acuity",
     "ctaLabel": "Book a Consultation",
     "financing": [],
     "createdAt": "2026-04-21",
@@ -411,19 +490,52 @@
     ],
     "reviews": [],
     "stats": [
-      { "num": "4.9★", "label": "Google Rating" },
-      { "num": "122", "label": "Verified Reviews" },
-      { "num": "PA-C", "label": "Physician Assistant Led" },
-      { "num": "FDA", "label": "Cleared Technology" }
+      {
+        "num": "4.9★",
+        "label": "Google Rating"
+      },
+      {
+        "num": "122",
+        "label": "Verified Reviews"
+      },
+      {
+        "num": "PA-C",
+        "label": "Physician Assistant Led"
+      },
+      {
+        "num": "FDA",
+        "label": "Cleared Technology"
+      }
     ],
     "hours": [
-      { "day": "Monday", "hours": "9:00 AM – 5:00 PM" },
-      { "day": "Tuesday", "hours": "12:00 PM – 7:00 PM" },
-      { "day": "Wednesday", "hours": "9:00 AM – 5:00 PM" },
-      { "day": "Thursday", "hours": "9:00 AM – 5:00 PM" },
-      { "day": "Friday", "hours": "9:00 AM – 5:00 PM" },
-      { "day": "Saturday", "hours": "By Appointment" },
-      { "day": "Sunday", "hours": "Closed" }
+      {
+        "day": "Monday",
+        "hours": "9:00 AM – 5:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "12:00 PM – 7:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9:00 AM – 5:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9:00 AM – 5:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9:00 AM – 5:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "By Appointment"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
     ],
     "bookingUrl": "https://arx.janeapp.com/",
     "bookingSystem": "Jane",

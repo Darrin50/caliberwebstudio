@@ -31,6 +31,7 @@ export interface MedSpaMockConfig {
   website?: string
   socials?: { ig?: string; fb?: string }
   announceBar?: string
+  logoImg?: string
   heroHeadline: string
   heroSub: string
   heroImg?: string

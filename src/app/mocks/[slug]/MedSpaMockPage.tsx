@@ -1,5 +1,6 @@
 'use client'
 
+/* eslint-disable @next/next/no-img-element */
 import { useEffect } from 'react'
 import type { MedSpaMockConfig } from '@/lib/med-spa-mock-data'
 
@@ -97,7 +98,7 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
     .ms .hero { position: relative; height: 90vh; min-height: 580px; max-height: 860px; overflow: hidden; display: flex; align-items: center; }
     .ms .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, ${PLUM_DARK}, ${PLUM}); }
     .ms .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
-    .ms .hero-ov { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.56) 55%, rgba(0,0,0,0.22) 100%); }
+    .ms .hero-ov { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.56) 55%, rgba(0,0,0,0.18) 100%); }
     .ms .hero-con { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 0 28px; width: 100%; }
     .ms .hero-tag { display: inline-block; border: 1px solid ${GOLD}; color: ${GOLD}; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 7px 16px; margin-bottom: 22px; font-family: 'Montserrat', sans-serif; }
     .ms .hero-title { font-size: clamp(38px, 5.5vw, 70px); font-weight: 700; line-height: 1.08; color: #fff; max-width: 680px; margin-bottom: 20px; }
@@ -112,13 +113,38 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
     .ms .htrust { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.65); font-family: 'Montserrat', sans-serif; }
     .ms .hline { width: 22px; height: 1px; background: ${GOLD}; flex-shrink: 0; }
 
+    /* Hero floating badge */
+    .ms .hero-float { position: absolute; bottom: 56px; right: 28px; z-index: 3; }
+    .ms .hero-badge { background: rgba(253,250,246,0.96); backdrop-filter: blur(12px); border-left: 3px solid ${GOLD}; padding: 20px 26px; display: flex; gap: 26px; align-items: center; box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
+    .ms .hbadge-stat { text-align: center; }
+    .ms .hbadge-num { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: ${PLUM}; display: block; line-height: 1; }
+    .ms .hbadge-lbl { font-family: 'Montserrat', sans-serif; font-size: 9px; color: ${MUTED}; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 6px; display: block; white-space: nowrap; }
+    .ms .hbadge-div { width: 1px; height: 42px; background: ${CREAM3}; }
+
+    /* Scroll indicator */
+    .ms .scroll-ind { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 8px; pointer-events: none; }
+    .ms .si-text { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .ms .si-line { width: 1px; height: 40px; background: linear-gradient(to bottom, ${GOLD} 0%, transparent 100%); }
+
     /* Credentials strip */
     .ms .cred-strip { background: ${PLUM}; padding: 26px 0; }
     .ms .cred-row { display: flex; justify-content: center; gap: 0; flex-wrap: wrap; }
     .ms .cred-item { text-align: center; padding: 8px 40px; border-right: 1px solid rgba(255,255,255,0.15); }
     .ms .cred-item:last-child { border-right: none; }
     .ms .cred-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: ${GOLD}; display: block; line-height: 1; }
-    .ms .cred-lbl { font-family: 'Montserrat', sans-serif; font-size: 10px; color: rgba(255,255,255,0.72); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px; }
+    .ms .cred-lbl { font-family: 'Montserrat', sans-serif; font-size: 10px; color: rgba(255,255,255,0.72); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px; display: block; }
+
+    /* About */
+    .ms .about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 80px; align-items: center; }
+    .ms .about-img-col { position: relative; flex-shrink: 0; }
+    .ms .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; display: block; }
+    .ms .about-pill { position: absolute; bottom: 24px; left: 24px; background: ${PLUM}; padding: 16px 20px; border-left: 3px solid ${GOLD}; max-width: 240px; }
+    .ms .apill-lbl { font-family: 'Montserrat', sans-serif; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 6px; }
+    .ms .apill-name { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: #fff; line-height: 1.2; }
+    .ms .apill-creds { font-family: 'Montserrat', sans-serif; font-size: 10px; color: ${GOLD}; margin-top: 5px; letter-spacing: 0.3px; }
+    .ms .about-body { font-size: 15px; color: ${LIGHT}; line-height: 1.9; margin-bottom: 34px; }
+    .ms .btn-ghost { display: inline-flex; align-items: center; gap: 10px; color: ${PLUM}; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; padding-bottom: 4px; border-bottom: 2px solid ${PLUM}; transition: color 0.2s, border-color 0.2s; }
+    .ms .btn-ghost:hover { color: ${GOLD}; border-color: ${GOLD}; }
 
     /* Sections */
     .ms .sec { padding: 88px 0; }
@@ -147,15 +173,41 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
     .ms .ba-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
     .ms .ba-label { position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,0.6); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 8px; }
     .ms .ba-treatment { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: ${PLUM}; text-align: center; padding: 14px; background: ${CREAM}; }
-
-    /* Placeholder for missing before/after */
     .ms .ba-placeholder { aspect-ratio: 3/4; background: linear-gradient(135deg, ${CREAM3}, ${CREAM2}); display: flex; align-items: center; justify-content: center; }
     .ms .ba-ph-text { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: ${MUTED}; text-align: center; padding: 16px; }
 
+    /* Gallery editorial */
+    .ms .gallery-edit { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; height: 560px; }
+    .ms .gallery-edit-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 10px; }
+    .ms .ge-item { position: relative; overflow: hidden; background: ${CREAM3}; }
+    .ms .ge-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
+    .ms .ge-item:hover img { transform: scale(1.05); }
+    .ms .ge-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(78,32,57,0.8) 0%, transparent 55%); opacity: 0; transition: opacity 0.35s; display: flex; align-items: flex-end; padding: 22px; }
+    .ms .ge-item:hover .ge-overlay { opacity: 1; }
+    .ms .ge-label { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.92); font-weight: 600; line-height: 1.4; }
+
+    /* Instagram strip */
+    .ms .ig-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+    .ms .ig-handle-link { display: inline-flex; align-items: center; gap: 8px; color: ${PLUM}; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; text-decoration: none; letter-spacing: 0.3px; border-bottom: 1px solid rgba(107,45,78,0.25); padding-bottom: 3px; transition: color 0.2s, border-color 0.2s; }
+    .ms .ig-handle-link:hover { color: ${GOLD}; border-color: ${GOLD}; }
+    .ms .ig-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+    .ms .ig-thumb { aspect-ratio: 1; overflow: hidden; position: relative; background: ${CREAM3}; display: block; }
+    .ms .ig-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+    .ms .ig-thumb:hover img { transform: scale(1.08); }
+    .ms .ig-ov { position: absolute; inset: 0; background: rgba(78,32,57,0.68); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+    .ms .ig-thumb:hover .ig-ov { opacity: 1; }
+    .ms .ig-ov-icon { color: #fff; font-size: 24px; line-height: 1; }
+
+    /* Pull quote band */
+    .ms .quote-band { background: ${PLUM_DARK}; padding: 96px 0; text-align: center; }
+    .ms .quote-mark { font-family: 'Playfair Display', serif; font-size: 96px; color: ${GOLD}; opacity: 0.3; line-height: 0.7; display: block; margin-bottom: 20px; }
+    .ms .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(20px, 3vw, 38px); font-style: italic; color: rgba(255,255,255,0.92); max-width: 820px; margin: 0 auto 30px; line-height: 1.55; }
+    .ms .quote-attr { font-family: 'Montserrat', sans-serif; font-size: 11px; color: ${GOLD}; letter-spacing: 2.5px; text-transform: uppercase; }
+
     /* Providers */
-    .ms .provider-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; }
+    .ms .provider-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 28px; }
     .ms .provider-card { background: ${CREAM}; border: 1px solid ${CREAM3}; }
-    .ms .provider-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; background: ${CREAM3}; }
+    .ms .provider-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; background: ${CREAM3}; display: block; }
     .ms .provider-photo-placeholder { width: 100%; aspect-ratio: 4/5; background: linear-gradient(160deg, ${PLUM_DARK}, ${PLUM}); display: flex; align-items: center; justify-content: center; }
     .ms .pph-initials { font-family: 'Playfair Display', serif; font-size: 48px; color: rgba(255,255,255,0.4); }
     .ms .provider-info { padding: 22px 24px; }
@@ -216,20 +268,36 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
     @media (max-width: 768px) {
       .ms .nav-links { display: none; }
       .ms .ct-grid { grid-template-columns: 1fr; }
-      .ms .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .ms .about-grid { grid-template-columns: 1fr; gap: 32px; }
       .ms .cred-item { border-right: none; padding: 12px 24px; }
       .ms .footer-row { flex-direction: column; }
       .ms .hero-trust { gap: 16px; }
+      .ms .hero-float { display: none; }
+      .ms .scroll-ind { display: none; }
+      .ms .gallery-edit { grid-template-columns: 1fr; height: auto; }
+      .ms .gallery-edit-stack { grid-template-rows: auto; grid-template-columns: 1fr 1fr; height: 280px; }
+      .ms .ig-grid { grid-template-columns: repeat(3, 1fr); }
+      .ms .about-pill { left: 16px; bottom: 16px; }
     }
   `
 
   const hasBeforeAfter = config.beforeAfterGallery.length > 0
   const hasGallery = config.gallery.length > 0
   const hasHours = (config.hours ?? []).length > 0
-  const bookingHref = config.bookingUrl || `tel:${config.phone}` || '#contact'
+  const hasAbout = !!(config.about && config.aboutImg)
+  const bookingHref = config.bookingUrl || (config.phone ? `tel:${config.phone}` : '#contact')
+
+  const igHandle = config.socials?.ig
+    ? (config.socials.ig.replace(/\/$/, '').split('/').pop() ?? null)
+    : null
+  const igImages = hasGallery
+    ? Array.from({ length: 6 }, (_, i) => config.gallery[i % config.gallery.length])
+    : []
 
   const getInitials = (name: string) =>
     name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()
+
+  const leadProvider = config.providers.length > 0 ? config.providers[0] : null
 
   return (
     <div className="ms">
@@ -266,7 +334,6 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
       <section className="hero">
         <div className="hero-bg" />
         {config.heroImg && (
-          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={config.heroImg}
             alt={`${config.businessName} hero`}
@@ -286,10 +353,38 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
             <a href="#services" className="btn-o">View Services</a>
           </div>
           <div className="hero-trust">
-            <div className="htrust"><span className="hline" />Medical Director On-Site</div>
-            <div className="htrust"><span className="hline" />FDA-Cleared Technology</div>
-            {config.phone && <div className="htrust"><span className="hline" />{config.phone}</div>}
+            {config.stats.slice(0, 2).map((s) => (
+              <div key={s.label} className="htrust">
+                <span className="hline" />{s.num} — {s.label}
+              </div>
+            ))}
+            {config.phone && (
+              <div className="htrust"><span className="hline" />{config.phone}</div>
+            )}
           </div>
+        </div>
+
+        {/* Floating stats badge */}
+        {config.stats.length >= 2 && (
+          <div className="hero-float">
+            <div className="hero-badge">
+              <div className="hbadge-stat">
+                <span className="hbadge-num">{config.stats[0].num}</span>
+                <span className="hbadge-lbl">{config.stats[0].label}</span>
+              </div>
+              <div className="hbadge-div" />
+              <div className="hbadge-stat">
+                <span className="hbadge-num">{config.stats[1].num}</span>
+                <span className="hbadge-lbl">{config.stats[1].label}</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Scroll indicator */}
+        <div className="scroll-ind">
+          <span className="si-text">Scroll</span>
+          <div className="si-line" />
         </div>
       </section>
 
@@ -307,8 +402,44 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
         </div>
       )}
 
+      {/* About */}
+      {hasAbout && (
+        <section className="sec">
+          <div className="con">
+            <div className="about-grid">
+              <div className="about-img-col">
+                <img
+                  src={config.aboutImg!}
+                  alt={config.businessName}
+                  className="about-img"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+                />
+                {leadProvider && (leadProvider.credentials || leadProvider.title) && (
+                  <div className="about-pill">
+                    <div className="apill-lbl">Lead Provider</div>
+                    <div className="apill-name">{leadProvider.name}</div>
+                    {leadProvider.credentials && (
+                      <div className="apill-creds">{leadProvider.credentials}</div>
+                    )}
+                  </div>
+                )}
+              </div>
+              <div>
+                <div className="slbl">About Us</div>
+                <h2 className="stitle">{config.businessName}</h2>
+                <div className="dvdr" />
+                <p className="about-body">{config.about}</p>
+                <a href={bookingHref} className="btn-ghost">
+                  Book a Consultation →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Services */}
-      <section id="services" className="sec">
+      <section id="services" className="sec sec-cream">
         <div className="con">
           <div className="shdr">
             <div className="slbl">What We Offer</div>
@@ -333,9 +464,9 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
         </div>
       </section>
 
-      {/* Before / After — only renders when real B/A photos are present; no fallback */}
+      {/* Before/After — only renders when real B/A photos are present */}
       {hasBeforeAfter && (
-        <section id="results" className="sec sec-cream">
+        <section id="results" className="sec">
           <div className="con">
             <div className="shdr">
               <div className="slbl">Real Results</div>
@@ -350,7 +481,6 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
                 <div key={i} className="ba-item">
                   <div className="ba-imgs">
                     <div className="ba-img-wrap">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={pair.before}
                         alt={`Before ${pair.treatment}`}
@@ -363,7 +493,6 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
                       <div className="ba-label">Before</div>
                     </div>
                     <div className="ba-img-wrap">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={pair.after}
                         alt={`After ${pair.treatment}`}
@@ -384,26 +513,92 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
         </section>
       )}
 
-      {/* Additional gallery */}
+      {/* Gallery — editorial masonry with hover */}
       {hasGallery && (
         <section className="sec sec-cream3">
           <div className="con">
             <div className="shdr">
-              <div className="slbl">Our Space</div>
-              <h2 className="stitle">Gallery</h2>
+              <div className="slbl">Patient Gallery</div>
+              <h2 className="stitle">Real Results</h2>
               <div className="dvdr" />
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-              {config.gallery.map((img, i) => (
-                <div key={i} style={{ overflow: 'hidden', background: CREAM3 }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
+            {config.gallery.length === 1 ? (
+              <div className="ge-item" style={{ height: 480 }}>
+                <img src={config.gallery[0].url} alt={config.gallery[0].alt} />
+                <div className="ge-overlay">
+                  <span className="ge-label">{config.gallery[0].alt}</span>
+                </div>
+              </div>
+            ) : (
+              <div className="gallery-edit">
+                <div className="ge-item">
+                  <img src={config.gallery[0].url} alt={config.gallery[0].alt} />
+                  <div className="ge-overlay">
+                    <span className="ge-label">{config.gallery[0].alt}</span>
+                  </div>
+                </div>
+                <div className="gallery-edit-stack">
+                  {config.gallery.slice(1, 3).map((img, i) => (
+                    <div key={i} className="ge-item">
+                      <img
+                        src={img.url}
+                        alt={img.alt}
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).parentElement!.style.display = 'none'
+                        }}
+                      />
+                      <div className="ge-overlay">
+                        <span className="ge-label">{img.alt}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Instagram strip */}
+      {igHandle && igImages.length > 0 && (
+        <section className="sec sec-cream">
+          <div className="con">
+            <div className="ig-head">
+              <div>
+                <div className="slbl">Social</div>
+                <h2 className="stitle">Follow Along</h2>
+                <div className="dvdr" style={{ marginBottom: 0 }} />
+              </div>
+              <a
+                href={config.socials?.ig}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ig-handle-link"
+              >
+                ↗ @{igHandle}
+              </a>
+            </div>
+            <div className="ig-grid">
+              {igImages.map((img, i) => (
+                <a
+                  key={i}
+                  href={config.socials?.ig}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ig-thumb"
+                >
                   <img
                     src={img.url}
                     alt={img.alt}
-                    style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }}
-                    onError={(e) => { (e.currentTarget as HTMLImageElement).parentElement!.style.display = 'none' }}
+                    onError={(e) => {
+                      const parent = (e.currentTarget as HTMLImageElement).parentElement
+                      if (parent) parent.style.display = 'none'
+                    }}
                   />
-                </div>
+                  <div className="ig-ov">
+                    <span className="ig-ov-icon">♡</span>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
@@ -425,7 +620,6 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
             {config.providers.map((p) => (
               <div key={p.name} className="provider-card">
                 {p.photo ? (
-                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={p.photo}
                     alt={p.name}
@@ -447,8 +641,8 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
                 <div className="provider-info">
                   <div className="provider-name">{p.name}</div>
                   <div className="provider-title">{p.title}</div>
-                  <div className="provider-creds">{p.credentials}</div>
-                  <div className="provider-bio">{p.bio}</div>
+                  {p.credentials && <div className="provider-creds">{p.credentials}</div>}
+                  {p.bio && <div className="provider-bio">{p.bio}</div>}
                 </div>
               </div>
             ))}
@@ -483,6 +677,15 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
         </section>
       )}
 
+      {/* Pull quote band */}
+      <div className="quote-band">
+        <div className="con">
+          <span className="quote-mark">&ldquo;</span>
+          <p className="quote-text">{config.tagline}</p>
+          <div className="quote-attr">— {config.businessName} · {config.location}</div>
+        </div>
+      </div>
+
       {/* Booking CTA */}
       <section className="cta-band">
         <div className="con">
@@ -490,7 +693,7 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
             <div className="cta-label">Get Started</div>
             <h2 className="cta-title">Your Best Look Starts With One Conversation</h2>
             <p className="cta-sub">
-              Schedule a complimentary consultation with one of our providers. We&apos;ll build a personalized treatment plan around your goals.
+              Schedule a consultation with one of our providers. We&apos;ll build a personalized treatment plan around your goals.
             </p>
             <a href={bookingHref} className="btn-p">{config.ctaLabel || 'Book a Consultation'}</a>
             {(config.financing ?? []).length > 0 && (

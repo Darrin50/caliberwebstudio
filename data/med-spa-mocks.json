@@ -212,19 +212,19 @@
       "ig": "https://www.instagram.com/se.la.holisticspa/",
       "fb": "https://www.facebook.com/p/Sela-Holistic-Spa-61558746126780/"
     },
-    "announceBar": "Now accepting new clients in Birmingham · Book your complimentary consultation · <span>Injectables · IV Therapy · Sound Healing</span>",
+    "announceBar": "Now accepting new clients in Birmingham ï¿½ Book your complimentary consultation ï¿½ <span>Injectables ï¿½ IV Therapy ï¿½ Sound Healing</span>",
     "logoImg": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-logo-01.png",
-    "heroHeadline": "Birmingham Medical + Holistic Spa — *Where Science Meets Healing*",
-    "heroSub": "Microneedling · IV Therapy · Medical Weight Loss · Injectables · Sound Healing — Clinical + Holistic in Birmingham, MI",
+    "heroHeadline": "Birmingham Medical + Holistic Spa ï¿½ *Where Science Meets Healing*",
+    "heroSub": "Microneedling ï¿½ IV Therapy ï¿½ Medical Weight Loss ï¿½ Injectables ï¿½ Sound Healing ï¿½ Clinical + Holistic in Birmingham, MI",
     "heroImg": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-hero-01.png",
-    "tagline": "Birmingham's only practice combining licensed medical aesthetics with certified holistic healing — all under one roof, all from one practitioner.",
-    "about": "SeLa Medical & Holistic Spa is founded and operated by Seya Murray — Licensed Massage Therapist, Licensed Aesthetician, Certified Herbalist, Reiki Practitioner, and Sound & Vibration Practitioner. Seya comes from a family of holistic healers and brings that generational depth to a fully clinical practice. At SeLa, you can book Botox and a sound bath in the same visit. Medical weight loss with Semaglutide and Tirzepatide alongside herbal wellness consultations. Microneedling and IV therapy under the same certified hands. This is Birmingham aesthetics, redefined.",
+    "tagline": "Birmingham's only practice combining licensed medical aesthetics with certified holistic healing ï¿½ all under one roof, all from one practitioner.",
+    "about": "SeLa Medical & Holistic Spa is founded and operated by Seya Murray ï¿½ Licensed Massage Therapist, Licensed Aesthetician, Certified Herbalist, Reiki Practitioner, and Sound & Vibration Practitioner. Seya comes from a family of holistic healers and brings that generational depth to a fully clinical practice. At SeLa, you can book Botox and a sound bath in the same visit. Medical weight loss with Semaglutide and Tirzepatide alongside herbal wellness consultations. Microneedling and IV therapy under the same certified hands. This is Birmingham aesthetics, redefined.",
     "aboutImg": "/mocks/sela-medical-holistic-spa/sela-medical-holistic-spa-asset-03.png",
     "providers": [
       {
         "name": "Seya Murray",
         "title": "Founder & Lead Practitioner",
-        "credentials": "LMT · Licensed Aesthetician · Certified Herbalist · Reiki Practitioner · Sound & Vibration Practitioner",
+        "credentials": "LMT ï¿½ Licensed Aesthetician ï¿½ Certified Herbalist ï¿½ Reiki Practitioner ï¿½ Sound & Vibration Practitioner",
         "bio": "Seya Murray built SeLa on a rare foundation: the clinical precision of a licensed medical aesthetician combined with the healing depth of a certified herbalist and energy practitioner. Trained across five disciplines, she offers a whole-body approach to aesthetics that no corporate med spa can match. Every treatment at SeLa is designed by Seya, performed by Seya, and tailored to you.",
         "photo": ""
       }
@@ -233,13 +233,13 @@
       {
         "name": "Microneedling with SkinPen",
         "description": "FDA-cleared SkinPen microneedling for fine lines, acne scarring, stretch marks, and pore reduction. Three-session series recommended at 4-6 week intervals.",
-        "price": "From $300 · 3-session series from $825",
+        "price": "From $300 ï¿½ 3-session series from $825",
         "category": "Skin Care"
       },
       {
         "name": "Aqua-Gold Facial",
         "description": "Gold-plated microinfusion delivering hyaluronic acid, Botox, and custom actives to shrink pores, smooth skin, and create a lasting luminous glow.",
-        "price": "From $275 · With Botox from $399",
+        "price": "From $275 ï¿½ With Botox from $399",
         "category": "Injectables"
       },
       {
@@ -257,7 +257,7 @@
       {
         "name": "IV Therapy",
         "description": "Custom intravenous infusions for hydration, energy, immunity, and recovery. Pairs naturally with any holistic or clinical treatment.",
-        "price": "Starting at — book to discuss",
+        "price": "Starting at ï¿½ book to discuss",
         "category": "Body & Wellness"
       },
       {
@@ -268,7 +268,7 @@
       },
       {
         "name": "Sound Therapy",
-        "description": "Certified sound and vibration healing sessions that reduce stress, restore balance, and support the body’s natural recovery processes.",
+        "description": "Certified sound and vibration healing sessions that reduce stress, restore balance, and support the bodyï¿½s natural recovery processes.",
         "price": "Book a session",
         "category": "Other"
       },
@@ -281,7 +281,7 @@
       {
         "name": "Holistic Programs",
         "description": "Structured multi-session wellness plans combining herbal consultation, reiki, and therapeutic bodywork into a comprehensive healing protocol.",
-        "price": "Package pricing — book a consultation",
+        "price": "Package pricing ï¿½ book a consultation",
         "category": "Other"
       }
     ],
@@ -333,7 +333,7 @@
     ],
     "hours": [
       {
-        "day": "Monday–Friday",
+        "day": "Mondayï¿½Friday",
         "hours": "By appointment"
       },
       {
@@ -399,13 +399,6 @@
         "bio": "Ivana is part of the Aesthetic RX team, delivering personalized treatments aligned with the practice's commitment to natural, results-driven aesthetics.",
         "photo": "/mocks/aesthetic-rx/aesthetic-rx-providers-ivana.png"
       },
-      {
-        "name": "Abeer",
-        "title": "Injector",
-        "credentials": "Aesthetic Injector",
-        "bio": "Abeer rounds out the Aesthetic RX injection team with expertise in neurotoxins and fillers, delivering personalized outcomes aligned with the practice's full-face balancing approach.",
-        "photo": ""
-      }
     ],
     "services": [
       {
@@ -483,10 +476,6 @@
         "url": "/mocks/aesthetic-rx/aesthetic-rx-before-after-2.png",
         "alt": "Glass Facial before & after â€” Aesthetic RX Novi"
       },
-      {
-        "url": "/mocks/aesthetic-rx/aesthetic-rx-before-after-3.png",
-        "alt": "UltraClear laser results â€” real patient, Aesthetic RX Novi"
-      }
     ],
     "reviews": [],
     "stats": [

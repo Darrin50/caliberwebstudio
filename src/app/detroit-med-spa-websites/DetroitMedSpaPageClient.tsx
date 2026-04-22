@@ -263,26 +263,42 @@ export default function DetroitMedSpaPageClient() {
             overflow: 'hidden',
           }}
         >
-          {/* Gradient background */}
+          {/* Looping background video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: 0,
+            }}
+            src="/videos/detroit-med-spa-hero.mp4"
+          />
+          {/* Dark overlay — lets video show while keeping text readable */}
           <div style={{
             position: 'absolute',
             inset: 0,
-            background:
-              'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(0,118,182,0.22) 0%, rgba(0,118,182,0.06) 45%, transparent 70%), #000000',
-            zIndex: 0,
-          }} />
-          {/* Blue radial glow behind text */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'radial-gradient(ellipse 70% 55% at 50% 42%, rgba(0,118,182,0.14) 0%, transparent 70%)',
+            background: 'rgba(0,0,0,0.52)',
             zIndex: 1,
+          }} />
+          {/* Subtle blue glow centered on text */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'radial-gradient(ellipse 70% 55% at 50% 42%, rgba(0,118,182,0.18) 0%, transparent 70%)',
+            zIndex: 2,
           }} />
 
           <div style={{
             position: 'relative',
-            zIndex: 2,
+            zIndex: 3,
             textAlign: 'center',
             padding: 'clamp(80px, 10vw, 140px) clamp(20px, 6vw, 60px)',
             maxWidth: '900px',
@@ -359,7 +375,7 @@ export default function DetroitMedSpaPageClient() {
           {/* Scroll chevron */}
           {heroVisible && (
             <div className="ms-chevron" style={{
-              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 2,
+              position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 3,
             }}>
               <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
                 <path d="M2 2L12 11L22 2" stroke="rgba(208,216,224,0.35)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -409,97 +425,6 @@ export default function DetroitMedSpaPageClient() {
             </div>
           ))}
         </div>
-
-        {/* ══════════════════════════════════════════════════════
-            VISUAL SHOWCASE
-        ══════════════════════════════════════════════════════ */}
-        <section
-          id="case-study"
-          style={{
-            background: 'var(--bg2)',
-            padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
-            borderTop: '1px solid var(--border)',
-          }}
-        >
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',
-              gap: 'clamp(48px, 7vw, 80px)',
-              alignItems: 'center',
-            }}>
-
-              {/* Left: text */}
-              <div className="ms-reveal">
-                <div style={eyebrowStyle}>
-                  {eyebrowLine}
-                  The Standard
-                </div>
-                <h2 style={{
-                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                  fontSize: 'clamp(1.9rem, 4vw, 3rem)',
-                  fontWeight: 800,
-                  lineHeight: 1.05,
-                  letterSpacing: '-0.03em',
-                  color: 'var(--white)',
-                  marginBottom: '20px',
-                }}>
-                  Detroit&#39;s Best Med Spas<br />
-                  <span style={{ color: '#0076B6' }}>Deserve Better Websites.</span>
-                </h2>
-                <p style={{
-                  fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                  fontSize: 'clamp(0.95rem, 1.5vw, 1.05rem)',
-                  lineHeight: 1.75,
-                  color: 'var(--chrome)',
-                  marginBottom: '32px',
-                }}>
-                  We build for practices that take their image seriously — providers
-                  who invest in their craft and know their website should reflect it.
-                  Custom-built, not templated. Premium from the first pixel.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <a href="/contact" className="ms-btn-primary" style={{ alignSelf: 'flex-start' }}>
-                    See Your Free Mockup →
-                  </a>
-                  <a
-                    href="https://www.caliberwebstudio.com/mocks/adorn-medical-spa"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                      fontSize: '10px',
-                      letterSpacing: '0.12em',
-                      textTransform: 'uppercase',
-                      color: 'rgba(0,118,182,0.65)',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    ↗ View a live Detroit med spa demo
-                  </a>
-                </div>
-              </div>
-
-              {/* Right: image */}
-              <div className="ms-reveal" style={{
-                position: 'relative',
-                height: 'clamp(420px, 50vw, 600px)',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                border: '1px solid var(--border-color)',
-                boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
-              }}>
-                <Image
-                  src="/images/detroit-med-spa-websites-hero.jpg"
-                  alt="Confident Detroit med spa owner in a modern aesthetic clinic"
-                  fill
-                  style={{ objectFit: 'cover', objectPosition: 'center center' }}
-                />
-              </div>
-
-            </div>
-          </div>
-        </section>
 
         {/* ══════════════════════════════════════════════════════
             PROBLEMS
@@ -585,6 +510,106 @@ export default function DetroitMedSpaPageClient() {
               ))}
             </div>
 
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════════════════
+            VISUAL SHOWCASE
+        ══════════════════════════════════════════════════════ */}
+        <section
+          id="case-study"
+          style={{
+            background: 'var(--bg2)',
+            padding: 'clamp(72px, 9vw, 120px) clamp(20px, 6vw, 60px)',
+            borderTop: '1px solid var(--border)',
+          }}
+        >
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            {/* Full-width image with text overlay on the right */}
+            <div className="ms-reveal" style={{
+              position: 'relative',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              minHeight: 'clamp(420px, 55vw, 680px)',
+            }}>
+              {/* Full image — shows the complete photo */}
+              <Image
+                src="/images/detroit-med-spa-websites-hero.jpg"
+                alt="Confident Detroit med spa owner in a modern aesthetic clinic"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'left center' }}
+                priority
+              />
+              {/* Right-side gradient — darkens only the right 55% for text legibility */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background:
+                  'linear-gradient(to left, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.72) 40%, rgba(0,0,0,0.1) 65%, transparent 100%)',
+                zIndex: 1,
+              }} />
+              {/* Text overlay — right column */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                zIndex: 2,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                padding: 'clamp(32px, 5vw, 64px)',
+              }}>
+                <div style={{ maxWidth: '420px', width: '100%' }}>
+                  <div style={{ ...eyebrowStyle, marginBottom: '20px' }}>
+                    {eyebrowLine}
+                    The Standard
+                  </div>
+                  <h2 style={{
+                    fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                    fontSize: 'clamp(1.7rem, 3.2vw, 2.6rem)',
+                    fontWeight: 800,
+                    lineHeight: 1.05,
+                    letterSpacing: '-0.03em',
+                    color: '#ffffff',
+                    marginBottom: '16px',
+                    textShadow: '0 2px 16px rgba(0,0,0,0.5)',
+                  }}>
+                    Detroit&#39;s Best Med Spas<br />
+                    <span style={{ color: '#4DB8FF' }}>Deserve Better Websites.</span>
+                  </h2>
+                  <p style={{
+                    fontFamily: "var(--font-inter, 'Inter', sans-serif)",
+                    fontSize: 'clamp(0.9rem, 1.4vw, 1rem)',
+                    lineHeight: 1.75,
+                    color: 'rgba(208,216,224,0.85)',
+                    marginBottom: '28px',
+                    textShadow: '0 1px 8px rgba(0,0,0,0.4)',
+                  }}>
+                    We build for practices that take their image seriously —
+                    custom-built, not templated. Premium from the first pixel.
+                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <a href="/contact" className="ms-btn-primary" style={{ alignSelf: 'flex-start' }}>
+                      See Your Free Mockup →
+                    </a>
+                    <a
+                      href="https://www.caliberwebstudio.com/mocks/adorn-medical-spa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                        fontSize: '10px',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: 'rgba(77,184,255,0.75)',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      ↗ View a live Detroit med spa demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

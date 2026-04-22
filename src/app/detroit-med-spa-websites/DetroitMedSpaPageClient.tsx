@@ -550,37 +550,18 @@ export default function DetroitMedSpaPageClient() {
                 {eyebrowLine}
                 The Standard
               </div>
-              <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                alignItems: 'flex-end',
-                justifyContent: 'space-between',
-                gap: '24px',
+              <h2 style={{
+                fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                fontSize: 'clamp(1.9rem, 4vw, 3rem)',
+                fontWeight: 800,
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: 'var(--white)',
+                margin: 0,
               }}>
-                <h2 style={{
-                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                  fontSize: 'clamp(1.9rem, 4vw, 3rem)',
-                  fontWeight: 800,
-                  lineHeight: 1.05,
-                  letterSpacing: '-0.03em',
-                  color: 'var(--white)',
-                  margin: 0,
-                }}>
-                  Detroit&#39;s Best Med Spas<br />
-                  <span style={{ color: '#0076B6' }}>Deserve Better Websites.</span>
-                </h2>
-                <p style={{
-                  fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                  fontSize: 'clamp(0.9rem, 1.4vw, 1rem)',
-                  lineHeight: 1.7,
-                  color: 'var(--chrome)',
-                  maxWidth: '380px',
-                  margin: 0,
-                }}>
-                  We build for practices that take their image seriously —
-                  custom-built, not templated. Premium from the first pixel.
-                </p>
-              </div>
+                Detroit&#39;s Best Med Spas<br />
+                <span style={{ color: '#0076B6' }}>Deserve Better Websites.</span>
+              </h2>
             </div>
 
             {/* Full-bleed image — subject fully visible, CTA anchored bottom */}
@@ -597,13 +578,30 @@ export default function DetroitMedSpaPageClient() {
                 style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
                 priority
               />
-              {/* Subtle bottom gradient — only for CTA readability */}
+              {/* Gradient — bottom for CTA + upper-right vignette for overlay text */}
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 35%, transparent 60%)',
+                background:
+                  'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.25) 38%, transparent 62%), ' +
+                  'radial-gradient(ellipse 52% 55% at 88% 20%, rgba(0,0,0,0.55) 0%, transparent 70%)',
                 zIndex: 1,
               }} />
+              {/* Overlay text — sits in the dark clinic-wall area (upper right) */}
+              <div className="ms-showcase-overlay-text">
+                <p style={{
+                  fontFamily: "var(--font-inter, 'Inter', sans-serif)",
+                  fontSize: 'clamp(0.78rem, 1.1vw, 0.92rem)',
+                  lineHeight: 1.85,
+                  color: 'rgba(255,255,255,0.88)',
+                  margin: 0,
+                  fontStyle: 'italic',
+                }}>
+                  We build for practices that take their image
+                  seriously — custom-built, not templated. Premium
+                  from the first pixel.
+                </p>
+              </div>
               {/* Bottom CTA anchored inside image */}
               <div style={{
                 position: 'absolute',
@@ -1039,31 +1037,51 @@ export default function DetroitMedSpaPageClient() {
                     </span>
                   ))}
                 </div>
-                <a href="tel:+13137992315" style={{
-                  fontFamily: "var(--font-syne, 'Syne', sans-serif)",
-                  fontSize: '18px',
-                  fontWeight: 700,
-                  color: '#0076B6',
-                  textDecoration: 'none',
-                  display: 'flex',
+                <a href="tel:+13137992315" className="ms-phone-link" style={{
+                  display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '10px',
+                  gap: '16px',
+                  textDecoration: 'none',
                 }}>
-                  <span style={{
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '50%',
-                    background: 'rgba(0,118,182,0.12)',
-                    border: '1px solid rgba(0,118,182,0.3)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '16px',
-                    flexShrink: 0,
-                  }}>
-                    📞
+                  {/* Pulsing ring + icon */}
+                  <span style={{ position: 'relative', flexShrink: 0, width: '48px', height: '48px' }}>
+                    <span className="ms-phone-ping" />
+                    <span style={{
+                      position: 'absolute',
+                      inset: 0,
+                      borderRadius: '50%',
+                      background: 'rgba(0,118,182,0.1)',
+                      border: '1px solid rgba(0,118,182,0.35)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#0076B6"/>
+                      </svg>
+                    </span>
                   </span>
-                  (313) 799-2315
+                  {/* Label + number stacked */}
+                  <span>
+                    <span style={{
+                      display: 'block',
+                      fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                      fontSize: '9px',
+                      letterSpacing: '0.22em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(0,118,182,0.65)',
+                      marginBottom: '5px',
+                    }}>Direct Line</span>
+                    <span style={{
+                      display: 'block',
+                      fontFamily: "var(--font-syne, 'Syne', sans-serif)",
+                      fontSize: 'clamp(1.15rem, 1.8vw, 1.4rem)',
+                      fontWeight: 800,
+                      color: '#0076B6',
+                      letterSpacing: '-0.02em',
+                      lineHeight: 1,
+                    }}>(313) 799-2315</span>
+                  </span>
                 </a>
               </div>
 
@@ -1491,34 +1509,42 @@ export default function DetroitMedSpaPageClient() {
           .ms-browser-frame { border-radius: 8px; }
         }
 
-        /* ── Showcase image overlay & text ─────────────────── */
-        /* Desktop: gradient reveals image on left, solid dark panel on right */
-        .ms-showcase-gradient {
-          background: linear-gradient(
-            to left,
-            rgba(0,0,0,0.72) 0%,
-            rgba(0,0,0,0.55) 35%,
-            rgba(0,0,0,0.1) 60%,
-            transparent 100%
-          );
+        /* ── Showcase overlay text — upper-right dark wall area */
+        .ms-showcase-overlay-text {
+          position: absolute;
+          top: clamp(28px, 4vw, 52px);
+          right: clamp(20px, 4vw, 44px);
+          z-index: 2;
+          max-width: clamp(190px, 34%, 270px);
+          text-align: right;
         }
-        .ms-showcase-text {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          padding: clamp(32px, 5vw, 64px);
+        @media (max-width: 520px) {
+          .ms-showcase-overlay-text {
+            top: 18px;
+            right: 14px;
+            max-width: 155px;
+          }
         }
 
-        /* Mobile: full dark overlay + text centred over the image */
-        @media (max-width: 680px) {
-          .ms-showcase-gradient {
-            background: rgba(0,0,0,0.55);
-          }
-          .ms-showcase-text {
-            justify-content: center;
-            align-items: flex-end;
-            padding: 28px 24px;
-          }
+        /* ── Phone link ────────────────────────────────────── */
+        @keyframes ms-phone-ping {
+          0%   { transform: scale(0.82); opacity: 0.9; }
+          65%  { transform: scale(1.45); opacity: 0;   }
+          100% { transform: scale(1.45); opacity: 0;   }
+        }
+        .ms-phone-ping {
+          position: absolute;
+          inset: -6px;
+          border-radius: 50%;
+          border: 1px solid rgba(0,118,182,0.5);
+          animation: ms-phone-ping 2.6s ease-out infinite;
+          pointer-events: none;
+        }
+        .ms-phone-link:hover .ms-phone-ping {
+          animation-play-state: paused;
+        }
+        .ms-phone-link:hover span:last-child span:last-child {
+          text-shadow: 0 0 20px rgba(0,118,182,0.45);
         }
       `}</style>
     </>

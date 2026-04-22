@@ -36,6 +36,7 @@ export interface MedSpaMockConfig {
   heroHeadline: string
   heroSub: string
   heroImg?: string
+  heroTextSide?: 'left' | 'right'
   tagline: string
   about: string
   aboutImg?: string

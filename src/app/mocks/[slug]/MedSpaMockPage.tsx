@@ -98,18 +98,18 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
     .ms .hero { position: relative; height: 90vh; min-height: 580px; max-height: 860px; overflow: hidden; display: flex; align-items: center; }
     .ms .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, ${PLUM_DARK}, ${PLUM}); }
     .ms .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
-    .ms .hero-ov { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.56) 55%, rgba(0,0,0,0.18) 100%); }
-    .ms .hero-con { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 0 28px; width: 100%; }
+    .ms .hero-ov { position: absolute; inset: 0; background: ${config.heroTextSide === 'right' ? `linear-gradient(270deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.56) 55%, rgba(0,0,0,0.18) 100%)` : `linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.56) 55%, rgba(0,0,0,0.18) 100%)`}; }
+    .ms .hero-con { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 0 28px; width: 100%; display: flex; flex-direction: column; align-items: ${config.heroTextSide === 'right' ? 'flex-end' : 'flex-start'}; text-align: ${config.heroTextSide === 'right' ? 'right' : 'left'}; }
     .ms .hero-tag { display: inline-block; border: 1px solid ${GOLD}; color: ${GOLD}; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 7px 16px; margin-bottom: 22px; font-family: 'Montserrat', sans-serif; }
     .ms .hero-title { font-size: clamp(38px, 5.5vw, 70px); font-weight: 700; line-height: 1.08; color: #fff; max-width: 680px; margin-bottom: 20px; }
     .ms .hero-title em { color: ${GOLD}; font-style: normal; }
     .ms .hero-sub { font-size: 15px; color: rgba(255,255,255,0.78); max-width: 500px; margin-bottom: 36px; line-height: 1.8; font-weight: 300; letter-spacing: 0.3px; }
-    .ms .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .ms .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: ${config.heroTextSide === 'right' ? 'flex-end' : 'flex-start'}; }
     .ms .btn-p { background: ${GOLD}; color: #fff; padding: 16px 34px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; display: inline-block; transition: background 0.2s; }
     .ms .btn-p:hover { background: ${GOLD_DARK}; }
     .ms .btn-o { border: 1px solid rgba(255,255,255,0.5); color: #fff; padding: 15px 32px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; display: inline-block; transition: border-color 0.2s, color 0.2s; }
     .ms .btn-o:hover { border-color: ${GOLD}; color: ${GOLD}; }
-    .ms .hero-trust { display: flex; gap: 28px; margin-top: 40px; flex-wrap: wrap; }
+    .ms .hero-trust { display: flex; gap: 28px; margin-top: 40px; flex-wrap: wrap; justify-content: ${config.heroTextSide === 'right' ? 'flex-end' : 'flex-start'}; }
     .ms .htrust { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.65); font-family: 'Montserrat', sans-serif; }
     .ms .hline { width: 22px; height: 1px; background: ${GOLD}; flex-shrink: 0; }
 

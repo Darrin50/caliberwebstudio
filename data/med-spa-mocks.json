@@ -541,6 +541,7 @@
     "heroHeadline": "Non-Surgical Body Transformation for *Southfield Women Who Want Real Results*",
     "heroSub": "Liquid BBL · Lipo Dissolve · Body Sculpting · Semaglutide · IV Hydration — Under Medical Direction in Southfield, MI",
     "heroImg": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-hero-01.png",
+    "heroTextSide": "right",
     "tagline": "Southfield's premier RN-led med spa for non-surgical body transformation. Real results, no surgery — 5-star rated with 263 Google reviews.",
     "about": "Beauty and Glamour Med Spa is an RN-owned practice in Southfield, Michigan specializing in non-surgical body transformation and aesthetic weight management. Our hero services — Liquid BBL, Lipo Dissolve with MICC injections, and Semaglutide weight loss — are designed to deliver real, visible results without downtime or surgery. Operating under a licensed Medical Director, our practice combines clinical precision with a deep understanding of what Southfield women actually want: curves, confidence, and results they can see. With a 5-star Google rating across 263 reviews, Beauty and Glamour is Southfield's most trusted body sculpting destination.",
     "aboutImg": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-03.png",
@@ -608,12 +609,6 @@
         "price": "Book a consultation",
         "category": "Other"
       },
-      {
-        "name": "Teeth Whitening",
-        "description": "Professional-grade whitening for a brighter, more confident smile — fast results in a single visit.",
-        "price": "Book a session",
-        "category": "Other"
-      }
     ],
     "beforeAfterGallery": [],
     "gallery": [

@@ -311,7 +311,7 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
       {/* Nav */}
       <nav className="nav">
         <div className="nav-in">
-          <div className="logo">
+          <a href="https://caliberwebstudio.com/med-lab" className="logo">
             {config.logoImg
               ? <img src={config.logoImg} alt={config.businessName} className="logo-img" />
               : <>
@@ -319,7 +319,7 @@ export default function MedSpaMockPage({ config }: { config: MedSpaMockConfig })
                   <div className="logo-tag">Medical Spa · {config.location}</div>
                 </>
             }
-          </div>
+          </a>
           <ul className="nav-links">
             <li><a href="#services">Services</a></li>
             <li><a href="#results">Results</a></li>

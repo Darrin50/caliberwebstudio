@@ -454,12 +454,6 @@
         "description": "Medical-grade peels and customized facials using Toskani skincare line for real, visible skin improvement.",
         "price": "Book a consultation",
         "category": "Skin Care"
-      },
-      {
-        "name": "Microneedling & Skin Infusions",
-        "description": "Collagen-induction microneedling paired with custom active infusions for texture refinement, scar reduction, and brightening.",
-        "price": "Book a consultation",
-        "category": "Skin Care"
       }
     ],
     "beforeAfterGallery": [],

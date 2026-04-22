@@ -526,5 +526,152 @@
     "financing": [],
     "createdAt": "2026-04-22",
     "notionPageId": "349febcd514481098003faf6cfd09b0e"
+  },
+  {
+    "slug": "beauty-and-glamour-med-spa",
+    "businessName": "Beauty and Glamour Med Spa",
+    "location": "Southfield, MI",
+    "phone": "(248) 592-7385",
+    "website": "https://www.beautyandglamourmedspa.com",
+    "socials": {
+      "ig": "https://www.instagram.com/beautyandglamour_medspa/"
+    },
+    "announceBar": "Now accepting new clients in Southfield · <span>5★ · 263 Google Reviews · RN-Owned</span> · Book a complimentary consultation",
+    "logoImg": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-01.png",
+    "heroHeadline": "Non-Surgical Body Transformation for *Southfield Women Who Want Real Results*",
+    "heroSub": "Liquid BBL · Lipo Dissolve · Body Sculpting · Semaglutide · IV Hydration — Under Medical Direction in Southfield, MI",
+    "heroImg": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-hero-01.png",
+    "tagline": "Southfield's premier RN-led med spa for non-surgical body transformation. Real results, no surgery — 5-star rated with 263 Google reviews.",
+    "about": "Beauty and Glamour Med Spa is an RN-owned practice in Southfield, Michigan specializing in non-surgical body transformation and aesthetic weight management. Our hero services — Liquid BBL, Lipo Dissolve with MICC injections, and Semaglutide weight loss — are designed to deliver real, visible results without downtime or surgery. Operating under a licensed Medical Director, our practice combines clinical precision with a deep understanding of what Southfield women actually want: curves, confidence, and results they can see. With a 5-star Google rating across 263 reviews, Beauty and Glamour is Southfield's most trusted body sculpting destination.",
+    "aboutImg": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-03.png",
+    "providers": [
+      {
+        "name": "RN Owner/Founder",
+        "title": "Registered Nurse · Founder",
+        "credentials": "",
+        "bio": "Beauty and Glamour Med Spa was founded by a registered nurse with a passion for non-surgical body transformation. Operating under a licensed Medical Director, our founder brings clinical expertise and a results-first philosophy to every treatment. Provider identity not yet confirmed publicly — verified by client credentials on file.",
+        "photo": ""
+      }
+    ],
+    "services": [
+      {
+        "name": "Liquid BBL (Non-Surgical Butt Lift)",
+        "description": "Our signature service — instant curves without surgery or downtime. Injectable filler technique for natural-looking lift and volume.",
+        "price": "Book a consultation",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "Lipo Dissolve / MICC Injections",
+        "description": "Targeted fat-dissolving injections for stubborn areas: bra line, abdomen, flanks, and more. Visible reduction with zero surgery.",
+        "price": "Book a consultation",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "Body Sculpting",
+        "description": "Non-surgical body contouring tailored to your transformation goals. Customized protocols for slimming, lifting, and defining.",
+        "price": "Book a consultation",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "Semaglutide Weight Loss Program",
+        "description": "Medical weight loss with compounded Semaglutide under clinical supervision. Sustainable fat reduction with ongoing provider support.",
+        "price": "Consultation required",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "IV Hydration Therapy",
+        "description": "Custom intravenous drips for energy, recovery, glow, and immune support. Administered on-site by our clinical team.",
+        "price": "Book a session",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "Botox",
+        "description": "Precision neurotoxin injections to relax dynamic wrinkles and refresh your look. Natural results by our RN provider.",
+        "price": "Book a consultation",
+        "category": "Injectables"
+      },
+      {
+        "name": "Vitamin Shot Bar",
+        "description": "Quick-hit intramuscular injections including B12, Lipo/MIC, and wellness blends. Great standalone or as an add-on to any service.",
+        "price": "Book a session",
+        "category": "Body & Wellness"
+      },
+      {
+        "name": "Facials",
+        "description": "Clinical facials tailored to your skin type and goals. Cleansing, exfoliation, and active treatments for visible improvement.",
+        "price": "Book a session",
+        "category": "Skin Care"
+      },
+      {
+        "name": "PRP Hair Restoration",
+        "description": "Platelet-rich plasma therapy using your body's own growth factors to stimulate hair regrowth and strengthen existing follicles.",
+        "price": "Book a consultation",
+        "category": "Other"
+      },
+      {
+        "name": "Teeth Whitening",
+        "description": "Professional-grade whitening for a brighter, more confident smile — fast results in a single visit.",
+        "price": "Book a session",
+        "category": "Other"
+      }
+    ],
+    "beforeAfterGallery": [],
+    "gallery": [
+      {
+        "url": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-interior-01.png",
+        "alt": "IV Hydration therapy at Beauty and Glamour Med Spa, Southfield"
+      },
+      {
+        "url": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-interior-02.png",
+        "alt": "Liquid BBL treatment at Beauty and Glamour Med Spa"
+      },
+      {
+        "url": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-02.png",
+        "alt": "Injectable treatment at Beauty and Glamour Med Spa, Southfield"
+      },
+      {
+        "url": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-04.png",
+        "alt": "Vitamin Shot Bar at Beauty and Glamour Med Spa"
+      },
+      {
+        "url": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-05.png",
+        "alt": "Botox treatment at Beauty and Glamour Med Spa, Southfield"
+      },
+      {
+        "url": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-07.png",
+        "alt": "Wellness recharge treatment at Beauty and Glamour Med Spa"
+      },
+      {
+        "url": "/mocks/beauty-and-glamour-med-spa/beauty-and-glamour-med-spa-asset-08.png",
+        "alt": "Non-surgical BBL results — Beauty and Glamour Med Spa"
+      }
+    ],
+    "reviews": [],
+    "stats": [
+      {
+        "num": "5★",
+        "label": "Google Rating"
+      },
+      {
+        "num": "263",
+        "label": "Verified Reviews"
+      },
+      {
+        "num": "RN",
+        "label": "RN-Owned Practice"
+      },
+      {
+        "num": "MD",
+        "label": "Licensed Medical Director"
+      }
+    ],
+    "bookingUrl": "https://www.instagram.com/beautyandglamour_medspa/",
+    "bookingSystem": "placeholder",
+    "ctaLabel": "Book a Consultation",
+    "financing": [
+      "CareCredit"
+    ],
+    "createdAt": "2026-04-22",
+    "notionPageId": "349febcd5144810699f5d79eb097f3e8"
   }
 ]

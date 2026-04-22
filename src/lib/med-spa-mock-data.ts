@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import mockDataFallback from '../../data/med-spa-mocks.json'
 
 export interface MedSpaProvider {
   name: string
@@ -60,7 +61,7 @@ export function getMedSpaMocks(): MedSpaMockConfig[] {
     const raw = fs.readFileSync(DATA_FILE, 'utf-8')
     return JSON.parse(raw) as MedSpaMockConfig[]
   } catch {
-    return []
+    return mockDataFallback as MedSpaMockConfig[]
   }
 }
 

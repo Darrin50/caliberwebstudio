@@ -591,11 +591,12 @@ export default function DetroitMedSpaPageClient() {
               <div className="ms-showcase-overlay-text">
                 <p style={{
                   fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                  fontSize: 'clamp(0.78rem, 1.1vw, 0.92rem)',
-                  lineHeight: 1.85,
-                  color: 'rgba(255,255,255,0.88)',
+                  fontSize: 'clamp(1.05rem, 2vw, 1.4rem)',
+                  lineHeight: 1.7,
+                  color: '#ffffff',
                   margin: 0,
                   fontStyle: 'italic',
+                  fontWeight: 500,
                 }}>
                   We build for practices that take their image
                   seriously — custom-built, not templated. Premium
@@ -1515,14 +1516,14 @@ export default function DetroitMedSpaPageClient() {
           top: clamp(28px, 4vw, 52px);
           right: clamp(20px, 4vw, 44px);
           z-index: 2;
-          max-width: clamp(190px, 34%, 270px);
+          max-width: clamp(240px, 42%, 340px);
           text-align: right;
         }
         @media (max-width: 520px) {
           .ms-showcase-overlay-text {
             top: 18px;
             right: 14px;
-            max-width: 155px;
+            max-width: 200px;
           }
         }
 

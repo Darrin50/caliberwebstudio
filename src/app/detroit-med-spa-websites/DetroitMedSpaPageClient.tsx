@@ -547,23 +547,20 @@ export default function DetroitMedSpaPageClient() {
                 style={{ objectFit: 'cover', objectPosition: 'left center' }}
                 priority
               />
-              {/* Right-side gradient — solid dark panel behind text, transparent left */}
+              {/* Base overlay — always present, keeps mobile text readable */}
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background:
-                  'linear-gradient(to left, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.05) 72%, transparent 100%)',
+                background: 'rgba(0,0,0,0.45)',
                 zIndex: 1,
               }} />
+              {/* Desktop: right-side gradient that reveals image on left */}
+              <div className="ms-showcase-gradient" style={{ position: 'absolute', inset: 0, zIndex: 2 }} />
               {/* Text overlay — right column */}
-              <div style={{
+              <div className="ms-showcase-text" style={{
                 position: 'absolute',
                 inset: 0,
-                zIndex: 2,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-                padding: 'clamp(32px, 5vw, 64px)',
+                zIndex: 3,
               }}>
                 <div style={{ maxWidth: '400px', width: '100%' }}>
                   <div style={{ ...eyebrowStyle, marginBottom: '20px' }}>
@@ -578,6 +575,7 @@ export default function DetroitMedSpaPageClient() {
                     letterSpacing: '-0.03em',
                     color: '#ffffff',
                     marginBottom: '16px',
+                    textShadow: '0 2px 20px rgba(0,0,0,0.8)',
                   }}>
                     Detroit&#39;s Best Med Spas<br />
                     <span style={{ color: '#4DB8FF' }}>Deserve Better Websites.</span>
@@ -586,8 +584,9 @@ export default function DetroitMedSpaPageClient() {
                     fontFamily: "var(--font-inter, 'Inter', sans-serif)",
                     fontSize: 'clamp(0.88rem, 1.3vw, 0.97rem)',
                     lineHeight: 1.75,
-                    color: 'rgba(208,216,224,0.88)',
+                    color: '#ffffff',
                     marginBottom: '28px',
+                    textShadow: '0 1px 10px rgba(0,0,0,0.7)',
                   }}>
                     We build for practices that take their image seriously —
                     custom-built, not templated. Premium from the first pixel.
@@ -1373,6 +1372,36 @@ export default function DetroitMedSpaPageClient() {
         /* ── Browser frame shadow on small screens ─────────── */
         @media (max-width: 600px) {
           .ms-browser-frame { border-radius: 8px; }
+        }
+
+        /* ── Showcase image overlay & text ─────────────────── */
+        /* Desktop: gradient reveals image on left, solid dark panel on right */
+        .ms-showcase-gradient {
+          background: linear-gradient(
+            to left,
+            rgba(0,0,0,0.72) 0%,
+            rgba(0,0,0,0.55) 35%,
+            rgba(0,0,0,0.1) 60%,
+            transparent 100%
+          );
+        }
+        .ms-showcase-text {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: clamp(32px, 5vw, 64px);
+        }
+
+        /* Mobile: full dark overlay + text centred over the image */
+        @media (max-width: 680px) {
+          .ms-showcase-gradient {
+            background: rgba(0,0,0,0.55);
+          }
+          .ms-showcase-text {
+            justify-content: center;
+            align-items: flex-end;
+            padding: 28px 24px;
+          }
         }
       `}</style>
     </>

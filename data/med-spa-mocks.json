@@ -398,7 +398,7 @@
         "credentials": "",
         "bio": "Ivana is part of the Aesthetic RX team, delivering personalized treatments aligned with the practice's commitment to natural, results-driven aesthetics.",
         "photo": "/mocks/aesthetic-rx/aesthetic-rx-providers-ivana.png"
-      },
+      }
     ],
     "services": [
       {
@@ -475,7 +475,7 @@
       {
         "url": "/mocks/aesthetic-rx/aesthetic-rx-before-after-2.png",
         "alt": "Glass Facial before & after — Aesthetic RX Novi"
-      },
+      }
     ],
     "reviews": [],
     "stats": [

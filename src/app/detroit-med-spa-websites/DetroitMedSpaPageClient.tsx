@@ -543,88 +543,101 @@ export default function DetroitMedSpaPageClient() {
           }}
         >
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            {/* Full-width image with text overlay on the right */}
-            <div className="ms-reveal" style={{
+
+            {/* Header — fully above the image, always readable */}
+            <div className="ms-reveal" style={{ marginBottom: 'clamp(32px, 4vw, 48px)' }}>
+              <div style={eyebrowStyle}>
+                {eyebrowLine}
+                The Standard
+              </div>
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'flex-end',
+                justifyContent: 'space-between',
+                gap: '24px',
+              }}>
+                <h2 style={{
+                  fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
+                  fontSize: 'clamp(1.9rem, 4vw, 3rem)',
+                  fontWeight: 800,
+                  lineHeight: 1.05,
+                  letterSpacing: '-0.03em',
+                  color: 'var(--white)',
+                  margin: 0,
+                }}>
+                  Detroit&#39;s Best Med Spas<br />
+                  <span style={{ color: '#0076B6' }}>Deserve Better Websites.</span>
+                </h2>
+                <p style={{
+                  fontFamily: "var(--font-inter, 'Inter', sans-serif)",
+                  fontSize: 'clamp(0.9rem, 1.4vw, 1rem)',
+                  lineHeight: 1.7,
+                  color: 'var(--chrome)',
+                  maxWidth: '380px',
+                  margin: 0,
+                }}>
+                  We build for practices that take their image seriously —
+                  custom-built, not templated. Premium from the first pixel.
+                </p>
+              </div>
+            </div>
+
+            {/* Full-bleed image — subject fully visible, CTA anchored bottom */}
+            <div className="ms-reveal-scale" style={{
               position: 'relative',
               borderRadius: '16px',
               overflow: 'hidden',
-              minHeight: 'clamp(420px, 55vw, 680px)',
+              height: 'clamp(380px, 52vw, 620px)',
             }}>
-              {/* Full image — shows the complete photo */}
               <Image
                 src="/images/detroit-med-spa-websites-hero.jpg"
-                alt="Confident Detroit med spa owner in a modern aesthetic clinic"
+                alt="Detroit med spa owner in a modern aesthetic clinic"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'left center' }}
+                style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
                 priority
               />
-              {/* Base overlay — always present, keeps mobile text readable */}
+              {/* Subtle bottom gradient — only for CTA readability */}
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'rgba(0,0,0,0.45)',
+                background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 35%, transparent 60%)',
                 zIndex: 1,
               }} />
-              {/* Desktop: right-side gradient that reveals image on left */}
-              <div className="ms-showcase-gradient" style={{ position: 'absolute', inset: 0, zIndex: 2 }} />
-              {/* Text overlay — right column */}
-              <div className="ms-showcase-text" style={{
+              {/* Bottom CTA anchored inside image */}
+              <div style={{
                 position: 'absolute',
-                inset: 0,
-                zIndex: 3,
+                bottom: 0,
+                left: 0,
+                right: 0,
+                zIndex: 2,
+                padding: 'clamp(24px, 3vw, 40px)',
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                gap: '16px',
               }}>
-                <div style={{ maxWidth: '400px', width: '100%' }}>
-                  <div style={{ ...eyebrowStyle, marginBottom: '20px' }}>
-                    {eyebrowLine}
-                    The Standard
-                  </div>
-                  <h2 style={{
-                    fontFamily: "var(--font-heading, var(--font-syne, 'Syne', sans-serif))",
-                    fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)',
-                    fontWeight: 800,
-                    lineHeight: 1.05,
-                    letterSpacing: '-0.03em',
-                    color: '#ffffff',
-                    marginBottom: '16px',
-                    textShadow: '0 2px 20px rgba(0,0,0,0.8)',
-                  }}>
-                    Detroit&#39;s Best Med Spas<br />
-                    <span style={{ color: '#4DB8FF' }}>Deserve Better Websites.</span>
-                  </h2>
-                  <p style={{
-                    fontFamily: "var(--font-inter, 'Inter', sans-serif)",
-                    fontSize: 'clamp(0.88rem, 1.3vw, 0.97rem)',
-                    lineHeight: 1.75,
-                    color: '#ffffff',
-                    marginBottom: '28px',
-                    textShadow: '0 1px 10px rgba(0,0,0,0.7)',
-                  }}>
-                    We build for practices that take their image seriously —
-                    custom-built, not templated. Premium from the first pixel.
-                  </p>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <a href="/contact" className="ms-btn-primary" style={{ alignSelf: 'flex-start' }}>
-                      See Your Free Mockup →
-                    </a>
-                    <a
-                      href="https://www.caliberwebstudio.com/mocks/adorn-medical-spa"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
-                        fontSize: '10px',
-                        letterSpacing: '0.12em',
-                        textTransform: 'uppercase',
-                        color: 'rgba(77,184,255,0.8)',
-                        textDecoration: 'none',
-                      }}
-                    >
-                      ↗ View a live Detroit med spa demo
-                    </a>
-                  </div>
-                </div>
+                <a href="/contact" className="ms-btn-primary">
+                  See Your Free Mockup →
+                </a>
+                <a
+                  href="https://www.caliberwebstudio.com/mocks/adorn-medical-spa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: "var(--font-space-mono, 'Space Mono', monospace)",
+                    fontSize: '10px',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: 'rgba(255,255,255,0.7)',
+                    textDecoration: 'none',
+                  }}
+                >
+                  ↗ View a live Detroit med spa demo
+                </a>
               </div>
             </div>
+
           </div>
         </section>
 

@@ -11806,7 +11806,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Ask your injector which product they use more and why — their answer tells you both about the product and about their transparency. For the full framework, see our guide on <a href="/blog/choose-botox-provider-detroit">how to choose a Botox provider in Detroit</a>.</p>
 
-<img src="/blog/botox-vs-dysport-detroit-1.jpg" alt="Two prepared neurotoxin syringes side by side on a clinical medical tray" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/botox-vs-dysport-detroit-1.jpg" alt="Black woman studying forehead expression lines in a bathroom mirror at a Detroit apartment" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>How Each Neurotoxin Works</h2>
 

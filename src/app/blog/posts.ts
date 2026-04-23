@@ -11664,7 +11664,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>A provider who's built a reputation for natural-looking results — and who has documented that in before/after galleries with patient consent — commands a premium. That premium is often worth paying, especially for first-time patients.</p>
 
-<img src="/blog/detroit-botox-cost-2026-1.jpg" alt="Detroit med spa patient reviewing Botox pricing options with a provider during consultation" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/detroit-botox-cost-2026-1.jpg" alt="Black woman researching Detroit Botox pricing on a laptop and phone at a sunlit kitchen island" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Per-Unit vs. Per-Area Pricing: Which Is a Better Deal?</h2>
 

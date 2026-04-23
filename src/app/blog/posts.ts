@@ -11602,7 +11602,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     slug: "detroit-botox-cost-2026",
-    thumbnail: "/blog/detroit-botox-cost-2026-thumb.jpg",
+    thumbnail: "/blog/detroit-botox-cost-2026-hero.jpg",
     title: "How Much Does Botox Cost in Detroit in 2026? A Complete Price Guide",
     description: "Botox prices in Detroit range from $8 to $20+ per unit. Here's the real 2026 price guide with numbers from actual metro Detroit med spas — know what you're paying before you book.",
     date: "2026-04-22",
@@ -11763,7 +11763,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     slug: "botox-vs-dysport-detroit",
-    thumbnail: "/blog/botox-vs-dysport-detroit-thumb.jpg",
+    thumbnail: "/blog/botox-vs-dysport-detroit-hero.jpg",
     title: "Botox vs. Dysport in Detroit: What's the Difference and Which One Is Right for You?",
     description: "Botox and Dysport both treat wrinkles — but they're not the same. Detroit med spa patients: here's the real difference, the timing breakdown, and how to choose in 2026.",
     date: "2026-04-23",
@@ -11849,7 +11849,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>For the Grand Prix on May 30: Botox requires booking no later than May 16 for full results. Dysport gives you until May 20–23. If you're a last-minute scheduler, Dysport has built-in forgiveness. If you plan ahead, either product works fine.</p>
 
-<img src="/blog/botox-vs-dysport-detroit-2.jpg" alt="Planner open on a desk with treatment dates circled, phone nearby showing calendar app" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Which Areas Each Is Best For</h2>
 

@@ -264,6 +264,27 @@ export const business = {
 - Add rate limiting
 
 
+## BLOG POST SCHEMA (src/app/blog/posts.ts)
+
+Every blog post object MUST include both image fields — they MUST be different files:
+
+```ts
+{
+  slug: "post-slug",
+  thumbnail: "/blog/post-slug-thumb.jpg",   // Used on listing cards + OG image
+  hero: "/blog/post-slug-hero.jpg",          // Used as large hero on post page
+  title: "...",
+  ...
+}
+```
+
+- `thumbnail` — the card image shown on /blog listing page and Open Graph previews. Typically a landscape crop or tighter composition.
+- `hero` — the full-width image rendered at the top of the individual post page. Typically a wider, more editorial shot.
+- **Never use the same filename for both fields.** Generate two distinct images per post — one for each slot.
+- Both paths must start with `/blog/` and the files must exist in `/public/blog/`.
+- If only one image is available at time of writing, use it for `thumbnail` and leave `hero` unset — the page will fall back to the first `<img>` in the post body. Come back and add `hero` once the second image is ready.
+
+
 ## THINGS TO NEVER DO
 
 - Never use Pages Router — App Router only
@@ -276,6 +297,7 @@ export const business = {
 - Never deploy without a Lighthouse audit
 - Never leave TODO comments in production code
 - Never use !important in CSS
+- Never set `hero` and `thumbnail` to the same image file on a blog post
 
 
 ## DEPLOYMENT

@@ -7,6 +7,7 @@ export interface BlogPost {
   content: string;
   relatedSlugs: string[];
   thumbnail?: string;
+  hero?: string;
 }
 
 export const posts: BlogPost[] = [
@@ -11603,6 +11604,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   {
     slug: "detroit-botox-cost-2026",
     thumbnail: "/blog/detroit-botox-cost-2026-hero.jpg",
+    hero: "/blog/detroit-botox-cost-2026-consultation-room.jpg",
     title: "How Much Does Botox Cost in Detroit in 2026? A Complete Price Guide",
     description: "Botox prices in Detroit range from $8 to $20+ per unit. Here's the real 2026 price guide with numbers from actual metro Detroit med spas — know what you're paying before you book.",
     date: "2026-04-22",
@@ -11764,6 +11766,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   {
     slug: "botox-vs-dysport-detroit",
     thumbnail: "/blog/botox-vs-dysport-detroit-hero.jpg",
+    hero: "/blog/botox-vs-dysport-detroit-refreshed-portrait.jpg",
     title: "Botox vs. Dysport in Detroit: What's the Difference and Which One Is Right for You?",
     description: "Botox and Dysport both treat wrinkles — but they're not the same. Detroit med spa patients: here's the real difference, the timing breakdown, and how to choose in 2026.",
     date: "2026-04-23",

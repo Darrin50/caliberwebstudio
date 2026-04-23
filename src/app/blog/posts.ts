@@ -11629,7 +11629,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 </ul>
 </div>
 
-<img src="/blog/detroit-botox-cost-2026-hero.jpg" alt="Black woman receiving a Botox consultation at a Detroit med spa" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/detroit-botox-cost-2026-consultation-room.jpg" alt="Black woman receiving a Botox consultation at a Detroit med spa" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What Does Botox Actually Cost in Detroit in 2026?</h2>
 
@@ -11790,7 +11790,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 </ul>
 </div>
 
-<img src="/blog/botox-vs-dysport-detroit-hero.jpg" alt="Botox and Dysport vials side by side on a clinical tray at a Detroit med spa" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/botox-vs-dysport-detroit-refreshed-portrait.jpg" alt="Botox and Dysport vials side by side on a clinical tray at a Detroit med spa" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Botox vs. Dysport: The Quick Answer</h2>
 

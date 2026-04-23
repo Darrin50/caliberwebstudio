@@ -11849,6 +11849,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>For the Grand Prix on May 30: Botox requires booking no later than May 16 for full results. Dysport gives you until May 20–23. If you're a last-minute scheduler, Dysport has built-in forgiveness. If you plan ahead, either product works fine.</p>
 
+<img src="/blog/botox-vs-dysport-detroit-2.jpg" alt="May calendar with Dysport and Botox appointment dates circled next to a smartphone showing a treatment reminder" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Which Areas Each Is Best For</h2>
 

@@ -17,11 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: `Web Design for ${ind.plural} in Detroit | Caliber Web Studio` },
     description: `Caliber Web Studio builds AI-powered websites for Detroit ${ind.plural.toLowerCase()}. ${ind.subheadline}`,
-    alternates: { canonical: `https://caliberwebstudio.com/industries/${slug}` },
+    alternates: { canonical: `https://www.caliberwebstudio.com/industries/${slug}` },
     openGraph: {
       title: `Web Design for ${ind.plural} | Caliber Web Studio`,
       description: ind.subheadline,
-      url: `https://caliberwebstudio.com/industries/${slug}`,
+      url: `https://www.caliberwebstudio.com/industries/${slug}`,
       type: 'website',
     },
   };

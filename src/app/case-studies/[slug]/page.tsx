@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: { absolute: `${cs.title} — Case Study | Caliber Web Studio` },
     description: `${cs.tagline} ${cs.resultStat} ${cs.resultLabel} ${cs.resultPeriod}. See the full story.`,
-    alternates: { canonical: `https://caliberwebstudio.com/case-studies/${slug}` },
+    alternates: { canonical: `https://www.caliberwebstudio.com/case-studies/${slug}` },
     openGraph: {
       title: `${cs.title} — Case Study | Caliber Web Studio`,
       description: `${cs.tagline} ${cs.resultStat} ${cs.resultLabel} ${cs.resultPeriod}.`,
-      url: `https://caliberwebstudio.com/case-studies/${slug}`,
+      url: `https://www.caliberwebstudio.com/case-studies/${slug}`,
       siteName: 'Caliber Web Studio',
       type: 'article',
       images: [{ url: cs.heroImg, alt: cs.heroAlt }],
@@ -43,11 +43,11 @@ export default async function CaseStudyPage({ params }: Props) {
     headline: `${cs.title} — Case Study`,
     description: `${cs.tagline} ${cs.resultStat} ${cs.resultLabel} ${cs.resultPeriod}.`,
     image: cs.heroImg,
-    url: `https://caliberwebstudio.com/case-studies/${slug}`,
+    url: `https://www.caliberwebstudio.com/case-studies/${slug}`,
     publisher: {
       '@type': 'Organization',
       name: 'Caliber Web Studio',
-      url: 'https://caliberwebstudio.com',
+      url: 'https://www.caliberwebstudio.com',
     },
   };
 

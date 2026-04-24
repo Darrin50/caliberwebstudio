@@ -7,11 +7,11 @@ import { cities } from './cities';
 export const metadata: Metadata = {
   title: { absolute: 'Service Areas | Caliber Web Studio — Metro Detroit Web Design' },
   description: 'Caliber Web Studio builds websites and growth systems for businesses across Metro Detroit. See all cities we serve in Southeast Michigan.',
-  alternates: { canonical: 'https://caliberwebstudio.com/areas' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/areas' },
   openGraph: {
     title: 'Metro Detroit Service Areas | Caliber Web Studio',
     description: 'Professional web design, local SEO, and AI-powered growth systems for businesses across Metro Detroit. See all cities we serve.',
-    url: 'https://caliberwebstudio.com/areas',
+    url: 'https://www.caliberwebstudio.com/areas',
     type: 'website',
   },
 };
@@ -21,11 +21,11 @@ const areasSchema = {
   '@type': 'WebPage',
   name: 'Service Areas — Metro Detroit Web Design | Caliber Web Studio',
   description: 'Caliber Web Studio serves businesses across Metro Detroit with professional web design, local SEO, and AI-powered growth systems.',
-  url: 'https://caliberwebstudio.com/areas',
+  url: 'https://www.caliberwebstudio.com/areas',
   provider: {
     '@type': 'ProfessionalService',
     name: 'Caliber Web Studio',
-    url: 'https://caliberwebstudio.com',
+    url: 'https://www.caliberwebstudio.com',
     telephone: '+13137992315',
     address: {
       '@type': 'PostalAddress',

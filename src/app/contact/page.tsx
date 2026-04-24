@@ -8,11 +8,11 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: { absolute: "Contact | Caliber Web Studio – Book Your Free Strategy Call" },
   description: "Book a free strategy call with Caliber Web Studio. Tell us about your business and we'll put together a custom plan to get you more clients.",
-  alternates: { canonical: "https://caliberwebstudio.com/contact" },
+  alternates: { canonical: "https://www.caliberwebstudio.com/contact" },
   openGraph: {
     title: "Contact | Caliber Web Studio",
     description: "Book a free strategy call and get a custom web growth plan for your business.",
-    url: "https://caliberwebstudio.com/contact",
+    url: "https://www.caliberwebstudio.com/contact",
     type: "website",
   },
 };

@@ -7,11 +7,11 @@ import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: { absolute: 'Refer a Client | Caliber Web Studio — Earn $200 Per Referral' },
   description: 'Know a local business that needs a better website? Send them to Caliber Web Studio and earn $200 for every client that signs up. Simple, fast, and no limits.',
-  alternates: { canonical: 'https://caliberwebstudio.com/referral' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/referral' },
   openGraph: {
     title: 'Refer a Client & Earn $200 | Caliber Web Studio',
     description: 'Send a local business our way. They get a free mockup and a better web presence. You get $200 when they sign up. No limits.',
-    url: 'https://caliberwebstudio.com/referral',
+    url: 'https://www.caliberwebstudio.com/referral',
     type: 'website',
   },
 };

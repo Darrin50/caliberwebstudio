@@ -7,11 +7,11 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: { absolute: 'Sample Builds | Caliber Web Studio' },
   description: 'Live demo sites built for Detroit businesses — barbershops, plumbers, salons, and restaurants. Click through and see exactly what we build.',
-  alternates: { canonical: 'https://caliberwebstudio.com/work' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/work' },
   openGraph: {
     title: 'Sample Builds | Caliber Web Studio',
     description: 'Live demo sites built for Detroit businesses — barbershops, plumbers, salons, and restaurants. Click through and see exactly what we build.',
-    url: 'https://caliberwebstudio.com/work',
+    url: 'https://www.caliberwebstudio.com/work',
     type: 'website',
     images: [{ url: '/logo-full-hero.png', alt: 'Caliber Web Studio Sample Builds', width: 1200, height: 630 }],
   },

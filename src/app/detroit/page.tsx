@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   title: { absolute: 'Detroit | Caliber Web Studio — Built in Detroit, For Detroit' },
   description:
     'Caliber Web Studio is Detroit-built and Detroit-proud. Our mission: help every local business get found online so the city that built the world can be found by it.',
-  alternates: { canonical: 'https://caliberwebstudio.com/detroit' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/detroit' },
   openGraph: {
     title: "Detroit Built The World. We're Making Sure The World Finds It Again.",
     description:
       'Caliber Web Studio — Detroit-rooted digital studio. Helping local businesses get found online.',
-    url: 'https://caliberwebstudio.com/detroit',
+    url: 'https://www.caliberwebstudio.com/detroit',
     type: 'website',
     images: [
       {

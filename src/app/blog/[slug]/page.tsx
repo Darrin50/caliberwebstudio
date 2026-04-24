@@ -17,11 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `https://caliberwebstudio.com/blog/${post.slug}` },
+    alternates: { canonical: `https://www.caliberwebstudio.com/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://caliberwebstudio.com/blog/${post.slug}`,
+      url: `https://www.caliberwebstudio.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
       images: post.thumbnail ? [{ url: post.thumbnail, width: 1200, height: 630, alt: post.title }] : [],
@@ -69,23 +69,23 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     dateModified: post.date,
     wordCount,
     keywords: keywords.join(', '),
-    author: { "@type": "Organization", name: "Caliber Web Studio", url: "https://caliberwebstudio.com" },
+    author: { "@type": "Organization", name: "Caliber Web Studio", url: "https://www.caliberwebstudio.com" },
     publisher: {
       "@type": "Organization",
       name: "Caliber Web Studio",
-      url: "https://caliberwebstudio.com",
-      logo: { "@type": "ImageObject", url: "https://caliberwebstudio.com/logo-full-hero.png" },
+      url: "https://www.caliberwebstudio.com",
+      logo: { "@type": "ImageObject", url: "https://www.caliberwebstudio.com/logo-full-hero.png" },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://caliberwebstudio.com/blog/${post.slug}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.caliberwebstudio.com/blog/${post.slug}` },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://caliberwebstudio.com" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://caliberwebstudio.com/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://caliberwebstudio.com/blog/${post.slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.caliberwebstudio.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.caliberwebstudio.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://www.caliberwebstudio.com/blog/${post.slug}` },
     ],
   };
 

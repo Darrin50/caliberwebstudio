@@ -8,11 +8,11 @@ import { posts } from "./posts";
 export const metadata: Metadata = {
   title: "Blog | Web Design, SEO & AI Tips for Detroit Small Businesses",
   description: "Expert articles on web design, local SEO, AI-powered marketing, and digital growth strategies for Detroit and Metro Michigan small businesses.",
-  alternates: { canonical: "https://caliberwebstudio.com/blog" },
+  alternates: { canonical: "https://www.caliberwebstudio.com/blog" },
   openGraph: {
     title: "Blog | Caliber Web Studio",
     description: "Expert tips on web design, local SEO, and AI marketing for Detroit small businesses.",
-    url: "https://caliberwebstudio.com/blog",
+    url: "https://www.caliberwebstudio.com/blog",
     type: "website",
   },
 };

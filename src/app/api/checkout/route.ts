@@ -28,8 +28,8 @@ export async function POST(req: NextRequest) {
     const session = await stripe.checkout.sessions.create({
       mode: isOneTime ? "payment" : "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: "https://caliberwebstudio.com/thank-you?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: "https://caliberwebstudio.com/pricing",
+      success_url: "https://www.caliberwebstudio.com/thank-you?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url: "https://www.caliberwebstudio.com/pricing",
     });
 
     return NextResponse.json({ url: session.url });

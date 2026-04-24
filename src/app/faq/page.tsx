@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: 'FAQ — Frequently Asked Questions',
   description: 'Answers to the most common questions about Caliber Web Studio — timelines, ownership, pricing, AEO, AI chatbots, and more.',
   alternates: {
-    canonical: 'https://caliberwebstudio.com/faq'
+    canonical: 'https://www.caliberwebstudio.com/faq'
   },
   openGraph: {
     title: 'FAQ | Caliber Web Studio',
     description: 'Straight answers on timelines, ownership, pricing, AEO, and more.',
-    url: 'https://caliberwebstudio.com/faq',
+    url: 'https://www.caliberwebstudio.com/faq',
   },
 };
 

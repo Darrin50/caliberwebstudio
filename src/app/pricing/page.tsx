@@ -9,11 +9,11 @@ import PricingFeatureBreakdown from "@/components/PricingFeatureBreakdown";
 export const metadata: Metadata = {
   title: { absolute: 'Pricing | Caliber Web Studio – Monthly Web & Growth Plans' },
   description: "Simple, transparent monthly pricing for Detroit small businesses. AI-powered website plans starting at $197/mo. $0 down, no surprise fees.",
-  alternates: { canonical: "https://caliberwebstudio.com/pricing" },
+  alternates: { canonical: "https://www.caliberwebstudio.com/pricing" },
   openGraph: {
     title: "Pricing | Caliber Web Studio",
     description: "Monthly website and growth plans starting at $197/mo for Detroit small businesses. Starter, Growth, or Domination.",
-    url: "https://caliberwebstudio.com/pricing",
+    url: "https://www.caliberwebstudio.com/pricing",
     type: "website",
   },
 };
@@ -153,7 +153,7 @@ const itemListSchema = {
         name: "Starter Plan",
         description: "Custom AI-optimized website, AI chatbot, Google Business Profile setup, local SEO and AEO, monthly reporting. $0 down.",
         offers: { "@type": "Offer", price: "197", priceCurrency: "USD", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } },
-        url: "https://caliberwebstudio.com/pricing",
+        url: "https://www.caliberwebstudio.com/pricing",
       },
     },
     {
@@ -164,7 +164,7 @@ const itemListSchema = {
         name: "Growth Plan",
         description: "Everything in Starter plus review management, social media auto-posting, 4 AI blog posts/mo, and monthly strategy call.",
         offers: { "@type": "Offer", price: "397", priceCurrency: "USD", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } },
-        url: "https://caliberwebstudio.com/pricing",
+        url: "https://www.caliberwebstudio.com/pricing",
       },
     },
     {
@@ -175,7 +175,7 @@ const itemListSchema = {
         name: "Domination Plan",
         description: "Everything in Growth plus AI citation tracking, AI phone receptionist, full automation suite, and dedicated account management.",
         offers: { "@type": "Offer", price: "697", priceCurrency: "USD", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } },
-        url: "https://caliberwebstudio.com/pricing",
+        url: "https://www.caliberwebstudio.com/pricing",
       },
     },
     {
@@ -186,7 +186,7 @@ const itemListSchema = {
         name: "Live Google Review Widget",
         description: "Embeddable widget that displays your live Google reviews on any website. Simple iframe/script install.",
         offers: { "@type": "Offer", price: "29", priceCurrency: "USD", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } },
-        url: "https://caliberwebstudio.com/tools",
+        url: "https://www.caliberwebstudio.com/tools",
       },
     },
     {
@@ -197,7 +197,7 @@ const itemListSchema = {
         name: "Embeddable Quote Calculator",
         description: "Interactive pricing calculator that captures leads and quotes automatically on any existing website.",
         offers: { "@type": "Offer", price: "29", priceCurrency: "USD", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } },
-        url: "https://caliberwebstudio.com/tools",
+        url: "https://www.caliberwebstudio.com/tools",
       },
     },
     {
@@ -208,7 +208,7 @@ const itemListSchema = {
         name: "SMS Reminder + Deposit Capture",
         description: "Automated SMS appointment reminders with deposit collection to reduce no-shows by up to 70%.",
         offers: { "@type": "Offer", price: "49", priceCurrency: "USD", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } },
-        url: "https://caliberwebstudio.com/tools",
+        url: "https://www.caliberwebstudio.com/tools",
       },
     },
     {
@@ -219,7 +219,7 @@ const itemListSchema = {
         name: "AI Lead Capture Chatbot",
         description: "Conversational AI chatbot that qualifies leads and captures contact info 24/7 on any website.",
         offers: { "@type": "Offer", price: "49", priceCurrency: "USD", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } },
-        url: "https://caliberwebstudio.com/tools",
+        url: "https://www.caliberwebstudio.com/tools",
       },
     },
   ],
@@ -229,8 +229,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://caliberwebstudio.com" },
-    { "@type": "ListItem", position: 2, name: "Pricing", item: "https://caliberwebstudio.com/pricing" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.caliberwebstudio.com" },
+    { "@type": "ListItem", position: 2, name: "Pricing", item: "https://www.caliberwebstudio.com/pricing" },
   ],
 };
 

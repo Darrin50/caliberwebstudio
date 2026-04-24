@@ -7,11 +7,11 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: { absolute: 'Our Guarantee | Caliber Web Studio — Zero Risk' },
   description: 'We build your site before you pay. Unlimited revisions. No contracts. Cancel anytime. Read exactly what Caliber Web Studio promises every client.',
-  alternates: { canonical: 'https://caliberwebstudio.com/guarantee' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/guarantee' },
   openGraph: {
     title: 'The Caliber Guarantee — Zero Risk, Zero Upfront',
     description: '$0 down. Unlimited revisions. No contracts. See exactly what we promise every client.',
-    url: 'https://caliberwebstudio.com/guarantee',
+    url: 'https://www.caliberwebstudio.com/guarantee',
     type: 'website',
   },
 };

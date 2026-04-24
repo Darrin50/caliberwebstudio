@@ -6,11 +6,11 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: { absolute: 'Review Automation | Caliber Web Studio' },
   description: 'AI-powered review automation for Detroit small businesses. Automatically ask every customer for a 5-star review at the perfect time — and route unhappy customers to you privately first.',
-  alternates: { canonical: 'https://caliberwebstudio.com/services/review-automation' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/services/review-automation' },
   openGraph: {
     title: 'Review Automation | Caliber Web Studio',
     description: 'AI-powered review automation for Detroit small businesses. Automatically ask every customer for a 5-star review at the perfect time.',
-    url: 'https://caliberwebstudio.com/services/review-automation',
+    url: 'https://www.caliberwebstudio.com/services/review-automation',
     type: 'website',
   },
 };

@@ -7,11 +7,11 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: { absolute: 'Self-Serve Tools for Local Businesses | Caliber Web Studio' },
   description: 'Add powerful tools to your existing website starting at $29/mo. Live Google Review Widget, Quote Calculator, SMS Appointment Reminders, and AI Chatbot — no full plan required.',
-  alternates: { canonical: 'https://caliberwebstudio.com/tools' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/tools' },
   openGraph: {
     title: 'Self-Serve Tools for Local Businesses | Caliber Web Studio',
     description: 'Add powerful tools to any existing website. Google Review Widget at $29/mo, Quote Calculator at $29/mo, SMS Reminders at $49/mo, AI Chatbot at $49/mo.',
-    url: 'https://caliberwebstudio.com/tools',
+    url: 'https://www.caliberwebstudio.com/tools',
     type: 'website',
   },
 };
@@ -170,8 +170,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://caliberwebstudio.com' },
-    { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://caliberwebstudio.com/tools' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.caliberwebstudio.com' },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://www.caliberwebstudio.com/tools' },
   ],
 };
 
@@ -180,7 +180,7 @@ const productSchema = {
   '@type': 'ItemList',
   name: 'Caliber Web Studio Self-Serve Tools',
   description: 'Monthly add-on tools for local business websites. Add to your existing site starting at $29/mo.',
-  url: 'https://caliberwebstudio.com/tools',
+  url: 'https://www.caliberwebstudio.com/tools',
   itemListElement: tools.map((tool, i) => ({
     '@type': 'ListItem',
     position: i + 1,

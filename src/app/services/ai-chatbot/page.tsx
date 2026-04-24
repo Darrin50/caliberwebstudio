@@ -6,11 +6,11 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: { absolute: 'AI Chatbot for Small Business | Caliber Web Studio | Detroit, MI' },
   description: 'Add an AI chatbot to your website that answers questions, books appointments, and captures leads 24/7. Built and trained on your business — from Caliber Web Studio.',
-  alternates: { canonical: 'https://caliberwebstudio.com/services/ai-chatbot' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/services/ai-chatbot' },
   openGraph: {
     title: 'AI Chatbot for Small Business | Caliber Web Studio',
     description: 'An AI employee that never sleeps. Answers FAQs, captures leads, and books appointments — 24/7/365.',
-    url: 'https://caliberwebstudio.com/services/ai-chatbot',
+    url: 'https://www.caliberwebstudio.com/services/ai-chatbot',
     type: 'website',
   },
 };

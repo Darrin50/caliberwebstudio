@@ -7,11 +7,11 @@ import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: { absolute: 'Results | Caliber Web Studio — What Our Clients See' },
   description: 'Real outcomes from Detroit local businesses after launching with Caliber Web Studio — more Google calls, more bookings, more reviews, more revenue.',
-  alternates: { canonical: 'https://caliberwebstudio.com/results' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/results' },
   openGraph: {
     title: 'Results | Caliber Web Studio',
     description: 'More Google calls. More booked appointments. More 5-star reviews. See what Detroit businesses experience after working with us.',
-    url: 'https://caliberwebstudio.com/results',
+    url: 'https://www.caliberwebstudio.com/results',
     type: 'website',
   },
 };

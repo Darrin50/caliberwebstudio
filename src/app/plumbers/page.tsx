@@ -16,19 +16,19 @@ export const metadata: Metadata = {
     'local SEO for plumbers',
   ],
   alternates: {
-    canonical: 'https://caliberwebstudio.com/plumbers',
+    canonical: 'https://www.caliberwebstudio.com/plumbers',
   },
   openGraph: {
     title: 'Plumber Website Design | Caliber Web Studio',
     description:
       'When a pipe bursts at 2am, homeowners call the first plumber they find on Google. We build the site that puts you first. Free demo in 24 hours.',
-    url: 'https://caliberwebstudio.com/plumbers',
+    url: 'https://www.caliberwebstudio.com/plumbers',
     siteName: 'Caliber Web Studio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://caliberwebstudio.com/images/og-plumbers.jpg',
+        url: 'https://www.caliberwebstudio.com/images/og-plumbers.jpg',
         width: 1200,
         height: 630,
         alt: 'Plumber Website Design by Caliber Web Studio',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'Plumber Website Design | Caliber Web Studio',
     description:
       'When a pipe bursts at 2am, homeowners call the first plumber they find on Google. We build the site that puts you first.',
-    images: ['https://caliberwebstudio.com/images/og-plumbers.jpg'],
+    images: ['https://www.caliberwebstudio.com/images/og-plumbers.jpg'],
   },
 };
 
@@ -53,7 +53,7 @@ const schemaOrg = {
   provider: {
     '@type': 'LocalBusiness',
     name: 'Caliber Web Studio',
-    url: 'https://caliberwebstudio.com',
+    url: 'https://www.caliberwebstudio.com',
     telephone: '+13138005000',
     address: {
       '@type': 'PostalAddress',

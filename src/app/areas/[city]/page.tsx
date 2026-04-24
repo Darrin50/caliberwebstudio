@@ -24,11 +24,11 @@ export async function generateMetadata({
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: `https://caliberwebstudio.com/areas/${slug}` },
+    alternates: { canonical: `https://www.caliberwebstudio.com/areas/${slug}` },
     openGraph: {
       title,
       description,
-      url: `https://caliberwebstudio.com/areas/${slug}`,
+      url: `https://www.caliberwebstudio.com/areas/${slug}`,
       type: 'website',
     },
     twitter: {
@@ -88,11 +88,11 @@ function buildSchema(cityData: CityData) {
         '@type': 'WebPage',
         name: `${cityData.name} Web Design & Website Designer | Caliber Web Studio`,
         description: `Professional website designer serving ${cityData.name}, MI businesses. Custom web design, local SEO, AI chatbots, and review automation.`,
-        url: `https://caliberwebstudio.com/areas/${cityData.slug}`,
+        url: `https://www.caliberwebstudio.com/areas/${cityData.slug}`,
         provider: {
           '@type': 'ProfessionalService',
           name: 'Caliber Web Studio',
-          url: 'https://caliberwebstudio.com',
+          url: 'https://www.caliberwebstudio.com',
           telephone: '+13137992315',
           address: {
             '@type': 'PostalAddress',
@@ -113,9 +113,9 @@ function buildSchema(cityData: CityData) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://caliberwebstudio.com' },
-          { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://caliberwebstudio.com/areas' },
-          { '@type': 'ListItem', position: 3, name: `${cityData.name} Web Design`, item: `https://caliberwebstudio.com/areas/${cityData.slug}` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.caliberwebstudio.com' },
+          { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://www.caliberwebstudio.com/areas' },
+          { '@type': 'ListItem', position: 3, name: `${cityData.name} Web Design`, item: `https://www.caliberwebstudio.com/areas/${cityData.slug}` },
         ],
       },
     ],

@@ -8,11 +8,11 @@ import CheckoutButton from '@/components/CheckoutButton';
 export const metadata: Metadata = {
   title: { absolute: 'Startup Complete | Caliber Web Studio — Launch in 48 Hours' },
   description: 'Go from zero to fully operational in 48 hours. Website, brand kit, AI systems, Google Business Profile, and LLC filing assistance — all done for you.',
-  alternates: { canonical: 'https://caliberwebstudio.com/startup-complete' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/startup-complete' },
   openGraph: {
     title: 'Startup Complete — Launch Your Business in 48 Hours',
     description: 'Everything you need to launch: website, brand, AI systems, Google setup, and legal filing assistance. One package. 48-hour delivery.',
-    url: 'https://caliberwebstudio.com/startup-complete',
+    url: 'https://www.caliberwebstudio.com/startup-complete',
     type: 'website',
   },
 };

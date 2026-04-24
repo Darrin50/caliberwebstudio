@@ -7,11 +7,11 @@ import { ScrollReveal, ScrollRevealGroup } from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: { absolute: 'Detroit Web Design Services | Websites, SEO & AI Chatbots | Caliber Web Studio' },
   description: 'Detroit web design services built for local business growth — custom websites, AI chatbots, local SEO, review automation, and Google Business Profile management. Starting at $197/mo.',
-  alternates: { canonical: 'https://caliberwebstudio.com/services' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/services' },
   openGraph: {
     title: 'Detroit Web Design Services | Websites, SEO & AI Chatbots | Caliber Web Studio',
     description: 'AI-powered websites, chatbots, review automation, and local SEO for Detroit businesses. One flat monthly rate, zero upfront.',
-    url: 'https://caliberwebstudio.com/services',
+    url: 'https://www.caliberwebstudio.com/services',
     type: 'website',
     images: [{ url: '/logo-full-hero.png', alt: 'Caliber Web Studio Services', width: 1200, height: 630 }],
   },
@@ -89,13 +89,13 @@ const servicesSchema = {
   "@type": "ItemList",
   name: "Caliber Web Studio Services",
   description: "AI-powered web services for Detroit local businesses — custom websites, chatbots, SEO, review automation, and more.",
-  url: "https://caliberwebstudio.com/services",
+  url: "https://www.caliberwebstudio.com/services",
   itemListElement: services.map((service, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: service.title,
     description: service.body,
-    url: service.href ? `https://caliberwebstudio.com${service.href}` : "https://caliberwebstudio.com/services",
+    url: service.href ? `https://www.caliberwebstudio.com${service.href}` : "https://www.caliberwebstudio.com/services",
   })),
 };
 

@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: { absolute: "Terms of Service | Caliber Web Studio" },
   description:
     "Terms of Service for Caliber Web Studio, operated by High Caliber Operations LLC. Monthly web design and growth plans for Detroit small businesses.",
-  alternates: { canonical: "https://caliberwebstudio.com/terms" },
+  alternates: { canonical: "https://www.caliberwebstudio.com/terms" },
   openGraph: {
     title: "Terms of Service | Caliber Web Studio",
     description:
       "Terms of Service for Caliber Web Studio — monthly website and growth plans for Detroit small businesses.",
-    url: "https://caliberwebstudio.com/terms",
+    url: "https://www.caliberwebstudio.com/terms",
     type: "website",
   },
 };
@@ -458,7 +458,7 @@ export default function TermsPage() {
                 </a>
                 <br />
                 <a
-                  href="https://caliberwebstudio.com"
+                  href="https://www.caliberwebstudio.com"
                   style={{ color: "var(--accent)" }}
                 >
                   caliberwebstudio.com

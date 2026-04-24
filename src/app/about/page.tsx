@@ -10,11 +10,11 @@ import AboutStoryVideo from '@/components/AboutStoryVideo';
 export const metadata: Metadata = {
   title: { absolute: 'About | Caliber Web Studio — Built in Detroit' },
   description: 'Caliber Web Studio is a Detroit-rooted digital studio founded by Darrin Singer. We build enterprise-grade web systems for local businesses — not templates, not agencies, not excuses.',
-  alternates: { canonical: 'https://caliberwebstudio.com/about' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/about' },
   openGraph: {
     title: 'About Caliber Web Studio — Built in Detroit. Obsessed with Results.',
     description: 'Founded by Darrin Singer in Detroit, MI. We engineer growth systems for local businesses at a price that finally makes sense.',
-    url: 'https://caliberwebstudio.com/about',
+    url: 'https://www.caliberwebstudio.com/about',
     type: 'website',
     images: [{ url: '/logo-full-hero.png', alt: 'Caliber Web Studio — Built in Detroit', width: 1200, height: 630 }],
   },
@@ -40,7 +40,7 @@ const aboutSchema = {
   '@type': 'AboutPage',
   name: 'About Caliber Web Studio',
   description: 'Caliber Web Studio is a Detroit-based AI-powered web studio founded by Darrin Singer.',
-  url: 'https://caliberwebstudio.com/about',
+  url: 'https://www.caliberwebstudio.com/about',
   mainEntity: {
     '@type': 'ProfessionalService',
     name: 'Caliber Web Studio',
@@ -48,7 +48,7 @@ const aboutSchema = {
     founder: { '@type': 'Person', name: 'Darrin Singer' },
     address: { '@type': 'PostalAddress', addressLocality: 'Detroit', addressRegion: 'MI', addressCountry: 'US' },
     telephone: '+13137992315',
-    url: 'https://caliberwebstudio.com',
+    url: 'https://www.caliberwebstudio.com',
   },
 };
 

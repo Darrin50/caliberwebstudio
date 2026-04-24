@@ -4,7 +4,7 @@ import { industries } from "@/app/industries/data";
 import { cities } from "@/app/areas/cities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://caliberwebstudio.com";
+  const baseUrl = "https://www.caliberwebstudio.com";
 
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,

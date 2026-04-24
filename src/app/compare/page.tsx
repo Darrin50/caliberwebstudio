@@ -7,11 +7,11 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: { absolute: 'Caliber vs. DIY vs. Agency | Caliber Web Studio' },
   description: 'How does Caliber Web Studio compare to Wix, Squarespace, GoDaddy, and traditional web agencies? See the honest side-by-side breakdown.',
-  alternates: { canonical: 'https://caliberwebstudio.com/compare' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/compare' },
   openGraph: {
     title: 'Caliber vs. DIY Builders vs. Traditional Agencies',
     description: 'The honest comparison: what you actually get from Wix, an agency, a freelancer, and Caliber Web Studio.',
-    url: 'https://caliberwebstudio.com/compare',
+    url: 'https://www.caliberwebstudio.com/compare',
     type: 'website',
   },
 };

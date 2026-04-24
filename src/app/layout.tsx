@@ -28,7 +28,7 @@ const spaceMono = Space_Mono({
 
 /* ─── SEO / AEO / GEO: Full Metadata ─── */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://caliberwebstudio.com"),
+  metadataBase: new URL("https://www.caliberwebstudio.com"),
   title: {
     default: "Caliber Web Studio | Detroit Web Design & AI-Powered Websites",
     template: "%s | Caliber Web Studio",
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
     "web designer Detroit MI",
     "website designer near me Detroit",
   ],
-  authors: [{ name: "Darrin Singer", url: "https://caliberwebstudio.com" }],
+  authors: [{ name: "Darrin Singer", url: "https://www.caliberwebstudio.com" }],
   creator: "Caliber Web Studio",
   publisher: "High Caliber Operations LLC",
   formatDetection: { telephone: true, email: true },
 
   /* Canonical & Alternates */
   alternates: {
-    canonical: "https://caliberwebstudio.com",
+    canonical: "https://www.caliberwebstudio.com",
   },
 
   /* Open Graph */
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "Caliber Web Studio | Detroit Web Design & AI-Powered Websites",
     description:
       "Detroit\u2019s premier AI-powered web agency. High-performance websites that rank, convert, and grow your business. $0 down \u2014 plans from $197/mo.",
-    url: "https://caliberwebstudio.com",
+    url: "https://www.caliberwebstudio.com",
     siteName: "Caliber Web Studio",
     locale: "en_US",
     type: "website",
@@ -125,12 +125,12 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://caliberwebstudio.com/#organization",
+  "@id": "https://www.caliberwebstudio.com/#organization",
   name: "Caliber Web Studio",
   alternateName: "High Caliber Operations LLC",
-  url: "https://caliberwebstudio.com",
-  logo: "https://caliberwebstudio.com/logo-full-hero.png",
-  image: "https://caliberwebstudio.com/logo-full-hero.png",
+  url: "https://www.caliberwebstudio.com",
+  logo: "https://www.caliberwebstudio.com/logo-full-hero.png",
+  image: "https://www.caliberwebstudio.com/logo-full-hero.png",
   email: "darrin@caliberwebstudio.com",
   telephone: "+13137992315",
   description:
@@ -139,7 +139,7 @@ const localBusinessSchema = {
     "@type": "Person",
     name: "Darrin Singer",
     jobTitle: "Founder & Lead Developer",
-    worksFor: { "@id": "https://caliberwebstudio.com/#organization" },
+    worksFor: { "@id": "https://www.caliberwebstudio.com/#organization" },
   },
   address: {
     "@type": "PostalAddress",
@@ -257,7 +257,7 @@ const localBusinessSchema = {
           "Go from idea to fully operational business in 48 hours. Includes LLC formation assistance, EIN registration guidance, business bank account setup guidance, domain + professional email, full 5–7 page website, AI chatbot, Google Business Profile, brand kit, social media accounts (3 platforms), 30 days of content, email/SMS automation, and pitch deck + one-pager.",
         price: "5000",
         priceCurrency: "USD",
-        url: "https://caliberwebstudio.com/startup-complete",
+        url: "https://www.caliberwebstudio.com/startup-complete",
       },
     ],
   },
@@ -269,10 +269,10 @@ const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Caliber Web Studio",
-  url: "https://caliberwebstudio.com",
+  url: "https://www.caliberwebstudio.com",
   description:
     "Detroit\u2019s premier AI-powered web agency. High-performance websites that rank, convert, and grow your business.",
-  publisher: { "@id": "https://caliberwebstudio.com/#organization" },
+  publisher: { "@id": "https://www.caliberwebstudio.com/#organization" },
 };
 
 /* ─── JSON-LD: WebPage Schema ─── */
@@ -280,11 +280,11 @@ const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Caliber Web Studio \u2014 Detroit Web Design & AI-Powered Websites",
-  url: "https://caliberwebstudio.com",
+  url: "https://www.caliberwebstudio.com",
   description:
     "Caliber Web Studio is Detroit\u2019s premier AI-powered web agency. We build high-performance websites that rank on Google, convert visitors, and grow local businesses.",
-  isPartOf: { "@type": "WebSite", url: "https://caliberwebstudio.com" },
-  about: { "@id": "https://caliberwebstudio.com/#organization" },
+  isPartOf: { "@type": "WebSite", url: "https://www.caliberwebstudio.com" },
+  about: { "@id": "https://www.caliberwebstudio.com/#organization" },
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: [
@@ -302,7 +302,7 @@ const webPageSchema = {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://caliberwebstudio.com",
+        item: "https://www.caliberwebstudio.com",
       },
     ],
   },

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: { absolute: "Thank You | Caliber Web Studio" },
   description: "Your payment was received. Welcome to Caliber Web Studio — we'll be in touch within 24 hours to get started.",
-  alternates: { canonical: "https://caliberwebstudio.com/thank-you" },
+  alternates: { canonical: "https://www.caliberwebstudio.com/thank-you" },
 };
 
 export default function ThankYouPage() {

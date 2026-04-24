@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | Caliber Web Studio" },
   description:
     "Privacy Policy for Caliber Web Studio. Learn how we collect, use, and protect your personal data.",
-  alternates: { canonical: "https://caliberwebstudio.com/privacy" },
+  alternates: { canonical: "https://www.caliberwebstudio.com/privacy" },
   openGraph: {
     title: "Privacy Policy | Caliber Web Studio",
     description:
       "Privacy Policy for Caliber Web Studio — how we collect, use, and protect your data.",
-    url: "https://caliberwebstudio.com/privacy",
+    url: "https://www.caliberwebstudio.com/privacy",
     type: "website",
   },
 };
@@ -562,7 +562,7 @@ export default function PrivacyPage() {
                 </a>
                 <br />
                 <a
-                  href="https://caliberwebstudio.com"
+                  href="https://www.caliberwebstudio.com"
                   style={{ color: "var(--accent)" }}
                 >
                   caliberwebstudio.com

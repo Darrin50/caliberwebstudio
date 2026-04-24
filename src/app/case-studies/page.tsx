@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: { absolute: 'Our Work | Caliber Web Studio' },
   description:
     'Real results for real Detroit businesses. See how Caliber Web Studio transformed local businesses with websites that rank, convert, and generate revenue.',
-  alternates: { canonical: 'https://caliberwebstudio.com/case-studies' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/case-studies' },
   openGraph: {
     title: 'Our Work | Caliber Web Studio',
     description:
       'Real results for real Detroit businesses — 340% more bookings, #1 Google rankings, 200% more online orders. See how we do it.',
-    url: 'https://caliberwebstudio.com/case-studies',
+    url: 'https://www.caliberwebstudio.com/case-studies',
     siteName: 'Caliber Web Studio',
     type: 'website',
   },
@@ -24,11 +24,11 @@ const jsonLd = {
   '@type': 'CollectionPage',
   name: 'Our Work | Caliber Web Studio',
   description: 'Case studies showing real results for Detroit small businesses.',
-  url: 'https://caliberwebstudio.com/case-studies',
+  url: 'https://www.caliberwebstudio.com/case-studies',
   publisher: {
     '@type': 'Organization',
     name: 'Caliber Web Studio',
-    url: 'https://caliberwebstudio.com',
+    url: 'https://www.caliberwebstudio.com',
   },
 };
 

@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: { absolute: 'Our Process | Caliber Web Studio' },
   description: 'See exactly how Caliber Web Studio builds your AI-powered website â free mockup first, you approve, then we launch in 24 hours.',
-  alternates: { canonical: 'https://caliberwebstudio.com/process' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/process' },
 };
 
 const steps = [

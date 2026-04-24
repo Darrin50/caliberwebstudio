@@ -7,11 +7,11 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Website Design Guides by Industry | Caliber Web Studio Detroit",
   description: "Industry-specific website design guides for Detroit small businesses — barbershops, plumbers, salons, restaurants, auto shops, law firms, dentists, real estate, and gyms.",
-  alternates: { canonical: "https://caliberwebstudio.com/blog/industry-guide" },
+  alternates: { canonical: "https://www.caliberwebstudio.com/blog/industry-guide" },
   openGraph: {
     title: "Website Design Guides by Industry | Caliber Web Studio Detroit",
     description: "Nine deep-dive guides on what a high-converting website must include for your specific industry. Built for Detroit businesses that want results, not templates.",
-    url: "https://caliberwebstudio.com/blog/industry-guide",
+    url: "https://www.caliberwebstudio.com/blog/industry-guide",
     type: "website",
     images: [{ url: "/logo-full-hero.png", alt: "Caliber Web Studio Industry Guides", width: 1200, height: 630 }],
   },
@@ -115,17 +115,17 @@ const hubSchema = {
   "@type": "CollectionPage",
   name: "Website Design Guides by Industry — Caliber Web Studio Detroit",
   description: "Industry-specific website design guides for Detroit small businesses covering barbershops, plumbers, salons, restaurants, auto shops, law firms, dental practices, real estate agents, and gyms.",
-  url: "https://caliberwebstudio.com/blog/industry-guide",
+  url: "https://www.caliberwebstudio.com/blog/industry-guide",
   publisher: {
     "@type": "Organization",
     name: "Caliber Web Studio",
-    url: "https://caliberwebstudio.com",
-    logo: { "@type": "ImageObject", url: "https://caliberwebstudio.com/logo-full-hero.png" },
+    url: "https://www.caliberwebstudio.com",
+    logo: { "@type": "ImageObject", url: "https://www.caliberwebstudio.com/logo-full-hero.png" },
   },
   hasPart: industries.map((ind) => ({
     "@type": "Article",
     name: `Website Design for ${ind.title} in Detroit`,
-    url: `https://caliberwebstudio.com/blog/${ind.slug}`,
+    url: `https://www.caliberwebstudio.com/blog/${ind.slug}`,
   })),
 };
 
@@ -139,7 +139,7 @@ const itemListSchema = {
     "@type": "ListItem",
     position: i + 1,
     name: `Website Design for ${ind.title} in Detroit`,
-    url: `https://caliberwebstudio.com/blog/${ind.slug}`,
+    url: `https://www.caliberwebstudio.com/blog/${ind.slug}`,
   })),
 };
 

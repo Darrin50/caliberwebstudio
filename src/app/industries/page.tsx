@@ -7,7 +7,7 @@ import IndustriesGrid from './IndustriesGrid';
 export const metadata: Metadata = {
   title: { absolute: 'Industries We Serve | Caliber Web Studio — Detroit Local Business' },
   description: 'Caliber Web Studio builds AI-powered websites for barbershops, restaurants, plumbers, salons, contractors, and dentists in Detroit and Metro Detroit.',
-  alternates: { canonical: 'https://caliberwebstudio.com/industries' },
+  alternates: { canonical: 'https://www.caliberwebstudio.com/industries' },
 };
 
 export default function IndustriesPage() {

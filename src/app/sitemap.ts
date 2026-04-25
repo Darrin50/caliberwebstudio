@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { posts } from "@/app/blog/posts";
 import { industries } from "@/app/industries/data";
 import { cities } from "@/app/areas/cities";
+import { ALL_DEMO_SLUGS } from "@/lib/demos-library-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.caliberwebstudio.com";
@@ -32,6 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: priorityCities.has(city.slug) ? 0.9 : 0.8,
   }));
 
+  const demoEntries: MetadataRoute.Sitemap = ALL_DEMO_SLUGS.map((slug) => ({
+    url: `${baseUrl}/demos/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -54,5 +62,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryEntries,
     ...areaEntries,
     ...blogEntries,
+    ...demoEntries,
   ];
 }

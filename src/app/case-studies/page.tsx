@@ -2,17 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import { caseStudies } from './data';
+import { portfolioDemos } from '@/lib/demos-library-data';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Our Work | Caliber Web Studio' },
+  title: { absolute: 'Demo Library | Caliber Web Studio' },
   description:
-    'Real results for real Detroit businesses. See how Caliber Web Studio transformed local businesses with websites that rank, convert, and generate revenue.',
+    'Explore Caliber Web Studio\'s demo library — illustrative website samples for barbershops, salons, restaurants, plumbing companies, and medical spas across Metro Detroit.',
   alternates: { canonical: 'https://www.caliberwebstudio.com/case-studies' },
   openGraph: {
-    title: 'Our Work | Caliber Web Studio',
+    title: 'Demo Library | Caliber Web Studio',
     description:
-      'Real results for real Detroit businesses — 340% more bookings, #1 Google rankings, 200% more online orders. See how we do it.',
+      'Illustrative demo websites showing what a Caliber Web Studio build looks like for Detroit-area local businesses.',
     url: 'https://www.caliberwebstudio.com/case-studies',
     siteName: 'Caliber Web Studio',
     type: 'website',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Our Work | Caliber Web Studio',
-  description: 'Case studies showing real results for Detroit small businesses.',
+  name: 'Demo Library | Caliber Web Studio',
+  description: 'Illustrative website demo samples built by Caliber Web Studio for Detroit-area local businesses.',
   url: 'https://www.caliberwebstudio.com/case-studies',
   publisher: {
     '@type': 'Organization',
@@ -32,13 +32,21 @@ const jsonLd = {
   },
 };
 
-const aggregateStats = [
-  { value: '50+', label: 'Websites Built' },
-  { value: '4.9/5', label: 'Client Rating' },
-  { value: '$2.1M+', label: 'Revenue Generated for Clients' },
-];
+const industryColors: Record<string, string> = {
+  'Barbershop': '#C9A84C',
+  'Natural Hair Salon': '#C9956C',
+  'Soul Food Restaurant': '#D4A017',
+  'Plumbing / Home Services': '#E8631A',
+};
 
-export default function CaseStudiesPage() {
+const industryHeroImgs: Record<string, string> = {
+  'Barbershop': 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&auto=format&fit=crop&q=80',
+  'Natural Hair Salon': 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&auto=format&fit=crop&q=80',
+  'Soul Food Restaurant': 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop&q=80',
+  'Plumbing / Home Services': 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&auto=format&fit=crop&q=80',
+};
+
+export default function DemoLibraryPage() {
   return (
     <>
       <script
@@ -68,7 +76,7 @@ export default function CaseStudiesPage() {
             textTransform: 'uppercase',
             color: 'var(--chrome)',
             marginBottom: '24px',
-          }}>Client Results</p>
+          }}>Demo Library</p>
           <h1 style={{
             fontFamily: 'Syne, sans-serif',
             fontWeight: 800,
@@ -77,17 +85,17 @@ export default function CaseStudiesPage() {
             color: 'var(--white)',
             marginBottom: '24px',
           }}>
-            Real Results for<br />Real Businesses.
+            See What We Build.
           </h1>
           <p style={{
             fontSize: 'clamp(16px,2vw,20px)',
             color: 'var(--chrome)',
-            maxWidth: '600px',
+            maxWidth: '620px',
             margin: '0 auto 48px',
             lineHeight: 1.7,
           }}>
-            See how Detroit businesses transformed their online presence with Caliber Web Studio.
-            Every number below is real. Every site is live.
+            Illustrative demo websites for Detroit-area local businesses — barbershops, salons, restaurants, home services, and med spas.
+            These are sample builds, not live client sites.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{
@@ -118,221 +126,246 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* ── Aggregate Results Banner ── */}
+        {/* ── Disclaimer Banner ── */}
         <section style={{
+          background: 'rgba(255,255,255,0.03)',
           borderBottom: '1px solid var(--border)',
-          background: 'rgba(30,61,143,0.06)',
+          padding: '16px clamp(20px,5vw,60px)',
+          textAlign: 'center',
         }}>
-          <div style={{
-            maxWidth: '900px',
-            margin: '0 auto',
-            padding: 'clamp(36px,5vw,56px) clamp(20px,5vw,60px)',
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '32px',
+          <p style={{
+            fontFamily: 'Space Mono, monospace',
+            fontSize: '10px',
+            letterSpacing: '1.5px',
+            color: 'var(--chrome)',
+            margin: 0,
           }}>
-            {aggregateStats.map((stat, i) => (
-              <div key={i} style={{ textAlign: 'center' }}>
-                <div style={{
-                  fontFamily: 'Syne, sans-serif',
-                  fontWeight: 800,
-                  fontSize: 'clamp(32px,4vw,52px)',
-                  color: 'var(--white)',
-                  lineHeight: 1,
-                  marginBottom: '8px',
-                }}>{stat.value}</div>
-                <div style={{
-                  fontFamily: 'Space Mono, monospace',
-                  fontSize: '10px',
-                  letterSpacing: '2px',
-                  textTransform: 'uppercase',
-                  color: 'var(--chrome)',
-                }}>{stat.label}</div>
-              </div>
-            ))}
-          </div>
+            ✦ All demos below use illustrative brand names, placeholder photos, and example content — not real businesses or real data.
+          </p>
         </section>
 
-        {/* ── Case Study Cards ── */}
+        {/* ── Portfolio Demo Cards ── */}
         <section style={{
           maxWidth: '1200px',
           margin: '0 auto',
           padding: 'clamp(60px,8vw,100px) clamp(20px,5vw,60px)',
         }}>
+          <p style={{
+            fontFamily: 'Space Mono, monospace',
+            fontSize: '10px',
+            letterSpacing: '3px',
+            textTransform: 'uppercase',
+            color: 'var(--chrome)',
+            marginBottom: '32px',
+          }}>Local Business Demos</p>
           <div className="cs-card-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(520px, 1fr))',
             gap: '32px',
           }}>
-            {caseStudies.map((cs) => (
-              <article key={cs.slug} className="cs-card" style={{
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid var(--border)',
-                borderRadius: '12px',
-                overflow: 'hidden',
-              }}>
-                {/* Card Image */}
-                <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden' }}>
-                  <img
-                    src={cs.cardImg}
-                    alt={cs.heroAlt}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                  />
-                  <div style={{
-                    position: 'absolute', inset: 0,
-                    background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%)',
-                  }} />
-                  {/* Result stat badge */}
-                  <div style={{
-                    position: 'absolute',
-                    top: '20px',
-                    right: '20px',
-                    background: 'rgba(0,0,0,0.8)',
-                    backdropFilter: 'blur(8px)',
-                    border: `1px solid ${cs.accentColor}50`,
-                    borderRadius: '10px',
-                    padding: '12px 18px',
-                    textAlign: 'center',
-                  }}>
+            {portfolioDemos.map((demo) => {
+              const accent = industryColors[demo.industry] ?? '#A8B8C8';
+              const img = industryHeroImgs[demo.industry] ?? '';
+              return (
+                <article key={demo.slug} className="cs-card" style={{
+                  background: 'rgba(255,255,255,0.03)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '12px',
+                  overflow: 'hidden',
+                }}>
+                  {/* Card Image */}
+                  <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden' }}>
+                    {img && (
+                      <img
+                        src={img}
+                        alt={`${demo.fakeName} demo preview`}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      />
+                    )}
                     <div style={{
-                      fontFamily: 'Syne, sans-serif',
-                      fontWeight: 800,
-                      fontSize: '22px',
-                      color: cs.accentColor,
-                      lineHeight: 1,
-                    }}>{cs.resultStat}</div>
+                      position: 'absolute', inset: 0,
+                      background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%)',
+                    }} />
+                    <div style={{ position: 'absolute', bottom: '20px', left: '20px' }}>
+                      <span style={{
+                        fontFamily: 'Space Mono, monospace',
+                        fontSize: '10px',
+                        letterSpacing: '2px',
+                        textTransform: 'uppercase',
+                        color: 'rgba(255,255,255,0.7)',
+                        background: 'rgba(0,0,0,0.5)',
+                        backdropFilter: 'blur(4px)',
+                        padding: '5px 10px',
+                        borderRadius: '4px',
+                      }}>{demo.industry}</span>
+                    </div>
                     <div style={{
-                      fontFamily: 'Space Mono, monospace',
-                      fontSize: '8px',
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.7)',
-                      marginTop: '4px',
-                      lineHeight: 1.3,
-                    }}>{cs.resultLabel}</div>
-                  </div>
-                  {/* Industry tag */}
-                  <div style={{ position: 'absolute', bottom: '20px', left: '20px' }}>
-                    <span style={{
-                      fontFamily: 'Space Mono, monospace',
-                      fontSize: '10px',
-                      letterSpacing: '2px',
-                      textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.7)',
-                      background: 'rgba(0,0,0,0.5)',
-                      backdropFilter: 'blur(4px)',
-                      padding: '5px 10px',
-                      borderRadius: '4px',
-                    }}>{cs.industry}</span>
-                  </div>
-                </div>
-
-                {/* Card Content */}
-                <div style={{ padding: '28px 28px 24px' }}>
-                  <h2 style={{
-                    fontFamily: 'Syne, sans-serif',
-                    fontWeight: 800,
-                    fontSize: 'clamp(20px,2.5vw,26px)',
-                    color: 'var(--white)',
-                    marginBottom: '8px',
-                    lineHeight: 1.2,
-                  }}>{cs.title}</h2>
-                  <p style={{
-                    fontFamily: 'Syne, sans-serif',
-                    fontWeight: 600,
-                    fontSize: '14px',
-                    color: cs.accentColor,
-                    marginBottom: '16px',
-                  }}>{cs.tagline}</p>
-
-                  {/* Before / After */}
-                  <div style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                      position: 'absolute',
+                      top: '16px',
+                      right: '16px',
+                      background: 'rgba(0,0,0,0.7)',
+                      border: '1px solid rgba(255,255,255,0.15)',
+                      borderRadius: '6px',
+                      padding: '6px 12px',
+                    }}>
                       <span style={{
                         fontFamily: 'Space Mono, monospace',
                         fontSize: '9px',
                         letterSpacing: '1.5px',
                         textTransform: 'uppercase',
-                        color: 'rgba(255,255,255,0.35)',
-                        background: 'rgba(255,255,255,0.06)',
-                        padding: '3px 7px',
-                        borderRadius: '3px',
-                        flexShrink: 0,
-                        marginTop: '1px',
-                      }}>Before</span>
-                      <p style={{ fontSize: '13px', color: 'rgba(208,216,224,0.65)', lineHeight: 1.6, margin: 0 }}>{cs.beforeStory}</p>
-                    </div>
-                    <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                      <span style={{
-                        fontFamily: 'Space Mono, monospace',
-                        fontSize: '9px',
-                        letterSpacing: '1.5px',
-                        textTransform: 'uppercase',
-                        color: cs.accentColor,
-                        background: `${cs.accentColor}18`,
-                        padding: '3px 7px',
-                        borderRadius: '3px',
-                        flexShrink: 0,
-                        marginTop: '1px',
-                      }}>After</span>
-                      <p style={{ fontSize: '13px', color: 'var(--chrome)', lineHeight: 1.6, margin: 0 }}>{cs.afterStory}</p>
+                        color: 'rgba(255,255,255,0.55)',
+                      }}>Demo</span>
                     </div>
                   </div>
 
-                  {/* Result callout */}
-                  <div style={{
-                    background: `${cs.accentColor}10`,
-                    border: `1px solid ${cs.accentColor}30`,
-                    borderRadius: '8px',
-                    padding: '12px 16px',
-                    marginBottom: '24px',
-                    display: 'flex',
-                    alignItems: 'baseline',
-                    gap: '8px',
-                  }}>
-                    <span style={{
+                  {/* Card Content */}
+                  <div style={{ padding: '28px 28px 24px' }}>
+                    <h2 style={{
                       fontFamily: 'Syne, sans-serif',
                       fontWeight: 800,
-                      fontSize: '24px',
-                      color: cs.accentColor,
-                    }}>{cs.resultStat}</span>
-                    <span style={{
-                      fontFamily: 'Space Mono, monospace',
-                      fontSize: '11px',
+                      fontSize: 'clamp(18px,2.2vw,22px)',
+                      color: 'var(--white)',
+                      marginBottom: '8px',
+                      lineHeight: 1.2,
+                    }}>{demo.fakeName}</h2>
+                    <p style={{
+                      fontSize: '14px',
                       color: 'var(--chrome)',
-                    }}>{cs.resultLabel} {cs.resultPeriod}</span>
-                  </div>
+                      lineHeight: 1.65,
+                      marginBottom: '20px',
+                    }}>{demo.description}</p>
 
-                  {/* CTA buttons */}
-                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                    <Link href={`/case-studies/${cs.slug}`} style={{
+                    {/* Highlights */}
+                    <div style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '8px',
+                      marginBottom: '24px',
+                    }}>
+                      {demo.highlights.map((h) => (
+                        <span key={h} style={{
+                          fontFamily: 'Space Mono, monospace',
+                          fontSize: '9px',
+                          letterSpacing: '1px',
+                          textTransform: 'uppercase',
+                          color: accent,
+                          border: `1px solid ${accent}30`,
+                          background: `${accent}10`,
+                          padding: '4px 10px',
+                          borderRadius: '4px',
+                        }}>{h}</span>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <Link href={`/demos/${demo.slug}`} style={{
                       fontFamily: 'Space Mono, monospace',
                       fontSize: '11px',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       color: 'var(--bg)',
-                      background: cs.accentColor,
+                      background: accent,
                       padding: '11px 20px',
                       textDecoration: 'none',
                       fontWeight: 700,
                       display: 'inline-block',
                       borderRadius: '4px',
-                    }}>View Case Study</Link>
-                    <Link href={`/demo/${cs.demoSlug}`} style={{
-                      fontFamily: 'Space Mono, monospace',
-                      fontSize: '11px',
-                      letterSpacing: '1.5px',
-                      textTransform: 'uppercase',
-                      color: 'var(--chrome)',
-                      border: '1px solid var(--border)',
-                      padding: '11px 20px',
-                      textDecoration: 'none',
-                      display: 'inline-block',
-                      borderRadius: '4px',
-                    }}>Live Demo →</Link>
+                    }}>View Demo →</Link>
                   </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ── Med Spa Demos ── */}
+        <section style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 clamp(20px,5vw,60px) clamp(60px,8vw,100px)',
+        }}>
+          <p style={{
+            fontFamily: 'Space Mono, monospace',
+            fontSize: '10px',
+            letterSpacing: '3px',
+            textTransform: 'uppercase',
+            color: 'var(--chrome)',
+            marginBottom: '32px',
+          }}>Med Spa Demos</p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+            gap: '24px',
+          }}>
+            {[
+              {
+                slug: 'med-spa-growth',
+                name: 'Luminary Wellness & Aesthetics',
+                location: 'Southfield, MI',
+                description: 'Full-service med spa demo with growth-focused structure — treatment finder, service pathways, provider profiles, and goal-based booking.',
+                accent: '#6B4E71',
+              },
+              {
+                slug: 'aesthetics-clinic',
+                name: 'Meridian Skin Studio',
+                location: 'Royal Oak, MI',
+                description: 'Precision aesthetics clinic demo with clinical framing — advanced injectables, laser, skin, and wellness pathways.',
+                accent: '#3A5A7C',
+              },
+              {
+                slug: 'injectables-studio',
+                name: 'Elara Injectable Arts',
+                location: 'Detroit, MI',
+                description: 'Boutique injectable studio demo with artisan positioning — focused service menu, provider story, and streamlined booking flow.',
+                accent: '#7C3D52',
+              },
+            ].map((spa) => (
+              <article key={spa.slug} className="cs-card" style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid var(--border)',
+                borderRadius: '12px',
+                overflow: 'hidden',
+              }}>
+                <div style={{
+                  height: '8px',
+                  background: spa.accent,
+                }} />
+                <div style={{ padding: '24px' }}>
+                  <div style={{
+                    fontFamily: 'Space Mono, monospace',
+                    fontSize: '9px',
+                    letterSpacing: '1.5px',
+                    textTransform: 'uppercase',
+                    color: spa.accent,
+                    marginBottom: '10px',
+                  }}>Medical Spa Demo · {spa.location}</div>
+                  <h3 style={{
+                    fontFamily: 'Syne, sans-serif',
+                    fontWeight: 800,
+                    fontSize: '18px',
+                    color: 'var(--white)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                  }}>{spa.name}</h3>
+                  <p style={{
+                    fontSize: '13px',
+                    color: 'var(--chrome)',
+                    lineHeight: 1.65,
+                    marginBottom: '20px',
+                  }}>{spa.description}</p>
+                  <Link href={`/demos/${spa.slug}`} style={{
+                    fontFamily: 'Space Mono, monospace',
+                    fontSize: '10px',
+                    letterSpacing: '1.5px',
+                    textTransform: 'uppercase',
+                    color: 'var(--bg)',
+                    background: spa.accent,
+                    padding: '10px 18px',
+                    textDecoration: 'none',
+                    fontWeight: 700,
+                    display: 'inline-block',
+                    borderRadius: '4px',
+                  }}>View Demo →</Link>
                 </div>
               </article>
             ))}
@@ -353,7 +386,7 @@ export default function CaseStudiesPage() {
             textTransform: 'uppercase',
             color: 'var(--chrome)',
             marginBottom: '24px',
-          }}>Ready to be our next case study?</p>
+          }}>Ready to build yours?</p>
           <h2 style={{
             fontFamily: 'Syne, sans-serif',
             fontWeight: 800,
@@ -371,8 +404,7 @@ export default function CaseStudiesPage() {
             margin: '0 auto 40px',
             lineHeight: 1.7,
           }}>
-            Join Detroit businesses already getting more calls, more bookings, and more revenue from their websites.
-            Start with a free mockup — no commitment required.
+            We build custom sites for Detroit-area local businesses. Start with a free mockup — no commitment required.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{

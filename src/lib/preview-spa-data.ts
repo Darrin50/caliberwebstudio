@@ -225,8 +225,8 @@ const previewSpas: PreviewSpaEntry[] = [
       phone: '(248) 803-0030',
       bookingUrl: undefined,
       logoHref: 'https://caliberwebstudio.com/med-lab',
-      heroHeadline: 'Royal Oak\'s *Lure* — The Med Spa That *Finally Shows Up*',
-      heroSub: 'Botox · Fillers · Laser · Advanced Skin — for the woman who wants real results, delivered by a practice that\'s actually easy to find, book, and trust.',
+      heroHeadline: "Royal Oak's *Lure* — The Med Spa That *Finally Shows Up*",
+      heroSub: "Botox · Fillers · Laser · Advanced Skin — for the woman who wants real results, delivered by a practice that's actually easy to find, book, and trust.",
       logoImg: '/mocks/lure-aesthetics/lure-aesthetics-logo-01.png',
       heroImg: '/mocks/lure-aesthetics/lure-aesthetics-hero-01.jpg',
       accentColor: '#7A2E4B',
@@ -275,6 +275,103 @@ const previewSpas: PreviewSpaEntry[] = [
           icon: '∿',
           treatments: ['Monthly Facial Plan', 'Injectable Credit Package', 'Priority Booking', 'Member-Only Events'],
           description: 'Consistent care delivers consistent results. Our membership makes premium Royal Oak aesthetics accessible — and keeps you looking your best year-round.',
+        },
+      ],
+      financing: ['CareCredit', 'Cherry Financing'],
+    },
+  },
+
+  // ── Serenity Health Med Spa — Canton, MI ──────────────────────────────────
+  // ⚠️  logoImg is pending — Darrin to drop real logo at /mocks/serenity-health-med-spa/serenity-logo.png
+  //     then set logoImg: '/mocks/serenity-health-med-spa/serenity-logo.png'
+  // Preview URL: /preview/f2n8k4qr
+  {
+    hash: 'f2n8k4qr',
+    config: {
+      businessName: 'Serenity Health Med Spa',
+      tagline: 'Physician-Led Medical Aesthetics in Canton, MI',
+      location: 'Canton, MI',
+      seoCity: 'Canton',
+      phone: undefined,
+      email: undefined,
+      bookingUrl: undefined,
+      logoHref: 'https://caliberwebstudio.com/med-lab',
+      heroHeadline: "Canton's *Physician-Led* Aesthetic Medicine",
+      heroSub:
+        'Four physicians. One practice. Advanced medical aesthetics — injectables, laser, skin care, and body contouring — delivered with clinical precision for the Canton, MI community.',
+      heroImg: '/mocks/serenity-health-med-spa/serenity-hero-01.jpg',
+      logoImg: undefined,
+      accentColor: '#2E6B98',
+      announceBar:
+        'Four-Physician Practice &nbsp;·&nbsp; Canton, MI &nbsp;·&nbsp; Now Accepting New Patients',
+      providers: [
+        {
+          name: 'Dr. Khraizat',
+          title: 'Physician',
+          credentials: 'MD',
+          philosophy: '',
+        },
+        {
+          name: 'Dr. Bui',
+          title: 'Physician',
+          credentials: 'MD',
+          philosophy: '',
+        },
+        {
+          name: 'Dr. Al-Aouar',
+          title: 'Physician',
+          credentials: 'MD',
+          philosophy: '',
+        },
+        {
+          name: 'Dr. Bhullar',
+          title: 'Physician',
+          credentials: 'MD',
+          philosophy: '',
+        },
+      ],
+      servicePathways: [
+        {
+          category: 'Injectables',
+          icon: '◇',
+          treatments: ['Botox & Dysport', 'Dermal Fillers', 'Lip Enhancement', 'Jawline Contouring'],
+          description:
+            'Physician-administered neuromodulators and fillers calibrated to your unique anatomy — natural, precise results without the overdone look.',
+        },
+        {
+          category: 'Skin Care',
+          icon: '○',
+          treatments: ['HydraFacial', 'Chemical Peels', 'Microneedling', 'Dermaplaning'],
+          description:
+            'Medical-grade skin treatments for texture, hyperpigmentation, fine lines, and acne — clinically effective for every skin tone.',
+        },
+        {
+          category: 'Laser & Energy',
+          icon: '✦',
+          treatments: ['Laser Hair Removal', 'IPL Photofacial', 'Skin Tightening', 'Vascular Treatments'],
+          description:
+            'FDA-cleared laser and energy-based treatments for permanent hair reduction and lasting improvements in tone and texture.',
+        },
+        {
+          category: 'Body Contouring',
+          icon: '◎',
+          treatments: ['Body Sculpting', 'Ultrasound Cavitation', 'RF Skin Tightening', 'Cellulite Reduction'],
+          description:
+            'Non-invasive body shaping treatments that sculpt, tighten, and define — no surgery, no downtime, real results.',
+        },
+        {
+          category: 'Wellness',
+          icon: '⊕',
+          treatments: ['IV Therapy', 'B12 & Vitamin Injections', 'Skin Boosters', 'Medical Wellness Consults'],
+          description:
+            'Physician-guided wellness therapies to boost energy, enhance skin radiance, and support your health from the inside out.',
+        },
+        {
+          category: 'Membership',
+          icon: '∿',
+          treatments: ['Monthly Facial Plan', 'Injectable Credits', 'Priority Booking', 'Member-Only Events'],
+          description:
+            'Consistent care yields the best results. Our membership makes physician-level aesthetics accessible and affordable year-round.',
         },
       ],
       financing: ['CareCredit', 'Cherry Financing'],

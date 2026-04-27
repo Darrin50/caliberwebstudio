@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import { useState, useEffect, useRef } from 'react'
 import type { MedSpaTemplateConfig } from '@/lib/med-spa-new-template-data'
 import { TREATMENT_GOALS, APPROVED_GALLERY_COPY } from '@/lib/med-spa-new-template-data'
+import ChatWidget from '@/components/ChatWidget'
 
 const PLUM = '#5C2D6E'
 const GOLD = '#C9A96A'
@@ -102,6 +103,7 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
 
   const accent = config.accentColor || PLUM
   const bookingHref = config.bookingUrl || (config.phone ? `tel:${config.phone}` : '#book')
+  const logoHref = config.logoHref ?? bookingHref
 
   const goalTreatments = selectedGoal
     ? TREATMENT_GOALS.find((g) => g.goal === selectedGoal)?.treatments ?? []
@@ -283,7 +285,7 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
       {/* Nav */}
       <nav className="nav">
         <div className="nav-in">
-          <a href={config.logoHref || 'https://caliberwebstudio.com/med-lab'} style={{ textDecoration: 'none' }}>
+          <a href={logoHref} style={{ textDecoration: 'none' }}>
             {config.logoImg ? (
               <img src={config.logoImg} alt={config.businessName} style={{ height: 44, width: 'auto', objectFit: 'contain' }} />
             ) : (
@@ -637,6 +639,8 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
         </div>
       </section>
 
+      <ChatWidget businessName={config.businessName} />
+
       {/* Footer */}
       <footer className="footer">
         <div className="con">
@@ -659,6 +663,7 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
               <a href="https://caliberwebstudio.com" target="_blank" rel="noopener noreferrer">
                 Caliber Web Studio
               </a>
+              {' · '}Detroit, MI
             </span>
           </div>
         </div>

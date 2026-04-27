@@ -212,6 +212,89 @@ const previewSpas: PreviewSpaEntry[] = [
     },
   },
 
+  // ── Avenue 1 Aesthetics · Royal Oak, MI · /preview/a1v9n5r3 ──
+  // Logo: downloaded from Webflow CDN (cdn.prod.website-files.com/…/avenueone.png) 2026-04-27
+  // Providers: Dr. Matthew Rontal + Dr. Daniel Rontal (ENT surgeons, U of M) + Lindsi McAlister (NP, MSN, ACNP-BC)
+  // Hero/section images: AI concept imagery pending — see image prompts doc in /public/mocks/avenue-1-aesthetics/
+  {
+    hash: 'a1v9n5r3',
+    config: {
+      businessName: 'Avenue 1 Aesthetics',
+      tagline: 'ENT Surgeon-Led Medical Aesthetics in Royal Oak, MI',
+      location: 'Royal Oak, MI',
+      seoCity: 'Royal Oak',
+      phone: '(248) 254-8211',
+      email: undefined,
+      bookingUrl: undefined,
+      logoHref: 'https://caliberwebstudio.com/med-lab',
+      heroHeadline: 'Surgeon Precision. *Aesthetic* Vision.',
+      heroSub: 'Two board-certified ENT surgeons bring facial anatomy expertise no injector-only practice can match. Advanced injectables, Morpheus8, Evoke, and laser treatments — delivered with surgical judgment at every step.',
+      heroImg: '/mocks/avenue-1-aesthetics/avenue-1-hero-01.jpg',
+      logoImg: '/mocks/avenue-1-aesthetics/avenue-1-aesthetics-logo.png',
+      accentColor: '#1A3A6B',
+      announceBar: 'ENT Surgeon-Led Practice &nbsp;·&nbsp; Injectables · Morpheus8 · Evoke &nbsp;·&nbsp; Royal Oak, MI &nbsp;·&nbsp; <span style="font-weight:700">(248) 254-8211</span>',
+      providers: [
+        {
+          name: 'Dr. Matthew Rontal',
+          title: 'Co-Founder · ENT Surgeon',
+          credentials: 'MD · Board-Certified ENT Surgeon · University of Michigan Residency · 15+ Years Facial Anatomy, Reconstructive & Aesthetic Surgery',
+          philosophy: 'Aesthetic medicine is an extension of everything we do as surgeons — understanding facial anatomy at a depth most aesthetic providers never reach. We built Avenue 1 because our patients deserved a practice where every injection, every device setting, every treatment plan is backed by real surgical judgment.',
+        },
+        {
+          name: 'Dr. Daniel Rontal',
+          title: 'Co-Founder · ENT Surgeon',
+          credentials: 'MD · Board-Certified ENT Surgeon · University of Michigan Residency · Specialization in Reconstructive & Aesthetic Facial Surgery',
+          philosophy: '',
+        },
+        {
+          name: 'Lindsi McAlister',
+          title: 'Nurse Practitioner',
+          credentials: 'MSN, ACNP-BC · Advanced Clinical Nurse Practitioner · 15 Years Critical Care & Surgical Nursing · Aesthetic Care Specialist',
+          philosophy: '',
+        },
+      ],
+      servicePathways: [
+        {
+          category: 'Injectables',
+          icon: '◇',
+          treatments: ['Botox & Dysport', 'Dermal Fillers (Restylane & RHA)', 'Lip Flip & Enhancement', 'Jawline & Facial Balancing'],
+          description: 'Neuromodulators and fillers administered by a team with ENT surgical anatomy training — calibrated to your facial structure for results that look natural because they are.',
+        },
+        {
+          category: 'Energy & RF',
+          icon: '✦',
+          treatments: ['Morpheus8 RF Microneedling', 'Evoke Non-Surgical Facelift', 'Forma RF (Red Carpet Facial)', 'Evolve Transform Body Toning'],
+          description: "InMode's leading RF and body-contouring platforms — Morpheus8, Evoke, and Forma — delivered by a practice with the anatomy expertise to maximize every treatment outcome.",
+        },
+        {
+          category: 'Laser & IPL',
+          icon: '∿',
+          treatments: ['Lumecca IPL Photofacial', 'Laser Hair Removal', 'Pigmentation Correction', 'Vascular & Redness Treatment'],
+          description: 'Precision light-based treatments for lasting hair reduction, tone correction, and skin clarity — calibrated for your skin type by a medically trained team.',
+        },
+        {
+          category: 'Skin Care',
+          icon: '○',
+          treatments: ['PRP Skin Rejuvenation', 'VI Chemical Peels', 'Medical Grade Skincare', 'Personalized Skin Plans'],
+          description: 'Clinical-grade skin treatments backed by surgical-level knowledge of skin anatomy. Peels, PRP, and medical skincare protocols that deliver visible, lasting results.',
+        },
+        {
+          category: 'Hair Restoration',
+          icon: '⊕',
+          treatments: ['PRP Hair Restoration', 'Hair Loss Consultation', 'Laser Hair Therapy', 'Physician-Led Hair Assessment'],
+          description: 'PRP-based hair restoration with physician-level assessment behind every recommendation. Understand the root cause — then treat it with clinical precision.',
+        },
+        {
+          category: 'Membership',
+          icon: '◎',
+          treatments: ['Monthly Injectable Credits', 'Quarterly Skin Treatment', 'Laser Session Package', 'Priority Scheduling'],
+          description: 'Consistent care from a surgeon-led team — at a predictable monthly rate. Our membership keeps Royal Oak clients looking their best year-round with priority access and member pricing.',
+        },
+      ],
+      financing: ['CareCredit', 'Cherry Financing'],
+    },
+  },
+
   // ── Lure Aesthetics · Royal Oak, MI · /preview/lx7p2q8r ──
   // Logo: Notion Logo property has file "Serenity_Health_Logo.png" — filename mismatch, pending Darrin confirm.
   // Until confirmed, logoImg is unset and the text wordmark renders instead.

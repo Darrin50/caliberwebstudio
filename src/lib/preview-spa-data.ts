@@ -211,6 +211,75 @@ const previewSpas: PreviewSpaEntry[] = [
       announceBar: 'CareCredit financing available · Book your free consultation · Southfield, MI',
     },
   },
+
+  // ── Lure Aesthetics · Royal Oak, MI · /preview/lx7p2q8r ──
+  // Logo: Notion Logo property has file "Serenity_Health_Logo.png" — filename mismatch, pending Darrin confirm.
+  // Until confirmed, logoImg is unset and the text wordmark renders instead.
+  {
+    hash: 'lx7p2q8r',
+    config: {
+      businessName: 'Lure Aesthetics',
+      tagline: "Royal Oak's Premier Med Spa — Finally Visible Online",
+      location: 'Royal Oak, MI',
+      seoCity: 'Royal Oak',
+      phone: '(248) 803-0030',
+      bookingUrl: undefined,
+      logoHref: 'https://caliberwebstudio.com/med-lab',
+      heroHeadline: 'Royal Oak\'s *Lure* — The Med Spa That *Finally Shows Up*',
+      heroSub: 'Botox · Fillers · Laser · Advanced Skin — for the woman who wants real results, delivered by a practice that\'s actually easy to find, book, and trust.',
+      logoImg: '/mocks/lure-aesthetics/lure-aesthetics-logo-01.png',
+      heroImg: '/mocks/lure-aesthetics/lure-aesthetics-hero-01.jpg',
+      accentColor: '#7A2E4B',
+      announceBar: 'Now accepting new clients · Lure Aesthetics · Royal Oak, MI · <span>Call (248) 803-0030</span>',
+      providers: [
+        {
+          name: 'Lure Aesthetics Team',
+          title: 'Licensed Aesthetic Professionals',
+          credentials: '⚑ Provider credentials not confirmed from recon — verify via IG or direct outreach before live build. Never invent credentials.',
+          philosophy: 'Royal Oak deserves a med spa that earns trust — through precision, transparency, and results you can see. We built Lure for women who want to feel like the best version of themselves, not a before-and-after photo.',
+        },
+      ],
+      servicePathways: [
+        {
+          category: 'Injectables',
+          icon: '◇',
+          treatments: ['Botox & Dysport', 'Dermal Fillers', 'Lip Enhancement', 'Jawline & Chin Contouring'],
+          description: 'Natural, precise injectable treatments designed to refresh and refine — never freeze, never overcorrect. Always calibrated to your anatomy and goals.',
+        },
+        {
+          category: 'Laser & Energy',
+          icon: '✦',
+          treatments: ['Laser Hair Removal', 'IPL Photofacial', 'Skin Resurfacing', 'Vascular Treatments'],
+          description: 'FDA-cleared laser and energy-based treatments for permanent hair reduction, pigmentation correction, and measurable skin tone improvement.',
+        },
+        {
+          category: 'Skin Care',
+          icon: '○',
+          treatments: ['HydraFacial', 'Chemical Peels', 'Dermaplaning', 'RF Microneedling'],
+          description: 'Medical-grade facials and advanced skin treatments that deliver clinical results — not just relaxation. Your skin, visibly improved.',
+        },
+        {
+          category: 'Body',
+          icon: '◎',
+          treatments: ['Body Contouring', 'Cellulite Reduction', 'Skin Tightening', 'Ultrasound Cavitation'],
+          description: 'Non-invasive body shaping treatments that sculpt and tighten without surgery, without downtime, and without compromise.',
+        },
+        {
+          category: 'Wellness',
+          icon: '⊕',
+          treatments: ['IV Infusion Therapy', 'B12 + Vitamin Shots', 'Collagen Boosters', 'Skin Health Plans'],
+          description: 'Support your skin and overall vitality from the inside out — medically guided wellness services that complement every aesthetic treatment.',
+        },
+        {
+          category: 'Membership',
+          icon: '∿',
+          treatments: ['Monthly Facial Plan', 'Injectable Credit Package', 'Priority Booking', 'Member-Only Events'],
+          description: 'Consistent care delivers consistent results. Our membership makes premium Royal Oak aesthetics accessible — and keeps you looking your best year-round.',
+        },
+      ],
+      financing: ['CareCredit', 'Cherry Financing'],
+    },
+  },
 ]
 
 export function getPreviewSpa(hash: string): PreviewSpaEntry | undefined {

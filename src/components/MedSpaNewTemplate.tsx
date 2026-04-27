@@ -1,7 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import type { MedSpaTemplateConfig } from '@/lib/med-spa-new-template-data'
 import { TREATMENT_GOALS, APPROVED_GALLERY_COPY } from '@/lib/med-spa-new-template-data'
 
@@ -55,6 +55,50 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
   const [formName, setFormName] = useState('')
   const [formPhone, setFormPhone] = useState('')
   const [formMsg, setFormMsg] = useState('')
+
+  const [chatOpen, setChatOpen] = useState(false)
+  const [chatMounted, setChatMounted] = useState(false)
+  const [chatMessages, setChatMessages] = useState<Array<{ role: 'user' | 'assistant'; content: string }>>([])
+  const [chatInput, setChatInput] = useState('')
+  const [chatLoading, setChatLoading] = useState(false)
+  const chatEndRef = useRef<HTMLDivElement>(null)
+
+  const CALIBER_INTRO = `Hi, I'm CaliberBot, the AI sales agent for Caliber Web Studio. I only answer questions about our web design services — pricing, process, and what we'd build for ${config.businessName}. For questions about ${config.businessName} itself, please contact them directly. What would you like to know about working with us?`
+
+  useEffect(() => { setChatMounted(true) }, [])
+
+  useEffect(() => {
+    if (chatOpen && chatMessages.length === 0) {
+      setChatMessages([{ role: 'assistant', content: CALIBER_INTRO }])
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chatOpen])
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [chatMessages])
+
+  const sendChatMessage = async () => {
+    if (!chatInput.trim() || chatLoading) return
+    const userMsg = { role: 'user' as const, content: chatInput.trim() }
+    const next = [...chatMessages, userMsg]
+    setChatMessages(next)
+    setChatInput('')
+    setChatLoading(true)
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: next }),
+      })
+      const data = await res.json()
+      setChatMessages(prev => [...prev, { role: 'assistant', content: data.reply }])
+    } catch {
+      setChatMessages(prev => [...prev, { role: 'assistant', content: "Having trouble right now. Email darrin@caliberwebstudio.com for a quick response!" }])
+    } finally {
+      setChatLoading(false)
+    }
+  }
 
   const accent = config.accentColor || PLUM
   const bookingHref = config.bookingUrl || (config.phone ? `tel:${config.phone}` : '#book')
@@ -197,6 +241,30 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
     .msnew .footer-links a:hover { color: ${GOLD}; }
     .msnew .footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     .msnew .footer-copy a { color: ${GOLD}; text-decoration: none; }
+
+    /* CaliberBot widget */
+    .msnew .cb-bubble { position: fixed; bottom: 24px; right: 24px; width: 54px; height: 54px; background: #1a1a2e; border-radius: 50%; border: 2px solid ${GOLD}; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 9990; box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: transform 0.2s; font-size: 22px; }
+    .msnew .cb-bubble:hover { transform: scale(1.08); }
+    .msnew .cb-panel { position: fixed; bottom: 90px; right: 24px; width: 320px; max-height: 440px; background: #0f0f1a; border: 1px solid rgba(201,169,106,0.3); border-radius: 12px; display: flex; flex-direction: column; z-index: 9989; box-shadow: 0 8px 40px rgba(0,0,0,0.55); overflow: hidden; }
+    .msnew .cb-header { background: linear-gradient(135deg, #1a1a2e, #2d1a4e); padding: 13px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(201,169,106,0.2); }
+    .msnew .cb-avatar { width: 32px; height: 32px; background: ${GOLD}; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #0f0f1a; flex-shrink: 0; font-family: 'Montserrat', sans-serif; }
+    .msnew .cb-htext { flex: 1; min-width: 0; }
+    .msnew .cb-name { font-size: 13px; font-weight: 700; color: #fff; font-family: 'Montserrat', sans-serif; }
+    .msnew .cb-sub { font-size: 10px; color: rgba(201,169,106,0.75); letter-spacing: 0.4px; font-family: 'Montserrat', sans-serif; }
+    .msnew .cb-close { background: transparent; border: none; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 16px; padding: 2px 4px; transition: color 0.2s; flex-shrink: 0; }
+    .msnew .cb-close:hover { color: #fff; }
+    .msnew .cb-msgs { flex: 1; overflow-y: auto; padding: 14px 14px 6px; display: flex; flex-direction: column; gap: 8px; }
+    .msnew .cb-msg { max-width: 86%; padding: 9px 12px; border-radius: 10px; font-size: 12.5px; line-height: 1.55; font-family: 'Montserrat', sans-serif; }
+    .msnew .cb-msg-bot { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.88); align-self: flex-start; border-bottom-left-radius: 3px; }
+    .msnew .cb-msg-user { background: ${accent}; color: #fff; align-self: flex-end; border-bottom-right-radius: 3px; }
+    .msnew .cb-loading { color: rgba(255,255,255,0.38); font-size: 11px; padding: 4px 2px; font-family: 'Montserrat', sans-serif; align-self: flex-start; }
+    .msnew .cb-input-row { border-top: 1px solid rgba(255,255,255,0.07); padding: 10px 10px; display: flex; gap: 7px; background: rgba(255,255,255,0.02); }
+    .msnew .cb-input { flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 6px; padding: 8px 11px; font-size: 12px; outline: none; font-family: 'Montserrat', system-ui, sans-serif; min-width: 0; }
+    .msnew .cb-input::placeholder { color: rgba(255,255,255,0.3); }
+    .msnew .cb-input:focus { border-color: ${GOLD}; }
+    .msnew .cb-send { background: ${GOLD}; border: none; border-radius: 6px; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #0f0f1a; transition: opacity 0.2s; flex-shrink: 0; font-weight: 700; }
+    .msnew .cb-send:hover { opacity: 0.82; }
+    @media (max-width: 400px) { .msnew .cb-panel { right: 10px; left: 10px; width: auto; } .msnew .cb-bubble { right: 14px; bottom: 16px; } }
   `
 
   const lead = config.providers[0] ?? null
@@ -215,7 +283,7 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
       {/* Nav */}
       <nav className="nav">
         <div className="nav-in">
-          <a href={bookingHref} style={{ textDecoration: 'none' }}>
+          <a href={config.logoHref || 'https://caliberwebstudio.com/med-lab'} style={{ textDecoration: 'none' }}>
             {config.logoImg ? (
               <img src={config.logoImg} alt={config.businessName} style={{ height: 44, width: 'auto', objectFit: 'contain' }} />
             ) : (
@@ -595,6 +663,47 @@ export default function MedSpaNewTemplate({ config }: { config: MedSpaTemplateCo
           </div>
         </div>
       </footer>
+
+      {/* CaliberBot — CWS Sales Agent (lazy-mounted) */}
+      {chatMounted && (
+        <>
+          {chatOpen && (
+            <div className="cb-panel">
+              <div className="cb-header">
+                <div className="cb-avatar">C</div>
+                <div className="cb-htext">
+                  <div className="cb-name">CaliberBot</div>
+                  <div className="cb-sub">Caliber Web Studio · Sales Agent</div>
+                </div>
+                <button className="cb-close" onClick={() => setChatOpen(false)} aria-label="Close chat">✕</button>
+              </div>
+              <div className="cb-msgs">
+                {chatMessages.map((m, i) => (
+                  <div key={i} className={`cb-msg ${m.role === 'user' ? 'cb-msg-user' : 'cb-msg-bot'}`}>
+                    {m.content}
+                  </div>
+                ))}
+                {chatLoading && <div className="cb-loading">CaliberBot is typing…</div>}
+                <div ref={chatEndRef} />
+              </div>
+              <div className="cb-input-row">
+                <input
+                  className="cb-input"
+                  type="text"
+                  placeholder="Ask about pricing, process, what we'd build…"
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && sendChatMessage()}
+                />
+                <button className="cb-send" onClick={sendChatMessage} aria-label="Send">→</button>
+              </div>
+            </div>
+          )}
+          <button className="cb-bubble" onClick={() => setChatOpen(o => !o)} aria-label="Chat with Caliber Web Studio">
+            {chatOpen ? '✕' : '💬'}
+          </button>
+        </>
+      )}
     </div>
   )
 }

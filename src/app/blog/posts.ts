@@ -7209,8 +7209,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   </ul>
 </div>
 
-<img src="/blog/website-design-detroit-contractors-blueprint-to-launch-1.png" alt="Architectural blueprint next to a laptop showing a modern contractor website homepage" style="width:100%;border-radius:12px;margin:32px 0;" />
-
 <h2>Why Most Detroit Contractor Websites Don't Generate Leads</h2>
 
 <p>Walk through any neighborhood in Metro Detroit and you'll find contractors with decades of experience, stellar reputations, and full referral pipelines — who are almost completely invisible online. Their websites, if they exist at all, were thrown together in 2018, don't load on mobile, and wouldn't rank for "contractor near me" if they tried.</p>
@@ -7372,8 +7370,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h1>IDX vs Custom Builds: What Detroit Real Estate Agents Actually Need</h1>
 
 <p>Detroit real estate agents face a genuine decision when building their websites: bolt an IDX plugin onto a template, or invest in a custom-built site. The short answer is that most agents need a custom site with selective IDX integration — not a generic IDX portal, and not a custom build that ignores listing search. Here's how to decide exactly what your practice needs.</p>
-
-<img src="/blog/idx-vs-custom-builds-detroit-real-estate-1.png" alt="Side-by-side comparison of a generic IDX real estate website and a custom-built real estate website on two monitors" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
   <strong style="display:block;margin-bottom:8px;">Key Takeaways</strong>
@@ -7920,8 +7916,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>The Detroit market makes this worse. You're not just competing with other independent shops. You're competing with Midas, Firestone, Jiffy Lube, and Pep Boys — all of whom have enterprise SEO teams pushing their sites up the rankings. An independent shop in Warren, Dearborn, or Eastpointe can absolutely outrank them for local searches, but only with a website built specifically to do that job.</p>
 
 <p>The difference isn't luck. It's architecture.</p>
-
-<img src="/blog/website-design-detroit-auto-repair-shops-brings-customers-1.png" alt="Professional mechanic working under the hood of a car inside a well-lit Detroit auto repair shop" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What Auto Repair Website Design in Detroit Actually Requires</h2>
 
@@ -8627,8 +8621,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     <li>Customer project photos and before/afters convert browsers into callers faster than any headline</li>
   </ul>
 </div>
-
-<img src="/blog/detroit-landscaping-website-fill-pipeline-1.png" alt="Landscaping crew working on a front yard design project in a Detroit suburb on a clear spring morning" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The Pipeline Problem Every Detroit Landscaper Knows</h2>
 
@@ -10720,8 +10712,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>That sequence plays out on med spa websites across Metro Detroit every day. The traffic arrived. The intent was real. The booking flow killed the conversion. If you are still working out what your website needs to attract high-ticket clients in the first place — positioning, gallery strategy, provider credentials, local SEO — our <a href="/blog/detroit-med-spa-website-design">Detroit med spa website design guide</a> covers the full infrastructure case. This post is one level deeper: the specific booking flow failures that drain revenue even when everything else on your site is working.</p>
 
-<img src="/blog/detroit-med-spa-booking-mistakes-hero.jpg" alt="Detroit med spa owner reviewing online booking analytics on desktop computer, noting abandoned bookings" style="width:100%;border-radius:12px;margin:32px 0;" />
-
 <h2>Why Do Detroit Med Spa Websites Earn the Click but Lose the Booking?</h2>
 
 <p>Most med spa owners diagnose a lead problem when they actually have a conversion problem. The traffic is there. Someone searching "lip filler Royal Oak" or "Botox Detroit near me" is not browsing — they are ready to book. The question is whether your booking system captures that intent or leaks it through friction.</p>
@@ -10919,8 +10909,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   ]
 })}</script>
 
-<img src="/blog/detroit-med-spa-website-michigan-regulations-hero.jpg" alt="Detroit med spa owner reviewing Michigan compliance requirements on a laptop in a modern clinical office" style="width:100%;border-radius:12px;margin:0 0 32px;" />
-
 <div style="background:rgba(0,212,255,0.06);border-left:4px solid #00d4ff;padding:20px 24px;margin:0 0 32px;border-radius:0 8px 8px 0;">
 <p style="margin:0;font-size:1.05rem;line-height:1.7;">Michigan med spas operate under the state's Corporate Practice of Medicine framework — meaning every website advertising medical aesthetic services must disclose physician oversight, comply with FTC outcome claim rules, and avoid advertising language the state licensing board treats as deceptive. Most Detroit-area med spa sites fail on at least two of the four compliance requirements that create real legal exposure.</p>
 </div>
@@ -11055,8 +11043,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <li style="margin-bottom:0;">Your website and your GBP are one system — a fast, schema-optimized site with service pages targeting Detroit-specific queries amplifies everything your GBP does</li>
 </ul>
 </div>
-
-<img src="/blog/detroit-med-spa-local-seo-google-ranking-hero.jpg" alt="Detroit med spa owner reviewing Google Maps search results on her smartphone in a modern med spa reception area" style="width:100%;border-radius:12px;margin:0 0 40px;" />
 
 <h2>Why Local Search Determines Whether a Detroit Med Spa Grows or Stagnates</h2>
 
@@ -11934,7 +11920,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
   {
     slug: "preventive-botox-detroit",
-    thumbnail: "/blog/choose-botox-provider-detroit-consultation.jpg",
+    thumbnail: "/blog/preventive-botox-detroit-hero.jpg",
     title: "Preventive Botox in Detroit: The Right Age to Start and Why Michigan Patients Are Starting Earlier",
     description: "Detroit women in their 20s and 30s are starting Botox earlier — not to fix wrinkles, but to prevent them. Here's what preventive Botox is, what it costs in metro Detroit, and whether it's worth it.",
     date: "2026-04-25",
@@ -12096,7 +12082,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 </ul>
 </div>
 
-<img src="/blog/botox-recovery-timeline-detroit-hero.png" alt="Black woman in her mid-30s in a sunlit residential Detroit bathroom looking calmly into the mirror two days after Botox, soft natural light, no procedure markings, peaceful morning check-in" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>Day 1 - The First 24 Hours After Botox</h2>
 
@@ -12288,7 +12273,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>The result by mid-April is reproducibly the same: dehydrated, dull, sometimes patchy skin with hyperpigmentation from the few sunny winter days, and a barrier that's primed to overreact to anything you put on it. That's the canvas the spring stack is built to repair.</p>
 
-<img src="/blog/detroit-spring-skin-prep-2026-hero.png" alt="Black woman in her late 30s receiving a HydraFacial treatment in a bright modern Detroit med spa with golden spring light through windows" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>The April Reset Window - Why Now Is the Best Time to Treat</h2>
 

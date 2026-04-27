@@ -12055,7 +12055,8 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     slug: "botox-recovery-timeline-detroit",
-    thumbnail: "/blog/botox-recovery-timeline-detroit-hero.png",
+    thumbnail: "/blog/botox-recovery-timeline-detroit-thumb.png",
+    hero: "/blog/botox-recovery-timeline-detroit-hero.png",
     title: "What to Expect After Botox in Detroit: Your Day-by-Day Recovery Timeline",
     description: "A day-by-day Botox recovery timeline for Detroit patients - what's normal, what's not, what to avoid, and how to time your appointment around the Detroit Grand Prix and wedding season.",
     date: "2026-04-26",
@@ -12234,7 +12235,8 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     slug: "detroit-spring-skin-prep-2026",
-    thumbnail: "/blog/detroit-spring-skin-prep-2026-hero.png",
+    thumbnail: "/blog/detroit-spring-skin-prep-2026-thumb.png",
+    hero: "/blog/detroit-spring-skin-prep-2026-hero.png",
     title: "Detroit Spring Skin Prep 2026: How to Recover From Michigan Winter and Get Glowing",
     description: "Michigan winter strips your skin. April is the reset window. Here's the Detroit spring treatment stack - HydraFacial, peels, and laser timing - that high-rated metro Detroit med spas actually recommend.",
     date: "2026-04-27",

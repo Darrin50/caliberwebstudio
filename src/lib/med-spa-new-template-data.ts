@@ -29,7 +29,6 @@ export interface MedSpaTemplateConfig {
   }[]
   financing?: string[]
   announceBar?: string
-  logoHref?: string
 }
 
 export const TREATMENT_GOALS = [

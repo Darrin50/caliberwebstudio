@@ -7,12 +7,16 @@ interface Message {
   content: string;
 }
 
-export default function ChatWidget() {
+export default function ChatWidget({ businessName }: { businessName?: string } = {}) {
+  const openingMessage = businessName
+    ? `Hi, I'm CaliberBot — the AI sales agent for Caliber Web Studio. I only answer questions about our web design services: pricing, process, and what we'd build for ${businessName}. For questions about ${businessName} itself, please contact them directly. What would you like to know about working with us?`
+    : "Hey! 👋 I'm Caliber's AI assistant. Want to know how we can grow your business online? Ask me anything!"
+
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hey! 👋 I'm Caliber's AI assistant. Want to know how we can grow your business online? Ask me anything!",
+      content: openingMessage,
     },
   ]);
   const [input, setInput] = useState('');

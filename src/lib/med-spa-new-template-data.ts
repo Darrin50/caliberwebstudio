@@ -14,6 +14,7 @@ export interface MedSpaTemplateConfig {
   phone?: string
   email?: string
   bookingUrl?: string
+  logoHref?: string
   heroHeadline: string
   heroSub: string
   heroImg?: string

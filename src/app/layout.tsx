@@ -75,8 +75,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        // TODO: replace with proper 1200x630 social card hero image (current is the logo PNG)
-        url: "/logo-full-hero.png",
+        url: "/og-social-card.jpg",
         width: 1200,
         height: 630,
         alt: "Caliber Web Studio \u2014 Measure. Design. Rise.",
@@ -90,7 +89,7 @@ export const metadata: Metadata = {
     title: "Caliber Web Studio | Detroit Web Design & AI-Powered Websites",
     description:
       "Detroit\u2019s premier AI-powered web agency. $0 down, plans from $197/mo. Websites that rank, convert, and grow your business.",
-    images: ["/logo-full-hero.png"],
+    images: ["/og-social-card.jpg"],
     creator: "@CaliberWebStudio",
   },
 
@@ -266,7 +265,8 @@ const localBusinessSchema = {
     "https://www.instagram.com/caliberwebstudio",
     "https://www.linkedin.com/company/caliber-web-studio",
     "https://twitter.com/caliberwebstudio",
-    // TODO: confirm Google Business Profile URL and add here
+    // GBP: no verified listing found (searched April 2026). Claim/create at
+    // business.google.com, then add the maps.google.com/maps/place/... URL here.
   ],
 };
 

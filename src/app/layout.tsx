@@ -308,77 +308,6 @@ const webPageSchema = {
   },
 };
 
-/* ─── JSON-LD: FAQ Schema (AEO) ─── */
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a website cost for a small business?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "At Caliber Web Studio, our website plans start at $197 per month with $0 down. This includes a custom-designed, mobile-first website, basic SEO, hosting, and ongoing maintenance. Our Growth Plan at $397/mo adds advanced SEO, an AI chatbot, and Google Business Profile management. Our Scale Plan at $697/mo includes unlimited pages, full-stack development, and a dedicated account manager.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who is the best web designer in Detroit?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Caliber Web Studio, founded by Darrin Singer, is Detroit\u2019s premier AI-powered web agency. We specialize in building high-performance websites for local businesses that rank on Google and convert visitors into customers. Our data-driven approach combines modern design with AI tools to deliver measurable results for businesses across Metro Detroit and Michigan.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to pay anything upfront for a website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Caliber Web Studio offers $0 down on all plans. You only pay a monthly fee starting at $197/mo, which covers design, development, hosting, maintenance, and basic SEO. There are no hidden fees or surprise charges.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most websites are completed within 2\u20134 weeks from our initial discovery call. Our streamlined 4-step process includes Discovery & Strategy, Design & Prototype, Build & Optimize, and Launch & Growth. Complex projects with custom features may take 4\u20136 weeks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is an AI-powered website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An AI-powered website uses artificial intelligence to enhance user experience and business results. At Caliber Web Studio, this includes AI chatbots that engage visitors 24/7, AI-driven content optimization for better search rankings, smart analytics for conversion tracking, and automated review management. These tools help local businesses compete with larger companies.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Caliber Web Studio help with SEO and Google rankings?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Every Caliber Web Studio website includes foundational SEO: optimized meta tags, fast page speeds, mobile-first design, and proper heading structure. Our Growth and Scale plans include advanced SEO services such as keyword research, content strategy, Google Business Profile optimization, local citation building, and monthly performance reporting.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What areas does Caliber Web Studio serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Caliber Web Studio is based in Detroit, Michigan and serves businesses throughout Metro Detroit including Dearborn, Southfield, Warren, Sterling Heights, Livonia, Troy, Royal Oak, Farmington Hills, and Ann Arbor. We also work with clients across Michigan and nationwide. All of our services are delivered remotely, so location is never a barrier.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What services does Caliber Web Studio offer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Caliber Web Studio offers six core services: (1) Custom Web Design \u2014 unique, mobile-first websites built from scratch; (2) SEO & Search Optimization \u2014 technical SEO, local SEO, and content strategy; (3) AI Chatbot Integration \u2014 24/7 intelligent chat agents for lead capture; (4) Google Business Profile Management \u2014 optimization and ongoing management; (5) Review Automation \u2014 automated systems to collect and manage customer reviews; and (6) Social Media Management \u2014 content creation and posting for major platforms.",
-      },
-    },
-  ],
-};
 
 /* ─── Render ─── */
 export default function RootLayout({
@@ -405,9 +334,6 @@ export default function RootLayout({
         />
         <Script id="ld-webpage" type="application/ld+json" strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-        />
-        <Script id="ld-faq" type="application/ld+json" strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body>

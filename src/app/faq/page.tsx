@@ -16,9 +16,57 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does it take to build my website?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most sites are live in 7–14 days. Our Startup Complete package can have you fully operational in 48 hours.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I own my website?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. 100%. We build it, you own it. The code, the domain, everything.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What makes Caliber different from other web agencies?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We build in Next.js — the same technology used by companies like Netflix and TikTok. You get a production-grade website, not a WordPress template. And we embed AI systems directly into the build so your site works for you 24/7.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you work with businesses outside Detroit?',
+      acceptedAnswer: { '@type': 'Answer', text: "Yes. We're Detroit-based but work with businesses everywhere. We specialize in helping Detroit businesses first, but our systems work anywhere." },
+    },
+    {
+      '@type': 'Question',
+      name: "What's included in the monthly plans?",
+      acceptedAnswer: { '@type': 'Answer', text: 'Hosting, maintenance, security updates, performance monitoring, and ongoing SEO updates. Your site never goes stale.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I add a chatbot to my existing website?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — our AI chatbot can be installed on any website, not just ones we built. Contact us for a custom quote.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is AEO and why does it matter?',
+      acceptedAnswer: { '@type': 'Answer', text: "AEO (Answer Engine Optimization) means optimizing your site so AI tools like ChatGPT and Google's AI Overview recommend your business. It's the future of search, and we build it into every site we deliver." },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does pricing work?',
+      acceptedAnswer: { '@type': 'Answer', text: "We offer fixed-scope packages so you always know what you're paying. No hourly billing, no surprise invoices. See our pricing page for full details." },
+    },
+  ],
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Nav />
       <main style={{ paddingTop: '72px', background: 'var(--bg)', minHeight: '100vh' }}>
         <section style={{ padding: 'clamp(80px, 12vw, 130px) clamp(20px, 6vw, 80px) clamp(48px, 6vw, 80px)', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>

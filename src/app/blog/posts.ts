@@ -12706,8 +12706,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 </ul>
 </div>
 
-<img src="/blog/detroit-bridal-aesthetic-timeline-hero.jpg" alt="Detroit bride consulting with a med spa provider about her wedding aesthetic timeline, reviewing a treatment schedule at a modern metro Detroit spa, engagement ring visible" style="width:100%;border-radius:12px;margin:32px 0;" />
-
 <h2>Why Michigan Brides Need a 12-Month Aesthetic Timeline</h2>
 
 <p>Michigan wedding season peaks May through August, with June as the single busiest month in the state. That timing matters because several of the most-requested bridal treatments — laser hair removal especially — require more lead time than most brides realize until it's too late to act.</p>

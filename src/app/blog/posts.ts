@@ -8,6 +8,7 @@ export interface BlogPost {
   relatedSlugs: string[];
   thumbnail?: string;
   hero?: string;
+  updatedDate?: string;
 }
 
 export const posts: BlogPost[] = [

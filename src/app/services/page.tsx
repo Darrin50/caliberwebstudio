@@ -84,6 +84,15 @@ const addons = [
   { name: 'Google Ads Management', price: '+$299/mo', desc: 'Full setup and monthly management of Google Ads campaigns targeting your service area and keywords.' },
 ];
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.caliberwebstudio.com' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.caliberwebstudio.com/services' },
+  ],
+};
+
 const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -102,6 +111,7 @@ const servicesSchema = {
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
       <Nav />
       <main style={{ background: 'var(--bg)', color: 'var(--silver)', minHeight: '100vh' }}>

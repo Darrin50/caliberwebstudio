@@ -75,6 +75,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
+        // TODO: replace with proper 1200x630 social card hero image (current is the logo PNG)
         url: "/logo-full-hero.png",
         width: 1200,
         height: 630,

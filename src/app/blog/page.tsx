@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { posts } from "./posts";
 
 export const metadata: Metadata = {
-  title: "Blog | Web Design, SEO & AI Tips for Detroit Small Businesses",
+  title: { absolute: "Blog | Detroit Web Design & SEO Tips | Caliber Web Studio" },
   description: "Expert articles on web design, local SEO, AI-powered marketing, and digital growth strategies for Detroit and Metro Michigan small businesses.",
   alternates: { canonical: "https://www.caliberwebstudio.com/blog" },
   openGraph: {

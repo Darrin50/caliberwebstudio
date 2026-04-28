@@ -35,6 +35,15 @@ const values = [
   },
 ];
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.caliberwebstudio.com' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.caliberwebstudio.com/about' },
+  ],
+};
+
 const aboutSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
@@ -55,6 +64,7 @@ const aboutSchema = {
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
       <Nav />
       <main style={{ background: 'var(--bg)', color: 'var(--silver)', minHeight: '100vh' }}>

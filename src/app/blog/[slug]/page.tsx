@@ -66,7 +66,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     description: post.description,
     ...(post.thumbnail && { image: { "@type": "ImageObject", url: post.thumbnail, width: 1200, height: 630 } }),
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedDate ?? post.date,
     wordCount,
     keywords: keywords.join(', '),
     author: { "@type": "Person", name: "Darrin Singer", url: "https://www.caliberwebstudio.com/about" },

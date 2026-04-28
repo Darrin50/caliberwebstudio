@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kind Laser Skin &amp; Wellness | Ann Arbor, MI</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset ───────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ─── Brand Tokens — Sage Teal (website-fallback; monochrome logo) ── */
+    :root {
+      --brand-primary:      #4D9E8A;
+      --brand-primary-dark: #39796A;
+      --brand-secondary:    #7AADB5;
+      --brand-bg:           #F5FAFA;
+      --brand-bg-2:         #ECF5F4;
+      --brand-bg-3:         #E0EEED;
+      --brand-bg-frosted:   rgba(245,250,250,0.88);
+      --brand-ink:          #0F2320;
+      --brand-ink-mid:      #28433F;
+
+      /* ── Semantic aliases ── */
+      --cream:        var(--brand-bg);
+      --cream-2:      var(--brand-bg-2);
+      --cream-3:      var(--brand-bg-3);
+      --ink:          var(--brand-ink);
+      --ink-mid:      var(--brand-ink-mid);
+      --muted:        color-mix(in srgb, var(--brand-ink) 58%, var(--brand-bg));
+      --hint:         color-mix(in srgb, var(--brand-ink) 38%, var(--brand-bg));
+      --gold:         var(--brand-primary);
+      --gold-dark:    var(--brand-primary-dark);
+      --rose:         var(--brand-secondary);
+      --line:         rgba(15,35,32,0.10);
+      --max:          1180px;
+      --radius-xl:    32px;
+      --radius-lg:    20px;
+      --radius-md:    12px;
+      --radius-sm:    8px;
+      --shadow:       0 24px 64px rgba(15,35,32,0.13);
+      --shadow-sm:    0 8px 24px rgba(15,35,32,0.08);
+      --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── Overlay Banner ──────────────────────── */
+    #cws-banner {
+      position: sticky; top: 0; z-index: 200;
+      background: #141414;
+      height: 52px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 18px; padding: 0 24px;
+    }
+    #cws-banner-text { color: #d0d0d0; font-size: 13px; font-weight: 400; letter-spacing: .01em; white-space: nowrap; }
+    #cws-banner-text b { color: #fff; font-weight: 600; }
+    #cws-banner-btn {
+      flex-shrink: 0;
+      padding: 7px 18px; background: var(--gold); color: #fff;
+      font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      border-radius: 9999px; transition: background 180ms var(--ease);
+      text-decoration: none;
+    }
+    #cws-banner-btn:hover { background: var(--gold-dark); }
+    #cws-banner-close {
+      position: absolute; right: 16px; background: none; border: none;
+      color: #666; font-size: 15px; cursor: pointer; padding: 4px 6px;
+      transition: color 150ms;
+    }
+    #cws-banner-close:hover { color: #fff; }
+
+    /* ─── Navigation — light frosted (dark logo shows clearly) ── */
+    .site-nav {
+      position: sticky; top: 52px; z-index: 100;
+      background: var(--brand-bg-frosted);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto;
+      height: 72px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 28px;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-logo-img { height: 52px; width: auto; display: block; object-fit: contain; }
+    .nav-brand-mark {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--ink); display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px; font-weight: 500; color: var(--gold); letter-spacing: .02em;
+    }
+    .nav-brand-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 500; letter-spacing: -.01em; color: var(--ink); }
+    .nav-brand-city { font-size: 11px; color: var(--hint); letter-spacing: .04em; margin-top: 1px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      padding: 8px 14px; border-radius: 9999px; font-size: 13.5px; font-weight: 500;
+      color: var(--ink-mid); transition: background 150ms var(--ease), color 150ms var(--ease);
+    }
+    .nav-links a:hover { background: rgba(77,158,138,.12); color: var(--ink); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .nav-phone { font-size: 13.5px; font-weight: 600; color: var(--ink-mid); transition: color 200ms var(--ease); }
+    .nav-phone:hover { color: var(--gold); }
+    .nav-cta {
+      padding: 10px 22px; background: var(--ink); color: var(--cream);
+      font-size: 13px; font-weight: 600; letter-spacing: .02em;
+      border-radius: 9999px; transition: background 180ms var(--ease);
+      text-decoration: none;
+    }
+    .nav-cta:hover { background: var(--ink-mid); }
+
+    /* ─── Hero ────────────────────────────────── */
+    .hero {
+      position: relative;
+      padding: 100px 0 80px;
+      min-height: calc(100vh - 52px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-visual { position: absolute; inset: 0; z-index: 0; }
+    .hero-img-main {
+      position: absolute; inset: 0;
+      border-radius: 0;
+      overflow: hidden;
+    }
+    .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-img-main::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right,
+        rgba(15,35,32,0.90) 0%,
+        rgba(15,35,32,0.65) 38%,
+        rgba(15,35,32,0.16) 65%,
+        transparent 100%
+      );
+    }
+    .hero-img-main.scrim-right::after {
+      background: linear-gradient(to left,
+        rgba(15,35,32,0.90) 0%,
+        rgba(15,35,32,0.65) 38%,
+        rgba(15,35,32,0.16) 65%,
+        transparent 100%
+      );
+    }
+    .hero-copy {
+      position: relative; z-index: 1;
+      max-width: 580px;
+      padding: 0 56px 0 max(40px, calc((100vw - 1180px) / 2 + 40px));
+      animation: fadeUp 0.7s var(--ease) both;
+    }
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.8rem, 4.5vw, 4rem);
+      font-weight: 500; line-height: 1.1; letter-spacing: -.025em;
+      color: #ffffff; margin-bottom: 20px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 16px; color: rgba(255,255,255,0.76); line-height: 1.75;
+      max-width: 460px; margin-bottom: 32px;
+    }
+    .hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; background: var(--gold); color: #fff;
+      font-size: 14px; font-weight: 700; letter-spacing: .02em;
+      border-radius: 9999px; transition: background 180ms var(--ease), transform 120ms var(--ease), box-shadow 180ms var(--ease);
+      text-decoration: none;
+    }
+    .btn-primary:hover { background: var(--gold-dark); transform: translateY(-1px); box-shadow: 0 12px 32px rgba(15,35,32,0.18); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 24px; color: rgba(255,255,255,0.90);
+      border: 1.5px solid rgba(255,255,255,0.35); border-radius: 9999px;
+      font-size: 14px; font-weight: 500;
+      transition: border-color 180ms var(--ease), background 180ms var(--ease);
+      text-decoration: none;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.1); }
+    .hero-stats { display: flex; gap: 28px; }
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem; font-weight: 500; color: #ffffff; line-height: 1;
+    }
+    .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.60); margin-top: 3px; }
+    .hero-stat-sep { width: 1px; height: 30px; background: rgba(255,255,255,0.22); flex-shrink: 0; align-self: center; }
+
+    .hero-img-float {
+      position: absolute; bottom: 40px; z-index: 1;
+      right: max(28px, calc((100vw - var(--max)) / 2 + 28px)); left: auto;
+      width: 200px; height: 160px;
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow); border: 3px solid rgba(255,255,255,0.18);
+    }
+    .hero-img-float img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-visual { animation: fadeUp 0.7s 0.15s var(--ease) both; }
+
+    .hero-badge {
+      position: absolute; bottom: 28px; left: max(40px, calc((100vw - 1180px) / 2 + 40px));
+      background: rgba(245,250,250,.94); backdrop-filter: blur(12px);
+      border-radius: var(--radius-md); padding: 12px 16px;
+      border: 1px solid rgba(77,158,138,.25);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-badge-stars { color: var(--gold); font-size: 13px; letter-spacing: 1px; margin-bottom: 2px; }
+    .hero-badge-text { font-size: 12px; font-weight: 600; color: var(--ink); }
+    .hero-badge-sub { font-size: 11px; color: var(--hint); }
+
+    /* ─── Proof Bar ───────────────────────────── */
+    .proof-bar {
+      background: var(--cream-2);
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .proof-inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 28px; display: flex; justify-content: space-between; align-items: center;
+      gap: 24px;
+    }
+    .proof-item { text-align: center; flex: 1; }
+    .proof-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem; font-weight: 500; color: var(--ink); line-height: 1;
+    }
+    .proof-label { font-size: 12px; color: var(--muted); margin-top: 4px; letter-spacing: .02em; }
+    .proof-div { width: 1px; height: 40px; background: var(--line); }
+
+    /* ─── Section helpers ─────────────────────── */
+    .section { max-width: var(--max); margin: 0 auto; padding: 88px 28px; }
+    .section-full { padding: 88px 0; }
+    .section-eyebrow {
+      font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold-dark); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-eyebrow::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--gold); }
+    .section-h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 500;
+      line-height: 1.1; letter-spacing: -.025em; color: var(--ink);
+    }
+    .section-h2 em { font-style: italic; color: var(--rose); }
+    .section-sub { font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 520px; margin-top: 14px; }
+
+    /* ─── Treatment Finder ────────────────────── */
+    .finder-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 40px; }
+    .finder-card {
+      display: block; border-radius: var(--radius-lg); overflow: hidden;
+      background: #fff; border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: transform 260ms var(--ease), box-shadow 260ms var(--ease);
+    }
+    .finder-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .finder-img { height: 160px; overflow: hidden; }
+    .finder-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms var(--ease); }
+    .finder-card:hover .finder-img img { transform: scale(1.04); }
+    .finder-body { padding: 18px; }
+    .finder-intent { font-size: 11px; color: var(--hint); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+    .finder-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem; font-weight: 500; color: var(--ink); margin-bottom: 8px;
+    }
+    .finder-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    /* ─── Services ────────────────────────────── */
+    .services-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 0; align-items: start; }
+    .services-img { position: sticky; top: 130px; border-radius: var(--radius-xl); overflow: hidden; height: 600px; }
+    .services-img img { width: 100%; height: 100%; object-fit: cover; }
+    .services-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(15,35,32,.04), rgba(15,35,32,.10));
+    }
+    .services-list { padding: 48px 0 0 56px; display: flex; flex-direction: column; gap: 0; }
+    .service-item {
+      padding: 28px 0; border-bottom: 1px solid var(--line);
+      display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start;
+      transition: background 200ms var(--ease); border-radius: 0;
+    }
+    .service-item:hover { background: color-mix(in srgb, var(--gold) 6%, var(--cream)); }
+    .service-item:first-child { padding-top: 0; }
+    .service-item:last-child { border-bottom: none; }
+    .service-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1rem; font-weight: 500; color: var(--gold); padding-top: 4px;
+      min-width: 24px;
+    }
+    .service-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem; font-weight: 500; color: var(--ink); margin-bottom: 8px;
+    }
+    .service-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 10px; }
+    .service-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .service-tag {
+      font-size: 11px; font-weight: 500; color: var(--muted);
+      background: var(--cream-2); border: 1px solid var(--line);
+      border-radius: 9999px; padding: 3px 10px;
+    }
+
+    /* ─── Featured CTA Strip ──────────────────── */
+    .featured-strip {
+      position: relative; overflow: hidden; height: 480px;
+      margin: 0;
+    }
+    .featured-strip img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(15,35,32,.84) 40%, rgba(15,35,32,.18));
+      display: flex; align-items: center;
+    }
+    .featured-content { width: 100%; padding: 0 50% 0 max(28px, calc((100vw - var(--max)) / 2 + 28px)); }
+    .featured-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .featured-h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 500; line-height: 1.1;
+      color: #F5FAFA; letter-spacing: -.025em; margin-bottom: 14px; max-width: 520px;
+    }
+    .featured-sub { font-size: 16px; color: rgba(245,250,250,.72); line-height: 1.7; max-width: 440px; margin-bottom: 28px; }
+    .btn-light {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px; background: rgba(245,250,250,.92); color: var(--ink);
+      font-size: 14px; font-weight: 600; border-radius: 9999px;
+      transition: background 180ms var(--ease); text-decoration: none;
+    }
+    .btn-light:hover { background: #fff; }
+
+    /* ─── Testimonials ────────────────────────── */
+    .testimonials-bg { background: var(--cream-2); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px; }
+    .testimonial-card {
+      background: #fff; border-radius: var(--radius-lg); padding: 28px;
+      border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+      transition: transform 260ms var(--ease), box-shadow 260ms var(--ease);
+    }
+    .testimonial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .testimonial-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem; font-style: italic; line-height: 1.55;
+      color: var(--ink); margin-bottom: 20px;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--cream-3); display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px; font-weight: 500; color: var(--rose);
+      flex-shrink: 0;
+    }
+    .testimonial-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .testimonial-detail { font-size: 12px; color: var(--hint); margin-top: 2px; }
+
+    /* ─── Provider ────────────────────────────── */
+    .provider-layout { display: grid; grid-template-columns: 480px 1fr; gap: 72px; align-items: center; }
+    .provider-img {
+      border-radius: var(--radius-xl); overflow: hidden;
+      height: 580px; box-shadow: var(--shadow);
+    }
+    .provider-img img { width: 100%; height: 100%; object-fit: cover; }
+    .provider-credentials { display: flex; flex-direction: column; gap: 10px; margin: 24px 0 32px; }
+    .credential {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .credential-dot {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(77,158,138,.14); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .credential-dot::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: block; }
+    .provider-bio { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 32px; }
+
+    /* ─── Booking CTA ─────────────────────────── */
+    .booking-section { background: var(--ink); padding: 100px 28px; text-align: center; }
+    .booking-inner { max-width: 640px; margin: 0 auto; }
+    .booking-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .booking-h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; line-height: 1.1;
+      letter-spacing: -.025em; color: var(--cream); margin-bottom: 16px;
+    }
+    .booking-h2 em { font-style: italic; color: rgba(245,250,250,.60); }
+    .booking-sub { font-size: 16px; color: rgba(245,250,250,.6); line-height: 1.7; margin-bottom: 36px; }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 32px; background: var(--gold); color: #fff;
+      font-size: 14px; font-weight: 700; letter-spacing: .03em;
+      border-radius: 9999px; transition: background 180ms var(--ease), transform 120ms var(--ease), box-shadow 180ms var(--ease);
+      box-shadow: 0 8px 28px rgba(77,158,138,.30); text-decoration: none;
+    }
+    .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(77,158,138,.40); }
+
+    /* ─── Footer ──────────────────────────────── */
+    .site-footer { background: var(--cream-2); border-top: 1px solid var(--line); }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 48px 28px 36px;
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px;
+    }
+    .footer-brand-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 500; color: var(--ink); margin-bottom: 8px;
+    }
+    .footer-brand-sub { font-size: 13px; color: var(--hint); line-height: 1.7; max-width: 200px; margin-bottom: 16px; }
+    .footer-h { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; }
+    .footer-links { display: flex; flex-direction: column; gap: 9px; }
+    .footer-links a { font-size: 13.5px; color: var(--muted); transition: color 150ms; }
+    .footer-links a:hover { color: var(--ink); }
+    .footer-bottom {
+      max-width: var(--max); margin: 0 auto;
+      padding: 20px 28px; display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--line); font-size: 12px; color: var(--hint);
+    }
+    .footer-bottom a { color: var(--gold); }
+    .footer-bottom a:hover { opacity: 0.8; }
+
+    /* ─── Bottom Floater ──────────────────────── */
+    #cws-floater {
+      position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+      z-index: 9999;
+      background: #141414; border: 1px solid rgba(255,255,255,.08);
+      border-radius: 9999px; padding: 12px 20px 12px 24px;
+      display: flex; align-items: center; gap: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.4);
+      white-space: nowrap;
+      animation: floaterIn 0.6s cubic-bezier(0.34,1.56,0.64,1) 1s both;
+    }
+    @keyframes floaterIn {
+      from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    #cws-floater-text { color: #b0b0b0; font-size: 13px; }
+    #cws-floater-text b { color: #fff; font-weight: 600; }
+    #cws-floater-btn {
+      padding: 9px 22px; background: #fff; color: #141414;
+      font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      border-radius: 9999px; display: flex; align-items: center; gap: 6px;
+      transition: background 180ms; text-decoration: none;
+    }
+    #cws-floater-btn:hover { background: #e8e8e8; }
+
+    /* ─── Animations ──────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── Focus ring ──────────────────────────── */
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+    /* ─── Selection ───────────────────────────── */
+    ::selection { background: var(--gold); color: #fff; }
+
+    /* ─── Mobile ──────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero { padding: 80px 0 60px; min-height: 80vh; }
+      .hero-img-float { display: none; }
+      .finder-grid { grid-template-columns: repeat(2,1fr); }
+      .services-layout { grid-template-columns: 1fr; }
+      .services-list { padding: 32px 0 0; }
+      .services-img { position: relative; top: auto; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .provider-layout { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      #cws-floater { bottom: 16px; }
+    }
+    @media (max-width: 640px) {
+      .site-nav .nav-links { display: none; }
+      .finder-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      #cws-banner-text { font-size: 11px; }
+      #cws-floater { max-width: calc(100vw - 32px); }
+    }
+
+    /* ─── Reduced motion ──────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ── Top Overlay Banner ──────────────────────── -->
+<div id="cws-banner">
+  <span id="cws-banner-text">
+    Private website concept built for <b>Kind Laser Skin &amp; Wellness</b>
+    &mdash; Designed by Caliber Web Studio
+  </span>
+  <a id="cws-banner-btn" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+    Book My Walkthrough
+  </a>
+  <button id="cws-banner-close" aria-label="Dismiss banner">&#x2715;</button>
+</div>
+
+<!-- ── Navigation ─────────────────────────────── -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://caliberwebstudio.com/detroit-med-spa-websites" target="_blank" rel="noopener">
+      <img class="nav-logo-img" src="assets/logo.png" alt="Kind Laser Skin &amp; Wellness logo" />
+    </a>
+    <nav class="nav-links">
+      <a href="#treatments">Treatments</a>
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#providers">About Jen</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:7346577674">(734) 657-7674</a>
+      <a class="nav-cta" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">Book Consult</a>
+    </div>
+  </div>
+</header>
+
+<!-- ── Hero ───────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <div class="hero-eyebrow">Ann Arbor, MI &middot; Certified Laser Specialist</div>
+    <h1>
+      Laser care,<br/>
+      <em>beautifully</em><br/>
+      kind.
+    </h1>
+    <p class="hero-sub">
+      Advanced laser treatments, skin programs, and body care &mdash;
+      in a welcoming Ann Arbor studio led by a certified specialist
+      with nearly 20 years of experience.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        Book a Consultation
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a class="btn-outline" href="#services">View Treatments</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">5,000+</div>
+        <div class="hero-stat-label">Treatments done</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-num">5.0&#9733;</div>
+        <div class="hero-stat-label">Google rating</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div>
+        <div class="hero-stat-num">4 yrs</div>
+        <div class="hero-stat-label">Serving Ann Arbor</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-main">
+      <img
+        src="assets/OAK-HERO-01.jpg.png"
+        alt="Kind Laser Skin &amp; Wellness — studio"
+        loading="eager"
+      />
+    </div>
+    <div class="hero-img-float">
+      <img
+        src="assets/U-TREAT-LASER-01.jpg.png"
+        alt="Laser treatment close-up"
+        loading="eager"
+      />
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="hero-badge-text">Certified Laser Specialist</div>
+      <div class="hero-badge-sub">Licensed in Michigan &middot; Insured</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Proof Bar ──────────────────────────────── -->
+<div class="proof-bar">
+  <div class="proof-inner">
+    <div class="proof-item">
+      <div class="proof-num">5,000+</div>
+      <div class="proof-label">Treatments completed</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-item">
+      <div class="proof-num">5.0 &#9733;</div>
+      <div class="proof-label">Google rating</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-item">
+      <div class="proof-num">4 yrs</div>
+      <div class="proof-label">In Ann Arbor</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-item">
+      <div class="proof-num">CLT</div>
+      <div class="proof-label">Certified specialist</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-item">
+      <div class="proof-num">Same&#8209;wk</div>
+      <div class="proof-label">Consultations</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Treatment Finder ────────────────────────── -->
+<main id="treatments">
+  <div class="section">
+    <div class="section-eyebrow">Find your treatment</div>
+    <h2 class="section-h2">What brings you in <em>today?</em></h2>
+    <p class="section-sub">Tell us your goal and we&rsquo;ll match you with the right laser or skin treatment.</p>
+
+    <div class="finder-grid">
+      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        <div class="finder-img">
+          <img src="assets/U-CONSULT-01.jpg.png" alt="Remove unwanted hair — laser hair removal" loading="lazy" />
+        </div>
+        <div class="finder-body">
+          <div class="finder-intent">I want to</div>
+          <div class="finder-name">Remove unwanted hair</div>
+          <div class="finder-desc">Precision laser hair removal for face, body, and sensitive areas &mdash; long-lasting results.</div>
+        </div>
+      </a>
+      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        <div class="finder-img">
+          <img src="assets/U-TREAT-SKIN-01.jpg.png" alt="Improve skin texture and tone — IPL and resurfacing" loading="lazy" />
+        </div>
+        <div class="finder-body">
+          <div class="finder-intent">I want better</div>
+          <div class="finder-name">Skin tone &amp; texture</div>
+          <div class="finder-desc">IPL, laser resurfacing, and skin programs for pigment, redness, and glow.</div>
+        </div>
+      </a>
+      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        <div class="finder-img">
+          <img src="assets/U-TREAT-LASER-01.jpg.png" alt="Target a specific concern — tattoo removal and skin tightening" loading="lazy" />
+        </div>
+        <div class="finder-body">
+          <div class="finder-intent">I need to</div>
+          <div class="finder-name">Target a concern</div>
+          <div class="finder-desc">Tattoo removal, skin tightening, acne treatment, or double chin &mdash; precision solutions.</div>
+        </div>
+      </a>
+      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        <div class="finder-img">
+          <img src="assets/U-PRODUCT-01.jpg.png" alt="Whole-body wellness and contouring" loading="lazy" />
+        </div>
+        <div class="finder-body">
+          <div class="finder-intent">I want</div>
+          <div class="finder-name">Whole-body care</div>
+          <div class="finder-desc">Body contouring, hair restoration, and wellness services for total confidence.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Services ──────────────────────────────── -->
+  <div class="section" id="services">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+      <div>
+        <div class="section-eyebrow">Our services</div>
+        <h2 class="section-h2">Five treatment categories, <em>one destination.</em></h2>
+        <p class="section-sub">Laser-forward care built around real outcomes &mdash; not just procedures.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:var(--max);margin:0 auto;padding:0 28px 88px;">
+    <div class="services-layout">
+      <div class="services-img">
+        <img src="assets/U-INTERIOR-01.jpg.png" alt="Kind Laser treatment room" loading="lazy" />
+      </div>
+      <div class="services-list">
+        <div class="service-item">
+          <div class="service-num">01</div>
+          <div>
+            <div class="service-name">Laser Treatments</div>
+            <div class="service-desc">Precision laser technology for hair removal, tattoo removal, skin resurfacing, and IPL &mdash; powered by Venus Versa&trade; and Clear Light platforms.</div>
+            <div class="service-tags">
+              <span class="service-tag">Laser Hair Removal</span>
+              <span class="service-tag">Tattoo Removal</span>
+              <span class="service-tag">IPL</span>
+              <span class="service-tag">Skin Resurfacing</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">02</div>
+          <div>
+            <div class="service-name">Facial &amp; Skin Programs</div>
+            <div class="service-desc">EMFACE&reg;, HydraFacial, Procell microchanneling, chemical peels, dermaplaning, and microdermabrasion for clear, renewed skin.</div>
+            <div class="service-tags">
+              <span class="service-tag">EMFACE&reg;</span>
+              <span class="service-tag">HydraFacial</span>
+              <span class="service-tag">Chemical Peels</span>
+              <span class="service-tag">Dermaplaning</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">03</div>
+          <div>
+            <div class="service-name">Skin Tightening &amp; Body</div>
+            <div class="service-desc">Non-surgical skin tightening, Venus Versa&trade; body contouring, cellulite treatment, and double chin removal with lasting results.</div>
+            <div class="service-tags">
+              <span class="service-tag">Skin Tightening</span>
+              <span class="service-tag">Body Contouring</span>
+              <span class="service-tag">Venus Versa&trade;</span>
+              <span class="service-tag">Cellulite</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">04</div>
+          <div>
+            <div class="service-name">Hair Restoration</div>
+            <div class="service-desc">Procell microchanneling for hair restoration and scalp health &mdash; a non-invasive solution for thinning hair and regrowth.</div>
+            <div class="service-tags">
+              <span class="service-tag">Procell Hair</span>
+              <span class="service-tag">Scalp Treatments</span>
+              <span class="service-tag">Hair Regrowth</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">05</div>
+          <div>
+            <div class="service-name">Specialty &amp; Wellness</div>
+            <div class="service-desc">Gender-affirming laser care, Clear Light acne treatment, Migun therapeutic massage, and custom skincare product plans for every client.</div>
+            <div class="service-tags">
+              <span class="service-tag">Gender-Affirming Care</span>
+              <span class="service-tag">Acne Treatment</span>
+              <span class="service-tag">Therapeutic Massage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Featured Strip ──────────────────────── -->
+  <div class="featured-strip" id="results">
+    <img src="assets/OAK-HERO-02.jpg.png" alt="Kind Laser Skin &amp; Wellness — results" loading="lazy" />
+    <div class="featured-overlay">
+      <div class="featured-content">
+        <div class="featured-eyebrow">Laser-forward results</div>
+        <h2 class="featured-h2">The goal is never harsh.<br/>Just <em>precise.</em></h2>
+        <p class="featured-sub">Every treatment plan starts with understanding your skin &mdash; because lasting results require more than just a laser.</p>
+        <a class="btn-light" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+          Start With a Consult
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Testimonials ───────────────────────── -->
+  <div class="testimonials-bg">
+    <div class="section">
+      <div class="section-eyebrow">Client reviews</div>
+      <h2 class="section-h2">What our clients <em>say.</em></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">&ldquo;Jen is genuinely one of the best. I&rsquo;ve had laser hair removal at two other places and nothing compares to the precision she brings. The studio feels safe and the results have been life-changing.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AR</div>
+            <div>
+              <div class="testimonial-name">Aliyah R.</div>
+              <div class="testimonial-detail">Ann Arbor &middot; Laser Hair Removal client</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">&ldquo;I was hesitant about IPL but Jen walked me through everything and customized it to my skin tone. Three sessions in and the redness and spots I&rsquo;ve had for years are basically gone.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CT</div>
+            <div>
+              <div class="testimonial-name">Cassandra T.</div>
+              <div class="testimonial-detail">Ypsilanti &middot; IPL + Skin Rejuvenation client</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">&ldquo;The gender-affirming laser care here is exceptional. I&rsquo;ve never felt so welcomed and respected. Jennifer treats you like a whole person, not just a client.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MD</div>
+            <div>
+              <div class="testimonial-name">Morgan D.</div>
+              <div class="testimonial-detail">Ann Arbor &middot; Gender-Affirming Laser Care</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Provider ───────────────────────────── -->
+  <div class="section" id="providers">
+    <div class="provider-layout">
+      <div class="provider-img">
+        <img src="assets/OAK-PROVIDER-01.jpg.png" alt="Jennifer Hossen — Kind Laser Skin &amp; Wellness" loading="lazy" />
+      </div>
+      <div>
+        <div class="section-eyebrow">Meet your specialist</div>
+        <h2 class="section-h2">Jennifer Hossen, <em>CLT</em></h2>
+        <h3 style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark);margin:10px 0 20px;">Founder &amp; Certified Laser Specialist</h3>
+        <p class="provider-bio">Certified laser technician and skincare specialist with nearly 20 years serving Washtenaw County. Jen built Kind Laser on a simple belief: everyone deserves expert skin care in a space that feels welcoming, not clinical. Medical Director Dr. Hardik Shah, D.O., brings 35+ years of Southeast Michigan clinical experience and physician oversight.</p>
+        <div class="provider-credentials">
+          <div class="credential"><div class="credential-dot"></div>Certified Laser Technician (CLT), Michigan</div>
+          <div class="credential"><div class="credential-dot"></div>Licensed Esthetician &amp; Skincare Specialist</div>
+          <div class="credential"><div class="credential-dot"></div>Nearly 20 Years of Medical Aesthetic Experience</div>
+          <div class="credential"><div class="credential-dot"></div>LGBTQ+ Affirming Practice &middot; Gender-Affirming Care</div>
+        </div>
+        <a class="btn-primary" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+          Book With Jen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Booking CTA ────────────────────────── -->
+  <div class="booking-section">
+    <div class="booking-inner">
+      <div class="booking-eyebrow">Ready when you are</div>
+      <h2 class="booking-h2">Your clearest skin starts with <em>one conversation.</em></h2>
+      <p class="booking-sub">Book a 20-minute laser consult. No commitment &mdash; just honest answers about what treatments make sense for your goals.</p>
+      <a class="btn-gold" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        Schedule My Consultation
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── Footer ─────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Kind Laser</div>
+      <div class="footer-brand-sub">Advanced laser &amp; skin care in Ann Arbor, MI &mdash; serving greater Washtenaw County.</div>
+      <a class="btn-primary" style="display:inline-flex;font-size:13px;padding:10px 20px;" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">Book Now</a>
+    </div>
+    <div>
+      <div class="footer-h">Treatments</div>
+      <div class="footer-links">
+        <a href="#services">Laser Treatments</a>
+        <a href="#services">Facial &amp; Skin Programs</a>
+        <a href="#services">Body Contouring</a>
+        <a href="#services">Hair Restoration</a>
+        <a href="#services">Specialty Care</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Visit Us</div>
+      <div class="footer-links">
+        <a href="#">2730 Carpenter Rd, Suite 3</a>
+        <a href="#">Ann Arbor, MI 48108</a>
+        <a href="tel:7346577674">(734) 657-7674</a>
+        <a href="#">Tue&ndash;Sat &middot; 10am&ndash;6pm</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Follow</div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/kind_laser_skin_wellness/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Google Reviews</a>
+        <a href="https://kindlaserandskin.com/" target="_blank" rel="noopener">Website</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Kind Laser Skin &amp; Wellness &middot; Ann Arbor, MI</span>
+    <span>Private preview by <a href="https://caliberwebstudio.com" target="_blank" rel="noopener">Caliber Web Studio</a></span>
+  </div>
+</footer>
+
+<!-- ── Bottom Floater ─────────────────────────── -->
+<div id="cws-floater">
+  <span id="cws-floater-text">Custom preview built for <b>Kind Laser Skin &amp; Wellness</b></span>
+  <a id="cws-floater-btn" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+    Walk Me Through This
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+  </a>
+</div>
+
+<script>
+  // Banner dismiss
+  document.getElementById('cws-banner-close').addEventListener('click', function () {
+    var b = document.getElementById('cws-banner');
+    b.style.display = 'none';
+    document.querySelector('.site-nav').style.top = '0';
+  });
+</script>
+
+</body>
+</html>

@@ -490,6 +490,44 @@
       #cws-floater { max-width: calc(100vw - 32px); }
     }
 
+    /* ─── CWS Chatbot ─────────────────────────── */
+    #cws-chatbot { position: fixed; bottom: 90px; right: 24px; z-index: 9998; }
+    #cws-chat-btn {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--ink); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,.35); color: #fff;
+      transition: transform 180ms var(--ease), background 180ms var(--ease);
+    }
+    #cws-chat-btn:hover { transform: scale(1.08); background: var(--ink-mid); }
+    #cws-chat-modal {
+      display: none; position: absolute; bottom: 64px; right: 0; width: 300px;
+      background: #fff; border-radius: 16px;
+      box-shadow: 0 16px 48px rgba(0,0,0,.2); border: 1px solid rgba(0,0,0,.08);
+      flex-direction: column; overflow: hidden;
+    }
+    #cws-chat-modal.open { display: flex; }
+    .chat-header { background: #141414; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; }
+    .chat-header-info .chat-title { color: #fff; font-size: 14px; font-weight: 600; }
+    .chat-header-info .chat-sub { color: #999; font-size: 12px; margin-top: 1px; }
+    .chat-close { background: none; border: none; color: #666; cursor: pointer; font-size: 20px; padding: 0; line-height: 1; }
+    .chat-close:hover { color: #fff; }
+    .chat-body { padding: 18px; }
+    .chat-bubble {
+      background: var(--cream-2); border-radius: 12px 12px 12px 2px;
+      padding: 12px 14px; font-size: 13.5px; line-height: 1.55; color: var(--ink);
+    }
+    .chat-footer { padding: 0 18px 18px; }
+    .chat-cta {
+      display: block; text-align: center;
+      padding: 11px 20px; background: #141414; color: #fff;
+      border-radius: 9999px; font-size: 13px; font-weight: 600; text-decoration: none;
+      transition: background 180ms var(--ease);
+    }
+    .chat-cta:hover { background: var(--ink-mid); }
+    @media (max-width: 900px) { #cws-chatbot { bottom: 80px; right: 16px; } }
+    @media (max-width: 640px) { #cws-chat-modal { width: 280px; right: -8px; } }
+
     /* ─── Reduced motion ──────────────────────── */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -506,7 +544,7 @@
     Private website concept built for <b>Kind Laser Skin &amp; Wellness</b>
     &mdash; Designed by Caliber Web Studio
   </span>
-  <a id="cws-banner-btn" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+  <a id="cws-banner-btn" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
     Book My Walkthrough
   </a>
   <button id="cws-banner-close" aria-label="Dismiss banner">&#x2715;</button>
@@ -526,7 +564,7 @@
     </nav>
     <div class="nav-actions">
       <a class="nav-phone" href="tel:7346577674">(734) 657-7674</a>
-      <a class="nav-cta" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">Book Consult</a>
+      <a class="nav-cta" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">Book Consult</a>
     </div>
   </div>
 </header>
@@ -546,7 +584,7 @@
       with nearly 20 years of experience.
     </p>
     <div class="hero-actions">
-      <a class="btn-primary" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+      <a class="btn-primary" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
         Book a Consultation
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
@@ -630,7 +668,7 @@
     <p class="section-sub">Tell us your goal and we&rsquo;ll match you with the right laser or skin treatment.</p>
 
     <div class="finder-grid">
-      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+      <a class="finder-card" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
         <div class="finder-img">
           <img src="assets/U-CONSULT-01.jpg.png" alt="Remove unwanted hair — laser hair removal" loading="lazy" />
         </div>
@@ -640,7 +678,7 @@
           <div class="finder-desc">Precision laser hair removal for face, body, and sensitive areas &mdash; long-lasting results.</div>
         </div>
       </a>
-      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+      <a class="finder-card" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
         <div class="finder-img">
           <img src="assets/U-TREAT-SKIN-01.jpg.png" alt="Improve skin texture and tone — IPL and resurfacing" loading="lazy" />
         </div>
@@ -650,7 +688,7 @@
           <div class="finder-desc">IPL, laser resurfacing, and skin programs for pigment, redness, and glow.</div>
         </div>
       </a>
-      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+      <a class="finder-card" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
         <div class="finder-img">
           <img src="assets/U-TREAT-LASER-01.jpg.png" alt="Target a specific concern — tattoo removal and skin tightening" loading="lazy" />
         </div>
@@ -660,7 +698,7 @@
           <div class="finder-desc">Tattoo removal, skin tightening, acne treatment, or double chin &mdash; precision solutions.</div>
         </div>
       </a>
-      <a class="finder-card" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+      <a class="finder-card" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
         <div class="finder-img">
           <img src="assets/U-PRODUCT-01.jpg.png" alt="Whole-body wellness and contouring" loading="lazy" />
         </div>
@@ -765,7 +803,7 @@
         <div class="featured-eyebrow">Laser-forward results</div>
         <h2 class="featured-h2">The goal is never harsh.<br/>Just <em>precise.</em></h2>
         <p class="featured-sub">Every treatment plan starts with understanding your skin &mdash; because lasting results require more than just a laser.</p>
-        <a class="btn-light" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        <a class="btn-light" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
           Start With a Consult
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
@@ -833,7 +871,7 @@
           <div class="credential"><div class="credential-dot"></div>Nearly 20 Years of Medical Aesthetic Experience</div>
           <div class="credential"><div class="credential-dot"></div>LGBTQ+ Affirming Practice &middot; Gender-Affirming Care</div>
         </div>
-        <a class="btn-primary" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+        <a class="btn-primary" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
           Book With Jen
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
@@ -847,7 +885,7 @@
       <div class="booking-eyebrow">Ready when you are</div>
       <h2 class="booking-h2">Your clearest skin starts with <em>one conversation.</em></h2>
       <p class="booking-sub">Book a 20-minute laser consult. No commitment &mdash; just honest answers about what treatments make sense for your goals.</p>
-      <a class="btn-gold" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+      <a class="btn-gold" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
         Schedule My Consultation
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
       </a>
@@ -862,7 +900,7 @@
     <div>
       <div class="footer-brand-name">Kind Laser</div>
       <div class="footer-brand-sub">Advanced laser &amp; skin care in Ann Arbor, MI &mdash; serving greater Washtenaw County.</div>
-      <a class="btn-primary" style="display:inline-flex;font-size:13px;padding:10px 20px;" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">Book Now</a>
+      <a class="btn-primary" style="display:inline-flex;font-size:13px;padding:10px 20px;" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">Book Now</a>
     </div>
     <div>
       <div class="footer-h">Treatments</div>
@@ -902,10 +940,37 @@
 <!-- ── Bottom Floater ─────────────────────────── -->
 <div id="cws-floater">
   <span id="cws-floater-text">Custom preview built for <b>Kind Laser Skin &amp; Wellness</b></span>
-  <a id="cws-floater-btn" href="https://caliberwebstudio.com/contact&phone=(734)+657-7674">
+  <a id="cws-floater-btn" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
     Walk Me Through This
     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
   </a>
+</div>
+
+<!-- ── CWS Chatbot ─────────────────────────── -->
+<div id="cws-chatbot">
+  <button id="cws-chat-btn" aria-label="Chat with Caliber Web Studio">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="cws-chat-modal">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-title">Caliber Web Studio</div>
+        <div class="chat-sub">Website Specialist · Detroit, MI</div>
+      </div>
+      <button class="chat-close" id="cws-chat-close">&#x2715;</button>
+    </div>
+    <div class="chat-body">
+      <div class="chat-bubble">
+        Hi! I built this preview site for <strong>Kind Laser Skin &amp; Wellness</strong>.<br/><br/>
+        Want to see how this looks live — with your real branding, photos, booking integration, and local SEO? I can walk you through it all in 15 minutes.
+      </div>
+    </div>
+    <div class="chat-footer">
+      <a class="chat-cta" href="walkthrough.html?business=Kind+Laser+Skin+%26+Wellness&phone=(734)+657-7674">
+        Book a Walkthrough Call
+      </a>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -914,6 +979,14 @@
     var b = document.getElementById('cws-banner');
     b.style.display = 'none';
     document.querySelector('.site-nav').style.top = '0';
+  });
+
+  // Chatbot toggle
+  document.getElementById('cws-chat-btn').addEventListener('click', function () {
+    document.getElementById('cws-chat-modal').classList.toggle('open');
+  });
+  document.getElementById('cws-chat-close').addEventListener('click', function () {
+    document.getElementById('cws-chat-modal').classList.remove('open');
   });
 </script>
 

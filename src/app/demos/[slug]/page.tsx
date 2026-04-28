@@ -21,19 +21,33 @@ export async function generateMetadata({
 
   const portfolio = getPortfolioDemo(slug)
   if (portfolio) {
+    const title = `${portfolio.fakeName} | ${portfolio.industry} Demo — Caliber Web Studio`
     return {
-      title: `${portfolio.fakeName} | ${portfolio.industry} Demo — Caliber Web Studio`,
+      title: { absolute: title },
       description: portfolio.description,
       alternates: { canonical: `https://www.caliberwebstudio.com/demos/${slug}` },
+      openGraph: {
+        title,
+        description: portfolio.description,
+        url: `https://www.caliberwebstudio.com/demos/${slug}`,
+        type: 'website',
+      },
     }
   }
 
   const spa = getMedSpaDemo(slug)
   if (spa) {
+    const title = `${spa.businessName} | Med Spa Demo — Caliber Web Studio`
     return {
-      title: `${spa.businessName} | Med Spa Demo — Caliber Web Studio`,
+      title: { absolute: title },
       description: spa.tagline,
       alternates: { canonical: `https://www.caliberwebstudio.com/demos/${slug}` },
+      openGraph: {
+        title,
+        description: spa.tagline,
+        url: `https://www.caliberwebstudio.com/demos/${slug}`,
+        type: 'website',
+      },
     }
   }
 

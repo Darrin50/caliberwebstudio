@@ -261,7 +261,12 @@ const localBusinessSchema = {
       },
     ],
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.instagram.com/caliberwebstudio",
+    "https://www.linkedin.com/company/caliber-web-studio",
+    "https://twitter.com/caliberwebstudio",
+    // TODO: confirm Google Business Profile URL and add here
+  ],
 };
 
 /* ─── JSON-LD: WebSite Schema (enables sitelinks search box) ─── */

@@ -69,7 +69,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     dateModified: post.date,
     wordCount,
     keywords: keywords.join(', '),
-    author: { "@type": "Organization", name: "Caliber Web Studio", url: "https://www.caliberwebstudio.com" },
+    author: { "@type": "Person", name: "Darrin Singer", url: "https://www.caliberwebstudio.com/about" },
     publisher: {
       "@type": "Organization",
       name: "Caliber Web Studio",
@@ -133,7 +133,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
               <span style={{ fontSize: "0.85rem", color: "var(--text-secondary, rgba(255,255,255,0.5))" }}>
-                By <strong style={{ color: "var(--text-primary, #fff)" }}>Caliber Web Studio</strong>
+                By <strong style={{ color: "var(--text-primary, #fff)" }}>Darrin Singer</strong>
               </span>
               <span style={{ color: "var(--border-color, rgba(255,255,255,0.2))" }}>·</span>
               <time dateTime={post.date} style={{ fontSize: "0.85rem", color: "var(--text-secondary, rgba(255,255,255,0.5))" }}>

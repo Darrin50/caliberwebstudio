@@ -364,10 +364,76 @@ const previewSpas: PreviewSpaEntry[] = [
     },
   },
 
-  // ── Serenity Health Med Spa — Canton, MI ──────────────────────────────────
-  // ⚠️  logoImg is pending — Darrin to drop real logo at /mocks/serenity-health-med-spa/serenity-logo.png
-  //     then set logoImg: '/mocks/serenity-health-med-spa/serenity-logo.png'
-  // Preview URL: /preview/f2n8k4qr
+  // ── Injector Lady Med Spa — Ann Arbor, MI · /preview/8gqh6ahh ──
+  // Logo + hero downloaded from injector-lady-preview.vercel.app 2026-04-28
+  {
+    hash: '8gqh6ahh',
+    config: {
+      businessName: 'Injector Lady Med Spa',
+      tagline: 'Expert Nurse Injector in Ann Arbor, MI',
+      location: 'Ann Arbor, MI',
+      seoCity: 'Ann Arbor',
+      phone: '(734) 250-9959',
+      bookingUrl: undefined,
+      logoHref: 'https://caliberwebstudio.com/med-lab',
+      heroHeadline: 'Precision. Passion. *Perfection.*',
+      heroSub: '30+ years of nursing expertise, refined into the art of aesthetic medicine. Botox, fillers, skin rejuvenation, and weight loss — each treatment tailored to you.',
+      heroImg: '/mocks/injector-lady/injector-lady-hero-01.jpg',
+      logoImg: '/mocks/injector-lady/injector-lady-logo.png',
+      accentColor: '#C0527A',
+      announceBar: 'Expert Nurse Injector &nbsp;·&nbsp; Ann Arbor, MI &nbsp;·&nbsp; 30+ Years Nursing Expertise &nbsp;·&nbsp; <span style="font-weight:700">(734) 250-9959</span>',
+      providers: [
+        {
+          name: 'Lynda',
+          title: 'Founder & Expert Nurse Injector',
+          credentials: 'RN, RNFA · Michigan Licensed & Insured · 30+ Years Nursing Expertise',
+          philosophy: 'Beautiful results start with an honest assessment. After 30 years in nursing, I know that precision matters — and so does making you feel comfortable every step of the way.',
+        },
+      ],
+      servicePathways: [
+        {
+          category: 'Injectables',
+          icon: '◇',
+          treatments: ['Botox & Dysport', 'Dermal Fillers', 'Lip Enhancement', 'Anti-Wrinkle Treatments'],
+          description: 'Precise injectable treatments administered by an expert nurse injector with 30+ years of clinical experience. Natural results, every time.',
+        },
+        {
+          category: 'Skin Care',
+          icon: '○',
+          treatments: ['Skin Rejuvenation', 'Chemical Peels', 'Microneedling', 'Hydrating Facials'],
+          description: 'Medical-grade skin treatments targeting fine lines, texture, and tone — clinically effective for every skin type.',
+        },
+        {
+          category: 'Body',
+          icon: '◎',
+          treatments: ['Weight Loss Programs', 'Body Contouring', 'Cellulite Reduction', 'Skin Tightening'],
+          description: 'Medically guided weight loss and non-invasive body treatments to help you feel as good as you look.',
+        },
+        {
+          category: 'Wellness',
+          icon: '⊕',
+          treatments: ['IV Therapy', 'Vitamin Injections', 'Skin Boosters', 'Wellness Consultations'],
+          description: 'Support your skin health and vitality from the inside out with nurse-guided wellness therapies.',
+        },
+        {
+          category: 'Laser & Energy',
+          icon: '✦',
+          treatments: ['Laser Hair Removal', 'IPL Photofacial', 'Skin Resurfacing', 'Vascular Treatments'],
+          description: 'FDA-cleared laser and energy treatments for lasting hair reduction and visible improvements in skin tone and texture.',
+        },
+        {
+          category: 'Membership',
+          icon: '∿',
+          treatments: ['Monthly Facial Plan', 'Injectable Credits', 'Priority Booking', 'Member Pricing'],
+          description: 'Consistent care delivers consistent results. Our membership makes expert nurse injector treatments accessible year-round.',
+        },
+      ],
+      financing: [],
+    },
+  },
+
+  // ── Serenity Health Med Spa — Canton, MI · /preview/f2n8k4qr ──
+  // Logo + hero downloaded from serenity-health-preview.vercel.app 2026-04-28
   {
     hash: 'f2n8k4qr',
     config: {
@@ -383,7 +449,7 @@ const previewSpas: PreviewSpaEntry[] = [
       heroSub:
         'Four physicians. One practice. Advanced medical aesthetics — injectables, laser, skin care, and body contouring — delivered with clinical precision for the Canton, MI community.',
       heroImg: '/mocks/serenity-health-med-spa/serenity-hero-01.jpg',
-      logoImg: undefined,
+      logoImg: '/mocks/serenity-health-med-spa/serenity-logo.png',
       accentColor: '#2E6B98',
       announceBar:
         'Four-Physician Practice &nbsp;·&nbsp; Canton, MI &nbsp;·&nbsp; Now Accepting New Patients',

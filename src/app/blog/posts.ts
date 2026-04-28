@@ -12677,7 +12677,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   },
   {
     slug: "detroit-bridal-aesthetic-timeline",
-    thumbnail: "/blog/detroit-bridal-aesthetic-timeline-thumb.jpg",
+    thumbnail: "/blog/detroit-bridal-aesthetic-timeline-thumb-v2.jpg",
     hero: "/blog/detroit-bridal-aesthetic-timeline-hero.jpg",
     title: "Wedding Season Aesthetic Timeline for Detroit Brides: What to Book and When",
     description: "Michigan wedding season peaks June–August. Book laser 12 months out, Botox 6 months out, HydraFacial 2 weeks before. The full Detroit bridal med spa timeline.",

@@ -1,29 +1,63 @@
+'use client'
+import { useState } from 'react'
+
 export default function ConceptDisclaimerBar({ spaName }: { spaName: string }) {
+  const [dismissed, setDismissed] = useState(false)
+  if (dismissed) return null
+
   return (
     <div
-      className="concept-bar"
       style={{
         position: 'sticky',
         top: 0,
         zIndex: 99999,
-        background: '#2d1a0e',
-        borderBottom: '2px solid #b8610a',
+        background: '#111',
         padding: '12px 24px',
         display: 'flex',
-        flexDirection: 'column',
-        gap: '4px',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: '16px',
         fontFamily: 'system-ui, sans-serif',
       }}
     >
-      <strong style={{ color: '#f5c07a', fontSize: '13px', display: 'block' }}>
-        Private concept preview for {spaName}
-      </strong>
-      <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '12px', lineHeight: 1.55 }}>
-        Created by Caliber Web Studio to show one possible redesign.
-        This is not an official website and is not affiliated with or endorsed by {spaName}.
-        Logo/name are used for identification in this private preview only.
-        Images, results, testimonials, and treatment examples are placeholders unless provided or approved by the business.
+      <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '13px' }}>
+        Private website preview built for <strong style={{ color: '#fff' }}>{spaName}</strong> —{' '}
+        Designed by Caliber Web Studio
       </span>
+
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+        <a
+          href="https://caliberwebstudio.com/contact"
+          style={{
+            background: '#C0527A',
+            color: '#fff',
+            fontWeight: 700,
+            fontSize: '12px',
+            letterSpacing: '0.06em',
+            padding: '8px 16px',
+            borderRadius: '100px',
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          📅 BOOK MY WALKTHROUGH
+        </a>
+        <button
+          onClick={() => setDismissed(true)}
+          aria-label="Dismiss"
+          style={{
+            background: 'none',
+            border: 'none',
+            color: 'rgba(255,255,255,0.5)',
+            fontSize: '18px',
+            cursor: 'pointer',
+            lineHeight: 1,
+            padding: '2px',
+          }}
+        >
+          ×
+        </button>
+      </div>
     </div>
   )
 }

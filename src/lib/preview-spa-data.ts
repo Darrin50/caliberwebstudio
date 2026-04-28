@@ -441,18 +441,18 @@ const previewSpas: PreviewSpaEntry[] = [
       tagline: 'Physician-Led Medical Aesthetics in Canton, MI',
       location: 'Canton, MI',
       seoCity: 'Canton',
-      phone: undefined,
+      phone: '(248) 378-7353',
       email: undefined,
       bookingUrl: undefined,
       logoHref: 'https://caliberwebstudio.com/med-lab',
-      heroHeadline: "Canton's *Physician-Led* Aesthetic Medicine",
+      heroHeadline: 'Results that feel as good as they *look.*',
       heroSub:
-        'Four physicians. One practice. Advanced medical aesthetics — injectables, laser, skin care, and body contouring — delivered with clinical precision for the Canton, MI community.',
+        'Physician co-founded and led — Serenity Health brings board-level expertise to laser treatments, injectables, and skin programs in a boutique Canton setting.',
       heroImg: '/mocks/serenity-health-med-spa/serenity-hero-01.jpg',
       logoImg: '/mocks/serenity-health-med-spa/serenity-logo.png',
-      accentColor: '#2E6B98',
+      accentColor: '#3A6A4A',
       announceBar:
-        'Four-Physician Practice &nbsp;·&nbsp; Canton, MI &nbsp;·&nbsp; Now Accepting New Patients',
+        'Physician-Founded Med Spa &nbsp;·&nbsp; Canton, MI &nbsp;·&nbsp; Now Accepting New Patients &nbsp;·&nbsp; <span style="font-weight:700">(248) 378-7353</span>',
       providers: [
         {
           name: 'Dr. Khraizat',

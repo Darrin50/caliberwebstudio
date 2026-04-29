@@ -12925,7 +12925,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>For a framework on evaluating any Detroit-area provider's credentials and oversight structure before booking, the guide to <a href="/blog/choose-botox-provider-detroit">choosing a Detroit med spa provider</a> covers the due-diligence questions that apply equally to laser services. For a full checklist of what to watch for when vetting metro Detroit clinics, the <a href="/blog/med-spa-red-flags-detroit">Detroit med spa red flags guide</a> runs the complete list.</p>
 
-<img src="/blog/laser-hair-removal-detroit-2026-3.jpg" alt="Black woman in her early 30s standing at a bathroom mirror examining her leg, considering starting laser hair removal treatment" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/laser-hair-removal-detroit-2026-3.jpg" alt="Arab-American woman in her late 30s standing at a bathroom mirror at home, examining her forearm and considering laser hair removal treatment" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>When to Start if You Want Results Before Michigan Summer</h2>
 
@@ -12935,7 +12935,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>For patients planning treatments around a wedding, the timing is tighter still. If your Michigan wedding is in June, your final laser session should be complete by April, which places session one in the previous September. The full treatment calendar for Michigan brides planning injectables and energy-based treatments together is mapped in the <a href="/blog/detroit-bridal-aesthetic-timeline">Detroit bridal aesthetic timeline</a>.</p>
 
-<img src="/blog/laser-hair-removal-detroit-2026-4.jpg" alt="Confident Black woman in her early 40s outdoors in a Detroit neighborhood during summer, smooth bare arms in natural light" style="width:100%;border-radius:12px;margin:32px 0;" />
+<img src="/blog/laser-hair-removal-detroit-2026-4.jpg" alt="Confident white man in his early 40s at a Metro Detroit park in summer, wearing a short-sleeve shirt, smooth forearms and relaxed casual posture" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <div style="background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);border-radius:12px;padding:24px 28px;margin:40px 0;">
 <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(0,212,255,0.8);margin:0 0 12px;">Own a Detroit Med Spa Offering Laser Services?</p>

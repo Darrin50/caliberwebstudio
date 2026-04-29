@@ -12883,8 +12883,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>The practical result is that a single treatment session reduces active follicles without touching dormant ones. Return visits catch the next wave. Six to eight sessions over six to twelve months is what produces the 90% reduction figure that legitimate providers cite. Providers who promise similar results in three sessions are either misrepresenting the biology or using "permanent reduction" language loosely enough to cover outcomes that require annual maintenance.</p>
 
-<img src="/blog/laser-hair-removal-detroit-2026-hero.jpg" alt="Black woman in her early 30s receiving laser hair removal treatment on her leg at a modern Detroit-area med spa" style="width:100%;border-radius:12px;margin:32px 0;" />
-
 <h2>Why Skin Type Is the Most Important Factor for Detroit Patients</h2>
 
 <p>Detroit is a majority-Black city, and the metro's patient population includes high concentrations of Fitzpatrick skin types IV through VI. That context is not background noise. It is the most clinically significant variable in a laser hair removal evaluation.</p>

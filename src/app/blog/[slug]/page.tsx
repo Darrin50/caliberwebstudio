@@ -149,6 +149,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             className="blog-article-body"
             style={{ color: "var(--text-secondary, rgba(255,255,255,0.8))", lineHeight: 1.8, fontSize: "1.05rem" }}
             dangerouslySetInnerHTML={{ __html: post.content
+              .replace(/<h1>/g, '<h1 style="display:none">')
               .replace(/<h2>/g, '<h2 style="font-size:clamp(1.2rem,3vw,1.5rem);font-weight:700;color:var(--text-primary,#fff);margin:2em 0 0.75em;line-height:1.3">')
               .replace(/<h3>/g, '<h3 style="font-size:clamp(1rem,2.5vw,1.2rem);font-weight:700;color:var(--text-primary,#fff);margin:1.5em 0 0.5em">')
               .replace(/<p>/g, '<p style="margin:0 0 1.25em;font-size:clamp(1rem,2vw,1.075rem);line-height:1.8">')

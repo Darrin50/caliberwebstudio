@@ -13291,16 +13291,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>This post is for the med spa owner who suspects their site isn’t working as hard as it should. Here’s exactly what’s broken.</p>
 
-<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:20px 24px;margin:32px 0;border-radius:8px;">
-  <strong style="display:block;margin-bottom:10px;font-size:1.05em;">TL;DR — Key Takeaways</strong>
-  <ul style="margin:0;padding-left:20px;">
-    <li>53% of mobile visitors abandon a site that takes more than 3 seconds to load (Google/DoubleClick, 2016)</li>
-    <li>The average medical spa generates $1.3M/year (AmSpa 2024) — a 3-point conversion improvement is worth $40,000–$80,000 in additional annual revenue</li>
-    <li>97% of consumers read online reviews before choosing a local business (BrightLocal, 2026)</li>
-    <li>64% of patients say digital scheduling capabilities influence their provider choice (Accenture, 2019)</li>
-    <li>Most med spa websites lose 95–98% of visitors with no way to re-engage them — this is fixable</li>
-  </ul>
-</div>
+<img src="/blog/med-spa-website-losing-leads-2026-1.jpg" alt="Med spa owner reviewing website analytics on laptop at desk" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <h2>What a Leaky Website Costs a Med Spa in Real Money</h2>
 
@@ -13328,7 +13319,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>On a phone, the first viewport is roughly 600–700 pixels tall. Your logo, a one-line value proposition, a compelling hero image, and a visible booking CTA should all live in that space. If your navigation bar is oversized, your hero text runs five lines before a button appears, or your “Book Now” link is buried below a long service description — you’re fighting your own conversion rate from the first second.</p>
 
-<img src="/blog/med-spa-website-losing-leads-2026-1.jpg" alt="Close-up of hands holding a smartphone showing a med spa website — booking button not visible without scrolling" style="width:100%;border-radius:12px;margin:32px 0;" />
+
 
 <h3>3. Your Before/After Gallery Is Thin, Hidden, or Outdated</h3>
 

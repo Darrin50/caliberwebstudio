@@ -124,7 +124,7 @@ export const posts: BlogPost[] = [
 
 <p>Detroit businesses deserve websites that work as hard as they do. Don't settle for less.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to work with a web designer who's accountable for results?</strong>
   <p style="margin:12px 0 0;">See exactly what's included in our plans, with no-fluff pricing and real Detroit client outcomes. <a href="/pricing" style="color:#2563eb;font-weight:600;">View our pricing</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free site audit</a> — we'll tell you exactly what's holding your current site back.</p>
 </div>
@@ -239,7 +239,7 @@ export const posts: BlogPost[] = [
 
 <p>For Detroit small businesses, that usually means working with a partner who stays accountable after launch day — someone who treats your website as an ongoing investment, not a one-time transaction.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">See what $197/month actually gets you.</strong>
   <p style="margin:12px 0 0;">Custom-built. Professionally designed. Optimized for your Detroit neighborhood and industry. $0 down. <a href="/pricing" style="color:#2563eb;font-weight:600;">Compare plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">schedule a free consultation</a> — we'll audit your current site and show you exactly what's missing.</p>
 </div>
@@ -358,7 +358,7 @@ export const posts: BlogPost[] = [
 
 <p>Caliber Web Studio builds custom Next.js sites for Detroit small businesses starting at $197/month with $0 down. We handle the build, hosting, maintenance, and SEO. You get a partner who stays accountable for your results — not a vendor who disappears after the invoice clears.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Stop guessing. Make the call.</strong>
   <p style="margin:12px 0 0;">We'll audit your current website — or tell you exactly what you need if you don't have one — and show you a clear path to a site that actually generates leads. No sales pitch. Just honest analysis. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free audit today.</a></p>
 </div>
@@ -456,7 +456,7 @@ export const posts: BlogPost[] = [
 
 <p>The businesses winning in Detroit's local market have professional websites. The ones losing don't. It really is that simple.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Find out why your competitors are showing up — and you're not.</strong>
   <p style="margin:12px 0 0;">We'll run a free audit on your current online presence and show you exactly what it would take to start showing up in local search. No obligation. Just honest analysis from a Detroit-based team that knows the market. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free audit now.</a></p>
 </div>
@@ -550,7 +550,7 @@ export const posts: BlogPost[] = [
 
 <p>That's it. No mystery. No bait-and-switch. No disappearing after launch. If you want to understand why this model produces better outcomes than the alternatives, read our full breakdown of the <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> — and then decide if you're ready to stop leaving leads on the table.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">See what we build — and what it produces.</strong>
   <p style="margin:12px 0 0;">Browse our work, review our plans, or get a free audit of your current website. We'll show you exactly what's holding your online presence back and what it would take to fix it. <a href="/work" style="color:#2563eb;font-weight:600;">View our work</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free site audit.</a></p>
 </div>
@@ -616,7 +616,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$3,000–$8,000 one-time</td>
       <td style="padding:12px 16px;color:#2563eb;">$0 upfront</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Hosting (quality)</td>
       <td style="padding:12px 16px;">$30–$100/month</td>
       <td style="padding:12px 16px;color:#2563eb;">Included</td>
@@ -626,7 +626,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$0–$100/year</td>
       <td style="padding:12px 16px;color:#2563eb;">Included</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Maintenance & Updates</td>
       <td style="padding:12px 16px;">$100–$400/month</td>
       <td style="padding:12px 16px;color:#2563eb;">Included</td>
@@ -636,7 +636,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$500–$1,500/month</td>
       <td style="padding:12px 16px;color:#2563eb;">Included (Launch+)</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;font-weight:600;">Total Monthly (comparable)</td>
       <td style="padding:12px 16px;font-weight:600;">$1,100–$2,000/month + build</td>
       <td style="padding:12px 16px;color:#2563eb;font-weight:600;">$197–$697/month</td>
@@ -714,7 +714,7 @@ export const posts: BlogPost[] = [
 
 <p>The upfront build model ($2,000–$8,000) can work if you have in-house capability to handle ongoing SEO and maintenance. For most small business owners who are focused on running their business, the all-in monthly model is the smarter economic choice.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Get a clear price for your specific situation.</strong>
   <p style="margin:12px 0 0;">No ranges. No "it depends." We'll look at your business, your market, and your goals — and give you a straight recommendation. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our pricing</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">talk to us directly.</a></p>
 </div>
@@ -821,7 +821,7 @@ export const posts: BlogPost[] = [
 
 <p>The question isn't whether a professional website is worth the investment. The question is how much longer you're willing to pay for a site that isn't working while your competitors' professional sites continue compounding their advantage.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Stop paying for a site that doesn't work.</strong>
   <p style="margin:12px 0 0;">We'll audit your current website and show you exactly why it isn't generating leads — and what it would take to fix it. $0 upfront. Real results. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">get a free audit today.</a></p>
 </div>
@@ -906,7 +906,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$3,000–$8,000 one-time</td>
       <td style="padding:12px 16px;">Amortized over 2 years: $125–$333/mo</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Quality managed hosting</td>
       <td style="padding:12px 16px;">$30–$100/month</td>
       <td style="padding:12px 16px;">WP Engine, Kinsta, Vercel Pro tier</td>
@@ -916,7 +916,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$0–$100/year ($8/mo)</td>
       <td style="padding:12px 16px;">Often bundled but not always</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Website maintenance & updates</td>
       <td style="padding:12px 16px;">$150–$400/month</td>
       <td style="padding:12px 16px;">Security, backups, performance monitoring</td>
@@ -926,7 +926,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$500–$1,000 one-time</td>
       <td style="padding:12px 16px;">Amortized over 2 years: $21–$42/mo</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Monthly SEO monitoring</td>
       <td style="padding:12px 16px;">$300–$800/month</td>
       <td style="padding:12px 16px;">Basic ongoing SEO from a retainer</td>
@@ -936,7 +936,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$600–$2,400 one-time</td>
       <td style="padding:12px 16px;">$75–$300/page for 8 pages</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;font-weight:600;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);font-weight:600;">
       <td style="padding:12px 16px;font-weight:700;">Total (à la carte)</td>
       <td style="padding:12px 16px;font-weight:700;">$1,200–$2,100/month<br>+ $4,100–$10,900 upfront</td>
       <td style="padding:12px 16px;">vs. $197/month, $0 upfront</td>
@@ -999,7 +999,7 @@ export const posts: BlogPost[] = [
 
 <p>That's the deal. If it sounds too good compared to what you've been quoted elsewhere, read through the comparison table above — then decide what you're worth.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to see your site built in under 30 days?</strong>
   <p style="margin:12px 0 0;">No upfront cost. No contract. Just a professional website that works for your business from day one. <a href="/pricing" style="color:#2563eb;font-weight:600;">Compare all plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">schedule a free consultation.</a></p>
 </div>
@@ -1038,7 +1038,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$3,000–$8,000</td>
       <td style="padding:12px 16px;color:#2563eb;">$0</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Hosting (24 months)</td>
       <td style="padding:12px 16px;">$720–$2,400</td>
       <td style="padding:12px 16px;color:#2563eb;">Included</td>
@@ -1048,7 +1048,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$2,400–$9,600</td>
       <td style="padding:12px 16px;color:#2563eb;">Included</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Basic SEO (24 months)</td>
       <td style="padding:12px 16px;">$6,000–$18,000 (or nothing)</td>
       <td style="padding:12px 16px;color:#2563eb;">Included</td>
@@ -1058,7 +1058,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;font-weight:600;">$12,120–$38,000</td>
       <td style="padding:12px 16px;color:#2563eb;font-weight:600;">$4,728</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Performance accountability</td>
       <td style="padding:12px 16px;">None after launch</td>
       <td style="padding:12px 16px;color:#2563eb;">Month-to-month</td>
@@ -1128,7 +1128,7 @@ export const posts: BlogPost[] = [
 
 <p>Every month your website underperforms is a month your competitors capture the customers you should have had. The monthly model solves that problem at $197/month with $0 upfront, ongoing performance accountability, and the ability to cancel anytime if we don't deliver.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">The math is done. The next step is yours.</strong>
   <p style="margin:12px 0 0;">$0 upfront. Month-to-month. A professional website that generates leads from day one. Stop leaving revenue on the table. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">talk to us today.</a></p>
 </div>
@@ -1195,7 +1195,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$197–$397</td>
       <td style="padding:12px 16px;color:#16a34a;font-weight:600;">20–40x</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;font-weight:600;">Salons</td>
       <td style="padding:12px 16px;">$120</td>
       <td style="padding:12px 16px;">15–30</td>
@@ -1211,7 +1211,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$197–$397</td>
       <td style="padding:12px 16px;color:#16a34a;font-weight:600;">6–18x</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;font-weight:600;">Legal</td>
       <td style="padding:12px 16px;">$2,500</td>
       <td style="padding:12px 16px;">3–8</td>
@@ -1227,7 +1227,7 @@ export const posts: BlogPost[] = [
       <td style="padding:12px 16px;">$397–$697</td>
       <td style="padding:12px 16px;color:#16a34a;font-weight:600;">10–30x</td>
     </tr>
-    <tr style="border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+    <tr style="border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;font-weight:600;">Auto Repair</td>
       <td style="padding:12px 16px;">$380</td>
       <td style="padding:12px 16px;">8–20</td>
@@ -1306,7 +1306,7 @@ export const posts: BlogPost[] = [
 
 <p>What makes the difference between good ROI and great ROI is quality of execution: how fast the site loads, how well it's optimized for local search, how consistently it's maintained and improved. These are the exact factors that separate Caliber's approach from the alternatives.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Get a custom ROI projection for your business.</strong>
   <p style="margin:12px 0 0;">We'll analyze your market, estimate your traffic opportunity, and show you a realistic projection of what a professional website should return for your specific business. No obligation. Just clear numbers. <a href="/contact" style="color:#2563eb;font-weight:600;">Get your free projection today.</a></p>
 </div>
@@ -4711,7 +4711,7 @@ export const posts: BlogPost[] = [
 <h3>Can I do local SEO myself or do I need an agency?</h3>
 <p>The basics — GBP optimization, citation building, collecting reviews — can be done in-house with time and consistency. Technical SEO, schema markup, content strategy, and link building become complex quickly and reward specialization. Most Detroit small business owners are better served by a partner who handles the technical work while they focus on running the business.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Dominate Local Search in Detroit?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds local SEO into every website we deliver — from schema markup to GBP optimization to neighborhood-targeted content. We work exclusively with Metro Detroit small businesses who are serious about showing up. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Schedule a free strategy call today.</a></p>
 </div>
@@ -4851,7 +4851,7 @@ export const posts: BlogPost[] = [
 
 
 <img src="/blog/schema-markup-explained-local-businesses-4.png" alt="Detroit local business website gaining Google rich results through structured data schema markup" style="width:100%;border-radius:12px;margin:32px 0;" />
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Schema Markup Built Into Every Caliber Website</strong>
   <p style="margin:12px 0 0;">Every website Caliber Web Studio builds includes complete LocalBusiness, Service, FAQ, and Review schema — properly structured, validated, and maintained. You don't have to figure out the code. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Talk to us about your website today.</a></p>
 </div>
@@ -4974,7 +4974,7 @@ export const posts: BlogPost[] = [
 
 
 <img src="/blog/roi-professional-web-design-numbers-4.png" alt="Professional website delivering measurable ROI and revenue growth for Detroit small business owner" style="width:100%;border-radius:12px;margin:32px 0;" />
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">See What a Professional Website Is Worth for Your Business</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds websites for Metro Detroit small businesses that are designed to generate measurable returns — not just look good. Let us run the ROI math for your specific business and market. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free revenue projection today.</a></p>
 </div>
@@ -5125,7 +5125,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 
 <img src="/blog/get-google-reviews-without-being-annoying-4.png" alt="Detroit business monitoring Google review growth and online reputation on analytics dashboard" style="width:100%;border-radius:12px;margin:32px 0;" />
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Build Your Review Engine Into Your Website</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds review collection systems directly into the websites we design — review request integrations, response templates, and GBP optimization that turns satisfied customers into a compounding ranking advantage. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Let's build yours today.</a></p>
 </div>
@@ -5259,7 +5259,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 
 <img src="/blog/chatgpt-perplexity-local-business-visibility-4.png" alt="Detroit local business cited as a trusted source in ChatGPT and Perplexity AI search answers" style="width:100%;border-radius:12px;margin:32px 0;" />
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Built to Be Found — by Google and AI</strong>
   <p style="margin:12px 0 0;">Every Caliber Web Studio website is built with schema markup, FAQ content, and structured service pages designed to earn citations in AI search engines — not just rank in Google. If your business isn't showing up where your customers are searching, <a href="/contact" style="color:#1E3D8F;font-weight:600;">let's fix that today.</a></p>
 </div>
@@ -5385,7 +5385,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What's the single most important AEO action for a Detroit small business just getting started?</h3>
 <p>Complete your Google Business Profile fully and accurately. It's the single most-cited source for local AI queries. Every field filled in, 20+ photos, 50+ Google reviews, complete hours, accurate service area — this alone will improve your AI citation frequency more than any website change. Do the GBP first. Then build out your website's AEO foundation.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Your Detroit Business Deserves to Be Found by AI</strong>
   <p style="margin:12px 0 0;">Every Caliber Web Studio website is built with AEO in mind — FAQ schema, structured service pages, local content, and complete GBP optimization. If your business isn't showing up when Detroit customers ask AI tools for what you offer, <a href="/contact" style="color:#1E3D8F;font-weight:600;">let's fix that today</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
@@ -5492,7 +5492,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>How long does it take a new professional website to start generating more leads?</h3>
 <p>For existing businesses with established <a href="/blog/google-business-profile-optimization">Google Business Profile</a>s and some organic search presence, improvements often show within 30–60 days of launch. Technical improvements (speed, schema, mobile optimization) benefit you immediately after indexing. Content-driven improvements (new service pages, FAQ content, local landing pages) take longer — typically 60–90 days to accumulate ranking signals. The full effect of a professional website is usually visible by month three to six.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Stop Paying for a Website That Isn't Working</strong>
   <p style="margin:12px 0 0;">If your website isn't generating consistent leads, it's costing you more than it's worth. Caliber Web Studio builds fast, conversion-focused websites for Detroit small businesses — starting at $197/month with no large upfront cost. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
@@ -5612,7 +5612,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>How does a chatbot affect my website's SEO or page speed?</h3>
 <p>A well-implemented chatbot widget adds minimal overhead to page load time — typically less than 0.3 seconds when properly lazy-loaded (loaded after the main page content). This is important: chatbots that load their full script with the initial page can add 0.5–1.5 seconds to load time, which impacts both user experience and Core Web Vitals scores. At Caliber Web Studio, chatbot widgets are always lazy-loaded after page render to protect performance. The chatbot itself has no direct effect on SEO rankings, but its indirect effect — improved lead capture and conversion — improves the business outcomes that SEO is ultimately trying to drive.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Never Miss Another After-Hours Lead</strong>
   <p style="margin:12px 0 0;">Every Caliber Web Studio website includes an AI chatbot trained on your specific business — your services, prices, hours, and service area. It captures leads while you sleep. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
@@ -5770,7 +5770,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>How do I know if my website is converting well?</h3>
 <p>Set up goal tracking in Google Analytics: track click events on your phone number link, form submissions, and direction clicks as conversion goals. Your baseline conversion rate from organic local traffic should be 3–6% for a well-optimized service business site. Below 2% indicates conversion problems worth addressing. Above 8% is exceptional. Check your conversion rate monthly, and when you make changes to the site, give them 30 days to accumulate data before evaluating their impact.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Built to Convert, Not Just to Look Good</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds service business websites with conversion as the primary design goal — click-to-call, mobile-optimized, trust signals in the right places, and CTAs that actually work. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
@@ -5927,7 +5927,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What should I do if there's incorrect information on my GBP that I didn't add?</h3>
 <p>Anyone can suggest edits to a GBP listing, and Google sometimes applies these automatically. Check your GBP dashboard regularly for "Pending edits" and "Suggestions from Google." Reject any edits that are inaccurate. If incorrect information has already been applied, correct it immediately through your dashboard. In persistent cases where edits keep being applied (occasionally a competitive or spam issue), contact Google Business Profile support directly and document the history of the problem.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">GBP + Website = Complete Local Visibility</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio sets up and optimizes your Google Business Profile as part of every website plan — complete profile setup, photo strategy, review generation system, and ongoing updates included. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get your free site preview</a> or <a href="/pricing" style="color:#1E3D8F;font-weight:600;">see our pricing</a>.</p>
 </div>
@@ -6053,7 +6053,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>If your restaurant isn't showing up in local search the way it should, call us at <a href="tel:3137992315">(313) 799-2315</a> and we'll show you exactly what's holding you back — no pitch, just a straight answer.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Your restaurant deserves a website that fills tables — not just looks good on someone's portfolio.</strong>
   <p style="margin:12px 0 0;">See what a custom Detroit restaurant website looks like before you commit. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free site preview</a> or call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> — we'll build it around your neighborhood, your menu, and your customers.</p>
 </div>
@@ -6161,7 +6161,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>The <a href="/blog/roi-of-a-professional-website">ROI of a professional website</a> is measurable for any local business, but it's especially clear for restaurants because the average check and return visit rate create compounding value. A guest who books once and becomes a monthly regular is worth $1,400–$2,200 per year. A website that brings in five new guests like that per month is building a foundation that makes the initial investment look trivial inside the first quarter.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Fill More Tables?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds restaurant websites for Detroit businesses — fast, mobile-first, built for local search from the ground up. Menu pages, reservation integration, photography-forward design, schema markup, and GBP optimization included. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">313-799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">get your free site preview</a> and see what your restaurant's website could look like before you spend a dollar.</p>
 </div>
@@ -6239,7 +6239,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Direct ordering customers are also yours, not DoorDash's. You get their email. You control the experience. You can run loyalty programs. The website becomes the hub of your customer relationship instead of a passive brochure linking to someone else's platform.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Want to see what a proper Detroit restaurant website looks like?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds restaurant websites in Detroit with all 5 features built in from day one. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free site preview</a> or call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> — we'll audit your current site and show you exactly what it's costing you.</p>
 </div>
@@ -6393,7 +6393,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>If you're a Detroit dental practice watching new patients go to competitors whose websites are doing what yours should be doing — give us a call. <strong>(313) 799-2315</strong>. Or request a free site audit and we'll tell you exactly what your current site is costing you in lost new patient acquisition.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Your next new patient is searching right now.</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds dental websites in Metro Detroit that rank on Google and convert visitors into booked appointments — starting at $197/month, $0 down. <a href="/contact" style="color:#2563eb;font-weight:600;">Get a free site audit</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a>.</p>
 </div>`
@@ -6561,7 +6561,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit legal clients are searching right now. The question is whether they find your firm or the one next door.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to stop losing cases to firms with better websites?</strong>
   <p style="margin:12px 0 0;">Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">schedule a free site audit</a>. We'll show you exactly what your current site is costing you — and what a conversion-built law firm website looks like.</p>
 </div>`
@@ -6675,7 +6675,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>We stay accountable after launch. Rankings, traffic, lead volume — we track them and optimize continuously. Because a website that generates zero leads is just overhead. A website that generates one new consultation per week pays for itself before the month is out.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Stop watching inferior attorneys rank above you.</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds law firm websites in Detroit engineered to generate consultations — not just look good. Call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">313-799-2315</a> for a direct conversation, or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free competitor ranking audit</a> and see exactly where you're being outranked and why.</p>
 </div>
@@ -6815,7 +6815,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>If your current website is missing any of these features, you're not just leaving money on the table. You're actively sending it to your competitors. <a href="/blog/how-much-does-a-small-business-website-cost">Understand what a properly built local business website costs</a> and compare it against a single lost emergency job — the math isn't close.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Build an HVAC Website That Books Service Calls?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds HVAC websites for Metro Detroit contractors — mobile-first, speed-optimized, with local SEO and emergency callouts built in from day one. No templates. No WordPress. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you exactly what your new site looks like before you spend a dollar.</p>
 </div>
@@ -6840,7 +6840,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>The top-producing real estate agents in Metro Detroit share one underappreciated advantage: their websites work. Not just "look good" — actually generate leads, rank on Google, and convert visitors into people who reach out. Real estate website design in Detroit isn't about showing the most listings or picking the right Realtor.com template. It's about building a system that makes the right buyer or seller decide, on their own, that you're the agent they want to call.</p>
 
-<div style="background:#f8f9ff;border:1px solid #dde3f0;padding:20px 24px;margin:32px 0;border-radius:8px;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:20px 24px;margin:32px 0;border-radius:8px;">
   <strong style="display:block;margin-bottom:10px;font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li>Top Detroit agents treat their website as a lead generation system, not a digital business card</li>
@@ -6954,7 +6954,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;">Template-based</td>
       <td style="padding:12px 16px;">High monthly fees</td>
     </tr>
-    <tr style="background:#f0f4ff;">
+    <tr style="background:rgba(30,61,143,0.12);">
       <td style="padding:12px 16px;"><strong>Custom (Next.js)</strong></td>
       <td style="padding:12px 16px;">Full control</td>
       <td style="padding:12px 16px;">Excellent</td>
@@ -6993,7 +6993,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Can I build my real estate website myself?</h3>
 <p>You can. Most agents who do end up with something that establishes web presence without generating leads — which is the difference between a digital billboard and a lead system. The technical requirements for ranking well in Detroit real estate search (schema markup, Core Web Vitals optimization, proper local SEO structure) require expertise most agents don't have and shouldn't spend time acquiring when their energy is better spent selling homes. <a href="/blog/why-small-business-websites-dont-rank">Here's why most self-built sites don't rank.</a></p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Stand Out in Detroit Real Estate Search?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds real estate agent websites in Metro Detroit that rank, convert, and build long-term lead equity — custom-built, mobile-first, with local SEO from day one. No templates. No brokerage lock-in. No disappearing after launch. Plans start at <strong>$197/month, $0 down</strong>. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you exactly what your site could look like before you spend a dollar.</p>
 </div>
@@ -7025,7 +7025,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <img src="/blog/detroit-contractors-win-more-bids-better-website-1.png" alt="General contractor reviewing project plans on a tablet at a Detroit construction job site, wearing hard hat and safety vest" style="width:100%;border-radius:12px;margin:32px 0;" />
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="display:block;margin-bottom:10px;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li>Most homeowners shortlist contractors based on their website before calling — your site is your first bid</li>
@@ -7168,7 +7168,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Should I use a website builder like Wix or Squarespace?</h3>
 <p>For a serious contracting business competing in Metro Detroit, no. Website builders are fine for hobby projects and simple brochures, but they carry significant performance and SEO limitations that compound over time. They typically fail Core Web Vitals, offer limited schema markup control, and make it difficult to build the location-specific page architecture that local search ranking requires. A custom-built site on a modern framework outperforms a website builder on every metric that matters for lead generation.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Win More Bids With a Better Website?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds contractor websites in Metro Detroit engineered to rank on Google and convert visitors into quote requests. Custom builds — no templates, no WordPress, no disappearing after launch. Call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free website preview</a> — we'll show you exactly what your new site looks like before you spend a dollar.</p>
 </div>
@@ -7199,7 +7199,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>A Detroit contractor with a weak website loses jobs to competitors before the first phone call is ever made. The right contractor website acts like your best salesperson — available 24/7, answering questions, building trust, and pushing qualified leads to your phone. This guide walks through exactly what that looks like, from the pages you need to the local SEO that puts you in front of homeowners and property managers searching right now.</p>
 
-<div style="background:#f0f9ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(14,165,233,0.08);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:12px 0 0;padding-left:20px;">
     <li>Most contractor websites fail because they're built for aesthetics, not conversion.</li>
@@ -7262,7 +7262,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     </tr>
   </thead>
   <tbody>
-    <tr style="background:#f8f9ff;">
+    <tr style="background:rgba(255,255,255,0.05);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;"><strong>1. Onboarding</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Collect business info, services, service area, photos, and any existing assets</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Day 1–2</td>
@@ -7272,7 +7272,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Write all page copy, headlines, meta descriptions, and FAQ content</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Day 3–5</td>
     </tr>
-    <tr style="background:#f8f9ff;">
+    <tr style="background:rgba(255,255,255,0.05);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;"><strong>3. Design + Build</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Custom Next.js build — no templates, mobile-first, speed-optimized</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Day 6–12</td>
@@ -7282,7 +7282,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Schema markup, sitemap, robots.txt, Google Search Console connection</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Day 13</td>
     </tr>
-    <tr style="background:#f8f9ff;">
+    <tr style="background:rgba(255,255,255,0.05);">
       <td style="padding:12px 16px;"><strong>5. Review + Launch</strong></td>
       <td style="padding:12px 16px;">Client review, final edits, Lighthouse audit (target: 90+), deploy to Vercel</td>
       <td style="padding:12px 16px;">Day 14–17</td>
@@ -7338,14 +7338,14 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What platform should a contractor website be built on?</h3>
 <p>For performance, SEO, and long-term maintainability, Next.js (React) is the top choice for custom contractor sites. It's faster than WordPress, doesn't require plugins that create security vulnerabilities, and scores consistently well on Core Web Vitals. WordPress with a well-maintained theme is acceptable for contractors who want easy self-editing access. Wix, Squarespace, and GoDaddy Website Builder are not recommended for contractors who want to compete on organic search — the performance ceiling is too low.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Build a Contractor Website That Books Jobs?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds contractor websites for Metro Detroit trades — mobile-first, speed-optimized, with local SEO and schema markup built in from day one. No templates. No WordPress. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a>, <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a>, or <a href="/industries/contractors" style="color:#1E3D8F;font-weight:600;">see our contractor web design services</a>.</p>
 </div>
 
-<div style="display:flex;align-items:flex-start;gap:20px;background:#f8f9ff;border:1px solid #e2e8f0;padding:24px;margin:40px 0;border-radius:8px;">
+<div style="display:flex;align-items:flex-start;gap:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:24px;margin:40px 0;border-radius:8px;">
   <div>
-    <strong style="font-size:1.05em;color:#1a1a2e;">Darrin Singer Jr.</strong>
+    <strong style="font-size:1.05em;color:rgba(255,255,255,0.85);">Darrin Singer Jr.</strong>
     <p style="margin:8px 0 0;color:#4a5568;font-size:0.95em;">Founder, Caliber Web Studio — Detroit-based web design agency specializing in local business websites for Metro Detroit contractors, tradespeople, and service businesses. Darrin builds every site on Next.js with local SEO and schema markup as standard. <a href="/about" style="color:#1E3D8F;">Learn more about Caliber Web Studio.</a></p>
   </div>
 </div>
@@ -7372,7 +7372,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit real estate agents face a genuine decision when building their websites: bolt an IDX plugin onto a template, or invest in a custom-built site. The short answer is that most agents need a custom site with selective IDX integration — not a generic IDX portal, and not a custom build that ignores listing search. Here's how to decide exactly what your practice needs.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="display:block;margin-bottom:8px;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li>IDX plugins give you search functionality fast — but hand control of design, speed, and SEO to a third party</li>
@@ -7442,7 +7442,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     </tr>
   </thead>
   <tbody>
-    <tr style="background:#f8f9ff;">
+    <tr style="background:rgba(255,255,255,0.05);">
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;"><strong>Live listing search</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Yes</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Only with IDX integration</td>
@@ -7452,7 +7452,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Minimal (usually noindexed)</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Full — you own every page</td>
     </tr>
-    <tr style="background:#f8f9ff;">
+    <tr style="background:rgba(255,255,255,0.05);">
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;"><strong>Page speed</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Slow (third-party scripts)</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Fast (you control the stack)</td>
@@ -7462,7 +7462,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Limited</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Complete</td>
     </tr>
-    <tr style="background:#f8f9ff;">
+    <tr style="background:rgba(255,255,255,0.05);">
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;"><strong>Local SEO — neighborhood content</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Not included</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Built in by design</td>
@@ -7472,7 +7472,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Days</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Weeks</td>
     </tr>
-    <tr style="background:#f8f9ff;">
+    <tr style="background:rgba(255,255,255,0.05);">
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;"><strong>Monthly cost</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">$50–$150/mo IDX fee + hosting</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e5e7eb;">Varies; retainer models start ~$297/mo</td>
@@ -7532,7 +7532,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What should I look for in a web designer for real estate websites?</h3>
 <p>Look for someone who understands both local SEO and real estate conversion flows — not just someone who knows how to install an IDX plugin. Ask to see traffic data and lead generation numbers from existing real estate clients, not just portfolio screenshots. For a full breakdown, see our guide to <a href="/blog/best-web-designer-detroit">finding the best web designer in Detroit</a>.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Build a Real Estate Website That Generates Leads in Metro Detroit?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds custom real estate websites for Detroit-area agents — mobile-first, locally optimized, and built to convert. No IDX-only templates, no generic WordPress builds. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you exactly what your site should look like before you spend a dollar.</p>
 </div>
@@ -7558,7 +7558,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit contractors losing jobs in 2026 usually aren't losing them because their work is subpar — they're losing them because they're invisible online. A hard-working contractor website generates qualified leads around the clock, captures homeowners searching at midnight, and converts visitors into phone calls before your competition even knows the job exists.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1em;display:block;margin-bottom:10px;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li>Most homeowners research contractors online before making a single phone call</li>
@@ -7679,7 +7679,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Can a contractor website generate leads without running Google Ads?</h3>
 <p>Yes — through local SEO. Contractors with properly built websites, service area pages, and optimized Google Business Profiles rank organically for searches like "bathroom remodel contractor Warren MI" or "licensed roofer Detroit." It takes three to six months to build, but organic leads have zero per-click cost and keep coming in long after the initial work is done. Ads accelerate the timeline but aren't required for results.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Build a Contractor Website That Books Real Jobs?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds contractor websites for Metro Detroit — mobile-first, fast-loading, with local SEO and lead capture built in from day one. No templates. No WordPress. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you exactly what your new site looks like before you commit to a thing.</p>
 </div>
@@ -7713,7 +7713,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit auto repair shops with better websites are consistently outranking shops with decades more experience — because when someone searches "auto repair near me" at 7 AM with a check engine light on, the shop that shows up first gets the call. In 2026, that means having a fast, mobile-optimized website that ranks for <strong>auto repair website design Detroit</strong> searches and converts visitors into booked appointments before they click away.</p>
 
-<div style="background:#f0f9ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(14,165,233,0.08);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:12px 0 0;padding-left:20px;">
     <li>Over 80% of people search online before choosing an auto repair shop</li>
@@ -7863,14 +7863,14 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Should I use an online appointment booking system?</h3>
 <p>A simple appointment request form is the minimum. A full online scheduling system (integrated with tools like Tekmetric or Mitchell) is better if your shop volume supports it. At minimum, capture name, phone, service needed, and preferred time — and make sure those leads are reviewed within the hour during business hours. Leads that don't get a callback within 60 minutes convert at a fraction of the rate of immediate follow-ups.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Get Your Shop Found on Google?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds websites for Detroit-area auto repair shops — mobile-first, schema-optimized, with service pages that rank for the searches your customers are actually using. No templates, no WordPress, no disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site audit</a> — we'll show you exactly what's holding your current site back and what a new one would look like.</p>
 </div>
 
-<div style="background:#f9f9f9;border:1px solid #e5e7eb;border-radius:12px;padding:24px 28px;margin:40px 0;display:flex;gap:16px;align-items:flex-start;">
+<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:24px 28px;margin:40px 0;display:flex;gap:16px;align-items:flex-start;">
   <div>
-    <strong style="font-size:1.05em;color:#1a1a2e;">Darrin Singer Jr.</strong>
+    <strong style="font-size:1.05em;color:rgba(255,255,255,0.85);">Darrin Singer Jr.</strong>
     <p style="margin:6px 0 0;color:#4b5563;font-size:0.95em;">Darrin is the founder of Caliber Web Studio, a Detroit-based web design agency that builds high-performance websites for local businesses across Metro Detroit. He has worked with auto repair shops, contractors, salons, restaurants, and professional service firms — focusing on websites that rank on Google and convert visitors into paying customers. Caliber sites are built on Next.js, optimized for Core Web Vitals, and maintained with ongoing SEO accountability.</p>
   </div>
 </div>
@@ -7897,7 +7897,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Auto repair website design in Detroit works when it does three things: loads fast on a phone, ranks for the searches your customers are actually typing, and makes calling or booking feel effortless. Most Detroit auto shops are losing customers not because their work is bad — it isn't — but because their website doesn't do any of those three things. This guide explains how to fix that.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:12px 0 0;padding-left:20px;">
     <li>Over 80% of people search for auto repair on a mobile phone — your site must load in under 2 seconds</li>
@@ -8071,7 +8071,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Can I build my own auto shop website on Wix or Squarespace?</h3>
 <p>You can, but you'll be fighting an uphill battle against shops using higher-performance platforms. Wix and Squarespace sites are generally slower, less flexible for local SEO configuration, and harder to implement proper schema markup on. In a competitive market like Detroit auto repair, those technical disadvantages translate directly into lower rankings. If budget is the constraint, a Caliber Web Studio subscription model — where you get a properly built site for a monthly fee instead of a large upfront cost — is often a better path than a DIY template. See <a href="/blog/website-design-for-auto-repair-shops">our full auto repair shop website guide</a> for a complete breakdown.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Build an Auto Shop Website That Actually Brings Customers?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds auto repair websites for Detroit-area shops — mobile-first, schema-ready, with individual service pages and local SEO built in from day one. No templates. No WordPress. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you what your new site looks like before you spend a dollar.</p>
 </div>
@@ -8097,7 +8097,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit real estate agencies that invest in professional website design are closing more deals — not because buyers trust flashy branding, but because a well-built site removes every obstacle between a motivated buyer and the agent's phone. The agencies winning in Metro Detroit right now treat their website as a deal-closing tool, not a digital business card.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:12px 0 0;padding-left:20px;">
     <li>Detroit home buyers start 97% of their search online — your website is the first showing</li>
@@ -8263,12 +8263,12 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What features should a Detroit real estate agency website prioritize first?</h3>
 <p>In order of impact: mobile speed (non-negotiable), IDX search integration, a home valuation form, neighborhood pages for your key markets, and visible trust signals (reviews, sold data, credentials). Get those five right before adding anything else.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to build a real estate website that closes deals?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds custom websites for Detroit-area real estate agencies — fast, mobile-first, with IDX integration, neighborhood content strategy, and local SEO built in from day one. No templates. No WordPress drag-and-drop. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">get a free site preview</a> — we'll show you exactly what your new site looks like before you spend a dollar.</p>
 </div>
 
-<div style="margin-top:48px;padding:24px;background:#fafafa;border:1px solid #e5e7eb;border-radius:8px;">
+<div style="margin-top:48px;padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:8px;">
   <strong>Darrin Singer Jr.</strong><br />
   <span style="color:#6b7280;font-size:0.95em;">Founder, Caliber Web Studio</span><br />
   <p style="margin:12px 0 0;font-size:0.95em;color:#374151;">Darrin builds custom websites for local businesses across Metro Detroit. With a focus on performance, local SEO, and real conversion outcomes, Caliber Web Studio has helped dozens of Detroit-area businesses turn their website from a cost center into a lead generation engine. <a href="/about" style="color:#1E3D8F;">Learn more about Caliber Web Studio</a>.</p>
@@ -8290,7 +8290,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit dentists investing in custom websites in 2026 are doing it for a simple reason: the old approach stopped working. Template sites that once held page-one positions are getting outranked by practices with faster, better-structured, content-rich custom builds. The competitive math has shifted \u2014 and the dentists who understand that are pulling ahead of practices that haven\u2019t updated their digital strategy since 2019.</p>
 
-<div style="background:#f0f9ff;border-left:4px solid #0ea5e9;padding:20px 24px;margin:32px 0;border-radius:8px;color:#0c1a2e;">
+<div style="background:rgba(14,165,233,0.08);border-left:4px solid #0ea5e9;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="display:block;margin-bottom:10px;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;line-height:1.8;">
     <li>Metro Detroit has hundreds of dental practices competing for the same local searches \u2014 template sites no longer differentiate</li>
@@ -8351,7 +8351,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     </tr>
   </thead>
   <tbody>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">General dentistry (family)</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$800\u2013$1,200/yr</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">5\u201310</td>
@@ -8363,7 +8363,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">1\u20133</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$3,000\u2013$24,000</td>
     </tr>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Dental implants</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$3,000\u2013$6,000 per implant</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">1\u20132</td>
@@ -8436,12 +8436,12 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What makes Caliber Web Studio different from other web designers for dentists?</h3>
 <p>We build for local businesses in Detroit specifically \u2014 not national templates deployed locally. Every dental website we build is custom-coded on Next.js, structured for local SEO from the first line of code, and maintained with ongoing performance monitoring after launch. <a href="/contact">Contact us</a> for a free audit of your current site.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">See what a custom dental website would look like for your practice.</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds dental websites for Metro Detroit practices \u2014 purpose-built to rank, convert, and represent your practice the way it deserves. No templates. No WordPress. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site audit</a>.</p>
 </div>
 
-<div style="background:#f8fafc;border:1px solid #e2e8f0;padding:24px 28px;margin:40px 0;border-radius:8px;">
+<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);padding:24px 28px;margin:40px 0;border-radius:8px;">
   <strong style="display:block;margin-bottom:6px;">About the Author</strong>
   <p style="margin:0;color:#374151;line-height:1.7;"><strong>Darrin Singer Jr.</strong> is the founder of Caliber Web Studio, a Detroit-based web design agency specializing in custom websites for local businesses across Metro Detroit.</p>
 </div>
@@ -8460,9 +8460,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit dental practices with bad websites aren't losing new patients because of their care quality — they're losing them before anyone picks up the phone. Most dental website problems come down to five fixable mistakes that quietly drain appointment bookings every single week. Here's what they are and how to correct them.</p>
 
-<div style="background:#f8f9ff;border:1px solid #e0e7ff;padding:20px 24px;border-radius:8px;margin:28px 0;">
-  <strong style="font-size:1.05em;color:#1a1a2e;">Key Takeaways</strong>
-  <ul style="margin:12px 0 0;padding-left:20px;color:#1a1a2e;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(0,212,255,0.2);padding:20px 24px;border-radius:8px;margin:28px 0;">
+  <strong style="font-size:1.05em;color:rgba(255,255,255,0.85);">Key Takeaways</strong>
+  <ul style="margin:12px 0 0;padding-left:20px;color:rgba(255,255,255,0.85);">
     <li>Most Detroit dental websites lose patients before the page fully loads</li>
     <li>Hiding the phone number costs practices more patients than bad reviews do</li>
     <li>Stock photography signals generic — real team photos build trust in seconds</li>
@@ -8581,7 +8581,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>How long does it take to see results after fixing these mistakes?</h3>
 <p>Mobile and contact fixes produce improvements within days of going live. Local SEO improvements typically show ranking changes within 60 to 90 days. Most practices see meaningful new patient volume increases within the first 60 days after a properly executed rebuild.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Is your dental website making any of these mistakes?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds dental practice websites in Metro Detroit that rank on Google and convert visitors into booked appointments — starting at $197/month with $0 down. <a href="/contact" style="color:#2563eb;font-weight:600;">Request a free site audit</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a>.</p>
 </div>
@@ -8612,7 +8612,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Most Detroit landscaping websites are digital business cards. They list services and a phone number, and they sit there waiting. The ones that actually fill pipelines are built differently — with lead capture built in, seasonal content that ranks before the season, and a structure that makes getting an estimate feel as easy as sending a text.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:12px 0 0;padding-left:20px;">
     <li>Detroit landscaping is a 6-month season — your website should generate leads the other 6 months</li>
@@ -8776,7 +8776,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <img src="/blog/detroit-landscaping-website-fill-pipeline-5.png" alt="Landscaping company owner reviewing website lead inquiries on a laptop showing estimate requests from Metro Detroit homeowners" style="width:100%;border-radius:12px;margin:32px 0;" />
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to fill your pipeline before spring?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds Detroit landscaping websites that rank, convert, and generate leads year-round — starting at $197/month with $0 down. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Request a free estimate</a> or call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a>.</p>
 </div>
@@ -8805,7 +8805,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Your detroit restaurant website is either generating orders right now or it's costing you money every single day. There is no middle ground. While you're paying DoorDash 27% to deliver your own food to your own customers, restaurants across Metro Detroit that invested in a direct-ordering website are pocketing that margin instead. This post breaks down exactly how they're doing it — and how you can too.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:12px 0 0;padding-left:20px;">
     <li>Third-party delivery apps charge 15–30% commission per order — a direct ordering site eliminates most of that</li>
@@ -8975,7 +8975,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What's the difference between this post and your restaurant website design post?</h3>
 <p>This post focuses on the revenue and ordering side — how your website generates orders and reduces commission dependency. Our companion post on <a href="/blog/detroit-restaurant-website-design-menus-reservations">restaurant website design covering menus, photos, and reservations</a> covers the design and presentation layer: how to display your menu, what photos convert, and how to handle reservation flows. Together they cover the full picture of what a high-performing Detroit restaurant website requires.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Turn Your Restaurant Website Into an Order Machine?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds restaurant websites for Detroit-area operators — with direct ordering integration, Google Business Profile connection, and mobile-first design that converts. No templates. No disappearing after launch. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you what your new site looks like before you spend a dollar.</p>
 </div>
@@ -9007,7 +9007,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>This is the reality of <strong>detroit hvac website design in 2026</strong>. The market hasn't changed gradually — it's shifted fast. AI search, mobile-first indexing, and a surge in local HVAC competition have raised the floor for what a functional business website needs to do. This post breaks down exactly why, and what it costs HVAC companies in Detroit to keep running an outdated site.</p>
 
-<div style="background:#f8f9ff;border:1px solid #dde3f0;padding:20px 24px;margin:32px 0;border-radius:8px;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:20px 24px;margin:32px 0;border-radius:8px;">
   <strong style="display:block;margin-bottom:10px;font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li>Detroit's seasonal HVAC demand creates high-dollar emergency windows — old, slow websites lose those calls in real time</li>
@@ -9115,7 +9115,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Is a $197/month plan really all-inclusive, or are there hidden fees?</h3>
 <p>At Caliber Web Studio, the $197/month plan includes the full build, hosting, ongoing maintenance, and SEO updates. No upfront cost. No contract lock-in. If you leave, you take your domain. <a href="/blog/is-paying-monthly-for-a-website-worth-it">Here's a full breakdown of what's included and why the monthly model makes sense</a> for HVAC companies specifically — the no-money-down structure means your first job from the site more than covers the first two months.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to Turn Your HVAC Website Into a Lead Machine?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds modern HVAC websites for Metro Detroit companies — mobile-first, speed-optimized, with emergency callouts and local SEO built in from day one. No templates. No WordPress. No disappearing after launch. Plans start at <strong>$197/month, $0 down</strong>. Call us at <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site preview</a> — we'll show you exactly what your new site looks like before you spend a dollar.</p>
 </div>
@@ -9139,9 +9139,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Detroit plumbing businesses don't lose jobs because of bad work — they lose them before the phone ever rings. When a homeowner in Southfield has a burst pipe at 10 PM, they search "emergency plumber near me" and call the first result that makes it easy. If your <strong>detroit plumbing website</strong> isn't that result, someone else is getting the job. These five mistakes are why — and every one of them is fixable.</p>
 
-<div style="background:#f0f7ff;border:1px solid #d0e4ff;padding:20px 24px;border-radius:8px;margin:28px 0;">
-  <strong style="font-size:1.05em;color:#1a1a2e;">Key Takeaways</strong>
-  <ul style="margin:12px 0 0;padding-left:20px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.10);border:1px solid rgba(30,61,143,0.35);padding:20px 24px;border-radius:8px;margin:28px 0;">
+  <strong style="font-size:1.05em;color:rgba(255,255,255,0.85);">Key Takeaways</strong>
+  <ul style="margin:12px 0 0;padding-left:20px;color:rgba(255,255,255,0.85);">
     <li>Emergency calls go to whoever is fastest to reach — a buried phone number kills conversions</li>
     <li>Most Detroit plumber sites are desktop-designed, not mobile-built — and that's where customers are</li>
     <li>No service-area pages means competitors capture your neighborhood searches</li>
@@ -9258,7 +9258,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>How long does it take to start ranking for local plumbing searches?</h3>
 <p>Contact and mobile fixes show improvement within days of going live. Local SEO ranking changes typically begin appearing within 60 to 90 days. Most Detroit plumbing businesses see meaningful call volume increases from online search within the first 60 to 90 days after a properly executed rebuild.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Is your plumbing website making any of these mistakes?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds plumbing and contractor websites in Metro Detroit that rank on Google and convert visitors into booked jobs — starting at $197/month with $0 down. <a href="/contact" style="color:#2563eb;font-weight:600;">Request a free site audit</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a>.</p>
 </div>
@@ -9287,9 +9287,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>This post breaks down exactly how Detroit salons are filling their books through their online presence, and what\u2019s different about the ones that aren\u2019t.</p>
 
-<div style="background:#f8f9ff;border:1px solid #e0e7ff;padding:20px 24px;border-radius:8px;margin:28px 0;">
-  <strong style="font-size:1.05em;color:#1a1a2e;">Key Takeaways</strong>
-  <ul style="margin:12px 0 0;padding-left:20px;color:#1a1a2e;line-height:1.8;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(0,212,255,0.2);padding:20px 24px;border-radius:8px;margin:28px 0;">
+  <strong style="font-size:1.05em;color:rgba(255,255,255,0.85);">Key Takeaways</strong>
+  <ul style="margin:12px 0 0;padding-left:20px;color:rgba(255,255,255,0.85);line-height:1.8;">
     <li>Detroit salon clients book online first \u2014 if your website doesn\u2019t support direct booking, you\u2019re losing clients to salons that do</li>
     <li>Instagram is a portfolio, not a booking system \u2014 it moves clients toward a decision, but doesn\u2019t close it</li>
     <li>Google Business Profile with accurate hours, photos, and a Book button is how new clients find local salons in 2026</li>
@@ -9392,7 +9392,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     </tr>
   </thead>
   <tbody>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Phone call only</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Minutes to days</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">~25%</td>
@@ -9404,7 +9404,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">~20%</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Low</td>
     </tr>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Online booking system</td>
       <td style="padding:12px 16px;">Instant</td>
       <td style="padding:12px 16px;">~8\u201312% with reminders</td>
@@ -9450,7 +9450,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>What should a salon website include to drive bookings?</h3>
 <p>At minimum: service pages with real descriptions and pricing, a gallery of actual client work, online booking embedded directly (not just linked), your phone number as a clickable call link, your neighborhood and city mentioned explicitly, and your hours clearly displayed. Our <a href="/blog/website-design-for-salons">salon website design guide</a> covers each component in detail.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to fill your book?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds websites for Detroit salons that rank on Google, support direct online booking, and convert first-time visitors into loyal clients. No templates. No WordPress. No disappearing after launch. Call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site review</a>.</p>
 </div>
@@ -9553,7 +9553,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>If your current website requires pinching, zooming, or side-scrolling on a phone, you're losing clients every day. Google also uses mobile experience as a ranking factor — a bad mobile site ranks lower in local search, which compounds the problem.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to stop losing bookings to a bad website?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds custom hair salon websites in Metro Detroit that rank on Google and turn visitors into booked appointments — starting at $197/month with $0 down. <a href="/contact" style="color:#2563eb;font-weight:600;">Request a free consult</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a>.</p>
 </div>
@@ -9608,7 +9608,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Should my salon have a separate website from my Instagram?</h3>
 <p>Absolutely. Instagram is a discovery tool — it's not a booking machine, it doesn't rank on Google, and you don't own it. If Instagram goes down, changes its algorithm, or bans your account, your entire online presence disappears. Your website is an asset you own. It ranks in search, captures leads 24/7, and builds authority that social media never will. Use Instagram to drive traffic to your website — not instead of having one. For barbershops facing the same question, see our guide on <a href="/blog/detroit-barbershop-website-design">barbershop website design in Detroit</a>.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Is your salon website costing you bookings?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio specializes in hair salon website design for Metro Detroit — mobile-first, SEO-optimized, and built to convert visitors into booked clients. Starting at $197/month with $0 down. <a href="/contact" style="color:#2563eb;font-weight:600;">Book a free consultation</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a> today.</p>
 </div>
@@ -9635,9 +9635,9 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>This post is about how Detroit barbershops — the real ones, the neighborhood anchors, the walk-in-friendly community shops — can compete online without abandoning the culture that made them. It's a different challenge than the one facing <a href="/blog/website-design-for-barbers">any barbershop getting a site for the first time</a> — this is about winning in a market where the competition is already online.</p>
 
-<div style="background:#f8f9ff;border:1px solid #e0e7ff;padding:20px 24px;border-radius:8px;margin:28px 0;">
-  <strong style="font-size:1.05em;color:#1a1a2e;">Key Takeaways</strong>
-  <ul style="margin:12px 0 0;padding-left:20px;color:#1a1a2e;line-height:1.9;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(0,212,255,0.2);padding:20px 24px;border-radius:8px;margin:28px 0;">
+  <strong style="font-size:1.05em;color:rgba(255,255,255,0.85);">Key Takeaways</strong>
+  <ul style="margin:12px 0 0;padding-left:20px;color:rgba(255,255,255,0.85);line-height:1.9;">
     <li>A detroit barbershop website doesn't kill walk-in culture — it markets it</li>
     <li>New clients find barbershops on Google before they walk through the door</li>
     <li>The walk-in vs appointment decision is something your website can handle transparently</li>
@@ -9747,7 +9747,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     </tr>
   </thead>
   <tbody>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">5 new regulars</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$700/yr avg</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;"><strong>$3,500/yr</strong></td>
@@ -9757,7 +9757,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$700/yr avg</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;"><strong>$7,000/yr</strong></td>
     </tr>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">15 new regulars</td>
       <td style="padding:12px 16px;">$700/yr avg</td>
       <td style="padding:12px 16px;"><strong>$10,500/yr</strong></td>
@@ -9785,7 +9785,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>How long does it take to rank on Google?</h3>
 <p>A fully optimized Google Business Profile typically shows ranking improvements for neighborhood searches within 30–60 days. Organic website rankings take 3–6 months of consistent effort. The shops that start now are the ones appearing on page one by fall — before the competitors who keep putting it off.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Stop giving your neighborhood clients to the shop with a better website.</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds detroit barbershop websites that show up in local searches, honor walk-in culture, and turn new visitors into regulars. No templates — built for your shop, your neighborhood, your barbers. <a href="/contact" style="color:#2563eb;font-weight:600;">Get a free site audit</a> or call <a href="tel:3137992315" style="color:#2563eb;font-weight:600;">(313) 799-2315</a>.</p>
 </div>
@@ -9928,7 +9928,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Plans start at $197/month with $0 down. If you want to see what your restaurant's website could look like before you spend anything, call us at <a href="tel:3137992315">(313) 799-2315</a> and we'll build a custom preview around your menu and neighborhood.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Your menu and reservation experience should fill tables — not create friction.</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds restaurant websites for Detroit businesses designed around conversion, not templates. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Get a free site preview</a> or call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> to talk through what your restaurant needs.</p>
 </div>
@@ -9953,7 +9953,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>Most Detroit law firm websites are built to impress other attorneys, not to sign clients. They have the right logo, a professional headshot, and a wall of practice area names — and they generate almost no inbound cases. The firms winning in Metro Detroit right now have something different: a website engineered to rank for the searches that matter, convert visitors into consultations, and close the trust gap before the first phone call.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:12px 0 0;padding-left:20px;">
     <li>96% of people seeking legal advice start with an online search — your website is your first intake form</li>
@@ -10044,7 +10044,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
     </tr>
   </thead>
   <tbody>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Auto accident (PI)</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$15,000–$80,000+</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">2–5</td>
@@ -10056,7 +10056,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">3–8</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$7,500–$120,000</td>
     </tr>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">Family law / divorce</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$5,000–$25,000</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">2–4</td>
@@ -10068,7 +10068,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">1–3</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;">$10,000–$225,000+</td>
     </tr>
-    <tr style="background:#f8fafc;">
+    <tr style="background:rgba(255,255,255,0.04);">
       <td style="padding:12px 16px;">Workers' compensation</td>
       <td style="padding:12px 16px;">$3,000–$20,000</td>
       <td style="padding:12px 16px;">3–6</td>
@@ -10128,7 +10128,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <img src="/blog/detroit-law-firm-websites-bring-cases-05.png" alt="Confident Detroit attorney standing in a modern office lobby surrounded by legal books and natural light" style="width:100%;border-radius:12px;margin:32px 0;" />
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to build a law firm website that actually brings cases?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds custom websites for Detroit-area law firms — fast-loading, mobile-first, with practice area pages built to rank and trust signals built to convert. No templates. No generic legal themes. No disappearing after launch. Call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a> or <a href="/contact" style="color:#1E3D8F;font-weight:600;">request a free site audit</a> — we'll show you exactly what's costing you cases and how to fix it.</p>
 </div>
@@ -10159,7 +10159,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>High-ticket clients behave differently than price-shoppers. They are not comparing your rate card against the spa across town. They are evaluating trust, expertise, and whether your practice feels like the caliber of place they want to put their face in front of. Your detroit med spa website is the first — and often only — chance you get to make that case. If your site fails that evaluation, the client goes somewhere else. They do not call to ask questions. They just leave.</p>
 
-<div style="background:#f8f9ff;border:1px solid #dde3f0;padding:20px 24px;margin:32px 0;border-radius:8px;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:20px 24px;margin:32px 0;border-radius:8px;">
   <strong style="display:block;margin-bottom:10px;font-size:1.05em;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li>High-ticket med spa clients decide on trust and credibility before they ever book — your website either earns that or loses it in under 10 seconds</li>
@@ -10454,7 +10454,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>Does my med spa need a blog?</h3>
 <p>A blog is not required, but service-specific educational content is valuable both for SEO and for client pre-education. Posts like "How Many Units of Botox Do You Need?" or "What to Expect From Your First CoolSculpting Session in Detroit" attract high-intent searches and answer the questions prospects have during their decision cycle. If you can publish two to four of these pieces per month, they compound over time into a significant source of organic client acquisition.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #1E3D8F;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to build a website that attracts high-ticket med spa clients in Metro Detroit?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio designs custom websites for Detroit-area med spas — built to rank on Google, position your practice as premium, and convert serious buyers into booked appointments. <a href="/contact" style="color:#1E3D8F;font-weight:600;">Request a free consultation</a> or call <a href="tel:3137992315" style="color:#1E3D8F;font-weight:600;">(313) 799-2315</a>.</p>
 </div>
@@ -11434,7 +11434,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   ],
   content: `<p>A HIPAA-compliant medical practice website must protect any protected health information (PHI) collected through forms, scheduling tools, or tracking scripts — or face real enforcement risk. In January 2025, a Michigan surgical group settled an OCR investigation for $10,000 after a ransomware breach exposed 15,298 patients. Compliance and patient acquisition aren't competing goals. They require the same disciplined build.</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:20px 24px;margin:32px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:20px 24px;margin:32px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="display:block;margin-bottom:12px;font-size:1rem;">Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li style="margin-bottom:8px;">HIPAA applies to your website any time it collects, stores, or transmits protected health information — including contact forms, schedulers, and live chat</li>
@@ -11583,7 +11583,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <h3>How does online scheduling affect new patient volume for Detroit practices?</h3>
 <p>Significantly. Eighty percent of patients prefer providers who offer online scheduling, and 34% of medical appointments are booked outside business hours when phone-based scheduling isn't available. In Detroit's competitive suburban markets — Southfield, Dearborn, Troy, Sterling Heights — a practice without online booking structurally misses more than a third of potential new patient bookings every week. That gap compounds. (Sources: Experian Health, <em>State of Patient Access 2024</em>; Signpost, 2024.)</p>
 
-<div style="background:#f0f4ff;border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:#1a1a2e;">
+<div style="background:rgba(30,61,143,0.12);border-left:4px solid #2563eb;padding:24px 28px;margin:40px 0;border-radius:8px;color:rgba(255,255,255,0.85);">
   <strong style="font-size:1.1em;">Ready to build a medical practice website that's compliant and competitive?</strong>
   <p style="margin:12px 0 0;">Caliber Web Studio builds HIPAA-aware custom websites for Michigan medical practices — from BAA-ready hosting to compliant scheduling integrations. <a href="/pricing" style="color:#2563eb;font-weight:600;">See our plans</a> or <a href="/contact" style="color:#2563eb;font-weight:600;">request a free site audit</a> — we'll identify compliance gaps and patient acquisition blind spots in your current web presence.</p>
 </div>`,
@@ -13291,7 +13291,7 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 
 <p>This post is for the med spa owner who suspects their site isn’t working as hard as it should. Here’s exactly what’s broken.</p>
 
-<div style="background:#f8f9ff;border:1px solid #dde3f0;padding:20px 24px;margin:32px 0;border-radius:8px;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:20px 24px;margin:32px 0;border-radius:8px;">
   <strong style="display:block;margin-bottom:10px;font-size:1.05em;">TL;DR — Key Takeaways</strong>
   <ul style="margin:0;padding-left:20px;">
     <li>53% of mobile visitors abandon a site that takes more than 3 seconds to load (Google/DoubleClick, 2016)</li>

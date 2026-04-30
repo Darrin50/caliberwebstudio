@@ -13302,8 +13302,6 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
   </ul>
 </div>
 
-<img src="/blog/med-spa-website-losing-leads-2026-hero.jpg" alt="Med spa business owner reviewing website analytics on a laptop in a modern clinic office, concerned expression" style="width:100%;border-radius:12px;margin:32px 0;" />
-
 <h2>What a Leaky Website Costs a Med Spa in Real Money</h2>
 
 <p>The American Med Spa Association’s 2024 State of the Industry Report puts the average medical spa’s annual revenue at approximately $1.3 million. Work backwards from that number: a practice doing $1.3M per year is processing somewhere between 1,200 and 2,000 patient visits annually, depending on average ticket size.</p>
@@ -13379,6 +13377,8 @@ No pressure at all — just appreciate the thought if you have a moment.<br/><br
 <p>Open your website on your phone. Time how long it takes to fully load. Scroll to find your booking button — count how far you had to go. Navigate to your before/after gallery from the homepage and count the clicks. Pull up your Botox service page and look for pricing guidance, FAQs, and provider credentials.</p>
 
 <p>What you find in those five minutes will tell you exactly where your leads are going.</p>
+
+<img src="/blog/med-spa-website-losing-leads-2026-4.jpg" alt="Confident woman in her mid-50s in a bright kitchen — the kind of natural, refreshed result a well-converting med spa website delivers" style="width:100%;border-radius:12px;margin:32px 0;" />
 
 <p>If you want to see what a properly built med spa website looks like — one engineered to convert at 4–6% instead of 2% — see our <a href="/blog/detroit-med-spa-website-design">Detroit med spa website design guide</a>. Or if you want a direct read on what specifically is broken on your current site, <a href="/contact">reach out here</a>. We audit med spa websites every week and will tell you precisely what’s leaking and what it takes to fix it.</p>
 

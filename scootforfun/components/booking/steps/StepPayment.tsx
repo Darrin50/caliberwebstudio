@@ -48,9 +48,7 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
   }
 
   useEffect(() => {
-    if (sdkReady && squareConfigured) {
-      initSquare()
-    }
+    if (sdkReady && squareConfigured) initSquare()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sdkReady])
 
@@ -59,37 +57,24 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
     setProcessing(true)
     setError(null)
     update({ paymentStatus: 'processing' })
-
     try {
       const result = await cardInstanceRef.current.tokenize()
-      if (result.status !== 'OK') {
-        throw new Error(result.errors?.[0]?.message ?? 'Card tokenization failed')
-      }
+      if (result.status !== 'OK') throw new Error(result.errors?.[0]?.message ?? 'Card tokenization failed')
 
       const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          date: state.date,
-          timeWindow: state.timeWindow,
-          startTime: state.startTime,
-          partySize: state.partySize,
-          riders: state.riders,
-          customerName: state.customerName,
-          customerEmail: state.customerEmail,
-          customerPhone: state.customerPhone,
-          totalAmount: pricing.total,
+          date: state.date, timeWindow: state.timeWindow, startTime: state.startTime,
+          partySize: state.partySize, riders: state.riders,
+          customerName: state.customerName, customerEmail: state.customerEmail,
+          customerPhone: state.customerPhone, totalAmount: pricing.total,
           sourceToken: result.token,
         }),
       })
-
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Booking failed')
-
-      update({
-        paymentStatus: 'success',
-        confirmationId: data.confirmationId ?? generateConfirmationId(),
-      })
+      update({ paymentStatus: 'success', confirmationId: data.confirmationId ?? generateConfirmationId() })
       onNext()
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Payment failed. Please try again.'
@@ -104,11 +89,7 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
     <div className="p-6 md:p-8">
       {squareConfigured && (
         <Script
-          src={
-            APP_ID?.startsWith('sandbox')
-              ? 'https://sandbox.web.squarecdn.com/v1/square.js'
-              : 'https://web.squarecdn.com/v1/square.js'
-          }
+          src={APP_ID?.startsWith('sandbox') ? 'https://sandbox.web.squarecdn.com/v1/square.js' : 'https://web.squarecdn.com/v1/square.js'}
           strategy="afterInteractive"
           onLoad={() => setSdkReady(true)}
         />
@@ -118,8 +99,7 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
         <h2 className="font-display text-2xl font-bold text-navy">Payment</h2>
         {state.date && state.startTime && (
           <p className="mt-1 text-sm text-teal font-medium">
-            {formatDateDisplay(state.date)} at {state.startTime} · {state.partySize}{' '}
-            {state.partySize === 1 ? 'rider' : 'riders'}
+            {formatDateDisplay(state.date)} at {state.startTime} · {state.partySize} {state.partySize === 1 ? 'rider' : 'riders'}
           </p>
         )}
       </div>
@@ -149,24 +129,17 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
       {squareConfigured ? (
         <div className="mb-6">
           <label className="block text-sm font-semibold text-navy mb-2">Card Details</label>
-          {/* Square card element mounts here */}
-          <div
-            ref={cardRef}
-            id="square-card-container"
-            className="min-h-[100px] rounded-xl border border-navy/20 p-3"
-            aria-label="Card payment form"
-          />
+          <div ref={cardRef} id="square-card-container" className="min-h-[100px] rounded-xl border border-navy/20 p-3" aria-label="Card payment form" />
           {!cardReady && (
             <div className="flex items-center justify-center py-4">
-              <div className="h-5 w-5 rounded-full border-2 border-teal border-t-transparent animate-spin" />
+              <div className="h-5 w-5 rounded-full border-2 border-teal border-t-transparent animate-spin" style={{ minWidth: 20, minHeight: 20 }} />
               <span className="ml-2 text-xs text-navy/50">Loading secure payment form…</span>
             </div>
           )}
         </div>
       ) : (
-        /* Payment setup pending state */
         <div className="mb-6 rounded-2xl border-2 border-dashed border-yellow-300 bg-yellow-50 p-6 text-center">
-          <svg className="mx-auto mb-3 h-10 w-10 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="mx-auto mb-3 h-10 w-10 text-yellow-500" width={40} height={40} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
           <p className="font-semibold text-yellow-800 text-sm">Payment Setup Pending</p>
@@ -176,31 +149,24 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
             <code className="bg-yellow-100 px-1 py-0.5 rounded text-yellow-900">NEXT_PUBLIC_SQUARE_LOCATION_ID</code> in your environment to enable payments.
           </p>
           <p className="mt-3 text-xs text-yellow-600">
-            To book in the meantime, call{' '}
-            <a href={business.phoneHref} className="underline font-medium">
-              {business.phone}
-            </a>
+            To book in the meantime, call <a href={business.phoneHref} className="underline font-medium">{business.phone}</a>
           </p>
         </div>
       )}
 
       {error && (
-        <div className="mb-4 rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
-          {error}
-        </div>
+        <div className="mb-4 rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">{error}</div>
       )}
 
       <p className="mb-6 flex items-center gap-2 text-xs text-navy/40">
-        <svg className="h-4 w-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="h-4 w-4 text-teal" width={16} height={16} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
         Secured by Square. Your card details are never stored on our servers.
       </p>
 
       <div className="flex items-center justify-between gap-3">
-        <button onClick={onBack} disabled={processing} className="btn-secondary disabled:opacity-40">
-          ← Back
-        </button>
+        <button onClick={onBack} disabled={processing} className="btn-secondary disabled:opacity-40">← Back</button>
         {squareConfigured ? (
           <button
             onClick={handlePay}
@@ -209,7 +175,7 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
           >
             {processing ? (
               <span className="flex items-center gap-2">
-                <span className="h-4 w-4 rounded-full border-2 border-white/40 border-t-white animate-spin" />
+                <span className="h-4 w-4 rounded-full border-2 border-white/40 border-t-white animate-spin" style={{ display: 'inline-block', minWidth: 16, minHeight: 16 }} />
                 Processing…
               </span>
             ) : (
@@ -217,9 +183,7 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
             )}
           </button>
         ) : (
-          <a href={business.phoneHref} className="btn-primary">
-            Call to Book
-          </a>
+          <a href={business.phoneHref} className="btn-primary">Call to Book</a>
         )}
       </div>
     </div>

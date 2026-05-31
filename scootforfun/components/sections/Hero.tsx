@@ -9,11 +9,8 @@ export default function Hero() {
     >
       {/* Background decorative elements */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        {/* Large teal circle — top right */}
         <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-teal/10 blur-3xl" />
-        {/* Purple circle — bottom left */}
         <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-purple-brand/10 blur-3xl" />
-        {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -37,7 +34,7 @@ export default function Hero() {
       <div className="container-main relative z-10 text-center">
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal/30 bg-teal/10 px-4 py-1.5 text-sm font-medium text-teal">
-          <span className="h-2 w-2 rounded-full bg-teal animate-pulse" />
+          <span className="h-2 w-2 rounded-full bg-teal animate-pulse" style={{ display: 'inline-block', width: 8, height: 8 }} />
           Detroit&apos;s Premier Scooter Tour — Thu–Sun
         </div>
 
@@ -57,12 +54,12 @@ export default function Hero() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link href="/book" className="btn-primary px-8 py-4 text-base shadow-lg shadow-teal/25">
             Book Your Tour
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="h-5 w-5" width={20} height={20} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
           <a href={business.phoneHref} className="btn-outline-white px-8 py-4 text-base">
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="h-5 w-5" width={20} height={20} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
             {business.phone}
@@ -87,7 +84,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 animate-bounce" aria-hidden="true">
         <span className="text-xs uppercase tracking-widest">Scroll</span>
-        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="h-4 w-4" width={16} height={16} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </div>

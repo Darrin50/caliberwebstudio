@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Explicit source paths — required because this project lives inside a
+   monorepo and Tailwind v4's auto-detection resolves to the parent workspace
+   root instead of scootforfun/, so it never finds these files. */
+@source "../app/**/*.{ts,tsx,js,jsx}";
+@source "../components/**/*.{ts,tsx,js,jsx}";
+@source "../lib/**/*.{ts,tsx}";
+
 @theme {
   /* Brand colors */
   --color-teal: #1BA8A6;

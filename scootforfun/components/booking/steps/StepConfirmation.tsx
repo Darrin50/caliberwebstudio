@@ -13,8 +13,11 @@ export default function StepConfirmation({ state }: Props) {
   return (
     <div className="p-6 md:p-10 text-center">
       {/* Success icon */}
-      <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-teal/10 ring-4 ring-teal/20">
-        <svg className="h-10 w-10 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <div
+        className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-teal/10 ring-4 ring-teal/20"
+        style={{ width: 80, height: 80, minWidth: 80, minHeight: 80 }}
+      >
+        <svg className="h-10 w-10 text-teal" width={40} height={40} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
         </svg>
       </div>
@@ -28,9 +31,7 @@ export default function StepConfirmation({ state }: Props) {
       {/* Confirmation number */}
       <div className="mx-auto mt-6 max-w-xs rounded-2xl bg-teal/10 border border-teal/20 px-6 py-4">
         <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-1">Confirmation #</p>
-        <p className="font-display text-2xl font-black text-navy tracking-wider">
-          {state.confirmationId}
-        </p>
+        <p className="font-display text-2xl font-black text-navy tracking-wider">{state.confirmationId}</p>
       </div>
 
       {/* Booking summary */}
@@ -41,9 +42,7 @@ export default function StepConfirmation({ state }: Props) {
         <div className="px-5 py-4 space-y-2.5 text-sm">
           <div className="flex justify-between">
             <span className="text-navy/60">Date</span>
-            <span className="font-medium text-navy">
-              {state.date ? formatDateDisplay(state.date) : '—'}
-            </span>
+            <span className="font-medium text-navy">{state.date ? formatDateDisplay(state.date) : '—'}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-navy/60">Time</span>
@@ -60,7 +59,7 @@ export default function StepConfirmation({ state }: Props) {
         </div>
       </div>
 
-      {/* What to bring / next steps */}
+      {/* What to bring */}
       <div className="mx-auto mt-6 max-w-sm rounded-2xl bg-purple-50 border border-purple-brand/10 text-left px-5 py-4">
         <p className="font-semibold text-purple-brand text-sm mb-3">What to Bring &amp; Know</p>
         <ul className="space-y-2">
@@ -87,22 +86,15 @@ export default function StepConfirmation({ state }: Props) {
         </p>
       </div>
 
-      {/* Contact */}
       <p className="mt-6 text-xs text-navy/50">
         Questions? Call{' '}
-        <a href={business.phoneHref} className="text-teal hover:underline font-medium">
-          {business.phone}
-        </a>{' '}
+        <a href={business.phoneHref} className="text-teal hover:underline font-medium">{business.phone}</a>{' '}
         or email{' '}
-        <a href={`mailto:${business.email}`} className="text-teal hover:underline font-medium">
-          {business.email}
-        </a>
+        <a href={`mailto:${business.email}`} className="text-teal hover:underline font-medium">{business.email}</a>
       </p>
 
       <div className="mt-8">
-        <Link href="/" className="btn-primary">
-          Back to Home
-        </Link>
+        <Link href="/" className="btn-primary">Back to Home</Link>
       </div>
     </div>
   )

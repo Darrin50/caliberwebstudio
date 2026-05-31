@@ -9,14 +9,7 @@ import StepWaiver from './steps/StepWaiver'
 import StepPayment from './steps/StepPayment'
 import StepConfirmation from './steps/StepConfirmation'
 
-const STEP_LABELS = [
-  'Date',
-  'Time',
-  'Riders',
-  'Waiver',
-  'Payment',
-  'Confirmation',
-]
+const STEP_LABELS = ['Date', 'Time', 'Riders', 'Waiver', 'Payment', 'Confirmation']
 
 const initialState: BookingState = {
   step: 1,
@@ -52,7 +45,6 @@ export default function BookingWidget() {
       {/* Progress bar — hide on confirmation step */}
       {state.step < 6 && (
         <div className="mb-8">
-          {/* Step numbers */}
           <div className="flex items-center justify-between mb-3">
             {STEP_LABELS.map((label, i) => {
               const stepNum = i + 1
@@ -68,9 +60,10 @@ export default function BookingWidget() {
                         ? 'bg-white text-navy ring-2 ring-teal'
                         : 'bg-white/10 text-white/40'
                     }`}
+                    style={{ minWidth: 32, minHeight: 32 }}
                   >
                     {isDone ? (
-                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg className="h-4 w-4" width={16} height={16} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     ) : (
@@ -101,24 +94,12 @@ export default function BookingWidget() {
 
       {/* Step card */}
       <div className="rounded-3xl bg-white shadow-xl overflow-hidden">
-        {state.step === 1 && (
-          <StepDate state={state} update={update} onNext={goNext} />
-        )}
-        {state.step === 2 && (
-          <StepTime state={state} update={update} onNext={goNext} onBack={goBack} />
-        )}
-        {state.step === 3 && (
-          <StepParty state={state} update={update} onNext={goNext} onBack={goBack} />
-        )}
-        {state.step === 4 && (
-          <StepWaiver state={state} update={update} onNext={goNext} onBack={goBack} />
-        )}
-        {state.step === 5 && (
-          <StepPayment state={state} update={update} onNext={goNext} onBack={goBack} />
-        )}
-        {state.step === 6 && (
-          <StepConfirmation state={state} />
-        )}
+        {state.step === 1 && <StepDate state={state} update={update} onNext={goNext} />}
+        {state.step === 2 && <StepTime state={state} update={update} onNext={goNext} onBack={goBack} />}
+        {state.step === 3 && <StepParty state={state} update={update} onNext={goNext} onBack={goBack} />}
+        {state.step === 4 && <StepWaiver state={state} update={update} onNext={goNext} onBack={goBack} />}
+        {state.step === 5 && <StepPayment state={state} update={update} onNext={goNext} onBack={goBack} />}
+        {state.step === 6 && <StepConfirmation state={state} />}
       </div>
     </div>
   )

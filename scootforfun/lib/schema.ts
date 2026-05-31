@@ -26,7 +26,7 @@ export function tourProductSchema() {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: '1-Hour Guided Detroit Scooter Tour',
-    description: `Guided 1-hour mobility scooter tour of Detroit's Riverwalk, Dequindre Cut, and Ambassador Bridge viewpoints.`,
+    description: `Guided 1-hour mobility scooter tour of Detroit's Riverwalk, Dequindre Cut, and Ambassador Park.`,
     brand: {
       '@type': 'Brand',
       name: business.name,

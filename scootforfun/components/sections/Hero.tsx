@@ -35,7 +35,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal/30 bg-teal/10 px-4 py-1.5 text-sm font-medium text-teal">
           <span className="h-2 w-2 rounded-full bg-teal animate-pulse" style={{ display: 'inline-block', width: 8, height: 8 }} />
-          Detroit&apos;s Premier Scooter Tour — Thu–Sun
+          Scootforfun
         </div>
 
         {/* H1 */}
@@ -46,7 +46,7 @@ export default function Hero() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-white/70 leading-relaxed md:text-xl">
-          Guided 1-hour mobility scooter tours along the Riverwalk, Dequindre Cut &amp; Ambassador Bridge.
+          Guided 1-hour mobility scooter tours along the Riverwalk, Dequindre Cut &amp; Ambassador Park.
           $50 per person. Reservations required.
         </p>
 

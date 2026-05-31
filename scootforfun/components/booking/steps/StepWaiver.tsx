@@ -23,36 +23,32 @@ export default function StepWaiver({ state, update, onNext, onBack }: Props) {
         </p>
       </div>
 
-      {/* Waiver text */}
-      <div className="mb-6 max-h-64 overflow-y-auto rounded-2xl border border-navy/15 bg-cream/50 p-5 text-sm text-navy/75 leading-relaxed space-y-3">
-        <p className="font-bold text-navy">SCOOT FOR FUN — RELEASE OF LIABILITY, WAIVER OF CLAIMS, ASSUMPTION OF RISK &amp; INDEMNITY AGREEMENT</p>
+      {/* Waiver text — legal review recommended before launch (comment only, not visible) */}
+      <div className="mb-6 max-h-72 overflow-y-auto rounded-2xl border border-navy/15 bg-cream/50 p-5 text-sm text-navy/75 leading-relaxed space-y-4">
+        <p className="font-bold text-navy text-base">SAFETY WAIVER &amp; RELEASE OF LIABILITY</p>
 
-        <p>
-          By participating in Scoot for Fun guided tours (&ldquo;Activity&rdquo;), you acknowledge and agree to the following:
-        </p>
+        <p>By signing below, I acknowledge and agree:</p>
 
-        <p>
-          <strong>1. ASSUMPTION OF RISK.</strong> I understand that riding a mobility scooter involves inherent risks including, but not limited to, falls, collisions, equipment failure, and unforeseen hazards. I voluntarily accept these risks.
-        </p>
+        <ul className="space-y-2 pl-1">
+          {[
+            'I am renting/operating a mobility scooter at my own risk.',
+            'I am physically able to operate the scooter safely.',
+            'I will follow all safety instructions and traffic laws.',
+            'I will wear/use safety equipment as provided/required.',
+            'Scoot for Fun is not liable for any injury, accident, or damage to myself, others, or property during the rental/tour.',
+            'I am responsible for any damage to the scooter due to negligence or misuse.',
+            'I agree to return the scooter in the same condition.',
+            'I am 18 years or older (or 16+ with parent/guardian present & signature).',
+          ].map((point) => (
+            <li key={point} className="flex items-start gap-2">
+              <span className="mt-1 flex-shrink-0 h-1.5 w-1.5 rounded-full bg-navy/40" style={{ marginTop: 6, minWidth: 6, minHeight: 6 }} />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
 
-        <p>
-          <strong>2. RIDER REQUIREMENTS.</strong> I confirm that all riders in my party are at least 12 years of age and weigh no more than 260 lbs. I understand that false statements may result in cancellation without refund.
-        </p>
-
-        <p>
-          <strong>3. RELEASE OF LIABILITY.</strong> I release, waive, and discharge Scoot for Fun and its owners, operators, employees, and agents from any and all claims, demands, or causes of action arising out of participation in this Activity.
-        </p>
-
-        <p>
-          <strong>4. FOLLOW GUIDE INSTRUCTIONS.</strong> I agree to follow all instructions from the tour guide at all times and to operate the scooter safely and responsibly.
-        </p>
-
-        <p>
-          <strong>5. CONFIRMATION IN PERSON.</strong> I understand this digital acknowledgement must also be confirmed with a physical signature at the start of the tour.
-        </p>
-
-        <p className="text-xs text-navy/40 italic">
-          [TODO: Owner should have this waiver reviewed by legal counsel before going live. This is a placeholder draft.]
+        <p className="font-medium text-navy">
+          I have read and understood this waiver and sign voluntarily.
         </p>
       </div>
 
@@ -65,14 +61,14 @@ export default function StepWaiver({ state, update, onNext, onBack }: Props) {
           className="mt-0.5 h-5 w-5 rounded accent-teal flex-shrink-0"
         />
         <span className="text-sm text-navy/80">
-          I have read and agree to the Release of Liability, Waiver of Claims, Assumption of Risk &amp; Indemnity Agreement on behalf of myself and all riders in my party. I understand I must also sign in person at the start of the tour.
+          I have read and agree to the Safety Waiver &amp; Release of Liability above on behalf of myself and all riders in my party. I understand I must also sign in person at the start of the tour.
         </span>
       </label>
 
       {/* Typed signature */}
       <div className="mb-6">
         <label className="block text-sm font-semibold text-navy mb-1.5" htmlFor="sig">
-          Type your full name to sign *
+          Type your full name to sign <span className="text-red-500">*</span>
         </label>
         <p className="text-xs text-navy/50 mb-2">
           Must match your booking name: <strong>{state.customerName || '—'}</strong>

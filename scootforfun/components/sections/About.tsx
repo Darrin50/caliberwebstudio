@@ -28,7 +28,7 @@ export default function About() {
             <p>
               Scoot for Fun is a locally owned Detroit tour company founded on a simple idea:{' '}
               <span className="text-white font-medium">everyone should get to experience this city the way we love it.</span>{' '}
-              Whether you live here or you&apos;re visiting for the weekend, the Detroit Riverwalk, the Dequindre Cut, and the Ambassador Bridge viewpoints are special places — and a mobility scooter is the perfect way to take them all in.
+              Whether you live here or you&apos;re visiting for the weekend, the Detroit Riverwalk, the Dequindre Cut, and Ambassador Park are special places — and a mobility scooter is the perfect way to take them all in.
             </p>
             <p>
               Our tours are small, personal, and led by a guide who genuinely loves Detroit. We keep groups to a maximum of four so every ride feels like an adventure with friends, not a crowded bus tour.

@@ -23,9 +23,9 @@ export default function Requirements() {
               </svg>
             </div>
             <div>
-              <p className="font-semibold text-navy">Age {business.requirements.minAge}+ to Operate</p>
+              <p className="font-semibold text-navy">18+ to Operate Independently</p>
               <p className="mt-1 text-sm text-navy/60 leading-relaxed">
-                Riders must be at least 12 years old to operate a scooter independently.
+                {business.requirements.ageRuleFull}
               </p>
             </div>
           </div>

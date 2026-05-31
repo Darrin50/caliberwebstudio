@@ -15,7 +15,7 @@ export default function Footer() {
               Fun. Community. Freedom.
             </p>
             <p className="mt-4 max-w-xs text-sm text-white/60 leading-relaxed">
-              Guided 1-hour mobility scooter tours of Detroit — Riverwalk, Dequindre Cut & Ambassador Bridge.
+              Guided 1-hour mobility scooter tours of Detroit — Riverwalk, Dequindre Cut & Ambassador Park.
             </p>
             {/* Social links */}
             <div className="mt-5 flex items-center gap-4">

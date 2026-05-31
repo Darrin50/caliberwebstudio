@@ -1,3 +1,7 @@
+// Force SSR so Vercel does not cache stale HTML at the edge.
+// Static assets (/_next/static/*) retain their immutable hash-based caching.
+export const dynamic = 'force-dynamic'
+
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import MobileBar from '@/components/layout/MobileBar'

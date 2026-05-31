@@ -7,6 +7,21 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [],
   },
+  async headers() {
+    return [
+      {
+        // Prevent edge/browser caching of HTML document responses.
+        // Excludes hashed static assets which retain immutable caching.
+        source: '/((?!_next/static|_next/image).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig

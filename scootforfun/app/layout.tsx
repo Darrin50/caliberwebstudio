@@ -50,6 +50,10 @@ export const metadata: Metadata = {
     description: business.seo.description,
     images: [business.seo.ogImage],
   },
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   robots: {
     index: true,
     follow: true,

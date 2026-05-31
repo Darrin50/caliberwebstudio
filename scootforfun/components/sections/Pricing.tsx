@@ -28,7 +28,7 @@ export default function Pricing() {
           <div className="bg-white px-8 py-8">
             <ul className="space-y-4">
               {[
-                { icon: '✓', text: 'Full guided 1-hour tour of the Riverwalk, Dequindre Cut & Ambassador Bridge' },
+                { icon: '✓', text: 'Full guided 1-hour tour of the Riverwalk, Dequindre Cut & Ambassador Park' },
                 { icon: '✓', text: 'Free rider swag — hat, water bottle, tote bag & keychain' },
                 { icon: '✓', text: 'Small groups, max 4 guests per slot' },
                 { icon: '✓', text: 'Expert local guide the entire ride' },

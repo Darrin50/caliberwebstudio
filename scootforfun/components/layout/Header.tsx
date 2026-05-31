@@ -1,55 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { business } from '@/lib/constants'
-
-// TODO: Replace this SVG placeholder with:
-//   <Image src="/logo.png" alt="Scoot for Fun" width={160} height={48} priority />
-// once the owner drops the real logo.png into scootforfun/public/logo.png
-function LogoSVG() {
-  return (
-    <svg
-      viewBox="0 0 200 56"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-11 w-auto"
-      aria-label="Scoot for Fun logo"
-    >
-      {/* Teal badge background */}
-      <rect x="1" y="1" width="54" height="54" rx="12" fill="#1BA8A6" />
-      {/* Scooter glyph — rear wheel */}
-      <circle cx="17" cy="40" r="6" fill="none" stroke="#15323F" strokeWidth="2.2" />
-      <circle cx="17" cy="40" r="2" fill="#15323F" />
-      {/* Scooter glyph — front wheel */}
-      <circle cx="39" cy="40" r="6" fill="none" stroke="#15323F" strokeWidth="2.2" />
-      <circle cx="39" cy="40" r="2" fill="#15323F" />
-      {/* Scooter body */}
-      <path
-        d="M20 40 L23 28 L32 28 L36 34 L39 34"
-        stroke="#15323F"
-        strokeWidth="2.2"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Handlebar */}
-      <line x1="32" y1="28" x2="36" y2="22" stroke="#15323F" strokeWidth="2" />
-      <line x1="33" y1="22" x2="40" y2="22" stroke="#15323F" strokeWidth="2" />
-      {/* Speed lines */}
-      <line x1="5" y1="32" x2="14" y2="32" stroke="#15323F" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
-      <line x1="3" y1="37" x2="12" y2="37" stroke="#15323F" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
-      <line x1="5" y1="42" x2="14" y2="42" stroke="#15323F" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
-
-      {/* Wordmark text */}
-      <text x="64" y="26" fontFamily="Georgia, serif" fontSize="15" fontWeight="700" fill="#15323F">
-        Scoot
-      </text>
-      <text x="64" y="44" fontFamily="Arial Black, Impact, sans-serif" fontSize="14" fontWeight="900" fill="#1BA8A6" letterSpacing="2">
-        FOR FUN
-      </text>
-    </svg>
-  )
-}
 
 const navLinks = [
   { href: '/#tour', label: 'The Tour' },
@@ -77,7 +31,14 @@ export default function Header() {
       <div className="container-main flex h-16 items-center justify-between md:h-20">
         {/* Logo */}
         <Link href="/" aria-label="Scoot for Fun — Home" onClick={() => setMenuOpen(false)}>
-          <LogoSVG />
+          <Image
+            src="/logo.png"
+            alt="Scoot for Fun"
+            width={96}
+            height={96}
+            priority
+            className="h-10 w-10 md:h-12 md:w-12"
+          />
         </Link>
 
         {/* Desktop nav */}

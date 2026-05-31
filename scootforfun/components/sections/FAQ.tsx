@@ -21,9 +21,10 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
           className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border-2 transition-all ${
             isOpen ? 'border-teal bg-teal text-white rotate-45' : 'border-navy/20 text-navy/40'
           }`}
+          style={{ minWidth: 32, minHeight: 32 }}
           aria-hidden="true"
         >
-          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="h-4 w-4" width={16} height={16} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
           </svg>
         </span>

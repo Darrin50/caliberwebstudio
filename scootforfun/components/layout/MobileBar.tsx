@@ -12,7 +12,7 @@ export default function MobileBar() {
         className="flex flex-1 items-center justify-center gap-2 py-4 text-sm font-semibold text-white transition-colors active:bg-white/10"
         aria-label={`Call ${business.phone}`}
       >
-        <svg className="h-5 w-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg className="h-5 w-5 text-teal" width={20} height={20} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -29,7 +29,7 @@ export default function MobileBar() {
         href="/book"
         className="flex flex-1 items-center justify-center gap-2 bg-teal py-4 text-sm font-bold text-white transition-colors active:bg-teal-600"
       >
-        <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg className="h-5 w-5" width={20} height={20} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

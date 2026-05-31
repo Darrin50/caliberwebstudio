@@ -27,32 +27,20 @@ export default function StepDate({ state, update, onNext }: Props) {
   const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate()
 
   function prevMonth() {
-    if (viewMonth === 0) {
-      setViewYear((y) => y - 1)
-      setViewMonth(11)
-    } else {
-      setViewMonth((m) => m - 1)
-    }
+    if (viewMonth === 0) { setViewYear((y) => y - 1); setViewMonth(11) }
+    else setViewMonth((m) => m - 1)
   }
-
   function nextMonth() {
-    if (viewMonth === 11) {
-      setViewYear((y) => y + 1)
-      setViewMonth(0)
-    } else {
-      setViewMonth((m) => m + 1)
-    }
+    if (viewMonth === 11) { setViewYear((y) => y + 1); setViewMonth(0) }
+    else setViewMonth((m) => m + 1)
   }
-
   function selectDate(day: number) {
     const d = new Date(viewYear, viewMonth, day)
-    if (d < today) return
-    if (!isBookableDay(d)) return
-    const iso = getISODateString(d)
-    update({ date: iso, timeWindow: null, startTime: null })
+    if (d < today || !isBookableDay(d)) return
+    update({ date: getISODateString(d), timeWindow: null, startTime: null })
   }
 
-  const cells = []
+  const cells: (number | null)[] = []
   for (let i = 0; i < firstDay; i++) cells.push(null)
   for (let d = 1; d <= daysInMonth; d++) cells.push(d)
 
@@ -68,9 +56,10 @@ export default function StepDate({ state, update, onNext }: Props) {
         <button
           onClick={prevMonth}
           className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-cream transition-colors"
+          style={{ minWidth: 36, minHeight: 36 }}
           aria-label="Previous month"
         >
-          <svg className="h-5 w-5 text-navy/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="h-5 w-5 text-navy/60" width={20} height={20} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -80,9 +69,10 @@ export default function StepDate({ state, update, onNext }: Props) {
         <button
           onClick={nextMonth}
           className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-cream transition-colors"
+          style={{ minWidth: 36, minHeight: 36 }}
           aria-label="Next month"
         >
-          <svg className="h-5 w-5 text-navy/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="h-5 w-5 text-navy/60" width={20} height={20} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
@@ -106,7 +96,7 @@ export default function StepDate({ state, update, onNext }: Props) {
           const isBookable = isBookableDay(d)
           const iso = getISODateString(d)
           const isSelected = state.date === iso
-          const isToday = getISODateString(d) === getISODateString(today)
+          const isToday = iso === getISODateString(today)
 
           return (
             <button
@@ -115,6 +105,7 @@ export default function StepDate({ state, update, onNext }: Props) {
               disabled={isPast || !isBookable}
               aria-label={`${MONTHS[viewMonth]} ${day}, ${viewYear}${isBookable && !isPast ? ' — available' : ' — unavailable'}`}
               aria-pressed={isSelected}
+              style={{ minHeight: 40 }}
               className={`
                 relative flex h-10 w-full items-center justify-center rounded-xl text-sm font-medium transition-all
                 ${isSelected
@@ -138,7 +129,7 @@ export default function StepDate({ state, update, onNext }: Props) {
       {/* Legend */}
       <div className="mt-4 flex items-center gap-4 text-xs text-navy/50">
         <span className="flex items-center gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-teal/40" />
+          <span className="h-2 w-2 rounded-full bg-teal/40" style={{ display: 'inline-block', width: 8, height: 8 }} />
           Available (Thu–Sun)
         </span>
         <span className="text-navy/25">Grayed = unavailable</span>

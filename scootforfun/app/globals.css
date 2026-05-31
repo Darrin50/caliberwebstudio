@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-teal: #1BA8A6;
+  --color-teal-dark: #17A2A0;
+  --color-teal-50: #E6F7F7;
+  --color-teal-100: #CCF0EF;
+  --color-teal-600: #159E9C;
+  --color-teal-700: #107572;
+  --color-navy: #15323F;
+  --color-navy-dark: #102A35;
+  --color-navy-light: #1E4A5C;
+  --color-purple-brand: #4B2E83;
+  --color-purple-light: #5B3A9E;
+  --color-purple-50: #F3EFF9;
+  --color-cream: #EAF3F2;
+  --color-cream-dark: #D4E9E7;
+
+  /* Fonts — CSS variables injected by next/font in layout.tsx */
+  --font-family-sans: var(--font-inter), system-ui, sans-serif;
+  --font-family-display: var(--font-poppins), system-ui, sans-serif;
+
+  /* Animation */
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: white;
+    color: var(--color-navy);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* ─── Buttons ─────────────────────────────────────────── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--color-teal);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    min-height: 44px;
+  }
+  .btn-primary:hover  { background-color: var(--color-teal-600); }
+  .btn-primary:active { transform: scale(0.95); }
+  .btn-primary:focus-visible { outline: 2px solid var(--color-teal); outline-offset: 2px; }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 2px solid var(--color-teal);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--color-teal);
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+    min-height: 44px;
+  }
+  .btn-secondary:hover  { background-color: var(--color-teal); color: #ffffff; }
+  .btn-secondary:active { transform: scale(0.95); }
+
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--color-navy);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    min-height: 44px;
+  }
+  .btn-white:hover  { background-color: var(--color-cream); }
+  .btn-white:active { transform: scale(0.95); }
+
+  .btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 2px solid #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+    min-height: 44px;
+  }
+  .btn-outline-white:hover  { background-color: #ffffff; color: var(--color-navy); }
+  .btn-outline-white:active { transform: scale(0.95); }
+
+  /* ─── Section wrappers ────────────────────────────────── */
+  .section-light  { background-color: var(--color-cream);  padding-top: 4rem; padding-bottom: 4rem; }
+  .section-dark   { background-color: var(--color-navy);   padding-top: 4rem; padding-bottom: 4rem; }
+  .section-white  { background-color: #ffffff;             padding-top: 4rem; padding-bottom: 4rem; }
+
+  @media (min-width: 768px) {
+    .section-light, .section-dark, .section-white { padding-top: 6rem; padding-bottom: 6rem; }
+  }
+
+  .container-main {
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) { .container-main { padding-inline: 1.5rem; } }
+  @media (min-width: 1024px) { .container-main { padding-inline: 2rem; } }
+
+  /* ─── Typography helpers ──────────────────────────────── */
+  .heading-xl {
+    font-family: var(--font-family-display);
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  @media (min-width: 768px) { .heading-xl { font-size: 3rem; } }
+  @media (min-width: 1024px) { .heading-xl { font-size: 3.75rem; } }
+
+  .heading-lg {
+    font-family: var(--font-family-display);
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  @media (min-width: 768px) { .heading-lg { font-size: 2.25rem; } }
+
+  .heading-md {
+    font-family: var(--font-family-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  @media (min-width: 768px) { .heading-md { font-size: 1.875rem; } }
+}

@@ -3,7 +3,7 @@ export const business = {
   tagline: 'Ride. Explore. Enjoy Detroit.',
   tagline2: 'Fun. Community. Freedom.',
   description:
-    'Scoot for Fun runs guided 1-hour mobility-scooter tours of Detroit — through the Riverwalk, Dequindre Cut, and Ambassador Bridge viewpoints. Locally owned, community-focused, and built for anyone who wants to see the city in a whole new way.',
+    'Scoot for Fun runs guided 1-hour mobility-scooter tours of Detroit — through the Riverwalk, Dequindre Cut, and Ambassador Park. Locally owned, community-focused, and built for anyone who wants to see the city in a whole new way.',
   phone: '(248) 257-8161',
   phoneHref: 'tel:+12482578161',
   email: 'bookings@scootforfun.com',
@@ -46,8 +46,13 @@ export const business = {
   ],
 
   requirements: {
-    minAge: 12,
-    maxWeight: 260,
+    minAge: 18,
+    minAgeWithGuardian: 16,
+    // Full rule displayed in UI
+    ageRuleShort: '18+ to operate; 16–17 with parent/guardian on site',
+    ageRuleFull:
+      'Riders must be 18 or older with valid ID to operate independently. Riders 16–17 may operate with a parent or guardian present on site who signs a consent form.',
+    maxWeight: 285,
     waiverRequired: true,
     reservationsOnly: true,
   },
@@ -71,10 +76,10 @@ export const business = {
     },
     {
       id: 'ambassador',
-      name: 'Ambassador Bridge',
+      name: 'Ambassador Park',
       description:
-        'Take in stunning views of the river and the Ambassador Bridge.',
-      icon: '🌉',
+        'Relax and take in the scenery at Ambassador Park along the riverfront.',
+      icon: '🌳',
       color: 'teal',
     },
   ],
@@ -106,7 +111,7 @@ export const business = {
     {
       question: 'What should I wear?',
       answer:
-        'Wear comfortable, weather-appropriate clothing and closed-toe shoes. We ride outdoors, so check the forecast and dress in layers if needed.',
+        'Wear comfortable, weather-appropriate clothing. No open-toe shoes suggested — closed-toe footwear is recommended for the best ride experience. Check the forecast and dress in layers if needed.',
     },
     {
       question: 'Can I bring a group?',
@@ -116,7 +121,7 @@ export const business = {
     {
       question: 'Is there a weight or age limit?',
       answer:
-        'Riders must be at least 12 years old to operate a scooter and weigh no more than 260 lbs. These limits are set for safety and by the equipment specifications.',
+        'Riders must be 18 or older with valid ID to operate independently. Riders 16–17 may operate with a parent or guardian present on site who signs a consent form. All riders must weigh 285 lbs or less. These requirements are set for safety and by equipment specifications.',
     },
     {
       question: 'Do I need experience riding a scooter?',
@@ -161,7 +166,7 @@ export const business = {
   seo: {
     title: 'Scoot for Fun | Guided Detroit Scooter Tours',
     description:
-      'Explore Detroit on a 1-hour guided mobility scooter tour. Ride the Riverwalk, Dequindre Cut & Ambassador Bridge. $50/person, Thu–Sun. Book online.',
+      'Explore Detroit on a 1-hour guided mobility scooter tour. Ride the Riverwalk, Dequindre Cut & Ambassador Park. $50/person, Thu–Sun. Book online.',
     keywords: [
       'Detroit scooter tours',
       'guided scooter tour Detroit',
@@ -170,6 +175,7 @@ export const business = {
       'mobility scooter tour Detroit',
       'things to do Detroit',
       'Detroit outdoor tours',
+      'Ambassador Park Detroit',
     ],
     ogImage: '/og-image.jpg',
   },

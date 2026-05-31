@@ -34,10 +34,12 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
   const allAcknowledged = state.riders.every(
     (r) => r.ageAcknowledged && r.weightAcknowledged
   )
+  const phoneValid = state.customerPhone.trim().length > 0
   const canContinue =
     allAcknowledged &&
     state.customerName.trim().length > 0 &&
-    state.customerEmail.trim().length > 0
+    state.customerEmail.trim().length > 0 &&
+    phoneValid
 
   return (
     <div className="p-6 md:p-8">
@@ -60,6 +62,7 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
             onClick={() => setPartySize(state.partySize - 1)}
             disabled={state.partySize <= 1}
             className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-navy/20 text-navy font-bold text-xl hover:border-teal hover:text-teal disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            style={{ minWidth: 44, minHeight: 44 }}
             aria-label="Remove rider"
           >
             −
@@ -71,6 +74,7 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
             onClick={() => setPartySize(state.partySize + 1)}
             disabled={state.partySize >= MAX}
             className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-navy/20 text-navy font-bold text-xl hover:border-teal hover:text-teal disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            style={{ minWidth: 44, minHeight: 44 }}
             aria-label="Add rider"
           >
             +
@@ -85,7 +89,7 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
       <div className="mb-6 grid gap-4 sm:grid-cols-2">
         <div>
           <label className="block text-sm font-semibold text-navy mb-1.5" htmlFor="c-name">
-            Your Name *
+            Your Name <span className="text-red-500">*</span>
           </label>
           <input
             id="c-name"
@@ -93,12 +97,13 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
             value={state.customerName}
             onChange={(e) => update({ customerName: e.target.value })}
             placeholder="Full name"
+            required
             className="w-full rounded-xl border border-navy/20 px-4 py-3 text-sm text-navy placeholder:text-navy/30 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
           />
         </div>
         <div>
           <label className="block text-sm font-semibold text-navy mb-1.5" htmlFor="c-email">
-            Email Address *
+            Email Address <span className="text-red-500">*</span>
           </label>
           <input
             id="c-email"
@@ -106,12 +111,13 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
             value={state.customerEmail}
             onChange={(e) => update({ customerEmail: e.target.value })}
             placeholder="you@example.com"
+            required
             className="w-full rounded-xl border border-navy/20 px-4 py-3 text-sm text-navy placeholder:text-navy/30 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
           />
         </div>
         <div className="sm:col-span-2">
           <label className="block text-sm font-semibold text-navy mb-1.5" htmlFor="c-phone">
-            Phone Number (optional)
+            Phone Number <span className="text-red-500">*</span>
           </label>
           <input
             id="c-phone"
@@ -119,8 +125,16 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
             value={state.customerPhone}
             onChange={(e) => update({ customerPhone: e.target.value })}
             placeholder="(313) 555-0000"
-            className="w-full rounded-xl border border-navy/20 px-4 py-3 text-sm text-navy placeholder:text-navy/30 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+            required
+            className={`w-full rounded-xl border px-4 py-3 text-sm text-navy placeholder:text-navy/30 focus:ring-2 focus:ring-teal/20 outline-none transition-all ${
+              state.customerPhone.trim().length === 0 && state.customerName.trim().length > 0
+                ? 'border-red-300 focus:border-red-400'
+                : 'border-navy/20 focus:border-teal'
+            }`}
           />
+          {state.customerPhone.trim().length === 0 && state.customerName.trim().length > 0 && (
+            <p className="mt-1 text-xs text-red-500">Phone number is required.</p>
+          )}
         </div>
       </div>
 
@@ -154,7 +168,10 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
                     className="mt-0.5 h-4 w-4 rounded accent-teal flex-shrink-0"
                   />
                   <span className="text-sm text-navy/80">
-                    Rider {i + 1} is <strong>12 years of age or older</strong> and meets the minimum age requirement.
+                    Rider {i + 1} is{' '}
+                    <strong>18+ with valid ID</strong>, OR is{' '}
+                    <strong>16–17 with a parent/guardian who will be present on site</strong>{' '}
+                    and sign consent.
                   </span>
                 </label>
                 <label className="flex cursor-pointer items-start gap-3">
@@ -165,7 +182,9 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
                     className="mt-0.5 h-4 w-4 rounded accent-teal flex-shrink-0"
                   />
                   <span className="text-sm text-navy/80">
-                    Rider {i + 1} weighs <strong>260 lbs or less</strong> and meets the weight requirement.
+                    Rider {i + 1} weighs{' '}
+                    <strong>{business.requirements.maxWeight} lbs or less</strong>{' '}
+                    and meets the weight requirement.
                   </span>
                 </label>
               </div>
@@ -212,7 +231,7 @@ export default function StepParty({ state, update, onNext, onBack }: Props) {
       </div>
       {!canContinue && (
         <p className="mt-3 text-center text-xs text-red-500">
-          Please fill in your name and email, and check all rider acknowledgements to continue.
+          Please fill in your name, email, and phone number, and check all rider acknowledgements to continue.
         </p>
       )}
     </div>

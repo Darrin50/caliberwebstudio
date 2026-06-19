@@ -3,7 +3,7 @@ import type { BookingPayload } from '@/lib/types'
 import { business } from '@/lib/constants'
 import { calcTourPrice, generateConfirmationId } from '@/lib/utils'
 import { reserveSlot, releaseSlot, KvUnconfiguredError } from '@/lib/bookingStore'
-import { chargeCard } from '@/lib/authnet'
+import { chargeCard, type AuthNetChargeResult } from '@/lib/authnet'
 import { sendBookingConfirmation, sendOwnerNotification } from '@/lib/email'
 
 // TODO (P1 — separate branch): add Google Calendar event creation after booking succeeds.
@@ -96,14 +96,29 @@ export async function POST(request: NextRequest) {
 
   // ── 4. Charge via Authorize.Net ──────────────────────────────────────────
   const confirmationId = generateConfirmationId()
-  const chargeResult = await chargeCard({
-    opaqueDescriptor,
-    opaqueValue,
-    amount: chargeAmount,
-    invoiceNumber: confirmationId,
-    orderDescription: `Scoot for Fun Tour — ${partySize} rider${partySize === 1 ? '' : 's'} — ${date} ${startTime}`,
-    customerEmail,
-  })
+  let chargeResult: AuthNetChargeResult
+  try {
+    chargeResult = await chargeCard({
+      opaqueDescriptor,
+      opaqueValue,
+      amount: chargeAmount,
+      invoiceNumber: confirmationId,
+      orderDescription: `Scoot for Fun Tour — ${partySize} rider${partySize === 1 ? '' : 's'} — ${date} ${startTime}`,
+      customerEmail,
+    })
+  } catch (err) {
+    // chargeCard throws only when Authorize.Net credentials are absent
+    console.error('[booking] chargeCard threw:', err instanceof Error ? err.message : err)
+    if (slotReserved) {
+      await releaseSlot(date, timeWindow, startTime, partySize).catch((e) =>
+        console.error('[booking] slot release failed after charge throw:', e),
+      )
+    }
+    return NextResponse.json(
+      { error: 'Payment processing is not available. Please call us to reserve your spot.' },
+      { status: 503 },
+    )
+  }
 
   if (!chargeResult.success) {
     // Release the slot so it can be booked by someone else

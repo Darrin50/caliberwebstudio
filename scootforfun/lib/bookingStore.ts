@@ -70,6 +70,12 @@ export async function reserveSlot(
   }
 
   return { reserved: true, available: capacity - newCount }
+  // TODO (P2): Add per-reservation TTL to auto-release seats held by crashed
+  // requests. Current gap: if the server crashes between reserveSlot and
+  // chargeCard, the seats remain locked until manually cleared or capacity
+  // is bumped. Fix: store reservations as a sorted set (ZADD with epoch score)
+  // and run a periodic cleanup job, or use a separate key per-reservation with
+  // EXPIRE (requires tracking reservation IDs).
 }
 
 /**

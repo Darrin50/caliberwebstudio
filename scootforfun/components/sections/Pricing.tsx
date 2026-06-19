@@ -71,7 +71,7 @@ export default function Pricing() {
                 Reserve Your Spot
               </Link>
               <p className="mt-3 text-xs text-navy/40">
-                Advance booking required · Secure payment via Square
+                Advance booking required · Secure card payment
               </p>
             </div>
           </div>

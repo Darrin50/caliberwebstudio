@@ -95,6 +95,7 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
   const pricing = calcTourPrice(state.partySize)
 
   const [sdkReady, setSdkReady] = useState(false)
+  const [sdkLoadFailed, setSdkLoadFailed] = useState(false)
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -190,7 +191,10 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
           src={ACCEPT_JS_URL}
           strategy="afterInteractive"
           onLoad={() => setSdkReady(true)}
-          onError={() => setError('Failed to load secure payment form. Please refresh and try again.')}
+          onError={() => {
+            setSdkLoadFailed(true)
+            setError('Failed to load the secure payment module. Please call us to book.')
+          }}
         />
       )}
 
@@ -346,7 +350,7 @@ export default function StepPayment({ state, update, onNext, onBack }: Props) {
         <button onClick={onBack} disabled={processing} className="btn-secondary disabled:opacity-40">
           ← Back
         </button>
-        {authnetConfigured ? (
+        {authnetConfigured && !sdkLoadFailed ? (
           <button
             onClick={handlePay}
             disabled={!sdkReady || processing}

@@ -23,6 +23,7 @@ const initialState: BookingState = {
   paymentStatus: 'idle',
   paymentError: null,
   confirmationId: null,
+  transactionId: null,
   customerEmail: '',
   customerName: '',
   customerPhone: '',

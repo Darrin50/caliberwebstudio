@@ -28,10 +28,18 @@ export default function StepConfirmation({ state }: Props) {
         <strong className="text-navy">{state.customerEmail}</strong>
       </p>
 
-      {/* Confirmation number */}
-      <div className="mx-auto mt-6 max-w-xs rounded-2xl bg-teal/10 border border-teal/20 px-6 py-4">
-        <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-1">Confirmation #</p>
-        <p className="font-display text-2xl font-black text-navy tracking-wider">{state.confirmationId}</p>
+      {/* Confirmation number + transaction ID */}
+      <div className="mx-auto mt-6 max-w-xs rounded-2xl bg-teal/10 border border-teal/20 px-6 py-4 space-y-2">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-0.5">Confirmation #</p>
+          <p className="font-display text-2xl font-black text-navy tracking-wider">{state.confirmationId}</p>
+        </div>
+        {state.transactionId && (
+          <div className="border-t border-teal/20 pt-2">
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-0.5">Transaction ID</p>
+            <p className="font-mono text-sm font-semibold text-navy">{state.transactionId}</p>
+          </div>
+        )}
       </div>
 
       {/* Booking summary */}

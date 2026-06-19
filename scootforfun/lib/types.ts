@@ -20,6 +20,7 @@ export interface BookingState {
   paymentStatus: 'idle' | 'processing' | 'success' | 'error'
   paymentError: string | null
   confirmationId: string | null
+  transactionId: string | null   // Authorize.Net transaction ID
   customerEmail: string
   customerName: string
   customerPhone: string
@@ -43,12 +44,14 @@ export interface BookingPayload {
   customerName: string
   customerEmail: string
   customerPhone: string
-  totalAmount: number
-  sourceToken: string
+  // Accept.js opaque data — raw card number never touches our server
+  opaqueDescriptor: string   // 'COMMON.ACCEPT.INAPP.PAYMENT'
+  opaqueValue: string        // nonce from Accept.js dispatchData
 }
 
 export interface BookingConfirmation {
   confirmationId: string
+  transactionId: string
   date: string
   startTime: string
   partySize: number

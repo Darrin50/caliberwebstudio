@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { business } from '@/lib/constants'
 
@@ -7,29 +8,18 @@ export default function Hero() {
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-navy px-4 pt-20 pb-28"
       aria-label="Hero"
     >
-      {/* Background decorative elements */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-teal/10 blur-3xl" />
-        <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-purple-brand/10 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
-      </div>
-
-      {/* TODO: Replace gradient placeholder with a real Detroit riverfront/scooter photo
-          Place photo at scootforfun/public/images/hero-bg.jpg and use next/image with fill + priority */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-20"
-        aria-hidden="true"
-        style={{
-          background:
-            'radial-gradient(ellipse at 70% 30%, #1BA8A6 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, #4B2E83 0%, transparent 50%)',
-        }}
+      {/* Hero background photo */}
+      <Image
+        src="/images/hero-bg.jpg"
+        alt="Mobility scooters lined up along the Detroit Riverwalk"
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
       />
+
+      {/* Navy scrim — keeps white text legible over the bright daylight photo */}
+      <div className="pointer-events-none absolute inset-0 bg-navy/55" aria-hidden="true" />
 
       <div className="container-main relative z-10 text-center">
         {/* Badge */}

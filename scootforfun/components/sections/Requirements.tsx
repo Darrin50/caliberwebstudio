@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { business } from '@/lib/constants'
 
 export default function Requirements() {
@@ -103,6 +104,38 @@ export default function Requirements() {
                 Small groups only — up to {business.tour.maxCapacity} guests per time slot for the best experience.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Your Ride — equipment highlight */}
+        <div className="mt-10 flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-navy/8 md:flex-row md:items-center">
+          <div className="flex w-full items-center justify-center bg-teal-50 py-6 md:w-64 md:flex-shrink-0 md:self-stretch md:py-0">
+            <Image
+              src="/images/scooter.jpg"
+              alt="The mobility scooter used on all Scoot for Fun tours — comfortable seating with easy forward/reverse controls"
+              width={200}
+              height={250}
+              className="h-52 w-auto object-contain"
+            />
+          </div>
+          <div className="p-6 md:p-8">
+            <h3 className="font-display text-xl font-bold text-navy">Your Ride</h3>
+            <p className="mt-2 text-sm text-navy/65 leading-relaxed">
+              Our mobility scooters are smooth, stable, and built for a leisurely waterfront cruise — zero prior experience needed.
+            </p>
+            <ul className="mt-4 space-y-1.5 text-sm text-navy/70">
+              {[
+                `${business.requirements.maxWeight} lb weight capacity`,
+                'Simple forward / reverse controls',
+                'Adjustable speed — go at your own pace',
+                'No license required',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-teal" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

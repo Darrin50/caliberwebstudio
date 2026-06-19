@@ -8,6 +8,7 @@ import MobileBar from '@/components/layout/MobileBar'
 import Hero from '@/components/sections/Hero'
 import TourSection from '@/components/sections/TourSection'
 import HowItWorks from '@/components/sections/HowItWorks'
+import PromoStrip from '@/components/sections/PromoStrip'
 import Pricing from '@/components/sections/Pricing'
 import Requirements from '@/components/sections/Requirements'
 import About from '@/components/sections/About'
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Hero />
         <TourSection />
         <HowItWorks />
+        <PromoStrip />
         <Pricing />
         <Requirements />
         <About />

@@ -5,7 +5,7 @@ import { business } from '@/lib/constants'
 export default function Hero() {
   return (
     <section
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-navy px-4 pt-20 pb-28"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-navy px-4 pt-20 pb-32 md:min-h-screen md:pt-24 md:pb-20"
       aria-label="Hero"
     >
       {/* Hero background photo */}
@@ -14,12 +14,12 @@ export default function Hero() {
         alt="Mobility scooters lined up along the Detroit Riverwalk"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[62%_50%] md:object-center"
         sizes="100vw"
       />
 
       {/* Navy scrim — keeps white text legible over the bright daylight photo */}
-      <div className="pointer-events-none absolute inset-0 bg-navy/55" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 bg-navy/60 md:bg-navy/55" aria-hidden="true" />
 
       <div className="container-main relative z-10 text-center">
         {/* Badge */}
